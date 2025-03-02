@@ -1,0 +1,161 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\formregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:formregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\hp\\downloads\\management coffee shop\\management coffee shop\\formregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:formregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\formforgetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:formforgetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\formforgetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:formforgetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\formforgetpassword.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:formforgetpassword.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormForgetPassword.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\FormForgetPassword.cs",
+              "RelativeDocumentMoniker": "FormForgetPassword.cs",
+              "ToolTip": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\FormForgetPassword.cs*",
+              "RelativeToolTip": "FormForgetPassword.cs*",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAqwH0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T05:18:57.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormForgetPassword.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\FormForgetPassword.cs",
+              "RelativeDocumentMoniker": "FormForgetPassword.cs",
+              "ToolTip": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\FormForgetPassword.cs [Design]*",
+              "RelativeToolTip": "FormForgetPassword.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T05:03:10.289Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAqwBUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T00:43:49.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormRegister.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\FormRegister.cs",
+              "RelativeDocumentMoniker": "FormRegister.cs",
+              "ToolTip": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\FormRegister.cs [Design]",
+              "RelativeToolTip": "FormRegister.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T03:13:57.773Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormRegister.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\FormRegister.cs",
+              "RelativeDocumentMoniker": "FormRegister.cs",
+              "ToolTip": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\FormRegister.cs",
+              "RelativeToolTip": "FormRegister.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAApwBUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T04:08:18.971Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T00:11:10.181Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\Form1.Designer.cs",
+              "RelativeToolTip": "Form1.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T03:14:15.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormForgetPassword.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\FormForgetPassword.Designer.cs",
+              "RelativeDocumentMoniker": "FormForgetPassword.Designer.cs",
+              "ToolTip": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\FormForgetPassword.Designer.cs*",
+              "RelativeToolTip": "FormForgetPassword.Designer.cs*",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAjwIYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T05:19:09.587Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+C:\Users\QUANG LE\source\repos\Management Coffee Shop\bin\Debug\Management Coffee Shop.exe.config
+C:\Users\QUANG LE\source\repos\Management Coffee Shop\bin\Debug\Management Coffee Shop.exe
+C:\Users\QUANG LE\source\repos\Management Coffee Shop\bin\Debug\Management Coffee Shop.pdb
+C:\Users\QUANG LE\source\repos\Management Coffee Shop\bin\Debug\Guna.UI2.dll
+C:\Users\QUANG LE\source\repos\Management Coffee Shop\obj\Debug\Management Coffee Shop.csproj.AssemblyReference.cache
+C:\Users\QUANG LE\source\repos\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.FormLogin.resources
+C:\Users\QUANG LE\source\repos\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.Properties.Resources.resources
+C:\Users\QUANG LE\source\repos\Management Coffee Shop\obj\Debug\Management Coffee Shop.csproj.GenerateResource.cache
+C:\Users\QUANG LE\source\repos\Management Coffee Shop\obj\Debug\Management Coffee Shop.csproj.CoreCompileInputs.cache
+C:\Users\QUANG LE\source\repos\Management Coffee Shop\obj\Debug\Manageme.2A6CB00A.Up2Date
+C:\Users\QUANG LE\source\repos\Management Coffee Shop\obj\Debug\Management Coffee Shop.exe
+C:\Users\QUANG LE\source\repos\Management Coffee Shop\obj\Debug\Management Coffee Shop.pdb
+C:\Users\QUANG LE\source\repos\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.FormRegister.resources
+C:\Users\QUANG LE\source\repos\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.FormForgetPassword.resources
+C:\Users\HP\Downloads\Management Coffee Shop\Management Coffee Shop\bin\Debug\Management Coffee Shop.exe.config
+C:\Users\HP\Downloads\Management Coffee Shop\Management Coffee Shop\bin\Debug\Management Coffee Shop.exe
+C:\Users\HP\Downloads\Management Coffee Shop\Management Coffee Shop\bin\Debug\Management Coffee Shop.pdb
+C:\Users\HP\Downloads\Management Coffee Shop\Management Coffee Shop\bin\Debug\Guna.UI2.dll
+C:\Users\HP\Downloads\Management Coffee Shop\Management Coffee Shop\obj\Debug\Management Coffee Shop.csproj.AssemblyReference.cache
+C:\Users\HP\Downloads\Management Coffee Shop\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.FormLogin.resources
+C:\Users\HP\Downloads\Management Coffee Shop\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.FormForgetPassword.resources
+C:\Users\HP\Downloads\Management Coffee Shop\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.FormRegister.resources
+C:\Users\HP\Downloads\Management Coffee Shop\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.Properties.Resources.resources
+C:\Users\HP\Downloads\Management Coffee Shop\Management Coffee Shop\obj\Debug\Management Coffee Shop.csproj.GenerateResource.cache
+C:\Users\HP\Downloads\Management Coffee Shop\Management Coffee Shop\obj\Debug\Management Coffee Shop.csproj.CoreCompileInputs.cache
+C:\Users\HP\Downloads\Management Coffee Shop\Management Coffee Shop\obj\Debug\Manageme.2A6CB00A.Up2Date
+C:\Users\HP\Downloads\Management Coffee Shop\Management Coffee Shop\obj\Debug\Management Coffee Shop.exe
+C:\Users\HP\Downloads\Management Coffee Shop\Management Coffee Shop\obj\Debug\Management Coffee Shop.pdb
