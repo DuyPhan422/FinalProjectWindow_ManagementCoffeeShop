@@ -1,0 +1,7 @@
+{
+  "DESKTOP-7S1UU42": {
+    "UserId": "C888280",
+    "Token": "sa6tE5hzkKhJ1K6m7lnHT7rD7duhQZM5M1kXoXCCC2Rzh2eaiQBcvoOgUuZ6Rt0HvqDwW3jxiQjR7h",
+    "LastLogin": "16/04/2025 15:01:31"
+  }
+}

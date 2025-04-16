@@ -1,38 +1,270 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\",
+  "WorkspaceRootPath": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\formregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:formregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\hp\\downloads\\management coffee shop\\management coffee shop\\formregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:formregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\formforgetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:formforgetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\ucincomelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:ucincomelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\formforgetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:formforgetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\properties\\resources.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:properties\\resources.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\formmanager.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:formmanager.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\properties\\settings.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:properties\\settings.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\formmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:formmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\formmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:formmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\user_controls\\ucstaff.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\ucstaff.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\user_controls\\ucproduct.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\ucproduct.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\user_controls\\ucincome.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\ucincome.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\QUANG LE\\Downloads\\Manager-AfterNightMare\\Manager\\Properties\\Resources.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\user_controls\\ucproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\ucproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\productdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:productdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\staffdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:staffdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\user_controls\\ucstaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\ucstaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\user_controls\\ucincome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\ucincome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\formcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:formcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\employee.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:employee.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\user_controls\\uc_order.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\uc_order.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\user_controls\\uc_product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\uc_product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\user_controls\\uc_product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\uc_product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\user_controls\\uc_product.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\uc_product.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\user_controls\\uc_order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\uc_order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\formbillthanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:formbillthanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\formbillthanhtoan.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:formbillthanhtoan.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\formbillthanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:formbillthanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\user_controls\\uc_static.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\uc_static.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\user_controls\\uc_history.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\uc_history.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\user_controls\\uc_static.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\uc_static.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\user_controls\\uc_home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\uc_home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\user_controls\\uc_history.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\uc_history.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\user_controls\\uc_home.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\uc_home.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\user_controls\\payment.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\payment.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\user_controls\\uc_static.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\uc_static.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\user_controls\\uc_order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\uc_order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\user_controls\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\user_controls\\uc_home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\uc_home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\user_controls\\uc_history.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\uc_history.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\formcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:formcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\formcustomer.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:formcustomer.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\forgetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:forgetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\drinks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:drinks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\rate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:rate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\formregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:formregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\formforgetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:formforgetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\formforgetpassword.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:formforgetpassword.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\formforgetpassword.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:formforgetpassword.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\user_controls\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\user_controls\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\user_controls\\transport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\transport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/DESKTOP_7S1UU42_SQLEXPRESS/Management_Coffee_Shop/sa/SqlTable/dbo.account.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/DESKTOP_7S1UU42_SQLEXPRESS/Management_Coffee_Shop/sa/SqlTable/dbo.customerInformation.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/DESKTOP_7S1UU42_SQLEXPRESS/Management_Coffee_Shop/True/SqlTable/dbo.account.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|c:\\users\\quang le\\source\\repos\\management coffee shop\\user_controls\\product.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\product.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\rate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:rate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\user_controls\\transport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\transport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\rate.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:rate.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,116 +274,839 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "FormForgetPassword.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\FormForgetPassword.cs",
-              "RelativeDocumentMoniker": "FormForgetPassword.cs",
-              "ToolTip": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\FormForgetPassword.cs*",
-              "RelativeToolTip": "FormForgetPassword.cs*",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAqwH0AAAAAAAAAAAAAAA==",
+              "Title": "Resources.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Properties\\Resources.Designer.cs",
+              "RelativeDocumentMoniker": "Properties\\Resources.Designer.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Properties\\Resources.Designer.cs",
+              "RelativeToolTip": "Properties\\Resources.Designer.cs",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAkwCkAAACIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T05:18:57.94Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormForgetPassword.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\FormForgetPassword.cs",
-              "RelativeDocumentMoniker": "FormForgetPassword.cs",
-              "ToolTip": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\FormForgetPassword.cs [Design]*",
-              "RelativeToolTip": "FormForgetPassword.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T05:03:10.289Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAqwBUAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T00:43:49.911Z",
+              "WhenOpened": "2025-04-16T08:53:25.626Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FormRegister.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\FormRegister.cs",
-              "RelativeDocumentMoniker": "FormRegister.cs",
-              "ToolTip": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\FormRegister.cs [Design]",
-              "RelativeToolTip": "FormRegister.cs [Design]",
+              "Title": "Connection.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Connection.cs",
+              "RelativeDocumentMoniker": "Connection.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Connection.cs",
+              "RelativeToolTip": "Connection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T03:13:57.773Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormRegister.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\FormRegister.cs",
-              "RelativeDocumentMoniker": "FormRegister.cs",
-              "ToolTip": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\FormRegister.cs",
-              "RelativeToolTip": "FormRegister.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAApwBUAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T04:08:18.971Z",
+              "WhenOpened": "2025-03-13T13:30:02.887Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAvwBIAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T00:11:10.181Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\Form1.Designer.cs",
-              "RelativeToolTip": "Form1.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T03:14:15.887Z",
+              "WhenOpened": "2025-03-15T05:40:44.392Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "FormForgetPassword.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\FormForgetPassword.Designer.cs",
-              "RelativeDocumentMoniker": "FormForgetPassword.Designer.cs",
-              "ToolTip": "C:\\Users\\HP\\Downloads\\Management Coffee Shop\\Management Coffee Shop\\FormForgetPassword.Designer.cs*",
-              "RelativeToolTip": "FormForgetPassword.Designer.cs*",
-              "ViewState": "AgIAAIYAAAAAAAAAAAAjwIYAAAAAAAAAAAAAAA==",
+              "Title": "Settings.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Properties\\Settings.Designer.cs",
+              "RelativeDocumentMoniker": "Properties\\Settings.Designer.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Properties\\Settings.Designer.cs",
+              "RelativeToolTip": "Properties\\Settings.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T05:19:09.587Z",
+              "WhenOpened": "2025-04-16T08:59:27.664Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ucIncomeLogic.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\ucIncomeLogic.cs",
+              "RelativeDocumentMoniker": "ucIncomeLogic.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\ucIncomeLogic.cs",
+              "RelativeToolTip": "ucIncomeLogic.cs",
+              "ViewState": "AgIAAPQAAAAAAAAAAAAAAC0AAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T08:45:12.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DbConnection.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\DbConnection.cs",
+              "RelativeDocumentMoniker": "DbConnection.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\DbConnection.cs",
+              "RelativeToolTip": "DbConnection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T08:46:10.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormManager.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\FormManager.Designer.cs",
+              "RelativeDocumentMoniker": "FormManager.Designer.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\FormManager.Designer.cs",
+              "RelativeToolTip": "FormManager.Designer.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAIwGsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T08:19:39.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Settings.settings",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Properties\\Settings.settings",
+              "RelativeDocumentMoniker": "Properties\\Settings.settings",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Properties\\Settings.settings",
+              "RelativeToolTip": "Properties\\Settings.settings",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002767|",
+              "WhenOpened": "2025-04-16T09:08:16.322Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ucProduct.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\ucProduct.Designer.cs",
+              "RelativeDocumentMoniker": "User_Controls\\ucProduct.Designer.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\ucProduct.Designer.cs",
+              "RelativeToolTip": "User_Controls\\ucProduct.Designer.cs",
+              "ViewState": "AgIAANcDAAAAAAAAAAAAAPADAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T08:22:00.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FormManager.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\FormManager.cs",
+              "RelativeDocumentMoniker": "FormManager.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\FormManager.cs [Design]",
+              "RelativeToolTip": "FormManager.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T09:03:31.688Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FormManager.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\FormManager.cs",
+              "RelativeDocumentMoniker": "FormManager.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\FormManager.cs",
+              "RelativeToolTip": "FormManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T08:19:30.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Properties\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "Properties\\AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Properties\\AssemblyInfo.cs",
+              "RelativeToolTip": "Properties\\AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T09:08:19.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ucIncome.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\ucIncome.Designer.cs",
+              "RelativeDocumentMoniker": "User_Controls\\ucIncome.Designer.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\ucIncome.Designer.cs",
+              "RelativeToolTip": "User_Controls\\ucIncome.Designer.cs",
+              "ViewState": "AgIAAF0BAAAAAAAAAAAawG8BAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T08:23:19.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ucStaff.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\ucStaff.Designer.cs",
+              "RelativeDocumentMoniker": "User_Controls\\ucStaff.Designer.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\ucStaff.Designer.cs",
+              "RelativeToolTip": "User_Controls\\ucStaff.Designer.cs",
+              "ViewState": "AgIAAMcDAAAAAAAAAAAAAEkCAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T08:21:06.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Resources.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\Downloads\\Manager-AfterNightMare\\Manager\\Properties\\Resources.Designer.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\Downloads\\Manager-AfterNightMare\\Manager\\Properties\\Resources.Designer.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\Downloads\\Manager-AfterNightMare\\Manager\\Properties\\Resources.Designer.cs",
+              "RelativeToolTip": "..\\..\\..\\Downloads\\Manager-AfterNightMare\\Manager\\Properties\\Resources.Designer.cs",
+              "ViewState": "AgIAAJcBAAAAAAAAAAAAAKEBAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T08:53:37.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ucProduct.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\ucProduct.cs",
+              "RelativeDocumentMoniker": "User_Controls\\ucProduct.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\ucProduct.cs",
+              "RelativeToolTip": "User_Controls\\ucProduct.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAEwBgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T08:22:09.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ProductDb.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\ProductDb.cs",
+              "RelativeDocumentMoniker": "ProductDb.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\ProductDb.cs",
+              "RelativeToolTip": "ProductDb.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T08:47:55.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "StaffDb.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\StaffDb.cs",
+              "RelativeDocumentMoniker": "StaffDb.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\StaffDb.cs",
+              "RelativeToolTip": "StaffDb.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAowDIAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T08:46:55.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Register.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Register.cs",
+              "RelativeDocumentMoniker": "Register.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Register.cs",
+              "RelativeToolTip": "Register.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T16:30:42.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ucStaff.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\ucStaff.cs",
+              "RelativeDocumentMoniker": "User_Controls\\ucStaff.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\ucStaff.cs",
+              "RelativeToolTip": "User_Controls\\ucStaff.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T08:21:12.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ucIncome.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\ucIncome.cs",
+              "RelativeDocumentMoniker": "User_Controls\\ucIncome.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\ucIncome.cs",
+              "RelativeToolTip": "User_Controls\\ucIncome.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T08:23:25.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Employee.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Employee.Designer.cs",
+              "RelativeDocumentMoniker": "Employee.Designer.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Employee.Designer.cs",
+              "RelativeToolTip": "Employee.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T07:37:23.564Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "UC_product.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\UC_product.cs",
+              "RelativeDocumentMoniker": "User_Controls\\UC_product.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\UC_product.cs [Design]",
+              "RelativeToolTip": "User_Controls\\UC_product.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T07:45:29.24Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Employee.cs",
+              "RelativeDocumentMoniker": "Employee.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Employee.cs",
+              "RelativeToolTip": "Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T07:37:20.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "FormCustomer.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\FormCustomer.cs",
+              "RelativeDocumentMoniker": "FormCustomer.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\FormCustomer.cs [Design]",
+              "RelativeToolTip": "FormCustomer.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T01:55:07.698Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "UC_Order.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\UC_Order.Designer.cs",
+              "RelativeDocumentMoniker": "User_Controls\\UC_Order.Designer.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\UC_Order.Designer.cs",
+              "RelativeToolTip": "User_Controls\\UC_Order.Designer.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowDEAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T07:43:41.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Employee.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Employee.cs",
+              "RelativeDocumentMoniker": "Employee.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Employee.cs [Design]",
+              "RelativeToolTip": "Employee.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T07:37:26.771Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "UC_product.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\UC_product.cs",
+              "RelativeDocumentMoniker": "User_Controls\\UC_product.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\UC_product.cs",
+              "RelativeToolTip": "User_Controls\\UC_product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T07:45:24.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "UC_product.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\UC_product.Designer.cs",
+              "RelativeDocumentMoniker": "User_Controls\\UC_product.Designer.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\UC_product.Designer.cs",
+              "RelativeToolTip": "User_Controls\\UC_product.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T07:48:38.802Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "UC_Order.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\UC_Order.cs",
+              "RelativeDocumentMoniker": "User_Controls\\UC_Order.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\UC_Order.cs",
+              "RelativeToolTip": "User_Controls\\UC_Order.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAnwBUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T07:43:32.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "FormBillThanhToan.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\FormBillThanhToan.cs",
+              "RelativeDocumentMoniker": "FormBillThanhToan.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\FormBillThanhToan.cs",
+              "RelativeToolTip": "FormBillThanhToan.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T07:55:57.788Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "FormBillThanhToan.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\FormBillThanhToan.Designer.cs",
+              "RelativeDocumentMoniker": "FormBillThanhToan.Designer.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\FormBillThanhToan.Designer.cs",
+              "RelativeToolTip": "FormBillThanhToan.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T07:55:48.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "UC_Static.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\UC_Static.Designer.cs",
+              "RelativeDocumentMoniker": "User_Controls\\UC_Static.Designer.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\UC_Static.Designer.cs",
+              "RelativeToolTip": "User_Controls\\UC_Static.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T07:48:23.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "FormBillThanhToan.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\FormBillThanhToan.cs",
+              "RelativeDocumentMoniker": "FormBillThanhToan.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\FormBillThanhToan.cs [Design]",
+              "RelativeToolTip": "FormBillThanhToan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T07:34:46.272Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "UC_History.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\UC_History.Designer.cs",
+              "RelativeDocumentMoniker": "User_Controls\\UC_History.Designer.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\UC_History.Designer.cs",
+              "RelativeToolTip": "User_Controls\\UC_History.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T07:49:58.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "UC_Static.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\UC_Static.cs",
+              "RelativeDocumentMoniker": "User_Controls\\UC_Static.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\UC_Static.cs",
+              "RelativeToolTip": "User_Controls\\UC_Static.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T07:46:23.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "UC_Home.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\UC_Home.cs",
+              "RelativeDocumentMoniker": "User_Controls\\UC_Home.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\UC_Home.cs",
+              "RelativeToolTip": "User_Controls\\UC_Home.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T07:42:49.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "UC_History.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\UC_History.cs",
+              "RelativeDocumentMoniker": "User_Controls\\UC_History.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\UC_History.cs",
+              "RelativeToolTip": "User_Controls\\UC_History.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T07:42:27.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "UC_Home.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\UC_Home.Designer.cs",
+              "RelativeDocumentMoniker": "User_Controls\\UC_Home.Designer.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\UC_Home.Designer.cs",
+              "RelativeToolTip": "User_Controls\\UC_Home.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T07:43:05.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Payment.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\Payment.Designer.cs",
+              "RelativeDocumentMoniker": "User_Controls\\Payment.Designer.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\Payment.Designer.cs",
+              "RelativeToolTip": "User_Controls\\Payment.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T07:48:44.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "UC_Static.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\UC_Static.cs",
+              "RelativeDocumentMoniker": "User_Controls\\UC_Static.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\UC_Static.cs [Design]",
+              "RelativeToolTip": "User_Controls\\UC_Static.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T07:46:28.291Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "UC_Order.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\UC_Order.cs",
+              "RelativeDocumentMoniker": "User_Controls\\UC_Order.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\UC_Order.cs [Design]",
+              "RelativeToolTip": "User_Controls\\UC_Order.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T07:43:38.677Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Product.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\Product.cs",
+              "RelativeDocumentMoniker": "User_Controls\\Product.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\Product.cs [Design]",
+              "RelativeToolTip": "User_Controls\\Product.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T05:49:21.302Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "UC_Home.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\UC_Home.cs",
+              "RelativeDocumentMoniker": "User_Controls\\UC_Home.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\UC_Home.cs [Design]",
+              "RelativeToolTip": "User_Controls\\UC_Home.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T07:43:11.394Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "UC_History.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\UC_History.cs",
+              "RelativeDocumentMoniker": "User_Controls\\UC_History.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\UC_History.cs [Design]",
+              "RelativeToolTip": "User_Controls\\UC_History.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T07:42:32.075Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "FormCustomer.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\FormCustomer.cs",
+              "RelativeDocumentMoniker": "FormCustomer.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\FormCustomer.cs",
+              "RelativeToolTip": "FormCustomer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T02:35:18.458Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "dbo.account.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/DESKTOP_7S1UU42_SQLEXPRESS/Management_Coffee_Shop/sa/SqlTable/dbo.account.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/DESKTOP_7S1UU42_SQLEXPRESS/Management_Coffee_Shop/sa/SqlTable/dbo.account.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-04-11T02:02:17.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "dbo.customerInformation.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/DESKTOP_7S1UU42_SQLEXPRESS/Management_Coffee_Shop/sa/SqlTable/dbo.customerInformation.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/DESKTOP_7S1UU42_SQLEXPRESS/Management_Coffee_Shop/sa/SqlTable/dbo.customerInformation.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-04-11T02:51:45.424Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "dbo.account.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/DESKTOP_7S1UU42_SQLEXPRESS/Management_Coffee_Shop/True/SqlTable/dbo.account.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/DESKTOP_7S1UU42_SQLEXPRESS/Management_Coffee_Shop/True/SqlTable/dbo.account.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-03-28T09:34:03.852Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "ForgetPassWord.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\ForgetPassWord.cs",
+              "RelativeDocumentMoniker": "ForgetPassWord.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\ForgetPassWord.cs",
+              "RelativeToolTip": "ForgetPassWord.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T16:30:25.78Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Drinks.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Drinks.cs",
+              "RelativeDocumentMoniker": "Drinks.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Drinks.cs",
+              "RelativeToolTip": "Drinks.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T16:19:09.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGMAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T16:34:37.672Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "FormCustomer.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\FormCustomer.Designer.cs",
+              "RelativeDocumentMoniker": "FormCustomer.Designer.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\FormCustomer.Designer.cs",
+              "RelativeToolTip": "FormCustomer.Designer.cs",
+              "ViewState": "AgIAAMgBAAAAAAAAAAAWwMIBAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T16:21:56.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:06:36.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Login.cs",
+              "RelativeDocumentMoniker": "Login.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Login.cs",
+              "RelativeToolTip": "Login.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T13:46:30.949Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "Rate.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Rate.cs",
+              "RelativeDocumentMoniker": "Rate.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Rate.cs [Design]",
+              "RelativeToolTip": "Rate.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T05:45:40.601Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "FormRegister.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\FormRegister.cs",
+              "RelativeDocumentMoniker": "FormRegister.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\FormRegister.cs",
+              "RelativeToolTip": "FormRegister.cs",
+              "ViewState": "AgIAANkAAAAAAAAAAAAMwMoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T03:06:10.243Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "FormForgetPassword.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\FormForgetPassword.Designer.cs",
+              "RelativeDocumentMoniker": "FormForgetPassword.Designer.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\FormForgetPassword.Designer.cs",
+              "RelativeToolTip": "FormForgetPassword.Designer.cs",
+              "ViewState": "AgIAAP4DAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T06:17:02.286Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Form1.Designer.cs",
+              "RelativeToolTip": "Form1.Designer.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwIIBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T06:16:35.295Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "FormForgetPassword.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\FormForgetPassword.cs",
+              "RelativeDocumentMoniker": "FormForgetPassword.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\FormForgetPassword.cs",
+              "RelativeToolTip": "FormForgetPassword.cs",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAhwFgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T01:17:28.642Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "Transport.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\Transport.cs",
+              "RelativeDocumentMoniker": "User_Controls\\Transport.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\Transport.cs [Design]",
+              "RelativeToolTip": "User_Controls\\Transport.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T01:30:39.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "Payment.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\Payment.cs",
+              "RelativeDocumentMoniker": "User_Controls\\Payment.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\Payment.cs [Design]",
+              "RelativeToolTip": "User_Controls\\Payment.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T05:46:50.82Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "Payment.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\Payment.cs",
+              "RelativeDocumentMoniker": "User_Controls\\Payment.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\Payment.cs",
+              "RelativeToolTip": "User_Controls\\Payment.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAtwA8AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T10:25:46.436Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "Product.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\Product.Designer.cs",
+              "RelativeDocumentMoniker": "User_Controls\\Product.Designer.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\Product.Designer.cs",
+              "RelativeToolTip": "User_Controls\\Product.Designer.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAIAwwHUAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T04:05:36.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "Rate.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Rate.cs",
+              "RelativeDocumentMoniker": "Rate.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Rate.cs",
+              "RelativeToolTip": "Rate.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAtwC4AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T08:04:26.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "Rate.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Rate.Designer.cs",
+              "RelativeDocumentMoniker": "Rate.Designer.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\Rate.Designer.cs",
+              "RelativeToolTip": "Rate.Designer.cs",
+              "ViewState": "AgIAALMAAAAAAAAAAAAnwMEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T09:09:57.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "Transport.cs",
+              "DocumentMoniker": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\Transport.cs",
+              "RelativeDocumentMoniker": "User_Controls\\Transport.cs",
+              "ToolTip": "C:\\Users\\QUANG LE\\source\\repos\\Management Coffee Shop\\User_Controls\\Transport.cs",
+              "RelativeToolTip": "User_Controls\\Transport.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T07:25:05.22Z"
             }
           ]
         }

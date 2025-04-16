@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,14 +17,45 @@ namespace Management_Coffee_Shop
         {
             InitializeComponent();
         }
-
         private void FormLogin_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.None; // Xóa viền
             this.BackColor = Color.Magenta; // Chọn màu nền đặc biệt
             this.TransparencyKey = Color.Magenta;
+            this.BeginInvoke((MethodInvoker)delegate {
+                check_Access_Token();
+            });
         }
-
+        private void check_Access_Token()
+        {
+            (bool success, string user_Id) = Login.check_Token();
+            if (success) 
+            {
+                get_inforID(user_Id,true);
+                Login.create_NewToken(user_Id);
+            } 
+        }
+        private void get_inforID(string Id,bool check)
+        {
+            using (SqlConnection connection = Connection.StringConnection())
+            {
+                connection.Open();
+                string query = "SELECT Name,Address FROM customerInformation WHERE Id=@Id";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Id", Id);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            FormCustomer formCustomer = new FormCustomer(Id, reader.GetString(0), reader.GetString(1),check);
+                            formCustomer.Show();
+                            this.Hide();
+                        }
+                    }
+                }
+            }
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -42,15 +74,69 @@ namespace Management_Coffee_Shop
         private void btnRegister_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormRegister formregister=new FormRegister();
+            FormRegister formregister = new FormRegister();
             formregister.ShowDialog();
         }
 
         private void btnForgetpassword_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormForgetPassword formforget=new FormForgetPassword();
+            FormForgetPassword formforget = new FormForgetPassword();
             formforget.ShowDialog();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string username = txtUserName.Text;
+            string password = txtPassWord.Text;
+            using (SqlConnection connection = Connection.StringConnection())
+            {
+                connection.Open();
+                string query = "SELECT Id FROM account WHERE UserName=@UserName AND PassWord=@PassWord";
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@UserName", username);
+                    cmd.Parameters.AddWithValue("@Password", password);
+                    object result = cmd.ExecuteScalar();
+                    if (result != null)
+                    {
+                        if (result.ToString()[0] == 'M')
+                        {
+                            MessageBox.Show("Kết nối với quản lý thành công");
+                            // quản lý
+                        } else {
+                            if (result.ToString()[0] == 'C')
+                            {
+                                get_inforID(result.ToString(),false);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Kết nối với attendant thành công");
+                            }
+                        }
+                    } else
+                    {
+                        lblOutput.Text = "Sai thông tin tài khoản hoặc mật khẩu";
+                    }
+                }
+            }
+        }
+        public string UserName
+        {
+            get { return txtUserName.Text; }
+            set { txtUserName.Text = value; }
+        }
+        public string PassWord {
+            get { return txtPassWord.Text; }
+            set { txtPassWord.Text = value; }
+        }
+
+        private void txtPassWord_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                btnLogin_Click(sender,e);
+            }
         }
     }
 }
