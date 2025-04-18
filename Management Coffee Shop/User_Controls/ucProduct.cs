@@ -4,14 +4,18 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using Guna.UI2.WinForms;
-using Management_Coffee_Shope;
+using Management_Coffee_Shop;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace Management_Coffee_Shop
@@ -278,6 +282,8 @@ namespace Management_Coffee_Shop
             dgvRecipe.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI Semibold", 12, FontStyle.Bold);
             dgvDescription.DefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Regular);
             dgvDescription.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI Semibold", 12, FontStyle.Bold);
+            lblTitle.ForeColor = Color.Coral;
+            lblTitle.Font = new Font("Microsoft Sans Serif", 15, FontStyle.Bold);
 
 
             // Đảm bảo không tự động tạo cột

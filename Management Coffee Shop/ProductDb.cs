@@ -4,9 +4,9 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
-namespace Management_Coffee_Shope
+namespace Management_Coffee_Shop
 {
-    public class ProductDb : DbConnection
+    public class ProductDb : Connection
     {
         // Lấy tất cả sản phẩm từ bảng dbo.ProductManager
         public DataTable GetAllProducts()

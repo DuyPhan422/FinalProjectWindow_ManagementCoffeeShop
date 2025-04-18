@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Management_Coffee_Shop
 {
-    public class ucIncomeLogic : DbConnection 
+    public class ucIncomeLogic : Connection 
     {
         public struct RevenueByDate
         {

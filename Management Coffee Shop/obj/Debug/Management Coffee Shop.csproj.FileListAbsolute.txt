@@ -90,3 +90,188 @@ C:\Users\QUANG LE\source\repos\Management Coffee Shop\bin\Debug\Management_Coffe
 C:\Users\QUANG LE\source\repos\Management Coffee Shop\bin\Debug\Management_Coffee_Shop.pdb
 C:\Users\QUANG LE\source\repos\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.exe
 C:\Users\QUANG LE\source\repos\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.pdb
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\obj\Debug\Management Coffee Shop.csproj.AssemblyReference.cache
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.Employee.resources
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.FormLogin.resources
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.FormBillThanhToan.resources
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.FormCustomer.resources
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.FormForgetPassword.resources
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.formManager.resources
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.FormRegister.resources
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.Rate.resources
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.Payment.resources
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.Properties.Resources.resources
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.User_Controls.Transport.resources
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.ucIncome.resources
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.ucProduct.resources
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.ucStaff.resources
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.UC_History.resources
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.UC_Home.resources
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.UC_Order.resources
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.User_Controls.Product.resources
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.UC_product.resources
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.UC_Static.resources
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\obj\Debug\Management Coffee Shop.csproj.GenerateResource.cache
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\obj\Debug\Management Coffee Shop.csproj.CoreCompileInputs.cache
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.exe
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.pdb
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Management_Coffee_Shop.exe.config
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Management_Coffee_Shop.exe
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Management_Coffee_Shop.pdb
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\FirebaseAdmin.dll
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Google.Api.Gax.dll
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Google.Api.Gax.Rest.dll
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Google.Apis.Auth.dll
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Google.Apis.Core.dll
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Google.Apis.dll
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Guna.UI2.dll
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\jose-jwt.dll
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Microsoft.Bcl.Memory.dll
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Microsoft.Bcl.TimeProvider.dll
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Newtonsoft.Json.dll
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\System.Buffers.dll
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\System.CodeDom.dll
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\System.Collections.Immutable.dll
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\System.Memory.dll
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\System.Text.Json.dll
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\System.ValueTuple.dll
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Twilio.dll
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\FirebaseAdmin.xml
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Google.Api.Gax.pdb
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Google.Api.Gax.xml
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Google.Api.Gax.Rest.pdb
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Google.Api.Gax.Rest.xml
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Google.Apis.pdb
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Google.Apis.xml
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Google.Apis.Auth.pdb
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Google.Apis.Auth.xml
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Google.Apis.Core.pdb
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Google.Apis.Core.xml
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Microsoft.Bcl.Memory.xml
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Microsoft.Bcl.TimeProvider.xml
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Microsoft.IdentityModel.Abstractions.xml
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Newtonsoft.Json.xml
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\System.Buffers.xml
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\System.CodeDom.xml
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\System.Collections.Immutable.xml
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\System.Memory.xml
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\System.Text.Json.xml
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\System.ValueTuple.xml
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\bin\Debug\Twilio.xml
+C:\Users\HP\Downloads\Management Coffee Shop (1)\Management Coffee Shop\obj\Debug\Manageme.2A6CB00A.Up2Date
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Management_Coffee_Shop.exe.config
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Management_Coffee_Shop.exe
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Management_Coffee_Shop.pdb
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\FirebaseAdmin.dll
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Google.Api.Gax.dll
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Google.Api.Gax.Rest.dll
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Google.Apis.Auth.dll
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Google.Apis.Core.dll
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Google.Apis.dll
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Guna.UI2.dll
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\jose-jwt.dll
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Microsoft.Bcl.Memory.dll
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Microsoft.Bcl.TimeProvider.dll
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\System.Buffers.dll
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\System.CodeDom.dll
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\System.Collections.Immutable.dll
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\System.Memory.dll
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\System.Text.Json.dll
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\System.ValueTuple.dll
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Twilio.dll
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\FirebaseAdmin.xml
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Google.Api.Gax.pdb
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Google.Api.Gax.xml
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Google.Api.Gax.Rest.pdb
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Google.Api.Gax.Rest.xml
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Google.Apis.pdb
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Google.Apis.xml
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Google.Apis.Auth.pdb
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Google.Apis.Auth.xml
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Google.Apis.Core.pdb
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Google.Apis.Core.xml
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Microsoft.Bcl.Memory.xml
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Microsoft.Bcl.TimeProvider.xml
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Microsoft.IdentityModel.Abstractions.xml
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\System.Buffers.xml
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\System.CodeDom.xml
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\System.Collections.Immutable.xml
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\System.Memory.xml
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\System.Text.Json.xml
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\System.ValueTuple.xml
+C:\Users\ADMIN\Downloads\Management Coffee Shop\bin\Debug\Twilio.xml
+C:\Users\ADMIN\Downloads\Management Coffee Shop\obj\Debug\Management Coffee Shop.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Downloads\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.Employee.resources
+C:\Users\ADMIN\Downloads\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.FormLogin.resources
+C:\Users\ADMIN\Downloads\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.FormBillThanhToan.resources
+C:\Users\ADMIN\Downloads\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.FormCustomer.resources
+C:\Users\ADMIN\Downloads\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.FormForgetPassword.resources
+C:\Users\ADMIN\Downloads\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.formManager.resources
+C:\Users\ADMIN\Downloads\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.FormRegister.resources
+C:\Users\ADMIN\Downloads\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.Rate.resources
+C:\Users\ADMIN\Downloads\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.Payment.resources
+C:\Users\ADMIN\Downloads\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.Properties.Resources.resources
+C:\Users\ADMIN\Downloads\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.User_Controls.Transport.resources
+C:\Users\ADMIN\Downloads\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.ucIncome.resources
+C:\Users\ADMIN\Downloads\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.ucProduct.resources
+C:\Users\ADMIN\Downloads\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.ucStaff.resources
+C:\Users\ADMIN\Downloads\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.UC_History.resources
+C:\Users\ADMIN\Downloads\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.UC_Home.resources
+C:\Users\ADMIN\Downloads\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.UC_Order.resources
+C:\Users\ADMIN\Downloads\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.User_Controls.Product.resources
+C:\Users\ADMIN\Downloads\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.UC_product.resources
+C:\Users\ADMIN\Downloads\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.UC_Static.resources
+C:\Users\ADMIN\Downloads\Management Coffee Shop\obj\Debug\Management Coffee Shop.csproj.GenerateResource.cache
+C:\Users\ADMIN\Downloads\Management Coffee Shop\obj\Debug\Management Coffee Shop.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Downloads\Management Coffee Shop\obj\Debug\Manageme.2A6CB00A.Up2Date
+C:\Users\ADMIN\Downloads\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.exe
+C:\Users\ADMIN\Downloads\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.pdb
+C:\Users\ADMIN\Downloads\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.User_Controls.UC_Facility.resources

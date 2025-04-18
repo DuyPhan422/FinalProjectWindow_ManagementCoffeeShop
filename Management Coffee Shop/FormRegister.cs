@@ -68,7 +68,7 @@ namespace Management_Coffee_Shop
             {
                 if (txtPassWord.Text.Length > 7 && register.checkNumber(txtPassWord.Text) && register.checkUpperChar(txtPassWord.Text) && register.checkSpecialChar(txtPassWord.Text)) // pass phải có độ dài là 8 kí tự
                 {
-                    using (SqlConnection connection = Connection.StringConnection())
+                    using (SqlConnection connection = Connection.GetSqlConnection())
                     {
                         connection.Open();
                         string query = "SELECT Count(*) FROM account WHERE UserName=@UserName ";
@@ -113,7 +113,7 @@ namespace Management_Coffee_Shop
             {
                 if (int.Parse(txtOtp.Text) == int.Parse(otp))
                 {
-                    using (SqlConnection connection = Connection.StringConnection())
+                    using (SqlConnection connection = Connection.GetSqlConnection())
                     {
                         string new_Id = "C";
                         Random random = new Random();

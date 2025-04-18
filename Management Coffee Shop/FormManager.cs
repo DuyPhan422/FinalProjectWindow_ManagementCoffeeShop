@@ -45,6 +45,7 @@ namespace Management_Coffee_Shop
             Reset_btn();
             Select_btn(btnProduct);
             ucProduct uc_pro = new ucProduct();
+            uc_pro.Dock = DockStyle.Fill;
             pnlPage.Controls.Clear();
             pnlPage.Controls.Add(uc_pro);
         }
@@ -54,6 +55,7 @@ namespace Management_Coffee_Shop
             Reset_btn();
             Select_btn(btnIncome);
             ucIncome uc_ic = new ucIncome();
+            uc_ic.Dock = DockStyle.Fill;
             pnlPage.Controls.Clear();
             pnlPage.Controls.Add(uc_ic);
         }
@@ -63,6 +65,7 @@ namespace Management_Coffee_Shop
             Reset_btn();
             Select_btn(btnStaff);
             ucStaff uc_s = new ucStaff();
+            uc_s.Dock = DockStyle.Fill;
             pnlPage.Controls.Clear();
             pnlPage.Controls.Add(uc_s);
         }

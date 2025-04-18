@@ -1,18 +1,47 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Drawing;
 
 namespace Management_Coffee_Shop
 {
-    internal class Connection
+    public abstract class Connection
     {
-        private static string stringConnection = @"Data Source=DESKTOP-7S1UU42\SQLEXPRESS;Initial Catalog=""Management Coffee Shop"";User ID=sa;Password=1234;TrustServerCertificate=True";
-        public static SqlConnection StringConnection()
+        private static readonly string ConnectionString1 =
+            @"Data Source=DESKTOP-7S1UU42\SQLEXPRESS;Initial Catalog=""Management Coffee Shop"";User ID=sa;Password=1234;TrustServerCertificate=True";
+
+        private static readonly string ConnectionString2 =
+            @"Data Source=LAPTOP-AH11AR93;Initial Catalog=""Management Coffee Shop"";User ID=sa;Password=123456;TrustServerCertificate=True";
+        private static readonly string ConnectionString3 =
+            @"Data Source=DESKTOP-331CJKC;Initial Catalog =""Management Coffee Shop"";User ID = sa; Password=123;TrustServerCertificate=True";
+
+
+        private static readonly string connectionString = GetActiveConnectionString();
+
+        private static string GetActiveConnectionString()
         {
-            return new SqlConnection(stringConnection);
+            string machineName = Environment.MachineName;
+            if (machineName.Contains("DESKTOP-7S1UU42"))
+            {
+                return ConnectionString1;
+            }
+            else if (machineName.Contains("LAPTOP-AH11AR93"))
+            {
+                return ConnectionString2;
+            }
+            else if (machineName.Contains("DESKTOP-331CJKC"))
+            {
+                return ConnectionString3;
+            }
+                return ConnectionString1;
+        }
+
+        public static SqlConnection GetSqlConnection()
+        {
+            return new SqlConnection(connectionString);
+        }
+        protected SqlConnection GetConnection()
+        {
+            return new SqlConnection(connectionString);
         }
     }
 }

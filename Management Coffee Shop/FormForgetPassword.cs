@@ -35,7 +35,7 @@ namespace Management_Coffee_Shop
             if (txtUserName.Text == "") errorProvider1.SetError(txtUserName, "Phần này không được để trống");
             else
             {
-                using (SqlConnection connection = Connection.StringConnection())
+                using (SqlConnection connection = Connection.GetSqlConnection())
                 {
                     connection.Open();
                     string query = "SELECT UserName,PassWord,Email,Phone FROM account WHERE UserName=@UserName ";
@@ -95,7 +95,7 @@ namespace Management_Coffee_Shop
             {
                 string new_password = infor.Create_PassWord();
                 MessageBox.Show($"Vui lòng không tiết lộ mật khẩu cho bất kì ai \nMật khẩu mới của bạn là {new_password}");
-                using (SqlConnection connection = Connection.StringConnection())
+                using (SqlConnection connection = Connection.GetSqlConnection())
                 {
                     connection.Open();
                     string query = "UPDATE account SET PassWord=@PassWord where UserName=@UserName";

@@ -11,7 +11,7 @@ namespace Management_Coffee_Shop
         public DatabaseConnectionException(string message, Exception inner) : base(message, inner) { }
     }
 
-    public class StaffDb : DbConnection
+    public class StaffDb : Connection
     {
         public DataTable GetAllStaff()
         {

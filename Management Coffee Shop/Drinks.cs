@@ -16,13 +16,12 @@ namespace Management_Coffee_Shop
 {
     internal class Drinks
     {
-        
         public static DataTable Loading_Drinks(int pageNumber)
         {
             DataTable dt;
-            using (SqlConnection connection = Connection.StringConnection())
+            using (SqlConnection connection = Connection.GetSqlConnection())
             {
-                string query = $"SELECT ID,Name,Describe,Price,Rate,Review,Source_Image,Categories FROM sourceDrinks ORDER BY ID ASC OFFSET {(pageNumber - 1) * 16} ROWS FETCH NEXT 16 ROW ONLY";
+                string query = $"SELECT ID,Name,Describe,Price,Rate,Review,Source_Image,Categories FROM sourceDrinks ORDER BY ID ASC OFFSET {(pageNumber - 1) * 16} ROWS FETCH NEXT 16 ROWS ONLY";
                 connection.Open();
                 using (SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection))
                 {

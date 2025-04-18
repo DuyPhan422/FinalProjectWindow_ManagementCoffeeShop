@@ -22,7 +22,7 @@ namespace Management_Coffee_Shop
             btnLast7Days.Select();
             SetDateMenuButtonsUI(btnLast7Days);
             model = new ucIncomeLogic();
-            LoadData();
+            //LoadData();
         }
         private void LoadData()
         {
@@ -93,7 +93,7 @@ namespace Management_Coffee_Shop
         {
             dtpStartDate.Value = DateTime.Today;
             dtpEndDate.Value = DateTime.Now;
-            LoadData();
+            //LoadData();
             SetDateMenuButtonsUI(sender);
         }
 
@@ -101,7 +101,7 @@ namespace Management_Coffee_Shop
         {
             dtpStartDate.Value = DateTime.Today.AddDays(-7);
             dtpEndDate.Value = DateTime.Now;
-            LoadData();
+            //LoadData();
             SetDateMenuButtonsUI(sender);
         }
 
@@ -109,7 +109,7 @@ namespace Management_Coffee_Shop
         {
             dtpStartDate.Value = DateTime.Today.AddDays(-30);
             dtpEndDate.Value = DateTime.Now;
-            LoadData();
+            //LoadData();
             SetDateMenuButtonsUI(sender);
         }
 
@@ -117,13 +117,13 @@ namespace Management_Coffee_Shop
         {
             dtpStartDate.Value = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
             dtpEndDate.Value = DateTime.Now;
-            LoadData();
+            //LoadData();
             SetDateMenuButtonsUI(sender);
         }
 
         private void btnOkModifyDays_Click(object sender, EventArgs e)
         {
-            LoadData();
+            //LoadData();
         }
 
         private void tlbFill_Paint(object sender, PaintEventArgs e)

@@ -37,7 +37,7 @@ namespace Management_Coffee_Shop
         }
         private void get_inforID(string Id,bool check)
         {
-            using (SqlConnection connection = Connection.StringConnection())
+            using (SqlConnection connection = Connection.GetSqlConnection())
             {
                 connection.Open();
                 string query = "SELECT Name,Address FROM customerInformation WHERE Id=@Id";
@@ -48,7 +48,7 @@ namespace Management_Coffee_Shop
                     {
                         if (reader.Read())
                         {
-                            FormCustomer formCustomer = new FormCustomer(Id, reader.GetString(0), reader.GetString(1),check);
+                            FormCustomer formCustomer = new FormCustomer(Id, reader.GetString(0), reader.GetString(1), check);
                             formCustomer.Show();
                             this.Hide();
                         }
@@ -89,14 +89,14 @@ namespace Management_Coffee_Shop
         {
             string username = txtUserName.Text;
             string password = txtPassWord.Text;
-            using (SqlConnection connection = Connection.StringConnection())
+            using (SqlConnection connection = Connection.GetSqlConnection())
             {
                 connection.Open();
                 string query = "SELECT Id FROM account WHERE UserName=@UserName AND PassWord=@PassWord";
                 using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
                     cmd.Parameters.AddWithValue("@UserName", username);
-                    cmd.Parameters.AddWithValue("@Password", password);
+                    cmd.Parameters.AddWithValue("@PassWord", password);
                     object result = cmd.ExecuteScalar();
                     if (result != null)
                     {
@@ -104,17 +104,20 @@ namespace Management_Coffee_Shop
                         {
                             MessageBox.Show("Kết nối với quản lý thành công");
                             // quản lý
-                        } else {
+                        }
+                        else
+                        {
                             if (result.ToString()[0] == 'C')
                             {
-                                get_inforID(result.ToString(),false);
+                                get_inforID(result.ToString(), false);
                             }
                             else
                             {
                                 MessageBox.Show("Kết nối với attendant thành công");
                             }
                         }
-                    } else
+                    }
+                    else
                     {
                         lblOutput.Text = "Sai thông tin tài khoản hoặc mật khẩu";
                     }
