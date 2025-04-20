@@ -13,15 +13,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 using static TheArtOfDevHtmlRenderer.Adapters.RGraphicsPath;
 
 namespace Management_Coffee_Shop
 {
     public partial class FormCustomer : Form
     {
-        [DllImport("user32.dll")]
-        public static extern int ShowScrollBar(IntPtr hWnd, int wBar, bool bShow);
-
         const int SB_HORZ = 0;
         const int SB_VERT = 1;
         private bool check;
@@ -29,7 +28,7 @@ namespace Management_Coffee_Shop
         private int minute, hour, currentPage = 1, count = 0;
         private byte indexPage = 1, lengthPage = 2,homePage=1;
         private double distance, duration;
-        private string tt,ID,Address,Name;
+        private string tt,ID,Address,Name,categories;
         private static int current_ID = 0;
         private List<Guna2Button> List_buttonPage;
         private List<Product> list_uCProdcuts;
@@ -59,13 +58,9 @@ namespace Management_Coffee_Shop
             if (check) pnlSaveLogin.Hide();
             create_Page_Navigation();
             start_timer();
-            HideScrollbars(tabPage1);
-            tabPage1.MouseWheel += tabPage1_MouseWheel;
         }
         private void tabPage1_MouseWheel(object sender, MouseEventArgs e)
         {
-            timer_homePage.Interval = 1000;
-            timer_homePage.Tick += Timer_homePage;
             int currentY = -tabPage1.AutoScrollPosition.Y;
             if (e.Delta < 0)
             {
@@ -74,68 +69,74 @@ namespace Management_Coffee_Shop
                 {
                     homePage1.FillColor = Color.Gainsboro;
                     homePage2.FillColor = Color.FromArgb(211, 155, 81);
-                    tabPage1.AutoScrollPosition= new Point(0, 600);
-                } else if (homePage == 2)
+                    tabPage1.AutoScrollPosition = new Point(0, 600);
+                }
+                else if (homePage == 2)
                 {
                     homePage2.FillColor = Color.Gainsboro;
                     homePage3.FillColor = Color.FromArgb(211, 155, 81);
                     tabPage1.AutoScrollPosition = new Point(0, 1285);
-                } else if(homePage == 3)
+                }
+                else if (homePage == 3)
                 {
                     homePage3.FillColor = Color.Gainsboro;
                     homePage4.FillColor = Color.FromArgb(211, 155, 81);
-                    tabPage1.AutoScrollPosition = new Point(0, 2075);
-                } else if (homePage==4)
+                    tabPage1.AutoScrollPosition = new Point(0, 2070);
+                }
+                else if (homePage == 4)
                 {
                     homePage4.FillColor = Color.Gainsboro;
                     homePage5.FillColor = Color.FromArgb(211, 155, 81);
                     tabPage1.AutoScrollPosition = new Point(0, 2463);
                 }
                 homePage++;
-                HideScrollbars(tabPage1);
+                tabPage1.CustomMouseWheel -= tabPage1_MouseWheel;
                 timer_homePage.Start();
-            } else if (e.Delta > 0)
+            }
+            else if (e.Delta > 0)
             {
                 tabPage1.MouseWheel -= tabPage1_MouseWheel;
                 if (homePage == 5)
                 {
                     homePage5.FillColor = Color.Gainsboro;
                     homePage4.FillColor = Color.FromArgb(211, 155, 81);
-                    tabPage1.AutoScrollPosition = new Point(0, 2075);
-                } else if (homePage == 4)
+                    tabPage1.AutoScrollPosition = new Point(0, 2070);
+                }
+                else if (homePage == 4)
                 {
                     homePage4.FillColor = Color.Gainsboro;
                     homePage3.FillColor = Color.FromArgb(211, 155, 81);
                     tabPage1.AutoScrollPosition = new Point(0, 1285);
-                } else if(homePage == 3)
+                }
+                else if (homePage == 3)
                 {
                     homePage3.FillColor = Color.Gainsboro;
                     homePage2.FillColor = Color.FromArgb(211, 155, 81);
                     tabPage1.AutoScrollPosition = new Point(0, 600);
-                } else
+                }
+                else
                 {
                     homePage2.FillColor = Color.Gainsboro;
                     homePage1.FillColor = Color.FromArgb(211, 155, 81);
                     tabPage1.AutoScrollPosition = new Point(0, 0);
                 }
                 homePage--;
-                HideScrollbars(tabPage1);
+                tabPage1.CustomMouseWheel -= tabPage1_MouseWheel;
                 timer_homePage.Start();
             }
         }
-        private void Timer_homePage(object sender, EventArgs e)
+        private void homePage1_Timer(object sender, EventArgs e)
         {
-            tabPage1.MouseWheel += tabPage1_MouseWheel;
+            tabPage1.CustomMouseWheel += tabPage1_MouseWheel;
             timer_homePage.Stop();
         }
-        private void HideScrollbars(Control ctrl)
-        {
-            ShowScrollBar(ctrl.Handle, SB_VERT, false); // ẩn dọc
-            ShowScrollBar(ctrl.Handle, SB_HORZ, false); // ẩn ngang
-        }
+
         // khởi tạo bộ chạy thời gian
         private void start_timer() 
         {
+            timer_homePage.Interval = 500;
+            timer_homePage.Tick += homePage1_Timer;
+            tabPage1.CustomMouseWheel += tabPage1_MouseWheel;
             timer1.Interval = (60000 - DateTime.Now.Second * 1000);
             hour = DateTime.Now.Hour;
             minute = DateTime.Now.Minute;
@@ -185,29 +186,59 @@ namespace Management_Coffee_Shop
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
+            pnlhomePage.Show();
             tabControl1.SelectedTab = tabPage1;
         }
-        private void btnShopNow_Click(object sender, EventArgs e)
-        {
-            ShowUp_Drinks();
-            tabControl1.SelectedTab = tabPage2;
-        }
-
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
-        private void btnShopNow_Cart_Click(object sender, EventArgs e)
-        {
-            ShowUp_Drinks();
-            tabControl1.SelectedTab = tabPage2;
-        }
-
         private void btnShopping_Click(object sender, EventArgs e)
         {
-            ShowUp_Drinks();
+            loading_Shopping();
             tabControl1.SelectedTab = tabPage2;
-
+            pnlhomePage.Hide();
+        }
+        private void loading_Shopping()
+        {
+            DataTable showUp_Categories = Drinks.loading_Categories();
+            for (int i = 0; i < showUp_Categories.Rows.Count; i++)
+            {
+                Guna2Button button = new Guna2Button();
+                button.Size = new Size(180, 45);
+                button.FillColor = Color.Transparent;
+                button.BackColor = Color.FromArgb(243, 243, 243);
+                button.BorderRadius = 20;
+                button.BorderColor = Color.FromArgb(211, 155, 81);
+                button.BorderThickness = 1;
+                button.ForeColor = Color.FromArgb(211, 155, 81);
+                button.Font = new Font("Segoe UI", 24f);
+                button.Margin = new Padding(left: 8, top: 3, right: 8, bottom: 3);
+                button.Text = showUp_Categories.Rows[i]["Categories"].ToString();
+                button.Click += button_Categories_click;
+                flpCategories.Controls.Add(button);
+            }
+            btnAll.Click += button_Categories_click;
+            categories = "ALL";
+            btnAll.PerformClick();
+        }
+        private void reloading_Shopping(DataTable showUp_Drinks)
+        {
+            int len = showUp_Drinks.Rows.Count;
+            for (int i = 0; i < len; i++)
+            {
+                list_uCProdcuts[i].Show();
+                list_uCProdcuts[i].ID = showUp_Drinks.Rows[i]["ID"].ToString();
+                list_uCProdcuts[i].Categories = showUp_Drinks.Rows[i]["Categories"].ToString();
+                list_uCProdcuts[i].PTBImage_Drinks = showUp_Drinks.Rows[i]["Source_Image"].ToString();
+                list_uCProdcuts[i].LBLName_Drinks = showUp_Drinks.Rows[i]["Name"].ToString();
+                list_uCProdcuts[i].LBLDescribe_Drinks = showUp_Drinks.Rows[i]["Describe"].ToString();
+                list_uCProdcuts[i].LBLRate_Drinks = showUp_Drinks.Rows[i]["Rate"].ToString();
+                list_uCProdcuts[i].BTNReviews_Drinks = showUp_Drinks.Rows[i]["Review"].ToString();
+                list_uCProdcuts[i].BTNPrice = showUp_Drinks.Rows[i]["Price"].ToString();
+                list_uCProdcuts[i].btnPice_clicked += BTNPrice_Click_Ucprodcut;
+            }
+            if (len < 16) for (int i = len; i < 16; i++) list_uCProdcuts[i].Hide();
         }
         private void btnShoppingCart_Click(object sender, EventArgs e)
         {
@@ -302,26 +333,46 @@ namespace Management_Coffee_Shop
             List<Transport> transports = flpShoppingCart.Controls.OfType<Transport>().ToList();
             foreach (Transport t in transports) t.Show_btnRate();
         }
+
         // khởi tạo và chạy loading thông tin cho các món nước
         private void ShowUp_Drinks()
         {
-            DataTable showUp_Drinks = Drinks.Loading_Drinks(indexPage);
-            int len = showUp_Drinks.Rows.Count;
-            for (int i = 0; i < len; i++)
+            if (categories == "ALL")
             {
-                list_uCProdcuts[i].Show();
-                list_uCProdcuts[i].ID = showUp_Drinks.Rows[i]["ID"].ToString();
-                list_uCProdcuts[i].Categories = showUp_Drinks.Rows[i]["Categories"].ToString();
-                list_uCProdcuts[i].PTBImage_Drinks=showUp_Drinks.Rows[i]["Source_Image"].ToString();
-                list_uCProdcuts[i].LBLName_Drinks=showUp_Drinks.Rows[i]["Name"].ToString();
-                list_uCProdcuts[i].LBLDescribe_Drinks = showUp_Drinks.Rows[i]["Describe"].ToString();
-                list_uCProdcuts[i].LBLRate_Drinks = showUp_Drinks.Rows[i]["Rate"].ToString();
-                list_uCProdcuts[i].BTNReviews_Drinks = showUp_Drinks.Rows[i]["Review"].ToString();
-                list_uCProdcuts[i].BTNPrice = showUp_Drinks.Rows[i]["Price"].ToString();
-                list_uCProdcuts[i].btnPice_clicked += BTNPrice_Click_Ucprodcut;
+                DataTable showUp_Drinks = Drinks.Loading_Drinks(indexPage);
+                reloading_Shopping(showUp_Drinks);
+            } else
+            {
+                DataTable dt = Drinks.loading_Drinks_Categories(indexPage, categories);
+                reloading_Shopping(dt);
             }
-            if (len < 16) for (int i = len; i < 16; i++) list_uCProdcuts[i].Hide(); 
         }
+        private void button_Categories_click(object sender, EventArgs e)
+        {
+            foreach (Guna2Button button in flpCategories.Controls)
+            {
+                button.FillColor = Color.Transparent;
+                button.ForeColor = Color.FromArgb(211, 155, 81);
+                button.BorderThickness = 1;
+                button.BorderColor = Color.FromArgb(211, 155, 81);
+            }
+            Guna2Button clickedbutton=sender as Guna2Button;
+            if (clickedbutton != null)
+            {
+                indexPage = 1;
+                change_Color_page(1);
+                currentPage = 1;
+                clickedbutton.FillColor= Color.FromArgb(211, 155, 81);
+                clickedbutton.BorderThickness = 0;
+                clickedbutton.ForeColor = Color.White;
+                categories = clickedbutton.Text;
+                if (categories == "ALL") lengthPage = (byte)Math.Ceiling((float)Drinks.number_Drinks() / 16);
+                else lengthPage = (byte)Math.Ceiling((float)Drinks.number_Drinks_categories(categories)/16);
+                create_Page_Navigation();
+                ShowUp_Drinks();
+            }
+        }
+
         private void BTNPrice_Click_Ucprodcut(object sender, EventArgs e)
         {
             pnlAddShoppingCart.Show();
@@ -476,8 +527,72 @@ namespace Management_Coffee_Shop
         }
         private void btnHistory_Click(object sender, EventArgs e)
         {
-
+            tabControl1.SelectedTab = tabPage3;
         }
+
+        private void homePage1_Click(object sender, EventArgs e)
+        {
+            if (homePage != 1)
+            {
+                change_color_button_homePage();
+                homePage = 1;
+                homePage1.FillColor = Color.FromArgb(211, 155, 81);
+                tabPage1.AutoScrollPosition = new Point(0, 0);
+            }
+        }
+
+        private void homePage2_Click(object sender, EventArgs e)
+        {
+            if (homePage != 2)
+            {
+                change_color_button_homePage();
+                homePage = 2;
+                homePage2.FillColor = Color.FromArgb(211, 155, 81);
+                tabPage1.AutoScrollPosition = new Point(0, 600);
+            }
+        }
+
+        private void homePage3_Click(object sender, EventArgs e)
+        {
+            if (homePage != 3)
+            {
+                change_color_button_homePage();
+                homePage = 3;
+                homePage3.FillColor = Color.FromArgb(211, 155, 81);
+                tabPage1.AutoScrollPosition = new Point(0, 1285);
+            }
+        }
+
+        private void homePage4_Click(object sender, EventArgs e)
+        {
+            if (homePage != 4)
+            {
+                change_color_button_homePage();
+                homePage = 4;
+                homePage4.FillColor = Color.FromArgb(211, 155, 81);
+                tabPage1.AutoScrollPosition = new Point(0, 2070);
+            }
+        }
+
+        private void homePage5_Click(object sender, EventArgs e)
+        {
+            if (homePage != 5)
+            {
+                change_color_button_homePage();
+                homePage = 5;
+                homePage5.FillColor = Color.FromArgb(211, 155, 81);
+                tabPage1.AutoScrollPosition = new Point(0, 2463);
+            }
+        }
+        private void change_color_button_homePage()
+        {
+            if (homePage == 1) homePage1.FillColor=Color.Gainsboro;
+            else if (homePage == 2) homePage2.FillColor = Color.Gainsboro;
+            else if (homePage == 3) homePage3.FillColor = Color.Gainsboro;
+            else if (homePage == 4) homePage4.FillColor = Color.Gainsboro;
+            else homePage5.FillColor = Color.Gainsboro;
+        }
+
         // xử lý các sự kiện của các nút điều hướng trang
         private void change_Color_page(int turn)
         {
@@ -496,8 +611,11 @@ namespace Management_Coffee_Shop
                 btnThird_page.FillColor = Color.FromArgb(211, 155, 81);
                 btnThird_page.ForeColor = Color.White;
             }
-            List_buttonPage[currentPage - 1].FillColor = Color.Transparent;
-            List_buttonPage[currentPage - 1].ForeColor = Color.FromArgb(211, 155, 81);
+            if (turn != currentPage)
+            {
+                List_buttonPage[currentPage - 1].FillColor = Color.Transparent;
+                List_buttonPage[currentPage - 1].ForeColor = Color.FromArgb(211, 155, 81);
+            }
         }
         private void update_page(int indexPage)
         {
@@ -508,13 +626,15 @@ namespace Management_Coffee_Shop
         private void flpPageNavigation_Position(byte amount)
         {
             Point flpPageNavigation_location= flpPageNavigation.Location;
-            int x = flpPageNavigation_location.X;
+            int x = 375;
             flpPageNavigation.Location = new Point(x+amount*39, flpPageNavigation_location.Y);
         }
         private void create_Page_Navigation()
         {
             if (lengthPage == 1)
             {
+                btnFirst_page.Show();
+                btnFirst_page.Click += btnFirst_Page_Click_1;
                 btnSecond_page.Hide();
                 btnSecond_page.Click -= btnSecond_page_Click;
                 btnThird_page.Hide();
@@ -523,6 +643,10 @@ namespace Management_Coffee_Shop
             }
             else if (lengthPage == 2)
             {
+                btnFirst_page.Show();
+                btnFirst_page.Click += btnFirst_Page_Click_1;
+                btnSecond_page.Show();
+                btnSecond_page.Click += btnSecond_page_Click;
                 btnThird_page.Hide();
                 btnThird_page.Click -= btnThird_page_Click;
                 flpPageNavigation_Position(1);

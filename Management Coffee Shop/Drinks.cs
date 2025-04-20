@@ -10,6 +10,7 @@ using System.Net;
 using System.Windows.Forms;
 using System.Web;
 using System.Net.Http;
+using System.Threading;
 
 
 namespace Management_Coffee_Shop
@@ -30,6 +31,71 @@ namespace Management_Coffee_Shop
                 }
             }
             return dt;
+        }
+        public static byte number_Drinks()
+        {
+            byte count = 0;
+            using (SqlConnection connection = Connection.GetSqlConnection())
+            {
+                string query = $"SELECT COUNT(*) FROM sourceDrinks";
+                connection.Open();
+                using (SqlCommand commnad = new SqlCommand(query, connection))
+                {
+                    object result = commnad.ExecuteScalar();
+                    count = Convert.ToByte(result);
+                }
+            }
+            return count;
+        }
+        public static DataTable loading_Categories()
+        {
+            DataTable dt;
+            using (SqlConnection connection = Connection.GetSqlConnection())
+            {
+                string query = $"SELECT DISTINCT Categories FROM sourceDrinks ";
+                connection.Open();
+                using (SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection))
+                {
+                    dt = new DataTable();
+                    dataAdapter.Fill(dt);
+                }
+            }
+            return dt;
+        }
+        public static DataTable loading_Drinks_Categories(int pageNumber,string categories)
+        {
+            DataTable dt;
+            using (SqlConnection connection = Connection.GetSqlConnection())
+            {
+                string query = $"SELECT ID,Name,Describe,Price,Rate,Review,Source_Image,Categories FROM sourceDrinks WHERE Categories=@categories ORDER BY ID ASC OFFSET {(pageNumber - 1) * 16} ROWS FETCH NEXT 16 ROWS ONLY";
+                connection.Open();
+                using (SqlCommand commnad = new SqlCommand(query, connection))
+                {
+                    commnad.Parameters.AddWithValue("@categories", categories);
+                    using (SqlDataAdapter dataAdapter = new SqlDataAdapter(commnad))
+                    {
+                        dt = new DataTable();
+                        dataAdapter.Fill(dt);
+                    }
+                }
+            }
+            return dt;
+        }
+        public static byte number_Drinks_categories(string categories)
+        {
+            byte count = 0;
+            using(SqlConnection connection = Connection.GetSqlConnection())
+            {
+                string query = $"SELECT COUNT(*) FROM sourceDrinks WHERE Categories=@categories";
+                connection.Open();
+                using (SqlCommand commnad = new SqlCommand(query, connection))
+                {
+                    commnad.Parameters.AddWithValue("@categories", categories);
+                    object result = commnad.ExecuteScalar();
+                    count = Convert.ToByte(result);
+                }
+            }
+            return count;
         }
         public static string change_Coordinates(string address)
         {
