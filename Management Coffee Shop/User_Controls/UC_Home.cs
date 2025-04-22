@@ -16,5 +16,10 @@ namespace Management_Coffee_Shop
         {
             InitializeComponent();
         }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
+using System.Windows.Forms;
 
 namespace Management_Coffee_Shop
 {
-    // Custom exception for database connection issues
     public class DatabaseConnectionException : Exception
     {
         public DatabaseConnectionException(string message) : base(message) { }
@@ -20,7 +21,7 @@ namespace Management_Coffee_Shop
                 using (var connection = GetConnection())
                 {
                     connection.Open();
-                    string query = "SELECT Id, FirstName, LastName, Email, Gender, BirthDate, Phone, Address, Salary, Description FROM dbo.StaffManager";
+                    string query = "SELECT Id, FirstName, LastName, Email, Gender, BirthDate, Phone, Address, Salary, Description, ImagePath FROM dbo.StaffManager";
                     using (var command = new SqlCommand(query, connection))
                     {
                         using (var adapter = new SqlDataAdapter(command))
@@ -42,7 +43,31 @@ namespace Management_Coffee_Shop
             }
         }
 
-        public void AddStaff(string firstName, string lastName, string email, string gender, DateTime birthDate, string phone, string address, decimal salary, string description)
+        public bool CheckStaffExists(string email, string phone)
+        {
+            try
+            {
+                using (var connection = GetConnection())
+                {
+                    connection.Open();
+                    string query = "SELECT COUNT(*) FROM dbo.StaffManager WHERE Email = @Email OR Phone = @Phone";
+                    using (var command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Email", email);
+                        command.Parameters.AddWithValue("@Phone", phone);
+                        int count = (int)command.ExecuteScalar();
+                        return count > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi kiểm tra nhân viên: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+        public void AddStaff(string firstName, string lastName, string email, string gender, DateTime birthDate, string phone, string address, decimal salary, string description, string imagePath)
         {
             try
             {
@@ -51,8 +76,8 @@ namespace Management_Coffee_Shop
                 using (var connection = GetConnection())
                 {
                     connection.Open();
-                    string query = "INSERT INTO dbo.StaffManager (FirstName, LastName, Email, Gender, BirthDate, Phone, Address, Salary, Description) " +
-                                   "VALUES (@FirstName, @LastName, @Email, @Gender, @BirthDate, @Phone, @Address, @Salary, @Description)";
+                    string query = "INSERT INTO dbo.StaffManager (FirstName, LastName, Email, Gender, BirthDate, Phone, Address, Salary, Description, ImagePath) " +
+                                   "VALUES (@FirstName, @LastName, @Email, @Gender, @BirthDate, @Phone, @Address, @Salary, @Description, @ImagePath)";
                     using (var command = new SqlCommand(query, connection))
                     {
                         command.Parameters.Add("@FirstName", SqlDbType.NVarChar).Value = firstName;
@@ -64,16 +89,15 @@ namespace Management_Coffee_Shop
                         command.Parameters.Add("@Address", SqlDbType.NVarChar).Value = address;
                         command.Parameters.Add("@Salary", SqlDbType.Decimal).Value = salary;
                         command.Parameters.Add("@Description", SqlDbType.NVarChar).Value = (object)description ?? DBNull.Value;
+                        command.Parameters.Add("@ImagePath", SqlDbType.NVarChar).Value = (object)imagePath ?? DBNull.Value;
 
-                        int rowsAffected = command.ExecuteNonQuery();
-                        if (rowsAffected == 0)
-                            throw new DataException("Không có bản ghi nào được thêm vào cơ sở dữ liệu.");
+                        command.ExecuteNonQuery();
                     }
                 }
             }
             catch (SqlException ex)
             {
-                if (ex.Number == 2627) // Duplicate key violation
+                if (ex.Number == 2627)
                     throw new InvalidOperationException("Email hoặc số điện thoại đã tồn tại trong hệ thống.");
                 throw new DatabaseConnectionException("Lỗi khi thêm nhân viên vào cơ sở dữ liệu.", ex);
             }
@@ -83,7 +107,7 @@ namespace Management_Coffee_Shop
             }
         }
 
-        public void UpdateStaff(int id, string firstName, string lastName, string email, string gender, DateTime birthDate, string phone, string address, decimal salary, string description)
+        public void UpdateStaff(int id, string firstName, string lastName, string email, string gender, DateTime birthDate, string phone, string address, decimal salary, string description, string imagePath)
         {
             try
             {
@@ -93,7 +117,7 @@ namespace Management_Coffee_Shop
                 {
                     connection.Open();
                     string query = "UPDATE dbo.StaffManager SET FirstName = @FirstName, LastName = @LastName, Email = @Email, Gender = @Gender, " +
-                                   "BirthDate = @BirthDate, Phone = @Phone, Address = @Address, Salary = @Salary, Description = @Description WHERE Id = @Id";
+                                   "BirthDate = @BirthDate, Phone = @Phone, Address = @Address, Salary = @Salary, Description = @Description, ImagePath = @ImagePath WHERE Id = @Id";
                     using (var command = new SqlCommand(query, connection))
                     {
                         command.Parameters.Add("@Id", SqlDbType.Int).Value = id;
@@ -106,16 +130,15 @@ namespace Management_Coffee_Shop
                         command.Parameters.Add("@Address", SqlDbType.NVarChar).Value = address;
                         command.Parameters.Add("@Salary", SqlDbType.Decimal).Value = salary;
                         command.Parameters.Add("@Description", SqlDbType.NVarChar).Value = (object)description ?? DBNull.Value;
+                        command.Parameters.Add("@ImagePath", SqlDbType.NVarChar).Value = (object)imagePath ?? DBNull.Value;
 
-                        int rowsAffected = command.ExecuteNonQuery();
-                        if (rowsAffected == 0)
-                            throw new DataException("Không tìm thấy nhân viên để cập nhật hoặc không có thay đổi nào được thực hiện.");
+                        command.ExecuteNonQuery();
                     }
                 }
             }
             catch (SqlException ex)
             {
-                if (ex.Number == 2627) // Duplicate key violation
+                if (ex.Number == 2627)
                     throw new InvalidOperationException("Email hoặc số điện thoại đã tồn tại trong hệ thống.");
                 throw new DatabaseConnectionException("Lỗi khi cập nhật nhân viên trong cơ sở dữ liệu.", ex);
             }
@@ -129,6 +152,18 @@ namespace Management_Coffee_Shop
         {
             try
             {
+                string imagePath = null;
+                using (var connection = GetConnection())
+                {
+                    connection.Open();
+                    string query = "SELECT ImagePath FROM dbo.StaffManager WHERE Id = @Id";
+                    using (var command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.Add("@Id", SqlDbType.Int).Value = id;
+                        imagePath = command.ExecuteScalar()?.ToString();
+                    }
+                }
+
                 using (var connection = GetConnection())
                 {
                     connection.Open();
@@ -136,9 +171,19 @@ namespace Management_Coffee_Shop
                     using (var command = new SqlCommand(query, connection))
                     {
                         command.Parameters.Add("@Id", SqlDbType.Int).Value = id;
-                        int rowsAffected = command.ExecuteNonQuery();
-                        if (rowsAffected == 0)
-                            throw new DataException("Không tìm thấy nhân viên để xóa.");
+                        command.ExecuteNonQuery();
+                    }
+                }
+
+                if (!string.IsNullOrEmpty(imagePath) && File.Exists(imagePath))
+                {
+                    try
+                    {
+                        File.Delete(imagePath);
+                    }
+                    catch (Exception ex)
+                    {
+                        System.Diagnostics.Debug.WriteLine($"Lỗi khi xóa file ảnh: {ex.Message}");
                     }
                 }
             }

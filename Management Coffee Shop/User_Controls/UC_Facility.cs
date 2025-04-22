@@ -16,5 +16,10 @@ namespace Management_Coffee_Shop.User_Controls
         {
             InitializeComponent();
         }
+
+        private void UC_Facility_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

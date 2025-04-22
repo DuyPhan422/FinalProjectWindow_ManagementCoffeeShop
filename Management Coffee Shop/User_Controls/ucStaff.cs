@@ -19,12 +19,14 @@ namespace Management_Coffee_Shop
 
         private StaffDb staffDb;
         private int selectedStaffId = -1;
+        private string selectedImagePath;
 
         public ucStaff()
         {
             InitializeComponent();
             staffDb = new StaffDb();
-            this.Load += new EventHandler(this.ucStaff_Load);
+            this.Load += new EventHandler(ucStaff_Load);
+            dgvStaff.DoubleClick += new EventHandler(dgvStaff_DoubleClick);
 
         }
         private void LoadStaff()
@@ -37,10 +39,6 @@ namespace Management_Coffee_Shop
                     MessageBox.Show("Bảng StaffManager hiện không có dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 dgvStaff.DataSource = dt;
-            }
-            catch (DatabaseConnectionException ex)
-            {
-                MessageBox.Show($"Không thể kết nối tới cơ sở dữ liệu: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
@@ -62,22 +60,34 @@ namespace Management_Coffee_Shop
                     txtLastName.Text = selectedRow["LastName"]?.ToString();
                     txtEmail.Text = selectedRow["Email"]?.ToString() ?? "N/A";
                     string gender = selectedRow["Gender"]?.ToString();
-                    if (gender == "Male")
-                        rdbMale.Checked = true;
-                    else if (gender == "Female")
-                        rdbFemale.Checked = true;
-                    else
-                        throw new DataException("Giới tính không hợp lệ trong cơ sở dữ liệu.");
+                    rdbMale.Checked = gender == "Male";
+                    rdbFemale.Checked = gender == "Female";
                     dtpBirthDay.Value = Convert.ToDateTime(selectedRow["BirthDate"]);
                     txtPhone.Text = selectedRow["Phone"]?.ToString();
                     txtAddress.Text = selectedRow["Address"]?.ToString();
                     txtSalary.Text = selectedRow["Salary"]?.ToString();
                     txtDescription.Text = selectedRow["Description"]?.ToString() ?? "Chưa có mô tả";
-                }
-                catch (DataException ex)
-                {
-                    MessageBox.Show($"Dữ liệu không hợp lệ: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    ClearForm();
+
+                    // Hiển thị ảnh nếu có
+                    if (!string.IsNullOrEmpty(selectedRow["ImagePath"]?.ToString()))
+                    {
+                        selectedImagePath = selectedRow["ImagePath"].ToString();
+                        try
+                        {
+                            pbAvatar.Image = Image.FromFile(selectedImagePath);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Lỗi khi tải ảnh: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            pbAvatar.Image = null;
+                            selectedImagePath = null;
+                        }
+                    }
+                    else
+                    {
+                        pbAvatar.Image = null;
+                        selectedImagePath = null;
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -104,6 +114,55 @@ namespace Management_Coffee_Shop
             txtAddress.Text = "";
             txtSalary.Text = "";
             txtDescription.Text = "";
+            pbAvatar.Image = null;
+            selectedImagePath = null;
+        }
+        private void dgvStaff_DoubleClick(object sender, EventArgs e)
+        {
+            if (dgvStaff.SelectedRows.Count > 0 && dgvStaff.DataSource != null)
+            {
+                DataTable dt = (DataTable)dgvStaff.DataSource;
+                int selectedIndex = dgvStaff.SelectedRows[0].Index;
+                DataRow selectedRow = dt.Rows[selectedIndex];
+
+                selectedStaffId = Convert.ToInt32(selectedRow["Id"]);
+                txtFirstName.Text = selectedRow["FirstName"]?.ToString();
+                txtLastName.Text = selectedRow["LastName"]?.ToString();
+                txtEmail.Text = selectedRow["Email"]?.ToString() ?? "N/A";
+                string gender = selectedRow["Gender"]?.ToString();
+                rdbMale.Checked = gender == "Male";
+                rdbFemale.Checked = gender == "Female";
+                dtpBirthDay.Value = Convert.ToDateTime(selectedRow["BirthDate"]);
+                txtPhone.Text = selectedRow["Phone"]?.ToString();
+                txtAddress.Text = selectedRow["Address"]?.ToString();
+                txtSalary.Text = selectedRow["Salary"]?.ToString();
+                txtDescription.Text = selectedRow["Description"]?.ToString() ?? "Chưa có mô tả";
+
+                // Hiển thị ảnh nếu có
+                if (!string.IsNullOrEmpty(selectedRow["ImagePath"]?.ToString()))
+                {
+                    selectedImagePath = selectedRow["ImagePath"].ToString();
+                    try
+                    {
+                        pbAvatar.Image = Image.FromFile(selectedImagePath);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Lỗi khi tải ảnh: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        pbAvatar.Image = null;
+                        selectedImagePath = null;
+                    }
+                }
+                else
+                {
+                    pbAvatar.Image = null;
+                    selectedImagePath = null;
+                }
+
+                // Kích hoạt chế độ chỉnh sửa
+                timer.Start();
+                tbpnlTop.Enabled = false;
+            }
         }
 
         void SelectTxt(Guna2TextBox txt)
@@ -192,6 +251,8 @@ namespace Management_Coffee_Shop
         {
             timer.Start();
             tbpnlTop.Enabled = true;
+            pbAvatar.Image = null;
+            selectedImagePath = null;
         }
         private void timer_Tick_1(object sender, EventArgs e)
         {
@@ -263,19 +324,20 @@ namespace Management_Coffee_Shop
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            try
+            if (dgvStaff.SelectedRows.Count == 0)
             {
-                if (dgvStaff.SelectedRows.Count == 0)
-                {
-                    throw new InvalidOperationException("Vui lòng chọn một nhân viên để xóa!");
-                }
+                MessageBox.Show("Vui lòng chọn một nhân viên để xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-                DataGridViewRow row = dgvStaff.SelectedRows[0];
-                int staffId = Convert.ToInt32(row.Cells["colId"].Value);
-                string staffName = $"{row.Cells["colFirstName"].Value} {row.Cells["colLastName"].Value}";
-                DialogResult result = MessageBox.Show($"Bạn có chắc chắn muốn xóa nhân viên {staffName}?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DataGridViewRow row = dgvStaff.SelectedRows[0];
+            int staffId = Convert.ToInt32(row.Cells["colId"].Value);
+            string staffName = $"{row.Cells["colFirstName"].Value} {row.Cells["colLastName"].Value}";
+            DialogResult result = MessageBox.Show($"Bạn có chắc chắn muốn xóa nhân viên {staffName}?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                if (result == DialogResult.Yes)
+            if (result == DialogResult.Yes)
+            {
+                try
                 {
                     staffDb.DeleteStaff(staffId);
                     MessageBox.Show("Xóa nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -290,18 +352,10 @@ namespace Management_Coffee_Shop
                         ClearForm();
                     }
                 }
-            }
-            catch (InvalidOperationException ex)
-            {
-                MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            catch (DatabaseConnectionException ex)
-            {
-                MessageBox.Show($"Không thể kết nối tới cơ sở dữ liệu: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Lỗi khi xóa nhân viên: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Lỗi khi xóa nhân viên: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -347,14 +401,24 @@ namespace Management_Coffee_Shop
                 string address = txtAddress.Text.Trim();
                 string description = txtDescription.Text.Trim();
 
+                // Kiểm tra trùng lặp
+                if (staffDb.CheckStaffExists(email, phone))
+                {
+                    if (selectedStaffId == -1 || !IsCurrentStaff(email, phone))
+                    {
+                        MessageBox.Show("Nhân viên với email hoặc số điện thoại này đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
+
                 if (selectedStaffId == -1) // Add new staff
                 {
-                    staffDb.AddStaff(firstName, lastName, email, gender, birthDate, phone, address, salary, description);
+                    staffDb.AddStaff(firstName, lastName, email, gender, birthDate, phone, address, salary, description, selectedImagePath);
                     MessageBox.Show("Thêm nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else // Update staff
                 {
-                    staffDb.UpdateStaff(selectedStaffId, firstName, lastName, email, gender, birthDate, phone, address, salary, description);
+                    staffDb.UpdateStaff(selectedStaffId, firstName, lastName, email, gender, birthDate, phone, address, salary, description, selectedImagePath);
                     MessageBox.Show("Cập nhật nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
@@ -375,15 +439,24 @@ namespace Management_Coffee_Shop
             {
                 MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            catch (DatabaseConnectionException ex)
-            {
-                MessageBox.Show($"Không thể kết nối tới cơ sở dữ liệu: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
             catch (Exception ex)
             {
                 MessageBox.Show($"Lỗi khi lưu dữ liệu: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private bool IsCurrentStaff(string email, string phone)
+        {
+            DataTable dt = staffDb.GetAllStaff();
+            foreach (DataRow row in dt.Rows)
+            {
+                if (Convert.ToInt32(row["Id"]) == selectedStaffId)
+                {
+                    return row["Email"].ToString() == email && row["Phone"].ToString() == phone;
+                }
+            }
+            return false;
+        }
+
         private bool IsValidEmail(string email)
         {
             try
@@ -537,7 +610,7 @@ namespace Management_Coffee_Shop
 
         private void pbAvatar_Click(object sender, EventArgs e)
         {
-
+            btnImageChange_Click(sender, e);
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
@@ -552,7 +625,34 @@ namespace Management_Coffee_Shop
 
         private void btnImageChange_Click(object sender, EventArgs e)
         {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Tệp Ảnh|*.jpg;*.jpeg;*.png;*.bmp";
+            openFileDialog.Title = "Chọn một ảnh";
 
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    string sourceImagePath = openFileDialog.FileName;
+                    string imagesFolder = Path.Combine(Application.StartupPath, "Images");
+                    if (!Directory.Exists(imagesFolder))
+                    {
+                        Directory.CreateDirectory(imagesFolder);
+                    }
+
+                    string fileName = Path.GetFileNameWithoutExtension(sourceImagePath) + "_" + DateTime.Now.Ticks + Path.GetExtension(sourceImagePath);
+                    string destinationImagePath = Path.Combine(imagesFolder, fileName);
+
+                    File.Copy(sourceImagePath, destinationImagePath, true);
+                    selectedImagePath = destinationImagePath;
+
+                    pbAvatar.Image = Image.FromFile(selectedImagePath);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Lỗi khi tải ảnh: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void lblFirstName_Click(object sender, EventArgs e)
@@ -633,6 +733,12 @@ namespace Management_Coffee_Shop
         private void pnlGrid_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnImageCancel_Click(object sender, EventArgs e)
+        {
+            pbAvatar.Image = null;
+            selectedImagePath = null;
         }
     }
 }

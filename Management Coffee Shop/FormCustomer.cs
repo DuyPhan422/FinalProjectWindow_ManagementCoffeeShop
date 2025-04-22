@@ -584,6 +584,9 @@ namespace Management_Coffee_Shop
                 tabPage1.AutoScrollPosition = new Point(0, 2463);
             }
         }
+
+        
+
         private void change_color_button_homePage()
         {
             if (homePage == 1) homePage1.FillColor=Color.Gainsboro;
