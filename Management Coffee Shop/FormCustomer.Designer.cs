@@ -2,6 +2,8 @@
 
 namespace Management_Coffee_Shop
 {
+    // bill 
+
     class CustomTabPage : TabPage
     {
         public event MouseEventHandler CustomMouseWheel;
@@ -294,6 +296,11 @@ namespace Management_Coffee_Shop
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.guna2ProgressBar1 = new Guna.UI2.WinForms.Guna2ProgressBar();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.guna2Panel49 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
+            this.btnChangePassword = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.pnlAddShoppingCart.SuspendLayout();
@@ -358,6 +365,7 @@ namespace Management_Coffee_Shop
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox18)).BeginInit();
             this.pnlShipper.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox19)).BeginInit();
+            this.guna2Panel49.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -369,10 +377,9 @@ namespace Management_Coffee_Shop
             this.guna2Panel1.Controls.Add(this.guna2TextBox1);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.lblTimer);
-            this.guna2Panel1.Location = new System.Drawing.Point(-9, -10);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel1.Location = new System.Drawing.Point(-7, -8);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1849, 62);
+            this.guna2Panel1.Size = new System.Drawing.Size(1387, 50);
             this.guna2Panel1.TabIndex = 0;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
@@ -380,10 +387,9 @@ namespace Management_Coffee_Shop
             // 
             this.lblDate.BackColor = System.Drawing.Color.Transparent;
             this.lblDate.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.Location = new System.Drawing.Point(49, 9);
-            this.lblDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblDate.Location = new System.Drawing.Point(37, 7);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(141, 26);
+            this.lblDate.Size = new System.Drawing.Size(113, 20);
             this.lblDate.TabIndex = 5;
             this.lblDate.Text = "guna2HtmlLabel35";
             // 
@@ -398,10 +404,9 @@ namespace Management_Coffee_Shop
             this.btnShoppingCart.ForeColor = System.Drawing.Color.White;
             this.btnShoppingCart.Image = ((System.Drawing.Image)(resources.GetObject("btnShoppingCart.Image")));
             this.btnShoppingCart.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnShoppingCart.Location = new System.Drawing.Point(1659, 12);
-            this.btnShoppingCart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnShoppingCart.Location = new System.Drawing.Point(1244, 10);
             this.btnShoppingCart.Name = "btnShoppingCart";
-            this.btnShoppingCart.Size = new System.Drawing.Size(41, 42);
+            this.btnShoppingCart.Size = new System.Drawing.Size(31, 34);
             this.btnShoppingCart.TabIndex = 2;
             this.btnShoppingCart.Click += new System.EventHandler(this.btnShoppingCart_Click);
             // 
@@ -416,10 +421,9 @@ namespace Management_Coffee_Shop
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
             this.guna2Button2.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.Image")));
             this.guna2Button2.ImageSize = new System.Drawing.Size(28, 28);
-            this.guna2Button2.Location = new System.Drawing.Point(1611, 12);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Button2.Location = new System.Drawing.Point(1208, 10);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(41, 42);
+            this.guna2Button2.Size = new System.Drawing.Size(31, 34);
             this.guna2Button2.TabIndex = 2;
             // 
             // guna2TextBox1
@@ -437,12 +441,12 @@ namespace Management_Coffee_Shop
             this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(1295, 21);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox1.Location = new System.Drawing.Point(971, 17);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PlaceholderText = "";
             this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(307, 31);
+            this.guna2TextBox1.Size = new System.Drawing.Size(230, 25);
             this.guna2TextBox1.TabIndex = 1;
             // 
             // label1
@@ -450,10 +454,9 @@ namespace Management_Coffee_Shop
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Viner Hand ITC", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.label1.Location = new System.Drawing.Point(740, 6);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(555, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(245, 65);
+            this.label1.Size = new System.Drawing.Size(198, 52);
             this.label1.TabIndex = 0;
             this.label1.Text = "WESTERN";
             // 
@@ -461,10 +464,9 @@ namespace Management_Coffee_Shop
             // 
             this.lblTimer.AutoSize = true;
             this.lblTimer.Font = new System.Drawing.Font("Monotype Corsiva", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimer.Location = new System.Drawing.Point(13, 21);
-            this.lblTimer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTimer.Location = new System.Drawing.Point(10, 17);
             this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(86, 49);
+            this.lblTimer.Size = new System.Drawing.Size(67, 39);
             this.lblTimer.TabIndex = 4;
             this.lblTimer.Text = "8:36";
             // 
@@ -476,10 +478,9 @@ namespace Management_Coffee_Shop
             this.guna2Panel2.Controls.Add(this.btnShopping);
             this.guna2Panel2.Controls.Add(this.guna2Button36);
             this.guna2Panel2.Controls.Add(this.btnHome);
-            this.guna2Panel2.Location = new System.Drawing.Point(-9, 59);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel2.Location = new System.Drawing.Point(-7, 48);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(280, 889);
+            this.guna2Panel2.Size = new System.Drawing.Size(210, 722);
             this.guna2Panel2.TabIndex = 2;
             // 
             // btnProfile
@@ -493,10 +494,9 @@ namespace Management_Coffee_Shop
             this.btnProfile.ForeColor = System.Drawing.Color.Black;
             this.btnProfile.Image = ((System.Drawing.Image)(resources.GetObject("btnProfile.Image")));
             this.btnProfile.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnProfile.Location = new System.Drawing.Point(4, 286);
-            this.btnProfile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnProfile.Location = new System.Drawing.Point(3, 232);
             this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(276, 55);
+            this.btnProfile.Size = new System.Drawing.Size(207, 45);
             this.btnProfile.TabIndex = 0;
             this.btnProfile.Text = "PROFILE";
             this.btnProfile.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -512,10 +512,9 @@ namespace Management_Coffee_Shop
             this.btnHistory.ForeColor = System.Drawing.Color.Black;
             this.btnHistory.Image = ((System.Drawing.Image)(resources.GetObject("btnHistory.Image")));
             this.btnHistory.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnHistory.Location = new System.Drawing.Point(4, 212);
-            this.btnHistory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHistory.Location = new System.Drawing.Point(3, 172);
             this.btnHistory.Name = "btnHistory";
-            this.btnHistory.Size = new System.Drawing.Size(276, 55);
+            this.btnHistory.Size = new System.Drawing.Size(207, 45);
             this.btnHistory.TabIndex = 0;
             this.btnHistory.Text = "HISTORY";
             this.btnHistory.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -532,10 +531,9 @@ namespace Management_Coffee_Shop
             this.btnShopping.ForeColor = System.Drawing.Color.Black;
             this.btnShopping.Image = ((System.Drawing.Image)(resources.GetObject("btnShopping.Image")));
             this.btnShopping.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnShopping.Location = new System.Drawing.Point(0, 137);
-            this.btnShopping.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnShopping.Location = new System.Drawing.Point(0, 111);
             this.btnShopping.Name = "btnShopping";
-            this.btnShopping.Size = new System.Drawing.Size(280, 55);
+            this.btnShopping.Size = new System.Drawing.Size(210, 45);
             this.btnShopping.TabIndex = 0;
             this.btnShopping.Text = "SHOPPING";
             this.btnShopping.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -553,10 +551,9 @@ namespace Management_Coffee_Shop
             this.guna2Button36.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button36.Image")));
             this.guna2Button36.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button36.ImageSize = new System.Drawing.Size(50, 50);
-            this.guna2Button36.Location = new System.Drawing.Point(4, 11);
-            this.guna2Button36.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Button36.Location = new System.Drawing.Point(3, 9);
             this.guna2Button36.Name = "guna2Button36";
-            this.guna2Button36.Size = new System.Drawing.Size(99, 55);
+            this.guna2Button36.Size = new System.Drawing.Size(74, 45);
             this.guna2Button36.TabIndex = 0;
             this.guna2Button36.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button36.Click += new System.EventHandler(this.btnHome_Click);
@@ -573,10 +570,9 @@ namespace Management_Coffee_Shop
             this.btnHome.ForeColor = System.Drawing.Color.Black;
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnHome.Location = new System.Drawing.Point(4, 74);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHome.Location = new System.Drawing.Point(3, 60);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(276, 55);
+            this.btnHome.Size = new System.Drawing.Size(207, 45);
             this.btnHome.TabIndex = 0;
             this.btnHome.Text = "HOME";
             this.btnHome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -589,7 +585,7 @@ namespace Management_Coffee_Shop
             this.guna2HtmlLabel22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
             this.guna2HtmlLabel22.Location = new System.Drawing.Point(655, 141);
             this.guna2HtmlLabel22.Name = "guna2HtmlLabel22";
-            this.guna2HtmlLabel22.Size = new System.Drawing.Size(279, 93);
+            this.guna2HtmlLabel22.Size = new System.Drawing.Size(227, 75);
             this.guna2HtmlLabel22.TabIndex = 2;
             this.guna2HtmlLabel22.Text = "Visit Us";
             // 
@@ -599,7 +595,7 @@ namespace Management_Coffee_Shop
             this.guna2HtmlLabel21.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel21.Location = new System.Drawing.Point(655, 205);
             this.guna2HtmlLabel21.Name = "guna2HtmlLabel21";
-            this.guna2HtmlLabel21.Size = new System.Drawing.Size(526, 32);
+            this.guna2HtmlLabel21.Size = new System.Drawing.Size(445, 27);
             this.guna2HtmlLabel21.TabIndex = 3;
             this.guna2HtmlLabel21.Text = "We have hundreds of stores around the world. ";
             // 
@@ -609,7 +605,7 @@ namespace Management_Coffee_Shop
             this.guna2HtmlLabel20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel20.Location = new System.Drawing.Point(655, 237);
             this.guna2HtmlLabel20.Name = "guna2HtmlLabel20";
-            this.guna2HtmlLabel20.Size = new System.Drawing.Size(355, 32);
+            this.guna2HtmlLabel20.Size = new System.Drawing.Size(300, 27);
             this.guna2HtmlLabel20.TabIndex = 3;
             this.guna2HtmlLabel20.Text = "Ready to serve you at any time";
             // 
@@ -628,10 +624,9 @@ namespace Management_Coffee_Shop
             this.pnlAddShoppingCart.BackColor = System.Drawing.Color.Black;
             this.pnlAddShoppingCart.Controls.Add(this.label25);
             this.pnlAddShoppingCart.Controls.Add(this.label24);
-            this.pnlAddShoppingCart.Location = new System.Drawing.Point(2667, 2462);
-            this.pnlAddShoppingCart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlAddShoppingCart.Location = new System.Drawing.Point(2000, 2000);
             this.pnlAddShoppingCart.Name = "pnlAddShoppingCart";
-            this.pnlAddShoppingCart.Size = new System.Drawing.Size(468, 95);
+            this.pnlAddShoppingCart.Size = new System.Drawing.Size(351, 77);
             this.pnlAddShoppingCart.TabIndex = 3;
             this.pnlAddShoppingCart.Visible = false;
             // 
@@ -640,10 +635,9 @@ namespace Management_Coffee_Shop
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.label25.Location = new System.Drawing.Point(164, 16);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Location = new System.Drawing.Point(123, 13);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(130, 29);
+            this.label25.Size = new System.Drawing.Size(103, 24);
             this.label25.TabIndex = 0;
             this.label25.Text = "GIỎ HÀNG";
             // 
@@ -652,10 +646,9 @@ namespace Management_Coffee_Shop
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.label24.Location = new System.Drawing.Point(23, 52);
-            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Location = new System.Drawing.Point(17, 42);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(405, 29);
+            this.label24.Size = new System.Drawing.Size(323, 24);
             this.label24.TabIndex = 0;
             this.label24.Text = "Đã Thêm Vào Giỏ Hàng Thành Công";
             // 
@@ -669,10 +662,9 @@ namespace Management_Coffee_Shop
             this.pnlSaveLogin.Controls.Add(this.btnYes);
             this.pnlSaveLogin.Controls.Add(this.guna2HtmlLabel43);
             this.pnlSaveLogin.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlSaveLogin.Location = new System.Drawing.Point(1285, 43);
-            this.pnlSaveLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlSaveLogin.Location = new System.Drawing.Point(2000, 2000);
             this.pnlSaveLogin.Name = "pnlSaveLogin";
-            this.pnlSaveLogin.Size = new System.Drawing.Size(357, 82);
+            this.pnlSaveLogin.Size = new System.Drawing.Size(268, 67);
             this.pnlSaveLogin.TabIndex = 4;
             // 
             // btnNo
@@ -684,10 +676,9 @@ namespace Management_Coffee_Shop
             this.btnNo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
             this.btnNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNo.ForeColor = System.Drawing.Color.White;
-            this.btnNo.Location = new System.Drawing.Point(196, 43);
-            this.btnNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNo.Location = new System.Drawing.Point(147, 35);
             this.btnNo.Name = "btnNo";
-            this.btnNo.Size = new System.Drawing.Size(95, 31);
+            this.btnNo.Size = new System.Drawing.Size(71, 25);
             this.btnNo.TabIndex = 1;
             this.btnNo.Text = "No";
             this.btnNo.Click += new System.EventHandler(this.btnNo_Click);
@@ -701,10 +692,9 @@ namespace Management_Coffee_Shop
             this.btnYes.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
             this.btnYes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnYes.ForeColor = System.Drawing.Color.White;
-            this.btnYes.Location = new System.Drawing.Point(89, 43);
-            this.btnYes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnYes.Location = new System.Drawing.Point(67, 35);
             this.btnYes.Name = "btnYes";
-            this.btnYes.Size = new System.Drawing.Size(99, 32);
+            this.btnYes.Size = new System.Drawing.Size(74, 26);
             this.btnYes.TabIndex = 1;
             this.btnYes.Text = "Yes";
             this.btnYes.Click += new System.EventHandler(this.btnYes_Click);
@@ -713,10 +703,9 @@ namespace Management_Coffee_Shop
             // 
             this.guna2HtmlLabel43.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel43.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel43.Location = new System.Drawing.Point(4, 21);
-            this.guna2HtmlLabel43.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel43.Location = new System.Drawing.Point(3, 17);
             this.guna2HtmlLabel43.Name = "guna2HtmlLabel43";
-            this.guna2HtmlLabel43.Size = new System.Drawing.Size(333, 19);
+            this.guna2HtmlLabel43.Size = new System.Drawing.Size(263, 15);
             this.guna2HtmlLabel43.TabIndex = 0;
             this.guna2HtmlLabel43.Text = "Bạn có muốn lưu thông tin đăng nhập không?";
             // 
@@ -730,11 +719,10 @@ namespace Management_Coffee_Shop
             this.homePage2.FillColor = System.Drawing.Color.Gainsboro;
             this.homePage2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.homePage2.ForeColor = System.Drawing.Color.White;
-            this.homePage2.Location = new System.Drawing.Point(1, 395);
-            this.homePage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.homePage2.Location = new System.Drawing.Point(1, 321);
             this.homePage2.Name = "homePage2";
             this.homePage2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.homePage2.Size = new System.Drawing.Size(20, 18);
+            this.homePage2.Size = new System.Drawing.Size(15, 15);
             this.homePage2.TabIndex = 5;
             this.homePage2.Click += new System.EventHandler(this.homePage2_Click);
             // 
@@ -748,11 +736,10 @@ namespace Management_Coffee_Shop
             this.homePage4.FillColor = System.Drawing.Color.Gainsboro;
             this.homePage4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.homePage4.ForeColor = System.Drawing.Color.White;
-            this.homePage4.Location = new System.Drawing.Point(1, 476);
-            this.homePage4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.homePage4.Location = new System.Drawing.Point(1, 387);
             this.homePage4.Name = "homePage4";
             this.homePage4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.homePage4.Size = new System.Drawing.Size(20, 18);
+            this.homePage4.Size = new System.Drawing.Size(15, 15);
             this.homePage4.TabIndex = 6;
             this.homePage4.Text = "guna2CircleButton2";
             this.homePage4.Click += new System.EventHandler(this.homePage4_Click);
@@ -767,11 +754,10 @@ namespace Management_Coffee_Shop
             this.homePage1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
             this.homePage1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.homePage1.ForeColor = System.Drawing.Color.White;
-            this.homePage1.Location = new System.Drawing.Point(1, 354);
-            this.homePage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.homePage1.Location = new System.Drawing.Point(1, 288);
             this.homePage1.Name = "homePage1";
             this.homePage1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.homePage1.Size = new System.Drawing.Size(20, 18);
+            this.homePage1.Size = new System.Drawing.Size(15, 15);
             this.homePage1.TabIndex = 6;
             this.homePage1.Text = "guna2CircleButton2";
             this.homePage1.Click += new System.EventHandler(this.homePage1_Click);
@@ -786,11 +772,10 @@ namespace Management_Coffee_Shop
             this.homePage3.FillColor = System.Drawing.Color.Gainsboro;
             this.homePage3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.homePage3.ForeColor = System.Drawing.Color.White;
-            this.homePage3.Location = new System.Drawing.Point(1, 436);
-            this.homePage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.homePage3.Location = new System.Drawing.Point(1, 354);
             this.homePage3.Name = "homePage3";
             this.homePage3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.homePage3.Size = new System.Drawing.Size(20, 18);
+            this.homePage3.Size = new System.Drawing.Size(15, 15);
             this.homePage3.TabIndex = 6;
             this.homePage3.Text = "guna2CircleButton2";
             this.homePage3.Click += new System.EventHandler(this.homePage3_Click);
@@ -805,11 +790,10 @@ namespace Management_Coffee_Shop
             this.homePage5.FillColor = System.Drawing.Color.Gainsboro;
             this.homePage5.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.homePage5.ForeColor = System.Drawing.Color.White;
-            this.homePage5.Location = new System.Drawing.Point(1, 517);
-            this.homePage5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.homePage5.Location = new System.Drawing.Point(1, 420);
             this.homePage5.Name = "homePage5";
             this.homePage5.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.homePage5.Size = new System.Drawing.Size(20, 18);
+            this.homePage5.Size = new System.Drawing.Size(15, 15);
             this.homePage5.TabIndex = 7;
             this.homePage5.Text = "guna2CircleButton6";
             this.homePage5.Click += new System.EventHandler(this.homePage5_Click);
@@ -822,10 +806,9 @@ namespace Management_Coffee_Shop
             this.pnlhomePage.Controls.Add(this.homePage4);
             this.pnlhomePage.Controls.Add(this.homePage1);
             this.pnlhomePage.Controls.Add(this.homePage3);
-            this.pnlhomePage.Location = new System.Drawing.Point(1812, 59);
-            this.pnlhomePage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlhomePage.Location = new System.Drawing.Point(1359, 48);
             this.pnlhomePage.Name = "pnlhomePage";
-            this.pnlhomePage.Size = new System.Drawing.Size(28, 889);
+            this.pnlhomePage.Size = new System.Drawing.Size(21, 722);
             this.pnlhomePage.TabIndex = 5;
             // 
             // tabControl1
@@ -836,11 +819,11 @@ namespace Management_Coffee_Shop
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage6);
-            this.tabControl1.Location = new System.Drawing.Point(279, 33);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.tabControl1.Controls.Add(this.tabPage7);
+            this.tabControl1.Location = new System.Drawing.Point(209, 27);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1561, 919);
+            this.tabControl1.Size = new System.Drawing.Size(1171, 747);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -873,11 +856,10 @@ namespace Management_Coffee_Shop
             this.tabPage1.Controls.Add(this.guna2PictureBox1);
             this.tabPage1.Controls.Add(this.guna2Panel9);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(1553, 890);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1163, 721);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             // 
@@ -886,10 +868,9 @@ namespace Management_Coffee_Shop
             this.guna2PictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox6.Image")));
             this.guna2PictureBox6.ImageRotate = 0F;
-            this.guna2PictureBox6.Location = new System.Drawing.Point(1401, 345);
-            this.guna2PictureBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox6.Location = new System.Drawing.Point(1051, 280);
             this.guna2PictureBox6.Name = "guna2PictureBox6";
-            this.guna2PictureBox6.Size = new System.Drawing.Size(107, 84);
+            this.guna2PictureBox6.Size = new System.Drawing.Size(80, 68);
             this.guna2PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox6.TabIndex = 1;
             this.guna2PictureBox6.TabStop = false;
@@ -905,10 +886,9 @@ namespace Management_Coffee_Shop
             this.btnShopNow.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
             this.btnShopNow.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShopNow.ForeColor = System.Drawing.Color.White;
-            this.btnShopNow.Location = new System.Drawing.Point(276, 815);
-            this.btnShopNow.Margin = new System.Windows.Forms.Padding(4);
+            this.btnShopNow.Location = new System.Drawing.Point(207, 662);
             this.btnShopNow.Name = "btnShopNow";
-            this.btnShopNow.Size = new System.Drawing.Size(229, 55);
+            this.btnShopNow.Size = new System.Drawing.Size(172, 45);
             this.btnShopNow.TabIndex = 8;
             this.btnShopNow.Text = "SHOP NOW";
             this.btnShopNow.Click += new System.EventHandler(this.btnShopping_Click);
@@ -917,10 +897,9 @@ namespace Management_Coffee_Shop
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1207, 789);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(905, 641);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 20);
+            this.label6.Size = new System.Drawing.Size(44, 16);
             this.label6.TabIndex = 7;
             this.label6.Text = "Juice";
             // 
@@ -928,10 +907,9 @@ namespace Management_Coffee_Shop
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1397, 655);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(1048, 532);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 20);
+            this.label5.Size = new System.Drawing.Size(35, 16);
             this.label5.TabIndex = 7;
             this.label5.Text = "Tea";
             // 
@@ -939,10 +917,9 @@ namespace Management_Coffee_Shop
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1419, 432);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(1064, 351);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 20);
+            this.label4.Size = new System.Drawing.Size(67, 16);
             this.label4.TabIndex = 7;
             this.label4.Text = "Milk Tea";
             // 
@@ -950,10 +927,9 @@ namespace Management_Coffee_Shop
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1344, 234);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(1008, 190);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 20);
+            this.label3.Size = new System.Drawing.Size(52, 16);
             this.label3.TabIndex = 7;
             this.label3.Text = "Coffee";
             // 
@@ -961,10 +937,9 @@ namespace Management_Coffee_Shop
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1175, 111);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(881, 90);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 20);
+            this.label2.Size = new System.Drawing.Size(41, 16);
             this.label2.TabIndex = 7;
             this.label2.Text = "Latte";
             // 
@@ -973,10 +948,9 @@ namespace Management_Coffee_Shop
             this.guna2PictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox5.Image")));
             this.guna2PictureBox5.ImageRotate = 0F;
-            this.guna2PictureBox5.Location = new System.Drawing.Point(1180, 698);
-            this.guna2PictureBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox5.Location = new System.Drawing.Point(885, 567);
             this.guna2PictureBox5.Name = "guna2PictureBox5";
-            this.guna2PictureBox5.Size = new System.Drawing.Size(116, 84);
+            this.guna2PictureBox5.Size = new System.Drawing.Size(87, 68);
             this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox5.TabIndex = 1;
             this.guna2PictureBox5.TabStop = false;
@@ -987,10 +961,9 @@ namespace Management_Coffee_Shop
             this.guna2PictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
             this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(1361, 565);
-            this.guna2PictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox4.Location = new System.Drawing.Point(1021, 459);
             this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.Size = new System.Drawing.Size(108, 75);
+            this.guna2PictureBox4.Size = new System.Drawing.Size(81, 61);
             this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox4.TabIndex = 1;
             this.guna2PictureBox4.TabStop = false;
@@ -1000,10 +973,9 @@ namespace Management_Coffee_Shop
             // 
             this.guna2HtmlLabel14.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel14.Location = new System.Drawing.Point(25, 489);
-            this.guna2HtmlLabel14.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel14.Location = new System.Drawing.Point(19, 397);
             this.guna2HtmlLabel14.Name = "guna2HtmlLabel14";
-            this.guna2HtmlLabel14.Size = new System.Drawing.Size(274, 22);
+            this.guna2HtmlLabel14.Size = new System.Drawing.Size(233, 18);
             this.guna2HtmlLabel14.TabIndex = 6;
             this.guna2HtmlLabel14.Text = "will be a hot cup of coffee for you.";
             // 
@@ -1011,10 +983,9 @@ namespace Management_Coffee_Shop
             // 
             this.guna2HtmlLabel13.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel13.Location = new System.Drawing.Point(27, 466);
-            this.guna2HtmlLabel13.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel13.Location = new System.Drawing.Point(20, 379);
             this.guna2HtmlLabel13.Name = "guna2HtmlLabel13";
-            this.guna2HtmlLabel13.Size = new System.Drawing.Size(570, 22);
+            this.guna2HtmlLabel13.Size = new System.Drawing.Size(485, 18);
             this.guna2HtmlLabel13.TabIndex = 6;
             this.guna2HtmlLabel13.Text = "and conveniently without having to go out. Pick up the phone  and there";
             // 
@@ -1023,20 +994,18 @@ namespace Management_Coffee_Shop
             this.guna2Panel11.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel11.BorderRadius = 25;
             this.guna2Panel11.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.guna2Panel11.Location = new System.Drawing.Point(1388, 590);
-            this.guna2Panel11.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel11.Location = new System.Drawing.Point(1041, 479);
             this.guna2Panel11.Name = "guna2Panel11";
-            this.guna2Panel11.Size = new System.Drawing.Size(56, 62);
+            this.guna2Panel11.Size = new System.Drawing.Size(42, 50);
             this.guna2Panel11.TabIndex = 2;
             // 
             // guna2HtmlLabel5
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(29, 441);
-            this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(22, 358);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(545, 22);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(473, 18);
             this.guna2HtmlLabel5.TabIndex = 6;
             this.guna2HtmlLabel5.Text = "We provide smart customer solutions.  Helps customers shop quickly";
             // 
@@ -1055,10 +1024,9 @@ namespace Management_Coffee_Shop
             this.guna2Panel5.Controls.Add(this.guna2Panel8);
             this.guna2Panel5.Controls.Add(this.guna2Panel7);
             this.guna2Panel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(220)))), ((int)(((byte)(195)))));
-            this.guna2Panel5.Location = new System.Drawing.Point(0, 991);
-            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel5.Location = new System.Drawing.Point(0, 805);
             this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.Size = new System.Drawing.Size(1527, 2924);
+            this.guna2Panel5.Size = new System.Drawing.Size(1145, 2376);
             this.guna2Panel5.TabIndex = 4;
             // 
             // guna2Panel20
@@ -1085,10 +1053,9 @@ namespace Management_Coffee_Shop
             this.guna2Panel20.Controls.Add(this.guna2HtmlLabel34);
             this.guna2Panel20.Controls.Add(this.guna2HtmlLabel33);
             this.guna2Panel20.Controls.Add(this.guna2HtmlLabel32);
-            this.guna2Panel20.Location = new System.Drawing.Point(0, 2460);
-            this.guna2Panel20.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel20.Location = new System.Drawing.Point(0, 1999);
             this.guna2Panel20.Name = "guna2Panel20";
-            this.guna2Panel20.Size = new System.Drawing.Size(1527, 463);
+            this.guna2Panel20.Size = new System.Drawing.Size(1145, 376);
             this.guna2Panel20.TabIndex = 4;
             // 
             // guna2Button23
@@ -1102,10 +1069,9 @@ namespace Management_Coffee_Shop
             this.guna2Button23.ForeColor = System.Drawing.Color.White;
             this.guna2Button23.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button23.Image")));
             this.guna2Button23.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2Button23.Location = new System.Drawing.Point(1363, 395);
-            this.guna2Button23.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button23.Location = new System.Drawing.Point(1022, 321);
             this.guna2Button23.Name = "guna2Button23";
-            this.guna2Button23.Size = new System.Drawing.Size(73, 55);
+            this.guna2Button23.Size = new System.Drawing.Size(55, 45);
             this.guna2Button23.TabIndex = 8;
             // 
             // guna2Button7
@@ -1119,10 +1085,9 @@ namespace Management_Coffee_Shop
             this.guna2Button7.ForeColor = System.Drawing.Color.White;
             this.guna2Button7.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button7.Image")));
             this.guna2Button7.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2Button7.Location = new System.Drawing.Point(1301, 395);
-            this.guna2Button7.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button7.Location = new System.Drawing.Point(976, 321);
             this.guna2Button7.Name = "guna2Button7";
-            this.guna2Button7.Size = new System.Drawing.Size(73, 55);
+            this.guna2Button7.Size = new System.Drawing.Size(55, 45);
             this.guna2Button7.TabIndex = 8;
             // 
             // guna2Button6
@@ -1136,10 +1101,9 @@ namespace Management_Coffee_Shop
             this.guna2Button6.ForeColor = System.Drawing.Color.White;
             this.guna2Button6.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button6.Image")));
             this.guna2Button6.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2Button6.Location = new System.Drawing.Point(1239, 395);
-            this.guna2Button6.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button6.Location = new System.Drawing.Point(929, 321);
             this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.Size = new System.Drawing.Size(73, 55);
+            this.guna2Button6.Size = new System.Drawing.Size(55, 45);
             this.guna2Button6.TabIndex = 8;
             // 
             // guna2Button22
@@ -1151,10 +1115,9 @@ namespace Management_Coffee_Shop
             this.guna2Button22.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button22.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Button22.Location = new System.Drawing.Point(1019, 293);
-            this.guna2Button22.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button22.Location = new System.Drawing.Point(764, 238);
             this.guna2Button22.Name = "guna2Button22";
-            this.guna2Button22.Size = new System.Drawing.Size(240, 55);
+            this.guna2Button22.Size = new System.Drawing.Size(180, 45);
             this.guna2Button22.TabIndex = 7;
             this.guna2Button22.Text = "Attendant";
             this.guna2Button22.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1168,10 +1131,9 @@ namespace Management_Coffee_Shop
             this.guna2Button18.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button18.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Button18.Location = new System.Drawing.Point(531, 293);
-            this.guna2Button18.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button18.Location = new System.Drawing.Point(398, 238);
             this.guna2Button18.Name = "guna2Button18";
-            this.guna2Button18.Size = new System.Drawing.Size(240, 55);
+            this.guna2Button18.Size = new System.Drawing.Size(180, 45);
             this.guna2Button18.TabIndex = 7;
             this.guna2Button18.Text = "Attendant";
             this.guna2Button18.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1185,10 +1147,9 @@ namespace Management_Coffee_Shop
             this.guna2Button13.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button13.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Button13.Location = new System.Drawing.Point(121, 282);
-            this.guna2Button13.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button13.Location = new System.Drawing.Point(91, 229);
             this.guna2Button13.Name = "guna2Button13";
-            this.guna2Button13.Size = new System.Drawing.Size(240, 55);
+            this.guna2Button13.Size = new System.Drawing.Size(180, 45);
             this.guna2Button13.TabIndex = 7;
             this.guna2Button13.Text = "Attendant";
             this.guna2Button13.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1202,10 +1163,9 @@ namespace Management_Coffee_Shop
             this.guna2Button21.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button21.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Button21.Location = new System.Drawing.Point(1019, 230);
-            this.guna2Button21.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button21.Location = new System.Drawing.Point(764, 187);
             this.guna2Button21.Name = "guna2Button21";
-            this.guna2Button21.Size = new System.Drawing.Size(240, 55);
+            this.guna2Button21.Size = new System.Drawing.Size(180, 45);
             this.guna2Button21.TabIndex = 7;
             this.guna2Button21.Text = "Location";
             this.guna2Button21.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1219,10 +1179,9 @@ namespace Management_Coffee_Shop
             this.guna2Button17.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button17.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Button17.Location = new System.Drawing.Point(531, 230);
-            this.guna2Button17.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button17.Location = new System.Drawing.Point(398, 187);
             this.guna2Button17.Name = "guna2Button17";
-            this.guna2Button17.Size = new System.Drawing.Size(240, 55);
+            this.guna2Button17.Size = new System.Drawing.Size(180, 45);
             this.guna2Button17.TabIndex = 7;
             this.guna2Button17.Text = "Location";
             this.guna2Button17.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1236,10 +1195,9 @@ namespace Management_Coffee_Shop
             this.guna2Button12.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button12.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Button12.Location = new System.Drawing.Point(121, 219);
-            this.guna2Button12.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button12.Location = new System.Drawing.Point(91, 178);
             this.guna2Button12.Name = "guna2Button12";
-            this.guna2Button12.Size = new System.Drawing.Size(240, 55);
+            this.guna2Button12.Size = new System.Drawing.Size(180, 45);
             this.guna2Button12.TabIndex = 7;
             this.guna2Button12.Text = "Location";
             this.guna2Button12.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1253,10 +1211,9 @@ namespace Management_Coffee_Shop
             this.guna2Button20.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button20.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Button20.Location = new System.Drawing.Point(1019, 167);
-            this.guna2Button20.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button20.Location = new System.Drawing.Point(764, 136);
             this.guna2Button20.Name = "guna2Button20";
-            this.guna2Button20.Size = new System.Drawing.Size(240, 55);
+            this.guna2Button20.Size = new System.Drawing.Size(180, 45);
             this.guna2Button20.TabIndex = 7;
             this.guna2Button20.Text = "Best Seller";
             this.guna2Button20.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1270,10 +1227,9 @@ namespace Management_Coffee_Shop
             this.guna2Button16.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button16.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Button16.Location = new System.Drawing.Point(531, 167);
-            this.guna2Button16.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button16.Location = new System.Drawing.Point(398, 136);
             this.guna2Button16.Name = "guna2Button16";
-            this.guna2Button16.Size = new System.Drawing.Size(240, 55);
+            this.guna2Button16.Size = new System.Drawing.Size(180, 45);
             this.guna2Button16.TabIndex = 7;
             this.guna2Button16.Text = "Best Seller";
             this.guna2Button16.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1287,10 +1243,9 @@ namespace Management_Coffee_Shop
             this.guna2Button14.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button14.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Button14.Location = new System.Drawing.Point(121, 156);
-            this.guna2Button14.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button14.Location = new System.Drawing.Point(91, 127);
             this.guna2Button14.Name = "guna2Button14";
-            this.guna2Button14.Size = new System.Drawing.Size(240, 55);
+            this.guna2Button14.Size = new System.Drawing.Size(180, 45);
             this.guna2Button14.TabIndex = 7;
             this.guna2Button14.Text = "Best Seller";
             this.guna2Button14.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1304,10 +1259,9 @@ namespace Management_Coffee_Shop
             this.guna2Button19.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button19.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Button19.Location = new System.Drawing.Point(1019, 105);
-            this.guna2Button19.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button19.Location = new System.Drawing.Point(764, 85);
             this.guna2Button19.Name = "guna2Button19";
-            this.guna2Button19.Size = new System.Drawing.Size(240, 55);
+            this.guna2Button19.Size = new System.Drawing.Size(180, 45);
             this.guna2Button19.TabIndex = 7;
             this.guna2Button19.Text = "About Us";
             this.guna2Button19.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1321,10 +1275,9 @@ namespace Management_Coffee_Shop
             this.guna2Button15.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button15.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Button15.Location = new System.Drawing.Point(531, 105);
-            this.guna2Button15.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button15.Location = new System.Drawing.Point(398, 85);
             this.guna2Button15.Name = "guna2Button15";
-            this.guna2Button15.Size = new System.Drawing.Size(240, 55);
+            this.guna2Button15.Size = new System.Drawing.Size(180, 45);
             this.guna2Button15.TabIndex = 7;
             this.guna2Button15.Text = "About Us";
             this.guna2Button15.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1338,10 +1291,9 @@ namespace Management_Coffee_Shop
             this.guna2Button10.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button10.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Button10.Location = new System.Drawing.Point(121, 94);
-            this.guna2Button10.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button10.Location = new System.Drawing.Point(91, 76);
             this.guna2Button10.Name = "guna2Button10";
-            this.guna2Button10.Size = new System.Drawing.Size(240, 55);
+            this.guna2Button10.Size = new System.Drawing.Size(180, 45);
             this.guna2Button10.TabIndex = 7;
             this.guna2Button10.Text = "About Us";
             this.guna2Button10.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1349,28 +1301,25 @@ namespace Management_Coffee_Shop
             // guna2Panel23
             // 
             this.guna2Panel23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Panel23.Location = new System.Drawing.Point(1019, 94);
-            this.guna2Panel23.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel23.Location = new System.Drawing.Point(764, 76);
             this.guna2Panel23.Name = "guna2Panel23";
-            this.guna2Panel23.Size = new System.Drawing.Size(293, 4);
+            this.guna2Panel23.Size = new System.Drawing.Size(220, 3);
             this.guna2Panel23.TabIndex = 6;
             // 
             // guna2Panel22
             // 
             this.guna2Panel22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Panel22.Location = new System.Drawing.Point(531, 82);
-            this.guna2Panel22.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel22.Location = new System.Drawing.Point(398, 67);
             this.guna2Panel22.Name = "guna2Panel22";
-            this.guna2Panel22.Size = new System.Drawing.Size(293, 4);
+            this.guna2Panel22.Size = new System.Drawing.Size(220, 3);
             this.guna2Panel22.TabIndex = 6;
             // 
             // guna2Panel21
             // 
             this.guna2Panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Panel21.Location = new System.Drawing.Point(121, 82);
-            this.guna2Panel21.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel21.Location = new System.Drawing.Point(91, 67);
             this.guna2Panel21.Name = "guna2Panel21";
-            this.guna2Panel21.Size = new System.Drawing.Size(293, 4);
+            this.guna2Panel21.Size = new System.Drawing.Size(220, 3);
             this.guna2Panel21.TabIndex = 6;
             // 
             // guna2HtmlLabel34
@@ -1378,10 +1327,9 @@ namespace Management_Coffee_Shop
             this.guna2HtmlLabel34.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel34.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2HtmlLabel34.Location = new System.Drawing.Point(1032, 46);
-            this.guna2HtmlLabel34.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel34.Location = new System.Drawing.Point(774, 37);
             this.guna2HtmlLabel34.Name = "guna2HtmlLabel34";
-            this.guna2HtmlLabel34.Size = new System.Drawing.Size(243, 41);
+            this.guna2HtmlLabel34.Size = new System.Drawing.Size(195, 33);
             this.guna2HtmlLabel34.TabIndex = 3;
             this.guna2HtmlLabel34.Text = "INFORMATION";
             // 
@@ -1390,10 +1338,9 @@ namespace Management_Coffee_Shop
             this.guna2HtmlLabel33.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel33.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2HtmlLabel33.Location = new System.Drawing.Point(544, 46);
-            this.guna2HtmlLabel33.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel33.Location = new System.Drawing.Point(408, 37);
             this.guna2HtmlLabel33.Name = "guna2HtmlLabel33";
-            this.guna2HtmlLabel33.Size = new System.Drawing.Size(243, 41);
+            this.guna2HtmlLabel33.Size = new System.Drawing.Size(195, 33);
             this.guna2HtmlLabel33.TabIndex = 3;
             this.guna2HtmlLabel33.Text = "INFORMATION";
             // 
@@ -1402,30 +1349,27 @@ namespace Management_Coffee_Shop
             this.guna2HtmlLabel32.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel32.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2HtmlLabel32.Location = new System.Drawing.Point(135, 34);
-            this.guna2HtmlLabel32.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel32.Location = new System.Drawing.Point(101, 28);
             this.guna2HtmlLabel32.Name = "guna2HtmlLabel32";
-            this.guna2HtmlLabel32.Size = new System.Drawing.Size(243, 41);
+            this.guna2HtmlLabel32.Size = new System.Drawing.Size(195, 33);
             this.guna2HtmlLabel32.TabIndex = 3;
             this.guna2HtmlLabel32.Text = "INFORMATION";
             // 
             // guna2Panel16
             // 
             this.guna2Panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Panel16.Location = new System.Drawing.Point(1080, 274);
-            this.guna2Panel16.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel16.Location = new System.Drawing.Point(810, 223);
             this.guna2Panel16.Name = "guna2Panel16";
-            this.guna2Panel16.Size = new System.Drawing.Size(267, 4);
+            this.guna2Panel16.Size = new System.Drawing.Size(200, 3);
             this.guna2Panel16.TabIndex = 2;
             // 
             // guna2HtmlLabel12
             // 
             this.guna2HtmlLabel12.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel12.Location = new System.Drawing.Point(1080, 322);
-            this.guna2HtmlLabel12.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel12.Location = new System.Drawing.Point(810, 262);
             this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
-            this.guna2HtmlLabel12.Size = new System.Drawing.Size(354, 32);
+            this.guna2HtmlLabel12.Size = new System.Drawing.Size(300, 27);
             this.guna2HtmlLabel12.TabIndex = 3;
             this.guna2HtmlLabel12.Text = "The Modern Coffee experience";
             // 
@@ -1433,10 +1377,9 @@ namespace Management_Coffee_Shop
             // 
             this.guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel11.Location = new System.Drawing.Point(1080, 354);
-            this.guna2HtmlLabel11.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel11.Location = new System.Drawing.Point(810, 288);
             this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            this.guna2HtmlLabel11.Size = new System.Drawing.Size(375, 32);
+            this.guna2HtmlLabel11.Size = new System.Drawing.Size(315, 27);
             this.guna2HtmlLabel11.TabIndex = 3;
             this.guna2HtmlLabel11.Text = " in the comfort of your own home.";
             // 
@@ -1445,10 +1388,9 @@ namespace Management_Coffee_Shop
             this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(1080, 183);
-            this.guna2HtmlLabel9.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(810, 149);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(234, 93);
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(192, 75);
             this.guna2HtmlLabel9.TabIndex = 2;
             this.guna2HtmlLabel9.Text = "Seller.";
             // 
@@ -1457,10 +1399,9 @@ namespace Management_Coffee_Shop
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(1080, 73);
-            this.guna2HtmlLabel8.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(810, 59);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(243, 137);
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(195, 110);
             this.guna2HtmlLabel8.TabIndex = 2;
             this.guna2HtmlLabel8.Text = "Best";
             // 
@@ -1483,29 +1424,26 @@ namespace Management_Coffee_Shop
             this.guna2Panel17.Controls.Add(this.guna2HtmlLabel24);
             this.guna2Panel17.Controls.Add(this.guna2HtmlLabel25);
             this.guna2Panel17.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(220)))), ((int)(((byte)(195)))));
-            this.guna2Panel17.Location = new System.Drawing.Point(0, 1478);
-            this.guna2Panel17.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel17.Location = new System.Drawing.Point(0, 1201);
             this.guna2Panel17.Name = "guna2Panel17";
-            this.guna2Panel17.Size = new System.Drawing.Size(1528, 981);
+            this.guna2Panel17.Size = new System.Drawing.Size(1146, 797);
             this.guna2Panel17.TabIndex = 1;
             this.guna2Panel17.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel17_Paint);
             // 
             // guna2Panel19
             // 
             this.guna2Panel19.BackColor = System.Drawing.Color.Black;
-            this.guna2Panel19.Location = new System.Drawing.Point(1196, 587);
-            this.guna2Panel19.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel19.Location = new System.Drawing.Point(897, 477);
             this.guna2Panel19.Name = "guna2Panel19";
-            this.guna2Panel19.Size = new System.Drawing.Size(277, 4);
+            this.guna2Panel19.Size = new System.Drawing.Size(208, 3);
             this.guna2Panel19.TabIndex = 6;
             // 
             // guna2Panel18
             // 
             this.guna2Panel18.BackColor = System.Drawing.Color.Black;
-            this.guna2Panel18.Location = new System.Drawing.Point(892, 174);
-            this.guna2Panel18.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel18.Location = new System.Drawing.Point(669, 141);
             this.guna2Panel18.Name = "guna2Panel18";
-            this.guna2Panel18.Size = new System.Drawing.Size(277, 4);
+            this.guna2Panel18.Size = new System.Drawing.Size(208, 3);
             this.guna2Panel18.TabIndex = 6;
             // 
             // guna2PictureBox13
@@ -1514,10 +1452,9 @@ namespace Management_Coffee_Shop
             this.guna2PictureBox13.BorderRadius = 40;
             this.guna2PictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox13.Image")));
             this.guna2PictureBox13.ImageRotate = 0F;
-            this.guna2PictureBox13.Location = new System.Drawing.Point(43, 174);
-            this.guna2PictureBox13.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox13.Location = new System.Drawing.Point(32, 141);
             this.guna2PictureBox13.Name = "guna2PictureBox13";
-            this.guna2PictureBox13.Size = new System.Drawing.Size(793, 682);
+            this.guna2PictureBox13.Size = new System.Drawing.Size(595, 554);
             this.guna2PictureBox13.TabIndex = 0;
             this.guna2PictureBox13.TabStop = false;
             // 
@@ -1527,10 +1464,9 @@ namespace Management_Coffee_Shop
             this.guna2PictureBox12.BorderRadius = 30;
             this.guna2PictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox12.Image")));
             this.guna2PictureBox12.ImageRotate = 0F;
-            this.guna2PictureBox12.Location = new System.Drawing.Point(892, 526);
-            this.guna2PictureBox12.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox12.Location = new System.Drawing.Point(669, 427);
             this.guna2PictureBox12.Name = "guna2PictureBox12";
-            this.guna2PictureBox12.Size = new System.Drawing.Size(284, 330);
+            this.guna2PictureBox12.Size = new System.Drawing.Size(213, 268);
             this.guna2PictureBox12.TabIndex = 0;
             this.guna2PictureBox12.TabStop = false;
             // 
@@ -1540,10 +1476,9 @@ namespace Management_Coffee_Shop
             this.guna2PictureBox14.BorderRadius = 30;
             this.guna2PictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox14.Image")));
             this.guna2PictureBox14.ImageRotate = 0F;
-            this.guna2PictureBox14.Location = new System.Drawing.Point(1196, 174);
-            this.guna2PictureBox14.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox14.Location = new System.Drawing.Point(897, 141);
             this.guna2PictureBox14.Name = "guna2PictureBox14";
-            this.guna2PictureBox14.Size = new System.Drawing.Size(284, 330);
+            this.guna2PictureBox14.Size = new System.Drawing.Size(213, 268);
             this.guna2PictureBox14.TabIndex = 0;
             this.guna2PictureBox14.TabStop = false;
             // 
@@ -1559,10 +1494,9 @@ namespace Management_Coffee_Shop
             this.guna2Button11.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button11.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button11.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button11.Location = new System.Drawing.Point(1196, 815);
-            this.guna2Button11.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button11.Location = new System.Drawing.Point(897, 662);
             this.guna2Button11.Name = "guna2Button11";
-            this.guna2Button11.Size = new System.Drawing.Size(240, 41);
+            this.guna2Button11.Size = new System.Drawing.Size(180, 33);
             this.guna2Button11.TabIndex = 5;
             this.guna2Button11.Text = "Feed Back";
             this.guna2Button11.TextOffset = new System.Drawing.Point(0, -3);
@@ -1571,10 +1505,9 @@ namespace Management_Coffee_Shop
             // 
             this.guna2HtmlLabel31.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel31.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel31.Location = new System.Drawing.Point(1196, 690);
-            this.guna2HtmlLabel31.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel31.Location = new System.Drawing.Point(897, 561);
             this.guna2HtmlLabel31.Name = "guna2HtmlLabel31";
-            this.guna2HtmlLabel31.Size = new System.Drawing.Size(193, 32);
+            this.guna2HtmlLabel31.Size = new System.Drawing.Size(163, 27);
             this.guna2HtmlLabel31.TabIndex = 3;
             this.guna2HtmlLabel31.Text = "around the world";
             // 
@@ -1582,10 +1515,9 @@ namespace Management_Coffee_Shop
             // 
             this.guna2HtmlLabel27.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel27.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel27.Location = new System.Drawing.Point(892, 409);
-            this.guna2HtmlLabel27.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel27.Location = new System.Drawing.Point(669, 332);
             this.guna2HtmlLabel27.Name = "guna2HtmlLabel27";
-            this.guna2HtmlLabel27.Size = new System.Drawing.Size(92, 32);
+            this.guna2HtmlLabel27.Size = new System.Drawing.Size(79, 27);
             this.guna2HtmlLabel27.TabIndex = 3;
             this.guna2HtmlLabel27.Text = " conduct";
             // 
@@ -1593,10 +1525,9 @@ namespace Management_Coffee_Shop
             // 
             this.guna2HtmlLabel30.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel30.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel30.Location = new System.Drawing.Point(1196, 650);
-            this.guna2HtmlLabel30.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel30.Location = new System.Drawing.Point(897, 528);
             this.guna2HtmlLabel30.Name = "guna2HtmlLabel30";
-            this.guna2HtmlLabel30.Size = new System.Drawing.Size(270, 32);
+            this.guna2HtmlLabel30.Size = new System.Drawing.Size(229, 27);
             this.guna2HtmlLabel30.TabIndex = 3;
             this.guna2HtmlLabel30.Text = "professional bartenders";
             // 
@@ -1604,10 +1535,9 @@ namespace Management_Coffee_Shop
             // 
             this.guna2HtmlLabel26.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel26.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel26.Location = new System.Drawing.Point(892, 368);
-            this.guna2HtmlLabel26.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel26.Location = new System.Drawing.Point(669, 299);
             this.guna2HtmlLabel26.Name = "guna2HtmlLabel26";
-            this.guna2HtmlLabel26.Size = new System.Drawing.Size(253, 32);
+            this.guna2HtmlLabel26.Size = new System.Drawing.Size(216, 27);
             this.guna2HtmlLabel26.TabIndex = 3;
             this.guna2HtmlLabel26.Text = "according to a code of";
             // 
@@ -1616,10 +1546,9 @@ namespace Management_Coffee_Shop
             this.guna2HtmlLabel28.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel28.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2HtmlLabel28.Location = new System.Drawing.Point(1196, 526);
-            this.guna2HtmlLabel28.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel28.Location = new System.Drawing.Point(897, 427);
             this.guna2HtmlLabel28.Name = "guna2HtmlLabel28";
-            this.guna2HtmlLabel28.Size = new System.Drawing.Size(147, 55);
+            this.guna2HtmlLabel28.Size = new System.Drawing.Size(119, 44);
             this.guna2HtmlLabel28.TabIndex = 3;
             this.guna2HtmlLabel28.Text = "Barista";
             // 
@@ -1628,10 +1557,9 @@ namespace Management_Coffee_Shop
             this.guna2HtmlLabel23.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel23.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2HtmlLabel23.Location = new System.Drawing.Point(892, 187);
-            this.guna2HtmlLabel23.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel23.Location = new System.Drawing.Point(669, 152);
             this.guna2HtmlLabel23.Name = "guna2HtmlLabel23";
-            this.guna2HtmlLabel23.Size = new System.Drawing.Size(196, 55);
+            this.guna2HtmlLabel23.Size = new System.Drawing.Size(159, 44);
             this.guna2HtmlLabel23.TabIndex = 3;
             this.guna2HtmlLabel23.Text = "Trainning";
             // 
@@ -1639,10 +1567,9 @@ namespace Management_Coffee_Shop
             // 
             this.guna2HtmlLabel29.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel29.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel29.Location = new System.Drawing.Point(1196, 609);
-            this.guna2HtmlLabel29.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel29.Location = new System.Drawing.Point(897, 495);
             this.guna2HtmlLabel29.Name = "guna2HtmlLabel29";
-            this.guna2HtmlLabel29.Size = new System.Drawing.Size(137, 32);
+            this.guna2HtmlLabel29.Size = new System.Drawing.Size(116, 27);
             this.guna2HtmlLabel29.TabIndex = 3;
             this.guna2HtmlLabel29.Text = "They are all ";
             // 
@@ -1650,10 +1577,9 @@ namespace Management_Coffee_Shop
             // 
             this.guna2HtmlLabel24.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel24.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel24.Location = new System.Drawing.Point(892, 327);
-            this.guna2HtmlLabel24.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel24.Location = new System.Drawing.Point(669, 266);
             this.guna2HtmlLabel24.Name = "guna2HtmlLabel24";
-            this.guna2HtmlLabel24.Size = new System.Drawing.Size(263, 32);
+            this.guna2HtmlLabel24.Size = new System.Drawing.Size(222, 27);
             this.guna2HtmlLabel24.TabIndex = 3;
             this.guna2HtmlLabel24.Text = "Our staff are all trained";
             // 
@@ -1662,10 +1588,9 @@ namespace Management_Coffee_Shop
             this.guna2HtmlLabel25.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel25.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2HtmlLabel25.Location = new System.Drawing.Point(43, 79);
-            this.guna2HtmlLabel25.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel25.Location = new System.Drawing.Point(32, 64);
             this.guna2HtmlLabel25.Name = "guna2HtmlLabel25";
-            this.guna2HtmlLabel25.Size = new System.Drawing.Size(351, 93);
+            this.guna2HtmlLabel25.Size = new System.Drawing.Size(289, 75);
             this.guna2HtmlLabel25.TabIndex = 2;
             this.guna2HtmlLabel25.Text = "Attendant";
             // 
@@ -1678,10 +1603,9 @@ namespace Management_Coffee_Shop
             this.guna2Panel13.Controls.Add(this.guna2HtmlLabel19);
             this.guna2Panel13.Controls.Add(this.guna2HtmlLabel10);
             this.guna2Panel13.Controls.Add(this.guna2HtmlLabel18);
-            this.guna2Panel13.Location = new System.Drawing.Point(0, 514);
-            this.guna2Panel13.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel13.Location = new System.Drawing.Point(0, 418);
             this.guna2Panel13.Name = "guna2Panel13";
-            this.guna2Panel13.Size = new System.Drawing.Size(1527, 969);
+            this.guna2Panel13.Size = new System.Drawing.Size(1145, 787);
             this.guna2Panel13.TabIndex = 1;
             // 
             // guna2PictureBox11
@@ -1689,10 +1613,9 @@ namespace Management_Coffee_Shop
             this.guna2PictureBox11.BorderRadius = 40;
             this.guna2PictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox11.Image")));
             this.guna2PictureBox11.ImageRotate = 0F;
-            this.guna2PictureBox11.Location = new System.Drawing.Point(873, 405);
-            this.guna2PictureBox11.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox11.Location = new System.Drawing.Point(655, 329);
             this.guna2PictureBox11.Name = "guna2PictureBox11";
-            this.guna2PictureBox11.Size = new System.Drawing.Size(585, 465);
+            this.guna2PictureBox11.Size = new System.Drawing.Size(439, 378);
             this.guna2PictureBox11.TabIndex = 0;
             this.guna2PictureBox11.TabStop = false;
             // 
@@ -1708,10 +1631,9 @@ namespace Management_Coffee_Shop
             this.guna2Button9.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button9.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Button9.Location = new System.Drawing.Point(873, 343);
-            this.guna2Button9.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button9.Location = new System.Drawing.Point(655, 279);
             this.guna2Button9.Name = "guna2Button9";
-            this.guna2Button9.Size = new System.Drawing.Size(240, 41);
+            this.guna2Button9.Size = new System.Drawing.Size(180, 33);
             this.guna2Button9.TabIndex = 5;
             this.guna2Button9.Text = "Our Location";
             this.guna2Button9.TextOffset = new System.Drawing.Point(0, -3);
@@ -1721,10 +1643,9 @@ namespace Management_Coffee_Shop
             this.guna2PictureBox10.BorderRadius = 40;
             this.guna2PictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox10.Image")));
             this.guna2PictureBox10.ImageRotate = 0F;
-            this.guna2PictureBox10.Location = new System.Drawing.Point(53, 170);
-            this.guna2PictureBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox10.Location = new System.Drawing.Point(40, 138);
             this.guna2PictureBox10.Name = "guna2PictureBox10";
-            this.guna2PictureBox10.Size = new System.Drawing.Size(783, 719);
+            this.guna2PictureBox10.Size = new System.Drawing.Size(587, 584);
             this.guna2PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox10.TabIndex = 0;
             this.guna2PictureBox10.TabStop = false;
@@ -1733,10 +1654,9 @@ namespace Management_Coffee_Shop
             // 
             this.guna2HtmlLabel19.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel19.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel19.Location = new System.Drawing.Point(873, 292);
-            this.guna2HtmlLabel19.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel19.Location = new System.Drawing.Point(655, 237);
             this.guna2HtmlLabel19.Name = "guna2HtmlLabel19";
-            this.guna2HtmlLabel19.Size = new System.Drawing.Size(355, 32);
+            this.guna2HtmlLabel19.Size = new System.Drawing.Size(300, 27);
             this.guna2HtmlLabel19.TabIndex = 3;
             this.guna2HtmlLabel19.Text = "Ready to serve you at any time";
             // 
@@ -1744,10 +1664,9 @@ namespace Management_Coffee_Shop
             // 
             this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel10.Location = new System.Drawing.Point(873, 252);
-            this.guna2HtmlLabel10.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel10.Location = new System.Drawing.Point(655, 205);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            this.guna2HtmlLabel10.Size = new System.Drawing.Size(526, 32);
+            this.guna2HtmlLabel10.Size = new System.Drawing.Size(445, 27);
             this.guna2HtmlLabel10.TabIndex = 3;
             this.guna2HtmlLabel10.Text = "We have hundreds of stores around the world. ";
             // 
@@ -1756,10 +1675,9 @@ namespace Management_Coffee_Shop
             this.guna2HtmlLabel18.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel18.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2HtmlLabel18.Location = new System.Drawing.Point(873, 174);
-            this.guna2HtmlLabel18.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel18.Location = new System.Drawing.Point(655, 141);
             this.guna2HtmlLabel18.Name = "guna2HtmlLabel18";
-            this.guna2HtmlLabel18.Size = new System.Drawing.Size(279, 93);
+            this.guna2HtmlLabel18.Size = new System.Drawing.Size(227, 75);
             this.guna2HtmlLabel18.TabIndex = 2;
             this.guna2HtmlLabel18.Text = "Visit Us";
             // 
@@ -1776,19 +1694,17 @@ namespace Management_Coffee_Shop
             this.guna2Panel6.Controls.Add(this.guna2HtmlLabel2);
             this.guna2Panel6.Controls.Add(this.guna2PictureBox7);
             this.guna2Panel6.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Panel6.Location = new System.Drawing.Point(8, 68);
-            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel6.Location = new System.Drawing.Point(6, 55);
             this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Size = new System.Drawing.Size(333, 362);
+            this.guna2Panel6.Size = new System.Drawing.Size(250, 294);
             this.guna2Panel6.TabIndex = 0;
             // 
             // guna2Panel14
             // 
             this.guna2Panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Panel14.Location = new System.Drawing.Point(35, 207);
-            this.guna2Panel14.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel14.Location = new System.Drawing.Point(26, 168);
             this.guna2Panel14.Name = "guna2Panel14";
-            this.guna2Panel14.Size = new System.Drawing.Size(267, 4);
+            this.guna2Panel14.Size = new System.Drawing.Size(200, 3);
             this.guna2Panel14.TabIndex = 2;
             // 
             // guna2Button1
@@ -1801,10 +1717,9 @@ namespace Management_Coffee_Shop
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(57, 308);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button1.Location = new System.Drawing.Point(43, 250);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(240, 41);
+            this.guna2Button1.Size = new System.Drawing.Size(180, 33);
             this.guna2Button1.TabIndex = 5;
             this.guna2Button1.Text = "30.000đ";
             this.guna2Button1.TextOffset = new System.Drawing.Point(0, -3);
@@ -1814,10 +1729,9 @@ namespace Management_Coffee_Shop
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(173, 276);
-            this.guna2HtmlLabel7.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(130, 224);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(104, 22);
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(90, 18);
             this.guna2HtmlLabel7.TabIndex = 1;
             this.guna2HtmlLabel7.Text = "126 Reviews";
             // 
@@ -1826,10 +1740,9 @@ namespace Management_Coffee_Shop
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(32, 271);
-            this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(24, 220);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(33, 27);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(28, 22);
             this.guna2HtmlLabel4.TabIndex = 1;
             this.guna2HtmlLabel4.Text = "5.0";
             // 
@@ -1837,10 +1750,9 @@ namespace Management_Coffee_Shop
             // 
             this.guna2PictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox8.Image")));
             this.guna2PictureBox8.ImageRotate = 0F;
-            this.guna2PictureBox8.Location = new System.Drawing.Point(64, 273);
-            this.guna2PictureBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox8.Location = new System.Drawing.Point(48, 222);
             this.guna2PictureBox8.Name = "guna2PictureBox8";
-            this.guna2PictureBox8.Size = new System.Drawing.Size(43, 21);
+            this.guna2PictureBox8.Size = new System.Drawing.Size(32, 17);
             this.guna2PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox8.TabIndex = 4;
             this.guna2PictureBox8.TabStop = false;
@@ -1850,10 +1762,9 @@ namespace Management_Coffee_Shop
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(32, 207);
-            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(24, 168);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(249, 41);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(202, 33);
             this.guna2HtmlLabel3.TabIndex = 1;
             this.guna2HtmlLabel3.Text = "Morning Coffee";
             // 
@@ -1862,10 +1773,9 @@ namespace Management_Coffee_Shop
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(32, 249);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(24, 202);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(99, 22);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(83, 18);
             this.guna2HtmlLabel2.TabIndex = 1;
             this.guna2HtmlLabel2.Text = "Best Coffee";
             // 
@@ -1874,10 +1784,9 @@ namespace Management_Coffee_Shop
             this.guna2PictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox7.Image")));
             this.guna2PictureBox7.ImageRotate = 0F;
-            this.guna2PictureBox7.Location = new System.Drawing.Point(-91, -105);
-            this.guna2PictureBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox7.Location = new System.Drawing.Point(-68, -85);
             this.guna2PictureBox7.Name = "guna2PictureBox7";
-            this.guna2PictureBox7.Size = new System.Drawing.Size(437, 353);
+            this.guna2PictureBox7.Size = new System.Drawing.Size(328, 287);
             this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox7.TabIndex = 0;
             this.guna2PictureBox7.TabStop = false;
@@ -1888,10 +1797,9 @@ namespace Management_Coffee_Shop
             this.guna2Panel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel8.BorderRadius = 30;
             this.guna2Panel8.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Panel8.Location = new System.Drawing.Point(712, 66);
-            this.guna2Panel8.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel8.Location = new System.Drawing.Point(534, 54);
             this.guna2Panel8.Name = "guna2Panel8";
-            this.guna2Panel8.Size = new System.Drawing.Size(333, 362);
+            this.guna2Panel8.Size = new System.Drawing.Size(250, 294);
             this.guna2Panel8.TabIndex = 0;
             // 
             // guna2Panel7
@@ -1901,19 +1809,17 @@ namespace Management_Coffee_Shop
             this.guna2Panel7.Controls.Add(this.guna2Panel15);
             this.guna2Panel7.Controls.Add(this.guna2PictureBox9);
             this.guna2Panel7.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Panel7.Location = new System.Drawing.Point(360, 66);
-            this.guna2Panel7.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel7.Location = new System.Drawing.Point(270, 54);
             this.guna2Panel7.Name = "guna2Panel7";
-            this.guna2Panel7.Size = new System.Drawing.Size(333, 362);
+            this.guna2Panel7.Size = new System.Drawing.Size(250, 294);
             this.guna2Panel7.TabIndex = 0;
             // 
             // guna2Panel15
             // 
             this.guna2Panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Panel15.Location = new System.Drawing.Point(35, 207);
-            this.guna2Panel15.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel15.Location = new System.Drawing.Point(26, 168);
             this.guna2Panel15.Name = "guna2Panel15";
-            this.guna2Panel15.Size = new System.Drawing.Size(267, 4);
+            this.guna2Panel15.Size = new System.Drawing.Size(200, 3);
             this.guna2Panel15.TabIndex = 2;
             // 
             // guna2PictureBox9
@@ -1921,10 +1827,9 @@ namespace Management_Coffee_Shop
             this.guna2PictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox9.Image")));
             this.guna2PictureBox9.ImageRotate = 0F;
-            this.guna2PictureBox9.Location = new System.Drawing.Point(-91, -100);
-            this.guna2PictureBox9.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox9.Location = new System.Drawing.Point(-68, -81);
             this.guna2PictureBox9.Name = "guna2PictureBox9";
-            this.guna2PictureBox9.Size = new System.Drawing.Size(437, 353);
+            this.guna2PictureBox9.Size = new System.Drawing.Size(328, 287);
             this.guna2PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox9.TabIndex = 0;
             this.guna2PictureBox9.TabStop = false;
@@ -1935,10 +1840,9 @@ namespace Management_Coffee_Shop
             this.guna2HtmlLabel16.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel16.Font = new System.Drawing.Font("Microsoft YaHei UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2HtmlLabel16.Location = new System.Drawing.Point(25, 369);
-            this.guna2HtmlLabel16.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel16.Location = new System.Drawing.Point(19, 300);
             this.guna2HtmlLabel16.Name = "guna2HtmlLabel16";
-            this.guna2HtmlLabel16.Size = new System.Drawing.Size(615, 62);
+            this.guna2HtmlLabel16.Size = new System.Drawing.Size(493, 52);
             this.guna2HtmlLabel16.TabIndex = 3;
             this.guna2HtmlLabel16.Text = "Enjoy your hot coffee now";
             // 
@@ -1947,10 +1851,9 @@ namespace Management_Coffee_Shop
             this.guna2HtmlLabel17.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel17.Font = new System.Drawing.Font("Microsoft YaHei UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel17.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel17.Location = new System.Drawing.Point(27, 818);
-            this.guna2HtmlLabel17.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel17.Location = new System.Drawing.Point(20, 665);
             this.guna2HtmlLabel17.Name = "guna2HtmlLabel17";
-            this.guna2HtmlLabel17.Size = new System.Drawing.Size(188, 49);
+            this.guna2HtmlLabel17.Size = new System.Drawing.Size(151, 41);
             this.guna2HtmlLabel17.TabIndex = 3;
             this.guna2HtmlLabel17.Text = "Visit Shop";
             // 
@@ -1959,10 +1862,9 @@ namespace Management_Coffee_Shop
             this.guna2HtmlLabel15.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel15.Font = new System.Drawing.Font("Microsoft YaHei UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2HtmlLabel15.Location = new System.Drawing.Point(25, 311);
-            this.guna2HtmlLabel15.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel15.Location = new System.Drawing.Point(19, 253);
             this.guna2HtmlLabel15.Name = "guna2HtmlLabel15";
-            this.guna2HtmlLabel15.Size = new System.Drawing.Size(425, 62);
+            this.guna2HtmlLabel15.Size = new System.Drawing.Size(341, 52);
             this.guna2HtmlLabel15.TabIndex = 3;
             this.guna2HtmlLabel15.Text = "Pick up the phone ";
             // 
@@ -1971,10 +1873,9 @@ namespace Management_Coffee_Shop
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft YaHei UI", 50.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(25, 191);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(19, 155);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(451, 114);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(360, 92);
             this.guna2HtmlLabel1.TabIndex = 3;
             this.guna2HtmlLabel1.Text = "ABOUT US";
             // 
@@ -1983,10 +1884,9 @@ namespace Management_Coffee_Shop
             this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
             this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(1321, 148);
-            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox3.Location = new System.Drawing.Point(991, 120);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(108, 106);
+            this.guna2PictureBox3.Size = new System.Drawing.Size(81, 86);
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox3.TabIndex = 1;
             this.guna2PictureBox3.TabStop = false;
@@ -1998,10 +1898,9 @@ namespace Management_Coffee_Shop
             this.guna2Panel12.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel12.BorderRadius = 25;
             this.guna2Panel12.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.guna2Panel12.Location = new System.Drawing.Point(1209, 720);
-            this.guna2Panel12.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel12.Location = new System.Drawing.Point(907, 585);
             this.guna2Panel12.Name = "guna2Panel12";
-            this.guna2Panel12.Size = new System.Drawing.Size(56, 62);
+            this.guna2Panel12.Size = new System.Drawing.Size(42, 50);
             this.guna2Panel12.TabIndex = 2;
             // 
             // guna2Panel10
@@ -2009,10 +1908,9 @@ namespace Management_Coffee_Shop
             this.guna2Panel10.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel10.BorderRadius = 25;
             this.guna2Panel10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(230)))), ((int)(((byte)(187)))));
-            this.guna2Panel10.Location = new System.Drawing.Point(1421, 367);
-            this.guna2Panel10.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel10.Location = new System.Drawing.Point(1066, 298);
             this.guna2Panel10.Name = "guna2Panel10";
-            this.guna2Panel10.Size = new System.Drawing.Size(56, 62);
+            this.guna2Panel10.Size = new System.Drawing.Size(42, 50);
             this.guna2Panel10.TabIndex = 2;
             // 
             // guna2Panel4
@@ -2020,20 +1918,18 @@ namespace Management_Coffee_Shop
             this.guna2Panel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel4.BorderRadius = 25;
             this.guna2Panel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(81)))), ((int)(((byte)(42)))));
-            this.guna2Panel4.Location = new System.Drawing.Point(1348, 169);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel4.Location = new System.Drawing.Point(1011, 137);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(56, 62);
+            this.guna2Panel4.Size = new System.Drawing.Size(42, 50);
             this.guna2Panel4.TabIndex = 2;
             // 
             // guna2PictureBox2
             // 
             this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(1140, 32);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(855, 26);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(116, 84);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(87, 68);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox2.TabIndex = 1;
             this.guna2PictureBox2.TabStop = false;
@@ -2043,10 +1939,9 @@ namespace Management_Coffee_Shop
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(691, 134);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(518, 109);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(668, 585);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(501, 475);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
@@ -2057,10 +1952,9 @@ namespace Management_Coffee_Shop
             this.guna2Panel9.BorderRadius = 20;
             this.guna2Panel9.Controls.Add(this.guna2HtmlLabel6);
             this.guna2Panel9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(220)))), ((int)(((byte)(195)))));
-            this.guna2Panel9.Location = new System.Drawing.Point(0, 958);
-            this.guna2Panel9.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel9.Location = new System.Drawing.Point(0, 778);
             this.guna2Panel9.Name = "guna2Panel9";
-            this.guna2Panel9.Size = new System.Drawing.Size(277, 75);
+            this.guna2Panel9.Size = new System.Drawing.Size(208, 61);
             this.guna2Panel9.TabIndex = 5;
             // 
             // guna2HtmlLabel6
@@ -2068,10 +1962,9 @@ namespace Management_Coffee_Shop
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(29, 0);
-            this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(22, 0);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(186, 32);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(156, 27);
             this.guna2HtmlLabel6.TabIndex = 1;
             this.guna2HtmlLabel6.Text = "BEST SELLER";
             // 
@@ -2080,11 +1973,10 @@ namespace Management_Coffee_Shop
             this.tabPage2.AutoScroll = true;
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.tabPage2.Controls.Add(this.guna2Panel44);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(1553, 890);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1163, 721);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             // 
@@ -2103,18 +1995,16 @@ namespace Management_Coffee_Shop
             this.guna2Panel44.Controls.Add(this.label9);
             this.guna2Panel44.Controls.Add(this.guna2Panel24);
             this.guna2Panel44.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel44.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel44.Name = "guna2Panel44";
-            this.guna2Panel44.Size = new System.Drawing.Size(1556, 2585);
+            this.guna2Panel44.Size = new System.Drawing.Size(1167, 2100);
             this.guna2Panel44.TabIndex = 6;
             // 
             // flpCategories
             // 
             this.flpCategories.Controls.Add(this.btnAll);
-            this.flpCategories.Location = new System.Drawing.Point(8, 784);
-            this.flpCategories.Margin = new System.Windows.Forms.Padding(4);
+            this.flpCategories.Location = new System.Drawing.Point(6, 637);
             this.flpCategories.Name = "flpCategories";
-            this.flpCategories.Size = new System.Drawing.Size(1527, 62);
+            this.flpCategories.Size = new System.Drawing.Size(1145, 50);
             this.flpCategories.TabIndex = 6;
             // 
             // btnAll
@@ -2128,10 +2018,10 @@ namespace Management_Coffee_Shop
             this.btnAll.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
             this.btnAll.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAll.ForeColor = System.Drawing.Color.White;
-            this.btnAll.Location = new System.Drawing.Point(11, 4);
-            this.btnAll.Margin = new System.Windows.Forms.Padding(11, 4, 11, 4);
+            this.btnAll.Location = new System.Drawing.Point(8, 3);
+            this.btnAll.Margin = new System.Windows.Forms.Padding(8, 3, 8, 3);
             this.btnAll.Name = "btnAll";
-            this.btnAll.Size = new System.Drawing.Size(240, 55);
+            this.btnAll.Size = new System.Drawing.Size(180, 45);
             this.btnAll.TabIndex = 3;
             this.btnAll.Text = "ALL";
             // 
@@ -2140,10 +2030,9 @@ namespace Management_Coffee_Shop
             this.guna2PictureBox15.BorderRadius = 45;
             this.guna2PictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox15.Image")));
             this.guna2PictureBox15.ImageRotate = 0F;
-            this.guna2PictureBox15.Location = new System.Drawing.Point(27, 171);
-            this.guna2PictureBox15.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox15.Location = new System.Drawing.Point(20, 139);
             this.guna2PictureBox15.Name = "guna2PictureBox15";
-            this.guna2PictureBox15.Size = new System.Drawing.Size(1028, 377);
+            this.guna2PictureBox15.Size = new System.Drawing.Size(771, 306);
             this.guna2PictureBox15.TabIndex = 1;
             this.guna2PictureBox15.TabStop = false;
             // 
@@ -2166,387 +2055,385 @@ namespace Management_Coffee_Shop
             this.flowLayoutPanel1.Controls.Add(this.guna2Panel41);
             this.flowLayoutPanel1.Controls.Add(this.guna2Panel42);
             this.flowLayoutPanel1.Controls.Add(this.guna2Panel43);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 864);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 702);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1520, 1686);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1140, 1370);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // guna2Panel27
             // 
             this.guna2Panel27.Controls.Add(this.uC_product1);
-            this.guna2Panel27.Location = new System.Drawing.Point(23, 21);
-            this.guna2Panel27.Margin = new System.Windows.Forms.Padding(23, 21, 23, 21);
+            this.guna2Panel27.Location = new System.Drawing.Point(17, 17);
+            this.guna2Panel27.Margin = new System.Windows.Forms.Padding(17);
             this.guna2Panel27.Name = "guna2Panel27";
-            this.guna2Panel27.Size = new System.Drawing.Size(333, 362);
+            this.guna2Panel27.Size = new System.Drawing.Size(250, 294);
             this.guna2Panel27.TabIndex = 0;
             // 
             // uC_product1
             // 
             this.uC_product1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product1.BTNPrice = "đđđđđđđ";
+            this.uC_product1.BTNPrice = "đđđđđđđđđđđ";
             this.uC_product1.Categories = null;
             this.uC_product1.ID = null;
             this.uC_product1.LBLName_Drinks = null;
             this.uC_product1.Location = new System.Drawing.Point(0, 0);
-            this.uC_product1.Margin = new System.Windows.Forms.Padding(23, 21, 23, 21);
+            this.uC_product1.Margin = new System.Windows.Forms.Padding(17);
             this.uC_product1.Name = "uC_product1";
             this.uC_product1.PTBImage_Drinks = null;
-            this.uC_product1.Size = new System.Drawing.Size(333, 362);
+            this.uC_product1.Size = new System.Drawing.Size(250, 294);
             this.uC_product1.TabIndex = 0;
             // 
             // guna2Panel28
             // 
             this.guna2Panel28.Controls.Add(this.uC_product2);
-            this.guna2Panel28.Location = new System.Drawing.Point(402, 21);
-            this.guna2Panel28.Margin = new System.Windows.Forms.Padding(23, 21, 23, 21);
+            this.guna2Panel28.Location = new System.Drawing.Point(301, 17);
+            this.guna2Panel28.Margin = new System.Windows.Forms.Padding(17);
             this.guna2Panel28.Name = "guna2Panel28";
-            this.guna2Panel28.Size = new System.Drawing.Size(333, 357);
+            this.guna2Panel28.Size = new System.Drawing.Size(250, 290);
             this.guna2Panel28.TabIndex = 0;
             // 
             // uC_product2
             // 
             this.uC_product2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product2.BTNPrice = "đđđđđđđ";
+            this.uC_product2.BTNPrice = "đđđđđđđđđđđ";
             this.uC_product2.Categories = null;
             this.uC_product2.ID = null;
             this.uC_product2.LBLName_Drinks = null;
             this.uC_product2.Location = new System.Drawing.Point(0, 0);
-            this.uC_product2.Margin = new System.Windows.Forms.Padding(23, 21, 23, 21);
+            this.uC_product2.Margin = new System.Windows.Forms.Padding(17);
             this.uC_product2.Name = "uC_product2";
             this.uC_product2.PTBImage_Drinks = null;
-            this.uC_product2.Size = new System.Drawing.Size(333, 362);
+            this.uC_product2.Size = new System.Drawing.Size(250, 294);
             this.uC_product2.TabIndex = 0;
             // 
             // guna2Panel29
             // 
             this.guna2Panel29.Controls.Add(this.uC_product3);
-            this.guna2Panel29.Location = new System.Drawing.Point(781, 21);
-            this.guna2Panel29.Margin = new System.Windows.Forms.Padding(23, 21, 23, 21);
+            this.guna2Panel29.Location = new System.Drawing.Point(585, 17);
+            this.guna2Panel29.Margin = new System.Windows.Forms.Padding(17);
             this.guna2Panel29.Name = "guna2Panel29";
-            this.guna2Panel29.Size = new System.Drawing.Size(333, 357);
+            this.guna2Panel29.Size = new System.Drawing.Size(250, 290);
             this.guna2Panel29.TabIndex = 0;
             // 
             // uC_product3
             // 
             this.uC_product3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product3.BTNPrice = "đđđđđđđ";
+            this.uC_product3.BTNPrice = "đđđđđđđđđđđ";
             this.uC_product3.Categories = null;
             this.uC_product3.ID = null;
             this.uC_product3.LBLName_Drinks = null;
             this.uC_product3.Location = new System.Drawing.Point(0, 0);
-            this.uC_product3.Margin = new System.Windows.Forms.Padding(23, 21, 23, 21);
+            this.uC_product3.Margin = new System.Windows.Forms.Padding(17);
             this.uC_product3.Name = "uC_product3";
             this.uC_product3.PTBImage_Drinks = null;
-            this.uC_product3.Size = new System.Drawing.Size(333, 362);
+            this.uC_product3.Size = new System.Drawing.Size(250, 294);
             this.uC_product3.TabIndex = 0;
             // 
             // guna2Panel30
             // 
             this.guna2Panel30.Controls.Add(this.uC_product4);
-            this.guna2Panel30.Location = new System.Drawing.Point(1160, 21);
-            this.guna2Panel30.Margin = new System.Windows.Forms.Padding(23, 21, 23, 21);
+            this.guna2Panel30.Location = new System.Drawing.Point(869, 17);
+            this.guna2Panel30.Margin = new System.Windows.Forms.Padding(17);
             this.guna2Panel30.Name = "guna2Panel30";
-            this.guna2Panel30.Size = new System.Drawing.Size(333, 357);
+            this.guna2Panel30.Size = new System.Drawing.Size(250, 290);
             this.guna2Panel30.TabIndex = 0;
             // 
             // uC_product4
             // 
             this.uC_product4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product4.BTNPrice = "đđđđđđđ";
+            this.uC_product4.BTNPrice = "đđđđđđđđđđđ";
             this.uC_product4.Categories = null;
             this.uC_product4.ID = null;
             this.uC_product4.LBLName_Drinks = null;
             this.uC_product4.Location = new System.Drawing.Point(0, 0);
-            this.uC_product4.Margin = new System.Windows.Forms.Padding(23, 21, 23, 21);
+            this.uC_product4.Margin = new System.Windows.Forms.Padding(17);
             this.uC_product4.Name = "uC_product4";
             this.uC_product4.PTBImage_Drinks = null;
-            this.uC_product4.Size = new System.Drawing.Size(333, 362);
+            this.uC_product4.Size = new System.Drawing.Size(250, 294);
             this.uC_product4.TabIndex = 0;
             // 
             // guna2Panel31
             // 
             this.guna2Panel31.Controls.Add(this.uC_product5);
-            this.guna2Panel31.Location = new System.Drawing.Point(23, 425);
-            this.guna2Panel31.Margin = new System.Windows.Forms.Padding(23, 21, 23, 21);
+            this.guna2Panel31.Location = new System.Drawing.Point(17, 345);
+            this.guna2Panel31.Margin = new System.Windows.Forms.Padding(17);
             this.guna2Panel31.Name = "guna2Panel31";
-            this.guna2Panel31.Size = new System.Drawing.Size(333, 357);
+            this.guna2Panel31.Size = new System.Drawing.Size(250, 290);
             this.guna2Panel31.TabIndex = 0;
             // 
             // uC_product5
             // 
             this.uC_product5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product5.BTNPrice = "đđđđđđđ";
+            this.uC_product5.BTNPrice = "đđđđđđđđđđđ";
             this.uC_product5.Categories = null;
             this.uC_product5.ID = null;
             this.uC_product5.LBLName_Drinks = null;
             this.uC_product5.Location = new System.Drawing.Point(1, 0);
-            this.uC_product5.Margin = new System.Windows.Forms.Padding(23, 21, 23, 21);
+            this.uC_product5.Margin = new System.Windows.Forms.Padding(17);
             this.uC_product5.Name = "uC_product5";
             this.uC_product5.PTBImage_Drinks = null;
-            this.uC_product5.Size = new System.Drawing.Size(333, 362);
+            this.uC_product5.Size = new System.Drawing.Size(250, 294);
             this.uC_product5.TabIndex = 0;
             // 
             // guna2Panel32
             // 
             this.guna2Panel32.Controls.Add(this.uC_product6);
-            this.guna2Panel32.Location = new System.Drawing.Point(402, 425);
-            this.guna2Panel32.Margin = new System.Windows.Forms.Padding(23, 21, 23, 21);
+            this.guna2Panel32.Location = new System.Drawing.Point(301, 345);
+            this.guna2Panel32.Margin = new System.Windows.Forms.Padding(17);
             this.guna2Panel32.Name = "guna2Panel32";
-            this.guna2Panel32.Size = new System.Drawing.Size(333, 357);
+            this.guna2Panel32.Size = new System.Drawing.Size(250, 290);
             this.guna2Panel32.TabIndex = 0;
             // 
             // uC_product6
             // 
             this.uC_product6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product6.BTNPrice = "đđđđđđđ";
+            this.uC_product6.BTNPrice = "đđđđđđđđđđđ";
             this.uC_product6.Categories = null;
             this.uC_product6.ID = null;
             this.uC_product6.LBLName_Drinks = null;
             this.uC_product6.Location = new System.Drawing.Point(-1, 0);
-            this.uC_product6.Margin = new System.Windows.Forms.Padding(23, 21, 23, 21);
+            this.uC_product6.Margin = new System.Windows.Forms.Padding(17);
             this.uC_product6.Name = "uC_product6";
             this.uC_product6.PTBImage_Drinks = null;
-            this.uC_product6.Size = new System.Drawing.Size(333, 362);
+            this.uC_product6.Size = new System.Drawing.Size(250, 294);
             this.uC_product6.TabIndex = 0;
             // 
             // guna2Panel33
             // 
             this.guna2Panel33.Controls.Add(this.uC_product7);
-            this.guna2Panel33.Location = new System.Drawing.Point(781, 425);
-            this.guna2Panel33.Margin = new System.Windows.Forms.Padding(23, 21, 23, 21);
+            this.guna2Panel33.Location = new System.Drawing.Point(585, 345);
+            this.guna2Panel33.Margin = new System.Windows.Forms.Padding(17);
             this.guna2Panel33.Name = "guna2Panel33";
-            this.guna2Panel33.Size = new System.Drawing.Size(333, 357);
+            this.guna2Panel33.Size = new System.Drawing.Size(250, 290);
             this.guna2Panel33.TabIndex = 0;
             // 
             // uC_product7
             // 
             this.uC_product7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product7.BTNPrice = "đđđđđđđ";
+            this.uC_product7.BTNPrice = "đđđđđđđđđđđ";
             this.uC_product7.Categories = null;
             this.uC_product7.ID = null;
             this.uC_product7.LBLName_Drinks = null;
-            this.uC_product7.Location = new System.Drawing.Point(-1, -5);
-            this.uC_product7.Margin = new System.Windows.Forms.Padding(23, 21, 23, 21);
+            this.uC_product7.Location = new System.Drawing.Point(-1, -4);
+            this.uC_product7.Margin = new System.Windows.Forms.Padding(17);
             this.uC_product7.Name = "uC_product7";
             this.uC_product7.PTBImage_Drinks = null;
-            this.uC_product7.Size = new System.Drawing.Size(333, 362);
+            this.uC_product7.Size = new System.Drawing.Size(250, 294);
             this.uC_product7.TabIndex = 0;
             // 
             // guna2Panel34
             // 
             this.guna2Panel34.Controls.Add(this.uC_product8);
-            this.guna2Panel34.Location = new System.Drawing.Point(1160, 425);
-            this.guna2Panel34.Margin = new System.Windows.Forms.Padding(23, 21, 23, 21);
+            this.guna2Panel34.Location = new System.Drawing.Point(869, 345);
+            this.guna2Panel34.Margin = new System.Windows.Forms.Padding(17);
             this.guna2Panel34.Name = "guna2Panel34";
-            this.guna2Panel34.Size = new System.Drawing.Size(333, 357);
+            this.guna2Panel34.Size = new System.Drawing.Size(250, 290);
             this.guna2Panel34.TabIndex = 0;
             // 
             // uC_product8
             // 
             this.uC_product8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product8.BTNPrice = "đđđđđđđ";
+            this.uC_product8.BTNPrice = "đđđđđđđđđđđ";
             this.uC_product8.Categories = null;
             this.uC_product8.ID = null;
             this.uC_product8.LBLName_Drinks = null;
-            this.uC_product8.Location = new System.Drawing.Point(0, -5);
-            this.uC_product8.Margin = new System.Windows.Forms.Padding(23, 21, 23, 21);
+            this.uC_product8.Location = new System.Drawing.Point(0, -4);
+            this.uC_product8.Margin = new System.Windows.Forms.Padding(17);
             this.uC_product8.Name = "uC_product8";
             this.uC_product8.PTBImage_Drinks = null;
-            this.uC_product8.Size = new System.Drawing.Size(333, 362);
+            this.uC_product8.Size = new System.Drawing.Size(250, 294);
             this.uC_product8.TabIndex = 0;
             // 
             // guna2Panel35
             // 
             this.guna2Panel35.Controls.Add(this.uC_product9);
-            this.guna2Panel35.Location = new System.Drawing.Point(23, 824);
-            this.guna2Panel35.Margin = new System.Windows.Forms.Padding(23, 21, 23, 21);
+            this.guna2Panel35.Location = new System.Drawing.Point(17, 669);
+            this.guna2Panel35.Margin = new System.Windows.Forms.Padding(17);
             this.guna2Panel35.Name = "guna2Panel35";
-            this.guna2Panel35.Size = new System.Drawing.Size(333, 357);
+            this.guna2Panel35.Size = new System.Drawing.Size(250, 290);
             this.guna2Panel35.TabIndex = 1;
             // 
             // uC_product9
             // 
             this.uC_product9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product9.BTNPrice = "đđđđđđđ";
+            this.uC_product9.BTNPrice = "đđđđđđđđđđđ";
             this.uC_product9.Categories = null;
             this.uC_product9.ID = null;
             this.uC_product9.LBLName_Drinks = null;
-            this.uC_product9.Location = new System.Drawing.Point(0, -5);
-            this.uC_product9.Margin = new System.Windows.Forms.Padding(23, 21, 23, 21);
+            this.uC_product9.Location = new System.Drawing.Point(0, -4);
+            this.uC_product9.Margin = new System.Windows.Forms.Padding(17);
             this.uC_product9.Name = "uC_product9";
             this.uC_product9.PTBImage_Drinks = null;
-            this.uC_product9.Size = new System.Drawing.Size(333, 362);
+            this.uC_product9.Size = new System.Drawing.Size(250, 294);
             this.uC_product9.TabIndex = 0;
             // 
             // guna2Panel36
             // 
             this.guna2Panel36.Controls.Add(this.uC_product10);
-            this.guna2Panel36.Location = new System.Drawing.Point(402, 824);
-            this.guna2Panel36.Margin = new System.Windows.Forms.Padding(23, 21, 23, 21);
+            this.guna2Panel36.Location = new System.Drawing.Point(301, 669);
+            this.guna2Panel36.Margin = new System.Windows.Forms.Padding(17);
             this.guna2Panel36.Name = "guna2Panel36";
-            this.guna2Panel36.Size = new System.Drawing.Size(333, 357);
+            this.guna2Panel36.Size = new System.Drawing.Size(250, 290);
             this.guna2Panel36.TabIndex = 2;
             // 
             // uC_product10
             // 
             this.uC_product10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product10.BTNPrice = "đđđđđđđ";
+            this.uC_product10.BTNPrice = "đđđđđđđđđđđ";
             this.uC_product10.Categories = null;
             this.uC_product10.ID = null;
             this.uC_product10.LBLName_Drinks = null;
             this.uC_product10.Location = new System.Drawing.Point(1, 0);
-            this.uC_product10.Margin = new System.Windows.Forms.Padding(23, 21, 23, 21);
+            this.uC_product10.Margin = new System.Windows.Forms.Padding(17);
             this.uC_product10.Name = "uC_product10";
             this.uC_product10.PTBImage_Drinks = null;
-            this.uC_product10.Size = new System.Drawing.Size(333, 362);
+            this.uC_product10.Size = new System.Drawing.Size(250, 294);
             this.uC_product10.TabIndex = 0;
             // 
             // guna2Panel37
             // 
             this.guna2Panel37.Controls.Add(this.uC_product11);
-            this.guna2Panel37.Location = new System.Drawing.Point(781, 824);
-            this.guna2Panel37.Margin = new System.Windows.Forms.Padding(23, 21, 23, 21);
+            this.guna2Panel37.Location = new System.Drawing.Point(585, 669);
+            this.guna2Panel37.Margin = new System.Windows.Forms.Padding(17);
             this.guna2Panel37.Name = "guna2Panel37";
-            this.guna2Panel37.Size = new System.Drawing.Size(333, 357);
+            this.guna2Panel37.Size = new System.Drawing.Size(250, 290);
             this.guna2Panel37.TabIndex = 3;
             // 
             // uC_product11
             // 
             this.uC_product11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product11.BTNPrice = "đđđđđđđ";
+            this.uC_product11.BTNPrice = "đđđđđđđđđđđ";
             this.uC_product11.Categories = null;
             this.uC_product11.ID = null;
             this.uC_product11.LBLName_Drinks = null;
             this.uC_product11.Location = new System.Drawing.Point(0, 0);
-            this.uC_product11.Margin = new System.Windows.Forms.Padding(23, 21, 23, 21);
+            this.uC_product11.Margin = new System.Windows.Forms.Padding(17);
             this.uC_product11.Name = "uC_product11";
             this.uC_product11.PTBImage_Drinks = null;
-            this.uC_product11.Size = new System.Drawing.Size(333, 362);
+            this.uC_product11.Size = new System.Drawing.Size(250, 294);
             this.uC_product11.TabIndex = 0;
             // 
             // guna2Panel38
             // 
             this.guna2Panel38.Controls.Add(this.uC_product12);
-            this.guna2Panel38.Location = new System.Drawing.Point(1160, 824);
-            this.guna2Panel38.Margin = new System.Windows.Forms.Padding(23, 21, 23, 21);
+            this.guna2Panel38.Location = new System.Drawing.Point(869, 669);
+            this.guna2Panel38.Margin = new System.Windows.Forms.Padding(17);
             this.guna2Panel38.Name = "guna2Panel38";
-            this.guna2Panel38.Size = new System.Drawing.Size(333, 357);
+            this.guna2Panel38.Size = new System.Drawing.Size(250, 290);
             this.guna2Panel38.TabIndex = 4;
             // 
             // uC_product12
             // 
             this.uC_product12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product12.BTNPrice = "đđđđđđđ";
+            this.uC_product12.BTNPrice = "đđđđđđđđđđđ";
             this.uC_product12.Categories = null;
             this.uC_product12.ID = null;
             this.uC_product12.LBLName_Drinks = null;
             this.uC_product12.Location = new System.Drawing.Point(0, 0);
-            this.uC_product12.Margin = new System.Windows.Forms.Padding(23, 21, 23, 21);
+            this.uC_product12.Margin = new System.Windows.Forms.Padding(17);
             this.uC_product12.Name = "uC_product12";
             this.uC_product12.PTBImage_Drinks = null;
-            this.uC_product12.Size = new System.Drawing.Size(333, 362);
+            this.uC_product12.Size = new System.Drawing.Size(250, 294);
             this.uC_product12.TabIndex = 0;
             // 
             // guna2Panel39
             // 
             this.guna2Panel39.Controls.Add(this.uC_product13);
-            this.guna2Panel39.Location = new System.Drawing.Point(23, 1223);
-            this.guna2Panel39.Margin = new System.Windows.Forms.Padding(23, 21, 23, 21);
+            this.guna2Panel39.Location = new System.Drawing.Point(17, 993);
+            this.guna2Panel39.Margin = new System.Windows.Forms.Padding(17);
             this.guna2Panel39.Name = "guna2Panel39";
-            this.guna2Panel39.Size = new System.Drawing.Size(333, 357);
+            this.guna2Panel39.Size = new System.Drawing.Size(250, 290);
             this.guna2Panel39.TabIndex = 5;
             // 
             // uC_product13
             // 
             this.uC_product13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product13.BTNPrice = "đđđđđđđ";
+            this.uC_product13.BTNPrice = "đđđđđđđđđđđ";
             this.uC_product13.Categories = null;
             this.uC_product13.ID = null;
             this.uC_product13.LBLName_Drinks = null;
             this.uC_product13.Location = new System.Drawing.Point(0, 0);
-            this.uC_product13.Margin = new System.Windows.Forms.Padding(23, 21, 23, 21);
+            this.uC_product13.Margin = new System.Windows.Forms.Padding(17);
             this.uC_product13.Name = "uC_product13";
             this.uC_product13.PTBImage_Drinks = null;
-            this.uC_product13.Size = new System.Drawing.Size(333, 362);
+            this.uC_product13.Size = new System.Drawing.Size(250, 294);
             this.uC_product13.TabIndex = 0;
             // 
             // guna2Panel40
             // 
             this.guna2Panel40.Controls.Add(this.uC_product14);
-            this.guna2Panel40.Location = new System.Drawing.Point(402, 1223);
-            this.guna2Panel40.Margin = new System.Windows.Forms.Padding(23, 21, 23, 21);
+            this.guna2Panel40.Location = new System.Drawing.Point(301, 993);
+            this.guna2Panel40.Margin = new System.Windows.Forms.Padding(17);
             this.guna2Panel40.Name = "guna2Panel40";
-            this.guna2Panel40.Size = new System.Drawing.Size(333, 357);
+            this.guna2Panel40.Size = new System.Drawing.Size(250, 290);
             this.guna2Panel40.TabIndex = 6;
             // 
             // uC_product14
             // 
             this.uC_product14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product14.BTNPrice = "đđđđđđđ";
+            this.uC_product14.BTNPrice = "đđđđđđđđđđđ";
             this.uC_product14.Categories = null;
             this.uC_product14.ID = null;
             this.uC_product14.LBLName_Drinks = null;
             this.uC_product14.Location = new System.Drawing.Point(0, 0);
-            this.uC_product14.Margin = new System.Windows.Forms.Padding(23, 21, 23, 21);
+            this.uC_product14.Margin = new System.Windows.Forms.Padding(17);
             this.uC_product14.Name = "uC_product14";
             this.uC_product14.PTBImage_Drinks = null;
-            this.uC_product14.Size = new System.Drawing.Size(333, 362);
+            this.uC_product14.Size = new System.Drawing.Size(250, 294);
             this.uC_product14.TabIndex = 0;
             // 
             // guna2Panel41
             // 
             this.guna2Panel41.Controls.Add(this.uC_product15);
-            this.guna2Panel41.Location = new System.Drawing.Point(781, 1223);
-            this.guna2Panel41.Margin = new System.Windows.Forms.Padding(23, 21, 23, 21);
+            this.guna2Panel41.Location = new System.Drawing.Point(585, 993);
+            this.guna2Panel41.Margin = new System.Windows.Forms.Padding(17);
             this.guna2Panel41.Name = "guna2Panel41";
-            this.guna2Panel41.Size = new System.Drawing.Size(333, 357);
+            this.guna2Panel41.Size = new System.Drawing.Size(250, 290);
             this.guna2Panel41.TabIndex = 7;
             // 
             // uC_product15
             // 
             this.uC_product15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product15.BTNPrice = "đđđđđđđ";
+            this.uC_product15.BTNPrice = "đđđđđđđđđđđ";
             this.uC_product15.Categories = null;
             this.uC_product15.ID = null;
             this.uC_product15.LBLName_Drinks = null;
             this.uC_product15.Location = new System.Drawing.Point(-1, 0);
-            this.uC_product15.Margin = new System.Windows.Forms.Padding(23, 21, 23, 21);
+            this.uC_product15.Margin = new System.Windows.Forms.Padding(17);
             this.uC_product15.Name = "uC_product15";
             this.uC_product15.PTBImage_Drinks = null;
-            this.uC_product15.Size = new System.Drawing.Size(333, 362);
+            this.uC_product15.Size = new System.Drawing.Size(250, 294);
             this.uC_product15.TabIndex = 0;
             // 
             // guna2Panel42
             // 
             this.guna2Panel42.Controls.Add(this.uC_product16);
-            this.guna2Panel42.Location = new System.Drawing.Point(1160, 1223);
-            this.guna2Panel42.Margin = new System.Windows.Forms.Padding(23, 21, 23, 21);
+            this.guna2Panel42.Location = new System.Drawing.Point(869, 993);
+            this.guna2Panel42.Margin = new System.Windows.Forms.Padding(17);
             this.guna2Panel42.Name = "guna2Panel42";
-            this.guna2Panel42.Size = new System.Drawing.Size(333, 357);
+            this.guna2Panel42.Size = new System.Drawing.Size(250, 290);
             this.guna2Panel42.TabIndex = 8;
             // 
             // uC_product16
             // 
             this.uC_product16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product16.BTNPrice = "đđđđđđđ";
+            this.uC_product16.BTNPrice = "đđđđđđđđđđđ";
             this.uC_product16.Categories = null;
             this.uC_product16.ID = null;
             this.uC_product16.LBLName_Drinks = null;
             this.uC_product16.Location = new System.Drawing.Point(0, 0);
-            this.uC_product16.Margin = new System.Windows.Forms.Padding(23, 21, 23, 21);
+            this.uC_product16.Margin = new System.Windows.Forms.Padding(17);
             this.uC_product16.Name = "uC_product16";
             this.uC_product16.PTBImage_Drinks = null;
-            this.uC_product16.Size = new System.Drawing.Size(333, 362);
+            this.uC_product16.Size = new System.Drawing.Size(250, 294);
             this.uC_product16.TabIndex = 0;
             // 
             // guna2Panel43
             // 
             this.guna2Panel43.Controls.Add(this.flpPageNavigation);
-            this.guna2Panel43.Location = new System.Drawing.Point(4, 1605);
-            this.guna2Panel43.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel43.Location = new System.Drawing.Point(3, 1303);
             this.guna2Panel43.Name = "guna2Panel43";
-            this.guna2Panel43.Size = new System.Drawing.Size(1516, 82);
+            this.guna2Panel43.Size = new System.Drawing.Size(1137, 67);
             this.guna2Panel43.TabIndex = 9;
             // 
             // flpPageNavigation
@@ -2556,10 +2443,9 @@ namespace Management_Coffee_Shop
             this.flpPageNavigation.Controls.Add(this.btnSecond_page);
             this.flpPageNavigation.Controls.Add(this.btnThird_page);
             this.flpPageNavigation.Controls.Add(this.btnPage_Next);
-            this.flpPageNavigation.Location = new System.Drawing.Point(500, 5);
-            this.flpPageNavigation.Margin = new System.Windows.Forms.Padding(4);
+            this.flpPageNavigation.Location = new System.Drawing.Point(375, 4);
             this.flpPageNavigation.Name = "flpPageNavigation";
-            this.flpPageNavigation.Size = new System.Drawing.Size(504, 70);
+            this.flpPageNavigation.Size = new System.Drawing.Size(378, 57);
             this.flpPageNavigation.TabIndex = 7;
             // 
             // btnPage_Back
@@ -2573,11 +2459,11 @@ namespace Management_Coffee_Shop
             this.btnPage_Back.ForeColor = System.Drawing.Color.White;
             this.btnPage_Back.Image = ((System.Drawing.Image)(resources.GetObject("btnPage_Back.Image")));
             this.btnPage_Back.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnPage_Back.Location = new System.Drawing.Point(11, 10);
-            this.btnPage_Back.Margin = new System.Windows.Forms.Padding(11, 10, 11, 10);
+            this.btnPage_Back.Location = new System.Drawing.Point(8, 8);
+            this.btnPage_Back.Margin = new System.Windows.Forms.Padding(8);
             this.btnPage_Back.Name = "btnPage_Back";
             this.btnPage_Back.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnPage_Back.Size = new System.Drawing.Size(59, 54);
+            this.btnPage_Back.Size = new System.Drawing.Size(44, 44);
             this.btnPage_Back.TabIndex = 4;
             this.btnPage_Back.Click += new System.EventHandler(this.btnPage_Back_Click);
             // 
@@ -2591,10 +2477,10 @@ namespace Management_Coffee_Shop
             this.btnFirst_page.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
             this.btnFirst_page.Font = new System.Drawing.Font("Segoe UI", 20.25F);
             this.btnFirst_page.ForeColor = System.Drawing.Color.White;
-            this.btnFirst_page.Location = new System.Drawing.Point(92, 4);
-            this.btnFirst_page.Margin = new System.Windows.Forms.Padding(11, 4, 11, 4);
+            this.btnFirst_page.Location = new System.Drawing.Point(68, 3);
+            this.btnFirst_page.Margin = new System.Windows.Forms.Padding(8, 3, 8, 3);
             this.btnFirst_page.Name = "btnFirst_page";
-            this.btnFirst_page.Size = new System.Drawing.Size(93, 62);
+            this.btnFirst_page.Size = new System.Drawing.Size(70, 50);
             this.btnFirst_page.TabIndex = 6;
             this.btnFirst_page.Text = "1";
             this.btnFirst_page.Click += new System.EventHandler(this.btnFirst_Page_Click_1);
@@ -2609,10 +2495,10 @@ namespace Management_Coffee_Shop
             this.btnSecond_page.FillColor = System.Drawing.Color.Transparent;
             this.btnSecond_page.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSecond_page.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.btnSecond_page.Location = new System.Drawing.Point(207, 4);
-            this.btnSecond_page.Margin = new System.Windows.Forms.Padding(11, 4, 11, 4);
+            this.btnSecond_page.Location = new System.Drawing.Point(154, 3);
+            this.btnSecond_page.Margin = new System.Windows.Forms.Padding(8, 3, 8, 3);
             this.btnSecond_page.Name = "btnSecond_page";
-            this.btnSecond_page.Size = new System.Drawing.Size(93, 62);
+            this.btnSecond_page.Size = new System.Drawing.Size(70, 50);
             this.btnSecond_page.TabIndex = 0;
             this.btnSecond_page.Text = "2";
             this.btnSecond_page.TextOffset = new System.Drawing.Point(0, -2);
@@ -2628,10 +2514,10 @@ namespace Management_Coffee_Shop
             this.btnThird_page.FillColor = System.Drawing.Color.Transparent;
             this.btnThird_page.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThird_page.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.btnThird_page.Location = new System.Drawing.Point(322, 4);
-            this.btnThird_page.Margin = new System.Windows.Forms.Padding(11, 4, 11, 4);
+            this.btnThird_page.Location = new System.Drawing.Point(240, 3);
+            this.btnThird_page.Margin = new System.Windows.Forms.Padding(8, 3, 8, 3);
             this.btnThird_page.Name = "btnThird_page";
-            this.btnThird_page.Size = new System.Drawing.Size(93, 62);
+            this.btnThird_page.Size = new System.Drawing.Size(70, 50);
             this.btnThird_page.TabIndex = 1;
             this.btnThird_page.Text = "3";
             this.btnThird_page.TextOffset = new System.Drawing.Point(0, -2);
@@ -2648,12 +2534,12 @@ namespace Management_Coffee_Shop
             this.btnPage_Next.ForeColor = System.Drawing.Color.White;
             this.btnPage_Next.Image = ((System.Drawing.Image)(resources.GetObject("btnPage_Next.Image")));
             this.btnPage_Next.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnPage_Next.Location = new System.Drawing.Point(11, 84);
-            this.btnPage_Next.Margin = new System.Windows.Forms.Padding(11, 10, 11, 10);
+            this.btnPage_Next.Location = new System.Drawing.Point(326, 8);
+            this.btnPage_Next.Margin = new System.Windows.Forms.Padding(8);
             this.btnPage_Next.Name = "btnPage_Next";
-            this.btnPage_Next.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.btnPage_Next.Padding = new System.Windows.Forms.Padding(5);
             this.btnPage_Next.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnPage_Next.Size = new System.Drawing.Size(59, 54);
+            this.btnPage_Next.Size = new System.Drawing.Size(44, 44);
             this.btnPage_Next.TabIndex = 5;
             this.btnPage_Next.Click += new System.EventHandler(this.btnPage_Next_Click);
             // 
@@ -2662,29 +2548,26 @@ namespace Management_Coffee_Shop
             this.guna2PictureBox16.BorderRadius = 40;
             this.guna2PictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox16.Image")));
             this.guna2PictureBox16.ImageRotate = 0F;
-            this.guna2PictureBox16.Location = new System.Drawing.Point(1088, 171);
-            this.guna2PictureBox16.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox16.Location = new System.Drawing.Point(816, 139);
             this.guna2PictureBox16.Name = "guna2PictureBox16";
-            this.guna2PictureBox16.Size = new System.Drawing.Size(408, 377);
+            this.guna2PictureBox16.Size = new System.Drawing.Size(306, 306);
             this.guna2PictureBox16.TabIndex = 1;
             this.guna2PictureBox16.TabStop = false;
             // 
             // guna2Panel3
             // 
             this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Panel3.Location = new System.Drawing.Point(19, 853);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel3.Location = new System.Drawing.Point(14, 693);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(1469, 4);
+            this.guna2Panel3.Size = new System.Drawing.Size(1102, 3);
             this.guna2Panel3.TabIndex = 4;
             // 
             // guna2Panel26
             // 
             this.guna2Panel26.BackColor = System.Drawing.Color.Black;
-            this.guna2Panel26.Location = new System.Drawing.Point(801, 578);
-            this.guna2Panel26.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel26.Location = new System.Drawing.Point(601, 470);
             this.guna2Panel26.Name = "guna2Panel26";
-            this.guna2Panel26.Size = new System.Drawing.Size(183, 4);
+            this.guna2Panel26.Size = new System.Drawing.Size(137, 3);
             this.guna2Panel26.TabIndex = 5;
             // 
             // label7
@@ -2692,20 +2575,18 @@ namespace Management_Coffee_Shop
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Bradley Hand ITC", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.label7.Location = new System.Drawing.Point(25, 15);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(19, 12);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(399, 100);
+            this.label7.Size = new System.Drawing.Size(321, 79);
             this.label7.TabIndex = 2;
             this.label7.Text = "Shopping!";
             // 
             // guna2Panel25
             // 
             this.guna2Panel25.BackColor = System.Drawing.Color.Black;
-            this.guna2Panel25.Location = new System.Drawing.Point(589, 578);
-            this.guna2Panel25.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel25.Location = new System.Drawing.Point(442, 470);
             this.guna2Panel25.Name = "guna2Panel25";
-            this.guna2Panel25.Size = new System.Drawing.Size(183, 4);
+            this.guna2Panel25.Size = new System.Drawing.Size(137, 3);
             this.guna2Panel25.TabIndex = 5;
             // 
             // label8
@@ -2713,10 +2594,9 @@ namespace Management_Coffee_Shop
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Bradley Hand ITC", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(33, 100);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(25, 81);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(361, 59);
+            this.label8.Size = new System.Drawing.Size(287, 46);
             this.label8.TabIndex = 2;
             this.label8.Text = "Welcome to store";
             // 
@@ -2725,40 +2605,36 @@ namespace Management_Coffee_Shop
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Bradley Hand ITC", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(12, 730);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(9, 593);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(235, 59);
+            this.label9.Size = new System.Drawing.Size(186, 46);
             this.label9.TabIndex = 2;
             this.label9.Text = "Categories";
             // 
             // guna2Panel24
             // 
             this.guna2Panel24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Panel24.Location = new System.Drawing.Point(373, 578);
-            this.guna2Panel24.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel24.Location = new System.Drawing.Point(280, 470);
             this.guna2Panel24.Name = "guna2Panel24";
-            this.guna2Panel24.Size = new System.Drawing.Size(183, 4);
+            this.guna2Panel24.Size = new System.Drawing.Size(137, 3);
             this.guna2Panel24.TabIndex = 5;
             // 
             // tabPage3
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage3.Size = new System.Drawing.Size(1553, 890);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1163, 721);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // tabPage4
             // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage4.Size = new System.Drawing.Size(1553, 890);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1163, 721);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -2769,11 +2645,10 @@ namespace Management_Coffee_Shop
             this.tabPage5.Controls.Add(this.pnlInformation);
             this.tabPage5.Controls.Add(this.pnlBill);
             this.tabPage5.Controls.Add(this.flpPayment);
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage5.Size = new System.Drawing.Size(1553, 890);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(1163, 721);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -2786,19 +2661,17 @@ namespace Management_Coffee_Shop
             this.pnlInformation.Controls.Add(this.label20);
             this.pnlInformation.Controls.Add(this.guna2Panel48);
             this.pnlInformation.Location = new System.Drawing.Point(0, 0);
-            this.pnlInformation.Margin = new System.Windows.Forms.Padding(4);
             this.pnlInformation.Name = "pnlInformation";
-            this.pnlInformation.Size = new System.Drawing.Size(1149, 54);
+            this.pnlInformation.Size = new System.Drawing.Size(862, 44);
             this.pnlInformation.TabIndex = 5;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(669, 6);
-            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Location = new System.Drawing.Point(502, 5);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(81, 31);
+            this.label23.Size = new System.Drawing.Size(66, 25);
             this.label23.TabIndex = 0;
             this.label23.Text = "Price";
             // 
@@ -2806,10 +2679,9 @@ namespace Management_Coffee_Shop
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(835, 6);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Location = new System.Drawing.Point(626, 5);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(73, 31);
+            this.label22.Size = new System.Drawing.Size(58, 25);
             this.label22.TabIndex = 0;
             this.label22.Text = "QTV";
             // 
@@ -2817,10 +2689,9 @@ namespace Management_Coffee_Shop
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(935, 6);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Location = new System.Drawing.Point(701, 5);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(113, 31);
+            this.label21.Size = new System.Drawing.Size(91, 25);
             this.label21.TabIndex = 0;
             this.label21.Text = "Amount";
             // 
@@ -2828,20 +2699,18 @@ namespace Management_Coffee_Shop
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(13, -5);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Location = new System.Drawing.Point(10, -4);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(217, 54);
+            this.label20.Size = new System.Drawing.Size(174, 42);
             this.label20.TabIndex = 0;
             this.label20.Text = "Products";
             // 
             // guna2Panel48
             // 
             this.guna2Panel48.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Panel48.Location = new System.Drawing.Point(23, 47);
-            this.guna2Panel48.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel48.Location = new System.Drawing.Point(17, 38);
             this.guna2Panel48.Name = "guna2Panel48";
-            this.guna2Panel48.Size = new System.Drawing.Size(1096, 4);
+            this.guna2Panel48.Size = new System.Drawing.Size(822, 3);
             this.guna2Panel48.TabIndex = 0;
             // 
             // pnlBill
@@ -2860,10 +2729,9 @@ namespace Management_Coffee_Shop
             this.pnlBill.Controls.Add(this.guna2HtmlLabel41);
             this.pnlBill.Controls.Add(this.guna2HtmlLabel37);
             this.pnlBill.Controls.Add(this.lblMoney_SubTotal);
-            this.pnlBill.Location = new System.Drawing.Point(1179, 0);
-            this.pnlBill.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlBill.Location = new System.Drawing.Point(884, 0);
             this.pnlBill.Name = "pnlBill";
-            this.pnlBill.Size = new System.Drawing.Size(344, 422);
+            this.pnlBill.Size = new System.Drawing.Size(258, 343);
             this.pnlBill.TabIndex = 4;
             // 
             // btnOrderNow_Bill
@@ -2876,10 +2744,9 @@ namespace Management_Coffee_Shop
             this.btnOrderNow_Bill.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
             this.btnOrderNow_Bill.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrderNow_Bill.ForeColor = System.Drawing.Color.White;
-            this.btnOrderNow_Bill.Location = new System.Drawing.Point(9, 351);
-            this.btnOrderNow_Bill.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOrderNow_Bill.Location = new System.Drawing.Point(7, 285);
             this.btnOrderNow_Bill.Name = "btnOrderNow_Bill";
-            this.btnOrderNow_Bill.Size = new System.Drawing.Size(319, 49);
+            this.btnOrderNow_Bill.Size = new System.Drawing.Size(239, 40);
             this.btnOrderNow_Bill.TabIndex = 2;
             this.btnOrderNow_Bill.Text = "Order Now";
             this.btnOrderNow_Bill.Click += new System.EventHandler(this.btnOrderNow_Click);
@@ -2889,10 +2756,9 @@ namespace Management_Coffee_Shop
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.label10.Location = new System.Drawing.Point(81, 10);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(61, 8);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(157, 69);
+            this.label10.Size = new System.Drawing.Size(127, 55);
             this.label10.TabIndex = 2;
             this.label10.Text = "BILL";
             // 
@@ -2901,10 +2767,9 @@ namespace Management_Coffee_Shop
             this.guna2HtmlLabel36.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel36.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel36.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel36.Location = new System.Drawing.Point(9, 101);
-            this.guna2HtmlLabel36.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel36.Location = new System.Drawing.Point(7, 82);
             this.guna2HtmlLabel36.Name = "guna2HtmlLabel36";
-            this.guna2HtmlLabel36.Size = new System.Drawing.Size(112, 32);
+            this.guna2HtmlLabel36.Size = new System.Drawing.Size(97, 27);
             this.guna2HtmlLabel36.TabIndex = 1;
             this.guna2HtmlLabel36.Text = "Subtotal:";
             // 
@@ -2913,10 +2778,9 @@ namespace Management_Coffee_Shop
             this.guna2HtmlLabel39.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel39.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel39.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel39.Location = new System.Drawing.Point(9, 298);
-            this.guna2HtmlLabel39.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel39.Location = new System.Drawing.Point(7, 242);
             this.guna2HtmlLabel39.Name = "guna2HtmlLabel39";
-            this.guna2HtmlLabel39.Size = new System.Drawing.Size(183, 31);
+            this.guna2HtmlLabel39.Size = new System.Drawing.Size(150, 26);
             this.guna2HtmlLabel39.TabIndex = 3;
             this.guna2HtmlLabel39.Text = "(Including VAT)";
             // 
@@ -2925,20 +2789,18 @@ namespace Management_Coffee_Shop
             this.guna2HtmlLabel38.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel38.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel38.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel38.Location = new System.Drawing.Point(9, 257);
-            this.guna2HtmlLabel38.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel38.Location = new System.Drawing.Point(7, 209);
             this.guna2HtmlLabel38.Name = "guna2HtmlLabel38";
-            this.guna2HtmlLabel38.Size = new System.Drawing.Size(59, 32);
+            this.guna2HtmlLabel38.Size = new System.Drawing.Size(49, 27);
             this.guna2HtmlLabel38.TabIndex = 1;
             this.guna2HtmlLabel38.Text = "Sum";
             // 
             // guna2Panel45
             // 
             this.guna2Panel45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Panel45.Location = new System.Drawing.Point(32, 81);
-            this.guna2Panel45.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel45.Location = new System.Drawing.Point(24, 66);
             this.guna2Panel45.Name = "guna2Panel45";
-            this.guna2Panel45.Size = new System.Drawing.Size(296, 4);
+            this.guna2Panel45.Size = new System.Drawing.Size(222, 3);
             this.guna2Panel45.TabIndex = 1;
             // 
             // guna2HtmlLabel42
@@ -2946,10 +2808,9 @@ namespace Management_Coffee_Shop
             this.guna2HtmlLabel42.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel42.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel42.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel42.Location = new System.Drawing.Point(184, 204);
-            this.guna2HtmlLabel42.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel42.Location = new System.Drawing.Point(138, 166);
             this.guna2HtmlLabel42.Name = "guna2HtmlLabel42";
-            this.guna2HtmlLabel42.Size = new System.Drawing.Size(33, 32);
+            this.guna2HtmlLabel42.Size = new System.Drawing.Size(29, 27);
             this.guna2HtmlLabel42.TabIndex = 1;
             this.guna2HtmlLabel42.Text = "0đ";
             // 
@@ -2958,10 +2819,9 @@ namespace Management_Coffee_Shop
             this.lblShip.BackColor = System.Drawing.Color.Transparent;
             this.lblShip.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblShip.ForeColor = System.Drawing.Color.Black;
-            this.lblShip.Location = new System.Drawing.Point(184, 150);
-            this.lblShip.Margin = new System.Windows.Forms.Padding(4);
+            this.lblShip.Location = new System.Drawing.Point(138, 122);
             this.lblShip.Name = "lblShip";
-            this.lblShip.Size = new System.Drawing.Size(33, 32);
+            this.lblShip.Size = new System.Drawing.Size(29, 27);
             this.lblShip.TabIndex = 1;
             this.lblShip.Text = "0đ";
             // 
@@ -2970,10 +2830,9 @@ namespace Management_Coffee_Shop
             this.lblMoney_Sum.BackColor = System.Drawing.Color.Transparent;
             this.lblMoney_Sum.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMoney_Sum.ForeColor = System.Drawing.Color.Black;
-            this.lblMoney_Sum.Location = new System.Drawing.Point(184, 257);
-            this.lblMoney_Sum.Margin = new System.Windows.Forms.Padding(4);
+            this.lblMoney_Sum.Location = new System.Drawing.Point(138, 209);
             this.lblMoney_Sum.Name = "lblMoney_Sum";
-            this.lblMoney_Sum.Size = new System.Drawing.Size(33, 32);
+            this.lblMoney_Sum.Size = new System.Drawing.Size(29, 27);
             this.lblMoney_Sum.TabIndex = 1;
             this.lblMoney_Sum.Text = "0đ";
             // 
@@ -2982,10 +2841,9 @@ namespace Management_Coffee_Shop
             this.guna2HtmlLabel41.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel41.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel41.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel41.Location = new System.Drawing.Point(9, 150);
-            this.guna2HtmlLabel41.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel41.Location = new System.Drawing.Point(7, 122);
             this.guna2HtmlLabel41.Name = "guna2HtmlLabel41";
-            this.guna2HtmlLabel41.Size = new System.Drawing.Size(66, 32);
+            this.guna2HtmlLabel41.Size = new System.Drawing.Size(57, 27);
             this.guna2HtmlLabel41.TabIndex = 1;
             this.guna2HtmlLabel41.Text = "Ship:";
             // 
@@ -2994,10 +2852,9 @@ namespace Management_Coffee_Shop
             this.guna2HtmlLabel37.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel37.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel37.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel37.Location = new System.Drawing.Point(9, 204);
-            this.guna2HtmlLabel37.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel37.Location = new System.Drawing.Point(7, 166);
             this.guna2HtmlLabel37.Name = "guna2HtmlLabel37";
-            this.guna2HtmlLabel37.Size = new System.Drawing.Size(113, 32);
+            this.guna2HtmlLabel37.Size = new System.Drawing.Size(97, 27);
             this.guna2HtmlLabel37.TabIndex = 1;
             this.guna2HtmlLabel37.Text = "Voucher:";
             // 
@@ -3006,10 +2863,9 @@ namespace Management_Coffee_Shop
             this.lblMoney_SubTotal.BackColor = System.Drawing.Color.Transparent;
             this.lblMoney_SubTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMoney_SubTotal.ForeColor = System.Drawing.Color.Black;
-            this.lblMoney_SubTotal.Location = new System.Drawing.Point(184, 101);
-            this.lblMoney_SubTotal.Margin = new System.Windows.Forms.Padding(4);
+            this.lblMoney_SubTotal.Location = new System.Drawing.Point(138, 82);
             this.lblMoney_SubTotal.Name = "lblMoney_SubTotal";
-            this.lblMoney_SubTotal.Size = new System.Drawing.Size(33, 32);
+            this.lblMoney_SubTotal.Size = new System.Drawing.Size(29, 27);
             this.lblMoney_SubTotal.TabIndex = 1;
             this.lblMoney_SubTotal.Text = "0đ";
             // 
@@ -3018,10 +2874,9 @@ namespace Management_Coffee_Shop
             this.flpPayment.AutoScroll = true;
             this.flpPayment.Controls.Add(this.pnlPayment);
             this.flpPayment.Controls.Add(this.pnlEmpty);
-            this.flpPayment.Location = new System.Drawing.Point(0, 58);
-            this.flpPayment.Margin = new System.Windows.Forms.Padding(4);
+            this.flpPayment.Location = new System.Drawing.Point(0, 47);
             this.flpPayment.Name = "flpPayment";
-            this.flpPayment.Size = new System.Drawing.Size(1171, 826);
+            this.flpPayment.Size = new System.Drawing.Size(878, 671);
             this.flpPayment.TabIndex = 0;
             // 
             // pnlPayment
@@ -3031,10 +2886,9 @@ namespace Management_Coffee_Shop
             this.pnlPayment.Controls.Add(this.guna2HtmlLabel35);
             this.pnlPayment.Controls.Add(this.guna2HtmlLabel40);
             this.pnlPayment.Controls.Add(this.guna2Panel47);
-            this.pnlPayment.Location = new System.Drawing.Point(4, 4);
-            this.pnlPayment.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlPayment.Location = new System.Drawing.Point(3, 3);
             this.pnlPayment.Name = "pnlPayment";
-            this.pnlPayment.Size = new System.Drawing.Size(1149, 139);
+            this.pnlPayment.Size = new System.Drawing.Size(862, 113);
             this.pnlPayment.TabIndex = 0;
             // 
             // btnOrderNow
@@ -3047,10 +2901,9 @@ namespace Management_Coffee_Shop
             this.btnOrderNow.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
             this.btnOrderNow.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrderNow.ForeColor = System.Drawing.Color.White;
-            this.btnOrderNow.Location = new System.Drawing.Point(815, 89);
-            this.btnOrderNow.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOrderNow.Location = new System.Drawing.Point(611, 72);
             this.btnOrderNow.Name = "btnOrderNow";
-            this.btnOrderNow.Size = new System.Drawing.Size(272, 44);
+            this.btnOrderNow.Size = new System.Drawing.Size(204, 36);
             this.btnOrderNow.TabIndex = 2;
             this.btnOrderNow.Text = "Order Now";
             this.btnOrderNow.Click += new System.EventHandler(this.btnOrderNow_Click);
@@ -3060,10 +2913,9 @@ namespace Management_Coffee_Shop
             this.lblMoney_payment.BackColor = System.Drawing.Color.Transparent;
             this.lblMoney_payment.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMoney_payment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.lblMoney_payment.Location = new System.Drawing.Point(964, 20);
-            this.lblMoney_payment.Margin = new System.Windows.Forms.Padding(4);
+            this.lblMoney_payment.Location = new System.Drawing.Point(723, 16);
             this.lblMoney_payment.Name = "lblMoney_payment";
-            this.lblMoney_payment.Size = new System.Drawing.Size(39, 38);
+            this.lblMoney_payment.Size = new System.Drawing.Size(32, 31);
             this.lblMoney_payment.TabIndex = 1;
             this.lblMoney_payment.Text = "0đ";
             // 
@@ -3072,10 +2924,9 @@ namespace Management_Coffee_Shop
             this.guna2HtmlLabel35.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel35.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2HtmlLabel35.Location = new System.Drawing.Point(815, 20);
-            this.guna2HtmlLabel35.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel35.Location = new System.Drawing.Point(611, 16);
             this.guna2HtmlLabel35.Name = "guna2HtmlLabel35";
-            this.guna2HtmlLabel35.Size = new System.Drawing.Size(130, 38);
+            this.guna2HtmlLabel35.Size = new System.Drawing.Size(106, 31);
             this.guna2HtmlLabel35.TabIndex = 1;
             this.guna2HtmlLabel35.Text = "Subtotal:";
             // 
@@ -3084,20 +2935,18 @@ namespace Management_Coffee_Shop
             this.guna2HtmlLabel40.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2HtmlLabel40.Location = new System.Drawing.Point(815, 59);
-            this.guna2HtmlLabel40.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel40.Location = new System.Drawing.Point(611, 48);
             this.guna2HtmlLabel40.Name = "guna2HtmlLabel40";
-            this.guna2HtmlLabel40.Size = new System.Drawing.Size(127, 22);
+            this.guna2HtmlLabel40.Size = new System.Drawing.Size(109, 18);
             this.guna2HtmlLabel40.TabIndex = 3;
             this.guna2HtmlLabel40.Text = "(Including VAT)";
             // 
             // guna2Panel47
             // 
             this.guna2Panel47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Panel47.Location = new System.Drawing.Point(23, 9);
-            this.guna2Panel47.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel47.Location = new System.Drawing.Point(17, 7);
             this.guna2Panel47.Name = "guna2Panel47";
-            this.guna2Panel47.Size = new System.Drawing.Size(1096, 4);
+            this.guna2Panel47.Size = new System.Drawing.Size(822, 3);
             this.guna2Panel47.TabIndex = 0;
             // 
             // pnlEmpty
@@ -3105,10 +2954,9 @@ namespace Management_Coffee_Shop
             this.pnlEmpty.Controls.Add(this.label11);
             this.pnlEmpty.Controls.Add(this.guna2PictureBox17);
             this.pnlEmpty.Controls.Add(this.btnShopNow_Cart);
-            this.pnlEmpty.Location = new System.Drawing.Point(4, 151);
-            this.pnlEmpty.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlEmpty.Location = new System.Drawing.Point(3, 122);
             this.pnlEmpty.Name = "pnlEmpty";
-            this.pnlEmpty.Size = new System.Drawing.Size(1149, 564);
+            this.pnlEmpty.Size = new System.Drawing.Size(862, 458);
             this.pnlEmpty.TabIndex = 1;
             // 
             // label11
@@ -3116,10 +2964,9 @@ namespace Management_Coffee_Shop
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.label11.Location = new System.Drawing.Point(548, 340);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(411, 276);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(224, 20);
+            this.label11.Size = new System.Drawing.Size(177, 16);
             this.label11.TabIndex = 2;
             this.label11.Text = "Your Shopping Cart Is Empty";
             // 
@@ -3127,10 +2974,9 @@ namespace Management_Coffee_Shop
             // 
             this.guna2PictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox17.Image")));
             this.guna2PictureBox17.ImageRotate = 0F;
-            this.guna2PictureBox17.Location = new System.Drawing.Point(521, 57);
-            this.guna2PictureBox17.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox17.Location = new System.Drawing.Point(391, 46);
             this.guna2PictureBox17.Name = "guna2PictureBox17";
-            this.guna2PictureBox17.Size = new System.Drawing.Size(279, 279);
+            this.guna2PictureBox17.Size = new System.Drawing.Size(209, 227);
             this.guna2PictureBox17.TabIndex = 1;
             this.guna2PictureBox17.TabStop = false;
             // 
@@ -3148,10 +2994,9 @@ namespace Management_Coffee_Shop
             this.btnShopNow_Cart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
             this.btnShopNow_Cart.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
             this.btnShopNow_Cart.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnShopNow_Cart.Location = new System.Drawing.Point(521, 380);
-            this.btnShopNow_Cart.Margin = new System.Windows.Forms.Padding(4);
+            this.btnShopNow_Cart.Location = new System.Drawing.Point(391, 309);
             this.btnShopNow_Cart.Name = "btnShopNow_Cart";
-            this.btnShopNow_Cart.Size = new System.Drawing.Size(297, 55);
+            this.btnShopNow_Cart.Size = new System.Drawing.Size(223, 45);
             this.btnShopNow_Cart.TabIndex = 0;
             this.btnShopNow_Cart.Text = "Shop Now";
             this.btnShopNow_Cart.Click += new System.EventHandler(this.btnShopping_Click);
@@ -3174,11 +3019,10 @@ namespace Management_Coffee_Shop
             this.tabPage6.Controls.Add(this.label14);
             this.tabPage6.Controls.Add(this.label12);
             this.tabPage6.Controls.Add(this.guna2ProgressBar1);
-            this.tabPage6.Location = new System.Drawing.Point(4, 25);
-            this.tabPage6.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage6.Size = new System.Drawing.Size(1553, 890);
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(1163, 721);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "tabPage6";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -3188,10 +3032,9 @@ namespace Management_Coffee_Shop
             this.lblExpected.AutoSize = true;
             this.lblExpected.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExpected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.lblExpected.Location = new System.Drawing.Point(80, 251);
-            this.lblExpected.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblExpected.Location = new System.Drawing.Point(60, 204);
             this.lblExpected.Name = "lblExpected";
-            this.lblExpected.Size = new System.Drawing.Size(242, 31);
+            this.lblExpected.Size = new System.Drawing.Size(193, 25);
             this.lblExpected.TabIndex = 0;
             this.lblExpected.Text = "Expected 10:40Am";
             // 
@@ -3201,10 +3044,9 @@ namespace Management_Coffee_Shop
             this.guna2Panel46.Controls.Add(this.lblStatus);
             this.guna2Panel46.Controls.Add(this.lblOrderCode);
             this.guna2Panel46.Controls.Add(this.lblSum_Transport);
-            this.guna2Panel46.Location = new System.Drawing.Point(75, 284);
-            this.guna2Panel46.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel46.Location = new System.Drawing.Point(56, 231);
             this.guna2Panel46.Name = "guna2Panel46";
-            this.guna2Panel46.Size = new System.Drawing.Size(1443, 28);
+            this.guna2Panel46.Size = new System.Drawing.Size(1082, 23);
             this.guna2Panel46.TabIndex = 5;
             // 
             // btnConfirm_Order
@@ -3217,10 +3059,9 @@ namespace Management_Coffee_Shop
             this.btnConfirm_Order.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
             this.btnConfirm_Order.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnConfirm_Order.ForeColor = System.Drawing.Color.White;
-            this.btnConfirm_Order.Location = new System.Drawing.Point(1273, 0);
-            this.btnConfirm_Order.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConfirm_Order.Location = new System.Drawing.Point(955, 0);
             this.btnConfirm_Order.Name = "btnConfirm_Order";
-            this.btnConfirm_Order.Size = new System.Drawing.Size(107, 28);
+            this.btnConfirm_Order.Size = new System.Drawing.Size(80, 23);
             this.btnConfirm_Order.TabIndex = 6;
             this.btnConfirm_Order.Text = "Confirm";
             this.btnConfirm_Order.Click += new System.EventHandler(this.btnConfirm_Order_Click);
@@ -3230,10 +3071,9 @@ namespace Management_Coffee_Shop
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.lblStatus.Location = new System.Drawing.Point(772, -2);
-            this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblStatus.Location = new System.Drawing.Point(579, -2);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(0, 31);
+            this.lblStatus.Size = new System.Drawing.Size(0, 25);
             this.lblStatus.TabIndex = 0;
             // 
             // lblOrderCode
@@ -3241,10 +3081,9 @@ namespace Management_Coffee_Shop
             this.lblOrderCode.AutoSize = true;
             this.lblOrderCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOrderCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.lblOrderCode.Location = new System.Drawing.Point(5, -2);
-            this.lblOrderCode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblOrderCode.Location = new System.Drawing.Point(4, -2);
             this.lblOrderCode.Name = "lblOrderCode";
-            this.lblOrderCode.Size = new System.Drawing.Size(195, 31);
+            this.lblOrderCode.Size = new System.Drawing.Size(156, 25);
             this.lblOrderCode.TabIndex = 0;
             this.lblOrderCode.Text = "Order #000001";
             // 
@@ -3253,30 +3092,27 @@ namespace Management_Coffee_Shop
             this.lblSum_Transport.AutoSize = true;
             this.lblSum_Transport.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSum_Transport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.lblSum_Transport.Location = new System.Drawing.Point(1033, -2);
-            this.lblSum_Transport.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSum_Transport.Location = new System.Drawing.Point(775, -2);
             this.lblSum_Transport.Name = "lblSum_Transport";
-            this.lblSum_Transport.Size = new System.Drawing.Size(84, 31);
+            this.lblSum_Transport.Size = new System.Drawing.Size(67, 25);
             this.lblSum_Transport.TabIndex = 0;
             this.lblSum_Transport.Text = "Sum: ";
             // 
             // flpShoppingCart
             // 
             this.flpShoppingCart.AutoScroll = true;
-            this.flpShoppingCart.Location = new System.Drawing.Point(76, 309);
-            this.flpShoppingCart.Margin = new System.Windows.Forms.Padding(4);
+            this.flpShoppingCart.Location = new System.Drawing.Point(57, 251);
             this.flpShoppingCart.Name = "flpShoppingCart";
-            this.flpShoppingCart.Size = new System.Drawing.Size(1443, 578);
+            this.flpShoppingCart.Size = new System.Drawing.Size(1082, 470);
             this.flpShoppingCart.TabIndex = 4;
             // 
             // guna2PictureBox18
             // 
             this.guna2PictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox18.Image")));
             this.guna2PictureBox18.ImageRotate = 0F;
-            this.guna2PictureBox18.Location = new System.Drawing.Point(1488, 64);
-            this.guna2PictureBox18.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox18.Location = new System.Drawing.Point(1116, 52);
             this.guna2PictureBox18.Name = "guna2PictureBox18";
-            this.guna2PictureBox18.Size = new System.Drawing.Size(47, 64);
+            this.guna2PictureBox18.Size = new System.Drawing.Size(35, 52);
             this.guna2PictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox18.TabIndex = 1;
             this.guna2PictureBox18.TabStop = false;
@@ -3286,10 +3122,9 @@ namespace Management_Coffee_Shop
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.lblTime.Location = new System.Drawing.Point(380, 219);
-            this.lblTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTime.Location = new System.Drawing.Point(285, 178);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(155, 31);
+            this.lblTime.Size = new System.Drawing.Size(123, 25);
             this.lblTime.TabIndex = 0;
             this.lblTime.Text = "Time: 10km";
             // 
@@ -3297,20 +3132,18 @@ namespace Management_Coffee_Shop
             // 
             this.pnlShipper.Controls.Add(this.guna2PictureBox19);
             this.pnlShipper.Controls.Add(this.label13);
-            this.pnlShipper.Location = new System.Drawing.Point(24, 10);
-            this.pnlShipper.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlShipper.Location = new System.Drawing.Point(18, 8);
             this.pnlShipper.Name = "pnlShipper";
-            this.pnlShipper.Size = new System.Drawing.Size(67, 118);
+            this.pnlShipper.Size = new System.Drawing.Size(50, 96);
             this.pnlShipper.TabIndex = 3;
             // 
             // guna2PictureBox19
             // 
             this.guna2PictureBox19.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox19.Image")));
             this.guna2PictureBox19.ImageRotate = 0F;
-            this.guna2PictureBox19.Location = new System.Drawing.Point(4, 34);
-            this.guna2PictureBox19.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox19.Location = new System.Drawing.Point(3, 28);
             this.guna2PictureBox19.Name = "guna2PictureBox19";
-            this.guna2PictureBox19.Size = new System.Drawing.Size(59, 79);
+            this.guna2PictureBox19.Size = new System.Drawing.Size(44, 64);
             this.guna2PictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox19.TabIndex = 4;
             this.guna2PictureBox19.TabStop = false;
@@ -3319,10 +3152,9 @@ namespace Management_Coffee_Shop
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(0, 16);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(0, 13);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(64, 17);
+            this.label13.Size = new System.Drawing.Size(50, 13);
             this.label13.TabIndex = 2;
             this.label13.Text = "Shipper";
             // 
@@ -3331,10 +3163,9 @@ namespace Management_Coffee_Shop
             this.lblDistance.AutoSize = true;
             this.lblDistance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDistance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.lblDistance.Location = new System.Drawing.Point(80, 219);
-            this.lblDistance.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDistance.Location = new System.Drawing.Point(60, 178);
             this.lblDistance.Name = "lblDistance";
-            this.lblDistance.Size = new System.Drawing.Size(202, 31);
+            this.lblDistance.Size = new System.Drawing.Size(160, 25);
             this.lblDistance.TabIndex = 0;
             this.lblDistance.Text = "Distance: 10km";
             // 
@@ -3342,10 +3173,9 @@ namespace Management_Coffee_Shop
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(1452, 167);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Location = new System.Drawing.Point(1089, 136);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(64, 17);
+            this.label19.Size = new System.Drawing.Size(50, 13);
             this.label19.TabIndex = 2;
             this.label19.Text = "10 mins";
             // 
@@ -3353,10 +3183,9 @@ namespace Management_Coffee_Shop
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(1179, 167);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Location = new System.Drawing.Point(884, 136);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(55, 17);
+            this.label18.Size = new System.Drawing.Size(43, 13);
             this.label18.TabIndex = 2;
             this.label18.Text = "8 mins";
             // 
@@ -3364,10 +3193,9 @@ namespace Management_Coffee_Shop
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(909, 167);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Location = new System.Drawing.Point(682, 136);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(55, 17);
+            this.label17.Size = new System.Drawing.Size(43, 13);
             this.label17.TabIndex = 2;
             this.label17.Text = "6 mins";
             // 
@@ -3375,10 +3203,9 @@ namespace Management_Coffee_Shop
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(635, 167);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Location = new System.Drawing.Point(476, 136);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(55, 17);
+            this.label16.Size = new System.Drawing.Size(43, 13);
             this.label16.TabIndex = 2;
             this.label16.Text = "4 mins";
             // 
@@ -3386,10 +3213,9 @@ namespace Management_Coffee_Shop
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(365, 167);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Location = new System.Drawing.Point(274, 136);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(55, 17);
+            this.label15.Size = new System.Drawing.Size(43, 13);
             this.label15.TabIndex = 2;
             this.label15.Text = "2 mins";
             // 
@@ -3397,10 +3223,9 @@ namespace Management_Coffee_Shop
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(44, 150);
-            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label28.Location = new System.Drawing.Point(33, 122);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(130, 17);
+            this.label28.Size = new System.Drawing.Size(101, 13);
             this.label28.TabIndex = 2;
             this.label28.Text = "Take Your Order";
             // 
@@ -3408,10 +3233,9 @@ namespace Management_Coffee_Shop
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(160, 167);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(120, 136);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(43, 17);
+            this.label14.Size = new System.Drawing.Size(34, 13);
             this.label14.TabIndex = 2;
             this.label14.Text = "Start";
             // 
@@ -3419,10 +3243,9 @@ namespace Management_Coffee_Shop
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(1491, 44);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(1118, 36);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(41, 17);
+            this.label12.Size = new System.Drawing.Size(33, 13);
             this.label12.TabIndex = 2;
             this.label12.Text = "YOU";
             // 
@@ -3431,22 +3254,86 @@ namespace Management_Coffee_Shop
             this.guna2ProgressBar1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
             this.guna2ProgressBar1.BorderThickness = 1;
             this.guna2ProgressBar1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ProgressBar1.Location = new System.Drawing.Point(48, 135);
-            this.guna2ProgressBar1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2ProgressBar1.Location = new System.Drawing.Point(36, 110);
             this.guna2ProgressBar1.Name = "guna2ProgressBar1";
             this.guna2ProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.guna2ProgressBar1.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.guna2ProgressBar1.Size = new System.Drawing.Size(1467, 12);
+            this.guna2ProgressBar1.Size = new System.Drawing.Size(1100, 10);
             this.guna2ProgressBar1.TabIndex = 0;
             this.guna2ProgressBar1.Text = "guna2ProgressBar1";
             this.guna2ProgressBar1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             // 
+            // tabPage7
+            // 
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Size = new System.Drawing.Size(1163, 721);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "tabPage7";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // guna2Panel49
+            // 
+            this.guna2Panel49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.guna2Panel49.Controls.Add(this.btnLogOut);
+            this.guna2Panel49.Controls.Add(this.btnChangePassword);
+            this.guna2Panel49.Controls.Add(this.guna2Button3);
+            this.guna2Panel49.Location = new System.Drawing.Point(1087, 35);
+            this.guna2Panel49.Name = "guna2Panel49";
+            this.guna2Panel49.Size = new System.Drawing.Size(145, 145);
+            this.guna2Panel49.TabIndex = 6;
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogOut.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLogOut.ForeColor = System.Drawing.Color.White;
+            this.btnLogOut.Location = new System.Drawing.Point(-1, 111);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(146, 34);
+            this.btnLogOut.TabIndex = 0;
+            this.btnLogOut.Text = "Log Out";
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
+            // btnChangePassword
+            // 
+            this.btnChangePassword.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnChangePassword.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnChangePassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnChangePassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnChangePassword.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnChangePassword.ForeColor = System.Drawing.Color.White;
+            this.btnChangePassword.Location = new System.Drawing.Point(-1, 71);
+            this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.Size = new System.Drawing.Size(146, 34);
+            this.btnChangePassword.TabIndex = 0;
+            this.btnChangePassword.Text = "Change Password";
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
+            // 
+            // guna2Button3
+            // 
+            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button3.ForeColor = System.Drawing.Color.White;
+            this.guna2Button3.Location = new System.Drawing.Point(-1, 0);
+            this.guna2Button3.Name = "guna2Button3";
+            this.guna2Button3.Size = new System.Drawing.Size(146, 34);
+            this.guna2Button3.TabIndex = 0;
+            this.guna2Button3.Text = "guna2Button3";
+            // 
             // FormCustomer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1835, 949);
+            this.ClientSize = new System.Drawing.Size(1376, 771);
+            this.Controls.Add(this.guna2Panel49);
             this.Controls.Add(this.pnlhomePage);
             this.Controls.Add(this.pnlSaveLogin);
             this.Controls.Add(this.pnlAddShoppingCart);
@@ -3454,7 +3341,6 @@ namespace Management_Coffee_Shop
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCustomer";
@@ -3541,6 +3427,7 @@ namespace Management_Coffee_Shop
             this.pnlShipper.ResumeLayout(false);
             this.pnlShipper.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox19)).EndInit();
+            this.guna2Panel49.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -3778,5 +3665,10 @@ namespace Management_Coffee_Shop
         private Guna.UI2.WinForms.Guna2CircleButton homePage5;
         private Guna.UI2.WinForms.Guna2Panel pnlhomePage;
         private FlowLayoutPanel flpCategories;
+        private TabPage tabPage7;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel49;
+        private Guna.UI2.WinForms.Guna2Button btnLogOut;
+        private Guna.UI2.WinForms.Guna2Button btnChangePassword;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
     }
 }

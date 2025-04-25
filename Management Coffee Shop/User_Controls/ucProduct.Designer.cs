@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.elipseUcProduct = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.tbpnlTop = new System.Windows.Forms.TableLayoutPanel();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -117,11 +117,11 @@
             // 
             this.tbpnlTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(25)))), ((int)(((byte)(66)))));
             this.tbpnlTop.ColumnCount = 6;
-            this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tbpnlTop.Controls.Add(this.lblTitle, 5, 0);
             this.tbpnlTop.Controls.Add(this.btnPrint, 4, 0);
@@ -131,11 +131,11 @@
             this.tbpnlTop.Controls.Add(this.btnAdd, 0, 0);
             this.tbpnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.tbpnlTop.Location = new System.Drawing.Point(0, 0);
-            this.tbpnlTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbpnlTop.Margin = new System.Windows.Forms.Padding(2);
             this.tbpnlTop.Name = "tbpnlTop";
             this.tbpnlTop.RowCount = 1;
             this.tbpnlTop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbpnlTop.Size = new System.Drawing.Size(808, 48);
+            this.tbpnlTop.Size = new System.Drawing.Size(606, 39);
             this.tbpnlTop.TabIndex = 1;
             // 
             // lblTitle
@@ -144,9 +144,10 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.Coral;
-            this.lblTitle.Location = new System.Drawing.Point(524, 0);
+            this.lblTitle.Location = new System.Drawing.Point(389, 0);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(159, 48);
+            this.lblTitle.Size = new System.Drawing.Size(128, 39);
             this.lblTitle.TabIndex = 7;
             this.lblTitle.Text = "Our Product";
             // 
@@ -162,10 +163,10 @@
             this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.btnPrint.ForeColor = System.Drawing.Color.White;
             this.btnPrint.Image = global::Management_Coffee_Shop.Properties.Resources.printer_3022251;
-            this.btnPrint.Location = new System.Drawing.Point(320, 0);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.btnPrint.Location = new System.Drawing.Point(240, 0);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(77, 48);
+            this.btnPrint.Size = new System.Drawing.Size(58, 39);
             this.btnPrint.TabIndex = 5;
             this.btnPrint.Text = "Print";
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
@@ -182,10 +183,10 @@
             this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
             this.btnRefresh.Image = global::Management_Coffee_Shop.Properties.Resources.refresh_10025481;
-            this.btnRefresh.Location = new System.Drawing.Point(240, 0);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.btnRefresh.Location = new System.Drawing.Point(180, 0);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(77, 48);
+            this.btnRefresh.Size = new System.Drawing.Size(58, 39);
             this.btnRefresh.TabIndex = 4;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
@@ -202,10 +203,10 @@
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Image = global::Management_Coffee_Shop.Properties.Resources.trash_9915683;
-            this.btnDelete.Location = new System.Drawing.Point(160, 0);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.btnDelete.Location = new System.Drawing.Point(120, 0);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(77, 48);
+            this.btnDelete.Size = new System.Drawing.Size(58, 39);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Delete";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -222,10 +223,10 @@
             this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.btnEdit.ForeColor = System.Drawing.Color.White;
             this.btnEdit.Image = global::Management_Coffee_Shop.Properties.Resources.write_7879263;
-            this.btnEdit.Location = new System.Drawing.Point(80, 0);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.btnEdit.Location = new System.Drawing.Point(60, 0);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(77, 48);
+            this.btnEdit.Size = new System.Drawing.Size(58, 39);
             this.btnEdit.TabIndex = 2;
             this.btnEdit.Text = "Edit";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -243,9 +244,9 @@
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Image = global::Management_Coffee_Shop.Properties.Resources.new_page_7879261;
             this.btnAdd.Location = new System.Drawing.Point(0, 0);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(77, 48);
+            this.btnAdd.Size = new System.Drawing.Size(58, 39);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -257,10 +258,10 @@
             this.pnlArea.Controls.Add(this.pnlEditProduct);
             this.pnlArea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlArea.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlArea.Location = new System.Drawing.Point(0, 48);
-            this.pnlArea.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlArea.Location = new System.Drawing.Point(0, 39);
+            this.pnlArea.Margin = new System.Windows.Forms.Padding(2);
             this.pnlArea.Name = "pnlArea";
-            this.pnlArea.Size = new System.Drawing.Size(808, 570);
+            this.pnlArea.Size = new System.Drawing.Size(606, 463);
             this.pnlArea.TabIndex = 4;
             // 
             // pnlGrid
@@ -268,9 +269,9 @@
             this.pnlGrid.Controls.Add(this.dgvProduct);
             this.pnlGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlGrid.Location = new System.Drawing.Point(0, 0);
-            this.pnlGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlGrid.Margin = new System.Windows.Forms.Padding(2);
             this.pnlGrid.Name = "pnlGrid";
-            this.pnlGrid.Size = new System.Drawing.Size(399, 570);
+            this.pnlGrid.Size = new System.Drawing.Size(299, 463);
             this.pnlGrid.TabIndex = 7;
             // 
             // dgvProduct
@@ -283,14 +284,14 @@
             this.dgvProduct.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProduct.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvProduct.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(25)))), ((int)(((byte)(66)))));
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(122)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(25)))), ((int)(((byte)(66)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(122)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProduct.ColumnHeadersHeight = 35;
             this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -299,14 +300,14 @@
             this.colCategory,
             this.colPrice,
             this.colUnit});
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(25)))), ((int)(((byte)(66)))));
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(122)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProduct.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(25)))), ((int)(((byte)(66)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(122)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProduct.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvProduct.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProduct.EnableHeadersVisualStyles = false;
             this.dgvProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
@@ -318,7 +319,7 @@
             this.dgvProduct.RowHeadersWidth = 35;
             this.dgvProduct.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProduct.Size = new System.Drawing.Size(399, 570);
+            this.dgvProduct.Size = new System.Drawing.Size(299, 463);
             this.dgvProduct.TabIndex = 2;
             this.dgvProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellContentClick);
             this.dgvProduct.SelectionChanged += new System.EventHandler(this.dgvProduct_SelectionChanged);
@@ -382,10 +383,10 @@
             this.pnlEditProduct.Controls.Add(this.pnlEditProductTop);
             this.pnlEditProduct.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlEditProduct.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(25)))), ((int)(((byte)(66)))));
-            this.pnlEditProduct.Location = new System.Drawing.Point(399, 0);
-            this.pnlEditProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlEditProduct.Location = new System.Drawing.Point(299, 0);
+            this.pnlEditProduct.Margin = new System.Windows.Forms.Padding(2);
             this.pnlEditProduct.Name = "pnlEditProduct";
-            this.pnlEditProduct.Size = new System.Drawing.Size(409, 570);
+            this.pnlEditProduct.Size = new System.Drawing.Size(307, 463);
             this.pnlEditProduct.TabIndex = 6;
             // 
             // pnlEditProductFill
@@ -396,11 +397,11 @@
             this.pnlEditProductFill.BorderThickness = 2;
             this.pnlEditProductFill.Controls.Add(this.tblEditProduct);
             this.pnlEditProductFill.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlEditProductFill.Location = new System.Drawing.Point(0, 50);
-            this.pnlEditProductFill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlEditProductFill.Location = new System.Drawing.Point(0, 41);
+            this.pnlEditProductFill.Margin = new System.Windows.Forms.Padding(2);
             this.pnlEditProductFill.Name = "pnlEditProductFill";
-            this.pnlEditProductFill.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pnlEditProductFill.Size = new System.Drawing.Size(409, 520);
+            this.pnlEditProductFill.Padding = new System.Windows.Forms.Padding(3);
+            this.pnlEditProductFill.Size = new System.Drawing.Size(307, 422);
             this.pnlEditProductFill.TabIndex = 4;
             // 
             // tblEditProduct
@@ -430,28 +431,28 @@
             this.tblEditProduct.Controls.Add(this.lblDescription, 0, 14);
             this.tblEditProduct.Controls.Add(this.txtName, 0, 4);
             this.tblEditProduct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblEditProduct.Location = new System.Drawing.Point(4, 4);
+            this.tblEditProduct.Location = new System.Drawing.Point(3, 3);
             this.tblEditProduct.Margin = new System.Windows.Forms.Padding(2);
             this.tblEditProduct.Name = "tblEditProduct";
             this.tblEditProduct.RowCount = 16;
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 320F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 320F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tblEditProduct.Size = new System.Drawing.Size(401, 512);
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 19F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 260F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 260F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
+            this.tblEditProduct.Size = new System.Drawing.Size(301, 416);
             this.tblEditProduct.TabIndex = 3;
             // 
             // dgvDescription
@@ -463,34 +464,34 @@
             this.dgvDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDescription.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvDescription.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(105)))), ((int)(((byte)(146)))));
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(105)))), ((int)(((byte)(146)))));
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDescription.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(105)))), ((int)(((byte)(146)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(105)))), ((int)(((byte)(146)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDescription.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDescription.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tblEditProduct.SetColumnSpan(this.dgvDescription, 3);
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(105)))), ((int)(((byte)(146)))));
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(122)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDescription.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(105)))), ((int)(((byte)(146)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(122)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDescription.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvDescription.EnableHeadersVisualStyles = false;
             this.dgvDescription.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
-            this.dgvDescription.Location = new System.Drawing.Point(3, 922);
-            this.dgvDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvDescription.Location = new System.Drawing.Point(2, 641);
+            this.dgvDescription.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDescription.Name = "dgvDescription";
             this.dgvDescription.RowHeadersVisible = false;
             this.dgvDescription.RowHeadersWidth = 62;
             this.dgvDescription.RowTemplate.Height = 28;
             this.dgvDescription.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDescription.Size = new System.Drawing.Size(374, 302);
+            this.dgvDescription.Size = new System.Drawing.Size(280, 245);
             this.dgvDescription.TabIndex = 32;
             // 
             // pbAvatar
@@ -498,12 +499,12 @@
             this.pbAvatar.BorderRadius = 20;
             this.pbAvatar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbAvatar.ImageRotate = 0F;
-            this.pbAvatar.Location = new System.Drawing.Point(129, 2);
-            this.pbAvatar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbAvatar.Location = new System.Drawing.Point(96, 2);
+            this.pbAvatar.Margin = new System.Windows.Forms.Padding(2);
             this.pbAvatar.Name = "pbAvatar";
-            this.pbAvatar.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pbAvatar.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tblEditProduct.SetRowSpan(this.pbAvatar, 2);
-            this.pbAvatar.Size = new System.Drawing.Size(120, 68);
+            this.pbAvatar.Size = new System.Drawing.Size(90, 55);
             this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbAvatar.TabIndex = 0;
             this.pbAvatar.TabStop = false;
@@ -515,10 +516,10 @@
             this.guna2Panel4.Controls.Add(this.btnImageCancel);
             this.guna2Panel4.Controls.Add(this.btnImageChange);
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel4.Location = new System.Drawing.Point(126, 72);
+            this.guna2Panel4.Location = new System.Drawing.Point(94, 59);
             this.guna2Panel4.Margin = new System.Windows.Forms.Padding(0);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(126, 23);
+            this.guna2Panel4.Size = new System.Drawing.Size(94, 19);
             this.guna2Panel4.TabIndex = 3;
             // 
             // btnImageCancel
@@ -535,10 +536,10 @@
             this.btnImageCancel.ForeColor = System.Drawing.Color.White;
             this.btnImageCancel.Image = global::Management_Coffee_Shop.Properties.Resources.image_13406883;
             this.btnImageCancel.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnImageCancel.Location = new System.Drawing.Point(68, 0);
-            this.btnImageCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnImageCancel.Location = new System.Drawing.Point(50, 0);
+            this.btnImageCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnImageCancel.Name = "btnImageCancel";
-            this.btnImageCancel.Size = new System.Drawing.Size(58, 23);
+            this.btnImageCancel.Size = new System.Drawing.Size(44, 19);
             this.btnImageCancel.TabIndex = 3;
             this.btnImageCancel.Click += new System.EventHandler(this.btnImageCancel_Click);
             // 
@@ -557,9 +558,9 @@
             this.btnImageChange.Image = global::Management_Coffee_Shop.Properties.Resources.image_13406897;
             this.btnImageChange.ImageSize = new System.Drawing.Size(30, 30);
             this.btnImageChange.Location = new System.Drawing.Point(0, 0);
-            this.btnImageChange.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnImageChange.Margin = new System.Windows.Forms.Padding(2);
             this.btnImageChange.Name = "btnImageChange";
-            this.btnImageChange.Size = new System.Drawing.Size(58, 23);
+            this.btnImageChange.Size = new System.Drawing.Size(44, 19);
             this.btnImageChange.TabIndex = 1;
             this.btnImageChange.Click += new System.EventHandler(this.btnImageChange_Click);
             // 
@@ -568,9 +569,10 @@
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.White;
-            this.lblName.Location = new System.Drawing.Point(3, 95);
+            this.lblName.Location = new System.Drawing.Point(2, 78);
+            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(68, 25);
+            this.lblName.Size = new System.Drawing.Size(56, 20);
             this.lblName.TabIndex = 4;
             this.lblName.Text = "Name";
             // 
@@ -579,9 +581,10 @@
             this.lblCategory.AutoSize = true;
             this.lblCategory.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategory.ForeColor = System.Drawing.Color.White;
-            this.lblCategory.Location = new System.Drawing.Point(3, 168);
+            this.lblCategory.Location = new System.Drawing.Point(2, 137);
+            this.lblCategory.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(98, 24);
+            this.lblCategory.Size = new System.Drawing.Size(80, 20);
             this.lblCategory.TabIndex = 6;
             this.lblCategory.Text = "Category";
             // 
@@ -601,12 +604,11 @@
             this.txtPrice.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.txtPrice.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            this.txtPrice.Location = new System.Drawing.Point(4, 268);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPrice.Location = new System.Drawing.Point(3, 219);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.PlaceholderText = "";
             this.txtPrice.SelectedText = "";
-            this.txtPrice.Size = new System.Drawing.Size(370, 40);
+            this.txtPrice.Size = new System.Drawing.Size(278, 32);
             this.txtPrice.TabIndex = 8;
             this.txtPrice.TextChanged += new System.EventHandler(this.txtPrice_TextChanged);
             this.txtPrice.Leave += new System.EventHandler(this.txtPrice_Leave);
@@ -616,9 +618,10 @@
             this.lblPrice.AutoSize = true;
             this.lblPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrice.ForeColor = System.Drawing.Color.White;
-            this.lblPrice.Location = new System.Drawing.Point(3, 240);
+            this.lblPrice.Location = new System.Drawing.Point(2, 196);
+            this.lblPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(59, 24);
+            this.lblPrice.Size = new System.Drawing.Size(48, 20);
             this.lblPrice.TabIndex = 9;
             this.lblPrice.Text = "Price";
             // 
@@ -637,10 +640,10 @@
             this.cbbCategory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.cbbCategory.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.cbbCategory.ItemHeight = 30;
-            this.cbbCategory.Location = new System.Drawing.Point(3, 194);
-            this.cbbCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbbCategory.Location = new System.Drawing.Point(2, 159);
+            this.cbbCategory.Margin = new System.Windows.Forms.Padding(2);
             this.cbbCategory.Name = "cbbCategory";
-            this.cbbCategory.Size = new System.Drawing.Size(372, 36);
+            this.cbbCategory.Size = new System.Drawing.Size(280, 36);
             this.cbbCategory.TabIndex = 23;
             this.cbbCategory.SelectedIndexChanged += new System.EventHandler(this.cbbCategory_SelectedIndexChanged);
             this.cbbCategory.Leave += new System.EventHandler(this.cbbCategory_Leave);
@@ -650,9 +653,10 @@
             this.lblRecipe.AutoSize = true;
             this.lblRecipe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRecipe.ForeColor = System.Drawing.Color.White;
-            this.lblRecipe.Location = new System.Drawing.Point(3, 360);
+            this.lblRecipe.Location = new System.Drawing.Point(2, 295);
+            this.lblRecipe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRecipe.Name = "lblRecipe";
-            this.lblRecipe.Size = new System.Drawing.Size(75, 24);
+            this.lblRecipe.Size = new System.Drawing.Size(61, 20);
             this.lblRecipe.TabIndex = 13;
             this.lblRecipe.Text = "Recipe";
             // 
@@ -664,10 +668,10 @@
             this.rbM.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rbM.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbM.CheckedState.InnerOffset = -4;
-            this.rbM.Location = new System.Drawing.Point(129, 314);
-            this.rbM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbM.Location = new System.Drawing.Point(96, 257);
+            this.rbM.Margin = new System.Windows.Forms.Padding(2);
             this.rbM.Name = "rbM";
-            this.rbM.Size = new System.Drawing.Size(43, 20);
+            this.rbM.Size = new System.Drawing.Size(36, 16);
             this.rbM.TabIndex = 25;
             this.rbM.Text = "M";
             this.rbM.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -683,10 +687,10 @@
             this.rbL.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rbL.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbL.CheckedState.InnerOffset = -4;
-            this.rbL.Location = new System.Drawing.Point(129, 338);
-            this.rbL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbL.Location = new System.Drawing.Point(96, 277);
+            this.rbL.Margin = new System.Windows.Forms.Padding(2);
             this.rbL.Name = "rbL";
-            this.rbL.Size = new System.Drawing.Size(37, 20);
+            this.rbL.Size = new System.Drawing.Size(31, 16);
             this.rbL.TabIndex = 26;
             this.rbL.Text = "L";
             this.rbL.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -702,10 +706,10 @@
             this.rbVipPro.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rbVipPro.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbVipPro.CheckedState.InnerOffset = -4;
-            this.rbVipPro.Location = new System.Drawing.Point(255, 338);
-            this.rbVipPro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbVipPro.Location = new System.Drawing.Point(190, 277);
+            this.rbVipPro.Margin = new System.Windows.Forms.Padding(2);
             this.rbVipPro.Name = "rbVipPro";
-            this.rbVipPro.Size = new System.Drawing.Size(74, 20);
+            this.rbVipPro.Size = new System.Drawing.Size(60, 16);
             this.rbVipPro.TabIndex = 24;
             this.rbVipPro.Text = "VipPro";
             this.rbVipPro.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -721,10 +725,10 @@
             this.rbX.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rbX.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbX.CheckedState.InnerOffset = -4;
-            this.rbX.Location = new System.Drawing.Point(255, 314);
-            this.rbX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbX.Location = new System.Drawing.Point(190, 257);
+            this.rbX.Margin = new System.Windows.Forms.Padding(2);
             this.rbX.Name = "rbX";
-            this.rbX.Size = new System.Drawing.Size(39, 20);
+            this.rbX.Size = new System.Drawing.Size(32, 16);
             this.rbX.TabIndex = 27;
             this.rbX.Text = "X";
             this.rbX.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -737,9 +741,10 @@
             this.lblUnit.AutoSize = true;
             this.lblUnit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUnit.ForeColor = System.Drawing.Color.White;
-            this.lblUnit.Location = new System.Drawing.Point(3, 312);
+            this.lblUnit.Location = new System.Drawing.Point(2, 255);
+            this.lblUnit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUnit.Name = "lblUnit";
-            this.lblUnit.Size = new System.Drawing.Size(52, 24);
+            this.lblUnit.Size = new System.Drawing.Size(43, 20);
             this.lblUnit.TabIndex = 10;
             this.lblUnit.Text = "Unit";
             this.lblUnit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -753,38 +758,38 @@
             this.dgvRecipe.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvRecipe.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvRecipe.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(105)))), ((int)(((byte)(146)))));
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(105)))), ((int)(((byte)(146)))));
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRecipe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(105)))), ((int)(((byte)(146)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(105)))), ((int)(((byte)(146)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRecipe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvRecipe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRecipe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colIngredient,
             this.colSupplier,
             this.colStock});
             this.tblEditProduct.SetColumnSpan(this.dgvRecipe, 3);
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(105)))), ((int)(((byte)(146)))));
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(122)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRecipe.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(105)))), ((int)(((byte)(146)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(122)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRecipe.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvRecipe.EnableHeadersVisualStyles = false;
             this.dgvRecipe.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
-            this.dgvRecipe.Location = new System.Drawing.Point(3, 394);
-            this.dgvRecipe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvRecipe.Location = new System.Drawing.Point(2, 323);
+            this.dgvRecipe.Margin = new System.Windows.Forms.Padding(2);
             this.dgvRecipe.Name = "dgvRecipe";
             this.dgvRecipe.RowHeadersVisible = false;
             this.dgvRecipe.RowHeadersWidth = 62;
             this.dgvRecipe.RowTemplate.Height = 28;
             this.dgvRecipe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRecipe.Size = new System.Drawing.Size(374, 300);
+            this.dgvRecipe.Size = new System.Drawing.Size(280, 244);
             this.dgvRecipe.TabIndex = 28;
             // 
             // colIngredient
@@ -821,10 +826,10 @@
             this.panel1.Controls.Add(this.btnBookRecipe);
             this.panel1.Controls.Add(this.btnAddRecipe);
             this.panel1.Controls.Add(this.btnEditRecipe);
-            this.panel1.Location = new System.Drawing.Point(3, 706);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(2, 577);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(372, 43);
+            this.panel1.Size = new System.Drawing.Size(279, 35);
             this.panel1.TabIndex = 31;
             // 
             // btnDeleteRecipe
@@ -840,10 +845,10 @@
             this.btnDeleteRecipe.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.btnDeleteRecipe.ForeColor = System.Drawing.Color.White;
             this.btnDeleteRecipe.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnDeleteRecipe.Location = new System.Drawing.Point(184, 0);
-            this.btnDeleteRecipe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDeleteRecipe.Location = new System.Drawing.Point(138, 0);
+            this.btnDeleteRecipe.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteRecipe.Name = "btnDeleteRecipe";
-            this.btnDeleteRecipe.Size = new System.Drawing.Size(72, 43);
+            this.btnDeleteRecipe.Size = new System.Drawing.Size(54, 35);
             this.btnDeleteRecipe.TabIndex = 31;
             this.btnDeleteRecipe.Text = "Delete";
             this.btnDeleteRecipe.Click += new System.EventHandler(this.btnDeleteRecipe_Click);
@@ -861,10 +866,10 @@
             this.btnBookRecipe.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.btnBookRecipe.ForeColor = System.Drawing.Color.White;
             this.btnBookRecipe.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnBookRecipe.Location = new System.Drawing.Point(271, 0);
-            this.btnBookRecipe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBookRecipe.Location = new System.Drawing.Point(203, 0);
+            this.btnBookRecipe.Margin = new System.Windows.Forms.Padding(2);
             this.btnBookRecipe.Name = "btnBookRecipe";
-            this.btnBookRecipe.Size = new System.Drawing.Size(72, 43);
+            this.btnBookRecipe.Size = new System.Drawing.Size(54, 35);
             this.btnBookRecipe.TabIndex = 30;
             this.btnBookRecipe.Text = "Book";
             this.btnBookRecipe.Click += new System.EventHandler(this.btnBookRecipe_Click);
@@ -882,10 +887,10 @@
             this.btnAddRecipe.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.btnAddRecipe.ForeColor = System.Drawing.Color.White;
             this.btnAddRecipe.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnAddRecipe.Location = new System.Drawing.Point(29, 0);
-            this.btnAddRecipe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddRecipe.Location = new System.Drawing.Point(22, 0);
+            this.btnAddRecipe.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddRecipe.Name = "btnAddRecipe";
-            this.btnAddRecipe.Size = new System.Drawing.Size(72, 43);
+            this.btnAddRecipe.Size = new System.Drawing.Size(54, 35);
             this.btnAddRecipe.TabIndex = 29;
             this.btnAddRecipe.Text = "Add";
             this.btnAddRecipe.Click += new System.EventHandler(this.btnAddRecipe_Click);
@@ -903,10 +908,10 @@
             this.btnEditRecipe.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.btnEditRecipe.ForeColor = System.Drawing.Color.White;
             this.btnEditRecipe.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnEditRecipe.Location = new System.Drawing.Point(107, 0);
-            this.btnEditRecipe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEditRecipe.Location = new System.Drawing.Point(80, 0);
+            this.btnEditRecipe.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditRecipe.Name = "btnEditRecipe";
-            this.btnEditRecipe.Size = new System.Drawing.Size(72, 43);
+            this.btnEditRecipe.Size = new System.Drawing.Size(54, 35);
             this.btnEditRecipe.TabIndex = 30;
             this.btnEditRecipe.Text = "Edit";
             this.btnEditRecipe.Click += new System.EventHandler(this.btnEditRecipe_Click);
@@ -916,9 +921,10 @@
             this.tblEditProduct.SetColumnSpan(this.lblDescription, 2);
             this.lblDescription.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.ForeColor = System.Drawing.Color.White;
-            this.lblDescription.Location = new System.Drawing.Point(3, 752);
+            this.lblDescription.Location = new System.Drawing.Point(2, 614);
+            this.lblDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(209, 22);
+            this.lblDescription.Size = new System.Drawing.Size(157, 18);
             this.lblDescription.TabIndex = 19;
             this.lblDescription.Text = "Customer Rating";
             // 
@@ -940,12 +946,11 @@
             this.txtName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.txtName.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            this.txtName.Location = new System.Drawing.Point(5, 124);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Location = new System.Drawing.Point(3, 101);
             this.txtName.Name = "txtName";
             this.txtName.PlaceholderText = "";
             this.txtName.SelectedText = "";
-            this.txtName.Size = new System.Drawing.Size(370, 40);
+            this.txtName.Size = new System.Drawing.Size(278, 32);
             this.txtName.TabIndex = 5;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             this.txtName.Leave += new System.EventHandler(this.txtName_Leave);
@@ -961,9 +966,9 @@
             this.pnlEditProductTop.Controls.Add(this.btnCancel);
             this.pnlEditProductTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlEditProductTop.Location = new System.Drawing.Point(0, 0);
-            this.pnlEditProductTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlEditProductTop.Margin = new System.Windows.Forms.Padding(2);
             this.pnlEditProductTop.Name = "pnlEditProductTop";
-            this.pnlEditProductTop.Size = new System.Drawing.Size(409, 50);
+            this.pnlEditProductTop.Size = new System.Drawing.Size(307, 41);
             this.pnlEditProductTop.TabIndex = 2;
             // 
             // lblStatus
@@ -971,9 +976,10 @@
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblStatus.ForeColor = System.Drawing.Color.White;
-            this.lblStatus.Location = new System.Drawing.Point(106, 10);
+            this.lblStatus.Location = new System.Drawing.Point(80, 8);
+            this.lblStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(60, 23);
+            this.lblStatus.Size = new System.Drawing.Size(49, 19);
             this.lblStatus.TabIndex = 6;
             this.lblStatus.Text = "Status";
             this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -983,9 +989,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(14, 10);
+            this.label1.Location = new System.Drawing.Point(10, 8);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 23);
+            this.label1.Size = new System.Drawing.Size(23, 19);
             this.label1.TabIndex = 5;
             this.label1.Text = "ID";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1005,10 +1012,10 @@
             this.btnConfirm.ForeColor = System.Drawing.Color.White;
             this.btnConfirm.Image = global::Management_Coffee_Shop.Properties.Resources.check_11601271;
             this.btnConfirm.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnConfirm.Location = new System.Drawing.Point(255, 0);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.btnConfirm.Location = new System.Drawing.Point(191, 0);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(77, 50);
+            this.btnConfirm.Size = new System.Drawing.Size(58, 41);
             this.btnConfirm.TabIndex = 4;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
@@ -1028,10 +1035,10 @@
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Image = global::Management_Coffee_Shop.Properties.Resources.cross_mark_11601293;
             this.btnCancel.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnCancel.Location = new System.Drawing.Point(332, 0);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.btnCancel.Location = new System.Drawing.Point(249, 0);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(77, 50);
+            this.btnCancel.Size = new System.Drawing.Size(58, 41);
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -1070,15 +1077,15 @@
             // 
             // ucProduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(25)))), ((int)(((byte)(66)))));
             this.Controls.Add(this.pnlArea);
             this.Controls.Add(this.tbpnlTop);
             this.ForeColor = System.Drawing.Color.White;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ucProduct";
-            this.Size = new System.Drawing.Size(808, 618);
+            this.Size = new System.Drawing.Size(606, 502);
             this.Load += new System.EventHandler(this.ucProduct_Load);
             this.tbpnlTop.ResumeLayout(false);
             this.tbpnlTop.PerformLayout();

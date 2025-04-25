@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,13 +13,24 @@ namespace Management_Coffee_Shop
 {
     public partial class Rate : Form
     {
-        private string Enter_image= @"images\full_star.png", Leave_image= @"images\outline_star.png";
-        private int indexStar = 1;
+        private byte indexStar = 1,Sales;
         private bool flag=true;
-        public Rate(string lBLNAME)
+        private string ProductId, UserId;
+        public Rate(string lBLNAME,string ProductId,string UserId,byte Sales)
         {
             InitializeComponent();
             lblName.Text = lBLNAME;
+            this.ProductId = ProductId;
+            this.UserId = UserId;
+            this.Sales = Sales;
+        }
+        private class History
+        {
+            public string ProductId { get; set; }
+            public string UserId { get; set; }
+            public string Comment { get; set; }
+            public byte Rank { get; set; }
+            public string Time { get; set; }
         }
         private void MouseEnter()
         {
@@ -96,8 +108,19 @@ namespace Management_Coffee_Shop
 
         private void btnSender_Click(object sender, EventArgs e)
         {
-
-            MessageBox.Show("Cảm ơn bạn đã đánh giá ", "THANK YOU");
+            string path = "history_Rate.txt";
+            History newRating = new History
+            {
+                ProductId=this.ProductId,
+                UserId=this.UserId,
+                Comment=txtComment.Text,
+                Rank=this.indexStar,
+                Time = $"{DateTime.Now:dd/MM/yyyy HH:mm:ss}"
+            };
+            Drinks.set_Rate(this.ProductId, this.indexStar,(int)this.Sales);
+            MessageBox.Show("Cảm ơn bạn đã đánh giá");
+            string jsonLine = System.Text.Json.JsonSerializer.Serialize(newRating);
+            File.AppendAllText(path, jsonLine + Environment.NewLine);
             this.Close();
         }
     }

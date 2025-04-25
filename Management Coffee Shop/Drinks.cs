@@ -1,16 +1,16 @@
-﻿using Google.Apis.Services;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.UI.WebControls;
-using Google.Apis.Services;
 using Newtonsoft.Json.Linq;
 using System.Net;
 using System.Windows.Forms;
 using System.Web;
 using System.Net.Http;
 using System.Threading;
+using System.Windows.Forms.DataVisualization.Charting;
 
 
 namespace Management_Coffee_Shop
@@ -46,6 +46,42 @@ namespace Management_Coffee_Shop
                 }
             }
             return count;
+        }
+        public static void set_Rate(string id,byte Rank,int Sales)
+        {
+            using (SqlConnection connection = Connection.GetSqlConnection())
+            {
+                string query = "SELECT Rate, Review, Sales FROM sourceDrinks WHERE ID = @ID";
+                double currentRate = 0;
+                int currentReviews = 0, currentSales = 0;
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@ID", id);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            currentRate = Convert.ToDouble(reader["Rate"]);
+                            currentReviews = Convert.ToInt32(reader["Review"]);
+                            currentSales = Convert.ToInt32(reader["Sales"]);
+                        }
+                    }
+                }
+                int newReviews = currentReviews + 1;
+                double newRate = ((currentRate * currentReviews) + Rank) / newReviews;
+                int newSales = currentSales +Sales;
+                newRate = Math.Min(newRate, 999.99); 
+                query = "UPDATE sourceDrinks SET Rate = @Rate, Review = @Review, Sales = @Sales WHERE ID = @ID";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@ID", id);
+                    command.Parameters.AddWithValue("@Rate", newRate);
+                    command.Parameters.AddWithValue("@Review", newReviews);
+                    command.Parameters.AddWithValue("@Sales", newSales);
+                    command.ExecuteNonQuery();
+                }
+            }
         }
         public static DataTable loading_Categories()
         {

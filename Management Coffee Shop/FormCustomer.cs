@@ -30,6 +30,7 @@ namespace Management_Coffee_Shop
         private double distance, duration;
         private string tt,ID,Address,Name,categories;
         private static int current_ID = 0;
+        private FormLogin FormLogin;
         private List<Guna2Button> List_buttonPage;
         private List<Product> list_uCProdcuts;
         private System.Windows.Forms.Timer timer_pnlAddShoppingCart = new System.Windows.Forms.Timer();
@@ -38,7 +39,7 @@ namespace Management_Coffee_Shop
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
 
         private static extern IntPtr CreateRoundRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
-        public FormCustomer(string id,string name,string address,bool check=false)
+        public FormCustomer(string id,string name,string address,FormLogin formLogin, bool check = false)
         {
             InitializeComponent();
             this.ID = id;
@@ -47,6 +48,7 @@ namespace Management_Coffee_Shop
             this.check = check;
             this.FormBorderStyle = FormBorderStyle.None;
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 80,80));
+            this.FormLogin = formLogin;
             list_uCProdcuts = new List<Product> { uC_product1, uC_product2, uC_product3, uC_product4, uC_product5, uC_product6, uC_product7, uC_product8, uC_product9, uC_product10, uC_product11, uC_product12, uC_product13, uC_product14, uC_product15, uC_product16 };
             List_buttonPage = new List<Guna2Button> { btnFirst_page, btnSecond_page, btnThird_page };
             (distance, duration) = (Drinks.distance_time(address));
@@ -56,6 +58,7 @@ namespace Management_Coffee_Shop
             btnConfirm_Order.Hide();
             pnlAddShoppingCart.Hide();
             if (check) pnlSaveLogin.Hide();
+            else pnlSaveLogin.Location = new Point(964, 35);
             create_Page_Navigation();
             start_timer();
         }
@@ -253,8 +256,7 @@ namespace Management_Coffee_Shop
                 {
                     if (list_products[p.ID].Item3 == true)
                     {
-                        Transport transport = new Transport();
-                        transport.ID = transport.Create_ID();
+                        Transport transport = new Transport(p.ID,this.ID);
                         transport.Name = p.Name;
                         transport.LBLNote = p.TXTNote;
                         transport.LBLPrice = string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", list_products[p.ID].Item2);
@@ -262,8 +264,6 @@ namespace Management_Coffee_Shop
                         transport.LBLAmount = string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", (list_products[p.ID].Item1 * list_products[p.ID].Item2));
                         transport.PTBImage = p.PTBImage_Drinks;
                         flpShoppingCart.Controls.Add(transport);
-                        lblOrderCode.Text = "Order #" + (++current_ID).ToString().PadLeft(7, '0');
-                        lblStatus.Text = "Status: Shipping";
                         list_products.Remove(p.ID);
                         flpPayment.Controls.Remove(p);
                         count--;
@@ -286,6 +286,8 @@ namespace Management_Coffee_Shop
                     lblMoney_SubTotal.Text = "0đ";
                     lblMoney_Sum.Text = "0đ";
                 }
+                lblOrderCode.Text = "Order #" + (++current_ID).ToString().PadLeft(7, '0');
+                lblStatus.Text = "Status: Shipping";
                 btnOrderNow.Click -= btnOrderNow_Click;
                 btnOrderNow.Click += announcement;
                 btnOrderNow_Bill.Click -= btnOrderNow_Click;
@@ -585,7 +587,19 @@ namespace Management_Coffee_Shop
             }
         }
 
-        
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            FormLogin.Show();
+            this.Close();
+        }
+
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            FormForgetPassword formForgetPassword = new FormForgetPassword();
+            formForgetPassword.Show();
+            formForgetPassword.TabControl.SelectedTab = tabPage3;
+            this.Hide();
+        }
 
         private void change_color_button_homePage()
         {

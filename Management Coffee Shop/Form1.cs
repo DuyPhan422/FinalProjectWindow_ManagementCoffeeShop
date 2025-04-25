@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,11 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace Management_Coffee_Shop
 {
     public partial class FormLogin : Form
     {
+        private List<string> userName_List=new List<string>();
         public FormLogin()
         {
             InitializeComponent();
@@ -25,15 +28,67 @@ namespace Management_Coffee_Shop
             this.BeginInvoke((MethodInvoker)delegate {
                 check_Access_Token();
             });
+            guna2TabControl1.SelectedTab = tabPage1;
         }
         private void check_Access_Token()
         {
-            (bool success, string user_Id) = Login.check_Token();
-            if (success) 
+            (bool success, List<string> userId_List) = Login.check_machineName();
+            if (success)
             {
-                get_inforID(user_Id,true);
-                Login.create_NewToken(user_Id);
-            } 
+                userName_List=get_UserName(userId_List);
+                for (int i = 0; i < userId_List.Count; i++)
+                {
+                    Guna2Button button = new Guna2Button();
+                    button.Size = new Size(230, 45);
+                    button.FillColor = Color.WhiteSmoke;
+                    button.BackColor = Color.Transparent;
+                    button.BorderRadius = 20;
+                    button.BorderThickness = 1;
+                    button.HoverState.FillColor= Color.FromArgb(211, 155, 81);
+                    button.HoverState.ForeColor= Color.WhiteSmoke;
+                    button.BorderColor = Color.FromArgb(211, 155, 81);
+                    button.ForeColor = Color.FromArgb(211, 155, 81);
+                    button.Font = new Font("Segoe UI", 9f);
+                    button.Margin = new Padding(left: 8, top: 3, right: 8, bottom: 3);
+                    button.Text = "Đăng nhập với tài khoản "+userName_List[i];
+                    button.Click+=account_clicked;
+                    button.Tag=userId_List[i];
+                    flpChooseAccount.Controls.Add(button);
+                }
+                guna2TabControl1.SelectedTab = tabPage2;
+            }         
+        }
+        private void account_clicked(object sender, EventArgs e)
+        {
+            if (sender is Guna2Button clicked_Button)
+            {
+                bool success=Login.check_Token(clicked_Button.Tag.ToString());
+                if (success)
+                {
+                    get_inforID(clicked_Button.Tag.ToString(), true);
+                }
+            }
+        }
+        private List<string> get_UserName(List<string> userId_List)
+        {
+            List<string> userName_List = new List<string>();
+            using (SqlConnection connection = Connection.GetSqlConnection())
+            {
+                connection.Open();
+                string query = "SELECT UserName FROM account WHERE Id=@Id";
+                foreach (string Id in userId_List)
+                {
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Id", Id);
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read()) userName_List.Add(reader.GetString(0));
+                        }
+                    }
+                }
+            }
+            return userName_List;
         }
         private void get_inforID(string Id,bool check)
         {
@@ -48,7 +103,7 @@ namespace Management_Coffee_Shop
                     {
                         if (reader.Read())
                         {
-                            FormCustomer formCustomer = new FormCustomer(Id, reader.GetString(0), reader.GetString(1), check);
+                            FormCustomer formCustomer = new FormCustomer(Id, reader.GetString(0), reader.GetString(1),this ,check);
                             formCustomer.Show();
                             this.Hide();
                         }
@@ -109,7 +164,22 @@ namespace Management_Coffee_Shop
                         {
                             if (result.ToString()[0] == 'C')
                             {
-                                get_inforID(result.ToString(), false);
+                                bool check = false;
+                                if (userName_List.Count > 0)
+                                {
+                                    foreach (string us in userName_List)
+                                    {
+                                        if (us.Trim() == username.Trim())
+                                        {
+                                            check = true;
+                                            break;
+                                        }
+                                    }
+                                }
+                                MessageBox.Show(check.ToString());
+                                if (check) get_inforID(result.ToString(), true);
+                                else get_inforID(result.ToString(), false);
+
                             }
                             else
                             {
@@ -140,6 +210,11 @@ namespace Management_Coffee_Shop
             {
                 btnLogin_Click(sender,e);
             }
+        }
+
+        private void btnLoginWithAnotherAccount_Click(object sender, EventArgs e)
+        {
+            guna2TabControl1.SelectedTab = tabPage1;
         }
     }
 }

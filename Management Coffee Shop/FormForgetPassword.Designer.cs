@@ -54,15 +54,17 @@
             this.guna2CircleButton6 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnChange = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CircleButton7 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2CircleButton8 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtNewPassword_Change = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCurrentPassword_Change = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnUserName_Change = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtUserName_Change = new Guna.UI2.WinForms.Guna2TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnConfirm_SMS = new Guna.UI2.WinForms.Guna2Button();
@@ -87,6 +89,7 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblAnnouncement_ChangePW = new System.Windows.Forms.Label();
             this.TabControl.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -424,18 +427,21 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(243)))), ((int)(((byte)(239)))));
+            this.tabPage1.Controls.Add(this.lblAnnouncement_ChangePW);
             this.tabPage1.Controls.Add(this.guna2CircleButton6);
             this.tabPage1.Controls.Add(this.btnChange);
             this.tabPage1.Controls.Add(this.guna2CircleButton7);
+            this.tabPage1.Controls.Add(this.guna2Panel9);
             this.tabPage1.Controls.Add(this.guna2Panel7);
             this.tabPage1.Controls.Add(this.guna2CircleButton8);
             this.tabPage1.Controls.Add(this.guna2Panel6);
             this.tabPage1.Controls.Add(this.guna2HtmlLabel6);
             this.tabPage1.Controls.Add(this.guna2Panel3);
             this.tabPage1.Controls.Add(this.guna2HtmlLabel5);
+            this.tabPage1.Controls.Add(this.txtConfirmPassword);
             this.tabPage1.Controls.Add(this.txtNewPassword_Change);
             this.tabPage1.Controls.Add(this.txtCurrentPassword_Change);
-            this.tabPage1.Controls.Add(this.btnUserName_Change);
+            this.tabPage1.Controls.Add(this.txtUserName_Change);
             this.tabPage1.Location = new System.Drawing.Point(184, 4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -470,11 +476,12 @@
             this.btnChange.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
             this.btnChange.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChange.ForeColor = System.Drawing.Color.White;
-            this.btnChange.Location = new System.Drawing.Point(105, 273);
+            this.btnChange.Location = new System.Drawing.Point(121, 304);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(180, 36);
             this.btnChange.TabIndex = 7;
             this.btnChange.Text = "CHANGE";
+            this.btnChange.Click += new System.EventHandler(this.btnChange_Click_1);
             // 
             // guna2CircleButton7
             // 
@@ -492,10 +499,18 @@
             this.guna2CircleButton7.Size = new System.Drawing.Size(16, 16);
             this.guna2CircleButton7.TabIndex = 19;
             // 
+            // guna2Panel9
+            // 
+            this.guna2Panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
+            this.guna2Panel9.Location = new System.Drawing.Point(88, 269);
+            this.guna2Panel9.Name = "guna2Panel9";
+            this.guna2Panel9.Size = new System.Drawing.Size(237, 3);
+            this.guna2Panel9.TabIndex = 3;
+            // 
             // guna2Panel7
             // 
             this.guna2Panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Panel7.Location = new System.Drawing.Point(77, 239);
+            this.guna2Panel7.Location = new System.Drawing.Point(88, 224);
             this.guna2Panel7.Name = "guna2Panel7";
             this.guna2Panel7.Size = new System.Drawing.Size(237, 3);
             this.guna2Panel7.TabIndex = 3;
@@ -519,7 +534,7 @@
             // guna2Panel6
             // 
             this.guna2Panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Panel6.Location = new System.Drawing.Point(77, 192);
+            this.guna2Panel6.Location = new System.Drawing.Point(88, 177);
             this.guna2Panel6.Name = "guna2Panel6";
             this.guna2Panel6.Size = new System.Drawing.Size(237, 3);
             this.guna2Panel6.TabIndex = 3;
@@ -538,7 +553,7 @@
             // guna2Panel3
             // 
             this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Panel3.Location = new System.Drawing.Point(77, 148);
+            this.guna2Panel3.Location = new System.Drawing.Point(88, 133);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(237, 3);
             this.guna2Panel3.TabIndex = 3;
@@ -554,6 +569,28 @@
             this.guna2HtmlLabel5.TabIndex = 0;
             this.guna2HtmlLabel5.Text = "CHANGE";
             // 
+            // txtConfirmPassword
+            // 
+            this.txtConfirmPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(243)))), ((int)(((byte)(239)))));
+            this.txtConfirmPassword.BorderRadius = 13;
+            this.txtConfirmPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtConfirmPassword.DefaultText = "";
+            this.txtConfirmPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtConfirmPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtConfirmPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtConfirmPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtConfirmPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtConfirmPassword.ForeColor = System.Drawing.Color.Black;
+            this.txtConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtConfirmPassword.Location = new System.Drawing.Point(76, 247);
+            this.txtConfirmPassword.Name = "txtConfirmPassword";
+            this.txtConfirmPassword.PasswordChar = '*';
+            this.txtConfirmPassword.PlaceholderText = "Confirm Password";
+            this.txtConfirmPassword.SelectedText = "";
+            this.txtConfirmPassword.Size = new System.Drawing.Size(258, 25);
+            this.txtConfirmPassword.TabIndex = 1;
+            // 
             // txtNewPassword_Change
             // 
             this.txtNewPassword_Change.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(243)))), ((int)(((byte)(239)))));
@@ -568,7 +605,7 @@
             this.txtNewPassword_Change.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNewPassword_Change.ForeColor = System.Drawing.Color.Black;
             this.txtNewPassword_Change.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNewPassword_Change.Location = new System.Drawing.Point(65, 217);
+            this.txtNewPassword_Change.Location = new System.Drawing.Point(76, 202);
             this.txtNewPassword_Change.Name = "txtNewPassword_Change";
             this.txtNewPassword_Change.PasswordChar = '*';
             this.txtNewPassword_Change.PlaceholderText = "New Password";
@@ -590,7 +627,7 @@
             this.txtCurrentPassword_Change.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCurrentPassword_Change.ForeColor = System.Drawing.Color.Black;
             this.txtCurrentPassword_Change.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCurrentPassword_Change.Location = new System.Drawing.Point(65, 170);
+            this.txtCurrentPassword_Change.Location = new System.Drawing.Point(76, 155);
             this.txtCurrentPassword_Change.Name = "txtCurrentPassword_Change";
             this.txtCurrentPassword_Change.PasswordChar = '*';
             this.txtCurrentPassword_Change.PlaceholderText = "Current Password";
@@ -598,26 +635,26 @@
             this.txtCurrentPassword_Change.Size = new System.Drawing.Size(258, 25);
             this.txtCurrentPassword_Change.TabIndex = 1;
             // 
-            // btnUserName_Change
+            // txtUserName_Change
             // 
-            this.btnUserName_Change.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(243)))), ((int)(((byte)(239)))));
-            this.btnUserName_Change.BorderRadius = 13;
-            this.btnUserName_Change.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.btnUserName_Change.DefaultText = "";
-            this.btnUserName_Change.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.btnUserName_Change.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.btnUserName_Change.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.btnUserName_Change.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.btnUserName_Change.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnUserName_Change.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnUserName_Change.ForeColor = System.Drawing.Color.Black;
-            this.btnUserName_Change.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnUserName_Change.Location = new System.Drawing.Point(65, 126);
-            this.btnUserName_Change.Name = "btnUserName_Change";
-            this.btnUserName_Change.PlaceholderText = "UserName";
-            this.btnUserName_Change.SelectedText = "";
-            this.btnUserName_Change.Size = new System.Drawing.Size(258, 25);
-            this.btnUserName_Change.TabIndex = 1;
+            this.txtUserName_Change.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(243)))), ((int)(((byte)(239)))));
+            this.txtUserName_Change.BorderRadius = 13;
+            this.txtUserName_Change.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUserName_Change.DefaultText = "";
+            this.txtUserName_Change.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUserName_Change.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUserName_Change.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUserName_Change.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUserName_Change.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUserName_Change.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtUserName_Change.ForeColor = System.Drawing.Color.Black;
+            this.txtUserName_Change.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUserName_Change.Location = new System.Drawing.Point(76, 111);
+            this.txtUserName_Change.Name = "txtUserName_Change";
+            this.txtUserName_Change.PlaceholderText = "UserName";
+            this.txtUserName_Change.SelectedText = "";
+            this.txtUserName_Change.Size = new System.Drawing.Size(258, 25);
+            this.txtUserName_Change.TabIndex = 1;
             // 
             // tabPage2
             // 
@@ -865,7 +902,6 @@
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderRadius = 25;
-            this.guna2Panel1.Controls.Add(this.guna2Panel5);
             this.guna2Panel1.Controls.Add(this.TabControl);
             this.guna2Panel1.FillColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Panel1.Location = new System.Drawing.Point(148, 62);
@@ -884,7 +920,7 @@
             this.guna2Panel5.Controls.Add(this.guna2PictureBox2);
             this.guna2Panel5.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(230)))), ((int)(((byte)(218)))));
-            this.guna2Panel5.Location = new System.Drawing.Point(0, 1);
+            this.guna2Panel5.Location = new System.Drawing.Point(148, 62);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(300, 355);
             this.guna2Panel5.TabIndex = 1;
@@ -947,11 +983,21 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // lblAnnouncement_ChangePW
+            // 
+            this.lblAnnouncement_ChangePW.AutoSize = true;
+            this.lblAnnouncement_ChangePW.ForeColor = System.Drawing.Color.Red;
+            this.lblAnnouncement_ChangePW.Location = new System.Drawing.Point(85, 275);
+            this.lblAnnouncement_ChangePW.Name = "lblAnnouncement_ChangePW";
+            this.lblAnnouncement_ChangePW.Size = new System.Drawing.Size(0, 13);
+            this.lblAnnouncement_ChangePW.TabIndex = 21;
+            // 
             // FormForgetPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(983, 494);
+            this.Controls.Add(this.guna2Panel5);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormForgetPassword";
@@ -980,7 +1026,7 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2TabControl TabControl;
+        public Guna.UI2.WinForms.Guna2TabControl TabControl;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
@@ -1001,7 +1047,7 @@
         private Guna.UI2.WinForms.Guna2Button btnConfirm_OTP;
         private System.Windows.Forms.TabPage tabPage1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private Guna.UI2.WinForms.Guna2TextBox btnUserName_Change;
+        private Guna.UI2.WinForms.Guna2TextBox txtUserName_Change;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
@@ -1037,5 +1083,8 @@
         private System.Windows.Forms.Label lblshowAccount;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblTimer;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
+        private Guna.UI2.WinForms.Guna2TextBox txtConfirmPassword;
+        private System.Windows.Forms.Label lblAnnouncement_ChangePW;
     }
 }

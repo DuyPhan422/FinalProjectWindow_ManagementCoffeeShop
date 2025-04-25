@@ -76,19 +76,6 @@ namespace Management_Coffee_Shop
         {
 
         }
-
-
-
-        private void btnChange_Click(object sender, EventArgs e)
-        {
-            if (txtCurrentPassword_Change.Text != txtNewPassword_Change.Text)
-            {
-                MessageBox.Show("Mật khẩu không khớp");
-            } else
-            {
-
-            }
-        }
         private void btnConfirm_OTP_Click(object sender, EventArgs e)
         {
             if (txtOTP.Text == otp)
@@ -144,6 +131,37 @@ namespace Management_Coffee_Shop
             seconds = 0;
             minute = 3;
             timer1.Start();
+        }
+
+        private void btnChange_Click_1(object sender, EventArgs e)
+        {
+            lblAnnouncement_ChangePW.Text = "";
+            if (string.IsNullOrWhiteSpace(txtUserName_Change.Text))
+            {
+                errorProvider1.SetError(txtUserName_Change, "Phần này không được để trống");
+                return;
+            }else if(string.IsNullOrWhiteSpace(txtCurrentPassword_Change.Text))
+            {
+                errorProvider1.SetError(txtCurrentPassword_Change, "Phần này không được để trống");
+                return;
+            } else if (string.IsNullOrWhiteSpace(txtNewPassword_Change.Text))
+            {
+                errorProvider1.SetError(txtNewPassword_Change, "Phần này không được để trống");
+                return;
+            }else if (string.IsNullOrWhiteSpace(txtConfirmPassword.Text))
+            {
+                errorProvider1.SetError(txtConfirmPassword, "Phần này không được để trống");
+                return;
+            }
+            if (txtConfirmPassword.Text != txtNewPassword_Change.Text)lblAnnouncement_ChangePW.Text = "Mật khẩu không khớp";
+            else
+            {
+                if (txtCurrentPassword_Change.Text == txtNewPassword_Change.Text)lblAnnouncement_ChangePW.Text = "Mật khẩu mới trùng với mật khẩu cũ";
+                else
+                {
+
+                }
+            }
         }
 
         // bộ đếm thời gian

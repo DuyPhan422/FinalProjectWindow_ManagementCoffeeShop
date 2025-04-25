@@ -16,7 +16,7 @@ namespace Management_Coffee_Shop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formManager());
+            Application.Run(new FormLogin());
         }
     }
 }

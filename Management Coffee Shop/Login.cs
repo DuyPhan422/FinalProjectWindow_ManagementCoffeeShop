@@ -13,18 +13,14 @@ using System.Net.NetworkInformation;
 using System.Security.Cryptography;
 using System.Collections.Generic;
 using System.Text.Json;
+using System.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 
 
 
 namespace Management_Coffee_Shop
 {
-    public class TokenInfo
-    {
-        public string UserId { get; set; }
-        public string Token { get; set; }
-        public string LastLogin { get; set; }
-    }
     internal class Login
     {
         private class TokenInfo
@@ -33,44 +29,105 @@ namespace Management_Coffee_Shop
             public string Token { get; set; }
             public string LastLogin { get; set; }
         }
-        private static (string userToken,bool success) take_UserToken()
+
+        private static (string[] line,bool success) take_UserToken()
         {
-            string userToken = File.ReadAllText(@"..\..\user_Token.txt");
-            // nếu không có token
-            if (userToken.Length == 0)return (userToken,false); 
-            return (userToken,true);            
-        }
-        public static (bool success,string user_Id) check_Token()
-        {
-            string path = "system_Token.txt";
-            if (!File.Exists("system_Token.txt")) return (false,"");
-            (string user_Token,bool success) = take_UserToken();
-            if (!success) return (false, "");
-            string json=File.ReadAllText(path);
-            Dictionary<string, TokenInfo> token_Infor= System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, TokenInfo>>(json);
-            if (!token_Infor.ContainsKey(Environment.MachineName)) return (false, "");
-            if (token_Infor[Environment.MachineName].Token == user_Token)
+            string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            string FolderPath = Path.Combine(appDataPath, "Token_Management_Coffee_Shop");
+            string[] lines=new string[0];
+            if (!Directory.Exists(FolderPath))
             {
-                create_NewToken(token_Infor[Environment.MachineName].UserId);
-                return (true,token_Infor[Environment.MachineName].UserId);
+                Directory.CreateDirectory(FolderPath);
+                return (lines, false);
             }
-            create_NewToken(token_Infor[Environment.MachineName].UserId);
-            return (false, "");
+            string tokenFilePath = Path.Combine(FolderPath, "user_Token.txt");
+            if (!File.Exists(tokenFilePath))
+            {
+                File.WriteAllText(tokenFilePath, ""); 
+                return (lines, false);
+            }
+            lines=File.ReadAllLines(tokenFilePath);
+            if (lines.Length==0)return (lines, false);
+            return (lines, true);            
+        }
+        public static bool check_Token(string user_Id)
+        {
+            var machineName = Environment.MachineName;
+            if (!File.Exists("system_Token.txt")) return false;
+            (string[] lines,bool success) = take_UserToken();
+            if (!success) return false;
+            string json=File.ReadAllText("system_Token.txt");
+            Dictionary<string, List<TokenInfo>> token_Infor= System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, List<TokenInfo>>>(json);
+            bool flag=false;
+            foreach(var token in token_Infor[machineName])
+            {
+                if (token.UserId == user_Id)
+                {
+                    foreach(string line in lines)
+                    {
+                        if (token.Token == line)
+                        {
+                            flag = true;
+                            break;
+                        }
+                    }
+                    break;
+                }
+            }
+            if (flag)
+            {
+                create_NewToken(user_Id);
+                return true;
+            }
+            return false;
         }
         public static void create_NewToken(string user_Id)
         {
+            bool check = true;
             string path = "system_Token.txt";
+            var machineName= Environment.MachineName;
             if (!File.Exists("system_Token.txt")) return ;
-            if (!File.Exists(@"..\..\user_Token.txt")) return;
             string json = File.ReadAllText(path);
-            Dictionary<string, TokenInfo> token_Infor;
-            if (string.IsNullOrEmpty(json)) token_Infor=new Dictionary<string,TokenInfo>();
-            else token_Infor = System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, TokenInfo>>(json);
+            Dictionary<string, List<TokenInfo>> token_Infor;
+            if (string.IsNullOrEmpty(json)) token_Infor=new Dictionary<string, List<TokenInfo>>();
+            else token_Infor = System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, List<TokenInfo>>>(json);
             string new_Token = create_Token();
-            token_Infor[Environment.MachineName] = new TokenInfo { UserId = user_Id, Token = new_Token, LastLogin = $"{DateTime.Now:dd/MM/yyyy HH:mm:ss}" };
+            if (!token_Infor.ContainsKey(machineName))token_Infor[machineName] = new List<TokenInfo>();
+            foreach (var token in token_Infor[machineName])
+            {
+                if (user_Id==token.UserId)
+                {
+                    token.Token = new_Token;
+                    token.LastLogin = $"{DateTime.Now:dd/MM/yyyy HH:mm:ss}";
+                    check=false;
+                    break;
+                }
+            }
+            if (check)
+            {
+                TokenInfo tokenInfo = new TokenInfo { UserId = user_Id, Token = new_Token, LastLogin = $"{DateTime.Now:dd/MM/yyyy HH:mm:ss}" };
+                token_Infor[machineName].Add(tokenInfo);
+            }
             string read = System.Text.Json.JsonSerializer.Serialize(token_Infor, new JsonSerializerOptions { WriteIndented = true });
             File.WriteAllText(path, read);
-            File.WriteAllText(@"..\..\user_Token.txt", new_Token);
+            string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            string tokenFilePath = Path.Combine(appDataPath, "Token_Management_Coffee_Shop", "user_Token.txt");
+            File.WriteAllText(tokenFilePath, "");
+            foreach (var token in token_Infor[machineName]) File.AppendAllText(tokenFilePath, token.Token+Environment.NewLine);
+        }
+        public static (bool success,List<string> userId_List) check_machineName()
+        {
+            string json = File.ReadAllText("system_Token.txt");
+            List<string> userId_List = new List<string>();
+            if (string.IsNullOrEmpty(json)) return(false,userId_List);
+            Dictionary<string, List<TokenInfo>> token_Infor;
+            token_Infor = System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, List<TokenInfo>>>(json);
+            if (!token_Infor.ContainsKey(Environment.MachineName)) return (false,userId_List);
+            foreach (var token in token_Infor[Environment.MachineName])
+            {
+                userId_List.Add(token.UserId);
+            }
+            return (true,userId_List);
         }
         private static string create_Token()
         {
@@ -143,10 +200,9 @@ namespace Management_Coffee_Shop
             }
             return otp;
         }
-
         public void SendSms()
         {
-            
+            //fire Base Cloud Messaging
         }
     }
 }

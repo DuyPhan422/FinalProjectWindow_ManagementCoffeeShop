@@ -14,15 +14,17 @@ namespace Management_Coffee_Shop.User_Controls
     public partial class Transport : UserControl
     {
         private static int current_ID = 1;
-        private string Id,_image;
-        public Transport()
+        private string Id,UserId,_image;
+        public Transport(string Id,string UserId)
         {
             InitializeComponent();
             btnRate.Hide();
+            this.Id = Id;
+            this.UserId = UserId;
         }
         private void btnRate_Click(object sender, EventArgs e)
         {
-            Rate rate =new Rate(btnName.Text);
+            Rate rate =new Rate(btnName.Text,Id,UserId,Convert.ToByte(lblQTV.Text));
             rate.Show();
         }
         public void Show_btnRate()
@@ -44,11 +46,6 @@ namespace Management_Coffee_Shop.User_Controls
                 if (_image == null) ptbImage.Image = null;
                 else ptbImage.Image = Image.FromFile(_image);
             }
-        }
-        public string ID
-        {
-            get { return ID; }
-            set { this.Id = value; }
         }
         public string BTNName
         {
