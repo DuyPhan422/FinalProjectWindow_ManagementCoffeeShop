@@ -56,12 +56,12 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnLoginWithAnotherAccount = new Guna.UI2.WinForms.Guna2Button();
             this.flpChooseAccount = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2CircleButton4 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2CircleButton5 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.btnLoginWithAnotherAccount = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -424,6 +424,23 @@
             this.guna2Panel4.Size = new System.Drawing.Size(336, 349);
             this.guna2Panel4.TabIndex = 11;
             // 
+            // btnLoginWithAnotherAccount
+            // 
+            this.btnLoginWithAnotherAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(243)))), ((int)(((byte)(239)))));
+            this.btnLoginWithAnotherAccount.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLoginWithAnotherAccount.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLoginWithAnotherAccount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLoginWithAnotherAccount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLoginWithAnotherAccount.FillColor = System.Drawing.Color.Transparent;
+            this.btnLoginWithAnotherAccount.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoginWithAnotherAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
+            this.btnLoginWithAnotherAccount.Location = new System.Drawing.Point(48, 282);
+            this.btnLoginWithAnotherAccount.Name = "btnLoginWithAnotherAccount";
+            this.btnLoginWithAnotherAccount.Size = new System.Drawing.Size(236, 25);
+            this.btnLoginWithAnotherAccount.TabIndex = 10;
+            this.btnLoginWithAnotherAccount.Text = "Login With Another Account?";
+            this.btnLoginWithAnotherAccount.Click += new System.EventHandler(this.btnLoginWithAnotherAccount_Click);
+            // 
             // flpChooseAccount
             // 
             this.flpChooseAccount.AutoSize = true;
@@ -492,23 +509,6 @@
             this.guna2CircleButton5.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleButton5.Size = new System.Drawing.Size(16, 16);
             this.guna2CircleButton5.TabIndex = 8;
-            // 
-            // btnLoginWithAnotherAccount
-            // 
-            this.btnLoginWithAnotherAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(243)))), ((int)(((byte)(239)))));
-            this.btnLoginWithAnotherAccount.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLoginWithAnotherAccount.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLoginWithAnotherAccount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLoginWithAnotherAccount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLoginWithAnotherAccount.FillColor = System.Drawing.Color.Transparent;
-            this.btnLoginWithAnotherAccount.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoginWithAnotherAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.btnLoginWithAnotherAccount.Location = new System.Drawing.Point(48, 282);
-            this.btnLoginWithAnotherAccount.Name = "btnLoginWithAnotherAccount";
-            this.btnLoginWithAnotherAccount.Size = new System.Drawing.Size(236, 25);
-            this.btnLoginWithAnotherAccount.TabIndex = 10;
-            this.btnLoginWithAnotherAccount.Text = "Login With Another Account?";
-            this.btnLoginWithAnotherAccount.Click += new System.EventHandler(this.btnLoginWithAnotherAccount_Click);
             // 
             // FormLogin
             // 

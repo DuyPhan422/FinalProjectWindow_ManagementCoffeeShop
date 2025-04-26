@@ -11,7 +11,6 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
@@ -57,6 +56,7 @@ namespace Management_Coffee_Shop
             pnlInformation.Hide();
             btnConfirm_Order.Hide();
             pnlAddShoppingCart.Hide();
+            pnlAccount.Hide();
             if (check) pnlSaveLogin.Hide();
             else pnlSaveLogin.Location = new Point(964, 35);
             create_Page_Navigation();
@@ -589,6 +589,7 @@ namespace Management_Coffee_Shop
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
+            FormLogin.change_tabPage();
             FormLogin.Show();
             this.Close();
         }
@@ -596,9 +597,36 @@ namespace Management_Coffee_Shop
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
             FormForgetPassword formForgetPassword = new FormForgetPassword();
+            formForgetPassword.change_TabPage();
             formForgetPassword.Show();
-            formForgetPassword.TabControl.SelectedTab = tabPage3;
             this.Hide();
+        }
+        private void load_Account()
+        {
+            for (int i = 0; i < FormLogin.userId_List.Count; i++)
+            {
+                if (FormLogin.userId_List[i] != this.ID)
+                {
+                    Guna2Button button = new Guna2Button();
+                    button.Size = new Size(203, 34);
+                    button.FillColor = Color.Transparent;
+                    button.BackColor= Color.Transparent;
+                    button.ForeColor = Color.Black;
+                    button.Font= new Font("Segoe UI", 12f);
+                    button.Text = FormLogin.userName_List[i];
+                    button.Image = Image.FromFile(@"..\..\Management coffee shop_image\edited_image-removebg-preview.png");
+                    button.ImageSize = new Size(25, 25); 
+                    button.ImageAlign = HorizontalAlignment.Left; 
+                    button.TextAlign = HorizontalAlignment.Left; 
+                    flpAnotherAccount.Controls.Add(button);
+                }
+            }
+        }
+        private void btnAccount_Click(object sender, EventArgs e)
+        {
+            load_Account();
+            pnlAccount.Show();
+
         }
 
         private void change_color_button_homePage()

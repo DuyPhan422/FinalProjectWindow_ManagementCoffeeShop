@@ -15,7 +15,8 @@ namespace Management_Coffee_Shop
 {
     public partial class FormLogin : Form
     {
-        private List<string> userName_List=new List<string>();
+        public List<string> userName_List=new List<string>();
+        public List<string> userId_List=new List<string>();
         public FormLogin()
         {
             InitializeComponent();
@@ -30,9 +31,14 @@ namespace Management_Coffee_Shop
             });
             guna2TabControl1.SelectedTab = tabPage1;
         }
+        public void change_tabPage()
+        {
+            guna2TabControl1.SelectedTab = tabPage1;
+        }
         private void check_Access_Token()
         {
             (bool success, List<string> userId_List) = Login.check_machineName();
+            this.userId_List = userId_List;
             if (success)
             {
                 userName_List=get_UserName(userId_List);
@@ -56,7 +62,7 @@ namespace Management_Coffee_Shop
                     flpChooseAccount.Controls.Add(button);
                 }
                 guna2TabControl1.SelectedTab = tabPage2;
-            }         
+            }
         }
         private void account_clicked(object sender, EventArgs e)
         {

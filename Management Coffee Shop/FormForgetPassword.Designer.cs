@@ -51,6 +51,7 @@
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtOTP = new Guna.UI2.WinForms.Guna2TextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lblAnnouncement_ChangePW = new System.Windows.Forms.Label();
             this.guna2CircleButton6 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnChange = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CircleButton7 = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -89,7 +90,6 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lblAnnouncement_ChangePW = new System.Windows.Forms.Label();
             this.TabControl.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -449,6 +449,15 @@
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "tabPage1";
             // 
+            // lblAnnouncement_ChangePW
+            // 
+            this.lblAnnouncement_ChangePW.AutoSize = true;
+            this.lblAnnouncement_ChangePW.ForeColor = System.Drawing.Color.Red;
+            this.lblAnnouncement_ChangePW.Location = new System.Drawing.Point(72, 282);
+            this.lblAnnouncement_ChangePW.Name = "lblAnnouncement_ChangePW";
+            this.lblAnnouncement_ChangePW.Size = new System.Drawing.Size(0, 13);
+            this.lblAnnouncement_ChangePW.TabIndex = 21;
+            // 
             // guna2CircleButton6
             // 
             this.guna2CircleButton6.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -476,7 +485,7 @@
             this.btnChange.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
             this.btnChange.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChange.ForeColor = System.Drawing.Color.White;
-            this.btnChange.Location = new System.Drawing.Point(121, 304);
+            this.btnChange.Location = new System.Drawing.Point(108, 302);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(180, 36);
             this.btnChange.TabIndex = 7;
@@ -502,7 +511,7 @@
             // guna2Panel9
             // 
             this.guna2Panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Panel9.Location = new System.Drawing.Point(88, 269);
+            this.guna2Panel9.Location = new System.Drawing.Point(75, 267);
             this.guna2Panel9.Name = "guna2Panel9";
             this.guna2Panel9.Size = new System.Drawing.Size(237, 3);
             this.guna2Panel9.TabIndex = 3;
@@ -510,7 +519,7 @@
             // guna2Panel7
             // 
             this.guna2Panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Panel7.Location = new System.Drawing.Point(88, 224);
+            this.guna2Panel7.Location = new System.Drawing.Point(75, 222);
             this.guna2Panel7.Name = "guna2Panel7";
             this.guna2Panel7.Size = new System.Drawing.Size(237, 3);
             this.guna2Panel7.TabIndex = 3;
@@ -534,7 +543,7 @@
             // guna2Panel6
             // 
             this.guna2Panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Panel6.Location = new System.Drawing.Point(88, 177);
+            this.guna2Panel6.Location = new System.Drawing.Point(75, 175);
             this.guna2Panel6.Name = "guna2Panel6";
             this.guna2Panel6.Size = new System.Drawing.Size(237, 3);
             this.guna2Panel6.TabIndex = 3;
@@ -553,7 +562,7 @@
             // guna2Panel3
             // 
             this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Panel3.Location = new System.Drawing.Point(88, 133);
+            this.guna2Panel3.Location = new System.Drawing.Point(75, 131);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(237, 3);
             this.guna2Panel3.TabIndex = 3;
@@ -583,7 +592,7 @@
             this.txtConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtConfirmPassword.ForeColor = System.Drawing.Color.Black;
             this.txtConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtConfirmPassword.Location = new System.Drawing.Point(76, 247);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(63, 245);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.PasswordChar = '*';
             this.txtConfirmPassword.PlaceholderText = "Confirm Password";
@@ -605,7 +614,7 @@
             this.txtNewPassword_Change.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNewPassword_Change.ForeColor = System.Drawing.Color.Black;
             this.txtNewPassword_Change.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNewPassword_Change.Location = new System.Drawing.Point(76, 202);
+            this.txtNewPassword_Change.Location = new System.Drawing.Point(63, 200);
             this.txtNewPassword_Change.Name = "txtNewPassword_Change";
             this.txtNewPassword_Change.PasswordChar = '*';
             this.txtNewPassword_Change.PlaceholderText = "New Password";
@@ -627,7 +636,7 @@
             this.txtCurrentPassword_Change.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCurrentPassword_Change.ForeColor = System.Drawing.Color.Black;
             this.txtCurrentPassword_Change.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCurrentPassword_Change.Location = new System.Drawing.Point(76, 155);
+            this.txtCurrentPassword_Change.Location = new System.Drawing.Point(63, 153);
             this.txtCurrentPassword_Change.Name = "txtCurrentPassword_Change";
             this.txtCurrentPassword_Change.PasswordChar = '*';
             this.txtCurrentPassword_Change.PlaceholderText = "Current Password";
@@ -649,7 +658,7 @@
             this.txtUserName_Change.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUserName_Change.ForeColor = System.Drawing.Color.Black;
             this.txtUserName_Change.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUserName_Change.Location = new System.Drawing.Point(76, 111);
+            this.txtUserName_Change.Location = new System.Drawing.Point(63, 109);
             this.txtUserName_Change.Name = "txtUserName_Change";
             this.txtUserName_Change.PlaceholderText = "UserName";
             this.txtUserName_Change.SelectedText = "";
@@ -902,6 +911,7 @@
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderRadius = 25;
+            this.guna2Panel1.Controls.Add(this.guna2Panel5);
             this.guna2Panel1.Controls.Add(this.TabControl);
             this.guna2Panel1.FillColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Panel1.Location = new System.Drawing.Point(148, 62);
@@ -920,7 +930,7 @@
             this.guna2Panel5.Controls.Add(this.guna2PictureBox2);
             this.guna2Panel5.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(230)))), ((int)(((byte)(218)))));
-            this.guna2Panel5.Location = new System.Drawing.Point(148, 62);
+            this.guna2Panel5.Location = new System.Drawing.Point(0, 1);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(300, 355);
             this.guna2Panel5.TabIndex = 1;
@@ -983,21 +993,11 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // lblAnnouncement_ChangePW
-            // 
-            this.lblAnnouncement_ChangePW.AutoSize = true;
-            this.lblAnnouncement_ChangePW.ForeColor = System.Drawing.Color.Red;
-            this.lblAnnouncement_ChangePW.Location = new System.Drawing.Point(85, 275);
-            this.lblAnnouncement_ChangePW.Name = "lblAnnouncement_ChangePW";
-            this.lblAnnouncement_ChangePW.Size = new System.Drawing.Size(0, 13);
-            this.lblAnnouncement_ChangePW.TabIndex = 21;
-            // 
             // FormForgetPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(983, 494);
-            this.Controls.Add(this.guna2Panel5);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormForgetPassword";
@@ -1026,7 +1026,7 @@
 
         #endregion
 
-        public Guna.UI2.WinForms.Guna2TabControl TabControl;
+        private Guna.UI2.WinForms.Guna2TabControl TabControl;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;

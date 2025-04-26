@@ -56,7 +56,10 @@ namespace Management_Coffee_Shop
                 }
             }
         }
-
+        public void change_TabPage()
+        {
+            TabControl.SelectedTab = tabPage1;
+        }
         private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
             this.Close();
