@@ -1,6 +1,6 @@
 ﻿namespace Management_Coffee_Shop
 {
-    partial class ucProduct
+    partial class ucProduct_dark
     {
         /// <summary> 
         /// Required designer variable.

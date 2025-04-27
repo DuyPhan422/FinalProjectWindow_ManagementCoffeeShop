@@ -26,13 +26,13 @@ namespace Management_Coffee_Shop
                 case "btnFacility": btn.ImageIndex = 5; break;
                 default: break;
             }
-            btn.BackColor = Color.FromArgb(205, 178, 175);
+            btn.BackColor = Color.FromArgb(203,159,211);
         }
         void Reset_btn()
         {
             foreach (var btn in TLB_menu.Controls.OfType<Button>())
             {
-                btn.BackColor = Color.FromArgb(255, 228, 225);
+                btn.BackColor = Color.FromArgb(255,240,245);
             }
             btnProduct.ImageIndex = 0;
             btnIncome.ImageIndex = 2;
