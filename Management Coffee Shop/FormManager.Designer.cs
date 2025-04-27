@@ -75,7 +75,7 @@
             // 
             // TLP_top
             // 
-            this.TLP_top.BackColor = System.Drawing.Color.MistyRose;
+            this.TLP_top.BackColor = System.Drawing.Color.LavenderBlush;
             this.TLP_top.ColumnCount = 8;
             this.TLP_top.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
             this.TLP_top.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
@@ -97,7 +97,7 @@
             this.TLP_top.RowCount = 2;
             this.TLP_top.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.TLP_top.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.TLP_top.Size = new System.Drawing.Size(1100, 50);
+            this.TLP_top.Size = new System.Drawing.Size(1946, 50);
             this.TLP_top.TabIndex = 0;
             // 
             // btnMinimize
@@ -106,7 +106,7 @@
             this.btnMinimize.FlatAppearance.BorderSize = 0;
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Image = global::Management_Coffee_Shop.Properties.Resources.minus_outline_54918;
-            this.btnMinimize.Location = new System.Drawing.Point(953, 3);
+            this.btnMinimize.Location = new System.Drawing.Point(1798, 3);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(44, 29);
             this.btnMinimize.TabIndex = 2;
@@ -117,7 +117,7 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = global::Management_Coffee_Shop.Properties.Resources.search_4398568__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(883, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(1728, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.TLP_top.SetRowSpan(this.pictureBox1, 2);
             this.pictureBox1.Size = new System.Drawing.Size(64, 44);
@@ -136,7 +136,7 @@
             this.pnlSearch.Margin = new System.Windows.Forms.Padding(10, 10, 0, 5);
             this.pnlSearch.Name = "pnlSearch";
             this.TLP_top.SetRowSpan(this.pnlSearch, 2);
-            this.pnlSearch.Size = new System.Drawing.Size(730, 35);
+            this.pnlSearch.Size = new System.Drawing.Size(1369, 35);
             this.pnlSearch.TabIndex = 3;
             // 
             // txtSearch
@@ -153,12 +153,12 @@
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Location = new System.Drawing.Point(0, 0);
+            this.txtSearch.Location = new System.Drawing.Point(0, -1);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(10);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PlaceholderText = "";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(730, 28);
+            this.txtSearch.Size = new System.Drawing.Size(1369, 28);
             this.txtSearch.TabIndex = 1;
             this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
             this.txtSearch.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSearch_MouseClick);
@@ -170,7 +170,7 @@
             this.lblLineSearch.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.lblLineSearch.Location = new System.Drawing.Point(0, 29);
             this.lblLineSearch.Name = "lblLineSearch";
-            this.lblLineSearch.Size = new System.Drawing.Size(730, 6);
+            this.lblLineSearch.Size = new System.Drawing.Size(1369, 6);
             this.lblLineSearch.TabIndex = 1;
             this.lblLineSearch.Visible = false;
             // 
@@ -180,7 +180,7 @@
             this.btnMaximize.FlatAppearance.BorderSize = 0;
             this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaximize.Image = global::Management_Coffee_Shop.Properties.Resources.two_rounded_equal_squares_outlines_symbol_54725;
-            this.btnMaximize.Location = new System.Drawing.Point(1003, 3);
+            this.btnMaximize.Location = new System.Drawing.Point(1848, 3);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(44, 29);
             this.btnMaximize.TabIndex = 2;
@@ -193,9 +193,9 @@
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Image = global::Management_Coffee_Shop.Properties.Resources.close;
-            this.btnExit.Location = new System.Drawing.Point(1053, 3);
+            this.btnExit.Location = new System.Drawing.Point(1898, 3);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(44, 29);
+            this.btnExit.Size = new System.Drawing.Size(45, 29);
             this.btnExit.TabIndex = 2;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -222,7 +222,7 @@
             this.pnlPage.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.pnlPage.Location = new System.Drawing.Point(0, 0);
             this.pnlPage.Name = "pnlPage";
-            this.pnlPage.Size = new System.Drawing.Size(990, 630);
+            this.pnlPage.Size = new System.Drawing.Size(1793, 1036);
             this.pnlPage.TabIndex = 2;
             // 
             // elipseBtnProduct
@@ -236,13 +236,13 @@
             this.btnProduct.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnProduct.FlatAppearance.BorderSize = 0;
             this.btnProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProduct.Font = new System.Drawing.Font("Comic Sans MS", 7F, System.Drawing.FontStyle.Bold);
+            this.btnProduct.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProduct.ImageKey = "icons8-coffee-beans-48.png";
             this.btnProduct.ImageList = this.imageList1;
             this.btnProduct.Location = new System.Drawing.Point(10, 10);
             this.btnProduct.Margin = new System.Windows.Forms.Padding(10);
             this.btnProduct.Name = "btnProduct";
-            this.btnProduct.Size = new System.Drawing.Size(70, 77);
+            this.btnProduct.Size = new System.Drawing.Size(113, 138);
             this.btnProduct.TabIndex = 0;
             this.btnProduct.Text = "Product";
             this.btnProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -256,18 +256,17 @@
             // 
             // btnIncome
             // 
-            this.btnIncome.BackColor = System.Drawing.Color.MistyRose;
             this.btnIncome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnIncome.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnIncome.FlatAppearance.BorderSize = 0;
             this.btnIncome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIncome.Font = new System.Drawing.Font("Comic Sans MS", 7F, System.Drawing.FontStyle.Bold);
+            this.btnIncome.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncome.ImageKey = "profits_3816351.png";
             this.btnIncome.ImageList = this.imageList1;
-            this.btnIncome.Location = new System.Drawing.Point(10, 107);
+            this.btnIncome.Location = new System.Drawing.Point(10, 168);
             this.btnIncome.Margin = new System.Windows.Forms.Padding(10);
             this.btnIncome.Name = "btnIncome";
-            this.btnIncome.Size = new System.Drawing.Size(70, 77);
+            this.btnIncome.Size = new System.Drawing.Size(113, 138);
             this.btnIncome.TabIndex = 1;
             this.btnIncome.Text = "Income";
             this.btnIncome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -285,13 +284,13 @@
             this.btnStaff.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnStaff.FlatAppearance.BorderSize = 0;
             this.btnStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStaff.Font = new System.Drawing.Font("Comic Sans MS", 7F, System.Drawing.FontStyle.Bold);
+            this.btnStaff.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStaff.ImageKey = "user_8763547.png";
             this.btnStaff.ImageList = this.imageList1;
-            this.btnStaff.Location = new System.Drawing.Point(10, 204);
+            this.btnStaff.Location = new System.Drawing.Point(10, 326);
             this.btnStaff.Margin = new System.Windows.Forms.Padding(10);
             this.btnStaff.Name = "btnStaff";
-            this.btnStaff.Size = new System.Drawing.Size(70, 77);
+            this.btnStaff.Size = new System.Drawing.Size(113, 138);
             this.btnStaff.TabIndex = 2;
             this.btnStaff.Text = "Staff";
             this.btnStaff.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -309,13 +308,13 @@
             this.btnFacility.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnFacility.FlatAppearance.BorderSize = 0;
             this.btnFacility.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFacility.Font = new System.Drawing.Font("Comic Sans MS", 7F, System.Drawing.FontStyle.Bold);
+            this.btnFacility.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFacility.ImageKey = "house_1758128.png";
             this.btnFacility.ImageList = this.imageList1;
-            this.btnFacility.Location = new System.Drawing.Point(10, 301);
+            this.btnFacility.Location = new System.Drawing.Point(10, 484);
             this.btnFacility.Margin = new System.Windows.Forms.Padding(10);
             this.btnFacility.Name = "btnFacility";
-            this.btnFacility.Size = new System.Drawing.Size(70, 77);
+            this.btnFacility.Size = new System.Drawing.Size(113, 138);
             this.btnFacility.TabIndex = 3;
             this.btnFacility.Text = "Facility";
             this.btnFacility.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -324,7 +323,7 @@
             // 
             // TLB_menu
             // 
-            this.TLB_menu.BackColor = System.Drawing.Color.MistyRose;
+            this.TLB_menu.BackColor = System.Drawing.Color.LavenderBlush;
             this.TLB_menu.ColumnCount = 1;
             this.TLB_menu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.TLB_menu.Controls.Add(this.btnFacility, 0, 3);
@@ -342,32 +341,32 @@
             this.TLB_menu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.TLB_menu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.TLB_menu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.TLB_menu.Size = new System.Drawing.Size(90, 650);
+            this.TLB_menu.Size = new System.Drawing.Size(133, 1056);
             this.TLB_menu.TabIndex = 1;
             // 
             // pnlFill
             // 
-            this.pnlFill.BackColor = System.Drawing.Color.MistyRose;
+            this.pnlFill.BackColor = System.Drawing.Color.LavenderBlush;
             this.pnlFill.Controls.Add(this.pnlPage);
             this.pnlFill.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlFill.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.pnlFill.Location = new System.Drawing.Point(90, 50);
+            this.pnlFill.Location = new System.Drawing.Point(133, 50);
             this.pnlFill.Margin = new System.Windows.Forms.Padding(0);
             this.pnlFill.Name = "pnlFill";
             this.pnlFill.Padding = new System.Windows.Forms.Padding(0, 0, 20, 20);
-            this.pnlFill.Size = new System.Drawing.Size(1010, 650);
+            this.pnlFill.Size = new System.Drawing.Size(1813, 1056);
             this.pnlFill.TabIndex = 3;
             // 
-            // frmManager
+            // formManager
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(153)))), ((int)(((byte)(248)))));
-            this.ClientSize = new System.Drawing.Size(1100, 700);
+            this.ClientSize = new System.Drawing.Size(1946, 1106);
             this.Controls.Add(this.pnlFill);
             this.Controls.Add(this.TLB_menu);
             this.Controls.Add(this.TLP_top);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmManager";
+            this.Name = "formManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manager";
             this.TLP_top.ResumeLayout(false);

@@ -123,7 +123,8 @@ namespace Management_Coffee_Shop
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            //this.Close();
+            Application.Exit();
         }
 
         private void btnRegister_Click(object sender, EventArgs e)

@@ -33,7 +33,8 @@ namespace Management_Coffee_Shop
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            //this.Close();
+            Application.Exit();
         }
 
         private void btnTurnBack_MouseClick(object sender, MouseEventArgs e)

@@ -56,9 +56,10 @@
             this.btnOneStar.ForeColor = System.Drawing.Color.White;
             this.btnOneStar.Image = ((System.Drawing.Image)(resources.GetObject("btnOneStar.Image")));
             this.btnOneStar.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnOneStar.Location = new System.Drawing.Point(81, 289);
+            this.btnOneStar.Location = new System.Drawing.Point(122, 445);
+            this.btnOneStar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnOneStar.Name = "btnOneStar";
-            this.btnOneStar.Size = new System.Drawing.Size(45, 45);
+            this.btnOneStar.Size = new System.Drawing.Size(68, 69);
             this.btnOneStar.TabIndex = 0;
             this.btnOneStar.Click += new System.EventHandler(this.btnOneStar_Click);
             this.btnOneStar.MouseEnter += new System.EventHandler(this.btnOneStar_MouseEnter);
@@ -75,9 +76,10 @@
             this.btnTwoStar.ForeColor = System.Drawing.Color.White;
             this.btnTwoStar.Image = ((System.Drawing.Image)(resources.GetObject("btnTwoStar.Image")));
             this.btnTwoStar.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnTwoStar.Location = new System.Drawing.Point(132, 289);
+            this.btnTwoStar.Location = new System.Drawing.Point(198, 445);
+            this.btnTwoStar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnTwoStar.Name = "btnTwoStar";
-            this.btnTwoStar.Size = new System.Drawing.Size(45, 45);
+            this.btnTwoStar.Size = new System.Drawing.Size(68, 69);
             this.btnTwoStar.TabIndex = 0;
             this.btnTwoStar.Click += new System.EventHandler(this.btnTwoStar_Click);
             this.btnTwoStar.MouseEnter += new System.EventHandler(this.btnTwoStar_MouseEnter);
@@ -94,9 +96,10 @@
             this.btnThreeStar.ForeColor = System.Drawing.Color.White;
             this.btnThreeStar.Image = ((System.Drawing.Image)(resources.GetObject("btnThreeStar.Image")));
             this.btnThreeStar.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnThreeStar.Location = new System.Drawing.Point(183, 289);
+            this.btnThreeStar.Location = new System.Drawing.Point(274, 445);
+            this.btnThreeStar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnThreeStar.Name = "btnThreeStar";
-            this.btnThreeStar.Size = new System.Drawing.Size(45, 45);
+            this.btnThreeStar.Size = new System.Drawing.Size(68, 69);
             this.btnThreeStar.TabIndex = 0;
             this.btnThreeStar.Click += new System.EventHandler(this.btnThreeStar_Click);
             this.btnThreeStar.MouseEnter += new System.EventHandler(this.btnThreeStar_MouseEnter);
@@ -113,9 +116,10 @@
             this.btnFourStar.ForeColor = System.Drawing.Color.White;
             this.btnFourStar.Image = ((System.Drawing.Image)(resources.GetObject("btnFourStar.Image")));
             this.btnFourStar.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnFourStar.Location = new System.Drawing.Point(234, 289);
+            this.btnFourStar.Location = new System.Drawing.Point(351, 445);
+            this.btnFourStar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnFourStar.Name = "btnFourStar";
-            this.btnFourStar.Size = new System.Drawing.Size(45, 45);
+            this.btnFourStar.Size = new System.Drawing.Size(68, 69);
             this.btnFourStar.TabIndex = 0;
             this.btnFourStar.Click += new System.EventHandler(this.btnFourStar_Click);
             this.btnFourStar.MouseEnter += new System.EventHandler(this.btnFourStar_MouseEnter);
@@ -132,9 +136,10 @@
             this.btnFiveStar.ForeColor = System.Drawing.Color.White;
             this.btnFiveStar.Image = ((System.Drawing.Image)(resources.GetObject("btnFiveStar.Image")));
             this.btnFiveStar.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnFiveStar.Location = new System.Drawing.Point(285, 289);
+            this.btnFiveStar.Location = new System.Drawing.Point(428, 445);
+            this.btnFiveStar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnFiveStar.Name = "btnFiveStar";
-            this.btnFiveStar.Size = new System.Drawing.Size(45, 45);
+            this.btnFiveStar.Size = new System.Drawing.Size(68, 69);
             this.btnFiveStar.TabIndex = 0;
             this.btnFiveStar.Click += new System.EventHandler(this.btnFiveStar_Click);
             this.btnFiveStar.MouseEnter += new System.EventHandler(this.btnFiveStar_MouseEnter);
@@ -155,12 +160,13 @@
             this.txtComment.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtComment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
             this.txtComment.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtComment.Location = new System.Drawing.Point(34, 353);
+            this.txtComment.Location = new System.Drawing.Point(51, 543);
+            this.txtComment.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtComment.Multiline = true;
             this.txtComment.Name = "txtComment";
             this.txtComment.PlaceholderText = "Comment";
             this.txtComment.SelectedText = "";
-            this.txtComment.Size = new System.Drawing.Size(354, 273);
+            this.txtComment.Size = new System.Drawing.Size(531, 420);
             this.txtComment.TabIndex = 1;
             // 
             // btnSender
@@ -173,9 +179,10 @@
             this.btnSender.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
             this.btnSender.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSender.ForeColor = System.Drawing.Color.White;
-            this.btnSender.Location = new System.Drawing.Point(113, 644);
+            this.btnSender.Location = new System.Drawing.Point(170, 991);
+            this.btnSender.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSender.Name = "btnSender";
-            this.btnSender.Size = new System.Drawing.Size(180, 42);
+            this.btnSender.Size = new System.Drawing.Size(270, 65);
             this.btnSender.TabIndex = 3;
             this.btnSender.Text = "SENDER";
             this.btnSender.TextOffset = new System.Drawing.Point(0, -3);
@@ -185,9 +192,10 @@
             // 
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(99, 12);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(148, 18);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(215, 155);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(322, 238);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 4;
             this.guna2PictureBox1.TabStop = false;
@@ -197,9 +205,10 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(32, 173);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(48, 266);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(369, 35);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(555, 54);
             this.guna2HtmlLabel1.TabIndex = 2;
             this.guna2HtmlLabel1.Text = "Cảm Nhận Của Bạn Về Món";
             // 
@@ -213,9 +222,10 @@
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
             this.lblName.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.lblName.Location = new System.Drawing.Point(0, 198);
+            this.lblName.Location = new System.Drawing.Point(0, 305);
+            this.lblName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(413, 45);
+            this.lblName.Size = new System.Drawing.Size(620, 69);
             this.lblName.TabIndex = 6;
             this.lblName.Text = "guna2Button1";
             // 
@@ -223,9 +233,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(54, 246);
+            this.label1.Location = new System.Drawing.Point(81, 378);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(331, 20);
+            this.label1.Size = new System.Drawing.Size(489, 29);
             this.label1.TabIndex = 5;
             this.label1.Text = "Đã nhân được đơn hàng? Đánh giá sản phẩm";
             // 
@@ -233,9 +244,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(44, 266);
+            this.label2.Location = new System.Drawing.Point(66, 409);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(344, 20);
+            this.label2.Size = new System.Drawing.Size(517, 29);
             this.label2.TabIndex = 5;
             this.label2.Text = "Chia sẻ của bạn rất quan trọng đối với chúng tôi";
             // 
@@ -249,18 +261,19 @@
             this.btnExit.FillColor = System.Drawing.Color.Red;
             this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(397, 1);
+            this.btnExit.Location = new System.Drawing.Point(596, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnExit.Name = "btnExit";
             this.btnExit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnExit.Size = new System.Drawing.Size(16, 16);
+            this.btnExit.Size = new System.Drawing.Size(24, 25);
             this.btnExit.TabIndex = 9;
             // 
             // Rate
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(413, 698);
+            this.ClientSize = new System.Drawing.Size(620, 1074);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -275,6 +288,7 @@
             this.Controls.Add(this.btnTwoStar);
             this.Controls.Add(this.btnOneStar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Rate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rate";
