@@ -29,6 +29,7 @@ namespace Management_Coffee_Shop
             public string UserId { get; set; }
             public Dictionary<string, ShoppingItem> list_shopping { get; set; }
             public int Sum { get; set; }
+            public DateTime OrderDate { get; set; }
             public class ShoppingItem
             {
                 public byte Quantity { get; set; }
@@ -649,28 +650,39 @@ namespace Management_Coffee_Shop
         {
             if (flag_order && tabControl1.SelectedTab != tabPage6)
             {
-                Dictionary<string, ShoppingItem> list_shopping = new Dictionary<string, ShoppingItem>();
-                foreach (Transport transport in flpShoppingCart.Controls)
+                try
                 {
-
-                    int number = int.Parse(Regex.Replace(transport.LBLAmount, @"\D", ""));
-                    list_shopping[transport.ID] = new ShoppingItem
+                    Dictionary<string, ShoppingItem> list_shopping = new Dictionary<string, ShoppingItem>();
+                    foreach (Transport transport in flpShoppingCart.Controls)
                     {
-                        Quantity= Convert.ToByte(transport.LBLQTV),
-                        Price = number
+                        int number = int.Parse(Regex.Replace(transport.LBLAmount, @"\D", ""));
+                        list_shopping[transport.ID] = new ShoppingItem
+                        {
+                            Quantity = Convert.ToByte(transport.LBLQTV),
+                            Price = number
+                        };
+                    }
+
+                    string path = "history_Shopping.txt";
+                    History_Shopping history_Shopping = new History_Shopping()
+                    {
+                        OrderId = lblOrderCode.Text,
+                        UserId = this.ID,
+                        list_shopping = list_shopping,
+                        Sum = int.Parse(Regex.Replace(lblSum_Transport.Text, @"\D", "")),
+                        OrderDate = DateTime.Now
                     };
+
+                    MessageBox.Show("Cảm ơn bạn đã mua hàng");
+                    string jsonLine = System.Text.Json.JsonSerializer.Serialize(history_Shopping);
+                    File.AppendAllText(path, jsonLine + Environment.NewLine);
+                    Console.WriteLine($"Saved to history_Shopping.txt: {jsonLine}"); // Thêm log để kiểm tra
                 }
-                string path = "history_Shopping.txt";
-                History_Shopping history_Shopping = new History_Shopping()
+                catch (Exception ex)
                 {
-                    OrderId=lblOrderCode.Text,
-                    UserId=this.ID,
-                    list_shopping=list_shopping,
-                    Sum = int.Parse(Regex.Replace(lblSum_Transport.Text, @"\D", ""))
-                };
-                MessageBox.Show("Cảm ơn bạn đã mua hàng");
-                string jsonLine = System.Text.Json.JsonSerializer.Serialize(history_Shopping);
-                File.AppendAllText(path, jsonLine + Environment.NewLine);
+                    MessageBox.Show($"Lỗi khi lưu đơn hàng: {ex.Message}", "Lỗi");
+                    Console.WriteLine($"Error saving order: {ex.Message}");
+                }
             }
         }
 

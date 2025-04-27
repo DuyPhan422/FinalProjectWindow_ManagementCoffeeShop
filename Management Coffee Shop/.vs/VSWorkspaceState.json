@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\packages",
+    "\\Properties",
+    "\\Resources"
   ],
-  "SelectedNode": "\\Management Coffee Shop.sln",
+  "SelectedNode": "\\Resources",
   "PreviewInSolutionExplorer": false
 }

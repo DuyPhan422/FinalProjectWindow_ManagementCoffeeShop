@@ -555,3 +555,5 @@ E:\FinalProjectWindow_ManagementCoffeeShop\Management Coffee Shop\obj\Debug\Mana
 E:\FinalProjectWindow_ManagementCoffeeShop\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.exe
 E:\FinalProjectWindow_ManagementCoffeeShop\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.pdb
 E:\FinalProjectWindow_ManagementCoffeeShop\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.ucStaff_dark.resources
+C:\Users\HP\FinalProjectWindow_ManagementCoffeeShop\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.ucProduct_dark.resources
+C:\Users\HP\FinalProjectWindow_ManagementCoffeeShop\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.ucStaff_dark.resources

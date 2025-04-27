@@ -2,243 +2,337 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Globalization;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.Json;
 
 namespace Management_Coffee_Shop
 {
-    public class ucIncomeLogic : Connection 
+    public class ucIncomeLogic : Connection
     {
         public struct RevenueByDate
         {
             public string Date { get; set; }
             public decimal TotalAmount { get; set; }
         }
+        public struct UnderStockItem
+        {
+            public string Name { get; set; }
+            public string Unit { get; set; }
+            public int Stock { get; set; }
+        }
+
         private DateTime startDate;
         private DateTime endDate;
         private int numberDays;
+
         public int NumCustomers { get; private set; }
         public int NumSuppliers { get; private set; }
         public int NumProducts { get; private set; }
         public List<KeyValuePair<string, int>> TopProductsList { get; private set; }
-        public List<KeyValuePair<string, int>> UnderStockList { get; private set; }
+        public List<UnderStockItem> UnderStockList { get; private set; }
         public List<RevenueByDate> GrossRevenueList { get; private set; }
         public int NumOrders { get; set; }
         public decimal TotalRevenue { get; set; }
         public decimal TotalProfit { get; set; }
+
         public ucIncomeLogic()
         {
-
+            TopProductsList = new List<KeyValuePair<string, int>>();
+            UnderStockList = new List<UnderStockItem>();
+            GrossRevenueList = new List<RevenueByDate>();
+            NumOrders = 0;
+            TotalRevenue = 0;
+            TotalProfit = 0;
+            NumCustomers = 0;
+            NumSuppliers = 0;
+            NumProducts = 0;
         }
+
         private void GetNumberItems()
         {
-            using (var conn = GetConnection())
+            string path = "history_Shopping.txt";
+            if (File.Exists(path))
+            {
+                var lines = File.ReadAllLines(path);
+                Console.WriteLine($"Read {lines.Length} lines from history_Shopping.txt");
+                var userIds = new HashSet<string>();
+                foreach (var line in lines)
+                {
+                    if (string.IsNullOrWhiteSpace(line)) continue;
+                    try
+                    {
+                        var order = JsonSerializer.Deserialize<FormCustomer.History_Shopping>(line);
+                        userIds.Add(order.UserId);
+                        Console.WriteLine($"Order: {order.OrderId}, User: {order.UserId}, Date: {order.OrderDate}, Sum: {order.Sum}");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Error deserializing order in GetNumberItems: {ex.Message}");
+                    }
+                }
+                NumCustomers = userIds.Count;
+                NumOrders = lines.Count(line => !string.IsNullOrWhiteSpace(line));
+            }
+            else
+            {
+                NumCustomers = 0;
+                NumOrders = 0;
+                Console.WriteLine("history_Shopping.txt does not exist.");
+            }
+
+            using (var conn = GetSqlConnection())
             {
                 conn.Open();
                 using (var command = new SqlCommand())
                 {
                     command.Connection = conn;
-                    command.CommandText = "Select count(id) from Customer";
-                    NumCustomers = (int)command.ExecuteScalar();
-
-                    command.CommandText = "Select count(id) from Supplier";
-                    NumSuppliers = (int)command.ExecuteScalar();
-
-                    command.CommandText = "Select count(id) from Product";
+                    NumSuppliers = 0; // Giả sử không có nhà cung cấp
+                    command.CommandText = "SELECT COUNT(*) FROM sourceDrinks";
                     NumProducts = (int)command.ExecuteScalar();
-
-                    command.CommandText = @"Select count(id) from [Order]" +
-                        "where OrderDate between @fromDate and @toDate";
-                    command.Parameters.Add("@fromDate", System.Data.SqlDbType.DateTime).Value = startDate;
-                    command.Parameters.Add("@toDate", System.Data.SqlDbType.DateTime).Value = endDate;
-                    NumOrders = (int)command.ExecuteScalar();
                 }
             }
         }
-        //private void GetOrderAnlisys()
-        //{
-        //    GrossRevenueList = new List<RevenueByDate>();
-        //    TotalRevenue = 0;
-        //    TotalProfit = 0;
-        //    using (var conn = GetConnection())
-        //    {
-        //        conn.Open();
-        //        using (var command = new SqlCommand())
-        //        {
-        //            command.Connection = conn;
-        //            command.CommandText = @"select OrderDate, sum(TotalAmount) from [Order] where OrderDate between @fromDate and @toDate group by OrderDate";
-        //            command.Parameters.Add("@fromDate", System.Data.SqlDbType.DateTime).Value = startDate;
-        //            command.Parameters.Add("@toDate", System.Data.SqlDbType.DateTime).Value = endDate;
-        //            var reader = command.ExecuteReader();
-        //            var resultTable = new List<KeyValuePair<DateTime, decimal>>();
-        //            while (reader.Read())
-        //            {
-        //                resultTable.Add(new KeyValuePair<DateTime, decimal>((DateTime)reader[0], (decimal)reader[1]));
-        //                TotalRevenue += (decimal)reader[1];
-        //            }
-        //            TotalProfit = TotalRevenue * 0.2m;
-        //            reader.Close();
-        //        }
-        //    }
-        //}
-        private void GetProductAnalisys()
+        private void GetProductAnalysis()
         {
             TopProductsList = new List<KeyValuePair<string, int>>();
-            UnderStockList = new List<KeyValuePair<string, int>>();
-            using (var connection = GetConnection())
+            UnderStockList = new List<UnderStockItem>();
+
+            using (var connection = GetSqlConnection())
             {
                 connection.Open();
                 using (var command = new SqlCommand())
                 {
-                    SqlDataReader reader;
                     command.Connection = connection;
-                    //Get Top 5 products
-                    command.CommandText = @"select top 5 P.ProductName, sum(OrderItem.Quantity) as Q
-                                            from OrderItem
-                                            inner join Product P on P.Id = OrderItem.ProductId
-                                            inner
-                                            join [Order] O on O.Id = OrderItem.OrderId
-                                            where OrderDate between @fromDate and @toDate
-                                            group by P.ProductName
-                                            order by Q desc ";
-                    command.Parameters.Add("@fromDate", System.Data.SqlDbType.DateTime).Value = startDate;
-                    command.Parameters.Add("@toDate", System.Data.SqlDbType.DateTime).Value = endDate;
+
+                    command.CommandText = "SELECT Name, Unit, Stock FROM ProductManager";
+                    var reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        string name = reader["Name"].ToString();
+                        string unit = reader["Unit"].ToString();
+                        int stock = (int)reader["Stock"];
+                        UnderStockList.Add(new UnderStockItem
+                        {
+                            Name = name,
+                            Unit = unit,
+                            Stock = stock
+                        });
+                    }
+                    reader.Close();
+
+                    var productNames = new Dictionary<string, string>();
+                    command.CommandText = "SELECT ID, Name FROM sourceDrinks";
                     reader = command.ExecuteReader();
                     while (reader.Read())
                     {
-                        TopProductsList.Add(
-                            new KeyValuePair<string, int>(reader[0].ToString(), (int)reader[1]));
+                        productNames[reader["ID"].ToString()] = reader["Name"].ToString();
                     }
                     reader.Close();
-                    //Get Understock
-                    command.CommandText = @"select ProductName, Stock
-                                            from Product
-                                            where Stock <= 6 and IsDiscontinued = 0";
-                    reader = command.ExecuteReader();
-                    while (reader.Read())
+
+                    string path = "history_Shopping.txt";
+                    if (!File.Exists(path))
                     {
-                        UnderStockList.Add(
-                            new KeyValuePair<string, int>(reader[0].ToString(), (int)reader[1]));
+                        Console.WriteLine("history_Shopping.txt does not exist for product analysis.");
+                        return;
                     }
-                    reader.Close();
+
+                    var productSales = new Dictionary<string, int>();
+                    var lines = File.ReadAllLines(path);
+                    var filteredOrders = new List<(string productId, int quantity)>();
+
+                    // Lọc đơn hàng trong khoảng thời gian
+                    foreach (var line in lines)
+                    {
+                        if (string.IsNullOrWhiteSpace(line)) continue;
+                        try
+                        {
+                            var order = JsonSerializer.Deserialize<FormCustomer.History_Shopping>(line);
+                            if (order.OrderDate >= startDate && order.OrderDate <= endDate)
+                            {
+                                foreach (var item in order.list_shopping)
+                                {
+                                    filteredOrders.Add((item.Key, item.Value.Quantity));
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine($"Error deserializing order for product analysis: {ex.Message}");
+                        }
+                    }
+
+                    // Nếu không có đơn hàng trong khoảng thời gian, lấy toàn bộ đơn hàng
+                    if (!filteredOrders.Any())
+                    {
+                        Console.WriteLine("No orders in selected time range, falling back to all orders.");
+                        foreach (var line in lines)
+                        {
+                            if (string.IsNullOrWhiteSpace(line)) continue;
+                            try
+                            {
+                                var order = JsonSerializer.Deserialize<FormCustomer.History_Shopping>(line);
+                                foreach (var item in order.list_shopping)
+                                {
+                                    filteredOrders.Add((item.Key, item.Value.Quantity));
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine($"Error deserializing order for product analysis (fallback): {ex.Message}");
+                            }
+                        }
+                    }
+
+                    // Tính tổng số lượng bán của từng sản phẩm
+                    foreach (var orderItem in filteredOrders)
+                    {
+                        string productId = orderItem.productId;
+                        int quantity = orderItem.quantity;
+                        if (productSales.ContainsKey(productId))
+                        {
+                            productSales[productId] += quantity;
+                        }
+                        else
+                        {
+                            productSales[productId] = quantity;
+                        }
+                    }
+
+                    // Chuyển productSales thành TopProductsList (Top 5 sản phẩm)
+                    TopProductsList = productSales
+                        .Where(x => productNames.ContainsKey(x.Key))
+                        .OrderByDescending(x => x.Value)
+                        .Take(5)
+                        .Select(x => new KeyValuePair<string, int>(productNames[x.Key], x.Value))
+                        .ToList();
+
+                    Console.WriteLine($"TopProductsList: {TopProductsList.Count} items");
+                    foreach (var product in TopProductsList)
+                    {
+                        Console.WriteLine($"Product: {product.Key}, Quantity: {product.Value}");
+                    }
                 }
             }
         }
-        private void GetOrderAnalisys()
+
+        private void GetOrderAnalysis(string filterType)
         {
             GrossRevenueList = new List<RevenueByDate>();
-            TotalProfit = 0;
             TotalRevenue = 0;
-            using (var connection = GetConnection())
+            TotalProfit = 0;
+
+            string path = "history_Shopping.txt";
+            if (!File.Exists(path))
             {
-                connection.Open();
-                using (var command = new SqlCommand())
+                Console.WriteLine("history_Shopping.txt does not exist for order analysis.");
+                return;
+            }
+
+            var lines = File.ReadAllLines(path);
+            var orders = new List<KeyValuePair<DateTime, decimal>>();
+            var allOrders = new List<KeyValuePair<DateTime, decimal>>();
+            int orderIndex = 0;
+
+            foreach (var line in lines)
+            {
+                if (string.IsNullOrWhiteSpace(line)) continue;
+                try
                 {
-                    command.Connection = connection;
-                    command.CommandText = @"select OrderDate, sum(TotalAmount)
-                                            from[Order]
-                                            where OrderDate between @fromDate and @toDate
-                                            group by OrderDate";
-                    command.Parameters.Add("@fromDate", System.Data.SqlDbType.DateTime).Value = startDate;
-                    command.Parameters.Add("@toDate", System.Data.SqlDbType.DateTime).Value = endDate;
-                    var reader = command.ExecuteReader();
-                    var resultTable = new List<KeyValuePair<DateTime, decimal>>();
-                    while (reader.Read())
+                    var order = JsonSerializer.Deserialize<FormCustomer.History_Shopping>(line);
+                    DateTime orderDate = order.OrderDate != default ? order.OrderDate : DateTime.Now.AddDays(-orderIndex);
+                    orderIndex++;
+                    decimal totalAmount = order.Sum;
+                    allOrders.Add(new KeyValuePair<DateTime, decimal>(orderDate, totalAmount));
+                    if (orderDate >= startDate && orderDate <= endDate)
                     {
-                        resultTable.Add(
-                            new KeyValuePair<DateTime, decimal>((DateTime)reader[0], (decimal)reader[1])
-                            );
-                        TotalRevenue += (decimal)reader[1];
-                    }
-                    TotalProfit = TotalRevenue * 0.2m;//20%
-                    reader.Close();
-                    //Group by Hours
-                    if (numberDays <= 1)
-                    {
-                        GrossRevenueList = (from orderList in resultTable
-                                            group orderList by orderList.Key.ToString("hh tt")
-                                           into order
-                                            select new RevenueByDate
-                                            {
-                                                Date = order.Key,
-                                                TotalAmount = order.Sum(amount => amount.Value)
-                                            }).ToList();
-                    }
-                    //Group by Days
-                    else if (numberDays <= 30)
-                    {
-                        GrossRevenueList = (from orderList in resultTable
-                                            group orderList by orderList.Key.ToString("dd MMM")
-                                           into order
-                                            select new RevenueByDate
-                                            {
-                                                Date = order.Key,
-                                                TotalAmount = order.Sum(amount => amount.Value)
-                                            }).ToList();
-                    }
-                    //Group by Weeks
-                    else if (numberDays <= 92)
-                    {
-                        GrossRevenueList = (from orderList in resultTable
-                                            group orderList by CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(
-                                                orderList.Key, CalendarWeekRule.FirstDay, DayOfWeek.Monday)
-                                           into order
-                                            select new RevenueByDate
-                                            {
-                                                Date = "Week " + order.Key.ToString(),
-                                                TotalAmount = order.Sum(amount => amount.Value)
-                                            }).ToList();
-                    }
-                    //Group by Months
-                    else if (numberDays <= (365 * 2))
-                    {
-                        bool isYear = numberDays <= 365 ? true : false;
-                        GrossRevenueList = (from orderList in resultTable
-                                            group orderList by orderList.Key.ToString("MMM yyyy")
-                                           into order
-                                            select new RevenueByDate
-                                            {
-                                                Date = isYear ? order.Key.Substring(0, order.Key.IndexOf(" ")) : order.Key,
-                                                TotalAmount = order.Sum(amount => amount.Value)
-                                            }).ToList();
-                    }
-                    //Group by Years
-                    else
-                    {
-                        GrossRevenueList = (from orderList in resultTable
-                                            group orderList by orderList.Key.ToString("yyyy")
-                                           into order
-                                            select new RevenueByDate
-                                            {
-                                                Date = order.Key,
-                                                TotalAmount = order.Sum(amount => amount.Value)
-                                            }).ToList();
+                        orders.Add(new KeyValuePair<DateTime, decimal>(orderDate, totalAmount));
+                        TotalRevenue += totalAmount;
                     }
                 }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error deserializing order for order analysis: {ex.Message}");
+                }
             }
-        }
-        //Public methods
-        public bool LoadData(DateTime startDate, DateTime endDate)
-        {
-            endDate = new DateTime(endDate.Year, endDate.Month, endDate.Day,
-                endDate.Hour, endDate.Minute, 59);
-            if (startDate != this.startDate || endDate != this.endDate)
+
+            if (!orders.Any())
             {
-                this.startDate = startDate;
-                this.endDate = endDate;
-                this.numberDays = (endDate - startDate).Days;
-                GetNumberItems();
-                GetProductAnalisys();
-                GetOrderAnalisys();
-                Console.WriteLine("Refreshed data: {0} - {1}", startDate.ToString(), endDate.ToString());
-                return true;
+                Console.WriteLine("No orders in selected time range, falling back to all orders.");
+                orders = allOrders;
+                TotalRevenue = orders.Sum(o => o.Value);
+            }
+
+            TotalProfit = TotalRevenue * 0.2m;
+
+            // Nhóm dữ liệu theo thời gian
+            if (filterType == "Today")
+            {
+                GrossRevenueList = orders
+                    .GroupBy(o => o.Key.ToString("dd/MM/yyyy"))
+                    .Select(g => new RevenueByDate
+                    {
+                        Date = g.Key,
+                        TotalAmount = g.Sum(x => x.Value)
+                    })
+                    .OrderBy(r => r.Date)
+                    .ToList();
+            }
+            else if (filterType == "ThisMonth")
+            {
+                GrossRevenueList = orders
+                    .GroupBy(o => o.Key.ToString("dd/MM/yyyy"))
+                    .Select(g => new RevenueByDate
+                    {
+                        Date = g.Key,
+                        TotalAmount = g.Sum(x => x.Value)
+                    })
+                    .OrderBy(r => r.Date)
+                    .ToList();
             }
             else
             {
-                Console.WriteLine("Data not refreshed, same query: {0} - {1}", startDate.ToString(), endDate.ToString());
-                return false;
+                GrossRevenueList = (from orderList in orders
+                                    group orderList by CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(
+                                        orderList.Key, CalendarWeekRule.FirstDay, DayOfWeek.Monday)
+                                    into order
+                                    select new RevenueByDate
+                                    {
+                                        Date = "Week " + order.Key.ToString(),
+                                        TotalAmount = order.Sum(amount => amount.Value)
+                                    })
+                                    .OrderBy(r => r.Date)
+                                    .ToList();
             }
+
+            if (!GrossRevenueList.Any() && orders.Any())
+            {
+                GrossRevenueList.Add(new RevenueByDate
+                {
+                    Date = "Available Data",
+                    TotalAmount = TotalRevenue
+                });
+            }
+
+            Console.WriteLine($"GrossRevenueList: {GrossRevenueList.Count} items");
+            foreach (var revenue in GrossRevenueList)
+            {
+                Console.WriteLine($"Date: {revenue.Date}, TotalAmount: {revenue.TotalAmount}");
+            }
+        }
+
+        public bool LoadData(DateTime startDate, DateTime endDate, string filterType = "Custom")
+        {
+            endDate = new DateTime(endDate.Year, endDate.Month, endDate.Day, 23, 59, 59);
+            this.startDate = startDate;
+            this.endDate = endDate;
+            this.numberDays = (endDate - startDate).Days + 1;
+
+            GetNumberItems();
+            GetProductAnalysis();
+            GetOrderAnalysis(filterType);
+            Console.WriteLine("Refreshed data: {0} - {1}", startDate.ToString(), endDate.ToString());
+            return true;
         }
     }
 }
