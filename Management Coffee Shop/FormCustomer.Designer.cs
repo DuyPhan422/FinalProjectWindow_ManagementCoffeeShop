@@ -830,6 +830,7 @@ namespace Management_Coffee_Shop
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1171, 747);
             this.tabControl1.TabIndex = 1;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -2077,7 +2078,7 @@ namespace Management_Coffee_Shop
             // uC_product1
             // 
             this.uC_product1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product1.BTNPrice = "đđđđđđđđđđđđđ";
+            this.uC_product1.BTNPrice = "đđđđđđđđđđđđđđ";
             this.uC_product1.Categories = null;
             this.uC_product1.ID = null;
             this.uC_product1.LBLName_Drinks = null;
@@ -2100,7 +2101,7 @@ namespace Management_Coffee_Shop
             // uC_product2
             // 
             this.uC_product2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product2.BTNPrice = "đđđđđđđđđđđđđ";
+            this.uC_product2.BTNPrice = "đđđđđđđđđđđđđđ";
             this.uC_product2.Categories = null;
             this.uC_product2.ID = null;
             this.uC_product2.LBLName_Drinks = null;
@@ -2123,7 +2124,7 @@ namespace Management_Coffee_Shop
             // uC_product3
             // 
             this.uC_product3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product3.BTNPrice = "đđđđđđđđđđđđđ";
+            this.uC_product3.BTNPrice = "đđđđđđđđđđđđđđ";
             this.uC_product3.Categories = null;
             this.uC_product3.ID = null;
             this.uC_product3.LBLName_Drinks = null;
@@ -2146,7 +2147,7 @@ namespace Management_Coffee_Shop
             // uC_product4
             // 
             this.uC_product4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product4.BTNPrice = "đđđđđđđđđđđđđ";
+            this.uC_product4.BTNPrice = "đđđđđđđđđđđđđđ";
             this.uC_product4.Categories = null;
             this.uC_product4.ID = null;
             this.uC_product4.LBLName_Drinks = null;
@@ -2169,7 +2170,7 @@ namespace Management_Coffee_Shop
             // uC_product5
             // 
             this.uC_product5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product5.BTNPrice = "đđđđđđđđđđđđđ";
+            this.uC_product5.BTNPrice = "đđđđđđđđđđđđđđ";
             this.uC_product5.Categories = null;
             this.uC_product5.ID = null;
             this.uC_product5.LBLName_Drinks = null;
@@ -2192,7 +2193,7 @@ namespace Management_Coffee_Shop
             // uC_product6
             // 
             this.uC_product6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product6.BTNPrice = "đđđđđđđđđđđđđ";
+            this.uC_product6.BTNPrice = "đđđđđđđđđđđđđđ";
             this.uC_product6.Categories = null;
             this.uC_product6.ID = null;
             this.uC_product6.LBLName_Drinks = null;
@@ -2215,7 +2216,7 @@ namespace Management_Coffee_Shop
             // uC_product7
             // 
             this.uC_product7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product7.BTNPrice = "đđđđđđđđđđđđđ";
+            this.uC_product7.BTNPrice = "đđđđđđđđđđđđđđ";
             this.uC_product7.Categories = null;
             this.uC_product7.ID = null;
             this.uC_product7.LBLName_Drinks = null;
@@ -2238,7 +2239,7 @@ namespace Management_Coffee_Shop
             // uC_product8
             // 
             this.uC_product8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product8.BTNPrice = "đđđđđđđđđđđđđ";
+            this.uC_product8.BTNPrice = "đđđđđđđđđđđđđđ";
             this.uC_product8.Categories = null;
             this.uC_product8.ID = null;
             this.uC_product8.LBLName_Drinks = null;
@@ -2261,7 +2262,7 @@ namespace Management_Coffee_Shop
             // uC_product9
             // 
             this.uC_product9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product9.BTNPrice = "đđđđđđđđđđđđđ";
+            this.uC_product9.BTNPrice = "đđđđđđđđđđđđđđ";
             this.uC_product9.Categories = null;
             this.uC_product9.ID = null;
             this.uC_product9.LBLName_Drinks = null;
@@ -2284,7 +2285,7 @@ namespace Management_Coffee_Shop
             // uC_product10
             // 
             this.uC_product10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product10.BTNPrice = "đđđđđđđđđđđđđ";
+            this.uC_product10.BTNPrice = "đđđđđđđđđđđđđđ";
             this.uC_product10.Categories = null;
             this.uC_product10.ID = null;
             this.uC_product10.LBLName_Drinks = null;
@@ -2307,7 +2308,7 @@ namespace Management_Coffee_Shop
             // uC_product11
             // 
             this.uC_product11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product11.BTNPrice = "đđđđđđđđđđđđđ";
+            this.uC_product11.BTNPrice = "đđđđđđđđđđđđđđ";
             this.uC_product11.Categories = null;
             this.uC_product11.ID = null;
             this.uC_product11.LBLName_Drinks = null;
@@ -2330,7 +2331,7 @@ namespace Management_Coffee_Shop
             // uC_product12
             // 
             this.uC_product12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product12.BTNPrice = "đđđđđđđđđđđđđ";
+            this.uC_product12.BTNPrice = "đđđđđđđđđđđđđđ";
             this.uC_product12.Categories = null;
             this.uC_product12.ID = null;
             this.uC_product12.LBLName_Drinks = null;
@@ -2353,7 +2354,7 @@ namespace Management_Coffee_Shop
             // uC_product13
             // 
             this.uC_product13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product13.BTNPrice = "đđđđđđđđđđđđđ";
+            this.uC_product13.BTNPrice = "đđđđđđđđđđđđđđ";
             this.uC_product13.Categories = null;
             this.uC_product13.ID = null;
             this.uC_product13.LBLName_Drinks = null;
@@ -2376,7 +2377,7 @@ namespace Management_Coffee_Shop
             // uC_product14
             // 
             this.uC_product14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product14.BTNPrice = "đđđđđđđđđđđđđ";
+            this.uC_product14.BTNPrice = "đđđđđđđđđđđđđđ";
             this.uC_product14.Categories = null;
             this.uC_product14.ID = null;
             this.uC_product14.LBLName_Drinks = null;
@@ -2399,7 +2400,7 @@ namespace Management_Coffee_Shop
             // uC_product15
             // 
             this.uC_product15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product15.BTNPrice = "đđđđđđđđđđđđđ";
+            this.uC_product15.BTNPrice = "đđđđđđđđđđđđđđ";
             this.uC_product15.Categories = null;
             this.uC_product15.ID = null;
             this.uC_product15.LBLName_Drinks = null;
@@ -2422,7 +2423,7 @@ namespace Management_Coffee_Shop
             // uC_product16
             // 
             this.uC_product16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product16.BTNPrice = "đđđđđđđđđđđđđ";
+            this.uC_product16.BTNPrice = "đđđđđđđđđđđđđđ";
             this.uC_product16.Categories = null;
             this.uC_product16.ID = null;
             this.uC_product16.LBLName_Drinks = null;

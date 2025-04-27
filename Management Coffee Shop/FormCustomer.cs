@@ -10,8 +10,11 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using static Management_Coffee_Shop.FormCustomer.History_Shopping;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 using static TheArtOfDevHtmlRenderer.Adapters.RGraphicsPath;
@@ -20,9 +23,21 @@ namespace Management_Coffee_Shop
 {
     public partial class FormCustomer : Form
     {
+        public class History_Shopping
+        {
+            public string OrderId { get; set; }
+            public string UserId { get; set; }
+            public Dictionary<string, ShoppingItem> list_shopping { get; set; }
+            public int Sum { get; set; }
+            public class ShoppingItem
+            {
+                public byte Quantity { get; set; }
+                public int Price { get; set; }
+            }
+        }
         const int SB_HORZ = 0;
         const int SB_VERT = 1;
-        private bool check;
+        private bool check,flag_order;
         private static Dictionary<string, (int, int, Boolean)> list_products = new Dictionary<string, (int, int, Boolean)>();
         private int minute, hour, currentPage = 1, count = 0;
         private byte indexPage = 1, lengthPage = 2,homePage=1;
@@ -256,7 +271,7 @@ namespace Management_Coffee_Shop
                 {
                     if (list_products[p.ID].Item3 == true)
                     {
-                        Transport transport = new Transport(p.ID,this.ID);
+                        Transport transport = new Transport(p.ID);
                         transport.Name = p.Name;
                         transport.LBLNote = p.TXTNote;
                         transport.LBLPrice = string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", list_products[p.ID].Item2);
@@ -330,6 +345,7 @@ namespace Management_Coffee_Shop
         private void btnConfirm_Order_Click(object sender, EventArgs e)
         {
             btnConfirm_Order.Hide();
+            flag_order = true;
             lblStatus.Text = "Status: Success";
             lblStatus.Show();
             List<Transport> transports = flpShoppingCart.Controls.OfType<Transport>().ToList();
@@ -627,6 +643,35 @@ namespace Management_Coffee_Shop
             load_Account();
             pnlAccount.Show();
 
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (flag_order && tabControl1.SelectedTab != tabPage6)
+            {
+                Dictionary<string, ShoppingItem> list_shopping = new Dictionary<string, ShoppingItem>();
+                foreach (Transport transport in flpShoppingCart.Controls)
+                {
+
+                    int number = int.Parse(Regex.Replace(transport.LBLAmount, @"\D", ""));
+                    list_shopping[transport.ID] = new ShoppingItem
+                    {
+                        Quantity= Convert.ToByte(transport.LBLQTV),
+                        Price = number
+                    };
+                }
+                string path = "history_Shopping.txt";
+                History_Shopping history_Shopping = new History_Shopping()
+                {
+                    OrderId=lblOrderCode.Text,
+                    UserId=this.ID,
+                    list_shopping=list_shopping,
+                    Sum = int.Parse(Regex.Replace(lblSum_Transport.Text, @"\D", ""))
+                };
+                MessageBox.Show("Cảm ơn bạn đã mua hàng");
+                string jsonLine = System.Text.Json.JsonSerializer.Serialize(history_Shopping);
+                File.AppendAllText(path, jsonLine + Environment.NewLine);
+            }
         }
 
         private void change_color_button_homePage()

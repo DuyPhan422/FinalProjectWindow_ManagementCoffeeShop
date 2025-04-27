@@ -15,12 +15,11 @@ namespace Management_Coffee_Shop.User_Controls
     {
         private static int current_ID = 1;
         private string Id,UserId,_image;
-        public Transport(string Id,string UserId)
+        public Transport(string Id)
         {
             InitializeComponent();
             btnRate.Hide();
             this.Id = Id;
-            this.UserId = UserId;
         }
         private void btnRate_Click(object sender, EventArgs e)
         {
@@ -31,11 +30,9 @@ namespace Management_Coffee_Shop.User_Controls
         {
             btnRate.Show();
         }
-        public string Create_ID()
+        public string ID
         {
-            string new_id = current_ID.ToString().PadLeft(7,'0');
-            current_ID++;
-            return new_id;
+            get { return this.Id; }
         }
         public string PTBImage
         {
