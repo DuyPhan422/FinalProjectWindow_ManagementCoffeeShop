@@ -606,6 +606,7 @@ namespace Management_Coffee_Shop
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
+            Login.delete_Token(ID);
             FormLogin.change_tabPage();
             FormLogin.Show();
             this.Close();
@@ -650,9 +651,11 @@ namespace Management_Coffee_Shop
         {
             if (flag_order && tabControl1.SelectedTab != tabPage6)
             {
+                flag_order=false;
                 try
                 {
                     Dictionary<string, ShoppingItem> list_shopping = new Dictionary<string, ShoppingItem>();
+                    List<(string, int)> number_shopping = new List<(string, int)>();
                     foreach (Transport transport in flpShoppingCart.Controls)
                     {
                         int number = int.Parse(Regex.Replace(transport.LBLAmount, @"\D", ""));
@@ -661,8 +664,9 @@ namespace Management_Coffee_Shop
                             Quantity = Convert.ToByte(transport.LBLQTV),
                             Price = number
                         };
+                        number_shopping.Add((transport.ID, Convert.ToInt16(transport.LBLQTV)));
                     }
-
+                    Drinks.update_Drinks(number_shopping);
                     string path = "history_Shopping.txt";
                     History_Shopping history_Shopping = new History_Shopping()
                     {
@@ -676,7 +680,7 @@ namespace Management_Coffee_Shop
                     MessageBox.Show("Cảm ơn bạn đã mua hàng");
                     string jsonLine = System.Text.Json.JsonSerializer.Serialize(history_Shopping);
                     File.AppendAllText(path, jsonLine + Environment.NewLine);
-                    Console.WriteLine($"Saved to history_Shopping.txt: {jsonLine}"); // Thêm log để kiểm tra
+                    
                 }
                 catch (Exception ex)
                 {

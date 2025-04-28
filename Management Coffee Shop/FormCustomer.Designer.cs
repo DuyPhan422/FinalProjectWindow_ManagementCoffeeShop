@@ -304,6 +304,7 @@ namespace Management_Coffee_Shop
             this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnChangePassword = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAddAccount = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.pnlAddShoppingCart.SuspendLayout();
@@ -2078,7 +2079,7 @@ namespace Management_Coffee_Shop
             // uC_product1
             // 
             this.uC_product1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product1.BTNPrice = "đđđđđđđđđđđđđđ";
+            this.uC_product1.BTNPrice = "đđđđđđđđđđđđđđđ";
             this.uC_product1.Categories = null;
             this.uC_product1.ID = null;
             this.uC_product1.LBLName_Drinks = null;
@@ -2101,7 +2102,7 @@ namespace Management_Coffee_Shop
             // uC_product2
             // 
             this.uC_product2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product2.BTNPrice = "đđđđđđđđđđđđđđ";
+            this.uC_product2.BTNPrice = "đđđđđđđđđđđđđđđ";
             this.uC_product2.Categories = null;
             this.uC_product2.ID = null;
             this.uC_product2.LBLName_Drinks = null;
@@ -2124,7 +2125,7 @@ namespace Management_Coffee_Shop
             // uC_product3
             // 
             this.uC_product3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product3.BTNPrice = "đđđđđđđđđđđđđđ";
+            this.uC_product3.BTNPrice = "đđđđđđđđđđđđđđđ";
             this.uC_product3.Categories = null;
             this.uC_product3.ID = null;
             this.uC_product3.LBLName_Drinks = null;
@@ -2147,7 +2148,7 @@ namespace Management_Coffee_Shop
             // uC_product4
             // 
             this.uC_product4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product4.BTNPrice = "đđđđđđđđđđđđđđ";
+            this.uC_product4.BTNPrice = "đđđđđđđđđđđđđđđ";
             this.uC_product4.Categories = null;
             this.uC_product4.ID = null;
             this.uC_product4.LBLName_Drinks = null;
@@ -2170,7 +2171,7 @@ namespace Management_Coffee_Shop
             // uC_product5
             // 
             this.uC_product5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product5.BTNPrice = "đđđđđđđđđđđđđđ";
+            this.uC_product5.BTNPrice = "đđđđđđđđđđđđđđđ";
             this.uC_product5.Categories = null;
             this.uC_product5.ID = null;
             this.uC_product5.LBLName_Drinks = null;
@@ -2193,7 +2194,7 @@ namespace Management_Coffee_Shop
             // uC_product6
             // 
             this.uC_product6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product6.BTNPrice = "đđđđđđđđđđđđđđ";
+            this.uC_product6.BTNPrice = "đđđđđđđđđđđđđđđ";
             this.uC_product6.Categories = null;
             this.uC_product6.ID = null;
             this.uC_product6.LBLName_Drinks = null;
@@ -2216,7 +2217,7 @@ namespace Management_Coffee_Shop
             // uC_product7
             // 
             this.uC_product7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product7.BTNPrice = "đđđđđđđđđđđđđđ";
+            this.uC_product7.BTNPrice = "đđđđđđđđđđđđđđđ";
             this.uC_product7.Categories = null;
             this.uC_product7.ID = null;
             this.uC_product7.LBLName_Drinks = null;
@@ -2239,7 +2240,7 @@ namespace Management_Coffee_Shop
             // uC_product8
             // 
             this.uC_product8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product8.BTNPrice = "đđđđđđđđđđđđđđ";
+            this.uC_product8.BTNPrice = "đđđđđđđđđđđđđđđ";
             this.uC_product8.Categories = null;
             this.uC_product8.ID = null;
             this.uC_product8.LBLName_Drinks = null;
@@ -2262,7 +2263,7 @@ namespace Management_Coffee_Shop
             // uC_product9
             // 
             this.uC_product9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product9.BTNPrice = "đđđđđđđđđđđđđđ";
+            this.uC_product9.BTNPrice = "đđđđđđđđđđđđđđđ";
             this.uC_product9.Categories = null;
             this.uC_product9.ID = null;
             this.uC_product9.LBLName_Drinks = null;
@@ -2285,7 +2286,7 @@ namespace Management_Coffee_Shop
             // uC_product10
             // 
             this.uC_product10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product10.BTNPrice = "đđđđđđđđđđđđđđ";
+            this.uC_product10.BTNPrice = "đđđđđđđđđđđđđđđ";
             this.uC_product10.Categories = null;
             this.uC_product10.ID = null;
             this.uC_product10.LBLName_Drinks = null;
@@ -2308,7 +2309,7 @@ namespace Management_Coffee_Shop
             // uC_product11
             // 
             this.uC_product11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product11.BTNPrice = "đđđđđđđđđđđđđđ";
+            this.uC_product11.BTNPrice = "đđđđđđđđđđđđđđđ";
             this.uC_product11.Categories = null;
             this.uC_product11.ID = null;
             this.uC_product11.LBLName_Drinks = null;
@@ -2331,7 +2332,7 @@ namespace Management_Coffee_Shop
             // uC_product12
             // 
             this.uC_product12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product12.BTNPrice = "đđđđđđđđđđđđđđ";
+            this.uC_product12.BTNPrice = "đđđđđđđđđđđđđđđ";
             this.uC_product12.Categories = null;
             this.uC_product12.ID = null;
             this.uC_product12.LBLName_Drinks = null;
@@ -2354,7 +2355,7 @@ namespace Management_Coffee_Shop
             // uC_product13
             // 
             this.uC_product13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product13.BTNPrice = "đđđđđđđđđđđđđđ";
+            this.uC_product13.BTNPrice = "đđđđđđđđđđđđđđđ";
             this.uC_product13.Categories = null;
             this.uC_product13.ID = null;
             this.uC_product13.LBLName_Drinks = null;
@@ -2377,7 +2378,7 @@ namespace Management_Coffee_Shop
             // uC_product14
             // 
             this.uC_product14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product14.BTNPrice = "đđđđđđđđđđđđđđ";
+            this.uC_product14.BTNPrice = "đđđđđđđđđđđđđđđ";
             this.uC_product14.Categories = null;
             this.uC_product14.ID = null;
             this.uC_product14.LBLName_Drinks = null;
@@ -2400,7 +2401,7 @@ namespace Management_Coffee_Shop
             // uC_product15
             // 
             this.uC_product15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product15.BTNPrice = "đđđđđđđđđđđđđđ";
+            this.uC_product15.BTNPrice = "đđđđđđđđđđđđđđđ";
             this.uC_product15.Categories = null;
             this.uC_product15.ID = null;
             this.uC_product15.LBLName_Drinks = null;
@@ -2423,7 +2424,7 @@ namespace Management_Coffee_Shop
             // uC_product16
             // 
             this.uC_product16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product16.BTNPrice = "đđđđđđđđđđđđđđ";
+            this.uC_product16.BTNPrice = "đđđđđđđđđđđđđđđ";
             this.uC_product16.Categories = null;
             this.uC_product16.ID = null;
             this.uC_product16.LBLName_Drinks = null;
@@ -3285,12 +3286,13 @@ namespace Management_Coffee_Shop
             this.pnlAccount.BorderRadius = 15;
             this.pnlAccount.BorderThickness = 2;
             this.pnlAccount.Controls.Add(this.guna2Panel50);
+            this.pnlAccount.Controls.Add(this.btnAddAccount);
             this.pnlAccount.Controls.Add(this.btnLogOut);
             this.pnlAccount.Controls.Add(this.btnChangePassword);
             this.pnlAccount.Controls.Add(this.guna2Button3);
             this.pnlAccount.Location = new System.Drawing.Point(1023, 35);
             this.pnlAccount.Name = "pnlAccount";
-            this.pnlAccount.Size = new System.Drawing.Size(209, 250);
+            this.pnlAccount.Size = new System.Drawing.Size(209, 286);
             this.pnlAccount.TabIndex = 6;
             // 
             // guna2Panel50
@@ -3333,7 +3335,7 @@ namespace Management_Coffee_Shop
             this.btnLogOut.FillColor = System.Drawing.Color.Transparent;
             this.btnLogOut.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.ForeColor = System.Drawing.Color.Black;
-            this.btnLogOut.Location = new System.Drawing.Point(3, 208);
+            this.btnLogOut.Location = new System.Drawing.Point(3, 245);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(203, 34);
             this.btnLogOut.TabIndex = 0;
@@ -3369,6 +3371,22 @@ namespace Management_Coffee_Shop
             this.guna2Button3.Size = new System.Drawing.Size(146, 27);
             this.guna2Button3.TabIndex = 0;
             this.guna2Button3.Text = "guna2Button3";
+            // 
+            // btnAddAccount
+            // 
+            this.btnAddAccount.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddAccount.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddAccount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddAccount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddAccount.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddAccount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddAccount.ForeColor = System.Drawing.Color.Black;
+            this.btnAddAccount.Location = new System.Drawing.Point(3, 209);
+            this.btnAddAccount.Name = "btnAddAccount";
+            this.btnAddAccount.Size = new System.Drawing.Size(203, 34);
+            this.btnAddAccount.TabIndex = 0;
+            this.btnAddAccount.Text = "Add Account";
+            this.btnAddAccount.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // FormCustomer
             // 
@@ -3718,5 +3736,6 @@ namespace Management_Coffee_Shop
         private Guna.UI2.WinForms.Guna2Panel guna2Panel50;
         private Label label26;
         private FlowLayoutPanel flpAnotherAccount;
+        private Guna.UI2.WinForms.Guna2Button btnAddAccount;
     }
 }

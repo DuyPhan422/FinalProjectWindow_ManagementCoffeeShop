@@ -1,14 +1,9 @@
 {
   "DESKTOP-7S1UU42": [
     {
-      "UserId": "C888280",
-      "Token": "sBUotDaRrAEKqj0RRlFSLk3yTiWyIEcwsCWuqAcFsB4Vri2gYsHJMh2tMgYrxJozeTFtpFkVeRM7r0",
-      "LastLogin": "26/04/2025 22:58:28"
-    },
-    {
       "UserId": "C000001",
-      "Token": "swQ7xY0pR6gLwfR0ddxoeB2iEnQ7oN0hGT2nM3VF9ZOpXDmXDEYooj95YI0uN9WIlvTymVBrTzkAA",
-      "LastLogin": "25/04/2025 12:18:52"
+      "Token": "s4KVhr3NYoz7Jcls4FNnx4Qygv6HShs3MTmx8NvjrBOdcvwdhAmK7gj1FOdCmV8wlBxWRC4CU3h8G",
+      "LastLogin": "28/04/2025 17:04:37"
     }
   ],
   "DESKTOP-331CJKC": [

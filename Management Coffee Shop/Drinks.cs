@@ -47,6 +47,23 @@ namespace Management_Coffee_Shop
             }
             return count;
         }
+        public static void update_Drinks(List<(string, int)> number_shopping)
+        {
+            using (SqlConnection connection = Connection.GetSqlConnection())
+            {
+                string query = $"UPDATE sourceDrinks SET Sales=@Sales WHERE ID=@ID";
+                connection.Open();
+                foreach ((string id, int number) in number_shopping)
+                {
+                    using (SqlCommand commnad = new SqlCommand(query, connection))
+                    {
+                        commnad.Parameters.AddWithValue("@ID", id);
+                        commnad.Parameters.AddWithValue("@Sales",number);
+                        commnad.ExecuteNonQuery();
+                    }
+                }
+            }
+        }
         public static void set_Rate(string id,byte Rank,int Sales)
         {
             using (SqlConnection connection = Connection.GetSqlConnection())

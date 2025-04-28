@@ -15,6 +15,8 @@ using System.Collections.Generic;
 using System.Text.Json;
 using System.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
+using Guna.UI2.AnimatorNS;
+using static System.Windows.Forms.LinkLabel;
 
 
 
@@ -29,7 +31,46 @@ namespace Management_Coffee_Shop
             public string Token { get; set; }
             public string LastLogin { get; set; }
         }
+        private static void delete_UserToken()
+        {
 
+        }
+        public static void delete_Token(string user_Id) 
+        {
+            var machineName=Environment.MachineName;
+            string path = "system_Token.txt";
+            string json = File.ReadAllText(path);
+            (string[] lines, bool success) = take_UserToken();
+            if (!success) return;
+            Dictionary<string, List<TokenInfo>> token_Infor = System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, List<TokenInfo>>>(json);
+            if (token_Infor != null && token_Infor.ContainsKey(machineName))
+            {
+                List<string> newLines = new List<string>(lines);
+                foreach (var token in token_Infor[machineName])
+                {
+                    if (token.UserId == user_Id)
+                    {
+                        for (int i = newLines.Count - 1; i >= 0; i--)
+                        {
+                            if (newLines[i] == token.Token)
+                            {
+                                newLines.RemoveAt(i);
+                            }
+                        }
+                    }
+                }
+                token_Infor[machineName].RemoveAll(token => token.UserId == user_Id);
+                if (token_Infor[machineName].Count == 0)
+                {
+                    token_Infor.Remove(machineName);
+                }
+                string updatedJson = System.Text.Json.JsonSerializer.Serialize(token_Infor, new JsonSerializerOptions { WriteIndented = true });
+                File.WriteAllText(path, updatedJson);
+                string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+                string tokenFilePath = Path.Combine(appDataPath, "Token_Management_Coffee_Shop", "user_Token.txt");
+                File.WriteAllLines(tokenFilePath, newLines);
+            }
+        }
         private static (string[] line,bool success) take_UserToken()
         {
             string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
