@@ -14,7 +14,7 @@ namespace Management_Coffee_Shop
     {
         public event EventHandler btnRemove_clicked,btnChoose_clicked;
         public event EventHandler<int> btnUp_clicked, btnDown_clicked;
-        private string id, image_choose = @"images\check.png", image_PTB_image;
+        private string id, image_choose = @"..\..\Management coffee shop_image\check.png", image_PTB_image;
         public int value;
         public Payment()
         {

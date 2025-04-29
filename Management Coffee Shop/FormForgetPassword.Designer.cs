@@ -911,7 +911,6 @@
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderRadius = 25;
-            this.guna2Panel1.Controls.Add(this.guna2Panel5);
             this.guna2Panel1.Controls.Add(this.TabControl);
             this.guna2Panel1.FillColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Panel1.Location = new System.Drawing.Point(148, 62);
@@ -930,7 +929,7 @@
             this.guna2Panel5.Controls.Add(this.guna2PictureBox2);
             this.guna2Panel5.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(230)))), ((int)(((byte)(218)))));
-            this.guna2Panel5.Location = new System.Drawing.Point(0, 1);
+            this.guna2Panel5.Location = new System.Drawing.Point(148, 63);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(300, 355);
             this.guna2Panel5.TabIndex = 1;
@@ -998,6 +997,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(983, 494);
+            this.Controls.Add(this.guna2Panel5);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormForgetPassword";

@@ -673,7 +673,7 @@ namespace Management_Coffee_Shop
                         number_shopping.Add((transport.ID, Convert.ToInt16(transport.LBLQTV)));
                     }
                     Drinks.update_Drinks(number_shopping);
-                    string path = "history_Shopping.txt";
+                    string path = @"..\..\history_Shopping.txt";
                     History_Shopping history_Shopping = new History_Shopping()
                     {
                         OrderId = lblOrderCode.Text,

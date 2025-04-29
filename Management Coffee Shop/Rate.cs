@@ -34,21 +34,21 @@ namespace Management_Coffee_Shop
         }
         private void MouseEnter()
         {
-            if (indexStar >4 ) btnFiveStar.Image = Image.FromFile(@"images\full_star.png");
-            if (indexStar>3) btnFourStar.Image = Image.FromFile(@"images\full_star.png");
-            if (indexStar>2) btnThreeStar.Image = Image.FromFile(@"images\full_star.png");
-            if (indexStar>1) btnTwoStar.Image = Image.FromFile(@"images\full_star.png");
-            if (indexStar>0) btnOneStar.Image = Image.FromFile(@"images\full_star.png");
+            if (indexStar >4 ) btnFiveStar.Image = Image.FromFile(@"..\..\Management coffee shop_image\full_star.png");
+            if (indexStar>3) btnFourStar.Image = Image.FromFile(@"..\..\Management coffee shop_image\full_star.png");
+            if (indexStar>2) btnThreeStar.Image = Image.FromFile(@"..\..\Management coffee shop_image\full_star.png");
+            if (indexStar>1) btnTwoStar.Image = Image.FromFile(@"..\..\Management coffee shop_image\full_star.png");
+            if (indexStar>0) btnOneStar.Image = Image.FromFile(@"..\..\Management coffee shop_image\full_star.png");
         }
         private void MouseLeave(object sender, EventArgs e)
         {
             if (flag)
             {
-                btnFiveStar.Image = Image.FromFile(@"images\outline_star.png");
-                btnFourStar.Image = Image.FromFile(@"images\outline_star.png");
-                btnThreeStar.Image = Image.FromFile(@"images\outline_star.png");
-                btnTwoStar.Image = Image.FromFile(@"images\outline_star.png");
-                btnOneStar.Image = Image.FromFile(@"images\outline_star.png");
+                btnFiveStar.Image = Image.FromFile(@"..\..\Management coffee shop_image\outline_star.png");
+                btnFourStar.Image = Image.FromFile(@"..\..\Management coffee shop_image\outline_star.png");
+                btnThreeStar.Image = Image.FromFile(@"..\..\Management coffee shop_image\outline_star.png");
+                btnTwoStar.Image = Image.FromFile(@"..\..\Management coffee shop_image\outline_star.png");
+                btnOneStar.Image = Image.FromFile(@"..\..\Management coffee shop_image\outline_star.png");
             }
         }
         private void btnFiveStar_MouseEnter(object sender, EventArgs e)
@@ -108,7 +108,7 @@ namespace Management_Coffee_Shop
 
         private void btnSender_Click(object sender, EventArgs e)
         {
-            string path = "history_Rate.txt";
+            string path = @"..\..\history_Rate.txt";
             History newRating = new History
             {
                 ProductId=this.ProductId,

@@ -1,0 +1,1 @@
+{"OrderId":"Order #0000001","UserId":"C000001","list_shopping":{"0000002":{"Quantity":1,"Price":25000}},"Sum":35000,"OrderDate":"2025-04-29T19:45:17.2935471+07:00"}

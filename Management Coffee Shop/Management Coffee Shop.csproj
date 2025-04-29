@@ -237,7 +237,7 @@
     </Compile>
     <Compile Include="User_Controls\ucProduct_dark.Designer.cs">
       <DependentUpon>ucProduct_dark.cs</DependentUpon>
-	</Compile>
+    </Compile>
     <Compile Include="User_Controls\ucHistory_Shopping.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -304,12 +304,6 @@
     <Compile Include="User_Controls\Product.Designer.cs">
       <DependentUpon>Product.cs</DependentUpon>
     </Compile>
-    <Compile Include="User_Controls\UC_product.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="User_Controls\UC_product.Designer.cs">
-      <DependentUpon>UC_product.cs</DependentUpon>
-    </Compile>
     <Compile Include="User_Controls\UC_Static.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -356,7 +350,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User_Controls\ucProduct_dark.resx">
       <DependentUpon>ucProduct_dark.cs</DependentUpon>
-	</EmbeddedResource>
+    </EmbeddedResource>
     <EmbeddedResource Include="User_Controls\ucHistory_Shopping.resx">
       <DependentUpon>ucHistory_Shopping.cs</DependentUpon>
     </EmbeddedResource>
@@ -389,9 +383,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User_Controls\Product.resx">
       <DependentUpon>Product.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="User_Controls\UC_product.resx">
-      <DependentUpon>UC_product.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User_Controls\UC_Static.resx">
       <DependentUpon>UC_Static.cs</DependentUpon>
