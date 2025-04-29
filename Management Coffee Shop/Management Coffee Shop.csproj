@@ -232,6 +232,18 @@
     <Compile Include="User_Controls\Transport.Designer.cs">
       <DependentUpon>Transport.cs</DependentUpon>
     </Compile>
+    <Compile Include="User_Controls\ucHistory_Shopping.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Controls\ucHistory_Shopping.Designer.cs">
+      <DependentUpon>ucHistory_Shopping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Controls\ucProduct_Shopping.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Controls\ucProduct_Shopping.Designer.cs">
+      <DependentUpon>ucProduct_Shopping.cs</DependentUpon>
+    </Compile>
     <Compile Include="User_Controls\ucStaff_dark.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -335,6 +347,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User_Controls\Transport.resx">
       <DependentUpon>Transport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Controls\ucHistory_Shopping.resx">
+      <DependentUpon>ucHistory_Shopping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Controls\ucProduct_Shopping.resx">
+      <DependentUpon>ucProduct_Shopping.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User_Controls\ucStaff_dark.resx">
       <DependentUpon>ucStaff_dark.cs</DependentUpon>

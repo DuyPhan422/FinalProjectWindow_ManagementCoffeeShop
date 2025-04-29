@@ -559,3 +559,4 @@ C:\Users\HP\FinalProjectWindow_ManagementCoffeeShop\Management Coffee Shop\obj\D
 C:\Users\HP\FinalProjectWindow_ManagementCoffeeShop\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.ucStaff_dark.resources
 C:\Users\QUANG LE\Downloads\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.ucProduct_dark.resources
 C:\Users\QUANG LE\Downloads\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.ucStaff_dark.resources
+C:\Users\QUANG LE\Downloads\Management Coffee Shop\obj\Debug\Management_Coffee_Shop.User_Controls.ucHistory.resources

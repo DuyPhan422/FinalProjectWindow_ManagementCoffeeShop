@@ -97,7 +97,7 @@
             this.TLP_top.RowCount = 2;
             this.TLP_top.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.TLP_top.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.TLP_top.Size = new System.Drawing.Size(1942, 50);
+            this.TLP_top.Size = new System.Drawing.Size(1940, 50);
             this.TLP_top.TabIndex = 0;
             // 
             // btnMinimize
@@ -106,7 +106,7 @@
             this.btnMinimize.FlatAppearance.BorderSize = 0;
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Image = global::Management_Coffee_Shop.Properties.Resources.minus_outline_54918;
-            this.btnMinimize.Location = new System.Drawing.Point(1794, 3);
+            this.btnMinimize.Location = new System.Drawing.Point(1793, 3);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(44, 29);
             this.btnMinimize.TabIndex = 2;
@@ -117,7 +117,7 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = global::Management_Coffee_Shop.Properties.Resources.search_4398568__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(1724, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(1723, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.TLP_top.SetRowSpan(this.pictureBox1, 2);
             this.pictureBox1.Size = new System.Drawing.Size(64, 44);
@@ -180,7 +180,7 @@
             this.btnMaximize.FlatAppearance.BorderSize = 0;
             this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaximize.Image = global::Management_Coffee_Shop.Properties.Resources.two_rounded_equal_squares_outlines_symbol_54725;
-            this.btnMaximize.Location = new System.Drawing.Point(1844, 3);
+            this.btnMaximize.Location = new System.Drawing.Point(1843, 3);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(44, 29);
             this.btnMaximize.TabIndex = 2;
@@ -193,9 +193,9 @@
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Image = global::Management_Coffee_Shop.Properties.Resources.close;
-            this.btnExit.Location = new System.Drawing.Point(1894, 3);
+            this.btnExit.Location = new System.Drawing.Point(1893, 3);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(45, 29);
+            this.btnExit.Size = new System.Drawing.Size(44, 29);
             this.btnExit.TabIndex = 2;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -222,7 +222,7 @@
             this.pnlPage.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.pnlPage.Location = new System.Drawing.Point(0, 0);
             this.pnlPage.Name = "pnlPage";
-            this.pnlPage.Size = new System.Drawing.Size(1789, 1032);
+            this.pnlPage.Size = new System.Drawing.Size(1787, 1030);
             this.pnlPage.TabIndex = 2;
             // 
             // elipseBtnProduct
@@ -341,7 +341,7 @@
             this.TLB_menu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.TLB_menu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.TLB_menu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.TLB_menu.Size = new System.Drawing.Size(133, 1052);
+            this.TLB_menu.Size = new System.Drawing.Size(133, 1050);
             this.TLB_menu.TabIndex = 1;
             // 
             // pnlFill
@@ -354,14 +354,14 @@
             this.pnlFill.Margin = new System.Windows.Forms.Padding(0);
             this.pnlFill.Name = "pnlFill";
             this.pnlFill.Padding = new System.Windows.Forms.Padding(0, 0, 20, 20);
-            this.pnlFill.Size = new System.Drawing.Size(1809, 1052);
+            this.pnlFill.Size = new System.Drawing.Size(1807, 1050);
             this.pnlFill.TabIndex = 3;
             // 
             // formManager
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(153)))), ((int)(((byte)(248)))));
-            this.ClientSize = new System.Drawing.Size(1942, 1102);
+            this.ClientSize = new System.Drawing.Size(1940, 1100);
             this.Controls.Add(this.pnlFill);
             this.Controls.Add(this.TLB_menu);
             this.Controls.Add(this.TLP_top);

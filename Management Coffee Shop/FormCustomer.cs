@@ -611,6 +611,12 @@ namespace Management_Coffee_Shop
             FormLogin.Show();
             this.Close();
         }
+        private void btnAddAccount_Click(object sender, EventArgs e)
+        {
+            FormLogin.change_tabPage();
+            FormLogin.Show();
+            this.Close();
+        }
 
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
@@ -680,7 +686,6 @@ namespace Management_Coffee_Shop
                     MessageBox.Show("Cảm ơn bạn đã mua hàng");
                     string jsonLine = System.Text.Json.JsonSerializer.Serialize(history_Shopping);
                     File.AppendAllText(path, jsonLine + Environment.NewLine);
-                    
                 }
                 catch (Exception ex)
                 {
