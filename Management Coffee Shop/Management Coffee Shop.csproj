@@ -206,12 +206,6 @@
     </Compile>
     <Compile Include="StaffDb.cs" />
     <Compile Include="ucIncomeLogic.cs" />
-    <Compile Include="ucProduct_dark.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ucProduct_dark.Designer.cs">
-      <DependentUpon>ucProduct_dark.cs</DependentUpon>
-    </Compile>
     <Compile Include="User_Controls\Payment.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -231,6 +225,18 @@
     </Compile>
     <Compile Include="User_Controls\Transport.Designer.cs">
       <DependentUpon>Transport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Controls\ucIncome_dark.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Controls\ucIncome_dark.Designer.cs">
+      <DependentUpon>ucIncome_dark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Controls\ucProduct_dark.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Controls\ucProduct_dark.Designer.cs">
+      <DependentUpon>ucProduct_dark.cs</DependentUpon>
     </Compile>
     <Compile Include="User_Controls\ucStaff_dark.cs">
       <SubType>UserControl</SubType>
@@ -322,9 +328,6 @@
     <EmbeddedResource Include="Rate.resx">
       <DependentUpon>Rate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucProduct_dark.resx">
-      <DependentUpon>ucProduct_dark.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="User_Controls\Payment.resx">
       <DependentUpon>Payment.cs</DependentUpon>
     </EmbeddedResource>
@@ -335,6 +338,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User_Controls\Transport.resx">
       <DependentUpon>Transport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Controls\ucIncome_dark.resx">
+      <DependentUpon>ucIncome_dark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Controls\ucProduct_dark.resx">
+      <DependentUpon>ucProduct_dark.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User_Controls\ucStaff_dark.resx">
       <DependentUpon>ucStaff_dark.cs</DependentUpon>

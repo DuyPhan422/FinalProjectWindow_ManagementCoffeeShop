@@ -11,11 +11,11 @@ using Guna.UI2.WinForms;
 
 namespace Management_Coffee_Shop
 {
-    public partial class ucIncome : UserControl
+    public partial class ucIncome_dark : UserControl
     {
         private ucIncomeLogic model;
         private Guna2Button currentButton;
-        public ucIncome()
+        public ucIncome_dark()
         {
             InitializeComponent();
             dtpStartDate.Value = DateTime.Today.AddDays(-7);
@@ -96,8 +96,8 @@ namespace Management_Coffee_Shop
 
             if (currentButton != null && currentButton != btn)
             {
-                currentButton.FillColor = Color.FromArgb(141, 161, 246);
-                currentButton.ForeColor = Color.Black;
+                currentButton.FillColor = Color.FromArgb(42, 45, 86);
+                currentButton.ForeColor = Color.FromArgb(169, 169, 169);
             }
             dtpStartDate.Enabled = false;
             dtpEndDate.Enabled = false;

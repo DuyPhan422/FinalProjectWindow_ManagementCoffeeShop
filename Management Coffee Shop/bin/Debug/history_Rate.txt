@@ -1,5 +1,0 @@
-{"ProductId":"0000002","UserId":"C888280","Comment":"ngon nha","Rank":5,"Time":"24/04/2025 13:54:47"}
-{"ProductId":"0000002","UserId":"C888280","Comment":"ngon","Rank":5,"Time":"24/04/2025 13:58:11"}
-{"ProductId":"0000002","UserId":"C888280","Comment":"ngon v\u00E3i c\u1EE9c","Rank":5,"Time":"24/04/2025 14:02:16"}
-{"ProductId":"0000001","UserId":"C888280","Comment":"ngon","Rank":4,"Time":"24/04/2025 15:08:02"}
-{"ProductId":"0000001","UserId":"C888280","Comment":"ngon","Rank":1,"Time":"24/04/2025 20:14:45"}

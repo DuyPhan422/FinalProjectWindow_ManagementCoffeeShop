@@ -97,7 +97,7 @@
             this.TLP_top.RowCount = 2;
             this.TLP_top.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.TLP_top.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.TLP_top.Size = new System.Drawing.Size(1942, 50);
+            this.TLP_top.Size = new System.Drawing.Size(1942, 65);
             this.TLP_top.TabIndex = 0;
             // 
             // btnMinimize
@@ -108,7 +108,7 @@
             this.btnMinimize.Image = global::Management_Coffee_Shop.Properties.Resources.minus_outline_54918;
             this.btnMinimize.Location = new System.Drawing.Point(1794, 3);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(44, 29);
+            this.btnMinimize.Size = new System.Drawing.Size(44, 39);
             this.btnMinimize.TabIndex = 2;
             this.btnMinimize.UseVisualStyleBackColor = true;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
@@ -182,7 +182,7 @@
             this.btnMaximize.Image = global::Management_Coffee_Shop.Properties.Resources.two_rounded_equal_squares_outlines_symbol_54725;
             this.btnMaximize.Location = new System.Drawing.Point(1844, 3);
             this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Size = new System.Drawing.Size(44, 29);
+            this.btnMaximize.Size = new System.Drawing.Size(44, 39);
             this.btnMaximize.TabIndex = 2;
             this.btnMaximize.UseVisualStyleBackColor = true;
             this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
@@ -195,7 +195,7 @@
             this.btnExit.Image = global::Management_Coffee_Shop.Properties.Resources.close;
             this.btnExit.Location = new System.Drawing.Point(1894, 3);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(45, 29);
+            this.btnExit.Size = new System.Drawing.Size(45, 39);
             this.btnExit.TabIndex = 2;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -222,7 +222,7 @@
             this.pnlPage.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.pnlPage.Location = new System.Drawing.Point(0, 0);
             this.pnlPage.Name = "pnlPage";
-            this.pnlPage.Size = new System.Drawing.Size(1789, 1032);
+            this.pnlPage.Size = new System.Drawing.Size(1789, 1017);
             this.pnlPage.TabIndex = 2;
             // 
             // elipseBtnProduct
@@ -242,7 +242,7 @@
             this.btnProduct.Location = new System.Drawing.Point(10, 10);
             this.btnProduct.Margin = new System.Windows.Forms.Padding(10);
             this.btnProduct.Name = "btnProduct";
-            this.btnProduct.Size = new System.Drawing.Size(113, 137);
+            this.btnProduct.Size = new System.Drawing.Size(113, 135);
             this.btnProduct.TabIndex = 0;
             this.btnProduct.Text = "Product";
             this.btnProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -263,10 +263,10 @@
             this.btnIncome.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncome.ImageKey = "profits_3816351.png";
             this.btnIncome.ImageList = this.imageList1;
-            this.btnIncome.Location = new System.Drawing.Point(10, 167);
+            this.btnIncome.Location = new System.Drawing.Point(10, 165);
             this.btnIncome.Margin = new System.Windows.Forms.Padding(10);
             this.btnIncome.Name = "btnIncome";
-            this.btnIncome.Size = new System.Drawing.Size(113, 137);
+            this.btnIncome.Size = new System.Drawing.Size(113, 135);
             this.btnIncome.TabIndex = 1;
             this.btnIncome.Text = "Income";
             this.btnIncome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -287,10 +287,10 @@
             this.btnStaff.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStaff.ImageKey = "user_8763547.png";
             this.btnStaff.ImageList = this.imageList1;
-            this.btnStaff.Location = new System.Drawing.Point(10, 324);
+            this.btnStaff.Location = new System.Drawing.Point(10, 320);
             this.btnStaff.Margin = new System.Windows.Forms.Padding(10);
             this.btnStaff.Name = "btnStaff";
-            this.btnStaff.Size = new System.Drawing.Size(113, 137);
+            this.btnStaff.Size = new System.Drawing.Size(113, 135);
             this.btnStaff.TabIndex = 2;
             this.btnStaff.Text = "Staff";
             this.btnStaff.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -311,10 +311,10 @@
             this.btnFacility.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFacility.ImageKey = "house_1758128.png";
             this.btnFacility.ImageList = this.imageList1;
-            this.btnFacility.Location = new System.Drawing.Point(10, 481);
+            this.btnFacility.Location = new System.Drawing.Point(10, 475);
             this.btnFacility.Margin = new System.Windows.Forms.Padding(10);
             this.btnFacility.Name = "btnFacility";
-            this.btnFacility.Size = new System.Drawing.Size(113, 137);
+            this.btnFacility.Size = new System.Drawing.Size(113, 135);
             this.btnFacility.TabIndex = 3;
             this.btnFacility.Text = "Facility";
             this.btnFacility.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -332,7 +332,7 @@
             this.TLB_menu.Controls.Add(this.btnProduct, 0, 0);
             this.TLB_menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.TLB_menu.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.TLB_menu.Location = new System.Drawing.Point(0, 50);
+            this.TLB_menu.Location = new System.Drawing.Point(0, 65);
             this.TLB_menu.Margin = new System.Windows.Forms.Padding(0);
             this.TLB_menu.Name = "TLB_menu";
             this.TLB_menu.RowCount = 5;
@@ -341,7 +341,7 @@
             this.TLB_menu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.TLB_menu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.TLB_menu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.TLB_menu.Size = new System.Drawing.Size(133, 1052);
+            this.TLB_menu.Size = new System.Drawing.Size(133, 1037);
             this.TLB_menu.TabIndex = 1;
             // 
             // pnlFill
@@ -350,11 +350,11 @@
             this.pnlFill.Controls.Add(this.pnlPage);
             this.pnlFill.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlFill.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.pnlFill.Location = new System.Drawing.Point(133, 50);
+            this.pnlFill.Location = new System.Drawing.Point(133, 65);
             this.pnlFill.Margin = new System.Windows.Forms.Padding(0);
             this.pnlFill.Name = "pnlFill";
             this.pnlFill.Padding = new System.Windows.Forms.Padding(0, 0, 20, 20);
-            this.pnlFill.Size = new System.Drawing.Size(1809, 1052);
+            this.pnlFill.Size = new System.Drawing.Size(1809, 1037);
             this.pnlFill.TabIndex = 3;
             // 
             // formManager
