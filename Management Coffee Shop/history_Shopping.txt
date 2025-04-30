@@ -1,1 +1,2 @@
-{"OrderId":"Order #0000001","UserId":"C000001","list_shopping":{"0000002":{"Quantity":1,"Price":25000}},"Sum":35000,"OrderDate":"2025-04-29T19:45:17.2935471+07:00"}
+{"OrderId":"0000001","UserId":"C888280","list_shopping":{"0000002":{"Quantity":1,"Price":25000}},"Sum":35000,"OrderDate":"2025-04-30T08:50:51.4805279+07:00"}
+{"OrderId":"0000002","UserId":"C888280","list_shopping":{"0000001":{"Quantity":1,"Price":20000}},"Sum":30000,"OrderDate":"2025-04-30T08:55:20.8229893+07:00"}

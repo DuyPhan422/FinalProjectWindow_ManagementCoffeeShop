@@ -81,12 +81,12 @@ namespace Management_Coffee_Shop
             using (SqlConnection connection = Connection.GetSqlConnection())
             {
                 connection.Open();
-                string query = "SELECT UserName FROM account WHERE Id=@Id";
+                string query = "SELECT UserName FROM account WHERE ID=@ID";
                 foreach (string Id in userId_List)
                 {
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("@Id", Id);
+                        command.Parameters.AddWithValue("@ID", Id);
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
                             if (reader.Read()) userName_List.Add(reader.GetString(0));
@@ -101,15 +101,15 @@ namespace Management_Coffee_Shop
             using (SqlConnection connection = Connection.GetSqlConnection())
             {
                 connection.Open();
-                string query = "SELECT Name,Address FROM customerInformation WHERE Id=@Id";
+                string query = "SELECT Name,Address,Email,Date FROM customerInformation JOIN account ON account.ID=customerInformation.ID WHERE customerInformation.ID=@ID";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@Id", Id);
+                    command.Parameters.AddWithValue("@ID", Id);
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         if (reader.Read())
                         {
-                            FormCustomer formCustomer = new FormCustomer(Id, reader.GetString(0), reader.GetString(1),this ,check);
+                            FormCustomer formCustomer = new FormCustomer(Id, reader["Name"].ToString(), reader["Address"].ToString(), reader["Email"].ToString(), reader["Date"].ToString(),this ,check);
                             formCustomer.Show();
                             this.Hide();
                         }
@@ -154,7 +154,7 @@ namespace Management_Coffee_Shop
             using (SqlConnection connection = Connection.GetSqlConnection())
             {
                 connection.Open();
-                string query = "SELECT Id FROM account WHERE UserName=@UserName AND PassWord=@PassWord";
+                string query = "SELECT ID FROM account WHERE UserName=@UserName AND PassWord=@PassWord";
                 using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
                     cmd.Parameters.AddWithValue("@UserName", username);
@@ -183,10 +183,8 @@ namespace Management_Coffee_Shop
                                         }
                                     }
                                 }
-                                MessageBox.Show(check.ToString());
                                 if (check) get_inforID(result.ToString(), true);
                                 else get_inforID(result.ToString(), false);
-
                             }
                             else
                             {

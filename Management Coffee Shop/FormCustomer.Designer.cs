@@ -241,13 +241,28 @@ namespace Management_Coffee_Shop
             this.label9 = new System.Windows.Forms.Label();
             this.guna2Panel24 = new Guna.UI2.WinForms.Guna2Panel();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlEmpty_History = new Guna.UI2.WinForms.Guna2Panel();
+            this.label29 = new System.Windows.Forms.Label();
+            this.guna2PictureBox20 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnShopNow_History = new Guna.UI2.WinForms.Guna2Button();
+            this.flpHistory = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel49 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel51 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.label27 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.txtAddress_profile = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtEmail_profile = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtDate_profile = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtName_profile = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel47 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel46 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel45 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel44 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btnEditProfile = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.ptbImage_Profile = new Guna.UI2.WinForms.Guna2PictureBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.pnlInformation = new Guna.UI2.WinForms.Guna2Panel();
             this.label23 = new System.Windows.Forms.Label();
@@ -310,7 +325,14 @@ namespace Management_Coffee_Shop
             this.btnAddAccount = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnChangePassword = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnOrder_Account = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
+            this.lblMode_Profile = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblName_profile = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblDate_profile = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblEmail_profile = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblAddress_profile = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.pnlAddShoppingCart.SuspendLayout();
@@ -364,7 +386,11 @@ namespace Management_Coffee_Shop
             this.flpPageNavigation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox16)).BeginInit();
             this.tabPage3.SuspendLayout();
+            this.pnlEmpty_History.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox20)).BeginInit();
             this.guna2Panel49.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbImage_Profile)).BeginInit();
             this.tabPage5.SuspendLayout();
             this.pnlInformation.SuspendLayout();
             this.pnlBill.SuspendLayout();
@@ -514,6 +540,7 @@ namespace Management_Coffee_Shop
             this.btnProfile.TabIndex = 0;
             this.btnProfile.Text = "PROFILE";
             this.btnProfile.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // btnHistory
             // 
@@ -2087,7 +2114,7 @@ namespace Management_Coffee_Shop
             // uC_product1
             // 
             this.uC_product1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product1.BTNPrice = "đđđđđđđđđđđđđđđđđđđ";
+            this.uC_product1.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product1.Categories = null;
             this.uC_product1.ID = null;
             this.uC_product1.LBLName_Drinks = null;
@@ -2110,7 +2137,7 @@ namespace Management_Coffee_Shop
             // uC_product2
             // 
             this.uC_product2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product2.BTNPrice = "đđđđđđđđđđđđđđđđđđđ";
+            this.uC_product2.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product2.Categories = null;
             this.uC_product2.ID = null;
             this.uC_product2.LBLName_Drinks = null;
@@ -2133,7 +2160,7 @@ namespace Management_Coffee_Shop
             // uC_product3
             // 
             this.uC_product3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product3.BTNPrice = "đđđđđđđđđđđđđđđđđđđ";
+            this.uC_product3.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product3.Categories = null;
             this.uC_product3.ID = null;
             this.uC_product3.LBLName_Drinks = null;
@@ -2156,7 +2183,7 @@ namespace Management_Coffee_Shop
             // uC_product4
             // 
             this.uC_product4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product4.BTNPrice = "đđđđđđđđđđđđđđđđđđđ";
+            this.uC_product4.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product4.Categories = null;
             this.uC_product4.ID = null;
             this.uC_product4.LBLName_Drinks = null;
@@ -2179,7 +2206,7 @@ namespace Management_Coffee_Shop
             // uC_product5
             // 
             this.uC_product5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product5.BTNPrice = "đđđđđđđđđđđđđđđđđđđ";
+            this.uC_product5.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product5.Categories = null;
             this.uC_product5.ID = null;
             this.uC_product5.LBLName_Drinks = null;
@@ -2202,7 +2229,7 @@ namespace Management_Coffee_Shop
             // uC_product6
             // 
             this.uC_product6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product6.BTNPrice = "đđđđđđđđđđđđđđđđđđđ";
+            this.uC_product6.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product6.Categories = null;
             this.uC_product6.ID = null;
             this.uC_product6.LBLName_Drinks = null;
@@ -2225,7 +2252,7 @@ namespace Management_Coffee_Shop
             // uC_product7
             // 
             this.uC_product7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product7.BTNPrice = "đđđđđđđđđđđđđđđđđđđ";
+            this.uC_product7.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product7.Categories = null;
             this.uC_product7.ID = null;
             this.uC_product7.LBLName_Drinks = null;
@@ -2248,7 +2275,7 @@ namespace Management_Coffee_Shop
             // uC_product8
             // 
             this.uC_product8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product8.BTNPrice = "đđđđđđđđđđđđđđđđđđđ";
+            this.uC_product8.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product8.Categories = null;
             this.uC_product8.ID = null;
             this.uC_product8.LBLName_Drinks = null;
@@ -2271,7 +2298,7 @@ namespace Management_Coffee_Shop
             // uC_product9
             // 
             this.uC_product9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product9.BTNPrice = "đđđđđđđđđđđđđđđđđđđ";
+            this.uC_product9.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product9.Categories = null;
             this.uC_product9.ID = null;
             this.uC_product9.LBLName_Drinks = null;
@@ -2294,7 +2321,7 @@ namespace Management_Coffee_Shop
             // uC_product10
             // 
             this.uC_product10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product10.BTNPrice = "đđđđđđđđđđđđđđđđđđđ";
+            this.uC_product10.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product10.Categories = null;
             this.uC_product10.ID = null;
             this.uC_product10.LBLName_Drinks = null;
@@ -2317,7 +2344,7 @@ namespace Management_Coffee_Shop
             // uC_product11
             // 
             this.uC_product11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product11.BTNPrice = "đđđđđđđđđđđđđđđđđđđ";
+            this.uC_product11.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product11.Categories = null;
             this.uC_product11.ID = null;
             this.uC_product11.LBLName_Drinks = null;
@@ -2340,7 +2367,7 @@ namespace Management_Coffee_Shop
             // uC_product12
             // 
             this.uC_product12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product12.BTNPrice = "đđđđđđđđđđđđđđđđđđđ";
+            this.uC_product12.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product12.Categories = null;
             this.uC_product12.ID = null;
             this.uC_product12.LBLName_Drinks = null;
@@ -2363,7 +2390,7 @@ namespace Management_Coffee_Shop
             // uC_product13
             // 
             this.uC_product13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product13.BTNPrice = "đđđđđđđđđđđđđđđđđđđ";
+            this.uC_product13.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product13.Categories = null;
             this.uC_product13.ID = null;
             this.uC_product13.LBLName_Drinks = null;
@@ -2386,7 +2413,7 @@ namespace Management_Coffee_Shop
             // uC_product14
             // 
             this.uC_product14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product14.BTNPrice = "đđđđđđđđđđđđđđđđđđđ";
+            this.uC_product14.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product14.Categories = null;
             this.uC_product14.ID = null;
             this.uC_product14.LBLName_Drinks = null;
@@ -2409,7 +2436,7 @@ namespace Management_Coffee_Shop
             // uC_product15
             // 
             this.uC_product15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product15.BTNPrice = "đđđđđđđđđđđđđđđđđđđ";
+            this.uC_product15.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product15.Categories = null;
             this.uC_product15.ID = null;
             this.uC_product15.LBLName_Drinks = null;
@@ -2432,7 +2459,7 @@ namespace Management_Coffee_Shop
             // uC_product16
             // 
             this.uC_product16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product16.BTNPrice = "đđđđđđđđđđđđđđđđđđđ";
+            this.uC_product16.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product16.Categories = null;
             this.uC_product16.ID = null;
             this.uC_product16.LBLName_Drinks = null;
@@ -2637,7 +2664,8 @@ namespace Management_Coffee_Shop
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tabPage3.Controls.Add(this.flowLayoutPanel2);
+            this.tabPage3.Controls.Add(this.pnlEmpty_History);
+            this.tabPage3.Controls.Add(this.flpHistory);
             this.tabPage3.Controls.Add(this.guna2Panel49);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
@@ -2646,13 +2674,65 @@ namespace Management_Coffee_Shop
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             // 
-            // flowLayoutPanel2
+            // pnlEmpty_History
             // 
-            this.flowLayoutPanel2.AutoScroll = true;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(66, 171);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1015, 539);
-            this.flowLayoutPanel2.TabIndex = 1;
+            this.pnlEmpty_History.Controls.Add(this.label29);
+            this.pnlEmpty_History.Controls.Add(this.guna2PictureBox20);
+            this.pnlEmpty_History.Controls.Add(this.btnShopNow_History);
+            this.pnlEmpty_History.Location = new System.Drawing.Point(0, 0);
+            this.pnlEmpty_History.Name = "pnlEmpty_History";
+            this.pnlEmpty_History.Size = new System.Drawing.Size(1151, 721);
+            this.pnlEmpty_History.TabIndex = 2;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
+            this.label29.Location = new System.Drawing.Point(484, 436);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(195, 16);
+            this.label29.TabIndex = 5;
+            this.label29.Text = "Your History Shopping Is Empty";
+            // 
+            // guna2PictureBox20
+            // 
+            this.guna2PictureBox20.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox20.Image")));
+            this.guna2PictureBox20.ImageRotate = 0F;
+            this.guna2PictureBox20.Location = new System.Drawing.Point(464, 206);
+            this.guna2PictureBox20.Name = "guna2PictureBox20";
+            this.guna2PictureBox20.Size = new System.Drawing.Size(209, 227);
+            this.guna2PictureBox20.TabIndex = 4;
+            this.guna2PictureBox20.TabStop = false;
+            // 
+            // btnShopNow_History
+            // 
+            this.btnShopNow_History.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
+            this.btnShopNow_History.BorderRadius = 15;
+            this.btnShopNow_History.BorderThickness = 2;
+            this.btnShopNow_History.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnShopNow_History.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnShopNow_History.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnShopNow_History.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnShopNow_History.FillColor = System.Drawing.Color.Transparent;
+            this.btnShopNow_History.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShopNow_History.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
+            this.btnShopNow_History.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
+            this.btnShopNow_History.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnShopNow_History.Location = new System.Drawing.Point(464, 469);
+            this.btnShopNow_History.Name = "btnShopNow_History";
+            this.btnShopNow_History.Size = new System.Drawing.Size(223, 45);
+            this.btnShopNow_History.TabIndex = 3;
+            this.btnShopNow_History.Text = "Shop Now";
+            this.btnShopNow_History.Click += new System.EventHandler(this.btnShopping_Click);
+            // 
+            // flpHistory
+            // 
+            this.flpHistory.AutoScroll = true;
+            this.flpHistory.Location = new System.Drawing.Point(66, 171);
+            this.flpHistory.Name = "flpHistory";
+            this.flpHistory.Size = new System.Drawing.Size(1030, 550);
+            this.flpHistory.TabIndex = 1;
             // 
             // guna2Panel49
             // 
@@ -2719,13 +2799,222 @@ namespace Management_Coffee_Shop
             // 
             // tabPage4
             // 
+            this.tabPage4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage4.Controls.Add(this.btnEditProfile);
+            this.tabPage4.Controls.Add(this.txtAddress_profile);
+            this.tabPage4.Controls.Add(this.txtEmail_profile);
+            this.tabPage4.Controls.Add(this.txtDate_profile);
+            this.tabPage4.Controls.Add(this.txtName_profile);
+            this.tabPage4.Controls.Add(this.lblAddress_profile);
+            this.tabPage4.Controls.Add(this.guna2HtmlLabel47);
+            this.tabPage4.Controls.Add(this.lblEmail_profile);
+            this.tabPage4.Controls.Add(this.guna2HtmlLabel46);
+            this.tabPage4.Controls.Add(this.guna2HtmlLabel45);
+            this.tabPage4.Controls.Add(this.lblMode_Profile);
+            this.tabPage4.Controls.Add(this.lblDate_profile);
+            this.tabPage4.Controls.Add(this.lblName_profile);
+            this.tabPage4.Controls.Add(this.guna2HtmlLabel44);
+            this.tabPage4.Controls.Add(this.btnSave);
+            this.tabPage4.Controls.Add(this.btnCancel);
+            this.tabPage4.Controls.Add(this.guna2Button3);
+            this.tabPage4.Controls.Add(this.ptbImage_Profile);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(1163, 721);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // txtAddress_profile
+            // 
+            this.txtAddress_profile.BackColor = System.Drawing.Color.Black;
+            this.txtAddress_profile.BorderColor = System.Drawing.Color.Transparent;
+            this.txtAddress_profile.BorderThickness = 0;
+            this.txtAddress_profile.Cursor = System.Windows.Forms.Cursors.No;
+            this.txtAddress_profile.DefaultText = "";
+            this.txtAddress_profile.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAddress_profile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAddress_profile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddress_profile.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddress_profile.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAddress_profile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.txtAddress_profile.ForeColor = System.Drawing.Color.Black;
+            this.txtAddress_profile.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAddress_profile.Location = new System.Drawing.Point(643, 436);
+            this.txtAddress_profile.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtAddress_profile.Multiline = true;
+            this.txtAddress_profile.Name = "txtAddress_profile";
+            this.txtAddress_profile.PlaceholderText = "";
+            this.txtAddress_profile.SelectedText = "";
+            this.txtAddress_profile.ShortcutsEnabled = false;
+            this.txtAddress_profile.Size = new System.Drawing.Size(506, 63);
+            this.txtAddress_profile.TabIndex = 5;
+            // 
+            // txtEmail_profile
+            // 
+            this.txtEmail_profile.BackColor = System.Drawing.Color.Black;
+            this.txtEmail_profile.BorderColor = System.Drawing.Color.Transparent;
+            this.txtEmail_profile.BorderThickness = 0;
+            this.txtEmail_profile.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmail_profile.DefaultText = "";
+            this.txtEmail_profile.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEmail_profile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEmail_profile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail_profile.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail_profile.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail_profile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.txtEmail_profile.ForeColor = System.Drawing.Color.Black;
+            this.txtEmail_profile.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail_profile.Location = new System.Drawing.Point(644, 341);
+            this.txtEmail_profile.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtEmail_profile.Name = "txtEmail_profile";
+            this.txtEmail_profile.PlaceholderText = "";
+            this.txtEmail_profile.SelectedText = "";
+            this.txtEmail_profile.Size = new System.Drawing.Size(506, 27);
+            this.txtEmail_profile.TabIndex = 5;
+            // 
+            // txtDate_profile
+            // 
+            this.txtDate_profile.BackColor = System.Drawing.Color.Black;
+            this.txtDate_profile.BorderColor = System.Drawing.Color.Transparent;
+            this.txtDate_profile.BorderThickness = 0;
+            this.txtDate_profile.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDate_profile.DefaultText = "";
+            this.txtDate_profile.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtDate_profile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtDate_profile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDate_profile.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDate_profile.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDate_profile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.txtDate_profile.ForeColor = System.Drawing.Color.Black;
+            this.txtDate_profile.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDate_profile.Location = new System.Drawing.Point(644, 231);
+            this.txtDate_profile.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtDate_profile.Name = "txtDate_profile";
+            this.txtDate_profile.PlaceholderText = "";
+            this.txtDate_profile.SelectedText = "";
+            this.txtDate_profile.Size = new System.Drawing.Size(506, 27);
+            this.txtDate_profile.TabIndex = 5;
+            // 
+            // txtName_profile
+            // 
+            this.txtName_profile.BackColor = System.Drawing.Color.Black;
+            this.txtName_profile.BorderColor = System.Drawing.Color.Transparent;
+            this.txtName_profile.BorderThickness = 0;
+            this.txtName_profile.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtName_profile.DefaultText = "";
+            this.txtName_profile.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtName_profile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtName_profile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtName_profile.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtName_profile.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtName_profile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.txtName_profile.ForeColor = System.Drawing.Color.Black;
+            this.txtName_profile.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtName_profile.Location = new System.Drawing.Point(644, 128);
+            this.txtName_profile.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtName_profile.Name = "txtName_profile";
+            this.txtName_profile.PlaceholderText = "";
+            this.txtName_profile.SelectedText = "";
+            this.txtName_profile.Size = new System.Drawing.Size(506, 27);
+            this.txtName_profile.TabIndex = 5;
+            // 
+            // guna2HtmlLabel47
+            // 
+            this.guna2HtmlLabel47.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel47.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel47.Location = new System.Drawing.Point(493, 437);
+            this.guna2HtmlLabel47.Name = "guna2HtmlLabel47";
+            this.guna2HtmlLabel47.Size = new System.Drawing.Size(106, 31);
+            this.guna2HtmlLabel47.TabIndex = 3;
+            this.guna2HtmlLabel47.Text = "Address:";
+            // 
+            // guna2HtmlLabel46
+            // 
+            this.guna2HtmlLabel46.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel46.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel46.Location = new System.Drawing.Point(493, 341);
+            this.guna2HtmlLabel46.Name = "guna2HtmlLabel46";
+            this.guna2HtmlLabel46.Size = new System.Drawing.Size(76, 31);
+            this.guna2HtmlLabel46.TabIndex = 3;
+            this.guna2HtmlLabel46.Text = "Email: ";
+            // 
+            // guna2HtmlLabel45
+            // 
+            this.guna2HtmlLabel45.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel45.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel45.Location = new System.Drawing.Point(494, 231);
+            this.guna2HtmlLabel45.Name = "guna2HtmlLabel45";
+            this.guna2HtmlLabel45.Size = new System.Drawing.Size(64, 31);
+            this.guna2HtmlLabel45.TabIndex = 3;
+            this.guna2HtmlLabel45.Text = "Date: ";
+            // 
+            // guna2HtmlLabel44
+            // 
+            this.guna2HtmlLabel44.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel44.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel44.Location = new System.Drawing.Point(494, 128);
+            this.guna2HtmlLabel44.Name = "guna2HtmlLabel44";
+            this.guna2HtmlLabel44.Size = new System.Drawing.Size(79, 31);
+            this.guna2HtmlLabel44.TabIndex = 2;
+            this.guna2HtmlLabel44.Text = "Name: ";
+            // 
+            // btnEditProfile
+            // 
+            this.btnEditProfile.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
+            this.btnEditProfile.BorderRadius = 7;
+            this.btnEditProfile.BorderThickness = 2;
+            this.btnEditProfile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditProfile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditProfile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEditProfile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEditProfile.FillColor = System.Drawing.Color.Transparent;
+            this.btnEditProfile.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditProfile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
+            this.btnEditProfile.Image = ((System.Drawing.Image)(resources.GetObject("btnEditProfile.Image")));
+            this.btnEditProfile.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnEditProfile.ImageSize = new System.Drawing.Size(15, 15);
+            this.btnEditProfile.Location = new System.Drawing.Point(494, 554);
+            this.btnEditProfile.Name = "btnEditProfile";
+            this.btnEditProfile.Size = new System.Drawing.Size(210, 32);
+            this.btnEditProfile.TabIndex = 1;
+            this.btnEditProfile.Text = "EDIT PROFILE";
+            this.btnEditProfile.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnEditProfile.Click += new System.EventHandler(this.btnEditProfile_Click);
+            // 
+            // guna2Button3
+            // 
+            this.guna2Button3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
+            this.guna2Button3.BorderRadius = 7;
+            this.guna2Button3.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            this.guna2Button3.BorderThickness = 2;
+            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button3.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
+            this.guna2Button3.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button3.Image")));
+            this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button3.ImageOffset = new System.Drawing.Point(10, 0);
+            this.guna2Button3.ImageSize = new System.Drawing.Size(80, 80);
+            this.guna2Button3.Location = new System.Drawing.Point(182, 505);
+            this.guna2Button3.Name = "guna2Button3";
+            this.guna2Button3.Size = new System.Drawing.Size(250, 81);
+            this.guna2Button3.TabIndex = 1;
+            this.guna2Button3.Text = "UPLOAD\nYOUR IMAGE";
+            this.guna2Button3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button3.TextOffset = new System.Drawing.Point(25, 0);
+            // 
+            // ptbImage_Profile
+            // 
+            this.ptbImage_Profile.ImageRotate = 0F;
+            this.ptbImage_Profile.Location = new System.Drawing.Point(34, 120);
+            this.ptbImage_Profile.Name = "ptbImage_Profile";
+            this.ptbImage_Profile.Size = new System.Drawing.Size(398, 366);
+            this.ptbImage_Profile.TabIndex = 0;
+            this.ptbImage_Profile.TabStop = false;
             // 
             // tabPage5
             // 
@@ -3362,6 +3651,7 @@ namespace Management_Coffee_Shop
             // 
             // pnlAccount
             // 
+            this.pnlAccount.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnlAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.pnlAccount.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
             this.pnlAccount.BorderRadius = 15;
@@ -3370,10 +3660,10 @@ namespace Management_Coffee_Shop
             this.pnlAccount.Controls.Add(this.btnAddAccount);
             this.pnlAccount.Controls.Add(this.btnLogOut);
             this.pnlAccount.Controls.Add(this.btnChangePassword);
-            this.pnlAccount.Controls.Add(this.guna2Button3);
+            this.pnlAccount.Controls.Add(this.btnOrder_Account);
             this.pnlAccount.Location = new System.Drawing.Point(1023, 35);
             this.pnlAccount.Name = "pnlAccount";
-            this.pnlAccount.Size = new System.Drawing.Size(209, 286);
+            this.pnlAccount.Size = new System.Drawing.Size(209, 316);
             this.pnlAccount.TabIndex = 6;
             // 
             // guna2Panel50
@@ -3382,18 +3672,19 @@ namespace Management_Coffee_Shop
             this.guna2Panel50.BorderThickness = 1;
             this.guna2Panel50.Controls.Add(this.flpAnotherAccount);
             this.guna2Panel50.Controls.Add(this.label26);
-            this.guna2Panel50.Location = new System.Drawing.Point(3, 33);
+            this.guna2Panel50.Location = new System.Drawing.Point(3, 49);
             this.guna2Panel50.Name = "guna2Panel50";
-            this.guna2Panel50.Size = new System.Drawing.Size(203, 136);
+            this.guna2Panel50.Size = new System.Drawing.Size(203, 137);
             this.guna2Panel50.TabIndex = 1;
             // 
             // flpAnotherAccount
             // 
             this.flpAnotherAccount.AutoScroll = true;
+            this.flpAnotherAccount.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flpAnotherAccount.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flpAnotherAccount.Location = new System.Drawing.Point(-3, 30);
+            this.flpAnotherAccount.Location = new System.Drawing.Point(0, 28);
             this.flpAnotherAccount.Name = "flpAnotherAccount";
-            this.flpAnotherAccount.Size = new System.Drawing.Size(209, 106);
+            this.flpAnotherAccount.Size = new System.Drawing.Size(203, 109);
             this.flpAnotherAccount.TabIndex = 1;
             this.flpAnotherAccount.WrapContents = false;
             // 
@@ -3401,7 +3692,7 @@ namespace Management_Coffee_Shop
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(0, 7);
+            this.label26.Location = new System.Drawing.Point(3, 7);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(152, 24);
             this.label26.TabIndex = 0;
@@ -3416,11 +3707,17 @@ namespace Management_Coffee_Shop
             this.btnAddAccount.FillColor = System.Drawing.Color.Transparent;
             this.btnAddAccount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddAccount.ForeColor = System.Drawing.Color.Black;
-            this.btnAddAccount.Location = new System.Drawing.Point(3, 209);
+            this.btnAddAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnAddAccount.Image")));
+            this.btnAddAccount.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAddAccount.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.btnAddAccount.ImageSize = new System.Drawing.Size(26, 26);
+            this.btnAddAccount.Location = new System.Drawing.Point(3, 230);
             this.btnAddAccount.Name = "btnAddAccount";
             this.btnAddAccount.Size = new System.Drawing.Size(203, 34);
             this.btnAddAccount.TabIndex = 0;
             this.btnAddAccount.Text = "Add Account";
+            this.btnAddAccount.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAddAccount.TextOffset = new System.Drawing.Point(-4, 0);
             this.btnAddAccount.Click += new System.EventHandler(this.btnAddAccount_Click);
             // 
             // btnLogOut
@@ -3432,11 +3729,17 @@ namespace Management_Coffee_Shop
             this.btnLogOut.FillColor = System.Drawing.Color.Transparent;
             this.btnLogOut.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.ForeColor = System.Drawing.Color.Black;
-            this.btnLogOut.Location = new System.Drawing.Point(3, 245);
+            this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
+            this.btnLogOut.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogOut.ImageOffset = new System.Drawing.Point(4, 0);
+            this.btnLogOut.ImageSize = new System.Drawing.Size(17, 17);
+            this.btnLogOut.Location = new System.Drawing.Point(3, 270);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(203, 34);
             this.btnLogOut.TabIndex = 0;
             this.btnLogOut.Text = "Log Out";
+            this.btnLogOut.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogOut.TextOffset = new System.Drawing.Point(5, 0);
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnChangePassword
@@ -3448,26 +3751,120 @@ namespace Management_Coffee_Shop
             this.btnChangePassword.FillColor = System.Drawing.Color.Transparent;
             this.btnChangePassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChangePassword.ForeColor = System.Drawing.Color.Black;
-            this.btnChangePassword.Location = new System.Drawing.Point(3, 169);
+            this.btnChangePassword.Image = ((System.Drawing.Image)(resources.GetObject("btnChangePassword.Image")));
+            this.btnChangePassword.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnChangePassword.Location = new System.Drawing.Point(3, 185);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.Size = new System.Drawing.Size(203, 34);
             this.btnChangePassword.TabIndex = 0;
             this.btnChangePassword.Text = "Change Password";
+            this.btnChangePassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
-            // guna2Button3
+            // btnOrder_Account
             // 
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(-1, 0);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(146, 27);
-            this.guna2Button3.TabIndex = 0;
-            this.guna2Button3.Text = "guna2Button3";
+            this.btnOrder_Account.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnOrder_Account.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnOrder_Account.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnOrder_Account.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnOrder_Account.FillColor = System.Drawing.Color.Transparent;
+            this.btnOrder_Account.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnOrder_Account.ForeColor = System.Drawing.Color.Black;
+            this.btnOrder_Account.Location = new System.Drawing.Point(3, 12);
+            this.btnOrder_Account.Name = "btnOrder_Account";
+            this.btnOrder_Account.Size = new System.Drawing.Size(203, 34);
+            this.btnOrder_Account.TabIndex = 0;
+            this.btnOrder_Account.Text = "Order";
+            this.btnOrder_Account.Click += new System.EventHandler(this.btnOrder_Account_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
+            this.btnCancel.BorderRadius = 10;
+            this.btnCancel.BorderThickness = 2;
+            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCancel.FillColor = System.Drawing.Color.Transparent;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
+            this.btnCancel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCancel.ImageSize = new System.Drawing.Size(0, 0);
+            this.btnCancel.Location = new System.Drawing.Point(739, 538);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(210, 48);
+            this.btnCancel.TabIndex = 1;
+            this.btnCancel.Text = "CANCEL";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
+            this.btnSave.BorderRadius = 10;
+            this.btnSave.BorderThickness = 2;
+            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSave.ImageSize = new System.Drawing.Size(0, 0);
+            this.btnSave.Location = new System.Drawing.Point(494, 538);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(210, 48);
+            this.btnSave.TabIndex = 1;
+            this.btnSave.Text = "SAVE";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // lblMode_Profile
+            // 
+            this.lblMode_Profile.BackColor = System.Drawing.Color.Transparent;
+            this.lblMode_Profile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMode_Profile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
+            this.lblMode_Profile.Location = new System.Drawing.Point(34, 26);
+            this.lblMode_Profile.Name = "lblMode_Profile";
+            this.lblMode_Profile.Size = new System.Drawing.Size(92, 27);
+            this.lblMode_Profile.TabIndex = 2;
+            this.lblMode_Profile.Text = "PROFILE";
+            // 
+            // lblName_profile
+            // 
+            this.lblName_profile.BackColor = System.Drawing.Color.Transparent;
+            this.lblName_profile.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName_profile.Location = new System.Drawing.Point(494, 154);
+            this.lblName_profile.Name = "lblName_profile";
+            this.lblName_profile.Size = new System.Drawing.Size(3, 2);
+            this.lblName_profile.TabIndex = 2;
+            // 
+            // lblDate_profile
+            // 
+            this.lblDate_profile.BackColor = System.Drawing.Color.Transparent;
+            this.lblDate_profile.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate_profile.Location = new System.Drawing.Point(494, 256);
+            this.lblDate_profile.Name = "lblDate_profile";
+            this.lblDate_profile.Size = new System.Drawing.Size(3, 2);
+            this.lblDate_profile.TabIndex = 2;
+            // 
+            // lblEmail_profile
+            // 
+            this.lblEmail_profile.BackColor = System.Drawing.Color.Transparent;
+            this.lblEmail_profile.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail_profile.Location = new System.Drawing.Point(493, 370);
+            this.lblEmail_profile.Name = "lblEmail_profile";
+            this.lblEmail_profile.Size = new System.Drawing.Size(3, 2);
+            this.lblEmail_profile.TabIndex = 3;
+            // 
+            // lblAddress_profile
+            // 
+            this.lblAddress_profile.BackColor = System.Drawing.Color.Transparent;
+            this.lblAddress_profile.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress_profile.Location = new System.Drawing.Point(492, 463);
+            this.lblAddress_profile.Name = "lblAddress_profile";
+            this.lblAddress_profile.Size = new System.Drawing.Size(3, 2);
+            this.lblAddress_profile.TabIndex = 3;
             // 
             // FormCustomer
             // 
@@ -3551,8 +3948,14 @@ namespace Management_Coffee_Shop
             this.flpPageNavigation.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox16)).EndInit();
             this.tabPage3.ResumeLayout(false);
+            this.pnlEmpty_History.ResumeLayout(false);
+            this.pnlEmpty_History.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox20)).EndInit();
             this.guna2Panel49.ResumeLayout(false);
             this.guna2Panel49.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbImage_Profile)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.pnlInformation.ResumeLayout(false);
             this.pnlInformation.PerformLayout();
@@ -3816,7 +4219,7 @@ namespace Management_Coffee_Shop
         private Guna.UI2.WinForms.Guna2Panel pnlAccount;
         private Guna.UI2.WinForms.Guna2Button btnLogOut;
         private Guna.UI2.WinForms.Guna2Button btnChangePassword;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button btnOrder_Account;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel50;
         private Label label26;
         private FlowLayoutPanel flpAnotherAccount;
@@ -3826,6 +4229,28 @@ namespace Management_Coffee_Shop
         private Label label27;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel51;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private FlowLayoutPanel flowLayoutPanel2;
+        private FlowLayoutPanel flpHistory;
+        private Guna.UI2.WinForms.Guna2Panel pnlEmpty_History;
+        private Label label29;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox20;
+        private Guna.UI2.WinForms.Guna2Button btnShopNow_History;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2PictureBox ptbImage_Profile;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel44;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel47;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel46;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel45;
+        private Guna.UI2.WinForms.Guna2Button btnEditProfile;
+        private Guna.UI2.WinForms.Guna2TextBox txtName_profile;
+        private Guna.UI2.WinForms.Guna2TextBox txtEmail_profile;
+        private Guna.UI2.WinForms.Guna2TextBox txtDate_profile;
+        private Guna.UI2.WinForms.Guna2TextBox txtAddress_profile;
+        private Guna.UI2.WinForms.Guna2Button btnSave;
+        private Guna.UI2.WinForms.Guna2Button btnCancel;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblMode_Profile;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblName_profile;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblDate_profile;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblEmail_profile;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblAddress_profile;
     }
 }

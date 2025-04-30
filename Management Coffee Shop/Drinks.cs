@@ -11,6 +11,7 @@ using System.Web;
 using System.Net.Http;
 using System.Threading;
 using System.Windows.Forms.DataVisualization.Charting;
+using static Management_Coffee_Shop.FormCustomer.History_Shopping;
 
 
 namespace Management_Coffee_Shop
@@ -28,6 +29,27 @@ namespace Management_Coffee_Shop
                 {
                     dt = new DataTable();
                     dataAdapter.Fill(dt);
+                }
+            }
+            return dt;
+        }
+        public static DataTable get_history(string id)
+        {
+            DataTable dt;
+            using (SqlConnection connection = Connection.GetSqlConnection())
+            {
+                string query = $"SELECT Name,Describe,Source_Image FROM sourceDrinks WHERE ID=@ID";
+                connection.Open();
+                {
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@ID", id);
+                        using (SqlDataAdapter dataAdapter = new SqlDataAdapter(command))
+                        {
+                            dt=new DataTable();
+                            dataAdapter.Fill(dt);
+                        }
+                    }
                 }
             }
             return dt;

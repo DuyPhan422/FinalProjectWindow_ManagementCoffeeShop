@@ -4,10 +4,12 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -43,7 +45,7 @@ namespace Management_Coffee_Shop
         private int minute, hour, currentPage = 1, count = 0;
         private byte indexPage = 1, lengthPage = 2,homePage=1;
         private double distance, duration;
-        private string tt,ID,Address,Name,categories;
+        private string tt,ID,Address,Name,Email,Date,categories;
         private static int current_ID = 0;
         private FormLogin FormLogin;
         private List<Guna2Button> List_buttonPage;
@@ -54,19 +56,29 @@ namespace Management_Coffee_Shop
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
 
         private static extern IntPtr CreateRoundRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
-        public FormCustomer(string id,string name,string address,FormLogin formLogin, bool check = false)
+        public FormCustomer(string id,string name,string address,string email,string Date,FormLogin formLogin, bool check = false)
         {
             InitializeComponent();
             this.ID = id;
             this.Name = name;
             this.Address = address;
-            this.check = check;
+            this.Email = email;
+            this.Date=Date;
+            this.FormLogin = formLogin;
             this.FormBorderStyle = FormBorderStyle.None;
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 80,80));
-            this.FormLogin = formLogin;
+            customer_load(check);
+        }
+        private void customer_load(bool check)
+        {
+            txtName_profile.Text =this.Name;
+            txtAddress_profile.Text = WrapTextEvery66Chars(this.Address);
+            txtEmail_profile.Text =this.Email;
+            txtDate_profile.Text =this.Date;
+            ptbImage_Profile.Image = Image.FromFile(@"..\..\Management coffee shop_image\edited_image-removebg-preview.png");
             list_uCProdcuts = new List<Product> { uC_product1, uC_product2, uC_product3, uC_product4, uC_product5, uC_product6, uC_product7, uC_product8, uC_product9, uC_product10, uC_product11, uC_product12, uC_product13, uC_product14, uC_product15, uC_product16 };
             List_buttonPage = new List<Guna2Button> { btnFirst_page, btnSecond_page, btnThird_page };
-            (distance, duration) = (Drinks.distance_time(address));
+            (distance, duration) = (Drinks.distance_time(this.Address));
             pnlBill.Hide();
             pnlPayment.Hide();
             pnlInformation.Hide();
@@ -77,6 +89,22 @@ namespace Management_Coffee_Shop
             else pnlSaveLogin.Location = new Point(964, 35);
             create_Page_Navigation();
             start_timer();
+            load_Account();
+        }
+        private string WrapTextEvery66Chars(string input)
+        {
+            int maxCharsPerLine = 66;
+            StringBuilder result = new StringBuilder();
+
+            for (int i = 0; i < input.Length; i += maxCharsPerLine)
+            {
+                if (i + maxCharsPerLine < input.Length)
+                    result.AppendLine(input.Substring(i, maxCharsPerLine));
+                else
+                    result.Append(input.Substring(i));
+            }
+
+            return result.ToString();
         }
         private void tabPage1_MouseWheel(object sender, MouseEventArgs e)
         {
@@ -205,7 +233,6 @@ namespace Management_Coffee_Shop
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
-            pnlhomePage.Show();
             tabControl1.SelectedTab = tabPage1;
         }
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
@@ -216,7 +243,6 @@ namespace Management_Coffee_Shop
         {
             loading_Shopping();
             tabControl1.SelectedTab = tabPage2;
-            pnlhomePage.Hide();
         }
         private void loading_Shopping()
         {
@@ -302,6 +328,10 @@ namespace Management_Coffee_Shop
                     lblMoney_SubTotal.Text = "0đ";
                     lblMoney_Sum.Text = "0đ";
                 }
+                string path = @"..\..\history_Shopping.txt";
+                string lastline=File.ReadLines(path).Last();
+                History_Shopping history_Shopping = System.Text.Json.JsonSerializer.Deserialize<History_Shopping>(lastline);
+                current_ID=int.Parse(history_Shopping.OrderId);
                 lblOrderCode.Text = "Order #" + (++current_ID).ToString().PadLeft(7, '0');
                 lblStatus.Text = "Status: Shipping";
                 btnOrderNow.Click -= btnOrderNow_Click;
@@ -546,9 +576,31 @@ namespace Management_Coffee_Shop
         }
         private void btnHistory_Click(object sender, EventArgs e)
         {
+            load_history();
             tabControl1.SelectedTab = tabPage3;
         }
-
+        private void load_history()
+        {
+            bool show_pnlEmpty_History = true;
+            string path = @"..\..\history_Shopping.txt";
+            string[] lines= File.ReadAllLines(path);
+            foreach (var line in lines)
+            {
+                if (!string.IsNullOrWhiteSpace(line))
+                {
+                    History_Shopping history_Shopping =System.Text.Json.JsonSerializer.Deserialize<History_Shopping>(line);
+                    if (history_Shopping.UserId == this.ID)
+                    {
+                        ucHistory_Shopping ucHistory_Shopping = new ucHistory_Shopping();
+                        ucHistory_Shopping.load_history(history_Shopping, this.ID);
+                        flpHistory.Controls.Add(ucHistory_Shopping);
+                        show_pnlEmpty_History=false;
+                    }
+                }
+            }
+            if (!show_pnlEmpty_History) pnlEmpty_History.Hide();
+            else pnlEmpty_History.Show();
+        }
         private void homePage1_Click(object sender, EventArgs e)
         {
             if (homePage != 1)
@@ -632,27 +684,105 @@ namespace Management_Coffee_Shop
                 if (FormLogin.userId_List[i] != this.ID)
                 {
                     Guna2Button button = new Guna2Button();
-                    button.Size = new Size(203, 34);
+                    button.Size = new Size(197, 34);
                     button.FillColor = Color.Transparent;
                     button.BackColor= Color.Transparent;
                     button.ForeColor = Color.Black;
                     button.Font= new Font("Segoe UI", 12f);
                     button.Text = FormLogin.userName_List[i];
-                    button.Image = Image.FromFile(@"..\..\Management coffee shop_image\edited_image-removebg-preview.png");
+                    button.Image = Image.FromFile(@"..\..\Management coffee shop_image\black-and-white-stockportable-network-account-icon-11553436383dwuayhjyvo-removebg-preview.png");
                     button.ImageSize = new Size(25, 25); 
                     button.ImageAlign = HorizontalAlignment.Left; 
-                    button.TextAlign = HorizontalAlignment.Left; 
+                    button.TextAlign = HorizontalAlignment.Left;
+                    button.Tag = FormLogin.userId_List[i];
+                    button.Click += btnChooseAccount_click;
                     flpAnotherAccount.Controls.Add(button);
+                }
+            }
+        }
+        private void btnChooseAccount_click(object sender, EventArgs e)
+        {
+            Guna2Button btn_clicked=sender as Guna2Button;
+            using (SqlConnection connection = Connection.GetSqlConnection())
+            {
+                connection.Open();
+                string query = "SELECT Name,Address,Email,Date FROM customerInformation JOIN account ON account.ID=customerInformation.ID WHERE customerInformation.ID=@ID";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Id", btn_clicked.Tag.ToString());
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            FormCustomer formCustomer = new FormCustomer(btn_clicked.Tag.ToString(), reader["Name"].ToString(), reader["Address"].ToString(), reader["Email"].ToString(), reader["Date"].ToString(), this.FormLogin, true);
+                            formCustomer.Show();
+                            this.Close();
+                        }
+                    }
                 }
             }
         }
         private void btnAccount_Click(object sender, EventArgs e)
         {
-            load_Account();
-            pnlAccount.Show();
-
+            if(pnlAccount.Visible==false)pnlAccount.Show();
+            else pnlAccount.Hide();
         }
 
+        private void btnEditProfile_Click(object sender, EventArgs e)
+        {
+            lblMode_Profile.Text = "EDIT PROFILE";
+            txtName_profile.Text =lblName_profile.Text.Trim();
+            txtDate_profile.Text = lblDate_profile.Text.Trim();
+            txtAddress_profile.Text = lblAddress_profile.Text.Trim();
+            txtEmail_profile.Text = lblEmail_profile.Text.Trim();
+            btnSave.Show();
+            btnCancel.Show();
+            txtAddress_profile.Show();
+            txtEmail_profile.Show();
+            txtName_profile.Show();
+            txtDate_profile.Show();
+            btnEditProfile.Hide();
+            lblName_profile.Hide();
+            lblDate_profile.Hide();
+            lblAddress_profile.Hide();
+            lblEmail_profile.Hide();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            lblMode_Profile.Text = "PROFILE";
+            lblName_profile.Text = txtName_profile.Text.Trim();
+            lblDate_profile.Text = txtDate_profile.Text.Trim();
+            lblAddress_profile.Text = txtAddress_profile.Text.Trim();
+            lblEmail_profile.Text = txtEmail_profile.Text.Trim();
+            btnSave.Hide();
+            btnCancel.Hide();
+            txtAddress_profile.Hide();
+            txtEmail_profile.Hide();
+            txtName_profile.Hide();
+            txtDate_profile.Hide();
+            lblName_profile.Show();
+            lblDate_profile.Show();
+            lblAddress_profile.Show();
+            lblEmail_profile.Show();
+            btnEditProfile.Show();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("bạn có chắc muốn lưu không");
+        }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            btnCancel.PerformClick();
+            tabControl1.SelectedTab = tabPage4;
+        }
+
+        private void btnOrder_Account_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage6;
+        }
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (flag_order && tabControl1.SelectedTab != tabPage6)
@@ -676,7 +806,7 @@ namespace Management_Coffee_Shop
                     string path = @"..\..\history_Shopping.txt";
                     History_Shopping history_Shopping = new History_Shopping()
                     {
-                        OrderId = lblOrderCode.Text,
+                        OrderId = Regex.Replace(lblOrderCode.Text,@"[^\d]",""),
                         UserId = this.ID,
                         list_shopping = list_shopping,
                         Sum = int.Parse(Regex.Replace(lblSum_Transport.Text, @"\D", "")),
@@ -692,7 +822,9 @@ namespace Management_Coffee_Shop
                     MessageBox.Show($"Lỗi khi lưu đơn hàng: {ex.Message}", "Lỗi");
                     Console.WriteLine($"Error saving order: {ex.Message}");
                 }
-            }
+            } 
+            if (tabControl1.SelectedTab==tabPage1)pnlhomePage.Show();
+            else pnlhomePage.Hide();
         }
 
         private void change_color_button_homePage()

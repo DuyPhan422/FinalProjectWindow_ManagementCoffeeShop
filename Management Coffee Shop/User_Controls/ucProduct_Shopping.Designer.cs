@@ -28,24 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.ptbImage = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblName_Product = new System.Windows.Forms.Label();
             this.lblDescribe = new System.Windows.Forms.Label();
             this.lblQTV = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbImage)).BeginInit();
             this.SuspendLayout();
             // 
-            // guna2PictureBox1
+            // ptbImage
             // 
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(155, 155);
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
+            this.ptbImage.BackColor = System.Drawing.Color.Transparent;
+            this.ptbImage.FillColor = System.Drawing.Color.Transparent;
+            this.ptbImage.ImageRotate = 0F;
+            this.ptbImage.Location = new System.Drawing.Point(0, 0);
+            this.ptbImage.Name = "ptbImage";
+            this.ptbImage.Size = new System.Drawing.Size(155, 155);
+            this.ptbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbImage.TabIndex = 0;
+            this.ptbImage.TabStop = false;
             // 
             // lblName_Product
             // 
@@ -78,15 +81,15 @@
             this.lblQTV.TabIndex = 2;
             this.lblQTV.Text = "label1";
             // 
-            // label2
+            // lblPrice
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.label2.Location = new System.Drawing.Point(857, 74);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 25);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "15.000đ";
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.lblPrice.Location = new System.Drawing.Point(857, 74);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(90, 25);
+            this.lblPrice.TabIndex = 3;
+            this.lblPrice.Text = "15.000đ";
             // 
             // label3
             // 
@@ -111,16 +114,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Controls.Add(this.ptbImage);
             this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblQTV);
             this.Controls.Add(this.lblDescribe);
             this.Controls.Add(this.lblName_Product);
-            this.Controls.Add(this.guna2PictureBox1);
             this.Name = "ucProduct_Shopping";
             this.Size = new System.Drawing.Size(950, 160);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,11 +131,11 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox ptbImage;
         private System.Windows.Forms.Label lblName_Product;
         private System.Windows.Forms.Label lblDescribe;
         private System.Windows.Forms.Label lblQTV;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
