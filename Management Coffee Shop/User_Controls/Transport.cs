@@ -15,14 +15,16 @@ namespace Management_Coffee_Shop.User_Controls
     {
         private static int current_ID = 1;
         private string Id,UserId,_image;
-        public Transport(string Id)
+        public Transport(string Id,string user_id)
         {
             InitializeComponent();
             btnRate.Hide();
             this.Id = Id;
+            this.UserId = user_id;
         }
         private void btnRate_Click(object sender, EventArgs e)
         {
+
             Rate rate =new Rate(btnName.Text,Id,UserId,Convert.ToByte(lblQTV.Text));
             rate.Show();
         }

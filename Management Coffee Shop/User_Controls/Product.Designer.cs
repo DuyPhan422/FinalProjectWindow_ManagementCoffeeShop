@@ -55,6 +55,7 @@
             this.ptbImage_Drinks.TabIndex = 0;
             this.ptbImage_Drinks.TabStop = false;
             this.ptbImage_Drinks.UseTransparentBackground = true;
+            this.ptbImage_Drinks.Click += new System.EventHandler(this.ptbImage_Drinks_Click);
             // 
             // guna2Panel1
             // 
@@ -172,14 +173,14 @@
             this.btnPrice.TextOffset = new System.Drawing.Point(0, -2);
             this.btnPrice.Click += new System.EventHandler(this.btnPrice_Click);
             // 
-            // UC_product
+            // Product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.Controls.Add(this.guna2Panel2);
             this.Margin = new System.Windows.Forms.Padding(17);
-            this.Name = "UC_product";
+            this.Name = "Product";
             this.Size = new System.Drawing.Size(250, 294);
             ((System.ComponentModel.ISupportInitialize)(this.ptbImage_Drinks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.image)).EndInit();

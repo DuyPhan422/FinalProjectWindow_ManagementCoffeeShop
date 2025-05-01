@@ -16,6 +16,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using Twilio.Rest.Messaging.V1.Service;
 using static Management_Coffee_Shop.FormCustomer.History_Shopping;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
@@ -241,7 +242,7 @@ namespace Management_Coffee_Shop
         }
         private void btnShopping_Click(object sender, EventArgs e)
         {
-            loading_Shopping();
+            if (flpCategories.Controls.Count==1)loading_Shopping();
             tabControl1.SelectedTab = tabPage2;
         }
         private void loading_Shopping()
@@ -282,8 +283,42 @@ namespace Management_Coffee_Shop
                 list_uCProdcuts[i].BTNReviews_Drinks = showUp_Drinks.Rows[i]["Review"].ToString();
                 list_uCProdcuts[i].BTNPrice = showUp_Drinks.Rows[i]["Price"].ToString();
                 list_uCProdcuts[i].btnPice_clicked += BTNPrice_Click_Ucprodcut;
+                list_uCProdcuts[i].ptbImage_Drinks_clicked += ptbImageDrinks_Click_Ucproduct;
+
             }
             if (len < 16) for (int i = len; i < 16; i++) list_uCProdcuts[i].Hide();
+        }
+        private void ptbImageDrinks_Click_Ucproduct(object sender, EventArgs e)
+        {
+            if (sender is Product clickedButton)
+            {
+                ptbImage_Product.Image = Image.FromFile(clickedButton.PTBImage_Drinks);
+                lblName_Product.Text = clickedButton.LBLName_Drinks;
+                lblDescribe_Product.Text = clickedButton.LBLDescribe_Drinks;
+                lblReviews_Product.Text = clickedButton.BTNReviews_Drinks;
+                lblRate_Product.Text = clickedButton.LBLRate_Drinks;
+                string path = @"..\..\history_Rate.txt";
+                string[] lines=File.ReadAllLines(path);
+                for (int i = 0; i < lines.Length; i++)
+                {
+                    Rate.History history = System.Text.Json.JsonSerializer.Deserialize<Rate.History>(lines[i]);
+                    if (history.ProductId == clickedButton.ID)
+                    {
+                        ucComment ucComment = new ucComment();
+                        DataTable dt=Drinks.get_Image_User(ID);
+                        ucComment.PTBImage = dt.Rows[0]["Image"].ToString();
+                        if (ID != this.ID) ucComment.LBLName = dt.Rows[0]["Name"].ToString();
+                        else ucComment.LBLName = "Bạn";
+                        ucComment.set_Rate(history.Rank);
+                        ucComment.TXTComment=history.Comment;
+                        ucComment.LBLTime = $"{history.Time:dd/MM/yyyy HH:mm}";
+                        flpProduct.Controls.Add(ucComment);
+                    }
+                    
+                }
+                tabControl1.SelectedTab = tabPage7;
+            }
+            
         }
         private void btnShoppingCart_Click(object sender, EventArgs e)
         {
@@ -298,7 +333,7 @@ namespace Management_Coffee_Shop
                 {
                     if (list_products[p.ID].Item3 == true)
                     {
-                        Transport transport = new Transport(p.ID);
+                        Transport transport = new Transport(p.ID,this.ID);
                         transport.Name = p.Name;
                         transport.LBLNote = p.TXTNote;
                         transport.LBLPrice = string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", list_products[p.ID].Item2);
@@ -562,8 +597,6 @@ namespace Management_Coffee_Shop
         {
             pnlSaveLogin.Hide();
         }
-
-
         private void BTNUpDown(object sender, int newValue)
         {
             if (sender is Payment payment)
@@ -576,7 +609,7 @@ namespace Management_Coffee_Shop
         }
         private void btnHistory_Click(object sender, EventArgs e)
         {
-            load_history();
+            if (flpHistory.Controls.Count==0) load_history();
             tabControl1.SelectedTab = tabPage3;
         }
         private void load_history()
@@ -611,7 +644,6 @@ namespace Management_Coffee_Shop
                 tabPage1.AutoScrollPosition = new Point(0, 0);
             }
         }
-
         private void homePage2_Click(object sender, EventArgs e)
         {
             if (homePage != 2)
@@ -622,7 +654,6 @@ namespace Management_Coffee_Shop
                 tabPage1.AutoScrollPosition = new Point(0, 600);
             }
         }
-
         private void homePage3_Click(object sender, EventArgs e)
         {
             if (homePage != 3)
@@ -633,7 +664,6 @@ namespace Management_Coffee_Shop
                 tabPage1.AutoScrollPosition = new Point(0, 1285);
             }
         }
-
         private void homePage4_Click(object sender, EventArgs e)
         {
             if (homePage != 4)
@@ -644,7 +674,6 @@ namespace Management_Coffee_Shop
                 tabPage1.AutoScrollPosition = new Point(0, 2070);
             }
         }
-
         private void homePage5_Click(object sender, EventArgs e)
         {
             if (homePage != 5)
@@ -655,7 +684,6 @@ namespace Management_Coffee_Shop
                 tabPage1.AutoScrollPosition = new Point(0, 2463);
             }
         }
-
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             Login.delete_Token(ID);
@@ -669,7 +697,6 @@ namespace Management_Coffee_Shop
             FormLogin.Show();
             this.Close();
         }
-
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
             FormForgetPassword formForgetPassword = new FormForgetPassword();
@@ -727,7 +754,6 @@ namespace Management_Coffee_Shop
             if(pnlAccount.Visible==false)pnlAccount.Show();
             else pnlAccount.Hide();
         }
-
         private void btnEditProfile_Click(object sender, EventArgs e)
         {
             lblMode_Profile.Text = "EDIT PROFILE";
@@ -747,7 +773,6 @@ namespace Management_Coffee_Shop
             lblAddress_profile.Hide();
             lblEmail_profile.Hide();
         }
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
             lblMode_Profile.Text = "PROFILE";

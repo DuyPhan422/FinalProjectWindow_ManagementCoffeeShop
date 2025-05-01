@@ -12,6 +12,7 @@ using System.Net.Http;
 using System.Threading;
 using System.Windows.Forms.DataVisualization.Charting;
 using static Management_Coffee_Shop.FormCustomer.History_Shopping;
+using System.Data.Common;
 
 
 namespace Management_Coffee_Shop
@@ -85,6 +86,25 @@ namespace Management_Coffee_Shop
                     }
                 }
             }
+        }
+        public static DataTable get_Image_User(string id)
+        {
+            DataTable dt;
+            using (SqlConnection conn = Connection.GetSqlConnection())
+            {
+                string query = $"SELECT Image,Name FROM customerInformation WHERE ID=@ID";
+                conn.Open();
+                using (SqlCommand commnad = new SqlCommand(query, conn))
+                {
+                    commnad.Parameters.AddWithValue("@ID", id);
+                    using (SqlDataAdapter commnadAdapter = new SqlDataAdapter(commnad))
+                    {
+                        dt = new DataTable();
+                        commnadAdapter.Fill(dt);
+                    }
+                }
+            }
+            return dt;
         }
         public static void set_Rate(string id,byte Rank,int Sales)
         {

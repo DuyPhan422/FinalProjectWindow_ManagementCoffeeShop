@@ -226,6 +226,12 @@
     <Compile Include="User_Controls\Transport.Designer.cs">
       <DependentUpon>Transport.cs</DependentUpon>
     </Compile>
+    <Compile Include="User_Controls\ucComment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Controls\ucComment.Designer.cs">
+      <DependentUpon>ucComment.cs</DependentUpon>
+    </Compile>
     <Compile Include="User_Controls\ucIncome_dark.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -344,6 +350,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User_Controls\Transport.resx">
       <DependentUpon>Transport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Controls\ucComment.resx">
+      <DependentUpon>ucComment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User_Controls\ucIncome_dark.resx">
       <DependentUpon>ucIncome_dark.cs</DependentUpon>

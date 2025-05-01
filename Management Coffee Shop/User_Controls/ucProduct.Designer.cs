@@ -117,11 +117,11 @@
             // 
             this.tbpnlTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(216)))), ((int)(((byte)(219)))));
             this.tbpnlTop.ColumnCount = 6;
-            this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
-            this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
-            this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
-            this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
-            this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tbpnlTop.Controls.Add(this.lblTitle, 5, 0);
             this.tbpnlTop.Controls.Add(this.btnPrint, 4, 0);
@@ -131,10 +131,11 @@
             this.tbpnlTop.Controls.Add(this.btnAdd, 0, 0);
             this.tbpnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.tbpnlTop.Location = new System.Drawing.Point(0, 0);
+            this.tbpnlTop.Margin = new System.Windows.Forms.Padding(2);
             this.tbpnlTop.Name = "tbpnlTop";
             this.tbpnlTop.RowCount = 1;
             this.tbpnlTop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbpnlTop.Size = new System.Drawing.Size(1793, 60);
+            this.tbpnlTop.Size = new System.Drawing.Size(1195, 39);
             this.tbpnlTop.TabIndex = 1;
             // 
             // lblTitle
@@ -143,9 +144,10 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(175)))));
-            this.lblTitle.Location = new System.Drawing.Point(1028, 0);
+            this.lblTitle.Location = new System.Drawing.Point(683, 0);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(187, 60);
+            this.lblTitle.Size = new System.Drawing.Size(128, 39);
             this.lblTitle.TabIndex = 7;
             this.lblTitle.Text = "Our Product";
             // 
@@ -162,10 +164,10 @@
             this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.btnPrint.ForeColor = System.Drawing.Color.Black;
             this.btnPrint.Image = global::Management_Coffee_Shop.Properties.Resources.printer_3022251;
-            this.btnPrint.Location = new System.Drawing.Point(360, 0);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.btnPrint.Location = new System.Drawing.Point(240, 0);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(87, 60);
+            this.btnPrint.Size = new System.Drawing.Size(58, 39);
             this.btnPrint.TabIndex = 5;
             this.btnPrint.Text = "Print";
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
@@ -183,10 +185,10 @@
             this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.btnRefresh.ForeColor = System.Drawing.Color.Black;
             this.btnRefresh.Image = global::Management_Coffee_Shop.Properties.Resources.refresh_10025481;
-            this.btnRefresh.Location = new System.Drawing.Point(270, 0);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.btnRefresh.Location = new System.Drawing.Point(180, 0);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(87, 60);
+            this.btnRefresh.Size = new System.Drawing.Size(58, 39);
             this.btnRefresh.TabIndex = 4;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
@@ -204,10 +206,10 @@
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
             this.btnDelete.Image = global::Management_Coffee_Shop.Properties.Resources.trash_9915683;
-            this.btnDelete.Location = new System.Drawing.Point(180, 0);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.btnDelete.Location = new System.Drawing.Point(120, 0);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(87, 60);
+            this.btnDelete.Size = new System.Drawing.Size(58, 39);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Delete";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -225,10 +227,10 @@
             this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.btnEdit.ForeColor = System.Drawing.Color.Black;
             this.btnEdit.Image = global::Management_Coffee_Shop.Properties.Resources.write_7879263;
-            this.btnEdit.Location = new System.Drawing.Point(90, 0);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.btnEdit.Location = new System.Drawing.Point(60, 0);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(87, 60);
+            this.btnEdit.Size = new System.Drawing.Size(58, 39);
             this.btnEdit.TabIndex = 2;
             this.btnEdit.Text = "Edit";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -247,9 +249,9 @@
             this.btnAdd.ForeColor = System.Drawing.Color.Black;
             this.btnAdd.Image = global::Management_Coffee_Shop.Properties.Resources.new_page_7879261;
             this.btnAdd.Location = new System.Drawing.Point(0, 0);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(87, 60);
+            this.btnAdd.Size = new System.Drawing.Size(58, 39);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -261,9 +263,10 @@
             this.pnlArea.Controls.Add(this.pnlEditProduct);
             this.pnlArea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlArea.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlArea.Location = new System.Drawing.Point(0, 60);
+            this.pnlArea.Location = new System.Drawing.Point(0, 39);
+            this.pnlArea.Margin = new System.Windows.Forms.Padding(2);
             this.pnlArea.Name = "pnlArea";
-            this.pnlArea.Size = new System.Drawing.Size(1793, 976);
+            this.pnlArea.Size = new System.Drawing.Size(1195, 634);
             this.pnlArea.TabIndex = 4;
             // 
             // pnlGrid
@@ -272,8 +275,9 @@
             this.pnlGrid.Controls.Add(this.dgvProduct);
             this.pnlGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlGrid.Location = new System.Drawing.Point(0, 0);
+            this.pnlGrid.Margin = new System.Windows.Forms.Padding(2);
             this.pnlGrid.Name = "pnlGrid";
-            this.pnlGrid.Size = new System.Drawing.Size(1333, 976);
+            this.pnlGrid.Size = new System.Drawing.Size(888, 634);
             this.pnlGrid.TabIndex = 7;
             // 
             // dgvProduct
@@ -321,7 +325,7 @@
             this.dgvProduct.RowHeadersWidth = 35;
             this.dgvProduct.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProduct.Size = new System.Drawing.Size(1333, 976);
+            this.dgvProduct.Size = new System.Drawing.Size(888, 634);
             this.dgvProduct.TabIndex = 2;
             this.dgvProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellContentClick);
             this.dgvProduct.SelectionChanged += new System.EventHandler(this.dgvProduct_SelectionChanged);
@@ -385,9 +389,10 @@
             this.pnlEditProduct.Controls.Add(this.pnlEditProductTop);
             this.pnlEditProduct.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlEditProduct.FillColor = System.Drawing.Color.White;
-            this.pnlEditProduct.Location = new System.Drawing.Point(1333, 0);
+            this.pnlEditProduct.Location = new System.Drawing.Point(888, 0);
+            this.pnlEditProduct.Margin = new System.Windows.Forms.Padding(2);
             this.pnlEditProduct.Name = "pnlEditProduct";
-            this.pnlEditProduct.Size = new System.Drawing.Size(460, 976);
+            this.pnlEditProduct.Size = new System.Drawing.Size(307, 634);
             this.pnlEditProduct.TabIndex = 6;
             // 
             // pnlEditProductFill
@@ -398,10 +403,11 @@
             this.pnlEditProductFill.BorderThickness = 2;
             this.pnlEditProductFill.Controls.Add(this.tblEditProduct);
             this.pnlEditProductFill.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlEditProductFill.Location = new System.Drawing.Point(0, 63);
+            this.pnlEditProductFill.Location = new System.Drawing.Point(0, 41);
+            this.pnlEditProductFill.Margin = new System.Windows.Forms.Padding(2);
             this.pnlEditProductFill.Name = "pnlEditProductFill";
-            this.pnlEditProductFill.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pnlEditProductFill.Size = new System.Drawing.Size(460, 913);
+            this.pnlEditProductFill.Padding = new System.Windows.Forms.Padding(3);
+            this.pnlEditProductFill.Size = new System.Drawing.Size(307, 593);
             this.pnlEditProductFill.TabIndex = 4;
             // 
             // tblEditProduct
@@ -431,27 +437,28 @@
             this.tblEditProduct.Controls.Add(this.lblDescription, 0, 14);
             this.tblEditProduct.Controls.Add(this.txtName, 0, 4);
             this.tblEditProduct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblEditProduct.Location = new System.Drawing.Point(4, 5);
+            this.tblEditProduct.Location = new System.Drawing.Point(3, 3);
+            this.tblEditProduct.Margin = new System.Windows.Forms.Padding(2);
             this.tblEditProduct.Name = "tblEditProduct";
             this.tblEditProduct.RowCount = 16;
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 400F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 400F));
             this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblEditProduct.Size = new System.Drawing.Size(452, 903);
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 19F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 260F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 260F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
+            this.tblEditProduct.Size = new System.Drawing.Size(301, 587);
             this.tblEditProduct.TabIndex = 3;
             // 
             // dgvDescription
@@ -483,13 +490,14 @@
             this.dgvDescription.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvDescription.EnableHeadersVisualStyles = false;
             this.dgvDescription.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
-            this.dgvDescription.Location = new System.Drawing.Point(3, 988);
+            this.dgvDescription.Location = new System.Drawing.Point(2, 641);
+            this.dgvDescription.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDescription.Name = "dgvDescription";
             this.dgvDescription.RowHeadersVisible = false;
             this.dgvDescription.RowHeadersWidth = 62;
             this.dgvDescription.RowTemplate.Height = 28;
             this.dgvDescription.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDescription.Size = new System.Drawing.Size(420, 377);
+            this.dgvDescription.Size = new System.Drawing.Size(280, 245);
             this.dgvDescription.TabIndex = 32;
             // 
             // pbAvatar
@@ -497,11 +505,12 @@
             this.pbAvatar.BorderRadius = 20;
             this.pbAvatar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbAvatar.ImageRotate = 0F;
-            this.pbAvatar.Location = new System.Drawing.Point(144, 3);
+            this.pbAvatar.Location = new System.Drawing.Point(96, 2);
+            this.pbAvatar.Margin = new System.Windows.Forms.Padding(2);
             this.pbAvatar.Name = "pbAvatar";
-            this.pbAvatar.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pbAvatar.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tblEditProduct.SetRowSpan(this.pbAvatar, 2);
-            this.pbAvatar.Size = new System.Drawing.Size(136, 85);
+            this.pbAvatar.Size = new System.Drawing.Size(90, 55);
             this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbAvatar.TabIndex = 0;
             this.pbAvatar.TabStop = false;
@@ -512,10 +521,10 @@
             this.guna2Panel4.Controls.Add(this.btnImageCancel);
             this.guna2Panel4.Controls.Add(this.btnImageChange);
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel4.Location = new System.Drawing.Point(141, 91);
+            this.guna2Panel4.Location = new System.Drawing.Point(94, 59);
             this.guna2Panel4.Margin = new System.Windows.Forms.Padding(0);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(142, 29);
+            this.guna2Panel4.Size = new System.Drawing.Size(94, 19);
             this.guna2Panel4.TabIndex = 3;
             // 
             // btnImageCancel
@@ -531,9 +540,10 @@
             this.btnImageCancel.ForeColor = System.Drawing.Color.White;
             this.btnImageCancel.Image = global::Management_Coffee_Shop.Properties.Resources.image_13406883;
             this.btnImageCancel.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnImageCancel.Location = new System.Drawing.Point(76, 0);
+            this.btnImageCancel.Location = new System.Drawing.Point(50, 0);
+            this.btnImageCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnImageCancel.Name = "btnImageCancel";
-            this.btnImageCancel.Size = new System.Drawing.Size(66, 29);
+            this.btnImageCancel.Size = new System.Drawing.Size(44, 19);
             this.btnImageCancel.TabIndex = 3;
             this.btnImageCancel.Click += new System.EventHandler(this.btnImageCancel_Click);
             // 
@@ -551,8 +561,9 @@
             this.btnImageChange.Image = global::Management_Coffee_Shop.Properties.Resources.image_13406897;
             this.btnImageChange.ImageSize = new System.Drawing.Size(30, 30);
             this.btnImageChange.Location = new System.Drawing.Point(0, 0);
+            this.btnImageChange.Margin = new System.Windows.Forms.Padding(2);
             this.btnImageChange.Name = "btnImageChange";
-            this.btnImageChange.Size = new System.Drawing.Size(66, 29);
+            this.btnImageChange.Size = new System.Drawing.Size(44, 19);
             this.btnImageChange.TabIndex = 1;
             this.btnImageChange.Click += new System.EventHandler(this.btnImageChange_Click);
             // 
@@ -561,9 +572,10 @@
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.Black;
-            this.lblName.Location = new System.Drawing.Point(3, 120);
+            this.lblName.Location = new System.Drawing.Point(2, 78);
+            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(81, 31);
+            this.lblName.Size = new System.Drawing.Size(56, 20);
             this.lblName.TabIndex = 4;
             this.lblName.Text = "Name";
             // 
@@ -572,9 +584,10 @@
             this.lblCategory.AutoSize = true;
             this.lblCategory.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategory.ForeColor = System.Drawing.Color.Black;
-            this.lblCategory.Location = new System.Drawing.Point(3, 211);
+            this.lblCategory.Location = new System.Drawing.Point(2, 137);
+            this.lblCategory.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(118, 31);
+            this.lblCategory.Size = new System.Drawing.Size(80, 20);
             this.lblCategory.TabIndex = 6;
             this.lblCategory.Text = "Category";
             // 
@@ -593,12 +606,12 @@
             this.txtPrice.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.txtPrice.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            this.txtPrice.Location = new System.Drawing.Point(6, 341);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.txtPrice.Location = new System.Drawing.Point(4, 221);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.PlaceholderText = "";
             this.txtPrice.SelectedText = "";
-            this.txtPrice.Size = new System.Drawing.Size(414, 44);
+            this.txtPrice.Size = new System.Drawing.Size(276, 29);
             this.txtPrice.TabIndex = 8;
             this.txtPrice.TextChanged += new System.EventHandler(this.txtPrice_TextChanged);
             this.txtPrice.Leave += new System.EventHandler(this.txtPrice_Leave);
@@ -608,9 +621,10 @@
             this.lblPrice.AutoSize = true;
             this.lblPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrice.ForeColor = System.Drawing.Color.Black;
-            this.lblPrice.Location = new System.Drawing.Point(3, 302);
+            this.lblPrice.Location = new System.Drawing.Point(2, 196);
+            this.lblPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(71, 31);
+            this.lblPrice.Size = new System.Drawing.Size(48, 20);
             this.lblPrice.TabIndex = 9;
             this.lblPrice.Text = "Price";
             // 
@@ -628,9 +642,10 @@
             this.cbbCategory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.cbbCategory.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.cbbCategory.ItemHeight = 30;
-            this.cbbCategory.Location = new System.Drawing.Point(3, 245);
+            this.cbbCategory.Location = new System.Drawing.Point(2, 159);
+            this.cbbCategory.Margin = new System.Windows.Forms.Padding(2);
             this.cbbCategory.Name = "cbbCategory";
-            this.cbbCategory.Size = new System.Drawing.Size(418, 36);
+            this.cbbCategory.Size = new System.Drawing.Size(280, 36);
             this.cbbCategory.TabIndex = 23;
             this.cbbCategory.SelectedIndexChanged += new System.EventHandler(this.cbbCategory_SelectedIndexChanged);
             this.cbbCategory.Leave += new System.EventHandler(this.cbbCategory_Leave);
@@ -640,9 +655,10 @@
             this.lblRecipe.AutoSize = true;
             this.lblRecipe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRecipe.ForeColor = System.Drawing.Color.Black;
-            this.lblRecipe.Location = new System.Drawing.Point(3, 455);
+            this.lblRecipe.Location = new System.Drawing.Point(2, 295);
+            this.lblRecipe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRecipe.Name = "lblRecipe";
-            this.lblRecipe.Size = new System.Drawing.Size(89, 31);
+            this.lblRecipe.Size = new System.Drawing.Size(61, 20);
             this.lblRecipe.TabIndex = 13;
             this.lblRecipe.Text = "Recipe";
             // 
@@ -655,9 +671,10 @@
             this.rbM.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbM.CheckedState.InnerOffset = -4;
             this.rbM.ForeColor = System.Drawing.Color.Black;
-            this.rbM.Location = new System.Drawing.Point(144, 396);
+            this.rbM.Location = new System.Drawing.Point(96, 257);
+            this.rbM.Margin = new System.Windows.Forms.Padding(2);
             this.rbM.Name = "rbM";
-            this.rbM.Size = new System.Drawing.Size(50, 25);
+            this.rbM.Size = new System.Drawing.Size(36, 16);
             this.rbM.TabIndex = 25;
             this.rbM.Text = "M";
             this.rbM.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -674,9 +691,10 @@
             this.rbL.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbL.CheckedState.InnerOffset = -4;
             this.rbL.ForeColor = System.Drawing.Color.Black;
-            this.rbL.Location = new System.Drawing.Point(144, 427);
+            this.rbL.Location = new System.Drawing.Point(96, 277);
+            this.rbL.Margin = new System.Windows.Forms.Padding(2);
             this.rbL.Name = "rbL";
-            this.rbL.Size = new System.Drawing.Size(43, 25);
+            this.rbL.Size = new System.Drawing.Size(31, 16);
             this.rbL.TabIndex = 26;
             this.rbL.Text = "L";
             this.rbL.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -693,9 +711,10 @@
             this.rbVipPro.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbVipPro.CheckedState.InnerOffset = -4;
             this.rbVipPro.ForeColor = System.Drawing.Color.Black;
-            this.rbVipPro.Location = new System.Drawing.Point(286, 427);
+            this.rbVipPro.Location = new System.Drawing.Point(190, 277);
+            this.rbVipPro.Margin = new System.Windows.Forms.Padding(2);
             this.rbVipPro.Name = "rbVipPro";
-            this.rbVipPro.Size = new System.Drawing.Size(86, 25);
+            this.rbVipPro.Size = new System.Drawing.Size(60, 16);
             this.rbVipPro.TabIndex = 24;
             this.rbVipPro.Text = "VipPro";
             this.rbVipPro.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -712,9 +731,10 @@
             this.rbX.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbX.CheckedState.InnerOffset = -4;
             this.rbX.ForeColor = System.Drawing.Color.Black;
-            this.rbX.Location = new System.Drawing.Point(286, 396);
+            this.rbX.Location = new System.Drawing.Point(190, 257);
+            this.rbX.Margin = new System.Windows.Forms.Padding(2);
             this.rbX.Name = "rbX";
-            this.rbX.Size = new System.Drawing.Size(45, 25);
+            this.rbX.Size = new System.Drawing.Size(32, 16);
             this.rbX.TabIndex = 27;
             this.rbX.Text = "X";
             this.rbX.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -727,9 +747,10 @@
             this.lblUnit.AutoSize = true;
             this.lblUnit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUnit.ForeColor = System.Drawing.Color.Black;
-            this.lblUnit.Location = new System.Drawing.Point(3, 393);
+            this.lblUnit.Location = new System.Drawing.Point(2, 255);
+            this.lblUnit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUnit.Name = "lblUnit";
-            this.lblUnit.Size = new System.Drawing.Size(62, 31);
+            this.lblUnit.Size = new System.Drawing.Size(43, 20);
             this.lblUnit.TabIndex = 10;
             this.lblUnit.Text = "Unit";
             this.lblUnit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -767,13 +788,14 @@
             this.dgvRecipe.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvRecipe.EnableHeadersVisualStyles = false;
             this.dgvRecipe.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
-            this.dgvRecipe.Location = new System.Drawing.Point(3, 498);
+            this.dgvRecipe.Location = new System.Drawing.Point(2, 323);
+            this.dgvRecipe.Margin = new System.Windows.Forms.Padding(2);
             this.dgvRecipe.Name = "dgvRecipe";
             this.dgvRecipe.RowHeadersVisible = false;
             this.dgvRecipe.RowHeadersWidth = 62;
             this.dgvRecipe.RowTemplate.Height = 28;
             this.dgvRecipe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRecipe.Size = new System.Drawing.Size(420, 375);
+            this.dgvRecipe.Size = new System.Drawing.Size(280, 244);
             this.dgvRecipe.TabIndex = 28;
             // 
             // colIngredient
@@ -810,9 +832,10 @@
             this.panel1.Controls.Add(this.btnBookRecipe);
             this.panel1.Controls.Add(this.btnAddRecipe);
             this.panel1.Controls.Add(this.btnEditRecipe);
-            this.panel1.Location = new System.Drawing.Point(3, 889);
+            this.panel1.Location = new System.Drawing.Point(2, 577);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(418, 54);
+            this.panel1.Size = new System.Drawing.Size(279, 35);
             this.panel1.TabIndex = 31;
             // 
             // btnDeleteRecipe
@@ -827,9 +850,10 @@
             this.btnDeleteRecipe.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.btnDeleteRecipe.ForeColor = System.Drawing.Color.White;
             this.btnDeleteRecipe.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnDeleteRecipe.Location = new System.Drawing.Point(207, 0);
+            this.btnDeleteRecipe.Location = new System.Drawing.Point(138, 0);
+            this.btnDeleteRecipe.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteRecipe.Name = "btnDeleteRecipe";
-            this.btnDeleteRecipe.Size = new System.Drawing.Size(81, 54);
+            this.btnDeleteRecipe.Size = new System.Drawing.Size(54, 35);
             this.btnDeleteRecipe.TabIndex = 31;
             this.btnDeleteRecipe.Text = "Delete";
             this.btnDeleteRecipe.Click += new System.EventHandler(this.btnDeleteRecipe_Click);
@@ -846,9 +870,10 @@
             this.btnBookRecipe.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.btnBookRecipe.ForeColor = System.Drawing.Color.White;
             this.btnBookRecipe.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnBookRecipe.Location = new System.Drawing.Point(304, 0);
+            this.btnBookRecipe.Location = new System.Drawing.Point(203, 0);
+            this.btnBookRecipe.Margin = new System.Windows.Forms.Padding(2);
             this.btnBookRecipe.Name = "btnBookRecipe";
-            this.btnBookRecipe.Size = new System.Drawing.Size(81, 54);
+            this.btnBookRecipe.Size = new System.Drawing.Size(54, 35);
             this.btnBookRecipe.TabIndex = 30;
             this.btnBookRecipe.Text = "Book";
             this.btnBookRecipe.Click += new System.EventHandler(this.btnBookRecipe_Click);
@@ -865,9 +890,10 @@
             this.btnAddRecipe.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.btnAddRecipe.ForeColor = System.Drawing.Color.White;
             this.btnAddRecipe.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnAddRecipe.Location = new System.Drawing.Point(33, 0);
+            this.btnAddRecipe.Location = new System.Drawing.Point(22, 0);
+            this.btnAddRecipe.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddRecipe.Name = "btnAddRecipe";
-            this.btnAddRecipe.Size = new System.Drawing.Size(81, 54);
+            this.btnAddRecipe.Size = new System.Drawing.Size(54, 35);
             this.btnAddRecipe.TabIndex = 29;
             this.btnAddRecipe.Text = "Add";
             this.btnAddRecipe.Click += new System.EventHandler(this.btnAddRecipe_Click);
@@ -884,9 +910,10 @@
             this.btnEditRecipe.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.btnEditRecipe.ForeColor = System.Drawing.Color.White;
             this.btnEditRecipe.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnEditRecipe.Location = new System.Drawing.Point(120, 0);
+            this.btnEditRecipe.Location = new System.Drawing.Point(80, 0);
+            this.btnEditRecipe.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditRecipe.Name = "btnEditRecipe";
-            this.btnEditRecipe.Size = new System.Drawing.Size(81, 54);
+            this.btnEditRecipe.Size = new System.Drawing.Size(54, 35);
             this.btnEditRecipe.TabIndex = 30;
             this.btnEditRecipe.Text = "Edit";
             this.btnEditRecipe.Click += new System.EventHandler(this.btnEditRecipe_Click);
@@ -896,9 +923,10 @@
             this.tblEditProduct.SetColumnSpan(this.lblDescription, 2);
             this.lblDescription.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.ForeColor = System.Drawing.Color.Black;
-            this.lblDescription.Location = new System.Drawing.Point(3, 946);
+            this.lblDescription.Location = new System.Drawing.Point(2, 614);
+            this.lblDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(236, 28);
+            this.lblDescription.Size = new System.Drawing.Size(157, 18);
             this.lblDescription.TabIndex = 19;
             this.lblDescription.Text = "Customer Rating";
             // 
@@ -919,12 +947,12 @@
             this.txtName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.txtName.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            this.txtName.Location = new System.Drawing.Point(6, 159);
-            this.txtName.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.txtName.Location = new System.Drawing.Point(4, 103);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtName.Name = "txtName";
             this.txtName.PlaceholderText = "";
             this.txtName.SelectedText = "";
-            this.txtName.Size = new System.Drawing.Size(414, 44);
+            this.txtName.Size = new System.Drawing.Size(276, 29);
             this.txtName.TabIndex = 5;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             this.txtName.Leave += new System.EventHandler(this.txtName_Leave);
@@ -941,8 +969,9 @@
             this.pnlEditProductTop.Controls.Add(this.btnCancel);
             this.pnlEditProductTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlEditProductTop.Location = new System.Drawing.Point(0, 0);
+            this.pnlEditProductTop.Margin = new System.Windows.Forms.Padding(2);
             this.pnlEditProductTop.Name = "pnlEditProductTop";
-            this.pnlEditProductTop.Size = new System.Drawing.Size(460, 63);
+            this.pnlEditProductTop.Size = new System.Drawing.Size(307, 41);
             this.pnlEditProductTop.TabIndex = 2;
             // 
             // lblStatus
@@ -950,9 +979,10 @@
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblStatus.ForeColor = System.Drawing.Color.Black;
-            this.lblStatus.Location = new System.Drawing.Point(120, 12);
+            this.lblStatus.Location = new System.Drawing.Point(80, 8);
+            this.lblStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(71, 28);
+            this.lblStatus.Size = new System.Drawing.Size(49, 19);
             this.lblStatus.TabIndex = 6;
             this.lblStatus.Text = "Status";
             this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -962,9 +992,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(15, 12);
+            this.label1.Location = new System.Drawing.Point(10, 8);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 28);
+            this.label1.Size = new System.Drawing.Size(23, 19);
             this.label1.TabIndex = 5;
             this.label1.Text = "ID";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -985,10 +1016,10 @@
             this.btnConfirm.ForeColor = System.Drawing.Color.White;
             this.btnConfirm.Image = global::Management_Coffee_Shop.Properties.Resources.check_11601271;
             this.btnConfirm.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnConfirm.Location = new System.Drawing.Point(286, 0);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.btnConfirm.Location = new System.Drawing.Point(191, 0);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(87, 63);
+            this.btnConfirm.Size = new System.Drawing.Size(58, 41);
             this.btnConfirm.TabIndex = 4;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
@@ -1008,10 +1039,10 @@
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Image = global::Management_Coffee_Shop.Properties.Resources.cross_mark_11601293;
             this.btnCancel.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnCancel.Location = new System.Drawing.Point(373, 0);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.btnCancel.Location = new System.Drawing.Point(249, 0);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(87, 63);
+            this.btnCancel.Size = new System.Drawing.Size(58, 41);
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -1050,14 +1081,15 @@
             // 
             // ucProduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(25)))), ((int)(((byte)(66)))));
             this.Controls.Add(this.pnlArea);
             this.Controls.Add(this.tbpnlTop);
             this.ForeColor = System.Drawing.Color.White;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ucProduct";
-            this.Size = new System.Drawing.Size(1793, 1036);
+            this.Size = new System.Drawing.Size(1195, 673);
             this.Load += new System.EventHandler(this.ucProduct_Load);
             this.tbpnlTop.ResumeLayout(false);
             this.tbpnlTop.PerformLayout();

@@ -15,7 +15,7 @@ namespace Management_Coffee_Shop.User_Controls
 {
     public partial class Product : UserControl
     {
-        public event EventHandler btnPice_clicked;
+        public event EventHandler btnPice_clicked,ptbImage_Drinks_clicked;
         private string _image, categories, id;
         public Product()
         {
@@ -48,10 +48,12 @@ namespace Management_Coffee_Shop.User_Controls
         }
         public string LBLDescribe_Drinks
         {
+            get { return lblDescribe_Drinks.Text;}
             set { lblDescribe_Drinks.Text = value; }
         }
         public string LBLRate_Drinks
         {
+            get { return lblRate_Drinks.Text;}
             set { lblRate_Drinks.Text = value; }
         }
 
@@ -65,8 +67,14 @@ namespace Management_Coffee_Shop.User_Controls
             lblName_Drinks.Text = "Hi";
         }
 
+        private void ptbImage_Drinks_Click(object sender, EventArgs e)
+        {
+            ptbImage_Drinks_clicked?.Invoke(this, EventArgs.Empty);
+        }
+
         public string BTNReviews_Drinks
         {
+            get { return btnReviews_Drinks.Text; }
             set { btnReviews_Drinks.Text = value + " Reviews"; }
         }
         public string PTBImage_Drinks

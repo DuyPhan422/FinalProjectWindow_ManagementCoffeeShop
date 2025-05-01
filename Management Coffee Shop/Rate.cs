@@ -24,7 +24,7 @@ namespace Management_Coffee_Shop
             this.UserId = UserId;
             this.Sales = Sales;
         }
-        private class History
+        public class History
         {
             public string ProductId { get; set; }
             public string UserId { get; set; }

@@ -131,7 +131,7 @@
             this.tbpnlTop.Controls.Add(this.btnAdd, 0, 0);
             this.tbpnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.tbpnlTop.Location = new System.Drawing.Point(0, 0);
-            this.tbpnlTop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbpnlTop.Margin = new System.Windows.Forms.Padding(2);
             this.tbpnlTop.Name = "tbpnlTop";
             this.tbpnlTop.RowCount = 1;
             this.tbpnlTop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -259,7 +259,7 @@
             this.pnlArea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlArea.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlArea.Location = new System.Drawing.Point(0, 39);
-            this.pnlArea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlArea.Margin = new System.Windows.Forms.Padding(2);
             this.pnlArea.Name = "pnlArea";
             this.pnlArea.Size = new System.Drawing.Size(659, 463);
             this.pnlArea.TabIndex = 4;
@@ -269,7 +269,7 @@
             this.pnlGrid.Controls.Add(this.dgvProduct);
             this.pnlGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlGrid.Location = new System.Drawing.Point(0, 0);
-            this.pnlGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlGrid.Margin = new System.Windows.Forms.Padding(2);
             this.pnlGrid.Name = "pnlGrid";
             this.pnlGrid.Size = new System.Drawing.Size(352, 463);
             this.pnlGrid.TabIndex = 7;
@@ -384,7 +384,7 @@
             this.pnlEditProduct.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlEditProduct.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(25)))), ((int)(((byte)(66)))));
             this.pnlEditProduct.Location = new System.Drawing.Point(352, 0);
-            this.pnlEditProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlEditProduct.Margin = new System.Windows.Forms.Padding(2);
             this.pnlEditProduct.Name = "pnlEditProduct";
             this.pnlEditProduct.Size = new System.Drawing.Size(307, 463);
             this.pnlEditProduct.TabIndex = 6;
@@ -398,9 +398,9 @@
             this.pnlEditProductFill.Controls.Add(this.tblEditProduct);
             this.pnlEditProductFill.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlEditProductFill.Location = new System.Drawing.Point(0, 41);
-            this.pnlEditProductFill.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlEditProductFill.Margin = new System.Windows.Forms.Padding(2);
             this.pnlEditProductFill.Name = "pnlEditProductFill";
-            this.pnlEditProductFill.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.pnlEditProductFill.Padding = new System.Windows.Forms.Padding(3);
             this.pnlEditProductFill.Size = new System.Drawing.Size(307, 422);
             this.pnlEditProductFill.TabIndex = 4;
             // 
@@ -432,7 +432,7 @@
             this.tblEditProduct.Controls.Add(this.txtName, 0, 4);
             this.tblEditProduct.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblEditProduct.Location = new System.Drawing.Point(3, 3);
-            this.tblEditProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tblEditProduct.Margin = new System.Windows.Forms.Padding(2);
             this.tblEditProduct.Name = "tblEditProduct";
             this.tblEditProduct.RowCount = 16;
             this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
@@ -484,8 +484,8 @@
             this.dgvDescription.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvDescription.EnableHeadersVisualStyles = false;
             this.dgvDescription.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
-            this.dgvDescription.Location = new System.Drawing.Point(2, 883);
-            this.dgvDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvDescription.Location = new System.Drawing.Point(2, 641);
+            this.dgvDescription.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDescription.Name = "dgvDescription";
             this.dgvDescription.RowHeadersVisible = false;
             this.dgvDescription.RowHeadersWidth = 62;
@@ -500,7 +500,7 @@
             this.pbAvatar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbAvatar.ImageRotate = 0F;
             this.pbAvatar.Location = new System.Drawing.Point(96, 2);
-            this.pbAvatar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbAvatar.Margin = new System.Windows.Forms.Padding(2);
             this.pbAvatar.Name = "pbAvatar";
             this.pbAvatar.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tblEditProduct.SetRowSpan(this.pbAvatar, 2);
@@ -537,7 +537,7 @@
             this.btnImageCancel.Image = global::Management_Coffee_Shop.Properties.Resources.image_13406883;
             this.btnImageCancel.ImageSize = new System.Drawing.Size(30, 30);
             this.btnImageCancel.Location = new System.Drawing.Point(50, 0);
-            this.btnImageCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnImageCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnImageCancel.Name = "btnImageCancel";
             this.btnImageCancel.Size = new System.Drawing.Size(44, 19);
             this.btnImageCancel.TabIndex = 3;
@@ -558,7 +558,7 @@
             this.btnImageChange.Image = global::Management_Coffee_Shop.Properties.Resources.image_13406897;
             this.btnImageChange.ImageSize = new System.Drawing.Size(30, 30);
             this.btnImageChange.Location = new System.Drawing.Point(0, 0);
-            this.btnImageChange.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnImageChange.Margin = new System.Windows.Forms.Padding(2);
             this.btnImageChange.Name = "btnImageChange";
             this.btnImageChange.Size = new System.Drawing.Size(44, 19);
             this.btnImageChange.TabIndex = 1;
@@ -642,7 +642,7 @@
             this.cbbCategory.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.cbbCategory.ItemHeight = 30;
             this.cbbCategory.Location = new System.Drawing.Point(2, 159);
-            this.cbbCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbCategory.Margin = new System.Windows.Forms.Padding(2);
             this.cbbCategory.Name = "cbbCategory";
             this.cbbCategory.Size = new System.Drawing.Size(280, 36);
             this.cbbCategory.TabIndex = 23;
@@ -670,7 +670,7 @@
             this.rbM.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbM.CheckedState.InnerOffset = -4;
             this.rbM.Location = new System.Drawing.Point(96, 257);
-            this.rbM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbM.Margin = new System.Windows.Forms.Padding(2);
             this.rbM.Name = "rbM";
             this.rbM.Size = new System.Drawing.Size(36, 16);
             this.rbM.TabIndex = 25;
@@ -689,7 +689,7 @@
             this.rbL.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbL.CheckedState.InnerOffset = -4;
             this.rbL.Location = new System.Drawing.Point(96, 277);
-            this.rbL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbL.Margin = new System.Windows.Forms.Padding(2);
             this.rbL.Name = "rbL";
             this.rbL.Size = new System.Drawing.Size(31, 16);
             this.rbL.TabIndex = 26;
@@ -708,7 +708,7 @@
             this.rbVipPro.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbVipPro.CheckedState.InnerOffset = -4;
             this.rbVipPro.Location = new System.Drawing.Point(190, 277);
-            this.rbVipPro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbVipPro.Margin = new System.Windows.Forms.Padding(2);
             this.rbVipPro.Name = "rbVipPro";
             this.rbVipPro.Size = new System.Drawing.Size(60, 16);
             this.rbVipPro.TabIndex = 24;
@@ -727,7 +727,7 @@
             this.rbX.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbX.CheckedState.InnerOffset = -4;
             this.rbX.Location = new System.Drawing.Point(190, 257);
-            this.rbX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbX.Margin = new System.Windows.Forms.Padding(2);
             this.rbX.Name = "rbX";
             this.rbX.Size = new System.Drawing.Size(32, 16);
             this.rbX.TabIndex = 27;
@@ -784,7 +784,7 @@
             this.dgvRecipe.EnableHeadersVisualStyles = false;
             this.dgvRecipe.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
             this.dgvRecipe.Location = new System.Drawing.Point(2, 323);
-            this.dgvRecipe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvRecipe.Margin = new System.Windows.Forms.Padding(2);
             this.dgvRecipe.Name = "dgvRecipe";
             this.dgvRecipe.RowHeadersVisible = false;
             this.dgvRecipe.RowHeadersWidth = 62;
@@ -828,7 +828,7 @@
             this.panel1.Controls.Add(this.btnAddRecipe);
             this.panel1.Controls.Add(this.btnEditRecipe);
             this.panel1.Location = new System.Drawing.Point(2, 577);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(279, 35);
             this.panel1.TabIndex = 31;
@@ -847,7 +847,7 @@
             this.btnDeleteRecipe.ForeColor = System.Drawing.Color.White;
             this.btnDeleteRecipe.ImageSize = new System.Drawing.Size(45, 45);
             this.btnDeleteRecipe.Location = new System.Drawing.Point(138, 0);
-            this.btnDeleteRecipe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteRecipe.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteRecipe.Name = "btnDeleteRecipe";
             this.btnDeleteRecipe.Size = new System.Drawing.Size(54, 35);
             this.btnDeleteRecipe.TabIndex = 31;
@@ -868,7 +868,7 @@
             this.btnBookRecipe.ForeColor = System.Drawing.Color.White;
             this.btnBookRecipe.ImageSize = new System.Drawing.Size(45, 45);
             this.btnBookRecipe.Location = new System.Drawing.Point(203, 0);
-            this.btnBookRecipe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBookRecipe.Margin = new System.Windows.Forms.Padding(2);
             this.btnBookRecipe.Name = "btnBookRecipe";
             this.btnBookRecipe.Size = new System.Drawing.Size(54, 35);
             this.btnBookRecipe.TabIndex = 30;
@@ -889,7 +889,7 @@
             this.btnAddRecipe.ForeColor = System.Drawing.Color.White;
             this.btnAddRecipe.ImageSize = new System.Drawing.Size(45, 45);
             this.btnAddRecipe.Location = new System.Drawing.Point(22, 0);
-            this.btnAddRecipe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddRecipe.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddRecipe.Name = "btnAddRecipe";
             this.btnAddRecipe.Size = new System.Drawing.Size(54, 35);
             this.btnAddRecipe.TabIndex = 29;
@@ -910,7 +910,7 @@
             this.btnEditRecipe.ForeColor = System.Drawing.Color.White;
             this.btnEditRecipe.ImageSize = new System.Drawing.Size(45, 45);
             this.btnEditRecipe.Location = new System.Drawing.Point(80, 0);
-            this.btnEditRecipe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditRecipe.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditRecipe.Name = "btnEditRecipe";
             this.btnEditRecipe.Size = new System.Drawing.Size(54, 35);
             this.btnEditRecipe.TabIndex = 30;
@@ -968,7 +968,7 @@
             this.pnlEditProductTop.Controls.Add(this.btnCancel);
             this.pnlEditProductTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlEditProductTop.Location = new System.Drawing.Point(0, 0);
-            this.pnlEditProductTop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlEditProductTop.Margin = new System.Windows.Forms.Padding(2);
             this.pnlEditProductTop.Name = "pnlEditProductTop";
             this.pnlEditProductTop.Size = new System.Drawing.Size(307, 41);
             this.pnlEditProductTop.TabIndex = 2;
@@ -1085,7 +1085,7 @@
             this.Controls.Add(this.pnlArea);
             this.Controls.Add(this.tbpnlTop);
             this.ForeColor = System.Drawing.Color.White;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ucProduct_dark";
             this.Size = new System.Drawing.Size(659, 502);
             this.Load += new System.EventHandler(this.ucProduct_Load);
