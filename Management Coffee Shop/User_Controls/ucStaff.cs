@@ -68,10 +68,10 @@ namespace Management_Coffee_Shop
                     txtSalary.Text = selectedRow["Salary"]?.ToString();
                     txtDescription.Text = selectedRow["Description"]?.ToString() ?? "Chưa có mô tả";
 
-                    // Hiển thị ảnh nếu có
-                    if (!string.IsNullOrEmpty(selectedRow["ImagePath"]?.ToString()))
+                    // Hiển thị ảnh từ cột Source_Image
+                    if (!string.IsNullOrEmpty(selectedRow["Source_Image"]?.ToString()))
                     {
-                        selectedImagePath = selectedRow["ImagePath"].ToString();
+                        selectedImagePath = selectedRow["Source_Image"].ToString();
                         try
                         {
                             pbAvatar.Image = Image.FromFile(selectedImagePath);
@@ -126,40 +126,8 @@ namespace Management_Coffee_Shop
                 DataRow selectedRow = dt.Rows[selectedIndex];
 
                 selectedStaffId = Convert.ToInt32(selectedRow["Id"]);
-                txtFirstName.Text = selectedRow["FirstName"]?.ToString();
-                txtLastName.Text = selectedRow["LastName"]?.ToString();
-                txtEmail.Text = selectedRow["Email"]?.ToString() ?? "N/A";
-                string gender = selectedRow["Gender"]?.ToString();
-                rdbMale.Checked = gender == "Male";
-                rdbFemale.Checked = gender == "Female";
-                dtpBirthDay.Value = Convert.ToDateTime(selectedRow["BirthDate"]);
-                txtPhone.Text = selectedRow["Phone"]?.ToString();
-                txtAddress.Text = selectedRow["Address"]?.ToString();
-                txtSalary.Text = selectedRow["Salary"]?.ToString();
-                txtDescription.Text = selectedRow["Description"]?.ToString() ?? "Chưa có mô tả";
+                ShowStaffDetails();
 
-                // Hiển thị ảnh nếu có
-                if (!string.IsNullOrEmpty(selectedRow["ImagePath"]?.ToString()))
-                {
-                    selectedImagePath = selectedRow["ImagePath"].ToString();
-                    try
-                    {
-                        pbAvatar.Image = Image.FromFile(selectedImagePath);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Lỗi khi tải ảnh: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        pbAvatar.Image = null;
-                        selectedImagePath = null;
-                    }
-                }
-                else
-                {
-                    pbAvatar.Image = null;
-                    selectedImagePath = null;
-                }
-
-                // Kích hoạt chế độ chỉnh sửa
                 timer.Start();
                 tbpnlTop.Enabled = false;
             }
@@ -633,19 +601,7 @@ namespace Management_Coffee_Shop
             {
                 try
                 {
-                    string sourceImagePath = openFileDialog.FileName;
-                    string imagesFolder = Path.Combine(Application.StartupPath, "Images");
-                    if (!Directory.Exists(imagesFolder))
-                    {
-                        Directory.CreateDirectory(imagesFolder);
-                    }
-
-                    string fileName = Path.GetFileNameWithoutExtension(sourceImagePath) + "_" + DateTime.Now.Ticks + Path.GetExtension(sourceImagePath);
-                    string destinationImagePath = Path.Combine(imagesFolder, fileName);
-
-                    File.Copy(sourceImagePath, destinationImagePath, true);
-                    selectedImagePath = destinationImagePath;
-
+                    selectedImagePath = openFileDialog.FileName;
                     pbAvatar.Image = Image.FromFile(selectedImagePath);
                 }
                 catch (Exception ex)

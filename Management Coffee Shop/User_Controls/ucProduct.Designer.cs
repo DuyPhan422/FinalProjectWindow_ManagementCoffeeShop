@@ -46,11 +46,6 @@
             this.pnlArea = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlGrid = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
-            this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlEditProduct = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlEditProductFill = new Guna.UI2.WinForms.Guna2Panel();
             this.tblEditProduct = new System.Windows.Forms.TableLayoutPanel();
@@ -93,6 +88,12 @@
             this.elipseDgvProduct = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.elipseDgvRecipe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.elipseDescription = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDescribe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSales = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbpnlTop.SuspendLayout();
             this.pnlArea.SuspendLayout();
             this.pnlGrid.SuspendLayout();
@@ -117,11 +118,11 @@
             // 
             this.tbpnlTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(216)))), ((int)(((byte)(219)))));
             this.tbpnlTop.ColumnCount = 6;
-            this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tbpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tbpnlTop.Controls.Add(this.lblTitle, 5, 0);
             this.tbpnlTop.Controls.Add(this.btnPrint, 4, 0);
@@ -131,11 +132,11 @@
             this.tbpnlTop.Controls.Add(this.btnAdd, 0, 0);
             this.tbpnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.tbpnlTop.Location = new System.Drawing.Point(0, 0);
-            this.tbpnlTop.Margin = new System.Windows.Forms.Padding(2);
+            this.tbpnlTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbpnlTop.Name = "tbpnlTop";
             this.tbpnlTop.RowCount = 1;
             this.tbpnlTop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbpnlTop.Size = new System.Drawing.Size(1195, 39);
+            this.tbpnlTop.Size = new System.Drawing.Size(1593, 48);
             this.tbpnlTop.TabIndex = 1;
             // 
             // lblTitle
@@ -144,10 +145,9 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(175)))));
-            this.lblTitle.Location = new System.Drawing.Point(683, 0);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitle.Location = new System.Drawing.Point(917, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(128, 39);
+            this.lblTitle.Size = new System.Drawing.Size(159, 48);
             this.lblTitle.TabIndex = 7;
             this.lblTitle.Text = "Our Product";
             // 
@@ -164,10 +164,10 @@
             this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.btnPrint.ForeColor = System.Drawing.Color.Black;
             this.btnPrint.Image = global::Management_Coffee_Shop.Properties.Resources.printer_3022251;
-            this.btnPrint.Location = new System.Drawing.Point(240, 0);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.btnPrint.Location = new System.Drawing.Point(320, 0);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(58, 39);
+            this.btnPrint.Size = new System.Drawing.Size(77, 48);
             this.btnPrint.TabIndex = 5;
             this.btnPrint.Text = "Print";
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
@@ -185,10 +185,10 @@
             this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.btnRefresh.ForeColor = System.Drawing.Color.Black;
             this.btnRefresh.Image = global::Management_Coffee_Shop.Properties.Resources.refresh_10025481;
-            this.btnRefresh.Location = new System.Drawing.Point(180, 0);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.btnRefresh.Location = new System.Drawing.Point(240, 0);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(58, 39);
+            this.btnRefresh.Size = new System.Drawing.Size(77, 48);
             this.btnRefresh.TabIndex = 4;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
@@ -206,10 +206,10 @@
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
             this.btnDelete.Image = global::Management_Coffee_Shop.Properties.Resources.trash_9915683;
-            this.btnDelete.Location = new System.Drawing.Point(120, 0);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.btnDelete.Location = new System.Drawing.Point(160, 0);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(58, 39);
+            this.btnDelete.Size = new System.Drawing.Size(77, 48);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Delete";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -227,10 +227,10 @@
             this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.btnEdit.ForeColor = System.Drawing.Color.Black;
             this.btnEdit.Image = global::Management_Coffee_Shop.Properties.Resources.write_7879263;
-            this.btnEdit.Location = new System.Drawing.Point(60, 0);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.btnEdit.Location = new System.Drawing.Point(80, 0);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(58, 39);
+            this.btnEdit.Size = new System.Drawing.Size(77, 48);
             this.btnEdit.TabIndex = 2;
             this.btnEdit.Text = "Edit";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -249,9 +249,9 @@
             this.btnAdd.ForeColor = System.Drawing.Color.Black;
             this.btnAdd.Image = global::Management_Coffee_Shop.Properties.Resources.new_page_7879261;
             this.btnAdd.Location = new System.Drawing.Point(0, 0);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(58, 39);
+            this.btnAdd.Size = new System.Drawing.Size(77, 48);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -263,10 +263,10 @@
             this.pnlArea.Controls.Add(this.pnlEditProduct);
             this.pnlArea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlArea.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlArea.Location = new System.Drawing.Point(0, 39);
-            this.pnlArea.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlArea.Location = new System.Drawing.Point(0, 48);
+            this.pnlArea.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlArea.Name = "pnlArea";
-            this.pnlArea.Size = new System.Drawing.Size(1195, 634);
+            this.pnlArea.Size = new System.Drawing.Size(1593, 780);
             this.pnlArea.TabIndex = 4;
             // 
             // pnlGrid
@@ -275,9 +275,9 @@
             this.pnlGrid.Controls.Add(this.dgvProduct);
             this.pnlGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlGrid.Location = new System.Drawing.Point(0, 0);
-            this.pnlGrid.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlGrid.Name = "pnlGrid";
-            this.pnlGrid.Size = new System.Drawing.Size(888, 634);
+            this.pnlGrid.Size = new System.Drawing.Size(1184, 780);
             this.pnlGrid.TabIndex = 7;
             // 
             // dgvProduct
@@ -305,7 +305,8 @@
             this.colName,
             this.colCategory,
             this.colPrice,
-            this.colUnit});
+            this.colDescribe,
+            this.colSales});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(25)))), ((int)(((byte)(66)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -325,60 +326,10 @@
             this.dgvProduct.RowHeadersWidth = 35;
             this.dgvProduct.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProduct.Size = new System.Drawing.Size(888, 634);
+            this.dgvProduct.Size = new System.Drawing.Size(1184, 780);
             this.dgvProduct.TabIndex = 2;
             this.dgvProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellContentClick);
             this.dgvProduct.SelectionChanged += new System.EventHandler(this.dgvProduct_SelectionChanged);
-            // 
-            // colID
-            // 
-            this.colID.DataPropertyName = "ID";
-            this.colID.HeaderText = "ID";
-            this.colID.MinimumWidth = 15;
-            this.colID.Name = "colID";
-            this.colID.ReadOnly = true;
-            this.colID.Width = 60;
-            // 
-            // colName
-            // 
-            this.colName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.colName.DataPropertyName = "Name";
-            this.colName.FillWeight = 150F;
-            this.colName.HeaderText = "Name";
-            this.colName.MinimumWidth = 150;
-            this.colName.Name = "colName";
-            this.colName.ReadOnly = true;
-            this.colName.Width = 150;
-            // 
-            // colCategory
-            // 
-            this.colCategory.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colCategory.DataPropertyName = "Category";
-            this.colCategory.FillWeight = 120F;
-            this.colCategory.HeaderText = "Category";
-            this.colCategory.MinimumWidth = 120;
-            this.colCategory.Name = "colCategory";
-            this.colCategory.ReadOnly = true;
-            // 
-            // colPrice
-            // 
-            this.colPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colPrice.DataPropertyName = "Price";
-            this.colPrice.FillWeight = 120F;
-            this.colPrice.HeaderText = "Price";
-            this.colPrice.MinimumWidth = 120;
-            this.colPrice.Name = "colPrice";
-            this.colPrice.ReadOnly = true;
-            // 
-            // colUnit
-            // 
-            this.colUnit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colUnit.DataPropertyName = "Unit";
-            this.colUnit.FillWeight = 120F;
-            this.colUnit.HeaderText = "Unit";
-            this.colUnit.MinimumWidth = 120;
-            this.colUnit.Name = "colUnit";
-            this.colUnit.ReadOnly = true;
             // 
             // pnlEditProduct
             // 
@@ -389,10 +340,10 @@
             this.pnlEditProduct.Controls.Add(this.pnlEditProductTop);
             this.pnlEditProduct.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlEditProduct.FillColor = System.Drawing.Color.White;
-            this.pnlEditProduct.Location = new System.Drawing.Point(888, 0);
-            this.pnlEditProduct.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlEditProduct.Location = new System.Drawing.Point(1184, 0);
+            this.pnlEditProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlEditProduct.Name = "pnlEditProduct";
-            this.pnlEditProduct.Size = new System.Drawing.Size(307, 634);
+            this.pnlEditProduct.Size = new System.Drawing.Size(409, 780);
             this.pnlEditProduct.TabIndex = 6;
             // 
             // pnlEditProductFill
@@ -403,11 +354,11 @@
             this.pnlEditProductFill.BorderThickness = 2;
             this.pnlEditProductFill.Controls.Add(this.tblEditProduct);
             this.pnlEditProductFill.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlEditProductFill.Location = new System.Drawing.Point(0, 41);
-            this.pnlEditProductFill.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlEditProductFill.Location = new System.Drawing.Point(0, 50);
+            this.pnlEditProductFill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlEditProductFill.Name = "pnlEditProductFill";
-            this.pnlEditProductFill.Padding = new System.Windows.Forms.Padding(3);
-            this.pnlEditProductFill.Size = new System.Drawing.Size(307, 593);
+            this.pnlEditProductFill.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlEditProductFill.Size = new System.Drawing.Size(409, 730);
             this.pnlEditProductFill.TabIndex = 4;
             // 
             // tblEditProduct
@@ -437,28 +388,28 @@
             this.tblEditProduct.Controls.Add(this.lblDescription, 0, 14);
             this.tblEditProduct.Controls.Add(this.txtName, 0, 4);
             this.tblEditProduct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblEditProduct.Location = new System.Drawing.Point(3, 3);
-            this.tblEditProduct.Margin = new System.Windows.Forms.Padding(2);
+            this.tblEditProduct.Location = new System.Drawing.Point(4, 4);
+            this.tblEditProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tblEditProduct.Name = "tblEditProduct";
             this.tblEditProduct.RowCount = 16;
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 19F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 260F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 260F));
-            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
-            this.tblEditProduct.Size = new System.Drawing.Size(301, 587);
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 320F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 320F));
+            this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tblEditProduct.Size = new System.Drawing.Size(401, 722);
             this.tblEditProduct.TabIndex = 3;
             // 
             // dgvDescription
@@ -490,14 +441,14 @@
             this.dgvDescription.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvDescription.EnableHeadersVisualStyles = false;
             this.dgvDescription.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
-            this.dgvDescription.Location = new System.Drawing.Point(2, 641);
-            this.dgvDescription.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvDescription.Location = new System.Drawing.Point(3, 792);
+            this.dgvDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDescription.Name = "dgvDescription";
             this.dgvDescription.RowHeadersVisible = false;
             this.dgvDescription.RowHeadersWidth = 62;
             this.dgvDescription.RowTemplate.Height = 28;
             this.dgvDescription.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDescription.Size = new System.Drawing.Size(280, 245);
+            this.dgvDescription.Size = new System.Drawing.Size(374, 302);
             this.dgvDescription.TabIndex = 32;
             // 
             // pbAvatar
@@ -505,13 +456,13 @@
             this.pbAvatar.BorderRadius = 20;
             this.pbAvatar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbAvatar.ImageRotate = 0F;
-            this.pbAvatar.Location = new System.Drawing.Point(96, 2);
-            this.pbAvatar.Margin = new System.Windows.Forms.Padding(2);
+            this.pbAvatar.Location = new System.Drawing.Point(129, 2);
+            this.pbAvatar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbAvatar.Name = "pbAvatar";
-            this.pbAvatar.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbAvatar.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tblEditProduct.SetRowSpan(this.pbAvatar, 2);
-            this.pbAvatar.Size = new System.Drawing.Size(90, 55);
-            this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAvatar.Size = new System.Drawing.Size(120, 69);
+            this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbAvatar.TabIndex = 0;
             this.pbAvatar.TabStop = false;
             this.pbAvatar.Click += new System.EventHandler(this.pbAvatar_Click);
@@ -521,10 +472,10 @@
             this.guna2Panel4.Controls.Add(this.btnImageCancel);
             this.guna2Panel4.Controls.Add(this.btnImageChange);
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel4.Location = new System.Drawing.Point(94, 59);
+            this.guna2Panel4.Location = new System.Drawing.Point(126, 73);
             this.guna2Panel4.Margin = new System.Windows.Forms.Padding(0);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(94, 19);
+            this.guna2Panel4.Size = new System.Drawing.Size(126, 23);
             this.guna2Panel4.TabIndex = 3;
             // 
             // btnImageCancel
@@ -540,10 +491,10 @@
             this.btnImageCancel.ForeColor = System.Drawing.Color.White;
             this.btnImageCancel.Image = global::Management_Coffee_Shop.Properties.Resources.image_13406883;
             this.btnImageCancel.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnImageCancel.Location = new System.Drawing.Point(50, 0);
-            this.btnImageCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnImageCancel.Location = new System.Drawing.Point(67, 0);
+            this.btnImageCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnImageCancel.Name = "btnImageCancel";
-            this.btnImageCancel.Size = new System.Drawing.Size(44, 19);
+            this.btnImageCancel.Size = new System.Drawing.Size(59, 23);
             this.btnImageCancel.TabIndex = 3;
             this.btnImageCancel.Click += new System.EventHandler(this.btnImageCancel_Click);
             // 
@@ -561,9 +512,9 @@
             this.btnImageChange.Image = global::Management_Coffee_Shop.Properties.Resources.image_13406897;
             this.btnImageChange.ImageSize = new System.Drawing.Size(30, 30);
             this.btnImageChange.Location = new System.Drawing.Point(0, 0);
-            this.btnImageChange.Margin = new System.Windows.Forms.Padding(2);
+            this.btnImageChange.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnImageChange.Name = "btnImageChange";
-            this.btnImageChange.Size = new System.Drawing.Size(44, 19);
+            this.btnImageChange.Size = new System.Drawing.Size(59, 23);
             this.btnImageChange.TabIndex = 1;
             this.btnImageChange.Click += new System.EventHandler(this.btnImageChange_Click);
             // 
@@ -572,10 +523,9 @@
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.Black;
-            this.lblName.Location = new System.Drawing.Point(2, 78);
-            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblName.Location = new System.Drawing.Point(3, 96);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(56, 20);
+            this.lblName.Size = new System.Drawing.Size(68, 25);
             this.lblName.TabIndex = 4;
             this.lblName.Text = "Name";
             // 
@@ -584,10 +534,9 @@
             this.lblCategory.AutoSize = true;
             this.lblCategory.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategory.ForeColor = System.Drawing.Color.Black;
-            this.lblCategory.Location = new System.Drawing.Point(2, 137);
-            this.lblCategory.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCategory.Location = new System.Drawing.Point(3, 169);
             this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(80, 20);
+            this.lblCategory.Size = new System.Drawing.Size(98, 25);
             this.lblCategory.TabIndex = 6;
             this.lblCategory.Text = "Category";
             // 
@@ -606,12 +555,12 @@
             this.txtPrice.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.txtPrice.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            this.txtPrice.Location = new System.Drawing.Point(4, 221);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPrice.Location = new System.Drawing.Point(5, 273);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.PlaceholderText = "";
             this.txtPrice.SelectedText = "";
-            this.txtPrice.Size = new System.Drawing.Size(276, 29);
+            this.txtPrice.Size = new System.Drawing.Size(368, 36);
             this.txtPrice.TabIndex = 8;
             this.txtPrice.TextChanged += new System.EventHandler(this.txtPrice_TextChanged);
             this.txtPrice.Leave += new System.EventHandler(this.txtPrice_Leave);
@@ -621,10 +570,9 @@
             this.lblPrice.AutoSize = true;
             this.lblPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrice.ForeColor = System.Drawing.Color.Black;
-            this.lblPrice.Location = new System.Drawing.Point(2, 196);
-            this.lblPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPrice.Location = new System.Drawing.Point(3, 242);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(48, 20);
+            this.lblPrice.Size = new System.Drawing.Size(59, 25);
             this.lblPrice.TabIndex = 9;
             this.lblPrice.Text = "Price";
             // 
@@ -642,10 +590,10 @@
             this.cbbCategory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.cbbCategory.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.cbbCategory.ItemHeight = 30;
-            this.cbbCategory.Location = new System.Drawing.Point(2, 159);
-            this.cbbCategory.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbCategory.Location = new System.Drawing.Point(3, 196);
+            this.cbbCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbCategory.Name = "cbbCategory";
-            this.cbbCategory.Size = new System.Drawing.Size(280, 36);
+            this.cbbCategory.Size = new System.Drawing.Size(372, 36);
             this.cbbCategory.TabIndex = 23;
             this.cbbCategory.SelectedIndexChanged += new System.EventHandler(this.cbbCategory_SelectedIndexChanged);
             this.cbbCategory.Leave += new System.EventHandler(this.cbbCategory_Leave);
@@ -655,10 +603,9 @@
             this.lblRecipe.AutoSize = true;
             this.lblRecipe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRecipe.ForeColor = System.Drawing.Color.Black;
-            this.lblRecipe.Location = new System.Drawing.Point(2, 295);
-            this.lblRecipe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRecipe.Location = new System.Drawing.Point(3, 365);
             this.lblRecipe.Name = "lblRecipe";
-            this.lblRecipe.Size = new System.Drawing.Size(61, 20);
+            this.lblRecipe.Size = new System.Drawing.Size(75, 25);
             this.lblRecipe.TabIndex = 13;
             this.lblRecipe.Text = "Recipe";
             // 
@@ -671,10 +618,10 @@
             this.rbM.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbM.CheckedState.InnerOffset = -4;
             this.rbM.ForeColor = System.Drawing.Color.Black;
-            this.rbM.Location = new System.Drawing.Point(96, 257);
-            this.rbM.Margin = new System.Windows.Forms.Padding(2);
+            this.rbM.Location = new System.Drawing.Point(129, 317);
+            this.rbM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbM.Name = "rbM";
-            this.rbM.Size = new System.Drawing.Size(36, 16);
+            this.rbM.Size = new System.Drawing.Size(43, 21);
             this.rbM.TabIndex = 25;
             this.rbM.Text = "M";
             this.rbM.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -691,10 +638,10 @@
             this.rbL.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbL.CheckedState.InnerOffset = -4;
             this.rbL.ForeColor = System.Drawing.Color.Black;
-            this.rbL.Location = new System.Drawing.Point(96, 277);
-            this.rbL.Margin = new System.Windows.Forms.Padding(2);
+            this.rbL.Location = new System.Drawing.Point(129, 342);
+            this.rbL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbL.Name = "rbL";
-            this.rbL.Size = new System.Drawing.Size(31, 16);
+            this.rbL.Size = new System.Drawing.Size(37, 21);
             this.rbL.TabIndex = 26;
             this.rbL.Text = "L";
             this.rbL.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -711,10 +658,10 @@
             this.rbVipPro.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbVipPro.CheckedState.InnerOffset = -4;
             this.rbVipPro.ForeColor = System.Drawing.Color.Black;
-            this.rbVipPro.Location = new System.Drawing.Point(190, 277);
-            this.rbVipPro.Margin = new System.Windows.Forms.Padding(2);
+            this.rbVipPro.Location = new System.Drawing.Point(255, 342);
+            this.rbVipPro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbVipPro.Name = "rbVipPro";
-            this.rbVipPro.Size = new System.Drawing.Size(60, 16);
+            this.rbVipPro.Size = new System.Drawing.Size(74, 21);
             this.rbVipPro.TabIndex = 24;
             this.rbVipPro.Text = "VipPro";
             this.rbVipPro.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -731,10 +678,10 @@
             this.rbX.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbX.CheckedState.InnerOffset = -4;
             this.rbX.ForeColor = System.Drawing.Color.Black;
-            this.rbX.Location = new System.Drawing.Point(190, 257);
-            this.rbX.Margin = new System.Windows.Forms.Padding(2);
+            this.rbX.Location = new System.Drawing.Point(255, 317);
+            this.rbX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbX.Name = "rbX";
-            this.rbX.Size = new System.Drawing.Size(32, 16);
+            this.rbX.Size = new System.Drawing.Size(39, 21);
             this.rbX.TabIndex = 27;
             this.rbX.Text = "X";
             this.rbX.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -747,10 +694,9 @@
             this.lblUnit.AutoSize = true;
             this.lblUnit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUnit.ForeColor = System.Drawing.Color.Black;
-            this.lblUnit.Location = new System.Drawing.Point(2, 255);
-            this.lblUnit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUnit.Location = new System.Drawing.Point(3, 315);
             this.lblUnit.Name = "lblUnit";
-            this.lblUnit.Size = new System.Drawing.Size(43, 20);
+            this.lblUnit.Size = new System.Drawing.Size(52, 25);
             this.lblUnit.TabIndex = 10;
             this.lblUnit.Text = "Unit";
             this.lblUnit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -788,14 +734,14 @@
             this.dgvRecipe.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvRecipe.EnableHeadersVisualStyles = false;
             this.dgvRecipe.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
-            this.dgvRecipe.Location = new System.Drawing.Point(2, 323);
-            this.dgvRecipe.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvRecipe.Location = new System.Drawing.Point(3, 400);
+            this.dgvRecipe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvRecipe.Name = "dgvRecipe";
             this.dgvRecipe.RowHeadersVisible = false;
             this.dgvRecipe.RowHeadersWidth = 62;
             this.dgvRecipe.RowTemplate.Height = 28;
             this.dgvRecipe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRecipe.Size = new System.Drawing.Size(280, 244);
+            this.dgvRecipe.Size = new System.Drawing.Size(374, 300);
             this.dgvRecipe.TabIndex = 28;
             // 
             // colIngredient
@@ -832,10 +778,10 @@
             this.panel1.Controls.Add(this.btnBookRecipe);
             this.panel1.Controls.Add(this.btnAddRecipe);
             this.panel1.Controls.Add(this.btnEditRecipe);
-            this.panel1.Location = new System.Drawing.Point(2, 577);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(3, 712);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(279, 35);
+            this.panel1.Size = new System.Drawing.Size(372, 43);
             this.panel1.TabIndex = 31;
             // 
             // btnDeleteRecipe
@@ -850,10 +796,10 @@
             this.btnDeleteRecipe.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.btnDeleteRecipe.ForeColor = System.Drawing.Color.White;
             this.btnDeleteRecipe.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnDeleteRecipe.Location = new System.Drawing.Point(138, 0);
-            this.btnDeleteRecipe.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeleteRecipe.Location = new System.Drawing.Point(184, 0);
+            this.btnDeleteRecipe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDeleteRecipe.Name = "btnDeleteRecipe";
-            this.btnDeleteRecipe.Size = new System.Drawing.Size(54, 35);
+            this.btnDeleteRecipe.Size = new System.Drawing.Size(72, 43);
             this.btnDeleteRecipe.TabIndex = 31;
             this.btnDeleteRecipe.Text = "Delete";
             this.btnDeleteRecipe.Click += new System.EventHandler(this.btnDeleteRecipe_Click);
@@ -870,10 +816,10 @@
             this.btnBookRecipe.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.btnBookRecipe.ForeColor = System.Drawing.Color.White;
             this.btnBookRecipe.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnBookRecipe.Location = new System.Drawing.Point(203, 0);
-            this.btnBookRecipe.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBookRecipe.Location = new System.Drawing.Point(271, 0);
+            this.btnBookRecipe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBookRecipe.Name = "btnBookRecipe";
-            this.btnBookRecipe.Size = new System.Drawing.Size(54, 35);
+            this.btnBookRecipe.Size = new System.Drawing.Size(72, 43);
             this.btnBookRecipe.TabIndex = 30;
             this.btnBookRecipe.Text = "Book";
             this.btnBookRecipe.Click += new System.EventHandler(this.btnBookRecipe_Click);
@@ -890,10 +836,10 @@
             this.btnAddRecipe.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.btnAddRecipe.ForeColor = System.Drawing.Color.White;
             this.btnAddRecipe.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnAddRecipe.Location = new System.Drawing.Point(22, 0);
-            this.btnAddRecipe.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddRecipe.Location = new System.Drawing.Point(29, 0);
+            this.btnAddRecipe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddRecipe.Name = "btnAddRecipe";
-            this.btnAddRecipe.Size = new System.Drawing.Size(54, 35);
+            this.btnAddRecipe.Size = new System.Drawing.Size(72, 43);
             this.btnAddRecipe.TabIndex = 29;
             this.btnAddRecipe.Text = "Add";
             this.btnAddRecipe.Click += new System.EventHandler(this.btnAddRecipe_Click);
@@ -910,10 +856,10 @@
             this.btnEditRecipe.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.btnEditRecipe.ForeColor = System.Drawing.Color.White;
             this.btnEditRecipe.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnEditRecipe.Location = new System.Drawing.Point(80, 0);
-            this.btnEditRecipe.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditRecipe.Location = new System.Drawing.Point(107, 0);
+            this.btnEditRecipe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditRecipe.Name = "btnEditRecipe";
-            this.btnEditRecipe.Size = new System.Drawing.Size(54, 35);
+            this.btnEditRecipe.Size = new System.Drawing.Size(72, 43);
             this.btnEditRecipe.TabIndex = 30;
             this.btnEditRecipe.Text = "Edit";
             this.btnEditRecipe.Click += new System.EventHandler(this.btnEditRecipe_Click);
@@ -923,10 +869,9 @@
             this.tblEditProduct.SetColumnSpan(this.lblDescription, 2);
             this.lblDescription.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.ForeColor = System.Drawing.Color.Black;
-            this.lblDescription.Location = new System.Drawing.Point(2, 614);
-            this.lblDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDescription.Location = new System.Drawing.Point(3, 758);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(157, 18);
+            this.lblDescription.Size = new System.Drawing.Size(209, 22);
             this.lblDescription.TabIndex = 19;
             this.lblDescription.Text = "Customer Rating";
             // 
@@ -947,12 +892,12 @@
             this.txtName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.txtName.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            this.txtName.Location = new System.Drawing.Point(4, 103);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtName.Location = new System.Drawing.Point(6, 127);
+            this.txtName.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtName.Name = "txtName";
             this.txtName.PlaceholderText = "";
             this.txtName.SelectedText = "";
-            this.txtName.Size = new System.Drawing.Size(276, 29);
+            this.txtName.Size = new System.Drawing.Size(368, 36);
             this.txtName.TabIndex = 5;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             this.txtName.Leave += new System.EventHandler(this.txtName_Leave);
@@ -969,9 +914,9 @@
             this.pnlEditProductTop.Controls.Add(this.btnCancel);
             this.pnlEditProductTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlEditProductTop.Location = new System.Drawing.Point(0, 0);
-            this.pnlEditProductTop.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlEditProductTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlEditProductTop.Name = "pnlEditProductTop";
-            this.pnlEditProductTop.Size = new System.Drawing.Size(307, 41);
+            this.pnlEditProductTop.Size = new System.Drawing.Size(409, 50);
             this.pnlEditProductTop.TabIndex = 2;
             // 
             // lblStatus
@@ -979,10 +924,9 @@
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblStatus.ForeColor = System.Drawing.Color.Black;
-            this.lblStatus.Location = new System.Drawing.Point(80, 8);
-            this.lblStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblStatus.Location = new System.Drawing.Point(107, 10);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(49, 19);
+            this.lblStatus.Size = new System.Drawing.Size(60, 23);
             this.lblStatus.TabIndex = 6;
             this.lblStatus.Text = "Status";
             this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -992,10 +936,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(10, 8);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(13, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(23, 19);
+            this.label1.Size = new System.Drawing.Size(28, 23);
             this.label1.TabIndex = 5;
             this.label1.Text = "ID";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1016,10 +959,10 @@
             this.btnConfirm.ForeColor = System.Drawing.Color.White;
             this.btnConfirm.Image = global::Management_Coffee_Shop.Properties.Resources.check_11601271;
             this.btnConfirm.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnConfirm.Location = new System.Drawing.Point(191, 0);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.btnConfirm.Location = new System.Drawing.Point(255, 0);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(58, 41);
+            this.btnConfirm.Size = new System.Drawing.Size(77, 50);
             this.btnConfirm.TabIndex = 4;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
@@ -1039,10 +982,10 @@
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Image = global::Management_Coffee_Shop.Properties.Resources.cross_mark_11601293;
             this.btnCancel.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnCancel.Location = new System.Drawing.Point(249, 0);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.btnCancel.Location = new System.Drawing.Point(332, 0);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(58, 41);
+            this.btnCancel.Size = new System.Drawing.Size(77, 50);
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -1079,17 +1022,77 @@
             this.elipseDescription.BorderRadius = 13;
             this.elipseDescription.TargetControl = this.dgvDescription;
             // 
+            // colID
+            // 
+            this.colID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colID.DataPropertyName = "ID";
+            this.colID.HeaderText = "ID";
+            this.colID.MinimumWidth = 15;
+            this.colID.Name = "colID";
+            this.colID.ReadOnly = true;
+            // 
+            // colName
+            // 
+            this.colName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.colName.DataPropertyName = "Name";
+            this.colName.FillWeight = 150F;
+            this.colName.HeaderText = "Name";
+            this.colName.MinimumWidth = 150;
+            this.colName.Name = "colName";
+            this.colName.ReadOnly = true;
+            this.colName.Width = 150;
+            // 
+            // colCategory
+            // 
+            this.colCategory.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colCategory.DataPropertyName = "Category";
+            this.colCategory.FillWeight = 120F;
+            this.colCategory.HeaderText = "Category";
+            this.colCategory.MinimumWidth = 120;
+            this.colCategory.Name = "colCategory";
+            this.colCategory.ReadOnly = true;
+            // 
+            // colPrice
+            // 
+            this.colPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colPrice.DataPropertyName = "Price";
+            this.colPrice.FillWeight = 120F;
+            this.colPrice.HeaderText = "Price";
+            this.colPrice.MinimumWidth = 120;
+            this.colPrice.Name = "colPrice";
+            this.colPrice.ReadOnly = true;
+            // 
+            // colDescribe
+            // 
+            this.colDescribe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colDescribe.DataPropertyName = "Ingredient";
+            this.colDescribe.FillWeight = 120F;
+            this.colDescribe.HeaderText = "Describe";
+            this.colDescribe.MinimumWidth = 140;
+            this.colDescribe.Name = "colDescribe";
+            this.colDescribe.ReadOnly = true;
+            // 
+            // colSales
+            // 
+            this.colSales.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colSales.DataPropertyName = "Stock";
+            this.colSales.FillWeight = 120F;
+            this.colSales.HeaderText = "Sales";
+            this.colSales.MinimumWidth = 140;
+            this.colSales.Name = "colSales";
+            this.colSales.ReadOnly = true;
+            // 
             // ucProduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(25)))), ((int)(((byte)(66)))));
             this.Controls.Add(this.pnlArea);
             this.Controls.Add(this.tbpnlTop);
             this.ForeColor = System.Drawing.Color.White;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ucProduct";
-            this.Size = new System.Drawing.Size(1195, 673);
+            this.Size = new System.Drawing.Size(1593, 828);
             this.Load += new System.EventHandler(this.ucProduct_Load);
             this.tbpnlTop.ResumeLayout(false);
             this.tbpnlTop.PerformLayout();
@@ -1170,6 +1173,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCategory;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colUnit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDescribe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSales;
     }
 }

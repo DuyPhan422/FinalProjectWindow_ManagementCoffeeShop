@@ -36,55 +36,25 @@ namespace Management_Coffee_Shop
         }
         private void dgvProduct_DoubleClick(object sender, EventArgs e)
         {
-            // Kiểm tra xem có hàng nào được chọn không
             if (dgvProduct.SelectedRows.Count > 0 && dgvProduct.DataSource != null)
             {
-                // Lấy DataTable gốc từ DataSource của dgvProduct
                 DataTable dt = (DataTable)dgvProduct.DataSource;
                 int selectedIndex = dgvProduct.SelectedRows[0].Index;
                 DataRow selectedRow = dt.Rows[selectedIndex];
 
-                // Lưu ID sản phẩm được chọn
                 selectedProductId = Convert.ToInt32(selectedRow["ID"]);
 
-                // Hiển thị thông tin sản phẩm lên các điều khiển để chỉnh sửa
                 txtName.Text = selectedRow["Name"]?.ToString();
                 cbbCategory.SelectedItem = selectedRow["Category"]?.ToString();
                 txtPrice.Text = selectedRow["Price"]?.ToString();
 
-                // Cài đặt RadioButton dựa trên cột Unit
-                string unit = selectedRow["Unit"]?.ToString();
-                switch (unit)
-                {
-                    case "M":
-                        rbM.Checked = true;
-                        break;
-                    case "L":
-                        rbL.Checked = true;
-                        break;
-                    case "X":
-                        rbX.Checked = true;
-                        break;
-                    case "VipPro":
-                        rbVipPro.Checked = true;
-                        break;
-                    default:
-                        rbM.Checked = false;
-                        rbL.Checked = false;
-                        rbX.Checked = false;
-                        rbVipPro.Checked = false;
-                        break;
-                }
-
                 // Hiển thị dữ liệu cho dgvRecipe
                 DataTable dtRecipe = new DataTable();
                 dtRecipe.Columns.Add("Ingredient", typeof(string));
-                dtRecipe.Columns.Add("Supplier", typeof(string));
                 dtRecipe.Columns.Add("Stock", typeof(int));
 
                 DataRow recipeRow = dtRecipe.NewRow();
                 recipeRow["Ingredient"] = selectedRow["Ingredient"]?.ToString() ?? "Chưa có";
-                recipeRow["Supplier"] = selectedRow["Supplier"]?.ToString() ?? "Chưa có";
                 recipeRow["Stock"] = selectedRow["Stock"]?.ToString() ?? "0";
                 dtRecipe.Rows.Add(recipeRow);
 
@@ -121,7 +91,6 @@ namespace Management_Coffee_Shop
                     selectedImagePath = null;
                 }
 
-                // Kích hoạt chế độ chỉnh sửa: mở bảng chỉnh sửa, vô hiệu hóa tbpnlTop và chạy timer
                 timer.Start();
                 tbpnlTop.Enabled = false;
             }
@@ -148,53 +117,27 @@ namespace Management_Coffee_Shop
         {
             if (dgvProduct.SelectedRows.Count > 0 && dgvProduct.DataSource != null)
             {
-                // Lấy DataTable gốc từ DataSource của dgvProduct
                 DataTable dt = (DataTable)dgvProduct.DataSource;
                 int selectedIndex = dgvProduct.SelectedRows[0].Index;
                 DataRow selectedRow = dt.Rows[selectedIndex];
 
-                // Hiển thị Name, Category, Price và Unit
                 txtName.Text = selectedRow["Name"]?.ToString();
                 txtPrice.Text = selectedRow["Price"]?.ToString();
                 cbbCategory.SelectedItem = selectedRow["Category"]?.ToString();
-                string unit = selectedRow["Unit"]?.ToString();
-                switch (unit)
-                {
-                    case "M":
-                        rbM.Checked = true;
-                        break;
-                    case "L":
-                        rbL.Checked = true;
-                        break;
-                    case "X":
-                        rbX.Checked = true;
-                        break;
-                    case "VipPro":
-                        rbVipPro.Checked = true;
-                        break;
-                    default:
-                        rbM.Checked = false;
-                        rbL.Checked = false;
-                        rbX.Checked = false;
-                        rbVipPro.Checked = false;
-                        break;
-                }
 
-                // Hiển thị Ingredient, Supplier, Stock trong dgvRecipe
+                // Hiển thị Ingredient và Stock trong dgvRecipe
                 DataTable dtRecipe = new DataTable();
                 dtRecipe.Columns.Add("Ingredient", typeof(string));
-                dtRecipe.Columns.Add("Supplier", typeof(string));
                 dtRecipe.Columns.Add("Stock", typeof(int));
 
                 DataRow recipeRow = dtRecipe.NewRow();
                 recipeRow["Ingredient"] = selectedRow["Ingredient"]?.ToString() ?? "Chưa có";
-                recipeRow["Supplier"] = selectedRow["Supplier"]?.ToString() ?? "Chưa có";
                 recipeRow["Stock"] = selectedRow["Stock"]?.ToString() ?? "0";
                 dtRecipe.Rows.Add(recipeRow);
 
                 dgvRecipe.DataSource = dtRecipe;
 
-                // Hiển thị CustomerRating trong dgvDescription (chỉ đọc)
+                // Hiển thị CustomerRating trong dgvDescription
                 DataTable dtDescription = new DataTable();
                 dtDescription.Columns.Add("CustomerRating", typeof(string));
 
@@ -257,21 +200,15 @@ namespace Management_Coffee_Shop
             txtName.Text = "";
             cbbCategory.SelectedIndex = -1;
             txtPrice.Text = "";
-            rbM.Checked = false;
-            rbL.Checked = false;
-            rbX.Checked = false;
-            rbVipPro.Checked = false;
 
             // Đặt lại dữ liệu trong dgvRecipe
             DataTable dtRecipe = new DataTable();
             dtRecipe.Columns.Add("Ingredient", typeof(string));
-            dtRecipe.Columns.Add("Supplier", typeof(string));
             dtRecipe.Columns.Add("Stock", typeof(int));
 
             DataRow recipeRow = dtRecipe.NewRow();
             recipeRow["Ingredient"] = "Chưa có";
-            recipeRow["Supplier"] = "Chưa có";
-            recipeRow["Stock"] = "0";
+            recipeRow["Stock"] = 0;
             dtRecipe.Rows.Add(recipeRow);
 
             dgvRecipe.DataSource = dtRecipe;
@@ -328,7 +265,6 @@ namespace Management_Coffee_Shop
         {
             if (dgvProduct.SelectedRows.Count > 0 && dgvProduct.DataSource != null)
             {
-                // Lấy DataTable gốc từ DataSource
                 DataTable dt = (DataTable)dgvProduct.DataSource;
                 int selectedIndex = dgvProduct.SelectedRows[0].Index;
                 DataRow selectedRow = dt.Rows[selectedIndex];
@@ -337,30 +273,6 @@ namespace Management_Coffee_Shop
                 txtName.Text = selectedRow["Name"]?.ToString();
                 cbbCategory.SelectedItem = selectedRow["Category"]?.ToString();
                 txtPrice.Text = selectedRow["Price"]?.ToString();
-
-                // Chọn RadioButton tương ứng dựa trên giá trị Unit
-                string unit = selectedRow["Unit"]?.ToString();
-                switch (unit)
-                {
-                    case "M":
-                        rbM.Checked = true;
-                        break;
-                    case "L":
-                        rbL.Checked = true;
-                        break;
-                    case "X":
-                        rbX.Checked = true;
-                        break;
-                    case "VipPro":
-                        rbVipPro.Checked = true;
-                        break;
-                    default:
-                        rbM.Checked = false;
-                        rbL.Checked = false;
-                        rbX.Checked = false;
-                        rbVipPro.Checked = false;
-                        break;
-                }
 
                 timer.Start();
                 tbpnlTop.Enabled = false;
@@ -406,12 +318,10 @@ namespace Management_Coffee_Shop
             lblTitle.ForeColor = Color.Coral;
             lblTitle.Font = new Font("Microsoft Sans Serif", 15, FontStyle.Bold);
 
-
             // Đảm bảo không tự động tạo cột
             dgvProduct.AutoGenerateColumns = false;
             dgvRecipe.AutoGenerateColumns = false;
             dgvDescription.AutoGenerateColumns = false;
-
 
             // Thiết lập cột cho dgvProduct
             if (dgvProduct.Columns.Count == 0)
@@ -421,9 +331,9 @@ namespace Management_Coffee_Shop
                 colID.Name = "colID";
                 colID.HeaderText = "ID";
                 colID.DataPropertyName = "ID";
-                colID.Width = 50; 
-                colID.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter; // Căn giữa
-                colID.ReadOnly = true; 
+                colID.Width = 80; // Tăng độ rộng cột ID từ 50 lên 80
+                colID.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                colID.ReadOnly = true;
                 dgvProduct.Columns.Add(colID);
 
                 // Cột Name
@@ -431,9 +341,9 @@ namespace Management_Coffee_Shop
                 colName.Name = "colName";
                 colName.HeaderText = "Name";
                 colName.DataPropertyName = "Name";
-                colName.Width = 150; 
-                colName.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft; 
-                colName.DefaultCellStyle.WrapMode = DataGridViewTriState.True; 
+                colName.Width = 150;
+                colName.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+                colName.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
                 dgvProduct.Columns.Add(colName);
 
                 // Cột Category
@@ -441,9 +351,9 @@ namespace Management_Coffee_Shop
                 colCategory.Name = "colCategory";
                 colCategory.HeaderText = "Category";
                 colCategory.DataPropertyName = "Category";
-                colCategory.Width = 120; 
-                colCategory.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft; 
-                colCategory.DefaultCellStyle.WrapMode = DataGridViewTriState.True; 
+                colCategory.Width = 120;
+                colCategory.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+                colCategory.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
                 dgvProduct.Columns.Add(colCategory);
 
                 // Cột Price
@@ -451,20 +361,29 @@ namespace Management_Coffee_Shop
                 colPrice.Name = "colPrice";
                 colPrice.HeaderText = "Price";
                 colPrice.DataPropertyName = "Price";
-                colPrice.Width = 100; // Độ rộng vừa phải cho cột Price
-                colPrice.DefaultCellStyle.Format = "N2"; // Định dạng số với 2 chữ số thập phân
-                colPrice.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight; // Căn phải
+                colPrice.Width = 100;
+                colPrice.DefaultCellStyle.Format = "N2";
+                colPrice.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
                 dgvProduct.Columns.Add(colPrice);
 
-                // Cột Unit
-                DataGridViewTextBoxColumn colUnit = new DataGridViewTextBoxColumn();
-                colUnit.Name = "colUnit";
-                colUnit.HeaderText = "Unit";
-                colUnit.DataPropertyName = "Unit";
-                colUnit.Width = 80; // Độ rộng nhỏ cho cột Unit
-                colUnit.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter; // Căn giữa
-                dgvProduct.Columns.Add(colUnit);
+                // Cột Describe (ánh xạ thành Ingredient)
+                DataGridViewTextBoxColumn colDescribe = new DataGridViewTextBoxColumn();
+                colDescribe.Name = "colDescribe";
+                colDescribe.HeaderText = "Describe";
+                colDescribe.DataPropertyName = "Ingredient"; // Ánh xạ từ cột Ingredient (tương ứng với Describe trong DB)
+                colDescribe.Width = 150;
+                colDescribe.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+                colDescribe.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+                dgvProduct.Columns.Add(colDescribe);
 
+                // Cột Sales (ánh xạ thành Stock)
+                DataGridViewTextBoxColumn colSales = new DataGridViewTextBoxColumn();
+                colSales.Name = "colSales";
+                colSales.HeaderText = "Sales";
+                colSales.DataPropertyName = "Stock"; // Ánh xạ từ cột Stock (tương ứng với Sales trong DB)
+                colSales.Width = 100;
+                colSales.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dgvProduct.Columns.Add(colSales);
             }
 
             // Thiết lập cột cho dgvRecipe
@@ -472,8 +391,6 @@ namespace Management_Coffee_Shop
             {
                 dgvRecipe.Columns.Add("colIngredient", "Ingredient");
                 dgvRecipe.Columns["colIngredient"].DataPropertyName = "Ingredient";
-                dgvRecipe.Columns.Add("colSupplier", "Supplier");
-                dgvRecipe.Columns["colSupplier"].DataPropertyName = "Supplier";
                 dgvRecipe.Columns.Add("colStock", "Stock");
                 dgvRecipe.Columns["colStock"].DataPropertyName = "Stock";
             }
@@ -484,7 +401,7 @@ namespace Management_Coffee_Shop
                 dgvDescription.Columns.Add("colCustomerRating", "Customer Rating");
                 dgvDescription.Columns["colCustomerRating"].DataPropertyName = "CustomerRating";
             }
-            
+
             dgvRecipe.ReadOnly = false;
             dgvDescription.ReadOnly = true;
 
@@ -694,12 +611,6 @@ namespace Management_Coffee_Shop
                 return;
             }
 
-            if (!rbM.Checked && !rbL.Checked && !rbX.Checked && !rbVipPro.Checked)
-            {
-                MessageBox.Show("Vui lòng chọn một đơn vị (Unit)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
             // Lấy dữ liệu từ giao diện
             string name = txtName.Text;
             string category = cbbCategory.SelectedItem.ToString();
@@ -709,11 +620,8 @@ namespace Management_Coffee_Shop
                 return;
             }
 
-            string unit = rbM.Checked ? "M" : rbL.Checked ? "L" : rbX.Checked ? "X" : "VipPro";
-
-            // Lấy dữ liệu từ dgvRecipe (Ingredient, Supplier, Stock)
+            // Lấy dữ liệu từ dgvRecipe (Ingredient, Stock)
             string ingredient = "Chưa có";
-            string supplier = "Chưa có";
             int stock = 0;
 
             if (dgvRecipe.Rows.Count > 0 && dgvRecipe.DataSource != null)
@@ -722,10 +630,6 @@ namespace Management_Coffee_Shop
                 if (dgvRecipe.Columns.Contains("colIngredient"))
                 {
                     ingredient = recipeRow.Cells["colIngredient"].Value?.ToString() ?? "Chưa có";
-                }
-                if (dgvRecipe.Columns.Contains("colSupplier"))
-                {
-                    supplier = recipeRow.Cells["colSupplier"].Value?.ToString() ?? "Chưa có";
                 }
                 if (dgvRecipe.Columns.Contains("colStock"))
                 {
@@ -758,7 +662,7 @@ namespace Management_Coffee_Shop
             // Kiểm tra sản phẩm trùng (chỉ khi thêm mới, không áp dụng khi chỉnh sửa)
             if (selectedProductId == -1) // Thêm mới
             {
-                if (productDb.CheckProductExists(name, category, price, unit, stock, ingredient, supplier, customerRating, selectedImagePath))
+                if (productDb.CheckProductExists(name, category, price, stock, ingredient, customerRating, selectedImagePath))
                 {
                     MessageBox.Show("Sản phẩm với thông tin này đã tồn tại! Vui lòng thay đổi ít nhất một thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -774,16 +678,13 @@ namespace Management_Coffee_Shop
                     string rowName = row["Name"].ToString();
                     string rowCategory = row["Category"].ToString();
                     decimal rowPrice = Convert.ToDecimal(row["Price"]);
-                    string rowUnit = row["Unit"].ToString();
                     int rowStock = Convert.ToInt32(row["Stock"]);
                     string rowIngredient = row["Ingredient"]?.ToString() ?? "Chưa có";
-                    string rowSupplier = row["Supplier"]?.ToString() ?? "Chưa có";
                     string rowCustomerRating = row["CustomerRating"].ToString();
                     string rowImagePath = row["ImagePath"]?.ToString() ?? string.Empty;
 
-                    if (name == rowName && category == rowCategory && price == rowPrice && unit == rowUnit &&
-                        stock == rowStock && ingredient == rowIngredient && supplier == rowSupplier && customerRating == rowCustomerRating &&
-                        selectedImagePath == rowImagePath)
+                    if (name == rowName && category == rowCategory && price == rowPrice && stock == rowStock &&
+                        ingredient == rowIngredient && customerRating == rowCustomerRating && selectedImagePath == rowImagePath)
                     {
                         MessageBox.Show("Sản phẩm với thông tin này đã tồn tại! Vui lòng thay đổi ít nhất một thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
@@ -795,12 +696,12 @@ namespace Management_Coffee_Shop
             {
                 if (selectedProductId == -1) // Thêm sản phẩm mới
                 {
-                    productDb.AddProduct(name, category, price, unit, stock, ingredient, supplier, customerRating, selectedImagePath);
+                    productDb.AddProduct(name, category, price, stock, ingredient, customerRating, selectedImagePath);
                     MessageBox.Show("Thêm sản phẩm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else // Cập nhật sản phẩm
                 {
-                    productDb.UpdateProduct(selectedProductId, name, category, price, unit, stock, ingredient, supplier, customerRating, selectedImagePath);
+                    productDb.UpdateProduct(selectedProductId, name, category, price, stock, ingredient, customerRating, selectedImagePath);
                     MessageBox.Show("Cập nhật sản phẩm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 

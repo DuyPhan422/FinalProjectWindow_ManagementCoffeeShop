@@ -21,7 +21,7 @@ namespace Management_Coffee_Shop
                 using (var connection = GetConnection())
                 {
                     connection.Open();
-                    string query = "SELECT Id, FirstName, LastName, Email, Gender, BirthDate, Phone, Address, Salary, Description, ImagePath FROM dbo.StaffManager";
+                    string query = "SELECT Id, FirstName, LastName, Email, Gender, BirthDate, Phone, Address, Salary, Description, Source_Image FROM dbo.StaffManager";
                     using (var command = new SqlCommand(query, connection))
                     {
                         using (var adapter = new SqlDataAdapter(command))
@@ -67,7 +67,7 @@ namespace Management_Coffee_Shop
             }
         }
 
-        public void AddStaff(string firstName, string lastName, string email, string gender, DateTime birthDate, string phone, string address, decimal salary, string description, string imagePath)
+        public void AddStaff(string firstName, string lastName, string email, string gender, DateTime birthDate, string phone, string address, decimal salary, string description, string sourceImagePath)
         {
             try
             {
@@ -76,8 +76,29 @@ namespace Management_Coffee_Shop
                 using (var connection = GetConnection())
                 {
                     connection.Open();
-                    string query = "INSERT INTO dbo.StaffManager (FirstName, LastName, Email, Gender, BirthDate, Phone, Address, Salary, Description, ImagePath) " +
-                                   "VALUES (@FirstName, @LastName, @Email, @Gender, @BirthDate, @Phone, @Address, @Salary, @Description, @ImagePath)";
+                    int newId;
+                    string getIdQuery = "SELECT MAX(Id) + 1 FROM dbo.StaffManager";
+                    using (var idCommand = new SqlCommand(getIdQuery, connection))
+                    {
+                        var result = idCommand.ExecuteScalar();
+                        newId = result != DBNull.Value ? Convert.ToInt32(result) : 1;
+                    }
+
+                    string query = "INSERT INTO dbo.StaffManager (FirstName, LastName, Email, Gender, BirthDate, Phone, Address, Salary, Description, Source_Image) " +
+                                   "VALUES (@FirstName, @LastName, @Email, @Gender, @BirthDate, @Phone, @Address, @Salary, @Description, @SourceImage)";
+                    string newImagePath = null;
+
+                    if (!string.IsNullOrEmpty(sourceImagePath))
+                    {
+                        string targetFolder = @"..\..\Management coffee shop_image";
+                        if (!Directory.Exists(targetFolder))
+                        {
+                            Directory.CreateDirectory(targetFolder);
+                        }
+                        newImagePath = Path.Combine(targetFolder, $"{newId}.jpg");
+                        File.Copy(sourceImagePath, newImagePath, true);
+                    }
+
                     using (var command = new SqlCommand(query, connection))
                     {
                         command.Parameters.Add("@FirstName", SqlDbType.NVarChar).Value = firstName;
@@ -89,7 +110,7 @@ namespace Management_Coffee_Shop
                         command.Parameters.Add("@Address", SqlDbType.NVarChar).Value = address;
                         command.Parameters.Add("@Salary", SqlDbType.Decimal).Value = salary;
                         command.Parameters.Add("@Description", SqlDbType.NVarChar).Value = (object)description ?? DBNull.Value;
-                        command.Parameters.Add("@ImagePath", SqlDbType.NVarChar).Value = (object)imagePath ?? DBNull.Value;
+                        command.Parameters.Add("@SourceImage", SqlDbType.NVarChar).Value = (object)newImagePath ?? DBNull.Value;
 
                         command.ExecuteNonQuery();
                     }
@@ -107,7 +128,7 @@ namespace Management_Coffee_Shop
             }
         }
 
-        public void UpdateStaff(int id, string firstName, string lastName, string email, string gender, DateTime birthDate, string phone, string address, decimal salary, string description, string imagePath)
+        public void UpdateStaff(int id, string firstName, string lastName, string email, string gender, DateTime birthDate, string phone, string address, decimal salary, string description, string sourceImagePath)
         {
             try
             {
@@ -116,8 +137,40 @@ namespace Management_Coffee_Shop
                 using (var connection = GetConnection())
                 {
                     connection.Open();
+                    string oldImagePath = null;
+                    string getOldImageQuery = "SELECT Source_Image FROM dbo.StaffManager WHERE Id = @Id";
+                    using (var command = new SqlCommand(getOldImageQuery, connection))
+                    {
+                        command.Parameters.Add("@Id", SqlDbType.Int).Value = id;
+                        oldImagePath = command.ExecuteScalar()?.ToString();
+                    }
+
+                    string newImagePath = oldImagePath;
+                    if (!string.IsNullOrEmpty(sourceImagePath) && sourceImagePath != oldImagePath)
+                    {
+                        string targetFolder = @"..\..\Management coffee shop_image";
+                        if (!Directory.Exists(targetFolder))
+                        {
+                            Directory.CreateDirectory(targetFolder);
+                        }
+                        newImagePath = Path.Combine(targetFolder, $"{id}.jpg");
+                        File.Copy(sourceImagePath, newImagePath, true);
+
+                        if (!string.IsNullOrEmpty(oldImagePath) && File.Exists(oldImagePath))
+                        {
+                            try
+                            {
+                                File.Delete(oldImagePath);
+                            }
+                            catch (Exception ex)
+                            {
+                                System.Diagnostics.Debug.WriteLine($"Lỗi khi xóa file ảnh cũ: {ex.Message}");
+                            }
+                        }
+                    }
+
                     string query = "UPDATE dbo.StaffManager SET FirstName = @FirstName, LastName = @LastName, Email = @Email, Gender = @Gender, " +
-                                   "BirthDate = @BirthDate, Phone = @Phone, Address = @Address, Salary = @Salary, Description = @Description, ImagePath = @ImagePath WHERE Id = @Id";
+                                   "BirthDate = @BirthDate, Phone = @Phone, Address = @Address, Salary = @Salary, Description = @Description, Source_Image = @SourceImage WHERE Id = @Id";
                     using (var command = new SqlCommand(query, connection))
                     {
                         command.Parameters.Add("@Id", SqlDbType.Int).Value = id;
@@ -130,7 +183,7 @@ namespace Management_Coffee_Shop
                         command.Parameters.Add("@Address", SqlDbType.NVarChar).Value = address;
                         command.Parameters.Add("@Salary", SqlDbType.Decimal).Value = salary;
                         command.Parameters.Add("@Description", SqlDbType.NVarChar).Value = (object)description ?? DBNull.Value;
-                        command.Parameters.Add("@ImagePath", SqlDbType.NVarChar).Value = (object)imagePath ?? DBNull.Value;
+                        command.Parameters.Add("@SourceImage", SqlDbType.NVarChar).Value = (object)newImagePath ?? DBNull.Value;
 
                         command.ExecuteNonQuery();
                     }
@@ -156,7 +209,7 @@ namespace Management_Coffee_Shop
                 using (var connection = GetConnection())
                 {
                     connection.Open();
-                    string query = "SELECT ImagePath FROM dbo.StaffManager WHERE Id = @Id";
+                    string query = "SELECT Source_Image FROM dbo.StaffManager WHERE Id = @Id";
                     using (var command = new SqlCommand(query, connection))
                     {
                         command.Parameters.Add("@Id", SqlDbType.Int).Value = id;

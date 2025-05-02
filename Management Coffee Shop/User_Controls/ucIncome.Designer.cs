@@ -105,9 +105,9 @@
             // 
             this.tlpTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
             this.tlpTop.ColumnCount = 8;
-            this.tlpTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 158F));
-            this.tlpTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 158F));
-            this.tlpTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 53F));
+            this.tlpTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 211F));
+            this.tlpTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 211F));
+            this.tlpTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 71F));
             this.tlpTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tlpTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tlpTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -127,13 +127,13 @@
             this.tlpTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.tlpTop.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tlpTop.Location = new System.Drawing.Point(0, 0);
-            this.tlpTop.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.tlpTop.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.tlpTop.Name = "tlpTop";
             this.tlpTop.RowCount = 2;
             this.tlpTop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpTop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpTop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
-            this.tlpTop.Size = new System.Drawing.Size(660, 77);
+            this.tlpTop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tlpTop.Size = new System.Drawing.Size(880, 95);
             this.tlpTop.TabIndex = 0;
             // 
             // btnModifyDays
@@ -148,10 +148,10 @@
             this.btnModifyDays.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(161)))), ((int)(((byte)(246)))));
             this.btnModifyDays.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.btnModifyDays.ForeColor = System.Drawing.Color.Black;
-            this.btnModifyDays.Location = new System.Drawing.Point(371, 1);
-            this.btnModifyDays.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnModifyDays.Location = new System.Drawing.Point(496, 1);
+            this.btnModifyDays.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.btnModifyDays.Name = "btnModifyDays";
-            this.btnModifyDays.Size = new System.Drawing.Size(53, 34);
+            this.btnModifyDays.Size = new System.Drawing.Size(71, 42);
             this.btnModifyDays.TabIndex = 9;
             this.btnModifyDays.Text = "Modify";
             this.btnModifyDays.Click += new System.EventHandler(this.btnModifyDays_Click_1);
@@ -164,21 +164,21 @@
             this.pnlTotalProfit.Controls.Add(this.guna2CirclePictureBox3);
             this.pnlTotalProfit.Controls.Add(this.lblTotalProfit);
             this.pnlTotalProfit.Controls.Add(this.lblTotalProfitTop);
-            this.pnlTotalProfit.Location = new System.Drawing.Point(368, 38);
+            this.pnlTotalProfit.Location = new System.Drawing.Point(491, 47);
             this.pnlTotalProfit.Margin = new System.Windows.Forms.Padding(0);
             this.pnlTotalProfit.Name = "pnlTotalProfit";
-            this.pnlTotalProfit.Size = new System.Drawing.Size(239, 38);
+            this.pnlTotalProfit.Size = new System.Drawing.Size(319, 47);
             this.pnlTotalProfit.TabIndex = 8;
             // 
             // guna2CirclePictureBox3
             // 
             this.guna2CirclePictureBox3.Image = global::Management_Coffee_Shop.Properties.Resources.money_transfer_1692495;
             this.guna2CirclePictureBox3.ImageRotate = 0F;
-            this.guna2CirclePictureBox3.Location = new System.Drawing.Point(3, 1);
-            this.guna2CirclePictureBox3.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.guna2CirclePictureBox3.Location = new System.Drawing.Point(4, 1);
+            this.guna2CirclePictureBox3.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.guna2CirclePictureBox3.Name = "guna2CirclePictureBox3";
             this.guna2CirclePictureBox3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox3.Size = new System.Drawing.Size(35, 33);
+            this.guna2CirclePictureBox3.Size = new System.Drawing.Size(47, 41);
             this.guna2CirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2CirclePictureBox3.TabIndex = 9;
             this.guna2CirclePictureBox3.TabStop = false;
@@ -187,10 +187,9 @@
             // 
             this.lblTotalProfit.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lblTotalProfit.ForeColor = System.Drawing.Color.Black;
-            this.lblTotalProfit.Location = new System.Drawing.Point(67, 16);
-            this.lblTotalProfit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTotalProfit.Location = new System.Drawing.Point(89, 20);
             this.lblTotalProfit.Name = "lblTotalProfit";
-            this.lblTotalProfit.Size = new System.Drawing.Size(105, 21);
+            this.lblTotalProfit.Size = new System.Drawing.Size(140, 26);
             this.lblTotalProfit.TabIndex = 7;
             this.lblTotalProfit.Text = "100.000";
             this.lblTotalProfit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -200,10 +199,9 @@
             // 
             this.lblTotalProfitTop.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblTotalProfitTop.ForeColor = System.Drawing.Color.Black;
-            this.lblTotalProfitTop.Location = new System.Drawing.Point(51, 0);
-            this.lblTotalProfitTop.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTotalProfitTop.Location = new System.Drawing.Point(68, 0);
             this.lblTotalProfitTop.Name = "lblTotalProfitTop";
-            this.lblTotalProfitTop.Size = new System.Drawing.Size(105, 16);
+            this.lblTotalProfitTop.Size = new System.Drawing.Size(140, 20);
             this.lblTotalProfitTop.TabIndex = 1;
             this.lblTotalProfitTop.Text = "Total Profit";
             // 
@@ -215,21 +213,21 @@
             this.pnlTotalRevenue.Controls.Add(this.lblTotalRevenue);
             this.pnlTotalRevenue.Controls.Add(this.lblTotalRevenueTop);
             this.pnlTotalRevenue.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlTotalRevenue.Location = new System.Drawing.Point(158, 38);
+            this.pnlTotalRevenue.Location = new System.Drawing.Point(211, 47);
             this.pnlTotalRevenue.Margin = new System.Windows.Forms.Padding(0);
             this.pnlTotalRevenue.Name = "pnlTotalRevenue";
-            this.pnlTotalRevenue.Size = new System.Drawing.Size(158, 39);
+            this.pnlTotalRevenue.Size = new System.Drawing.Size(211, 48);
             this.pnlTotalRevenue.TabIndex = 7;
             // 
             // guna2CirclePictureBox1
             // 
             this.guna2CirclePictureBox1.Image = global::Management_Coffee_Shop.Properties.Resources.profit_1692498;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(2, 1);
-            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(3, 1);
+            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(35, 33);
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(47, 41);
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2CirclePictureBox1.TabIndex = 8;
             this.guna2CirclePictureBox1.TabStop = false;
@@ -238,10 +236,9 @@
             // 
             this.lblTotalRevenue.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lblTotalRevenue.ForeColor = System.Drawing.Color.Black;
-            this.lblTotalRevenue.Location = new System.Drawing.Point(41, 16);
-            this.lblTotalRevenue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTotalRevenue.Location = new System.Drawing.Point(55, 20);
             this.lblTotalRevenue.Name = "lblTotalRevenue";
-            this.lblTotalRevenue.Size = new System.Drawing.Size(105, 21);
+            this.lblTotalRevenue.Size = new System.Drawing.Size(140, 26);
             this.lblTotalRevenue.TabIndex = 7;
             this.lblTotalRevenue.Text = "100.000";
             this.lblTotalRevenue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -250,10 +247,9 @@
             // 
             this.lblTotalRevenueTop.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblTotalRevenueTop.ForeColor = System.Drawing.Color.Black;
-            this.lblTotalRevenueTop.Location = new System.Drawing.Point(41, 0);
-            this.lblTotalRevenueTop.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTotalRevenueTop.Location = new System.Drawing.Point(55, 0);
             this.lblTotalRevenueTop.Name = "lblTotalRevenueTop";
-            this.lblTotalRevenueTop.Size = new System.Drawing.Size(105, 18);
+            this.lblTotalRevenueTop.Size = new System.Drawing.Size(140, 22);
             this.lblTotalRevenueTop.TabIndex = 1;
             this.lblTotalRevenueTop.Text = "Total Revenue";
             // 
@@ -269,10 +265,10 @@
             this.btnThisMonth.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(161)))), ((int)(((byte)(246)))));
             this.btnThisMonth.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.btnThisMonth.ForeColor = System.Drawing.Color.Black;
-            this.btnThisMonth.Location = new System.Drawing.Point(603, 1);
-            this.btnThisMonth.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnThisMonth.Location = new System.Drawing.Point(804, 1);
+            this.btnThisMonth.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.btnThisMonth.Name = "btnThisMonth";
-            this.btnThisMonth.Size = new System.Drawing.Size(54, 34);
+            this.btnThisMonth.Size = new System.Drawing.Size(72, 42);
             this.btnThisMonth.TabIndex = 6;
             this.btnThisMonth.Text = "This Month";
             this.btnThisMonth.Click += new System.EventHandler(this.btnThisMonth_Click);
@@ -289,10 +285,10 @@
             this.btnLast30Days.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(161)))), ((int)(((byte)(246)))));
             this.btnLast30Days.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.btnLast30Days.ForeColor = System.Drawing.Color.Black;
-            this.btnLast30Days.Location = new System.Drawing.Point(545, 1);
-            this.btnLast30Days.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnLast30Days.Location = new System.Drawing.Point(727, 1);
+            this.btnLast30Days.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.btnLast30Days.Name = "btnLast30Days";
-            this.btnLast30Days.Size = new System.Drawing.Size(53, 34);
+            this.btnLast30Days.Size = new System.Drawing.Size(71, 42);
             this.btnLast30Days.TabIndex = 5;
             this.btnLast30Days.Text = "Last 30 Days";
             this.btnLast30Days.Click += new System.EventHandler(this.btnLast30Days_Click);
@@ -309,10 +305,10 @@
             this.btnLast7Days.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(161)))), ((int)(((byte)(246)))));
             this.btnLast7Days.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.btnLast7Days.ForeColor = System.Drawing.Color.Black;
-            this.btnLast7Days.Location = new System.Drawing.Point(487, 1);
-            this.btnLast7Days.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnLast7Days.Location = new System.Drawing.Point(650, 1);
+            this.btnLast7Days.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.btnLast7Days.Name = "btnLast7Days";
-            this.btnLast7Days.Size = new System.Drawing.Size(53, 34);
+            this.btnLast7Days.Size = new System.Drawing.Size(71, 42);
             this.btnLast7Days.TabIndex = 4;
             this.btnLast7Days.Text = "Last 7 Days";
             this.btnLast7Days.Click += new System.EventHandler(this.btnLast7Days_Click);
@@ -329,10 +325,10 @@
             this.btnToday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(161)))), ((int)(((byte)(246)))));
             this.btnToday.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.btnToday.ForeColor = System.Drawing.Color.Black;
-            this.btnToday.Location = new System.Drawing.Point(429, 1);
-            this.btnToday.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnToday.Location = new System.Drawing.Point(573, 1);
+            this.btnToday.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.btnToday.Name = "btnToday";
-            this.btnToday.Size = new System.Drawing.Size(53, 34);
+            this.btnToday.Size = new System.Drawing.Size(71, 42);
             this.btnToday.TabIndex = 3;
             this.btnToday.Text = "Today";
             this.btnToday.Click += new System.EventHandler(this.btnToday_Click);
@@ -346,11 +342,11 @@
             this.btnOkModifyDays.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnOkModifyDays.ImageRotate = 0F;
             this.btnOkModifyDays.ImageSize = new System.Drawing.Size(31, 31);
-            this.btnOkModifyDays.Location = new System.Drawing.Point(318, 1);
-            this.btnOkModifyDays.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnOkModifyDays.Location = new System.Drawing.Point(425, 1);
+            this.btnOkModifyDays.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.btnOkModifyDays.Name = "btnOkModifyDays";
             this.btnOkModifyDays.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnOkModifyDays.Size = new System.Drawing.Size(21, 20);
+            this.btnOkModifyDays.Size = new System.Drawing.Size(28, 25);
             this.btnOkModifyDays.TabIndex = 1;
             this.btnOkModifyDays.Click += new System.EventHandler(this.btnOkModifyDays_Click);
             // 
@@ -361,22 +357,22 @@
             this.pnlNumberOfOrders.Controls.Add(this.lblNumberOfOrders);
             this.pnlNumberOfOrders.Controls.Add(this.lblNumberOfOrdersTop);
             this.pnlNumberOfOrders.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlNumberOfOrders.Location = new System.Drawing.Point(2, 38);
-            this.pnlNumberOfOrders.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.pnlNumberOfOrders.Location = new System.Drawing.Point(3, 47);
+            this.pnlNumberOfOrders.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
             this.pnlNumberOfOrders.Name = "pnlNumberOfOrders";
-            this.pnlNumberOfOrders.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.pnlNumberOfOrders.Size = new System.Drawing.Size(154, 39);
+            this.pnlNumberOfOrders.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.pnlNumberOfOrders.Size = new System.Drawing.Size(205, 48);
             this.pnlNumberOfOrders.TabIndex = 1;
             // 
             // guna2CirclePictureBox2
             // 
             this.guna2CirclePictureBox2.Image = global::Management_Coffee_Shop.Properties.Resources.audit_1692465;
             this.guna2CirclePictureBox2.ImageRotate = 0F;
-            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(5, 1);
-            this.guna2CirclePictureBox2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(7, 1);
+            this.guna2CirclePictureBox2.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
             this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(35, 33);
+            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(47, 41);
             this.guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2CirclePictureBox2.TabIndex = 9;
             this.guna2CirclePictureBox2.TabStop = false;
@@ -385,10 +381,9 @@
             // 
             this.lblNumberOfOrders.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lblNumberOfOrders.ForeColor = System.Drawing.Color.Black;
-            this.lblNumberOfOrders.Location = new System.Drawing.Point(37, 16);
-            this.lblNumberOfOrders.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNumberOfOrders.Location = new System.Drawing.Point(49, 20);
             this.lblNumberOfOrders.Name = "lblNumberOfOrders";
-            this.lblNumberOfOrders.Size = new System.Drawing.Size(105, 23);
+            this.lblNumberOfOrders.Size = new System.Drawing.Size(140, 28);
             this.lblNumberOfOrders.TabIndex = 7;
             this.lblNumberOfOrders.Text = "100.000";
             this.lblNumberOfOrders.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -397,30 +392,29 @@
             // 
             this.lblNumberOfOrdersTop.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblNumberOfOrdersTop.ForeColor = System.Drawing.Color.Black;
-            this.lblNumberOfOrdersTop.Location = new System.Drawing.Point(37, 1);
-            this.lblNumberOfOrdersTop.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNumberOfOrdersTop.Location = new System.Drawing.Point(49, 1);
             this.lblNumberOfOrdersTop.Name = "lblNumberOfOrdersTop";
-            this.lblNumberOfOrdersTop.Size = new System.Drawing.Size(129, 20);
+            this.lblNumberOfOrdersTop.Size = new System.Drawing.Size(172, 25);
             this.lblNumberOfOrdersTop.TabIndex = 1;
             this.lblNumberOfOrdersTop.Text = "Number of Orders";
             // 
             // dtpStartDate
             // 
             this.dtpStartDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.dtpStartDate.Location = new System.Drawing.Point(2, 1);
-            this.dtpStartDate.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.dtpStartDate.Location = new System.Drawing.Point(3, 1);
+            this.dtpStartDate.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.dtpStartDate.Name = "dtpStartDate";
-            this.dtpStartDate.Size = new System.Drawing.Size(154, 23);
+            this.dtpStartDate.Size = new System.Drawing.Size(204, 27);
             this.dtpStartDate.TabIndex = 1;
             // 
             // dtpEndDate
             // 
             this.dtpEndDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dtpEndDate.CalendarMonthBackground = System.Drawing.SystemColors.HighlightText;
-            this.dtpEndDate.Location = new System.Drawing.Point(160, 1);
-            this.dtpEndDate.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.dtpEndDate.Location = new System.Drawing.Point(214, 1);
+            this.dtpEndDate.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.dtpEndDate.Name = "dtpEndDate";
-            this.dtpEndDate.Size = new System.Drawing.Size(154, 23);
+            this.dtpEndDate.Size = new System.Drawing.Size(204, 27);
             this.dtpEndDate.TabIndex = 2;
             // 
             // chartGrossRevenue
@@ -446,8 +440,8 @@
             legend1.IsTextAutoFit = false;
             legend1.Name = "Legend1";
             this.chartGrossRevenue.Legends.Add(legend1);
-            this.chartGrossRevenue.Location = new System.Drawing.Point(3, 3);
-            this.chartGrossRevenue.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
+            this.chartGrossRevenue.Location = new System.Drawing.Point(4, 4);
+            this.chartGrossRevenue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 0);
             this.chartGrossRevenue.Name = "chartGrossRevenue";
             series1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
             series1.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(235)))));
@@ -460,7 +454,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chartGrossRevenue.Series.Add(series1);
-            this.chartGrossRevenue.Size = new System.Drawing.Size(423, 163);
+            this.chartGrossRevenue.Size = new System.Drawing.Size(564, 201);
             this.chartGrossRevenue.TabIndex = 1;
             this.chartGrossRevenue.Text = "chart1";
             title1.Alignment = System.Drawing.ContentAlignment.TopLeft;
@@ -481,7 +475,8 @@
             legend2.ForeColor = System.Drawing.Color.White;
             legend2.Name = "Legend1";
             this.chartTopProducts.Legends.Add(legend2);
-            this.chartTopProducts.Location = new System.Drawing.Point(432, 3);
+            this.chartTopProducts.Location = new System.Drawing.Point(576, 4);
+            this.chartTopProducts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chartTopProducts.Name = "chartTopProducts";
             this.tlbFill.SetRowSpan(this.chartTopProducts, 2);
             series2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalLeft;
@@ -497,7 +492,7 @@
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.chartTopProducts.Series.Add(series2);
-            this.chartTopProducts.Size = new System.Drawing.Size(225, 327);
+            this.chartTopProducts.Size = new System.Drawing.Size(300, 402);
             this.chartTopProducts.TabIndex = 2;
             this.chartTopProducts.Text = "chart2";
             title2.Alignment = System.Drawing.ContentAlignment.TopLeft;
@@ -512,10 +507,10 @@
             this.pnlProductUnderstock.Controls.Add(this.dgvUnderStock);
             this.pnlProductUnderstock.Controls.Add(this.label7);
             this.pnlProductUnderstock.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlProductUnderstock.Location = new System.Drawing.Point(146, 2);
-            this.pnlProductUnderstock.Margin = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.pnlProductUnderstock.Location = new System.Drawing.Point(195, 2);
+            this.pnlProductUnderstock.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.pnlProductUnderstock.Name = "pnlProductUnderstock";
-            this.pnlProductUnderstock.Size = new System.Drawing.Size(277, 161);
+            this.pnlProductUnderstock.Size = new System.Drawing.Size(368, 199);
             this.pnlProductUnderstock.TabIndex = 4;
             // 
             // dgvUnderStock
@@ -548,15 +543,15 @@
             this.dgvUnderStock.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvUnderStock.EnableHeadersVisualStyles = false;
             this.dgvUnderStock.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
-            this.dgvUnderStock.Location = new System.Drawing.Point(0, 23);
-            this.dgvUnderStock.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.dgvUnderStock.Location = new System.Drawing.Point(0, 28);
+            this.dgvUnderStock.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.dgvUnderStock.Name = "dgvUnderStock";
             this.dgvUnderStock.ReadOnly = true;
             this.dgvUnderStock.RowHeadersVisible = false;
             this.dgvUnderStock.RowHeadersWidth = 62;
             this.dgvUnderStock.RowTemplate.Height = 28;
             this.dgvUnderStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUnderStock.Size = new System.Drawing.Size(277, 138);
+            this.dgvUnderStock.Size = new System.Drawing.Size(368, 171);
             this.dgvUnderStock.TabIndex = 2;
             // 
             // label7
@@ -565,9 +560,8 @@
             this.label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(0, 0);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(277, 23);
+            this.label7.Size = new System.Drawing.Size(368, 28);
             this.label7.TabIndex = 1;
             this.label7.Text = "Products Understock";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -582,13 +576,13 @@
             this.tlbFill.Controls.Add(this.chartTopProducts, 1, 0);
             this.tlbFill.Controls.Add(this.guna2Panel3, 0, 1);
             this.tlbFill.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlbFill.Location = new System.Drawing.Point(0, 77);
-            this.tlbFill.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.tlbFill.Location = new System.Drawing.Point(0, 95);
+            this.tlbFill.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.tlbFill.Name = "tlbFill";
             this.tlbFill.RowCount = 2;
             this.tlbFill.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlbFill.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlbFill.Size = new System.Drawing.Size(660, 333);
+            this.tlbFill.Size = new System.Drawing.Size(880, 410);
             this.tlbFill.TabIndex = 5;
             this.tlbFill.Paint += new System.Windows.Forms.PaintEventHandler(this.tlbFill_Paint);
             // 
@@ -597,11 +591,11 @@
             this.guna2Panel3.Controls.Add(this.pnlProductUnderstock);
             this.guna2Panel3.Controls.Add(this.pnlTotalCounter);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel3.Location = new System.Drawing.Point(2, 167);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.guna2Panel3.Location = new System.Drawing.Point(3, 206);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Padding = new System.Windows.Forms.Padding(2);
-            this.guna2Panel3.Size = new System.Drawing.Size(425, 165);
+            this.guna2Panel3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel3.Size = new System.Drawing.Size(566, 203);
             this.guna2Panel3.TabIndex = 5;
             // 
             // pnlTotalCounter
@@ -616,20 +610,20 @@
             this.pnlTotalCounter.Controls.Add(this.lblTotalCounter);
             this.pnlTotalCounter.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlTotalCounter.ForeColor = System.Drawing.Color.Black;
-            this.pnlTotalCounter.Location = new System.Drawing.Point(2, 2);
+            this.pnlTotalCounter.Location = new System.Drawing.Point(3, 2);
+            this.pnlTotalCounter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlTotalCounter.Name = "pnlTotalCounter";
-            this.pnlTotalCounter.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.pnlTotalCounter.Size = new System.Drawing.Size(144, 161);
+            this.pnlTotalCounter.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.pnlTotalCounter.Size = new System.Drawing.Size(192, 199);
             this.pnlTotalCounter.TabIndex = 5;
             // 
             // lblNumberOfProducts
             // 
             this.lblNumberOfProducts.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.lblNumberOfProducts.ForeColor = System.Drawing.Color.Black;
-            this.lblNumberOfProducts.Location = new System.Drawing.Point(11, 125);
-            this.lblNumberOfProducts.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNumberOfProducts.Location = new System.Drawing.Point(15, 154);
             this.lblNumberOfProducts.Name = "lblNumberOfProducts";
-            this.lblNumberOfProducts.Size = new System.Drawing.Size(78, 23);
+            this.lblNumberOfProducts.Size = new System.Drawing.Size(104, 28);
             this.lblNumberOfProducts.TabIndex = 12;
             this.lblNumberOfProducts.Text = "100.000";
             this.lblNumberOfProducts.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -638,10 +632,9 @@
             // 
             this.lblNumberOfSuppliers.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.lblNumberOfSuppliers.ForeColor = System.Drawing.Color.Black;
-            this.lblNumberOfSuppliers.Location = new System.Drawing.Point(11, 82);
-            this.lblNumberOfSuppliers.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNumberOfSuppliers.Location = new System.Drawing.Point(15, 101);
             this.lblNumberOfSuppliers.Name = "lblNumberOfSuppliers";
-            this.lblNumberOfSuppliers.Size = new System.Drawing.Size(78, 23);
+            this.lblNumberOfSuppliers.Size = new System.Drawing.Size(104, 28);
             this.lblNumberOfSuppliers.TabIndex = 11;
             this.lblNumberOfSuppliers.Text = "100.000";
             this.lblNumberOfSuppliers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -650,10 +643,9 @@
             // 
             this.lblNumberOfProductsTop.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblNumberOfProductsTop.ForeColor = System.Drawing.Color.Black;
-            this.lblNumberOfProductsTop.Location = new System.Drawing.Point(13, 110);
-            this.lblNumberOfProductsTop.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNumberOfProductsTop.Location = new System.Drawing.Point(17, 135);
             this.lblNumberOfProductsTop.Name = "lblNumberOfProductsTop";
-            this.lblNumberOfProductsTop.Size = new System.Drawing.Size(141, 14);
+            this.lblNumberOfProductsTop.Size = new System.Drawing.Size(188, 17);
             this.lblNumberOfProductsTop.TabIndex = 10;
             this.lblNumberOfProductsTop.Text = "Number of Products";
             // 
@@ -661,10 +653,9 @@
             // 
             this.lblNumberOfSuppliersTop.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblNumberOfSuppliersTop.ForeColor = System.Drawing.Color.Black;
-            this.lblNumberOfSuppliersTop.Location = new System.Drawing.Point(13, 66);
-            this.lblNumberOfSuppliersTop.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNumberOfSuppliersTop.Location = new System.Drawing.Point(17, 81);
             this.lblNumberOfSuppliersTop.Name = "lblNumberOfSuppliersTop";
-            this.lblNumberOfSuppliersTop.Size = new System.Drawing.Size(141, 14);
+            this.lblNumberOfSuppliersTop.Size = new System.Drawing.Size(188, 17);
             this.lblNumberOfSuppliersTop.TabIndex = 9;
             this.lblNumberOfSuppliersTop.Text = "Number of Suppliers";
             // 
@@ -672,10 +663,9 @@
             // 
             this.lblNumberOfCustomersTop.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblNumberOfCustomersTop.ForeColor = System.Drawing.Color.Black;
-            this.lblNumberOfCustomersTop.Location = new System.Drawing.Point(13, 23);
-            this.lblNumberOfCustomersTop.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNumberOfCustomersTop.Location = new System.Drawing.Point(17, 28);
             this.lblNumberOfCustomersTop.Name = "lblNumberOfCustomersTop";
-            this.lblNumberOfCustomersTop.Size = new System.Drawing.Size(141, 14);
+            this.lblNumberOfCustomersTop.Size = new System.Drawing.Size(188, 17);
             this.lblNumberOfCustomersTop.TabIndex = 8;
             this.lblNumberOfCustomersTop.Text = "Number of Customers";
             // 
@@ -683,10 +673,9 @@
             // 
             this.lblNumberOfCustomers.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.lblNumberOfCustomers.ForeColor = System.Drawing.Color.Black;
-            this.lblNumberOfCustomers.Location = new System.Drawing.Point(11, 38);
-            this.lblNumberOfCustomers.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNumberOfCustomers.Location = new System.Drawing.Point(15, 47);
             this.lblNumberOfCustomers.Name = "lblNumberOfCustomers";
-            this.lblNumberOfCustomers.Size = new System.Drawing.Size(78, 23);
+            this.lblNumberOfCustomers.Size = new System.Drawing.Size(104, 28);
             this.lblNumberOfCustomers.TabIndex = 7;
             this.lblNumberOfCustomers.Text = "100.000";
             this.lblNumberOfCustomers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -695,10 +684,9 @@
             // 
             this.lblTotalCounter.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalCounter.ForeColor = System.Drawing.Color.Black;
-            this.lblTotalCounter.Location = new System.Drawing.Point(2, 0);
-            this.lblTotalCounter.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTotalCounter.Location = new System.Drawing.Point(3, 0);
             this.lblTotalCounter.Name = "lblTotalCounter";
-            this.lblTotalCounter.Size = new System.Drawing.Size(105, 16);
+            this.lblTotalCounter.Size = new System.Drawing.Size(140, 20);
             this.lblTotalCounter.TabIndex = 1;
             this.lblTotalCounter.Text = "Total Counter";
             // 
@@ -754,14 +742,14 @@
             // 
             // ucIncome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.Controls.Add(this.tlbFill);
             this.Controls.Add(this.tlpTop);
-            this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.Name = "ucIncome";
-            this.Size = new System.Drawing.Size(660, 410);
+            this.Size = new System.Drawing.Size(880, 505);
             this.tlpTop.ResumeLayout(false);
             this.pnlTotalProfit.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).EndInit();

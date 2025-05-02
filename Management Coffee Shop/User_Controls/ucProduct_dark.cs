@@ -694,12 +694,6 @@ namespace Management_Coffee_Shop
                 return;
             }
 
-            if (!rbM.Checked && !rbL.Checked && !rbX.Checked && !rbVipPro.Checked)
-            {
-                MessageBox.Show("Vui lòng chọn một đơn vị (Unit)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
             // Lấy dữ liệu từ giao diện
             string name = txtName.Text;
             string category = cbbCategory.SelectedItem.ToString();
@@ -709,11 +703,8 @@ namespace Management_Coffee_Shop
                 return;
             }
 
-            string unit = rbM.Checked ? "M" : rbL.Checked ? "L" : rbX.Checked ? "X" : "VipPro";
-
-            // Lấy dữ liệu từ dgvRecipe (Ingredient, Supplier, Stock)
+            // Lấy dữ liệu từ dgvRecipe (Ingredient, Stock)
             string ingredient = "Chưa có";
-            string supplier = "Chưa có";
             int stock = 0;
 
             if (dgvRecipe.Rows.Count > 0 && dgvRecipe.DataSource != null)
@@ -722,10 +713,6 @@ namespace Management_Coffee_Shop
                 if (dgvRecipe.Columns.Contains("colIngredient"))
                 {
                     ingredient = recipeRow.Cells["colIngredient"].Value?.ToString() ?? "Chưa có";
-                }
-                if (dgvRecipe.Columns.Contains("colSupplier"))
-                {
-                    supplier = recipeRow.Cells["colSupplier"].Value?.ToString() ?? "Chưa có";
                 }
                 if (dgvRecipe.Columns.Contains("colStock"))
                 {
@@ -758,7 +745,7 @@ namespace Management_Coffee_Shop
             // Kiểm tra sản phẩm trùng (chỉ khi thêm mới, không áp dụng khi chỉnh sửa)
             if (selectedProductId == -1) // Thêm mới
             {
-                if (productDb.CheckProductExists(name, category, price, unit, stock, ingredient, supplier, customerRating, selectedImagePath))
+                if (productDb.CheckProductExists(name, category, price, stock, ingredient, customerRating, selectedImagePath))
                 {
                     MessageBox.Show("Sản phẩm với thông tin này đã tồn tại! Vui lòng thay đổi ít nhất một thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -774,16 +761,13 @@ namespace Management_Coffee_Shop
                     string rowName = row["Name"].ToString();
                     string rowCategory = row["Category"].ToString();
                     decimal rowPrice = Convert.ToDecimal(row["Price"]);
-                    string rowUnit = row["Unit"].ToString();
                     int rowStock = Convert.ToInt32(row["Stock"]);
                     string rowIngredient = row["Ingredient"]?.ToString() ?? "Chưa có";
-                    string rowSupplier = row["Supplier"]?.ToString() ?? "Chưa có";
                     string rowCustomerRating = row["CustomerRating"].ToString();
                     string rowImagePath = row["ImagePath"]?.ToString() ?? string.Empty;
 
-                    if (name == rowName && category == rowCategory && price == rowPrice && unit == rowUnit &&
-                        stock == rowStock && ingredient == rowIngredient && supplier == rowSupplier && customerRating == rowCustomerRating &&
-                        selectedImagePath == rowImagePath)
+                    if (name == rowName && category == rowCategory && price == rowPrice && stock == rowStock &&
+                        ingredient == rowIngredient && customerRating == rowCustomerRating && selectedImagePath == rowImagePath)
                     {
                         MessageBox.Show("Sản phẩm với thông tin này đã tồn tại! Vui lòng thay đổi ít nhất một thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
@@ -795,12 +779,12 @@ namespace Management_Coffee_Shop
             {
                 if (selectedProductId == -1) // Thêm sản phẩm mới
                 {
-                    productDb.AddProduct(name, category, price, unit, stock, ingredient, supplier, customerRating, selectedImagePath);
+                    productDb.AddProduct(name, category, price, stock, ingredient, customerRating, selectedImagePath);
                     MessageBox.Show("Thêm sản phẩm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else // Cập nhật sản phẩm
                 {
-                    productDb.UpdateProduct(selectedProductId, name, category, price, unit, stock, ingredient, supplier, customerRating, selectedImagePath);
+                    productDb.UpdateProduct(selectedProductId, name, category, price, stock, ingredient, customerRating, selectedImagePath);
                     MessageBox.Show("Cập nhật sản phẩm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 

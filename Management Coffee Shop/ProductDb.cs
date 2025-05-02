@@ -8,7 +8,7 @@ namespace Management_Coffee_Shop
 {
     public class ProductDb : Connection
     {
-        // Lấy tất cả sản phẩm từ bảng dbo.ProductManager
+        // Lấy tất cả sản phẩm từ bảng dbo.sourceDrinks
         public DataTable GetAllProducts()
         {
             try
@@ -16,7 +16,8 @@ namespace Management_Coffee_Shop
                 using (var connection = GetConnection())
                 {
                     connection.Open();
-                    string query = "SELECT ID, Name, Category, Price, Unit, Stock, Ingredient, Supplier, CustomerRating, ImagePath FROM dbo.ProductManager";
+                    string query = "SELECT ID, Name, Describe AS Ingredient, Categories AS Category, Price, Sales AS Stock, Rate AS CustomerRating, Source_Image AS ImagePath " +
+                                   "FROM [Management Coffee Shop].[dbo].[sourceDrinks]";
                     using (var command = new SqlCommand(query, connection))
                     {
                         using (var adapter = new SqlDataAdapter(command))
@@ -34,32 +35,30 @@ namespace Management_Coffee_Shop
             }
         }
 
-        // Thêm sản phẩm mới vào bảng dbo.ProductManager
-        public void AddProduct(string name, string category, decimal price, string unit, int stock, string ingredient, string supplier, string customerRating, string imagePath)
+        // Thêm sản phẩm mới vào bảng dbo.sourceDrinks
+        public void AddProduct(string name, string category, decimal price, int stock, string ingredient, string customerRating, string imagePath)
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(category) || string.IsNullOrWhiteSpace(unit))
+                if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(category))
                 {
-                    throw new ArgumentException("Tên, danh mục và đơn vị không được để trống.");
+                    throw new ArgumentException("Tên và danh mục không được để trống.");
                 }
 
                 using (var connection = GetConnection())
                 {
                     connection.Open();
-                    string query = "INSERT INTO dbo.ProductManager (Name, Category, Price, Unit, Stock, Ingredient, Supplier, CustomerRating, ImagePath) " +
-                                   "VALUES (@Name, @Category, @Price, @Unit, @Stock, @Ingredient, @Supplier, @CustomerRating, @ImagePath)";
+                    string query = "INSERT INTO [Management Coffee Shop].[dbo].[sourceDrinks] (Name, Describe, Categories, Price, Sales, Rate, Source_Image) " +
+                                   "VALUES (@Name, @Ingredient, @Category, @Price, @Stock, @CustomerRating, @ImagePath)";
                     using (var command = new SqlCommand(query, connection))
                     {
                         command.Parameters.Add("@Name", SqlDbType.NVarChar).Value = name;
+                        command.Parameters.Add("@Ingredient", SqlDbType.NVarChar).Value = (object)ingredient ?? DBNull.Value;
                         command.Parameters.Add("@Category", SqlDbType.NVarChar).Value = category;
                         command.Parameters.Add("@Price", SqlDbType.Decimal).Value = price;
-                        command.Parameters.Add("@Unit", SqlDbType.NVarChar).Value = unit;
                         command.Parameters.Add("@Stock", SqlDbType.Int).Value = stock;
-                        command.Parameters.Add("@Ingredient", SqlDbType.NVarChar).Value = (object)ingredient ?? DBNull.Value;
-                        command.Parameters.Add("@Supplier", SqlDbType.NVarChar).Value = (object)supplier ?? DBNull.Value;
                         command.Parameters.Add("@CustomerRating", SqlDbType.NVarChar).Value = (object)customerRating ?? DBNull.Value;
-                        command.Parameters.Add("@ImagePath", SqlDbType.NVarChar).Value = (object)imagePath ?? DBNull.Value; // Thêm ImagePath
+                        command.Parameters.Add("@ImagePath", SqlDbType.NVarChar).Value = (object)imagePath ?? DBNull.Value;
                         command.ExecuteNonQuery();
                     }
                 }
@@ -69,27 +68,25 @@ namespace Management_Coffee_Shop
                 throw new Exception("Lỗi khi thêm sản phẩm: " + ex.Message, ex);
             }
         }
-        public bool CheckProductExists(string name, string category, decimal price, string unit, int stock, string ingredient, string supplier, string customerRating, string imagePath)
+
+        public bool CheckProductExists(string name, string category, decimal price, int stock, string ingredient, string customerRating, string imagePath)
         {
             try
             {
                 using (var connection = GetConnection())
                 {
                     connection.Open();
-                    string query = "SELECT COUNT(*) FROM dbo.ProductManager " +
-                                   "WHERE Name = @Name AND Category = @Category AND Price = @Price AND Unit = @Unit " +
-                                   "AND Stock = @Stock AND ISNULL(Ingredient, '') = ISNULL(@Ingredient, '') " +
-                                   "AND ISNULL(Supplier, '') = ISNULL(@Supplier, '') AND ISNULL(CustomerRating, '') = ISNULL(@CustomerRating, '') " +
-                                   "AND ISNULL(ImagePath, '') = ISNULL(@ImagePath, '')";
+                    string query = "SELECT COUNT(*) FROM [Management Coffee Shop].[dbo].[sourceDrinks] " +
+                                   "WHERE Name = @Name AND Categories = @Category AND Price = @Price AND Sales = @Stock " +
+                                   "AND ISNULL(Describe, '') = ISNULL(@Ingredient, '') AND ISNULL(Rate, '') = ISNULL(@CustomerRating, '') " +
+                                   "AND ISNULL(Source_Image, '') = ISNULL(@ImagePath, '')";
                     using (var command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@Name", name);
                         command.Parameters.AddWithValue("@Category", category);
                         command.Parameters.AddWithValue("@Price", price);
-                        command.Parameters.AddWithValue("@Unit", unit);
                         command.Parameters.AddWithValue("@Stock", stock);
                         command.Parameters.AddWithValue("@Ingredient", (object)ingredient ?? DBNull.Value);
-                        command.Parameters.AddWithValue("@Supplier", (object)supplier ?? DBNull.Value);
                         command.Parameters.AddWithValue("@CustomerRating", (object)customerRating ?? DBNull.Value);
                         command.Parameters.AddWithValue("@ImagePath", (object)imagePath ?? DBNull.Value);
                         int count = (int)command.ExecuteScalar();
@@ -104,34 +101,31 @@ namespace Management_Coffee_Shop
             }
         }
 
-
-        // Cập nhật thông tin sản phẩm trong bảng dbo.ProductManager
-        public void UpdateProduct(int id, string name, string category, decimal price, string unit, int stock, string ingredient, string supplier, string customerRating, string imagePath)
+        // Cập nhật thông tin sản phẩm trong bảng dbo.sourceDrinks
+        public void UpdateProduct(int id, string name, string category, decimal price, int stock, string ingredient, string customerRating, string imagePath)
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(category) || string.IsNullOrWhiteSpace(unit))
+                if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(category))
                 {
-                    throw new ArgumentException("Tên, danh mục và đơn vị không được để trống.");
+                    throw new ArgumentException("Tên và danh mục không được để trống.");
                 }
 
                 using (var connection = GetConnection())
                 {
                     connection.Open();
-                    string query = "UPDATE dbo.ProductManager SET Name = @Name, Category = @Category, Price = @Price, Unit = @Unit, Stock = @Stock, " +
-                                   "Ingredient = @Ingredient, Supplier = @Supplier, CustomerRating = @CustomerRating, ImagePath = @ImagePath WHERE ID = @ID";
+                    string query = "UPDATE [Management Coffee Shop].[dbo].[sourceDrinks] SET Name = @Name, Describe = @Ingredient, Categories = @Category, " +
+                                   "Price = @Price, Sales = @Stock, Rate = @CustomerRating, Source_Image = @ImagePath WHERE ID = @ID";
                     using (var command = new SqlCommand(query, connection))
                     {
                         command.Parameters.Add("@ID", SqlDbType.Int).Value = id;
                         command.Parameters.Add("@Name", SqlDbType.NVarChar).Value = name;
+                        command.Parameters.Add("@Ingredient", SqlDbType.NVarChar).Value = (object)ingredient ?? DBNull.Value;
                         command.Parameters.Add("@Category", SqlDbType.NVarChar).Value = category;
                         command.Parameters.Add("@Price", SqlDbType.Decimal).Value = price;
-                        command.Parameters.Add("@Unit", SqlDbType.NVarChar).Value = unit;
                         command.Parameters.Add("@Stock", SqlDbType.Int).Value = stock;
-                        command.Parameters.Add("@Ingredient", SqlDbType.NVarChar).Value = (object)ingredient ?? DBNull.Value;
-                        command.Parameters.Add("@Supplier", SqlDbType.NVarChar).Value = (object)supplier ?? DBNull.Value;
                         command.Parameters.Add("@CustomerRating", SqlDbType.NVarChar).Value = (object)customerRating ?? DBNull.Value;
-                        command.Parameters.Add("@ImagePath", SqlDbType.NVarChar).Value = (object)imagePath ?? DBNull.Value; // Thêm ImagePath
+                        command.Parameters.Add("@ImagePath", SqlDbType.NVarChar).Value = (object)imagePath ?? DBNull.Value;
                         command.ExecuteNonQuery();
                     }
                 }
@@ -142,7 +136,7 @@ namespace Management_Coffee_Shop
             }
         }
 
-        // Xóa sản phẩm từ bảng dbo.ProductManager
+        // Xóa sản phẩm từ bảng dbo.sourceDrinks
         public void DeleteProduct(int id)
         {
             try
@@ -152,7 +146,7 @@ namespace Management_Coffee_Shop
                 using (var connection = GetConnection())
                 {
                     connection.Open();
-                    string query = "SELECT ImagePath FROM dbo.ProductManager WHERE ID = @ID";
+                    string query = "SELECT Source_Image FROM [Management Coffee Shop].[dbo].[sourceDrinks] WHERE ID = @ID";
                     using (var command = new SqlCommand(query, connection))
                     {
                         command.Parameters.Add("@ID", SqlDbType.Int).Value = id;
@@ -164,7 +158,7 @@ namespace Management_Coffee_Shop
                 using (var connection = GetConnection())
                 {
                     connection.Open();
-                    string query = "DELETE FROM dbo.ProductManager WHERE ID = @ID";
+                    string query = "DELETE FROM [Management Coffee Shop].[dbo].[sourceDrinks] WHERE ID = @ID";
                     using (var command = new SqlCommand(query, connection))
                     {
                         command.Parameters.Add("@ID", SqlDbType.Int).Value = id;
