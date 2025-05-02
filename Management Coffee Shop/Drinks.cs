@@ -106,6 +106,31 @@ namespace Management_Coffee_Shop
             }
             return dt;
         }
+        public static void update_User(string id,string name,string date,string address,string Email,string image)
+        {
+            using (SqlConnection conn = Connection.GetSqlConnection())
+            {
+                string query = "UPDATE customerInformation SET Name = @Name, Date = @Date, Address = @Address, Image = @Image WHERE ID = @ID";
+                conn.Open();
+                using(SqlCommand command = new SqlCommand(query, conn))
+                {
+                    command.Parameters.AddWithValue("@ID", id);
+                    command.Parameters.AddWithValue("@Name", name);
+                    command.Parameters.AddWithValue("@Date", date);
+                    command.Parameters.AddWithValue ("@Address", address);
+                    command.Parameters.AddWithValue("@Email", Email);
+                    command.Parameters.AddWithValue("@Image", image);
+                    command.ExecuteNonQuery();
+                }
+                query = "UPDATE account SET Email=@Email WHERE ID=@ID";
+                using(SqlCommand command=new SqlCommand(query, conn))
+                {
+                    command.Parameters.AddWithValue("@ID", id);
+                    command.Parameters.AddWithValue("@Email",Email);
+                    command.ExecuteNonQuery ();
+                }
+            }
+        }
         public static void set_Rate(string id,byte Rank,int Sales)
         {
             using (SqlConnection connection = Connection.GetSqlConnection())
@@ -172,6 +197,21 @@ namespace Management_Coffee_Shop
                         dt = new DataTable();
                         dataAdapter.Fill(dt);
                     }
+                }
+            }
+            return dt;
+        }
+        public static DataTable get_Top3_BestSeller()
+        {
+            DataTable dt;
+            using (SqlConnection connection = Connection.GetSqlConnection())
+            {
+                string query = $"SELECT TOP 3 Name,Describe,Rate,Review,Source_Image FROM sourceDrinks ORDER BY Sales DESC";
+                connection.Open() ;
+                using(SqlDataAdapter dataAdapter=new SqlDataAdapter(query, connection))
+                {
+                    dt = new DataTable();
+                    dataAdapter.Fill(dt);
                 }
             }
             return dt;

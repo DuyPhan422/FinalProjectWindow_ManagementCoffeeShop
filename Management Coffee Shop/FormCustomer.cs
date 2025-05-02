@@ -46,7 +46,7 @@ namespace Management_Coffee_Shop
         private int minute, hour, currentPage = 1, count = 0;
         private byte indexPage = 1, lengthPage = 2,homePage=1;
         private double distance, duration;
-        private string tt,ID,Address,Name,Email,Date,categories;
+        private string tt,ID,Address,Name,Email,Date,categories,target_FilePath;
         private static int current_ID = 0;
         private FormLogin FormLogin;
         private List<Guna2Button> List_buttonPage;
@@ -76,7 +76,16 @@ namespace Management_Coffee_Shop
             txtAddress_profile.Text = WrapTextEvery66Chars(this.Address);
             txtEmail_profile.Text =this.Email;
             txtDate_profile.Text =this.Date;
-            ptbImage_Profile.Image = Image.FromFile(@"..\..\Management coffee shop_image\edited_image-removebg-preview.png");
+            DataTable dt=Drinks.get_Image_User(this.ID);
+            if (dt.Rows[0]["Image"].ToString().Trim() == "")
+            {
+                ptbImage_Profile.Image = Image.FromFile(@"..\..\Management coffee shop_image\edited_image-removebg-preview.png");
+                btnAccount.Image = Image.FromFile(@"..\..\Management coffee shop_image\edited_image-removebg-preview.png");
+            }else
+            {
+                ptbImage_Profile.Image = Image.FromFile(dt.Rows[0]["Image"].ToString());
+                btnAccount.Image = Image.FromFile(dt.Rows[0]["Image"].ToString());
+            }
             list_uCProdcuts = new List<Product> { uC_product1, uC_product2, uC_product3, uC_product4, uC_product5, uC_product6, uC_product7, uC_product8, uC_product9, uC_product10, uC_product11, uC_product12, uC_product13, uC_product14, uC_product15, uC_product16 };
             List_buttonPage = new List<Guna2Button> { btnFirst_page, btnSecond_page, btnThird_page };
             (distance, duration) = (Drinks.distance_time(this.Address));
@@ -91,6 +100,26 @@ namespace Management_Coffee_Shop
             create_Page_Navigation();
             start_timer();
             load_Account();
+            load_bestseller();
+        }
+        private void load_bestseller()
+        {
+            DataTable dt= Drinks.get_Top3_BestSeller();
+            ptbImage_BestSeller_Top1.Image = Image.FromFile(dt.Rows[0]["Source_Image"].ToString());
+            lblName_BestSeller_Top1.Text=dt.Rows[0]["Name"].ToString();
+            lblDescribe_BestSeller_Top1.Text= dt.Rows[0]["Describe"].ToString();
+            lblRate_BestSeller_Top1.Text = dt.Rows[0]["Rate"].ToString();
+            lblReviews_BestSeller_Top1.Text = dt.Rows[0]["Review"].ToString() + " Reviews";
+            ptbImage_BestSeller_Top2.Image = Image.FromFile(dt.Rows[1]["Source_Image"].ToString());
+            lblName_BestSeller_Top2.Text = dt.Rows[1]["Name"].ToString();
+            lblDescribe_BestSeller_Top2.Text = dt.Rows[1]["Describe"].ToString();
+            lblRate_BestSeller_Top2.Text = dt.Rows[1]["Rate"].ToString();
+            lblReviews_BestSeller_Top2.Text = dt.Rows[1]["Review"].ToString() + " Reviews";
+            ptbImage_BestSeller_Top3.Image = Image.FromFile(dt.Rows[2]["Source_Image"].ToString());
+            lblName_BestSeller_Top3.Text = dt.Rows[2]["Name"].ToString();
+            lblDescribe_BestSeller_Top3.Text = dt.Rows[2]["Describe"].ToString();
+            lblRate_BestSeller_Top3.Text = dt.Rows[2]["Rate"].ToString();
+            lblReviews_BestSeller_Top3.Text = dt.Rows[2]["Review"].ToString()+ " Reviews";
         }
         private string WrapTextEvery66Chars(string input)
         {
@@ -795,7 +824,34 @@ namespace Management_Coffee_Shop
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("bạn có chắc muốn lưu không");
+            DialogResult result=MessageBox.Show("bạn có chắc muốn lưu không","Lưu",MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                if (target_FilePath == "") target_FilePath = @"..\..\Management coffee shop_image\edited_image-removebg-preview.png";
+                Drinks.update_User(this.ID,txtName_profile.Text,txtDate_profile.Text,txtAddress_profile.Text,txtEmail_profile.Text,target_FilePath);
+                this.Name = txtName_profile.Text;
+                this.Date = txtDate_profile.Text;
+                this.Address = txtAddress_profile.Text;
+                this.Email = txtEmail_profile.Text;
+                btnCancel.PerformClick();
+            }
+        }
+
+        private void btnUpload_Profile_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Chọn Hình Ảnh";
+            openFileDialog.Filter = "File hình ảnh (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string selectedFilePath = openFileDialog.FileName;
+                string file=Path.GetFileName(selectedFilePath);
+                string target_Folder = @"..\..\Management coffee shop_image\Image_User";
+                target_FilePath = Path.Combine(target_Folder, file);
+                File.Copy(selectedFilePath, target_FilePath, true);
+                ptbImage_Profile.Image=Image.FromFile(target_FilePath);
+            }
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
