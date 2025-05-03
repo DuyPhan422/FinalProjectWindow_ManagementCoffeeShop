@@ -60,9 +60,9 @@
             this.pn1.Controls.Add(this.guna2PictureBox1);
             this.pn1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pn1.Location = new System.Drawing.Point(0, 0);
-            this.pn1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pn1.Margin = new System.Windows.Forms.Padding(2);
             this.pn1.Name = "pn1";
-            this.pn1.Size = new System.Drawing.Size(1163, 81);
+            this.pn1.Size = new System.Drawing.Size(1457, 81);
             this.pn1.TabIndex = 2;
             // 
             // guna2HtmlLabel2
@@ -70,7 +70,7 @@
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(717, 32);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(138, 21);
             this.guna2HtmlLabel2.TabIndex = 3;
@@ -81,7 +81,7 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Kunstler Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(92, 24);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(192, 39);
             this.guna2HtmlLabel1.TabIndex = 2;
@@ -92,7 +92,7 @@
             this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
             this.guna2CirclePictureBox1.ImageRotate = 0F;
             this.guna2CirclePictureBox1.Location = new System.Drawing.Point(864, 10);
-            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox1.Size = new System.Drawing.Size(60, 67);
@@ -106,7 +106,7 @@
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(9, 10);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(78, 67);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -122,9 +122,9 @@
             this.pnMenu.Controls.Add(this.btnHome);
             this.pnMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnMenu.Location = new System.Drawing.Point(0, 81);
-            this.pnMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnMenu.Margin = new System.Windows.Forms.Padding(2);
             this.pnMenu.Name = "pnMenu";
-            this.pnMenu.Size = new System.Drawing.Size(1163, 73);
+            this.pnMenu.Size = new System.Drawing.Size(1457, 73);
             this.pnMenu.TabIndex = 3;
             // 
             // btnAbout
@@ -142,7 +142,7 @@
             this.btnAbout.ForeColor = System.Drawing.Color.Black;
             this.btnAbout.HoverState.CustomBorderColor = System.Drawing.Color.Red;
             this.btnAbout.Location = new System.Drawing.Point(608, 2);
-            this.btnAbout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAbout.Margin = new System.Windows.Forms.Padding(2);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Size = new System.Drawing.Size(147, 68);
             this.btnAbout.TabIndex = 0;
@@ -163,7 +163,7 @@
             this.btnHistory.ForeColor = System.Drawing.Color.Black;
             this.btnHistory.HoverState.CustomBorderColor = System.Drawing.Color.Red;
             this.btnHistory.Location = new System.Drawing.Point(457, 2);
-            this.btnHistory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHistory.Margin = new System.Windows.Forms.Padding(2);
             this.btnHistory.Name = "btnHistory";
             this.btnHistory.Size = new System.Drawing.Size(147, 68);
             this.btnHistory.TabIndex = 0;
@@ -185,7 +185,7 @@
             this.btnStatic.ForeColor = System.Drawing.Color.Black;
             this.btnStatic.HoverState.CustomBorderColor = System.Drawing.Color.Red;
             this.btnStatic.Location = new System.Drawing.Point(305, 2);
-            this.btnStatic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStatic.Margin = new System.Windows.Forms.Padding(2);
             this.btnStatic.Name = "btnStatic";
             this.btnStatic.Size = new System.Drawing.Size(147, 68);
             this.btnStatic.TabIndex = 0;
@@ -207,7 +207,7 @@
             this.btnOrder.ForeColor = System.Drawing.Color.Black;
             this.btnOrder.HoverState.CustomBorderColor = System.Drawing.Color.Red;
             this.btnOrder.Location = new System.Drawing.Point(154, 2);
-            this.btnOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrder.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(147, 68);
             this.btnOrder.TabIndex = 0;
@@ -230,7 +230,7 @@
             this.btnHome.ForeColor = System.Drawing.Color.Black;
             this.btnHome.HoverState.CustomBorderColor = System.Drawing.Color.Red;
             this.btnHome.Location = new System.Drawing.Point(2, 2);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(2);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(147, 68);
             this.btnHome.TabIndex = 0;
@@ -240,11 +240,12 @@
             // pnHienThi
             // 
             this.pnHienThi.AutoScroll = true;
+            this.pnHienThi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.pnHienThi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnHienThi.Location = new System.Drawing.Point(0, 154);
-            this.pnHienThi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnHienThi.Margin = new System.Windows.Forms.Padding(2);
             this.pnHienThi.Name = "pnHienThi";
-            this.pnHienThi.Size = new System.Drawing.Size(1163, 567);
+            this.pnHienThi.Size = new System.Drawing.Size(1457, 721);
             this.pnHienThi.TabIndex = 4;
             // 
             // guna2DragControl1
@@ -258,12 +259,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(243)))), ((int)(((byte)(239)))));
-            this.ClientSize = new System.Drawing.Size(1163, 721);
+            this.ClientSize = new System.Drawing.Size(1457, 875);
             this.Controls.Add(this.pnHienThi);
             this.Controls.Add(this.pnMenu);
             this.Controls.Add(this.pn1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Employee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

@@ -31,10 +31,6 @@ namespace Management_Coffee_Shop
             public string Token { get; set; }
             public string LastLogin { get; set; }
         }
-        private static void delete_UserToken()
-        {
-
-        }
         public static void delete_Token(string user_Id) 
         {
             var machineName=Environment.MachineName;
@@ -164,9 +160,28 @@ namespace Management_Coffee_Shop
             Dictionary<string, List<TokenInfo>> token_Infor;
             token_Infor = System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, List<TokenInfo>>>(json);
             if (!token_Infor.ContainsKey(Environment.MachineName)) return (false,userId_List);
-            foreach (var token in token_Infor[Environment.MachineName])
+            foreach (var token in token_Infor[Environment.MachineName])userId_List.Add(token.UserId);
+            int len=userId_List.Count;
+            (string[] lines, bool success) = take_UserToken();
+            for (int i = 0; i < len; i++)
             {
-                userId_List.Add(token.UserId);
+                bool flag = false;
+                foreach (var token in token_Infor[Environment.MachineName])
+                {
+                    if (userId_List[i] == token.UserId)
+                    {
+                        foreach (string line in lines)
+                        {
+                            if (token.Token == line)
+                            {
+                                flag = true;
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                }
+                if (!flag) return (false, userId_List);
             }
             return (true,userId_List);
         }
