@@ -16,7 +16,7 @@ namespace Management_Coffee_Shop.User_Controls
         {
             InitializeComponent();
         }
-        public void load_history(FormCustomer.History_Shopping order,string User_Id)
+        public void load_history(FormCustomer.History_Shopping order)
         {
             lblCode.Text = $"# {order.OrderId}";
             lblDate.Text = $"{order.OrderDate:dd/MM/yyyy HH:mm}";

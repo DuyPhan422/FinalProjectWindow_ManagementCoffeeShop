@@ -654,7 +654,7 @@ namespace Management_Coffee_Shop
                     if (history_Shopping.UserId == this.ID)
                     {
                         ucHistory_Shopping ucHistory_Shopping = new ucHistory_Shopping();
-                        ucHistory_Shopping.load_history(history_Shopping, this.ID);
+                        ucHistory_Shopping.load_history(history_Shopping);
                         flpHistory.Controls.Add(ucHistory_Shopping);
                         show_pnlEmpty_History=false;
                     }
