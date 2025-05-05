@@ -30,10 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employee));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pn1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -44,14 +40,22 @@
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pnlProduct = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnDown_Product = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblQTV = new System.Windows.Forms.Label();
+            this.LBLName_Product = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btnDelete_Product = new Guna.UI2.WinForms.Guna2Button();
+            this.btnUp_Product = new Guna.UI2.WinForms.Guna2Button();
             this.pnlOrderEdit = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.dgvOrder = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.dupDiscount = new System.Windows.Forms.DomainUpDown();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnExprotbill = new Guna.UI2.WinForms.Guna2Button();
@@ -91,12 +95,18 @@
             this.guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblSum_Bill = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblFeeShip_Bill = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblSubtotal_Bill = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel17 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel16 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblStatus_Bill = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblCode_Bill = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblTime_Bill = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -106,12 +116,6 @@
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.flpBill = new System.Windows.Forms.FlowLayoutPanel();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lblStatus_Bill = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.uC_product1 = new Management_Coffee_Shop.User_Controls.Product();
             this.uC_product2 = new Management_Coffee_Shop.User_Controls.Product();
             this.uC_product3 = new Management_Coffee_Shop.User_Controls.Product();
@@ -134,8 +138,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.pnlProduct.SuspendLayout();
+            this.guna2Panel7.SuspendLayout();
             this.pnlOrderEdit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.flpCategories.SuspendLayout();
@@ -267,6 +272,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.pnlProduct);
             this.tabPage1.Controls.Add(this.pnlOrderEdit);
             this.tabPage1.Controls.Add(this.guna2Panel1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -277,10 +283,103 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // pnlProduct
+            // 
+            this.pnlProduct.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
+            this.pnlProduct.BorderRadius = 10;
+            this.pnlProduct.BorderThickness = 1;
+            this.pnlProduct.Controls.Add(this.btnDown_Product);
+            this.pnlProduct.Controls.Add(this.guna2Panel7);
+            this.pnlProduct.Controls.Add(this.LBLName_Product);
+            this.pnlProduct.Controls.Add(this.btnDelete_Product);
+            this.pnlProduct.Controls.Add(this.btnUp_Product);
+            this.pnlProduct.Location = new System.Drawing.Point(1173, 626);
+            this.pnlProduct.Name = "pnlProduct";
+            this.pnlProduct.Size = new System.Drawing.Size(302, 80);
+            this.pnlProduct.TabIndex = 11;
+            // 
+            // btnDown_Product
+            // 
+            this.btnDown_Product.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDown_Product.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDown_Product.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDown_Product.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDown_Product.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
+            this.btnDown_Product.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDown_Product.ForeColor = System.Drawing.Color.White;
+            this.btnDown_Product.Location = new System.Drawing.Point(62, 35);
+            this.btnDown_Product.Name = "btnDown_Product";
+            this.btnDown_Product.Size = new System.Drawing.Size(28, 28);
+            this.btnDown_Product.TabIndex = 0;
+            this.btnDown_Product.Text = "_";
+            this.btnDown_Product.Click += new System.EventHandler(this.btnDown_Product_Click);
+            // 
+            // guna2Panel7
+            // 
+            this.guna2Panel7.BackColor = System.Drawing.Color.White;
+            this.guna2Panel7.Controls.Add(this.lblQTV);
+            this.guna2Panel7.Location = new System.Drawing.Point(30, 35);
+            this.guna2Panel7.Name = "guna2Panel7";
+            this.guna2Panel7.Size = new System.Drawing.Size(38, 28);
+            this.guna2Panel7.TabIndex = 14;
+            // 
+            // lblQTV
+            // 
+            this.lblQTV.AutoSize = true;
+            this.lblQTV.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQTV.Location = new System.Drawing.Point(-1, -2);
+            this.lblQTV.Name = "lblQTV";
+            this.lblQTV.Size = new System.Drawing.Size(24, 30);
+            this.lblQTV.TabIndex = 10;
+            this.lblQTV.Text = "1";
+            // 
+            // LBLName_Product
+            // 
+            this.LBLName_Product.BackColor = System.Drawing.Color.Transparent;
+            this.LBLName_Product.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLName_Product.Location = new System.Drawing.Point(3, 3);
+            this.LBLName_Product.Name = "LBLName_Product";
+            this.LBLName_Product.Size = new System.Drawing.Size(150, 26);
+            this.LBLName_Product.TabIndex = 1;
+            this.LBLName_Product.Text = "guna2HtmlLabel6";
+            // 
+            // btnDelete_Product
+            // 
+            this.btnDelete_Product.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete_Product.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete_Product.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDelete_Product.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDelete_Product.FillColor = System.Drawing.Color.Transparent;
+            this.btnDelete_Product.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDelete_Product.ForeColor = System.Drawing.Color.White;
+            this.btnDelete_Product.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete_Product.Image")));
+            this.btnDelete_Product.Location = new System.Drawing.Point(258, 0);
+            this.btnDelete_Product.Name = "btnDelete_Product";
+            this.btnDelete_Product.Size = new System.Drawing.Size(41, 38);
+            this.btnDelete_Product.TabIndex = 0;
+            this.btnDelete_Product.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnDelete_Product.Click += new System.EventHandler(this.btnDelete_Product_Click);
+            // 
+            // btnUp_Product
+            // 
+            this.btnUp_Product.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUp_Product.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUp_Product.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUp_Product.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUp_Product.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
+            this.btnUp_Product.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnUp_Product.ForeColor = System.Drawing.Color.White;
+            this.btnUp_Product.Location = new System.Drawing.Point(3, 35);
+            this.btnUp_Product.Name = "btnUp_Product";
+            this.btnUp_Product.Size = new System.Drawing.Size(28, 28);
+            this.btnUp_Product.TabIndex = 0;
+            this.btnUp_Product.Text = "+";
+            this.btnUp_Product.Click += new System.EventHandler(this.btnUp_Product_Click);
+            // 
             // pnlOrderEdit
             // 
             this.pnlOrderEdit.BackColor = System.Drawing.Color.Transparent;
-            this.pnlOrderEdit.Controls.Add(this.dgvOrder);
+            this.pnlOrderEdit.Controls.Add(this.listView2);
             this.pnlOrderEdit.Controls.Add(this.guna2Panel2);
             this.pnlOrderEdit.Controls.Add(this.btnClearAll);
             this.pnlOrderEdit.Controls.Add(this.label1);
@@ -293,93 +392,46 @@
             this.pnlOrderEdit.Size = new System.Drawing.Size(294, 378);
             this.pnlOrderEdit.TabIndex = 10;
             // 
-            // dgvOrder
+            // listView2
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvOrder.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvOrder.BackgroundColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvOrder.ColumnHeadersHeight = 18;
-            this.dgvOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvOrder.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvOrder.GridColor = System.Drawing.Color.White;
-            this.dgvOrder.Location = new System.Drawing.Point(17, 49);
-            this.dgvOrder.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.dgvOrder.Name = "dgvOrder";
-            this.dgvOrder.RowHeadersVisible = false;
-            this.dgvOrder.RowHeadersWidth = 51;
-            this.dgvOrder.RowTemplate.Height = 24;
-            this.dgvOrder.Size = new System.Drawing.Size(266, 205);
-            this.dgvOrder.TabIndex = 5;
-            this.dgvOrder.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvOrder.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgvOrder.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgvOrder.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgvOrder.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvOrder.ThemeStyle.BackColor = System.Drawing.Color.Silver;
-            this.dgvOrder.ThemeStyle.GridColor = System.Drawing.Color.White;
-            this.dgvOrder.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dgvOrder.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvOrder.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvOrder.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvOrder.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvOrder.ThemeStyle.HeaderStyle.Height = 18;
-            this.dgvOrder.ThemeStyle.ReadOnly = false;
-            this.dgvOrder.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvOrder.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvOrder.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvOrder.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvOrder.ThemeStyle.RowsStyle.Height = 24;
-            this.dgvOrder.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvOrder.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8});
+            this.listView2.HideSelection = false;
+            this.listView2.Location = new System.Drawing.Point(17, 42);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(267, 218);
+            this.listView2.TabIndex = 5;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
             // 
-            // Column1
+            // columnHeader5
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column1.HeaderText = "ITEM";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 118;
+            this.columnHeader5.Text = "STT";
+            this.columnHeader5.Width = 40;
             // 
-            // Column2
+            // columnHeader6
             // 
-            this.Column2.HeaderText = "QTY";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
+            this.columnHeader6.Text = "Name";
+            this.columnHeader6.Width = 81;
             // 
-            // Column3
+            // columnHeader7
             // 
-            this.Column3.HeaderText = "COST";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
+            this.columnHeader7.Text = "Amount";
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Price";
+            this.columnHeader8.Width = 81;
             // 
             // guna2Panel2
             // 
             this.guna2Panel2.BorderRadius = 12;
             this.guna2Panel2.BorderThickness = 2;
             this.guna2Panel2.Controls.Add(this.dupDiscount);
-            this.guna2Panel2.Controls.Add(this.label3);
+            this.guna2Panel2.Controls.Add(this.lblTotal);
             this.guna2Panel2.Controls.Add(this.label4);
             this.guna2Panel2.Controls.Add(this.label2);
             this.guna2Panel2.Controls.Add(this.btnExprotbill);
@@ -399,17 +451,17 @@
             this.dupDiscount.Size = new System.Drawing.Size(109, 20);
             this.dupDiscount.TabIndex = 7;
             // 
-            // label3
+            // lblTotal
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(111, 29);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(21, 24);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "$";
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblTotal.Location = new System.Drawing.Point(114, 29);
+            this.lblTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(21, 24);
+            this.lblTotal.TabIndex = 6;
+            this.lblTotal.Text = "$";
             // 
             // label4
             // 
@@ -466,6 +518,7 @@
             this.btnPay.Size = new System.Drawing.Size(79, 32);
             this.btnPay.TabIndex = 5;
             this.btnPay.Text = "Pay";
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
             // btnClearAll
             // 
@@ -737,7 +790,7 @@
             this.btnPage_Back.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnPage_Back.Size = new System.Drawing.Size(44, 44);
             this.btnPage_Back.TabIndex = 4;
-            this.btnPage_Back.Click+= new System.EventHandler(this.btnPage_Back_Click);
+            this.btnPage_Back.Click += new System.EventHandler(this.btnPage_Back_Click);
             // 
             // btnFirst_page
             // 
@@ -793,7 +846,7 @@
             this.btnThird_page.TabIndex = 1;
             this.btnThird_page.Text = "3";
             this.btnThird_page.TextOffset = new System.Drawing.Point(0, -2);
-            this.btnThird_page.Click+= new System.EventHandler(this.btnThird_page_Click);
+            this.btnThird_page.Click += new System.EventHandler(this.btnThird_page_Click);
             // 
             // btnPage_Next
             // 
@@ -813,7 +866,7 @@
             this.btnPage_Next.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnPage_Next.Size = new System.Drawing.Size(44, 44);
             this.btnPage_Next.TabIndex = 5;
-            this.btnPage_Next.Click+= new System.EventHandler(this.btnPage_Next_Click);
+            this.btnPage_Next.Click += new System.EventHandler(this.btnPage_Next_Click);
             // 
             // tabPage2
             // 
@@ -928,6 +981,44 @@
             this.guna2Panel4.Size = new System.Drawing.Size(446, 530);
             this.guna2Panel4.TabIndex = 1;
             // 
+            // listView1
+            // 
+            this.listView1.BackColor = System.Drawing.Color.White;
+            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(3, 173);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(443, 262);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Number";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Name";
+            this.columnHeader2.Width = 159;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Amount";
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader3.Width = 117;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Price";
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader4.Width = 100;
+            // 
             // lblSum_Bill
             // 
             this.lblSum_Bill.BackColor = System.Drawing.Color.Transparent;
@@ -987,6 +1078,16 @@
             this.guna2HtmlLabel14.Size = new System.Drawing.Size(83, 26);
             this.guna2HtmlLabel14.TabIndex = 3;
             this.guna2HtmlLabel14.Text = "SubTotal: ";
+            // 
+            // lblStatus_Bill
+            // 
+            this.lblStatus_Bill.BackColor = System.Drawing.Color.Transparent;
+            this.lblStatus_Bill.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus_Bill.Location = new System.Drawing.Point(66, 114);
+            this.lblStatus_Bill.Name = "lblStatus_Bill";
+            this.lblStatus_Bill.Size = new System.Drawing.Size(54, 26);
+            this.lblStatus_Bill.TabIndex = 0;
+            this.lblStatus_Bill.Text = "Code: ";
             // 
             // lblCode_Bill
             // 
@@ -1080,59 +1181,11 @@
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // listView1
-            // 
-            this.listView1.BackColor = System.Drawing.Color.White;
-            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(3, 173);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(443, 262);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Number";
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Name";
-            this.columnHeader2.Width = 159;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Amount";
-            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader3.Width = 117;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Price";
-            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader4.Width = 100;
-            // 
-            // lblStatus_Bill
-            // 
-            this.lblStatus_Bill.BackColor = System.Drawing.Color.Transparent;
-            this.lblStatus_Bill.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus_Bill.Location = new System.Drawing.Point(66, 114);
-            this.lblStatus_Bill.Name = "lblStatus_Bill";
-            this.lblStatus_Bill.Size = new System.Drawing.Size(54, 26);
-            this.lblStatus_Bill.TabIndex = 0;
-            this.lblStatus_Bill.Text = "Code: ";
-            // 
             // uC_product1
             // 
             this.uC_product1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product1.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđđđđđđđđđđđđđđđđđđ";
+    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product1.BTNReviews_Drinks = resources.GetString("uC_product1.BTNReviews_Drinks");
             this.uC_product1.Categories = null;
             this.uC_product1.ID = null;
@@ -1150,7 +1203,7 @@
             // 
             this.uC_product2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product2.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđđđđđđđđđđđđđđđđđđ";
+    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product2.BTNReviews_Drinks = resources.GetString("uC_product2.BTNReviews_Drinks");
             this.uC_product2.Categories = null;
             this.uC_product2.ID = null;
@@ -1168,7 +1221,7 @@
             // 
             this.uC_product3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product3.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđđđđđđđđđđđđđđđđđđ";
+    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product3.BTNReviews_Drinks = resources.GetString("uC_product3.BTNReviews_Drinks");
             this.uC_product3.Categories = null;
             this.uC_product3.ID = null;
@@ -1186,7 +1239,7 @@
             // 
             this.uC_product4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product4.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđđđđđđđđđđđđđđđđđđ";
+    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product4.BTNReviews_Drinks = resources.GetString("uC_product4.BTNReviews_Drinks");
             this.uC_product4.Categories = null;
             this.uC_product4.ID = null;
@@ -1204,7 +1257,7 @@
             // 
             this.uC_product5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product5.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđđđđđđđđđđđđđđđđđđ";
+    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product5.BTNReviews_Drinks = resources.GetString("uC_product5.BTNReviews_Drinks");
             this.uC_product5.Categories = null;
             this.uC_product5.ID = null;
@@ -1222,7 +1275,7 @@
             // 
             this.uC_product6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product6.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđđđđđđđđđđđđđđđđđđ";
+    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product6.BTNReviews_Drinks = resources.GetString("uC_product6.BTNReviews_Drinks");
             this.uC_product6.Categories = null;
             this.uC_product6.ID = null;
@@ -1240,7 +1293,7 @@
             // 
             this.uC_product7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product7.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđđđđđđđđđđđđđđđđđđ";
+    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product7.BTNReviews_Drinks = resources.GetString("uC_product7.BTNReviews_Drinks");
             this.uC_product7.Categories = null;
             this.uC_product7.ID = null;
@@ -1258,7 +1311,7 @@
             // 
             this.uC_product8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product8.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđđđđđđđđđđđđđđđđđđ";
+    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product8.BTNReviews_Drinks = resources.GetString("uC_product8.BTNReviews_Drinks");
             this.uC_product8.Categories = null;
             this.uC_product8.ID = null;
@@ -1276,7 +1329,7 @@
             // 
             this.uC_product9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product9.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđđđđđđđđđđđđđđđđđđ";
+    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product9.BTNReviews_Drinks = resources.GetString("uC_product9.BTNReviews_Drinks");
             this.uC_product9.Categories = null;
             this.uC_product9.ID = null;
@@ -1294,7 +1347,7 @@
             // 
             this.uC_product10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product10.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđđđđđđđđđđđđđđđđđđ";
+    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product10.BTNReviews_Drinks = resources.GetString("uC_product10.BTNReviews_Drinks");
             this.uC_product10.Categories = null;
             this.uC_product10.ID = null;
@@ -1312,7 +1365,7 @@
             // 
             this.uC_product11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product11.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđđđđđđđđđđđđđđđđđđ";
+    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product11.BTNReviews_Drinks = resources.GetString("uC_product11.BTNReviews_Drinks");
             this.uC_product11.Categories = null;
             this.uC_product11.ID = null;
@@ -1330,7 +1383,7 @@
             // 
             this.uC_product12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product12.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđđđđđđđđđđđđđđđđđđ";
+    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product12.BTNReviews_Drinks = resources.GetString("uC_product12.BTNReviews_Drinks");
             this.uC_product12.Categories = null;
             this.uC_product12.ID = null;
@@ -1348,7 +1401,7 @@
             // 
             this.uC_product13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product13.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđđđđđđđđđđđđđđđđđđ";
+    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product13.BTNReviews_Drinks = resources.GetString("uC_product13.BTNReviews_Drinks");
             this.uC_product13.Categories = null;
             this.uC_product13.ID = null;
@@ -1366,7 +1419,7 @@
             // 
             this.uC_product14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product14.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđđđđđđđđđđđđđđđđđđ";
+    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product14.BTNReviews_Drinks = resources.GetString("uC_product14.BTNReviews_Drinks");
             this.uC_product14.Categories = null;
             this.uC_product14.ID = null;
@@ -1384,7 +1437,7 @@
             // 
             this.uC_product15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product15.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđđđđđđđđđđđđđđđđđđ";
+    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product15.BTNReviews_Drinks = resources.GetString("uC_product15.BTNReviews_Drinks");
             this.uC_product15.Categories = null;
             this.uC_product15.ID = null;
@@ -1402,7 +1455,7 @@
             // 
             this.uC_product16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product16.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđđđđđđđđđđđđđđđđđđ";
+    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product16.BTNReviews_Drinks = resources.GetString("uC_product16.BTNReviews_Drinks");
             this.uC_product16.Categories = null;
             this.uC_product16.ID = null;
@@ -1436,9 +1489,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.pnlProduct.ResumeLayout(false);
+            this.pnlProduct.PerformLayout();
+            this.guna2Panel7.ResumeLayout(false);
+            this.guna2Panel7.PerformLayout();
             this.pnlOrderEdit.ResumeLayout(false);
             this.pnlOrderEdit.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);
@@ -1526,13 +1582,9 @@
         private Guna.UI2.WinForms.Guna2Button btnThird_page;
         private Guna.UI2.WinForms.Guna2CircleButton btnPage_Next;
         private Guna.UI2.WinForms.Guna2ShadowPanel pnlOrderEdit;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvOrder;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.DomainUpDown dupDiscount;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Button btnExprotbill;
@@ -1567,6 +1619,18 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblStatus_Bill;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private Guna.UI2.WinForms.Guna2Panel pnlProduct;
+        private Guna.UI2.WinForms.Guna2Button btnUp_Product;
+        private Guna.UI2.WinForms.Guna2Button btnDelete_Product;
+        private Guna.UI2.WinForms.Guna2Button btnDown_Product;
+        private Guna.UI2.WinForms.Guna2HtmlLabel LBLName_Product;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
+        private System.Windows.Forms.Label lblQTV;
     }
 }
 

@@ -33,6 +33,7 @@ namespace Management_Coffee_Shop
             public Dictionary<string, ShoppingItem> list_shopping { get; set; }
             public int Sum { get; set; }
             public DateTime OrderDate { get; set; }
+            public string Status { get; set; }
             public class ShoppingItem
             {
                 public byte Quantity { get; set; }
@@ -887,9 +888,10 @@ namespace Management_Coffee_Shop
                     string path = @"..\..\history_Shopping.txt";
                     History_Shopping history_Shopping = new History_Shopping()
                     {
-                        OrderId = Regex.Replace(lblOrderCode.Text,@"[^\d]",""),
+                        OrderId = Regex.Replace(lblOrderCode.Text, @"[^\d]", ""),
                         UserId = this.ID,
                         list_shopping = list_shopping,
+                        Status = "Online",
                         Sum = int.Parse(Regex.Replace(lblSum_Transport.Text, @"\D", "")),
                         OrderDate = DateTime.Now
                     };

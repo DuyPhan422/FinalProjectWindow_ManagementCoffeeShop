@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
@@ -23,8 +24,8 @@ namespace Management_Coffee_Shop
 {
     public partial class Employee : Form
     {
-        private int currentPage = 1;
-        private byte indexPage = 1, lengthPage = 2, homePage = 1;
+        private int currentPage = 1, sum = 0;
+        private byte indexPage = 1, lengthPage = 2, homePage = 1, number = 1;
         private string categories;
         private List<Product> list_uCProdcuts;
         private List<Guna2Button> List_buttonPage;
@@ -52,6 +53,7 @@ namespace Management_Coffee_Shop
                     Bill bill = new Bill(history_Shopping.list_shopping);
                     bill.LBLCode= history_Shopping.OrderId;
                     bill.LBLTime = $"{history_Shopping.OrderDate:dd/MM/yyyy HH:mm}";
+                    bill.LBLStatus = history_Shopping.Status;
                     int ItemCount = 0, Amount = 0;
                     foreach (var kvp in history_Shopping.list_shopping)
                     {
@@ -93,6 +95,44 @@ namespace Management_Coffee_Shop
                 lblFeeShip_Bill.Text = string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", sum-subtotal); 
                 lblSubtotal_Bill.Text= string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", subtotal);
                 lblSum_Bill.Text= Sum_str.ToString();
+            }
+        }
+        private void ptbImage_Drinks_Click(object sender, EventArgs e)
+        {
+            if (sender is Product clicked)
+            {
+                bool check=false;
+                foreach(ListViewItem items in listView2.Items)
+                {
+                    if (items.SubItems[1].Text==clicked.LBLName_Drinks)
+                    {
+                        int amount = int.Parse(items.SubItems[2].Text)+1;
+                        items.SubItems[2].Text= amount.ToString();
+                        int price = int.Parse(Regex.Replace(clicked.BTNPrice, @"[^\d]", ""));
+                        items.SubItems[3].Text= string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", amount * price);
+                        sum += (amount * price);
+                        check = true;
+                        lblTotal.Text = string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", sum);
+                        LBLName_Product.Text = clicked.LBLName_Drinks;
+                        lblQTV.Text=amount.ToString();
+                        break;
+                    }
+                }
+                if (!check)
+                {
+                    lblQTV.Text = "1";
+                    ListViewItem item = new ListViewItem(number.ToString());
+                    item.SubItems.Add(clicked.LBLName_Drinks);
+                    item.SubItems.Add("1");
+                    item.SubItems.Add(clicked.BTNPrice);
+                    item.SubItems.Add(clicked.ID);
+                    listView2.Items.Add(item);
+                    number++;
+                    sum+= int.Parse(Regex.Replace(clicked.BTNPrice, @"[^\d]", ""));
+                    lblTotal.Text = string.Format(new CultureInfo("vi-VN"), "{0:N0}đ",sum);
+                    LBLName_Product.Text = clicked.LBLName_Drinks;
+                }
+                pnlProduct.Show();
             }
         }
         private void update_page(int indexPage)
@@ -219,10 +259,12 @@ namespace Management_Coffee_Shop
                 list_uCProdcuts[i].LBLRate_Drinks = showUp_Drinks.Rows[i]["Rate"].ToString();
                 list_uCProdcuts[i].BTNReviews_Drinks = showUp_Drinks.Rows[i]["Review"].ToString();
                 list_uCProdcuts[i].BTNPrice = showUp_Drinks.Rows[i]["Price"].ToString();
-
+                list_uCProdcuts[i].btnPice_clicked += ptbImage_Drinks_Click;
+                list_uCProdcuts[i].ptbImage_Drinks_clicked += ptbImage_Drinks_Click;
             }
             if (len < 16) for (int i = len; i < 16; i++) list_uCProdcuts[i].Hide();
         }
+        
         private void ShowUp_Drinks()
         {
             if (categories == "ALL")
@@ -271,6 +313,110 @@ namespace Management_Coffee_Shop
                 ShowUp_Drinks();
             }
         }
+
+        private void btnUp_Product_Click(object sender, EventArgs e)
+        {
+            int amount=int.Parse(lblQTV.Text)+1;
+            lblQTV.Text = amount.ToString();
+            foreach (ListViewItem item in listView2.Items)
+            {
+                if (item.SubItems[1].Text == LBLName_Product.Text)
+                {
+                    int price = int.Parse(Regex.Replace(item.SubItems[3].Text, @"[^\d]", "")) / (int.Parse(item.SubItems[2].Text));
+                    item.SubItems[3].Text = string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", amount * price);
+                    sum += price;
+                    item.SubItems[2].Text = amount.ToString();
+                    lblTotal.Text = string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", sum);
+                    break;
+                }
+            }
+        }
+
+        private void btnDown_Product_Click(object sender, EventArgs e)
+        {
+            int amount = int.Parse(lblQTV.Text);
+            if (amount== 1) return;
+            amount -= 1;
+            lblQTV.Text = amount.ToString();
+            foreach (ListViewItem item in listView2.Items)
+            {
+                if (item.SubItems[1].Text == LBLName_Product.Text)
+                {
+                    int price = int.Parse(Regex.Replace(item.SubItems[3].Text, @"[^\d]", ""))/(int.Parse(item.SubItems[2].Text));
+                    item.SubItems[3].Text = string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", amount * price);
+                    sum -=  price;
+                    item.SubItems[2].Text = amount.ToString();
+                    lblTotal.Text = string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", sum);
+                    break;
+                }
+            }
+        }
+
+        private void btnDelete_Product_Click(object sender, EventArgs e)
+        {
+            for (int i = listView2.Items.Count - 1; i >= 0; i--)
+            {
+                var item = listView2.Items[i];
+                if (item.SubItems[1].Text == LBLName_Product.Text)
+                {
+                    sum -= int.Parse(Regex.Replace(item.SubItems[3].Text, @"[^\d]", ""));
+                    listView2.Items.RemoveAt(i);
+                    number -= 1;
+                    lblTotal.Text= string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", sum);
+                    pnlProduct.Hide();
+                    break;
+                }
+            }
+        }
+        private string take_code()
+        {
+            string path = @"..\..\history_Shopping.txt";
+            string lastline = null;
+            if (File.Exists(path))
+            {
+                lastline = File.ReadLines(path).LastOrDefault();
+            }
+            int current_ID = 0;
+            if (!string.IsNullOrWhiteSpace(lastline))
+            {
+                History_Shopping history_Shopping = System.Text.Json.JsonSerializer.Deserialize<History_Shopping>(lastline);
+                current_ID = int.Parse(history_Shopping.OrderId);
+            }
+
+            return "Order #" + (++current_ID).ToString().PadLeft(7, '0');
+
+        }
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            string current_Code= take_code();
+            Dictionary<string, ShoppingItem> list_shopping = new Dictionary<string, ShoppingItem>();
+            List<(string, int)> number_shopping = new List<(string, int)>();
+            foreach (ListViewItem item in listView2.Items)
+            {
+                int number = int.Parse(Regex.Replace(item.SubItems[3].Text, @"\D", ""));
+                list_shopping[item.SubItems[4].Text] = new ShoppingItem
+                {
+                    Quantity = Convert.ToByte(item.SubItems[2].Text),
+                    Price = number
+                };
+                number_shopping.Add((item.SubItems[4].Text, Convert.ToInt16(item.SubItems[2].Text)));
+            }
+            Drinks.update_Drinks(number_shopping);
+            string path = @"..\..\history_Shopping.txt";
+            History_Shopping history_Shopping = new History_Shopping()
+            {
+                OrderId = Regex.Replace(current_Code, @"[^\d]", ""),
+                UserId = "123",
+                list_shopping = list_shopping,
+                Status = "Offline",
+                Sum = int.Parse(Regex.Replace(lblTotal.Text, @"\D", "")),
+                OrderDate = DateTime.Now
+            };
+            string jsonLine = System.Text.Json.JsonSerializer.Serialize(history_Shopping);
+            File.AppendAllText(path, jsonLine + Environment.NewLine);
+            listView2.Items.Clear();
+        }
+
         // nút mũi tên bên trái của xử lý trang
         private void btnPage_Back_Click(object sender, EventArgs e)
         {

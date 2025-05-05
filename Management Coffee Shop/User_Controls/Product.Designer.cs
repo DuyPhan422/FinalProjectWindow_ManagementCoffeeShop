@@ -64,6 +64,7 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(200, 3);
             this.guna2Panel1.TabIndex = 1;
+            this.guna2Panel1.Click += new System.EventHandler(this.ptbImage_Drinks_Click);
             // 
             // lblRate_Drinks
             // 
@@ -75,6 +76,7 @@
             this.lblRate_Drinks.Name = "lblRate_Drinks";
             this.lblRate_Drinks.Size = new System.Drawing.Size(0, 20);
             this.lblRate_Drinks.TabIndex = 5;
+            this.lblRate_Drinks.Click += new System.EventHandler(this.ptbImage_Drinks_Click);
             // 
             // lblDescribe_Drinks
             // 
@@ -86,6 +88,7 @@
             this.lblDescribe_Drinks.Name = "lblDescribe_Drinks";
             this.lblDescribe_Drinks.Size = new System.Drawing.Size(0, 16);
             this.lblDescribe_Drinks.TabIndex = 6;
+            this.lblDescribe_Drinks.Click += new System.EventHandler(this.ptbImage_Drinks_Click);
             // 
             // image
             // 
@@ -98,6 +101,7 @@
             this.image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.image.TabIndex = 8;
             this.image.TabStop = false;
+            this.image.Click += new System.EventHandler(this.ptbImage_Drinks_Click);
             // 
             // guna2Panel2
             // 
@@ -117,6 +121,7 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(250, 288);
             this.guna2Panel2.TabIndex = 9;
+            this.guna2Panel2.Click += new System.EventHandler(this.ptbImage_Drinks_Click);
             // 
             // lblName_Drinks
             // 
@@ -155,6 +160,7 @@
             this.btnReviews_Drinks.Size = new System.Drawing.Size(117, 20);
             this.btnReviews_Drinks.TabIndex = 10;
             this.btnReviews_Drinks.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnReviews_Drinks.Click += new System.EventHandler(this.ptbImage_Drinks_Click);
             // 
             // btnPrice
             // 
