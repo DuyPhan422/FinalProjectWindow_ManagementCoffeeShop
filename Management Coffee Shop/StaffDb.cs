@@ -200,7 +200,21 @@ namespace Management_Coffee_Shop
                 throw new Exception("Lỗi không xác định khi cập nhật nhân viên.", ex);
             }
         }
-
+        public static string TakeNameDrinks(string id)
+        {
+            string Name = "";
+            using (SqlConnection conn = Connection.GetSqlConnection())
+            {
+                string query = "SELECT Name from sourceDrinks WHERE ID=@ID";
+                conn.Open();
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    command.Parameters.AddWithValue("@ID", id);
+                    Name = command.ExecuteScalar().ToString();
+                }
+            }
+            return Name;
+        }
         public void DeleteStaff(int id)
         {
             try
