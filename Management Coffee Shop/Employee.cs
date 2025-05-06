@@ -36,6 +36,7 @@ namespace Management_Coffee_Shop
             list_uCProdcuts = new List<Product> { uC_product1, uC_product2, uC_product3, uC_product4, uC_product5, uC_product6, uC_product7, uC_product8, uC_product9, uC_product10, uC_product11, uC_product12, uC_product13, uC_product14, uC_product15, uC_product16 };
             load_history();
             loading_Shopping();
+            pnlBill.Hide();
         }
         private void btnHistory_Click(object sender, EventArgs e)
         {
@@ -72,6 +73,7 @@ namespace Management_Coffee_Shop
         {
             if (sender is Bill clicked)
             {
+                pnlBill.Show();
                 byte number = 1;
                 listView1.Items.Clear();
                 lblStatus_Bill.Text = clicked.LBLStatus;
@@ -415,6 +417,16 @@ namespace Management_Coffee_Shop
             string jsonLine = System.Text.Json.JsonSerializer.Serialize(history_Shopping);
             File.AppendAllText(path, jsonLine + Environment.NewLine);
             listView2.Items.Clear();
+        }
+
+        private void btnClearAll_Click(object sender, EventArgs e)
+        {
+            listView2.Items.Clear();
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage2;
         }
 
         // nút mũi tên bên trái của xử lý trang

@@ -94,7 +94,7 @@
             this.btnOnlineOrders = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlBill = new Guna.UI2.WinForms.Guna2Panel();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -116,6 +116,7 @@
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.flpBill = new System.Windows.Forms.FlowLayoutPanel();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.btnMenu = new Guna.UI2.WinForms.Guna2Button();
             this.uC_product1 = new Management_Coffee_Shop.User_Controls.Product();
             this.uC_product2 = new Management_Coffee_Shop.User_Controls.Product();
             this.uC_product3 = new Management_Coffee_Shop.User_Controls.Product();
@@ -167,12 +168,13 @@
             this.guna2Panel3.SuspendLayout();
             this.guna2TabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.guna2Panel4.SuspendLayout();
+            this.pnlBill.SuspendLayout();
             this.SuspendLayout();
             // 
             // pn1
             // 
             this.pn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.pn1.Controls.Add(this.btnMenu);
             this.pn1.Controls.Add(this.guna2HtmlLabel2);
             this.pn1.Controls.Add(this.guna2HtmlLabel1);
             this.pn1.Controls.Add(this.guna2CirclePictureBox1);
@@ -188,7 +190,7 @@
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(1249, 24);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(1197, 23);
             this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(138, 21);
@@ -210,7 +212,7 @@
             // 
             this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(1401, 3);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(1349, 2);
             this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -537,6 +539,7 @@
             this.btnClearAll.Size = new System.Drawing.Size(77, 23);
             this.btnClearAll.TabIndex = 3;
             this.btnClearAll.Text = "Clear All";
+            this.btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
             // 
             // label1
             // 
@@ -946,7 +949,7 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.tabPage3.Controls.Add(this.guna2Panel4);
+            this.tabPage3.Controls.Add(this.pnlBill);
             this.tabPage3.Controls.Add(this.flpBill);
             this.tabPage3.Location = new System.Drawing.Point(184, 4);
             this.tabPage3.Name = "tabPage3";
@@ -955,31 +958,31 @@
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "tabPage3";
             // 
-            // guna2Panel4
+            // pnlBill
             // 
-            this.guna2Panel4.BackColor = System.Drawing.Color.White;
-            this.guna2Panel4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Panel4.BorderRadius = 20;
-            this.guna2Panel4.BorderThickness = 1;
-            this.guna2Panel4.Controls.Add(this.listView1);
-            this.guna2Panel4.Controls.Add(this.lblSum_Bill);
-            this.guna2Panel4.Controls.Add(this.lblFeeShip_Bill);
-            this.guna2Panel4.Controls.Add(this.lblSubtotal_Bill);
-            this.guna2Panel4.Controls.Add(this.guna2HtmlLabel17);
-            this.guna2Panel4.Controls.Add(this.guna2HtmlLabel16);
-            this.guna2Panel4.Controls.Add(this.guna2HtmlLabel14);
-            this.guna2Panel4.Controls.Add(this.lblStatus_Bill);
-            this.guna2Panel4.Controls.Add(this.lblCode_Bill);
-            this.guna2Panel4.Controls.Add(this.lblTime_Bill);
-            this.guna2Panel4.Controls.Add(this.guna2HtmlLabel7);
-            this.guna2Panel4.Controls.Add(this.guna2HtmlLabel8);
-            this.guna2Panel4.Controls.Add(this.guna2HtmlLabel5);
-            this.guna2Panel4.Controls.Add(this.guna2HtmlLabel4);
-            this.guna2Panel4.Controls.Add(this.guna2HtmlLabel3);
-            this.guna2Panel4.Location = new System.Drawing.Point(806, 29);
-            this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(446, 530);
-            this.guna2Panel4.TabIndex = 1;
+            this.pnlBill.BackColor = System.Drawing.Color.White;
+            this.pnlBill.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
+            this.pnlBill.BorderRadius = 20;
+            this.pnlBill.BorderThickness = 1;
+            this.pnlBill.Controls.Add(this.listView1);
+            this.pnlBill.Controls.Add(this.lblSum_Bill);
+            this.pnlBill.Controls.Add(this.lblFeeShip_Bill);
+            this.pnlBill.Controls.Add(this.lblSubtotal_Bill);
+            this.pnlBill.Controls.Add(this.guna2HtmlLabel17);
+            this.pnlBill.Controls.Add(this.guna2HtmlLabel16);
+            this.pnlBill.Controls.Add(this.guna2HtmlLabel14);
+            this.pnlBill.Controls.Add(this.lblStatus_Bill);
+            this.pnlBill.Controls.Add(this.lblCode_Bill);
+            this.pnlBill.Controls.Add(this.lblTime_Bill);
+            this.pnlBill.Controls.Add(this.guna2HtmlLabel7);
+            this.pnlBill.Controls.Add(this.guna2HtmlLabel8);
+            this.pnlBill.Controls.Add(this.guna2HtmlLabel5);
+            this.pnlBill.Controls.Add(this.guna2HtmlLabel4);
+            this.pnlBill.Controls.Add(this.guna2HtmlLabel3);
+            this.pnlBill.Location = new System.Drawing.Point(806, 29);
+            this.pnlBill.Name = "pnlBill";
+            this.pnlBill.Size = new System.Drawing.Size(446, 530);
+            this.pnlBill.TabIndex = 1;
             // 
             // listView1
             // 
@@ -1181,11 +1184,28 @@
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // btnMenu
+            // 
+            this.btnMenu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMenu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMenu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMenu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMenu.FillColor = System.Drawing.Color.Transparent;
+            this.btnMenu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnMenu.ForeColor = System.Drawing.Color.White;
+            this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
+            this.btnMenu.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnMenu.Location = new System.Drawing.Point(1433, 13);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(43, 45);
+            this.btnMenu.TabIndex = 4;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            // 
             // uC_product1
             // 
             this.uC_product1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product1.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
+    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product1.BTNReviews_Drinks = resources.GetString("uC_product1.BTNReviews_Drinks");
             this.uC_product1.Categories = null;
             this.uC_product1.ID = null;
@@ -1203,7 +1223,7 @@
             // 
             this.uC_product2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product2.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
+    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product2.BTNReviews_Drinks = resources.GetString("uC_product2.BTNReviews_Drinks");
             this.uC_product2.Categories = null;
             this.uC_product2.ID = null;
@@ -1221,7 +1241,7 @@
             // 
             this.uC_product3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product3.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
+    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product3.BTNReviews_Drinks = resources.GetString("uC_product3.BTNReviews_Drinks");
             this.uC_product3.Categories = null;
             this.uC_product3.ID = null;
@@ -1239,7 +1259,7 @@
             // 
             this.uC_product4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product4.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
+    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product4.BTNReviews_Drinks = resources.GetString("uC_product4.BTNReviews_Drinks");
             this.uC_product4.Categories = null;
             this.uC_product4.ID = null;
@@ -1257,7 +1277,7 @@
             // 
             this.uC_product5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product5.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
+    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product5.BTNReviews_Drinks = resources.GetString("uC_product5.BTNReviews_Drinks");
             this.uC_product5.Categories = null;
             this.uC_product5.ID = null;
@@ -1275,7 +1295,7 @@
             // 
             this.uC_product6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product6.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
+    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product6.BTNReviews_Drinks = resources.GetString("uC_product6.BTNReviews_Drinks");
             this.uC_product6.Categories = null;
             this.uC_product6.ID = null;
@@ -1293,7 +1313,7 @@
             // 
             this.uC_product7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product7.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
+    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product7.BTNReviews_Drinks = resources.GetString("uC_product7.BTNReviews_Drinks");
             this.uC_product7.Categories = null;
             this.uC_product7.ID = null;
@@ -1311,7 +1331,7 @@
             // 
             this.uC_product8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product8.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
+    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product8.BTNReviews_Drinks = resources.GetString("uC_product8.BTNReviews_Drinks");
             this.uC_product8.Categories = null;
             this.uC_product8.ID = null;
@@ -1329,7 +1349,7 @@
             // 
             this.uC_product9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product9.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
+    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product9.BTNReviews_Drinks = resources.GetString("uC_product9.BTNReviews_Drinks");
             this.uC_product9.Categories = null;
             this.uC_product9.ID = null;
@@ -1347,7 +1367,7 @@
             // 
             this.uC_product10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product10.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
+    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product10.BTNReviews_Drinks = resources.GetString("uC_product10.BTNReviews_Drinks");
             this.uC_product10.Categories = null;
             this.uC_product10.ID = null;
@@ -1365,7 +1385,7 @@
             // 
             this.uC_product11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product11.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
+    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product11.BTNReviews_Drinks = resources.GetString("uC_product11.BTNReviews_Drinks");
             this.uC_product11.Categories = null;
             this.uC_product11.ID = null;
@@ -1383,7 +1403,7 @@
             // 
             this.uC_product12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product12.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
+    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product12.BTNReviews_Drinks = resources.GetString("uC_product12.BTNReviews_Drinks");
             this.uC_product12.Categories = null;
             this.uC_product12.ID = null;
@@ -1401,7 +1421,7 @@
             // 
             this.uC_product13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product13.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
+    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product13.BTNReviews_Drinks = resources.GetString("uC_product13.BTNReviews_Drinks");
             this.uC_product13.Categories = null;
             this.uC_product13.ID = null;
@@ -1419,7 +1439,7 @@
             // 
             this.uC_product14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product14.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
+    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product14.BTNReviews_Drinks = resources.GetString("uC_product14.BTNReviews_Drinks");
             this.uC_product14.Categories = null;
             this.uC_product14.ID = null;
@@ -1437,7 +1457,7 @@
             // 
             this.uC_product15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product15.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
+    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product15.BTNReviews_Drinks = resources.GetString("uC_product15.BTNReviews_Drinks");
             this.uC_product15.Categories = null;
             this.uC_product15.ID = null;
@@ -1455,7 +1475,7 @@
             // 
             this.uC_product16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product16.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
+    "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
             this.uC_product16.BTNReviews_Drinks = resources.GetString("uC_product16.BTNReviews_Drinks");
             this.uC_product16.Categories = null;
             this.uC_product16.ID = null;
@@ -1522,8 +1542,8 @@
             this.guna2Panel3.ResumeLayout(false);
             this.guna2TabControl1.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
-            this.guna2Panel4.ResumeLayout(false);
-            this.guna2Panel4.PerformLayout();
+            this.pnlBill.ResumeLayout(false);
+            this.pnlBill.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1599,7 +1619,7 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.FlowLayoutPanel flpBill;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
+        private Guna.UI2.WinForms.Guna2Panel pnlBill;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblCode_Bill;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
@@ -1631,6 +1651,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel LBLName_Product;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
         private System.Windows.Forms.Label lblQTV;
+        private Guna.UI2.WinForms.Guna2Button btnMenu;
     }
 }
 
