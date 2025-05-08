@@ -87,25 +87,6 @@ namespace Management_Coffee_Shop
                 }
             }
         }
-        public static DataTable get_Image_User(string id)
-        {
-            DataTable dt;
-            using (SqlConnection conn = Connection.GetSqlConnection())
-            {
-                string query = $"SELECT Image,Name FROM customerInformation WHERE ID=@ID";
-                conn.Open();
-                using (SqlCommand commnad = new SqlCommand(query, conn))
-                {
-                    commnad.Parameters.AddWithValue("@ID", id);
-                    using (SqlDataAdapter commnadAdapter = new SqlDataAdapter(commnad))
-                    {
-                        dt = new DataTable();
-                        commnadAdapter.Fill(dt);
-                    }
-                }
-            }
-            return dt;
-        }
         public static void update_User(string id,string name,string date,string address,string Email,string image)
         {
             using (SqlConnection conn = Connection.GetSqlConnection())

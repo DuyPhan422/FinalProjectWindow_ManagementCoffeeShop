@@ -73,15 +73,14 @@ namespace Management_Coffee_Shop
             txtAddress_profile.Text = WrapTextEvery66Chars(customer.ID);
             txtEmail_profile.Text =customer.Email;
             txtDate_profile.Text = customer.Date;
-            DataTable dt=Drinks.get_Image_User(customer.ID);
-            if (dt.Rows[0]["Image"].ToString().Trim() == "")
+            if (customer.Image.Trim() == "")
             {
                 ptbImage_Profile.Image = Image.FromFile(@"..\..\Management coffee shop_image\edited_image-removebg-preview.png");
                 btnAccount.Image = Image.FromFile(@"..\..\Management coffee shop_image\edited_image-removebg-preview.png");
             }else
             {
-                ptbImage_Profile.Image = Image.FromFile(dt.Rows[0]["Image"].ToString());
-                btnAccount.Image = Image.FromFile(dt.Rows[0]["Image"].ToString());
+                ptbImage_Profile.Image = Image.FromFile(customer.Image);
+                btnAccount.Image = Image.FromFile(customer.Image);
             }
             list_uCProdcuts = new List<Product> { uC_product1, uC_product2, uC_product3, uC_product4, uC_product5, uC_product6, uC_product7, uC_product8, uC_product9, uC_product10, uC_product11, uC_product12, uC_product13, uC_product14, uC_product15, uC_product16 };
             List_buttonPage = new List<Guna2Button> { btnFirst_page, btnSecond_page, btnThird_page };
@@ -406,8 +405,7 @@ namespace Management_Coffee_Shop
                     if (history.ProductId == clickedButton.ID)
                     {
                         ucComment ucComment = new ucComment();
-                        DataTable dt=Drinks.get_Image_User(customer.ID);
-                        ucComment.PTBImage = dt.Rows[0]["Image"].ToString();
+                        ucComment.PTBImage = customer.Image;
                         //if (ID != this.ID) ucComment.LBLName = dt.Rows[0]["Name"].ToString();
                         ucComment.LBLName = "Bạn";
                         ucComment.set_Rate(history.Rank);
