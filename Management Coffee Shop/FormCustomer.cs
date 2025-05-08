@@ -69,7 +69,7 @@ namespace Management_Coffee_Shop
         }
         private void customer_load(bool check)
         {
-            txtName_profile.Text =this.Name;
+            txtName_profile.Text =customer.Name;
             txtAddress_profile.Text = WrapTextEvery66Chars(customer.ID);
             txtEmail_profile.Text =customer.Email;
             txtDate_profile.Text = customer.Date;
