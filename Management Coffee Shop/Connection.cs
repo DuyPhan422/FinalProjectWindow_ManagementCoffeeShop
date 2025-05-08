@@ -8,7 +8,6 @@ namespace Management_Coffee_Shop
     {
         private static readonly string ConnectionString1 =
             @"Data Source=DESKTOP-7S1UU42\SQLEXPRESS;Initial Catalog=""Management Coffee Shop"";User ID=sa;Password=1234;TrustServerCertificate=True";
-
         private static readonly string ConnectionString2 =
             @"Data Source=LAPTOP-AH11AR93;Initial Catalog=""Management Coffee Shop"";User ID=sa;Password=123456;TrustServerCertificate=True";
         private static readonly string ConnectionString3 =

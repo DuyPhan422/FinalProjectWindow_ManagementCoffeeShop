@@ -50,7 +50,6 @@
             this.elipseBtnStaff = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btnStaff = new System.Windows.Forms.Button();
             this.elipseBtnFacility = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.btnFacility = new System.Windows.Forms.Button();
             this.TLB_menu = new System.Windows.Forms.TableLayoutPanel();
             this.pnlFill = new System.Windows.Forms.Panel();
             this.TLP_top.SuspendLayout();
@@ -300,33 +299,12 @@
             // elipseBtnFacility
             // 
             this.elipseBtnFacility.BorderRadius = 12;
-            this.elipseBtnFacility.TargetControl = this.btnFacility;
-            // 
-            // btnFacility
-            // 
-            this.btnFacility.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnFacility.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnFacility.FlatAppearance.BorderSize = 0;
-            this.btnFacility.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFacility.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFacility.ImageKey = "house_1758128.png";
-            this.btnFacility.ImageList = this.imageList1;
-            this.btnFacility.Location = new System.Drawing.Point(10, 325);
-            this.btnFacility.Margin = new System.Windows.Forms.Padding(10);
-            this.btnFacility.Name = "btnFacility";
-            this.btnFacility.Size = new System.Drawing.Size(113, 85);
-            this.btnFacility.TabIndex = 3;
-            this.btnFacility.Text = "Facility";
-            this.btnFacility.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnFacility.UseVisualStyleBackColor = true;
-            this.btnFacility.Click += new System.EventHandler(this.btnFacility_Click);
             // 
             // TLB_menu
             // 
             this.TLB_menu.BackColor = System.Drawing.Color.LavenderBlush;
             this.TLB_menu.ColumnCount = 1;
             this.TLB_menu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TLB_menu.Controls.Add(this.btnFacility, 0, 3);
             this.TLB_menu.Controls.Add(this.btnStaff, 0, 2);
             this.TLB_menu.Controls.Add(this.btnIncome, 0, 1);
             this.TLB_menu.Controls.Add(this.btnProduct, 0, 0);
@@ -369,6 +347,7 @@
             this.Name = "formManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manager";
+            this.Load += new System.EventHandler(this.formManager_Load);
             this.TLP_top.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlSearch.ResumeLayout(false);
@@ -399,7 +378,6 @@
         private System.Windows.Forms.TableLayoutPanel TLB_menu;
         private System.Windows.Forms.Button btnProduct;
         private System.Windows.Forms.Panel pnlPage;
-        private System.Windows.Forms.Button btnFacility;
         private System.Windows.Forms.Button btnStaff;
         private System.Windows.Forms.Button btnIncome;
         private System.Windows.Forms.Panel pnlFill;

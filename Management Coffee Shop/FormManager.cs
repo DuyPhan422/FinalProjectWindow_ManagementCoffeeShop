@@ -37,7 +37,6 @@ namespace Management_Coffee_Shop
             btnProduct.ImageIndex = 0;
             btnIncome.ImageIndex = 2;
             btnStaff.ImageIndex = 6;
-            btnFacility.ImageIndex = 4;
         }
 
         private void btnProduct_Click(object sender, EventArgs e)
@@ -73,7 +72,6 @@ namespace Management_Coffee_Shop
         private void btnFacility_Click(object sender, EventArgs e)
         {
             Reset_btn();
-            Select_btn(btnFacility);
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)
@@ -122,6 +120,16 @@ namespace Management_Coffee_Shop
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void formManager_Load(object sender, EventArgs e)
+        {
+            Reset_btn();
+            Select_btn(btnProduct);
+            ucProduct uc_pro = new ucProduct();
+            uc_pro.Dock = DockStyle.Fill;
+            pnlPage.Controls.Clear();
+            pnlPage.Controls.Add(uc_pro);
         }
     }
 }

@@ -27,62 +27,74 @@ namespace Management_Coffee_Shop
         }
         private void LoadData(string filterType = "Custom")
         {
+            if (filterType == "Custom" && dtpStartDate.Value > dtpEndDate.Value)
+            {
+                MessageBox.Show("Ngày bắt đầu không được lớn hơn ngày kết thúc!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             var refreshData = model.LoadData(dtpStartDate.Value, dtpEndDate.Value, filterType);
             if (refreshData)
             {
-                // Cập nhật các nhãn
                 lblNumberOfOrders.Text = model.NumOrders.ToString("N0");
-                lblTotalRevenue.Text = "$" + model.TotalRevenue.ToString("N2");
-                lblTotalProfit.Text = "$" + model.TotalProfit.ToString("N2");
+                lblTotalRevenue.Text = (model.TotalRevenue).ToString("#,##0") + "₫";
+                lblTotalProfit.Text = (model.TotalProfit).ToString("#,##0") + "₫";
                 lblNumberOfCustomers.Text = model.NumCustomers.ToString("N0");
                 lblNumberOfSuppliers.Text = model.NumSuppliers.ToString("N0");
                 lblNumberOfProducts.Text = model.NumProducts.ToString("N0");
 
-                // Biểu đồ Gross Revenue (bên trái) - Dạng khu vực
-                chartGrossRevenue.DataSource = model.GrossRevenueList;
-                chartGrossRevenue.Series[0].XValueMember = "Date";
-                chartGrossRevenue.Series[0].YValueMembers = "TotalAmount";
-                chartGrossRevenue.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-                chartGrossRevenue.DataBind();
-                if (model.GrossRevenueList.Count == 0)
+                // Biểu đồ Gross Revenue
+                chartGrossRevenue.Series[0].Points.Clear();
+                if (model.GrossRevenueList.Any())
                 {
-                    chartGrossRevenue.Series[0].Points.Clear();
+                    foreach (var revenue in model.GrossRevenueList)
+                    {
+                        chartGrossRevenue.Series[0].Points.AddXY(revenue.Date, revenue.TotalAmount);
+                    }
+                }
+                else
+                {
                     chartGrossRevenue.Series[0].Points.AddXY("No Data", 0);
                 }
+                chartGrossRevenue.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+                chartGrossRevenue.ChartAreas[0].AxisY.LabelStyle.Format = "{0}K ₫";
+                chartGrossRevenue.ChartAreas[0].AxisY.Minimum = 0;
+                chartGrossRevenue.ChartAreas[0].AxisX.LabelStyle.Angle = -45;
 
-                // Biểu đồ Top 5 Products (bên phải) - Dạng vòng tròn
-                chartTopProducts.DataSource = model.TopProductsList;
-                chartTopProducts.Series[0].XValueMember = "Key";
-                chartTopProducts.Series[0].YValueMembers = "Value";
+                // Biểu đồ Top 5 Products
+                chartTopProducts.Series[0].Points.Clear();
+                if (model.TopProductsList.Any())
+                {
+                    foreach (var product in model.TopProductsList)
+                    {
+                        chartTopProducts.Series[0].Points.AddXY(product.Key, product.Value);
+                    }
+                }
+                else
+                {
+                    chartTopProducts.Series[0].Points.AddXY("No Data", 1);
+                }
                 chartTopProducts.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
                 chartTopProducts.Series[0].Label = "#VALX (#VAL)";
                 chartTopProducts.Series[0].IsValueShownAsLabel = true;
                 chartTopProducts.Series[0]["PieLabelStyle"] = "Outside";
-                chartTopProducts.DataBind();
-                if (model.TopProductsList.Count == 0)
-                {
-                    chartTopProducts.Series[0].Points.Clear();
-                    chartTopProducts.Series[0].Points.AddXY("No Data", 1);
-                }
 
-                // Cập nhật DataGridView cho danh sách sản phẩm dưới mức tồn kho
                 dgvUnderStock.Columns.Clear();
+                dgvUnderStock.DefaultCellStyle.Font = new Font("Segoe UI", 12, FontStyle.Regular);
                 dgvUnderStock.Columns.Add("Name", "Item");
                 dgvUnderStock.Columns.Add("Stock", "Stock");
                 dgvUnderStock.AutoGenerateColumns = false;
                 dgvUnderStock.DataSource = model.UnderStockList;
                 dgvUnderStock.Columns["Name"].DataPropertyName = "Name";
                 dgvUnderStock.Columns["Stock"].DataPropertyName = "Stock";
+                dgvUnderStock.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgvUnderStock.Columns["Name"].FillWeight = 50;
+                dgvUnderStock.Columns["Stock"].FillWeight = 50;
 
-                dgvUnderStock.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-                dgvUnderStock.Columns["Name"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                dgvUnderStock.Columns["Stock"].Width = 80;
-
-                Console.WriteLine("Loaded view :)");
             }
             else
             {
-                Console.WriteLine("View not loaded, same query");
+                MessageBox.Show("View not loaded, same query");
             }
         }
 
@@ -103,8 +115,8 @@ namespace Management_Coffee_Shop
 
             if (currentButton != null && currentButton != btn)
             {
-                currentButton.FillColor = Color.FromArgb(42, 45, 86);
-                currentButton.ForeColor = Color.FromArgb(169, 169, 169);
+                currentButton.FillColor = Color.FromArgb(141, 161, 246);
+                currentButton.ForeColor = Color.Black;
             }
             dtpStartDate.Enabled = false;
             dtpEndDate.Enabled = false;

@@ -135,11 +135,11 @@ namespace Management_Coffee_Shop
 
         void SelectTxt(Guna2TextBox txt)
         {
-            txt.BackColor = Color.FromArgb(139, 199, 255);
+            txt.BackColor = Color.FromArgb(213, 216, 219);
         }
         void LeaveTxt(Guna2TextBox txt)
         {
-            txt.BackColor = Color.White;
+            txt.BackColor = Color.FromArgb(213, 216, 219);
         }
         private void txtFirstName_MouseClick(object sender, MouseEventArgs e)
         {

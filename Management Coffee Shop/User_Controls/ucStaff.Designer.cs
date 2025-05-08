@@ -72,6 +72,11 @@
             this.pnlEditProductFill = new Guna.UI2.WinForms.Guna2Panel();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.dgvStaff = new System.Windows.Forms.DataGridView();
+            this.pnlGrid = new Guna.UI2.WinForms.Guna2Panel();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.elipsePnlEditProductTop = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.elipsePnlEditProductFill = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.elipseDgvStaff = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,11 +86,6 @@
             this.colPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSalary = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pnlGrid = new Guna.UI2.WinForms.Guna2Panel();
-            this.timer = new System.Windows.Forms.Timer(this.components);
-            this.elipsePnlEditProductTop = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.elipsePnlEditProductFill = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.elipseDgvStaff = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.tbpnlTop.SuspendLayout();
             this.pnlEditProduct.SuspendLayout();
             this.pnlEditProductArea.SuspendLayout();
@@ -233,9 +233,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(175)))));
-            this.label1.Location = new System.Drawing.Point(1028, 0);
+            this.label1.Location = new System.Drawing.Point(1013, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(186, 60);
+            this.label1.Size = new System.Drawing.Size(216, 60);
             this.label1.TabIndex = 6;
             this.label1.Text = "Staff Together";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -277,8 +277,8 @@
             this.tblEditProduct.AutoScroll = true;
             this.tblEditProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(216)))), ((int)(((byte)(219)))));
             this.tblEditProduct.ColumnCount = 3;
-            this.tblEditProduct.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tblEditProduct.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tblEditProduct.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.82609F));
+            this.tblEditProduct.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.69565F));
             this.tblEditProduct.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tblEditProduct.Controls.Add(this.txtDescription, 0, 21);
             this.tblEditProduct.Controls.Add(this.txtSalary, 0, 18);
@@ -344,7 +344,7 @@
             this.txtDescription.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtDescription.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDescription.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.txtDescription.Location = new System.Drawing.Point(4, 905);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDescription.Name = "txtDescription";
@@ -369,7 +369,7 @@
             this.txtSalary.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSalary.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSalary.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSalary.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSalary.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.txtSalary.Location = new System.Drawing.Point(4, 785);
             this.txtSalary.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSalary.Name = "txtSalary";
@@ -394,7 +394,7 @@
             this.txtAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.txtAddress.Location = new System.Drawing.Point(4, 635);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAddress.Name = "txtAddress";
@@ -419,7 +419,7 @@
             this.txtPhone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.txtPhone.Location = new System.Drawing.Point(4, 545);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPhone.Name = "txtPhone";
@@ -443,7 +443,7 @@
             this.txtLastName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtLastName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtLastName.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtLastName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLastName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.txtLastName.Location = new System.Drawing.Point(4, 245);
             this.txtLastName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtLastName.Name = "txtLastName";
@@ -460,11 +460,11 @@
             this.pbAvatar.BorderRadius = 20;
             this.pbAvatar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbAvatar.ImageRotate = 0F;
-            this.pbAvatar.Location = new System.Drawing.Point(156, 3);
+            this.pbAvatar.Location = new System.Drawing.Point(154, 3);
             this.pbAvatar.Name = "pbAvatar";
             this.pbAvatar.Padding = new System.Windows.Forms.Padding(4);
             this.tblEditProduct.SetRowSpan(this.pbAvatar, 2);
-            this.pbAvatar.Size = new System.Drawing.Size(147, 84);
+            this.pbAvatar.Size = new System.Drawing.Size(149, 84);
             this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbAvatar.TabIndex = 0;
             this.pbAvatar.TabStop = false;
@@ -476,10 +476,10 @@
             this.guna2Panel1.Controls.Add(this.btnImageCancel);
             this.guna2Panel1.Controls.Add(this.btnImageChange);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel1.Location = new System.Drawing.Point(153, 90);
+            this.guna2Panel1.Location = new System.Drawing.Point(151, 90);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(153, 29);
+            this.guna2Panel1.Size = new System.Drawing.Size(155, 29);
             this.guna2Panel1.TabIndex = 3;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
@@ -497,7 +497,7 @@
             this.btnImageCancel.ForeColor = System.Drawing.Color.White;
             this.btnImageCancel.Image = global::Management_Coffee_Shop.Properties.Resources.image_13406883;
             this.btnImageCancel.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnImageCancel.Location = new System.Drawing.Point(88, 0);
+            this.btnImageCancel.Location = new System.Drawing.Point(90, 0);
             this.btnImageCancel.Name = "btnImageCancel";
             this.btnImageCancel.Size = new System.Drawing.Size(65, 29);
             this.btnImageCancel.TabIndex = 3;
@@ -530,14 +530,13 @@
             this.lblFirstName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.lblFirstName.Location = new System.Drawing.Point(3, 119);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(97, 23);
+            this.lblFirstName.Size = new System.Drawing.Size(115, 28);
             this.lblFirstName.TabIndex = 4;
             this.lblFirstName.Text = "First Name";
             this.lblFirstName.Click += new System.EventHandler(this.lblFirstName_Click);
             // 
             // txtFirstName
             // 
-            this.txtFirstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))));
             this.txtFirstName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
             this.txtFirstName.BorderRadius = 13;
             this.tblEditProduct.SetColumnSpan(this.txtFirstName, 3);
@@ -549,7 +548,7 @@
             this.txtFirstName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtFirstName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFirstName.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtFirstName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFirstName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.txtFirstName.Location = new System.Drawing.Point(4, 155);
             this.txtFirstName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtFirstName.Name = "txtFirstName";
@@ -568,7 +567,7 @@
             this.lblLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.lblLastName.Location = new System.Drawing.Point(3, 210);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(94, 23);
+            this.lblLastName.Size = new System.Drawing.Size(112, 28);
             this.lblLastName.TabIndex = 6;
             this.lblLastName.Text = "Last Name";
             this.lblLastName.Click += new System.EventHandler(this.lblLastName_Click);
@@ -585,7 +584,7 @@
             this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.txtEmail.Location = new System.Drawing.Point(4, 335);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtEmail.Name = "txtEmail";
@@ -604,7 +603,7 @@
             this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.lblEmail.Location = new System.Drawing.Point(3, 300);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(54, 23);
+            this.lblEmail.Size = new System.Drawing.Size(64, 28);
             this.lblEmail.TabIndex = 9;
             this.lblEmail.Text = "Email";
             this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
@@ -617,7 +616,7 @@
             this.lblGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.lblGender.Location = new System.Drawing.Point(3, 390);
             this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(147, 60);
+            this.lblGender.Size = new System.Drawing.Size(145, 60);
             this.lblGender.TabIndex = 10;
             this.lblGender.Text = "Gender";
             this.lblGender.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -634,9 +633,9 @@
             this.rdbMale.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rdbMale.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.rdbMale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            this.rdbMale.Location = new System.Drawing.Point(156, 393);
+            this.rdbMale.Location = new System.Drawing.Point(154, 393);
             this.rdbMale.Name = "rdbMale";
-            this.rdbMale.Size = new System.Drawing.Size(147, 54);
+            this.rdbMale.Size = new System.Drawing.Size(149, 54);
             this.rdbMale.TabIndex = 11;
             this.rdbMale.Text = "Male";
             this.rdbMale.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -674,7 +673,7 @@
             this.lblBirthday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.lblBirthday.Location = new System.Drawing.Point(3, 450);
             this.lblBirthday.Name = "lblBirthday";
-            this.lblBirthday.Size = new System.Drawing.Size(79, 23);
+            this.lblBirthday.Size = new System.Drawing.Size(94, 28);
             this.lblBirthday.TabIndex = 13;
             this.lblBirthday.Text = "Birthday";
             this.lblBirthday.Click += new System.EventHandler(this.lblBirthday_Click);
@@ -683,6 +682,7 @@
             // 
             this.dtpBirthDay.Checked = true;
             this.tblEditProduct.SetColumnSpan(this.dtpBirthDay, 2);
+            this.dtpBirthDay.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(175)))));
             this.dtpBirthDay.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.dtpBirthDay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.dtpBirthDay.Format = System.Windows.Forms.DateTimePickerFormat.Long;
@@ -702,7 +702,7 @@
             this.lblPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.lblPhone.Location = new System.Drawing.Point(3, 510);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(59, 23);
+            this.lblPhone.Size = new System.Drawing.Size(71, 28);
             this.lblPhone.TabIndex = 15;
             this.lblPhone.Text = "Phone";
             this.lblPhone.Click += new System.EventHandler(this.lblPhone_Click);
@@ -714,7 +714,7 @@
             this.lblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.lblAddress.Location = new System.Drawing.Point(3, 600);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(74, 23);
+            this.lblAddress.Size = new System.Drawing.Size(87, 28);
             this.lblAddress.TabIndex = 18;
             this.lblAddress.Text = "Address";
             this.lblAddress.Click += new System.EventHandler(this.lblAddress_Click);
@@ -726,7 +726,7 @@
             this.lblSalary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.lblSalary.Location = new System.Drawing.Point(3, 750);
             this.lblSalary.Name = "lblSalary";
-            this.lblSalary.Size = new System.Drawing.Size(60, 23);
+            this.lblSalary.Size = new System.Drawing.Size(71, 28);
             this.lblSalary.TabIndex = 17;
             this.lblSalary.Text = "Salary";
             this.lblSalary.Click += new System.EventHandler(this.lblSalary_Click);
@@ -738,7 +738,7 @@
             this.lblDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.lblDescription.Location = new System.Drawing.Point(3, 870);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(102, 23);
+            this.lblDescription.Size = new System.Drawing.Size(121, 28);
             this.lblDescription.TabIndex = 19;
             this.lblDescription.Text = "Description";
             this.lblDescription.Click += new System.EventHandler(this.lblDescription_Click);
@@ -766,7 +766,7 @@
             this.lblID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.lblID.Location = new System.Drawing.Point(79, 20);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(28, 23);
+            this.lblID.Size = new System.Drawing.Size(33, 28);
             this.lblID.TabIndex = 5;
             this.lblID.Text = "ID";
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -870,9 +870,9 @@
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(25)))), ((int)(((byte)(66)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Thistle;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(25)))), ((int)(((byte)(66)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvStaff.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvStaff.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -890,110 +890,6 @@
             this.dgvStaff.TabIndex = 2;
             this.dgvStaff.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStaff_CellContentClick);
             this.dgvStaff.SelectionChanged += new System.EventHandler(this.dgvStaff_SelectionChanged);
-            // 
-            // colID
-            // 
-            this.colID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.colID.DataPropertyName = "ID";
-            this.colID.Frozen = true;
-            this.colID.HeaderText = "ID";
-            this.colID.MinimumWidth = 50;
-            this.colID.Name = "colID";
-            this.colID.ReadOnly = true;
-            this.colID.Width = 51;
-            // 
-            // colFirstName
-            // 
-            this.colFirstName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.colFirstName.DataPropertyName = "FirstName";
-            this.colFirstName.FillWeight = 120F;
-            this.colFirstName.Frozen = true;
-            this.colFirstName.HeaderText = "FirstName";
-            this.colFirstName.MinimumWidth = 120;
-            this.colFirstName.Name = "colFirstName";
-            this.colFirstName.ReadOnly = true;
-            this.colFirstName.Width = 120;
-            // 
-            // colLastName
-            // 
-            this.colLastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.colLastName.DataPropertyName = "LastName";
-            this.colLastName.FillWeight = 120F;
-            this.colLastName.Frozen = true;
-            this.colLastName.HeaderText = "LastName";
-            this.colLastName.MinimumWidth = 120;
-            this.colLastName.Name = "colLastName";
-            this.colLastName.ReadOnly = true;
-            this.colLastName.Width = 120;
-            // 
-            // colGender
-            // 
-            this.colGender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.colGender.DataPropertyName = "Gender";
-            this.colGender.Frozen = true;
-            this.colGender.HeaderText = "Gender";
-            this.colGender.MinimumWidth = 6;
-            this.colGender.Name = "colGender";
-            this.colGender.ReadOnly = true;
-            this.colGender.Width = 84;
-            // 
-            // colBirthDate
-            // 
-            this.colBirthDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.colBirthDate.DataPropertyName = "BirthDate";
-            this.colBirthDate.Frozen = true;
-            this.colBirthDate.HeaderText = "BirthDate";
-            this.colBirthDate.MinimumWidth = 6;
-            this.colBirthDate.Name = "colBirthDate";
-            this.colBirthDate.ReadOnly = true;
-            this.colBirthDate.Width = 99;
-            // 
-            // colEmail
-            // 
-            this.colEmail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.colEmail.DataPropertyName = "Email";
-            this.colEmail.FillWeight = 120F;
-            this.colEmail.Frozen = true;
-            this.colEmail.HeaderText = "Email";
-            this.colEmail.MinimumWidth = 120;
-            this.colEmail.Name = "colEmail";
-            this.colEmail.ReadOnly = true;
-            this.colEmail.Width = 120;
-            // 
-            // colPhone
-            // 
-            this.colPhone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.colPhone.DataPropertyName = "Phone";
-            this.colPhone.FillWeight = 120F;
-            this.colPhone.Frozen = true;
-            this.colPhone.HeaderText = "Phone";
-            this.colPhone.MinimumWidth = 120;
-            this.colPhone.Name = "colPhone";
-            this.colPhone.ReadOnly = true;
-            this.colPhone.Width = 120;
-            // 
-            // colAddress
-            // 
-            this.colAddress.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.colAddress.DataPropertyName = "Address";
-            this.colAddress.FillWeight = 120F;
-            this.colAddress.Frozen = true;
-            this.colAddress.HeaderText = "Address";
-            this.colAddress.MinimumWidth = 120;
-            this.colAddress.Name = "colAddress";
-            this.colAddress.ReadOnly = true;
-            this.colAddress.Width = 120;
-            // 
-            // colSalary
-            // 
-            this.colSalary.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.colSalary.DataPropertyName = "Salary";
-            this.colSalary.FillWeight = 120F;
-            this.colSalary.HeaderText = "Salary";
-            this.colSalary.MinimumWidth = 120;
-            this.colSalary.Name = "colSalary";
-            this.colSalary.ReadOnly = true;
-            this.colSalary.Width = 120;
             // 
             // pnlGrid
             // 
@@ -1026,6 +922,106 @@
             // 
             this.elipseDgvStaff.BorderRadius = 20;
             this.elipseDgvStaff.TargetControl = this.dgvStaff;
+            // 
+            // colID
+            // 
+            this.colID.DataPropertyName = "ID";
+            this.colID.Frozen = true;
+            this.colID.HeaderText = "ID";
+            this.colID.MinimumWidth = 50;
+            this.colID.Name = "colID";
+            this.colID.ReadOnly = true;
+            this.colID.Width = 50;
+            // 
+            // colFirstName
+            // 
+            this.colFirstName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.colFirstName.DataPropertyName = "FirstName";
+            this.colFirstName.FillWeight = 120F;
+            this.colFirstName.Frozen = true;
+            this.colFirstName.HeaderText = "FirstName";
+            this.colFirstName.MinimumWidth = 120;
+            this.colFirstName.Name = "colFirstName";
+            this.colFirstName.ReadOnly = true;
+            this.colFirstName.Width = 121;
+            // 
+            // colLastName
+            // 
+            this.colLastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.colLastName.DataPropertyName = "LastName";
+            this.colLastName.FillWeight = 120F;
+            this.colLastName.Frozen = true;
+            this.colLastName.HeaderText = "LastName";
+            this.colLastName.MinimumWidth = 120;
+            this.colLastName.Name = "colLastName";
+            this.colLastName.ReadOnly = true;
+            this.colLastName.Width = 120;
+            // 
+            // colGender
+            // 
+            this.colGender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.colGender.DataPropertyName = "Gender";
+            this.colGender.Frozen = true;
+            this.colGender.HeaderText = "Gender";
+            this.colGender.MinimumWidth = 6;
+            this.colGender.Name = "colGender";
+            this.colGender.ReadOnly = true;
+            // 
+            // colBirthDate
+            // 
+            this.colBirthDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.colBirthDate.DataPropertyName = "BirthDate";
+            this.colBirthDate.Frozen = true;
+            this.colBirthDate.HeaderText = "BirthDate";
+            this.colBirthDate.MinimumWidth = 6;
+            this.colBirthDate.Name = "colBirthDate";
+            this.colBirthDate.ReadOnly = true;
+            this.colBirthDate.Width = 116;
+            // 
+            // colEmail
+            // 
+            this.colEmail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.colEmail.DataPropertyName = "Email";
+            this.colEmail.FillWeight = 120F;
+            this.colEmail.Frozen = true;
+            this.colEmail.HeaderText = "Email";
+            this.colEmail.MinimumWidth = 120;
+            this.colEmail.Name = "colEmail";
+            this.colEmail.ReadOnly = true;
+            this.colEmail.Width = 120;
+            // 
+            // colPhone
+            // 
+            this.colPhone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.colPhone.DataPropertyName = "Phone";
+            this.colPhone.FillWeight = 120F;
+            this.colPhone.Frozen = true;
+            this.colPhone.HeaderText = "Phone";
+            this.colPhone.MinimumWidth = 120;
+            this.colPhone.Name = "colPhone";
+            this.colPhone.ReadOnly = true;
+            this.colPhone.Width = 120;
+            // 
+            // colAddress
+            // 
+            this.colAddress.DataPropertyName = "Address";
+            this.colAddress.FillWeight = 200F;
+            this.colAddress.Frozen = true;
+            this.colAddress.HeaderText = "Address";
+            this.colAddress.MinimumWidth = 200;
+            this.colAddress.Name = "colAddress";
+            this.colAddress.ReadOnly = true;
+            this.colAddress.Width = 200;
+            // 
+            // colSalary
+            // 
+            this.colSalary.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colSalary.DataPropertyName = "Salary";
+            this.colSalary.FillWeight = 120F;
+            this.colSalary.HeaderText = "Salary";
+            this.colSalary.MinimumWidth = 120;
+            this.colSalary.Name = "colSalary";
+            this.colSalary.ReadOnly = true;
             // 
             // ucStaff
             // 
@@ -1102,6 +1098,7 @@
         private Guna.UI2.WinForms.Guna2Elipse elipsePnlEditProductFill;
         private Guna.UI2.WinForms.Guna2Elipse elipseDgvStaff;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2Panel pnlEditProductArea;
         private System.Windows.Forms.DataGridViewTextBoxColumn colID;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFirstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colLastName;
@@ -1111,6 +1108,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colPhone;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAddress;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSalary;
-        private Guna.UI2.WinForms.Guna2Panel pnlEditProductArea;
     }
 }
