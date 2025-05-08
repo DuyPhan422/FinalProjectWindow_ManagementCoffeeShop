@@ -17,6 +17,7 @@ namespace Management_Coffee_Shop
     {
         public List<string> userName_List=new List<string>();
         public List<string> userId_List=new List<string>();
+        private string otp,id;
         public FormLogin()
         {
             InitializeComponent();
@@ -153,50 +154,70 @@ namespace Management_Coffee_Shop
             string password = txtPassWord.Text;
             using (SqlConnection connection = Connection.GetSqlConnection())
             {
+                string email = "";
                 connection.Open();
-                string query = "SELECT ID FROM account WHERE UserName=@UserName AND PassWord=@PassWord";
+                string query = "SELECT ID,Email FROM account WHERE UserName=@UserName AND PassWord=@PassWord";
                 using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
                     cmd.Parameters.AddWithValue("@UserName", username);
                     cmd.Parameters.AddWithValue("@PassWord", password);
-                    object result = cmd.ExecuteScalar();
-                    if (result != null)
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        if (result.ToString()[0] == 'M')
+                        if (reader.Read())
                         {
-                            MessageBox.Show("Kết nối với quản lý thành công");
-                            // quản lý
+                            id = reader["ID"].ToString();
+                            email = reader["Email"].ToString();
                         }
-                        else
-                        {
-                            if (result.ToString()[0] == 'C')
-                            {
-                                bool check = false;
-                                if (userName_List.Count > 0)
-                                {
-                                    foreach (string us in userName_List)
-                                    {
-                                        if (us.Trim() == username.Trim())
-                                        {
-                                            check = true;
-                                            break;
-                                        }
-                                    }
-                                }
-                                if (check) get_inforID(result.ToString(), true);
-                                else get_inforID(result.ToString(), false);
-                            }
-                            else
-                            {
-                                MessageBox.Show("Kết nối với attendant thành công");
-                            }
-                        }
-                    }
-                    else
-                    {
-                        lblOutput.Text = "Sai thông tin tài khoản hoặc mật khẩu";
                     }
                 }
+                if (id[0] == 'C')
+                {
+                    bool check = false;
+                    if (userName_List.Count > 0)
+                    {
+                        foreach (string us in userName_List)
+                        {
+                            if (us.Trim() == username.Trim())
+                            {
+                                check = true;
+                                break;
+                            }
+                        }
+                    }
+                    if (check) get_inforID(id, true);
+                    else get_inforID(id, false);
+                } else if (id[0] == 'E')
+                {
+                    guna2TabControl1.SelectedTab = tabPage3;
+                    Login login=new Login(); 
+                    otp=login.send_OTP(email, "Mã OTP của bạn là: ","Đăng Nhập");
+                }else
+                {
+                    guna2TabControl1.SelectedTab = tabPage3;
+                    Login login = new Login();
+                    otp = login.send_OTP(email, "Mã OTP của bạn là: ", "Đăng Nhập");
+                   
+                }
+            }
+        }
+        private void btnLogin_OTP_Click(object sender, EventArgs e)
+        {
+            if (otp == txtOtp.Text)
+            {
+                if (id[0] == 'E')
+                {
+                    Employee employee = new Employee();
+                    employee.Show();
+                }else
+                {
+                    formManager formManager=new formManager();
+                    formManager.Show();
+                }
+            }else
+            {
+                guna2TabControl1.SelectedTab = tabPage1;
+                otp = "";
+                id = "";
             }
         }
         public string UserName

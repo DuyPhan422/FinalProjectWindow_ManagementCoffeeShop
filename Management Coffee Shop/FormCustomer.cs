@@ -15,8 +15,6 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
-using Twilio.Rest.Messaging.V1.Service;
 using static Management_Coffee_Shop.FormCustomer.History_Shopping;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
@@ -101,7 +99,80 @@ namespace Management_Coffee_Shop
             create_Page_Navigation();
             start_timer();
             load_Account();
+            check_order();
             load_bestseller();
+        }
+        private void check_order()
+        {
+            string path = @"..\..\EmployeeToCustomer.txt";
+            string[] lines = File.ReadAllLines(path);
+            if (lines == null || lines.Length == 0) return;
+            foreach (var line in lines)
+            {
+                History_Shopping history = System.Text.Json.JsonSerializer.Deserialize<History_Shopping>(line);
+                if (history.UserId == this.ID)
+                {
+                    count=history.list_shopping.Count;
+                    int index = 0;
+                    foreach (var kvp in history.list_shopping)
+                    {
+                        DataTable dt=Drinks.get_history(kvp.Key);
+                        string Name = StaffDb.TakeNameDrinks(kvp.Key);
+                        Transport transport = new Transport(kvp.Key, this.ID);
+                        transport.Name = Name;
+                        transport.LBLPrice = string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", (kvp.Value.Price/kvp.Value.Quantity));
+                        transport.LBLQTV = kvp.Value.Quantity.ToString();
+                        transport.LBLAmount = string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", (kvp.Value.Price));
+                        transport.PTBImage = dt.Rows[index]["Source_Image"].ToString();
+                        flpShoppingCart.Controls.Add(transport);
+                        count--;
+                        index++;
+                    }
+                    if (count == 0)
+                    {
+                        pnlBill.Hide();
+                        pnlPayment.Hide();
+                        pnlInformation.Hide();
+                        pnlEmpty.Show();
+                    }
+                    else
+                    {
+                        pnlBill.Show();
+                        pnlPayment.Show();
+                        pnlInformation.Show();
+                        pnlEmpty.Hide();
+                        lblMoney_payment.Text = "0đ";
+                        lblMoney_SubTotal.Text = "0đ";
+                        lblMoney_Sum.Text = "0đ";
+                    }
+                    tabControl1.SelectedTab = tabPage6;
+                    lblOrderCode.Text = "Order #" + (++current_ID).ToString().PadLeft(7, '0');
+                    lblStatus.Text = "Status: Shipping";
+                    btnOrderNow.Click -= btnOrderNow_Click;
+                    btnOrderNow.Click += announcement;
+                    btnOrderNow_Bill.Click -= btnOrderNow_Click;
+                    btnOrderNow_Bill.Click += announcement;
+                    lblDistance.Text = $"Distance: {string.Format("{0:0.00}", distance)}KM";
+                    lblTime.Text = $"Time: {TimeSpan.FromMinutes(duration).Minutes} Minutes";
+                    lblExpected.Text = $"Expected: {(DateTime.Now + TimeSpan.FromMinutes(duration)).ToString("hh:mm tt")}";
+                    lblSum_Transport.Text = $"Sum: {lblMoney_Sum.Text}";
+                    tabControl1.SelectedTab = tabPage6;
+                    timer2.Start();
+                    pnlhomePage.Hide();
+                    break;
+                }
+            }
+            var lineslist=lines.ToList();
+            for (int i = lines.Length - 1; i >= 0; i--)
+            {
+                History_Shopping history = System.Text.Json.JsonSerializer.Deserialize<History_Shopping>(lines[i]);
+                if (history.UserId == this.ID)
+                {
+                    lineslist.RemoveAt(i);
+                    break;
+                }
+            }
+            File.WriteAllLines(path, lineslist);  
         }
         private void load_bestseller()
         {
@@ -396,19 +467,34 @@ namespace Management_Coffee_Shop
                 string path = @"..\..\history_Shopping.txt";
                 string lastline=File.ReadLines(path).Last();
                 History_Shopping history_Shopping = System.Text.Json.JsonSerializer.Deserialize<History_Shopping>(lastline);
-                current_ID=int.Parse(history_Shopping.OrderId);
-                lblOrderCode.Text = "Order #" + (++current_ID).ToString().PadLeft(7, '0');
-                lblStatus.Text = "Status: Shipping";
-                btnOrderNow.Click -= btnOrderNow_Click;
-                btnOrderNow.Click += announcement;
-                btnOrderNow_Bill.Click -= btnOrderNow_Click;
-                btnOrderNow_Bill.Click += announcement;
-                lblDistance.Text = $"Distance: {string.Format("{0:0.00}", distance)}KM";
-                lblTime.Text = $"Time: {TimeSpan.FromMinutes(duration).Minutes} Minutes";
-                lblExpected.Text = $"Expected: {(DateTime.Now + TimeSpan.FromMinutes(duration)).ToString("hh:mm tt")}";
-                lblSum_Transport.Text =$"Sum: {lblMoney_Sum.Text}";
-                tabControl1.SelectedTab = tabPage6;
-                timer2.Start();
+                current_ID=int.Parse(history_Shopping.OrderId)+1;
+                
+
+                path= @"..\..\CustomerToEmployee.txt";
+                Dictionary<string, ShoppingItem> list_shopping = new Dictionary<string, ShoppingItem>();
+                List<(string, int)> number_shopping = new List<(string, int)>();
+                foreach (Transport transport in flpShoppingCart.Controls)
+                {
+                    int number = int.Parse(Regex.Replace(transport.LBLAmount, @"\D", ""));
+                    list_shopping[transport.ID] = new ShoppingItem
+                    {
+                        Quantity = Convert.ToByte(transport.LBLQTV),
+                        Price = number
+                    };
+                    number_shopping.Add((transport.ID, Convert.ToInt16(transport.LBLQTV)));
+                }
+                Drinks.update_Drinks(number_shopping);
+                History_Shopping history_Shop = new History_Shopping()
+                {
+                    OrderId = current_ID.ToString(),
+                    UserId = this.ID,
+                    list_shopping = list_shopping,
+                    Status = "Online",
+                    Sum = int.Parse(Regex.Replace(lblSum_Transport.Text, @"\D", "")),
+                    OrderDate = DateTime.Now
+                };
+                string jsonLine = System.Text.Json.JsonSerializer.Serialize(history_Shop);
+                File.AppendAllText(path, jsonLine + Environment.NewLine);
             } else
             {
                 MessageBox.Show("Bạn chưa chọn món nào để thực hiện thanh toán", "Thông báo");

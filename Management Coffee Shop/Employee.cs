@@ -16,15 +16,18 @@ using System.Threading.Tasks;
 using System.Web.ModelBinding;
 using System.Web.UI.Design.WebControls;
 using System.Windows.Forms;
+using Twilio.Rest.Messaging.V1.Service;
 using static Management_Coffee_Shop.FormCustomer;
-using static Management_Coffee_Shop.FormCustomer.History_Shopping;
+using static Management_Coffee_Shop.FormCustomer.History_Shopping;  
 using static TheArtOfDevHtmlRenderer.Adapters.RGraphicsPath;
 
 namespace Management_Coffee_Shop
 {
     public partial class Employee : Form
     {
-        private int currentPage = 1, sum = 0;
+        private int length_Order = 0;
+        private System.Windows.Forms.Timer Timer_Order = new System.Windows.Forms.Timer();
+        private int currentPage = 1, sum = 0,Order_Code_Online=0;
         private byte indexPage = 1, lengthPage = 2, homePage = 1, number = 1;
         private string categories;
         private List<Product> list_uCProdcuts;
@@ -34,13 +37,109 @@ namespace Management_Coffee_Shop
             InitializeComponent();
             List_buttonPage = new List<Guna2Button> { btnFirst_page, btnSecond_page, btnThird_page };
             list_uCProdcuts = new List<Product> { uC_product1, uC_product2, uC_product3, uC_product4, uC_product5, uC_product6, uC_product7, uC_product8, uC_product9, uC_product10, uC_product11, uC_product12, uC_product13, uC_product14, uC_product15, uC_product16 };
-            load_history();
             loading_Shopping();
+            load_history();
             pnlBill.Hide();
+            pnlBill_Online.Hide();
+            pnlProduct.Hide();
+            Timer_Order.Interval = 2000;
+            Timer_Order.Tick += Timer_Order_Tick;
+            Timer_Order.Start();
         }
         private void btnHistory_Click(object sender, EventArgs e)
         {
             guna2TabControl1.SelectedTab = tabPage3;
+            flpBill.Controls.Clear();
+            load_history();
+        }
+        private void Timer_Order_Tick(object sender, EventArgs e)
+        {
+            string path= @"..\..\CustomerToEmployee.txt";
+            int current_Length= File.ReadLines(path).Count();
+            if (current_Length != 0 && length_Order==0)
+            {
+                var lines = File.ReadAllLines(path);
+                length_Order = current_Length;
+                foreach (var line in lines)
+                {
+                    show_Order(line);
+                }
+            }
+
+        }
+        private void show_Order(string line)
+        {
+            History_Shopping history_Shopping = System.Text.Json.JsonSerializer.Deserialize<History_Shopping>(line);
+            Bill bill = new Bill(history_Shopping.list_shopping);
+            bill.LBLCode = history_Shopping.OrderId;
+            bill.LBLTime = $"{history_Shopping.OrderDate:dd/MM/yyyy HH:mm}";
+            bill.LBLStatus = history_Shopping.Status;
+            int ItemCount = 0, Amount = 0;
+            foreach (var kvp in history_Shopping.list_shopping)
+            {
+                ItemCount++;
+                Amount += kvp.Value.Quantity;
+            }
+            bill.LBLSum = string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", history_Shopping.Sum);
+            bill.LBLItemCount = ItemCount.ToString();
+            bill.LBLAmount = Amount.ToString();
+            bill.Clicked += Bill_Online_Clicked;
+            flpBill_Online.Controls.Add(bill);
+        }
+        private void Bill_Online_Clicked(object sender, EventArgs e)
+        {
+            if (sender is Bill clicked)
+            {
+                if (lblCode_Online.Text == clicked.LBLCode) return;
+                Dictionary<string, ShoppingItem> list_shopping = clicked.List_shopping;
+                int subtotal = 0;
+                int sum = int.Parse(Regex.Replace(clicked.LBLSum, @"[^\d]", ""));
+                pnlBill_Online.Show();
+                lblCode_Online.Text = clicked.LBLCode;
+                lblOrder_Online.Text = "Online";
+                lblTime_Online.Text=clicked.LBLTime;
+                lblSum_Online.Text = clicked.LBLSum;
+                foreach (var kvp in list_shopping)
+                {
+                    subtotal += kvp.Value.Price;
+                    string Name = StaffDb.TakeNameDrinks(kvp.Key);
+                    Guna2Panel panel = new Guna2Panel();
+                    panel.Size = new Size(405, 49);
+                    panel.BackColor= Color.White;
+                    Label label1=new Label();
+                    label1.BackColor = Color.Transparent;
+                    label1.Text = Name;
+                    label1.Font = new Font("Segoe UI", 12f);
+                    label1.Location = new Point(3, 3);
+                    panel.Controls.Add(label1);
+                    Label label2=new Label();
+                    label2.BackColor = Color.Transparent;
+                    label2.Font = new Font("Segoe UI", 8f);
+                    label2.Location = new Point(3, 24);
+                    panel.Controls.Add(label2);
+                    Label label3=new Label();
+                    label3.BackColor = Color.Transparent;
+                    label3.Font = new Font("Segoe UI", 12f);
+                    label3.Location = new Point(193, 3);
+                    label3.Text = kvp.Value.Quantity.ToString();
+                    panel.Controls.Add(label3);
+                    Label label4 = new Label();
+                    label4.BackColor = Color.Transparent;
+                    label4.Font = new Font("Segoe UI", 12f);
+                    label4.Location = new Point(340, 3);
+                    label4.Text= string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", kvp.Value.Price); 
+                    panel.Controls.Add(label4);
+                    Guna2Panel panel1 = new Guna2Panel();
+                    panel1.BackColor = Color.Transparent;
+                    panel1.FillColor = Color.FromArgb(211, 155, 81);
+                    panel1.Size = new Size(405, 3);
+                    panel1.Location= new Point(0, 47); 
+                    panel.Controls.Add(panel1);
+                    flpProduct_Online.Controls.Add(panel);
+                }
+                lblShip_Online.Text = string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", sum - subtotal);
+                lblSubToTal_Online.Text = string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", subtotal);
+            }
         }
         private void load_history()
         {
@@ -73,6 +172,7 @@ namespace Management_Coffee_Shop
         {
             if (sender is Bill clicked)
             {
+                
                 pnlBill.Show();
                 byte number = 1;
                 listView1.Items.Clear();
@@ -89,7 +189,7 @@ namespace Management_Coffee_Shop
                     string Name = StaffDb.TakeNameDrinks(kvp.Key);
                     item.SubItems.Add(Name);
                     item.SubItems.Add(kvp.Value.Quantity.ToString());
-                    item.SubItems.Add(kvp.Value.Price.ToString());
+                    item.SubItems.Add(string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", kvp.Value.Price));
                     subtotal += kvp.Value.Price;
                     listView1.Items.Add(item);
                     number++;
@@ -103,6 +203,7 @@ namespace Management_Coffee_Shop
         {
             if (sender is Product clicked)
             {
+                if (listView2.Items.Count == 0) pnlProduct.Show();
                 bool check=false;
                 foreach(ListViewItem items in listView2.Items)
                 {
@@ -135,6 +236,7 @@ namespace Management_Coffee_Shop
                     LBLName_Product.Text = clicked.LBLName_Drinks;
                 }
                 pnlProduct.Show();
+
             }
         }
         private void update_page(int indexPage)
@@ -417,11 +519,52 @@ namespace Management_Coffee_Shop
             string jsonLine = System.Text.Json.JsonSerializer.Serialize(history_Shopping);
             File.AppendAllText(path, jsonLine + Environment.NewLine);
             listView2.Items.Clear();
+            pnlProduct.Hide();
         }
 
         private void btnClearAll_Click(object sender, EventArgs e)
         {
             listView2.Items.Clear();
+        }
+
+        private void btnDone_Online_Click(object sender, EventArgs e)
+        {
+            string path = @"..\..\CustomerToEmployee.txt";
+            var lines = File.ReadAllLines(path).ToList();
+            string orderId = Regex.Replace(lblCode_Online.Text, @"[^\d]", "");
+            History_Shopping history_Shop = new History_Shopping();
+            for (int i=lines.Count-1; i>=0; i--)
+            {
+                History_Shopping history_Shopping = System.Text.Json.JsonSerializer.Deserialize<History_Shopping>(lines[i]);
+                if (history_Shopping.OrderId == orderId)
+                {
+                    history_Shop=history_Shopping;
+                    lines.RemoveAt(i);
+                    break;
+                }
+            }
+            File.WriteAllLines(path, lines);
+            pnlBill_Online.Hide();
+            path= @"..\..\EmployeeToCustomer.txt";
+            string jsonLine = System.Text.Json.JsonSerializer.Serialize(history_Shop);
+            File.AppendAllText(path, jsonLine + Environment.NewLine);
+        }
+        private void btnCancel_Online_Click(object sender, EventArgs e)
+        {
+            string path = @"..\..\CustomerToEmployee.txt";
+            var lines = File.ReadAllLines(path).ToList();
+            string orderId = Regex.Replace(lblCode_Online.Text, @"[^\d]", "");
+            for (int i = lines.Count - 1; i >= 0; i--)
+            {
+                History_Shopping history_Shopping = System.Text.Json.JsonSerializer.Deserialize<History_Shopping>(lines[i]);
+                if (history_Shopping.OrderId == orderId)
+                {
+                    lines.RemoveAt(i);
+                    break;
+                }
+            }
+            File.WriteAllLines(path, lines);
+            pnlBill_Online.Hide();
         }
 
         private void btnMenu_Click(object sender, EventArgs e)

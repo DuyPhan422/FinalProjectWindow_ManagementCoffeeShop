@@ -57,6 +57,11 @@
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2CircleButton4 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2CircleButton5 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtOtp = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnLogin_Otp = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -66,6 +71,7 @@
             this.guna2Panel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.guna2Panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -272,6 +278,7 @@
             this.guna2TabControl1.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.guna2TabControl1.Controls.Add(this.tabPage1);
             this.guna2TabControl1.Controls.Add(this.tabPage2);
+            this.guna2TabControl1.Controls.Add(this.tabPage3);
             this.guna2TabControl1.ItemSize = new System.Drawing.Size(180, 40);
             this.guna2TabControl1.Location = new System.Drawing.Point(362, 59);
             this.guna2TabControl1.Name = "guna2TabControl1";
@@ -449,6 +456,81 @@
             this.guna2CircleButton5.Size = new System.Drawing.Size(16, 16);
             this.guna2CircleButton5.TabIndex = 8;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(243)))), ((int)(((byte)(239)))));
+            this.tabPage3.Controls.Add(this.guna2HtmlLabel5);
+            this.tabPage3.Controls.Add(this.guna2Panel5);
+            this.tabPage3.Controls.Add(this.txtOtp);
+            this.tabPage3.Controls.Add(this.btnLogin_Otp);
+            this.tabPage3.Location = new System.Drawing.Point(184, 4);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(331, 344);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
+            // 
+            // guna2HtmlLabel5
+            // 
+            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Stencil", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(82, 31);
+            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(167, 53);
+            this.guna2HtmlLabel5.TabIndex = 0;
+            this.guna2HtmlLabel5.Text = "SIGN UP";
+            // 
+            // guna2Panel5
+            // 
+            this.guna2Panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
+            this.guna2Panel5.Location = new System.Drawing.Point(51, 136);
+            this.guna2Panel5.Name = "guna2Panel5";
+            this.guna2Panel5.Size = new System.Drawing.Size(237, 3);
+            this.guna2Panel5.TabIndex = 4;
+            // 
+            // txtOtp
+            // 
+            this.txtOtp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(243)))), ((int)(((byte)(239)))));
+            this.txtOtp.BorderRadius = 13;
+            this.txtOtp.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtOtp.DefaultText = "";
+            this.txtOtp.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtOtp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtOtp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtOtp.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtOtp.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtOtp.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtOtp.ForeColor = System.Drawing.Color.Black;
+            this.txtOtp.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtOtp.Location = new System.Drawing.Point(40, 114);
+            this.txtOtp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtOtp.Name = "txtOtp";
+            this.txtOtp.PasswordChar = '*';
+            this.txtOtp.PlaceholderText = "OTP";
+            this.txtOtp.SelectedText = "";
+            this.txtOtp.Size = new System.Drawing.Size(258, 25);
+            this.txtOtp.TabIndex = 2;
+            this.txtOtp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassWord_KeyPress);
+            // 
+            // btnLogin_Otp
+            // 
+            this.btnLogin_Otp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(243)))), ((int)(((byte)(239)))));
+            this.btnLogin_Otp.BorderRadius = 20;
+            this.btnLogin_Otp.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogin_Otp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogin_Otp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogin_Otp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogin_Otp.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
+            this.btnLogin_Otp.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin_Otp.ForeColor = System.Drawing.Color.White;
+            this.btnLogin_Otp.Location = new System.Drawing.Point(82, 170);
+            this.btnLogin_Otp.Name = "btnLogin_Otp";
+            this.btnLogin_Otp.Size = new System.Drawing.Size(180, 36);
+            this.btnLogin_Otp.TabIndex = 5;
+            this.btnLogin_Otp.Text = "LOGIN";
+            this.btnLogin_Otp.Click += new System.EventHandler(this.btnLogin_OTP_Click);
+            // 
             // guna2Panel7
             // 
             this.guna2Panel7.BackColor = System.Drawing.Color.Transparent;
@@ -519,6 +601,8 @@
             this.tabPage2.ResumeLayout(false);
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel4.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.guna2Panel7.ResumeLayout(false);
             this.guna2Panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
@@ -558,6 +642,11 @@
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton4;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton5;
         private Guna.UI2.WinForms.Guna2Button btnLoginWithAnotherAccount;
+        private System.Windows.Forms.TabPage tabPage3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
+        private Guna.UI2.WinForms.Guna2TextBox txtOtp;
+        private Guna.UI2.WinForms.Guna2Button btnLogin_Otp;
     }
 }
 
