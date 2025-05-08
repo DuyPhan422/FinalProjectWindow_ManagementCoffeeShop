@@ -206,7 +206,7 @@ namespace Management_Coffee_Shop
             DataTable dt;
             using (SqlConnection connection = Connection.GetSqlConnection())
             {
-                string query = $"SELECT TOP 3 Name,Describe,Rate,Review,Source_Image FROM sourceDrinks ORDER BY Sales DESC";
+                string query = $"SELECT TOP 3 Name, [Describe], Rate, Review, Source_Image FROM sourceDrinks ORDER BY Sales DESC";
                 connection.Open() ;
                 using(SqlDataAdapter dataAdapter=new SqlDataAdapter(query, connection))
                 {

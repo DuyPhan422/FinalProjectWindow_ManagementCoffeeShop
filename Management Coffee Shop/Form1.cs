@@ -102,7 +102,7 @@ namespace Management_Coffee_Shop
             using (SqlConnection connection = Connection.GetSqlConnection())
             {
                 connection.Open();
-                string query = "SELECT Name,Address,Email,Date FROM customerInformation JOIN account ON account.ID=customerInformation.ID WHERE customerInformation.ID=@ID";
+                string query = "SELECT Name,Address,Email,Date,Image FROM customerInformation JOIN account ON account.ID=customerInformation.ID WHERE customerInformation.ID=@ID";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@ID", Id);
@@ -110,7 +110,7 @@ namespace Management_Coffee_Shop
                     {
                         if (reader.Read())
                         {
-                            FormCustomer formCustomer = new FormCustomer(Id, reader["Name"].ToString(), reader["Address"].ToString(), reader["Email"].ToString(), reader["Date"].ToString(),this ,check);
+                            FormCustomer formCustomer = new FormCustomer(Id, reader["Name"].ToString(), reader["Address"].ToString(), reader["Email"].ToString(), reader["Date"].ToString(), reader["Image"].ToString(), this ,check);
                             formCustomer.Show();
                             this.Hide();
                         }

@@ -15,6 +15,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 using static Management_Coffee_Shop.FormCustomer.History_Shopping;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
@@ -40,12 +41,13 @@ namespace Management_Coffee_Shop
         }
         const int SB_HORZ = 0;
         const int SB_VERT = 1;
+        private Customer customer;
         private bool check,flag_order;
         private static Dictionary<string, (int, int, Boolean)> list_products = new Dictionary<string, (int, int, Boolean)>();
         private int minute, hour, currentPage = 1, count = 0;
         private byte indexPage = 1, lengthPage = 2,homePage=1;
         private double distance, duration;
-        private string tt,ID,Address,Name,Email,Date,categories,target_FilePath;
+        private string tt,categories,target_FilePath;
         private static int current_ID = 0;
         private FormLogin FormLogin;
         private List<Guna2Button> List_buttonPage;
@@ -56,14 +58,10 @@ namespace Management_Coffee_Shop
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
 
         private static extern IntPtr CreateRoundRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
-        public FormCustomer(string id,string name,string address,string email,string Date,FormLogin formLogin, bool check = false)
+        public FormCustomer(string id,string name,string address,string email,string date,string image,FormLogin formLogin, bool check = false)
         {
             InitializeComponent();
-            this.ID = id;
-            this.Name = name;
-            this.Address = address;
-            this.Email = email;
-            this.Date=Date;
+            customer=new Customer(id,name,address,email,date,image);
             this.FormLogin = formLogin;
             this.FormBorderStyle = FormBorderStyle.None;
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 80,80));
@@ -72,10 +70,10 @@ namespace Management_Coffee_Shop
         private void customer_load(bool check)
         {
             txtName_profile.Text =this.Name;
-            txtAddress_profile.Text = WrapTextEvery66Chars(this.Address);
-            txtEmail_profile.Text =this.Email;
-            txtDate_profile.Text =this.Date;
-            DataTable dt=Drinks.get_Image_User(this.ID);
+            txtAddress_profile.Text = WrapTextEvery66Chars(customer.ID);
+            txtEmail_profile.Text =customer.Email;
+            txtDate_profile.Text = customer.Date;
+            DataTable dt=Drinks.get_Image_User(customer.ID);
             if (dt.Rows[0]["Image"].ToString().Trim() == "")
             {
                 ptbImage_Profile.Image = Image.FromFile(@"..\..\Management coffee shop_image\edited_image-removebg-preview.png");
@@ -87,7 +85,7 @@ namespace Management_Coffee_Shop
             }
             list_uCProdcuts = new List<Product> { uC_product1, uC_product2, uC_product3, uC_product4, uC_product5, uC_product6, uC_product7, uC_product8, uC_product9, uC_product10, uC_product11, uC_product12, uC_product13, uC_product14, uC_product15, uC_product16 };
             List_buttonPage = new List<Guna2Button> { btnFirst_page, btnSecond_page, btnThird_page };
-            (distance, duration) = (Drinks.distance_time(this.Address));
+            (distance, duration) = (Drinks.distance_time(customer.Address));
             pnlBill.Hide();
             pnlPayment.Hide();
             pnlInformation.Hide();
@@ -110,7 +108,7 @@ namespace Management_Coffee_Shop
             foreach (var line in lines)
             {
                 History_Shopping history = System.Text.Json.JsonSerializer.Deserialize<History_Shopping>(line);
-                if (history.UserId == this.ID)
+                if (history.UserId == customer.ID)
                 {
                     count=history.list_shopping.Count;
                     int index = 0;
@@ -118,7 +116,7 @@ namespace Management_Coffee_Shop
                     {
                         DataTable dt=Drinks.get_history(kvp.Key);
                         string Name = StaffDb.TakeNameDrinks(kvp.Key);
-                        Transport transport = new Transport(kvp.Key, this.ID);
+                        Transport transport = new Transport(kvp.Key, customer.ID);
                         transport.Name = Name;
                         transport.LBLPrice = string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", (kvp.Value.Price/kvp.Value.Quantity));
                         transport.LBLQTV = kvp.Value.Quantity.ToString();
@@ -166,7 +164,7 @@ namespace Management_Coffee_Shop
             for (int i = lines.Length - 1; i >= 0; i--)
             {
                 History_Shopping history = System.Text.Json.JsonSerializer.Deserialize<History_Shopping>(lines[i]);
-                if (history.UserId == this.ID)
+                if (history.UserId == customer.ID)
                 {
                     lineslist.RemoveAt(i);
                     break;
@@ -393,6 +391,8 @@ namespace Management_Coffee_Shop
         {
             if (sender is Product clickedButton)
             {
+                bool flag = false;
+                flpProduct.Controls.Clear();
                 ptbImage_Product.Image = Image.FromFile(clickedButton.PTBImage_Drinks);
                 lblName_Product.Text = clickedButton.LBLName_Drinks;
                 lblDescribe_Product.Text = clickedButton.LBLDescribe_Drinks;
@@ -406,18 +406,30 @@ namespace Management_Coffee_Shop
                     if (history.ProductId == clickedButton.ID)
                     {
                         ucComment ucComment = new ucComment();
-                        DataTable dt=Drinks.get_Image_User(ID);
+                        DataTable dt=Drinks.get_Image_User(customer.ID);
                         ucComment.PTBImage = dt.Rows[0]["Image"].ToString();
-                        if (ID != this.ID) ucComment.LBLName = dt.Rows[0]["Name"].ToString();
-                        else ucComment.LBLName = "Bạn";
+                        //if (ID != this.ID) ucComment.LBLName = dt.Rows[0]["Name"].ToString();
+                        ucComment.LBLName = "Bạn";
                         ucComment.set_Rate(history.Rank);
                         ucComment.TXTComment=history.Comment;
                         ucComment.LBLTime = $"{history.Time:dd/MM/yyyy HH:mm}";
                         flpProduct.Controls.Add(ucComment);
+                        flag = true;
                     }
                     
                 }
                 tabControl1.SelectedTab = tabPage7;
+                if (!flag)
+                {
+                    Panel panel = new Panel();
+                    panel.Size = new Size(622, 721);
+                    Label label = new Label();
+                    label.Text = "NO COMMENT";
+                    label.Location = new Point(311, 360);
+                    label.ForeColor = Color.FromArgb(211, 155, 81);
+                    panel.Controls.Add(label);
+                    flpProduct.Controls.Add(panel);
+                }
             }
             
         }
@@ -434,7 +446,7 @@ namespace Management_Coffee_Shop
                 {
                     if (list_products[p.ID].Item3 == true)
                     {
-                        Transport transport = new Transport(p.ID,this.ID);
+                        Transport transport = new Transport(p.ID,customer.ID);
                         transport.Name = p.Name;
                         transport.LBLNote = p.TXTNote;
                         transport.LBLPrice = string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", list_products[p.ID].Item2);
@@ -487,10 +499,10 @@ namespace Management_Coffee_Shop
                 History_Shopping history_Shop = new History_Shopping()
                 {
                     OrderId = current_ID.ToString(),
-                    UserId = this.ID,
+                    UserId = customer.ID,
                     list_shopping = list_shopping,
                     Status = "Online",
-                    Sum = int.Parse(Regex.Replace(lblSum_Transport.Text, @"\D", "")),
+                    Sum = int.Parse(Regex.Replace(lblMoney_Sum.Text, @"\D", "")),
                     OrderDate = DateTime.Now
                 };
                 string jsonLine = System.Text.Json.JsonSerializer.Serialize(history_Shop);
@@ -705,7 +717,7 @@ namespace Management_Coffee_Shop
 
         private void btnYes_Click(object sender, EventArgs e)
         {
-            Login.create_NewToken(ID);
+            Login.create_NewToken(customer.ID);
             pnlSaveLogin.Hide();
         }
 
@@ -738,7 +750,7 @@ namespace Management_Coffee_Shop
                 if (!string.IsNullOrWhiteSpace(line))
                 {
                     History_Shopping history_Shopping =System.Text.Json.JsonSerializer.Deserialize<History_Shopping>(line);
-                    if (history_Shopping.UserId == this.ID)
+                    if (history_Shopping.UserId == customer.ID)
                     {
                         ucHistory_Shopping ucHistory_Shopping = new ucHistory_Shopping();
                         ucHistory_Shopping.load_history(history_Shopping);
@@ -802,7 +814,7 @@ namespace Management_Coffee_Shop
         }
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            Login.delete_Token(ID);
+            Login.delete_Token(customer.ID);
             FormLogin.change_tabPage();
             FormLogin.Show();
             this.Close();
@@ -824,7 +836,7 @@ namespace Management_Coffee_Shop
         {
             for (int i = 0; i < FormLogin.userId_List.Count; i++)
             {
-                if (FormLogin.userId_List[i] != this.ID)
+                if (FormLogin.userId_List[i] != customer.ID)
                 {
                     Guna2Button button = new Guna2Button();
                     button.Size = new Size(197, 34);
@@ -849,7 +861,7 @@ namespace Management_Coffee_Shop
             using (SqlConnection connection = Connection.GetSqlConnection())
             {
                 connection.Open();
-                string query = "SELECT Name,Address,Email,Date FROM customerInformation JOIN account ON account.ID=customerInformation.ID WHERE customerInformation.ID=@ID";
+                string query = "SELECT Name,Address,Email,Date,Image FROM customerInformation JOIN account ON account.ID=customerInformation.ID WHERE customerInformation.ID=@ID";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Id", btn_clicked.Tag.ToString());
@@ -857,7 +869,7 @@ namespace Management_Coffee_Shop
                     {
                         if (reader.Read())
                         {
-                            FormCustomer formCustomer = new FormCustomer(btn_clicked.Tag.ToString(), reader["Name"].ToString(), reader["Address"].ToString(), reader["Email"].ToString(), reader["Date"].ToString(), this.FormLogin, true);
+                            FormCustomer formCustomer = new FormCustomer(btn_clicked.Tag.ToString(), reader["Name"].ToString(), reader["Address"].ToString(), reader["Email"].ToString(), reader["Date"].ToString(), reader["Image"].ToString(), this.FormLogin, true);
                             formCustomer.Show();
                             this.Close();
                         }
@@ -915,13 +927,39 @@ namespace Management_Coffee_Shop
             if (result == DialogResult.Yes)
             {
                 if (target_FilePath == "") target_FilePath = @"..\..\Management coffee shop_image\edited_image-removebg-preview.png";
-                Drinks.update_User(this.ID,txtName_profile.Text,txtDate_profile.Text,txtAddress_profile.Text,txtEmail_profile.Text,target_FilePath);
-                this.Name = txtName_profile.Text;
-                this.Date = txtDate_profile.Text;
-                this.Address = txtAddress_profile.Text;
-                this.Email = txtEmail_profile.Text;
+                Drinks.update_User(customer.ID,txtName_profile.Text,txtDate_profile.Text,txtAddress_profile.Text,txtEmail_profile.Text,target_FilePath);
+                customer.Name = txtName_profile.Text;
+                customer.Date = txtDate_profile.Text;
+                customer.Address = txtAddress_profile.Text;
+                customer.Email = txtEmail_profile.Text;
                 btnCancel.PerformClick();
             }
+        }
+
+        private void btnOur_Location_HomePage_Click(object sender, EventArgs e)
+        {
+            string url = "https://github.com/le312113";
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName= url,
+                    UseShellExecute = true
+                });
+            }
+            catch
+            {
+
+            }
+        }
+        private void btnLocation_HomePage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAttendant_HomePage_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btnUpload_Profile_Click(object sender, EventArgs e)
@@ -975,7 +1013,7 @@ namespace Management_Coffee_Shop
                     History_Shopping history_Shopping = new History_Shopping()
                     {
                         OrderId = Regex.Replace(lblOrderCode.Text, @"[^\d]", ""),
-                        UserId = this.ID,
+                        UserId = this.customer.ID,
                         list_shopping = list_shopping,
                         Status = "Online",
                         Sum = int.Parse(Regex.Replace(lblSum_Transport.Text, @"\D", "")),

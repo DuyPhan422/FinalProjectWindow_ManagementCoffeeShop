@@ -105,7 +105,7 @@ namespace Management_Coffee_Shop
             this.btnChangePassword = new Guna.UI2.WinForms.Guna2Button();
             this.btnOrder_Account = new Guna.UI2.WinForms.Guna2Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new Management_Coffee_Shop.CustomTabPage();
+            this.tabPage1 =new Management_Coffee_Shop.CustomTabPage();
             this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnShopNow = new Guna.UI2.WinForms.Guna2Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -126,16 +126,16 @@ namespace Management_Coffee_Shop
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button22 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button18 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button13 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAttendant_HomePage = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button21 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button17 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button12 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLocation_HomePage = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button20 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button16 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button14 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnBestSeller_HomePage = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button19 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button15 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAbout_Us_HomePage = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel23 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel22 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel21 = new Guna.UI2.WinForms.Guna2Panel();
@@ -153,7 +153,7 @@ namespace Management_Coffee_Shop
             this.guna2PictureBox13 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox12 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox14 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Button11 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnFeed_Back_HomePage = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel31 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel27 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel30 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -165,7 +165,7 @@ namespace Management_Coffee_Shop
             this.guna2HtmlLabel25 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel13 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox11 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnOur_Location_HomePage = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox10 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2HtmlLabel19 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -1051,7 +1051,7 @@ namespace Management_Coffee_Shop
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1163, 721);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
@@ -1196,7 +1196,7 @@ namespace Management_Coffee_Shop
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(22, 358);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(19, 360);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(473, 18);
             this.guna2HtmlLabel5.TabIndex = 6;
@@ -1230,16 +1230,16 @@ namespace Management_Coffee_Shop
             this.guna2Panel20.Controls.Add(this.guna2Button6);
             this.guna2Panel20.Controls.Add(this.guna2Button22);
             this.guna2Panel20.Controls.Add(this.guna2Button18);
-            this.guna2Panel20.Controls.Add(this.guna2Button13);
+            this.guna2Panel20.Controls.Add(this.btnAttendant_HomePage);
             this.guna2Panel20.Controls.Add(this.guna2Button21);
             this.guna2Panel20.Controls.Add(this.guna2Button17);
-            this.guna2Panel20.Controls.Add(this.guna2Button12);
+            this.guna2Panel20.Controls.Add(this.btnLocation_HomePage);
             this.guna2Panel20.Controls.Add(this.guna2Button20);
             this.guna2Panel20.Controls.Add(this.guna2Button16);
-            this.guna2Panel20.Controls.Add(this.guna2Button14);
+            this.guna2Panel20.Controls.Add(this.btnBestSeller_HomePage);
             this.guna2Panel20.Controls.Add(this.guna2Button19);
             this.guna2Panel20.Controls.Add(this.guna2Button15);
-            this.guna2Panel20.Controls.Add(this.guna2Button10);
+            this.guna2Panel20.Controls.Add(this.btnAbout_Us_HomePage);
             this.guna2Panel20.Controls.Add(this.guna2Panel23);
             this.guna2Panel20.Controls.Add(this.guna2Panel22);
             this.guna2Panel20.Controls.Add(this.guna2Panel21);
@@ -1308,7 +1308,7 @@ namespace Management_Coffee_Shop
             this.guna2Button22.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button22.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Button22.Location = new System.Drawing.Point(764, 238);
+            this.guna2Button22.Location = new System.Drawing.Point(764, 229);
             this.guna2Button22.Name = "guna2Button22";
             this.guna2Button22.Size = new System.Drawing.Size(180, 45);
             this.guna2Button22.TabIndex = 7;
@@ -1324,28 +1324,29 @@ namespace Management_Coffee_Shop
             this.guna2Button18.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button18.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Button18.Location = new System.Drawing.Point(398, 238);
+            this.guna2Button18.Location = new System.Drawing.Point(398, 229);
             this.guna2Button18.Name = "guna2Button18";
             this.guna2Button18.Size = new System.Drawing.Size(180, 45);
             this.guna2Button18.TabIndex = 7;
             this.guna2Button18.Text = "Attendant";
             this.guna2Button18.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // guna2Button13
+            // btnAttendant_HomePage
             // 
-            this.guna2Button13.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button13.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button13.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button13.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button13.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button13.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Button13.Location = new System.Drawing.Point(91, 229);
-            this.guna2Button13.Name = "guna2Button13";
-            this.guna2Button13.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button13.TabIndex = 7;
-            this.guna2Button13.Text = "Attendant";
-            this.guna2Button13.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAttendant_HomePage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAttendant_HomePage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAttendant_HomePage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAttendant_HomePage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAttendant_HomePage.FillColor = System.Drawing.Color.Transparent;
+            this.btnAttendant_HomePage.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAttendant_HomePage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
+            this.btnAttendant_HomePage.Location = new System.Drawing.Point(91, 229);
+            this.btnAttendant_HomePage.Name = "btnAttendant_HomePage";
+            this.btnAttendant_HomePage.Size = new System.Drawing.Size(180, 45);
+            this.btnAttendant_HomePage.TabIndex = 7;
+            this.btnAttendant_HomePage.Text = "Attendant";
+            this.btnAttendant_HomePage.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAttendant_HomePage.Click += new System.EventHandler(this.homePage4_Click);
             // 
             // guna2Button21
             // 
@@ -1356,7 +1357,7 @@ namespace Management_Coffee_Shop
             this.guna2Button21.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button21.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Button21.Location = new System.Drawing.Point(764, 187);
+            this.guna2Button21.Location = new System.Drawing.Point(764, 178);
             this.guna2Button21.Name = "guna2Button21";
             this.guna2Button21.Size = new System.Drawing.Size(180, 45);
             this.guna2Button21.TabIndex = 7;
@@ -1372,28 +1373,29 @@ namespace Management_Coffee_Shop
             this.guna2Button17.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button17.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Button17.Location = new System.Drawing.Point(398, 187);
+            this.guna2Button17.Location = new System.Drawing.Point(398, 178);
             this.guna2Button17.Name = "guna2Button17";
             this.guna2Button17.Size = new System.Drawing.Size(180, 45);
             this.guna2Button17.TabIndex = 7;
             this.guna2Button17.Text = "Location";
             this.guna2Button17.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // guna2Button12
+            // btnLocation_HomePage
             // 
-            this.guna2Button12.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button12.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button12.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button12.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button12.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button12.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Button12.Location = new System.Drawing.Point(91, 178);
-            this.guna2Button12.Name = "guna2Button12";
-            this.guna2Button12.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button12.TabIndex = 7;
-            this.guna2Button12.Text = "Location";
-            this.guna2Button12.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLocation_HomePage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLocation_HomePage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLocation_HomePage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLocation_HomePage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLocation_HomePage.FillColor = System.Drawing.Color.Transparent;
+            this.btnLocation_HomePage.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLocation_HomePage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
+            this.btnLocation_HomePage.Location = new System.Drawing.Point(91, 178);
+            this.btnLocation_HomePage.Name = "btnLocation_HomePage";
+            this.btnLocation_HomePage.Size = new System.Drawing.Size(180, 45);
+            this.btnLocation_HomePage.TabIndex = 7;
+            this.btnLocation_HomePage.Text = "Location";
+            this.btnLocation_HomePage.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLocation_HomePage.Click += new System.EventHandler(this.homePage3_Click);
             // 
             // guna2Button20
             // 
@@ -1404,7 +1406,7 @@ namespace Management_Coffee_Shop
             this.guna2Button20.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button20.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Button20.Location = new System.Drawing.Point(764, 136);
+            this.guna2Button20.Location = new System.Drawing.Point(764, 127);
             this.guna2Button20.Name = "guna2Button20";
             this.guna2Button20.Size = new System.Drawing.Size(180, 45);
             this.guna2Button20.TabIndex = 7;
@@ -1420,28 +1422,29 @@ namespace Management_Coffee_Shop
             this.guna2Button16.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button16.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Button16.Location = new System.Drawing.Point(398, 136);
+            this.guna2Button16.Location = new System.Drawing.Point(398, 127);
             this.guna2Button16.Name = "guna2Button16";
             this.guna2Button16.Size = new System.Drawing.Size(180, 45);
             this.guna2Button16.TabIndex = 7;
             this.guna2Button16.Text = "Best Seller";
             this.guna2Button16.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // guna2Button14
+            // btnBestSeller_HomePage
             // 
-            this.guna2Button14.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button14.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button14.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button14.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button14.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button14.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Button14.Location = new System.Drawing.Point(91, 127);
-            this.guna2Button14.Name = "guna2Button14";
-            this.guna2Button14.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button14.TabIndex = 7;
-            this.guna2Button14.Text = "Best Seller";
-            this.guna2Button14.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnBestSeller_HomePage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBestSeller_HomePage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBestSeller_HomePage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBestSeller_HomePage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBestSeller_HomePage.FillColor = System.Drawing.Color.Transparent;
+            this.btnBestSeller_HomePage.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBestSeller_HomePage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
+            this.btnBestSeller_HomePage.Location = new System.Drawing.Point(91, 127);
+            this.btnBestSeller_HomePage.Name = "btnBestSeller_HomePage";
+            this.btnBestSeller_HomePage.Size = new System.Drawing.Size(180, 45);
+            this.btnBestSeller_HomePage.TabIndex = 7;
+            this.btnBestSeller_HomePage.Text = "Best Seller";
+            this.btnBestSeller_HomePage.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnBestSeller_HomePage.Click += new System.EventHandler(this.homePage2_Click);
             // 
             // guna2Button19
             // 
@@ -1452,7 +1455,7 @@ namespace Management_Coffee_Shop
             this.guna2Button19.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button19.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Button19.Location = new System.Drawing.Point(764, 85);
+            this.guna2Button19.Location = new System.Drawing.Point(764, 76);
             this.guna2Button19.Name = "guna2Button19";
             this.guna2Button19.Size = new System.Drawing.Size(180, 45);
             this.guna2Button19.TabIndex = 7;
@@ -1468,33 +1471,34 @@ namespace Management_Coffee_Shop
             this.guna2Button15.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button15.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Button15.Location = new System.Drawing.Point(398, 85);
+            this.guna2Button15.Location = new System.Drawing.Point(398, 76);
             this.guna2Button15.Name = "guna2Button15";
             this.guna2Button15.Size = new System.Drawing.Size(180, 45);
             this.guna2Button15.TabIndex = 7;
             this.guna2Button15.Text = "About Us";
             this.guna2Button15.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // guna2Button10
+            // btnAbout_Us_HomePage
             // 
-            this.guna2Button10.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button10.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button10.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button10.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button10.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button10.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Button10.Location = new System.Drawing.Point(91, 76);
-            this.guna2Button10.Name = "guna2Button10";
-            this.guna2Button10.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button10.TabIndex = 7;
-            this.guna2Button10.Text = "About Us";
-            this.guna2Button10.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAbout_Us_HomePage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAbout_Us_HomePage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAbout_Us_HomePage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAbout_Us_HomePage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAbout_Us_HomePage.FillColor = System.Drawing.Color.Transparent;
+            this.btnAbout_Us_HomePage.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbout_Us_HomePage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
+            this.btnAbout_Us_HomePage.Location = new System.Drawing.Point(91, 76);
+            this.btnAbout_Us_HomePage.Name = "btnAbout_Us_HomePage";
+            this.btnAbout_Us_HomePage.Size = new System.Drawing.Size(180, 45);
+            this.btnAbout_Us_HomePage.TabIndex = 7;
+            this.btnAbout_Us_HomePage.Text = "About Us";
+            this.btnAbout_Us_HomePage.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAbout_Us_HomePage.Click += new System.EventHandler(this.homePage1_Click);
             // 
             // guna2Panel23
             // 
             this.guna2Panel23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Panel23.Location = new System.Drawing.Point(764, 76);
+            this.guna2Panel23.Location = new System.Drawing.Point(764, 67);
             this.guna2Panel23.Name = "guna2Panel23";
             this.guna2Panel23.Size = new System.Drawing.Size(220, 3);
             this.guna2Panel23.TabIndex = 6;
@@ -1520,7 +1524,7 @@ namespace Management_Coffee_Shop
             this.guna2HtmlLabel34.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel34.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2HtmlLabel34.Location = new System.Drawing.Point(774, 37);
+            this.guna2HtmlLabel34.Location = new System.Drawing.Point(773, 28);
             this.guna2HtmlLabel34.Name = "guna2HtmlLabel34";
             this.guna2HtmlLabel34.Size = new System.Drawing.Size(195, 33);
             this.guna2HtmlLabel34.TabIndex = 3;
@@ -1531,7 +1535,7 @@ namespace Management_Coffee_Shop
             this.guna2HtmlLabel33.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel33.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2HtmlLabel33.Location = new System.Drawing.Point(408, 37);
+            this.guna2HtmlLabel33.Location = new System.Drawing.Point(400, 28);
             this.guna2HtmlLabel33.Name = "guna2HtmlLabel33";
             this.guna2HtmlLabel33.Size = new System.Drawing.Size(195, 33);
             this.guna2HtmlLabel33.TabIndex = 3;
@@ -1606,7 +1610,7 @@ namespace Management_Coffee_Shop
             this.guna2Panel17.Controls.Add(this.guna2PictureBox13);
             this.guna2Panel17.Controls.Add(this.guna2PictureBox12);
             this.guna2Panel17.Controls.Add(this.guna2PictureBox14);
-            this.guna2Panel17.Controls.Add(this.guna2Button11);
+            this.guna2Panel17.Controls.Add(this.btnFeed_Back_HomePage);
             this.guna2Panel17.Controls.Add(this.guna2HtmlLabel31);
             this.guna2Panel17.Controls.Add(this.guna2HtmlLabel27);
             this.guna2Panel17.Controls.Add(this.guna2HtmlLabel30);
@@ -1675,24 +1679,25 @@ namespace Management_Coffee_Shop
             this.guna2PictureBox14.TabIndex = 0;
             this.guna2PictureBox14.TabStop = false;
             // 
-            // guna2Button11
+            // btnFeed_Back_HomePage
             // 
-            this.guna2Button11.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button11.BorderRadius = 17;
-            this.guna2Button11.BorderThickness = 2;
-            this.guna2Button11.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button11.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button11.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button11.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button11.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button11.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button11.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button11.Location = new System.Drawing.Point(897, 662);
-            this.guna2Button11.Name = "guna2Button11";
-            this.guna2Button11.Size = new System.Drawing.Size(180, 33);
-            this.guna2Button11.TabIndex = 5;
-            this.guna2Button11.Text = "Feed Back";
-            this.guna2Button11.TextOffset = new System.Drawing.Point(0, -3);
+            this.btnFeed_Back_HomePage.BackColor = System.Drawing.Color.Transparent;
+            this.btnFeed_Back_HomePage.BorderRadius = 17;
+            this.btnFeed_Back_HomePage.BorderThickness = 2;
+            this.btnFeed_Back_HomePage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFeed_Back_HomePage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFeed_Back_HomePage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFeed_Back_HomePage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnFeed_Back_HomePage.FillColor = System.Drawing.Color.Transparent;
+            this.btnFeed_Back_HomePage.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFeed_Back_HomePage.ForeColor = System.Drawing.Color.Black;
+            this.btnFeed_Back_HomePage.Location = new System.Drawing.Point(897, 662);
+            this.btnFeed_Back_HomePage.Name = "btnFeed_Back_HomePage";
+            this.btnFeed_Back_HomePage.Size = new System.Drawing.Size(180, 33);
+            this.btnFeed_Back_HomePage.TabIndex = 5;
+            this.btnFeed_Back_HomePage.Text = "Feed Back";
+            this.btnFeed_Back_HomePage.TextOffset = new System.Drawing.Point(0, -3);
+            this.btnFeed_Back_HomePage.Click += new System.EventHandler(this.btnOur_Location_HomePage_Click);
             // 
             // guna2HtmlLabel31
             // 
@@ -1791,7 +1796,7 @@ namespace Management_Coffee_Shop
             // 
             this.guna2Panel13.BackColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Panel13.Controls.Add(this.guna2PictureBox11);
-            this.guna2Panel13.Controls.Add(this.guna2Button9);
+            this.guna2Panel13.Controls.Add(this.btnOur_Location_HomePage);
             this.guna2Panel13.Controls.Add(this.guna2PictureBox10);
             this.guna2Panel13.Controls.Add(this.guna2HtmlLabel19);
             this.guna2Panel13.Controls.Add(this.guna2HtmlLabel10);
@@ -1812,24 +1817,25 @@ namespace Management_Coffee_Shop
             this.guna2PictureBox11.TabIndex = 0;
             this.guna2PictureBox11.TabStop = false;
             // 
-            // guna2Button9
+            // btnOur_Location_HomePage
             // 
-            this.guna2Button9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Button9.BorderRadius = 17;
-            this.guna2Button9.BorderThickness = 1;
-            this.guna2Button9.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button9.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button9.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button9.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button9.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Button9.Location = new System.Drawing.Point(655, 279);
-            this.guna2Button9.Name = "guna2Button9";
-            this.guna2Button9.Size = new System.Drawing.Size(180, 33);
-            this.guna2Button9.TabIndex = 5;
-            this.guna2Button9.Text = "Our Location";
-            this.guna2Button9.TextOffset = new System.Drawing.Point(0, -3);
+            this.btnOur_Location_HomePage.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
+            this.btnOur_Location_HomePage.BorderRadius = 17;
+            this.btnOur_Location_HomePage.BorderThickness = 1;
+            this.btnOur_Location_HomePage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnOur_Location_HomePage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnOur_Location_HomePage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnOur_Location_HomePage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnOur_Location_HomePage.FillColor = System.Drawing.Color.Transparent;
+            this.btnOur_Location_HomePage.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOur_Location_HomePage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
+            this.btnOur_Location_HomePage.Location = new System.Drawing.Point(655, 279);
+            this.btnOur_Location_HomePage.Name = "btnOur_Location_HomePage";
+            this.btnOur_Location_HomePage.Size = new System.Drawing.Size(180, 33);
+            this.btnOur_Location_HomePage.TabIndex = 5;
+            this.btnOur_Location_HomePage.Text = "Our Location";
+            this.btnOur_Location_HomePage.TextOffset = new System.Drawing.Point(0, -3);
+            this.btnOur_Location_HomePage.Click += new System.EventHandler(this.btnOur_Location_HomePage_Click);
             // 
             // guna2PictureBox10
             // 
@@ -2284,7 +2290,7 @@ namespace Management_Coffee_Shop
             this.tabPage2.Controls.Add(this.guna2Panel44);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1163, 721);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
@@ -2373,7 +2379,7 @@ namespace Management_Coffee_Shop
             // 
             this.guna2Panel27.Controls.Add(this.uC_product1);
             this.guna2Panel27.Location = new System.Drawing.Point(17, 17);
-            this.guna2Panel27.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.guna2Panel27.Margin = new System.Windows.Forms.Padding(17);
             this.guna2Panel27.Name = "guna2Panel27";
             this.guna2Panel27.Size = new System.Drawing.Size(250, 294);
             this.guna2Panel27.TabIndex = 0;
@@ -2381,16 +2387,18 @@ namespace Management_Coffee_Shop
             // uC_product1
             // 
             this.uC_product1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product1.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
+            this.uC_product1.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
+    "";
             this.uC_product1.BTNReviews_Drinks = " Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
-    "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews";
+    "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
+    "Reviews Reviews Reviews Reviews";
             this.uC_product1.Categories = null;
             this.uC_product1.ID = null;
             this.uC_product1.LBLDescribe_Drinks = "";
             this.uC_product1.LBLName_Drinks = null;
             this.uC_product1.LBLRate_Drinks = "";
             this.uC_product1.Location = new System.Drawing.Point(0, 0);
-            this.uC_product1.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.uC_product1.Margin = new System.Windows.Forms.Padding(17);
             this.uC_product1.Name = "uC_product1";
             this.uC_product1.PTBImage_Drinks = null;
             this.uC_product1.Size = new System.Drawing.Size(250, 294);
@@ -2400,7 +2408,7 @@ namespace Management_Coffee_Shop
             // 
             this.guna2Panel28.Controls.Add(this.uC_product2);
             this.guna2Panel28.Location = new System.Drawing.Point(301, 17);
-            this.guna2Panel28.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.guna2Panel28.Margin = new System.Windows.Forms.Padding(17);
             this.guna2Panel28.Name = "guna2Panel28";
             this.guna2Panel28.Size = new System.Drawing.Size(250, 290);
             this.guna2Panel28.TabIndex = 0;
@@ -2408,16 +2416,18 @@ namespace Management_Coffee_Shop
             // uC_product2
             // 
             this.uC_product2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product2.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
+            this.uC_product2.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
+    "";
             this.uC_product2.BTNReviews_Drinks = " Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
-    "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews";
+    "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
+    "Reviews Reviews Reviews Reviews";
             this.uC_product2.Categories = null;
             this.uC_product2.ID = null;
             this.uC_product2.LBLDescribe_Drinks = "";
             this.uC_product2.LBLName_Drinks = null;
             this.uC_product2.LBLRate_Drinks = "";
             this.uC_product2.Location = new System.Drawing.Point(0, 0);
-            this.uC_product2.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.uC_product2.Margin = new System.Windows.Forms.Padding(17);
             this.uC_product2.Name = "uC_product2";
             this.uC_product2.PTBImage_Drinks = null;
             this.uC_product2.Size = new System.Drawing.Size(250, 294);
@@ -2427,7 +2437,7 @@ namespace Management_Coffee_Shop
             // 
             this.guna2Panel29.Controls.Add(this.uC_product3);
             this.guna2Panel29.Location = new System.Drawing.Point(585, 17);
-            this.guna2Panel29.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.guna2Panel29.Margin = new System.Windows.Forms.Padding(17);
             this.guna2Panel29.Name = "guna2Panel29";
             this.guna2Panel29.Size = new System.Drawing.Size(250, 290);
             this.guna2Panel29.TabIndex = 0;
@@ -2435,16 +2445,18 @@ namespace Management_Coffee_Shop
             // uC_product3
             // 
             this.uC_product3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product3.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
+            this.uC_product3.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
+    "";
             this.uC_product3.BTNReviews_Drinks = " Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
-    "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews";
+    "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
+    "Reviews Reviews Reviews Reviews";
             this.uC_product3.Categories = null;
             this.uC_product3.ID = null;
             this.uC_product3.LBLDescribe_Drinks = "";
             this.uC_product3.LBLName_Drinks = null;
             this.uC_product3.LBLRate_Drinks = "";
             this.uC_product3.Location = new System.Drawing.Point(0, 0);
-            this.uC_product3.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.uC_product3.Margin = new System.Windows.Forms.Padding(17);
             this.uC_product3.Name = "uC_product3";
             this.uC_product3.PTBImage_Drinks = null;
             this.uC_product3.Size = new System.Drawing.Size(250, 294);
@@ -2454,7 +2466,7 @@ namespace Management_Coffee_Shop
             // 
             this.guna2Panel30.Controls.Add(this.uC_product4);
             this.guna2Panel30.Location = new System.Drawing.Point(869, 17);
-            this.guna2Panel30.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.guna2Panel30.Margin = new System.Windows.Forms.Padding(17);
             this.guna2Panel30.Name = "guna2Panel30";
             this.guna2Panel30.Size = new System.Drawing.Size(250, 290);
             this.guna2Panel30.TabIndex = 0;
@@ -2462,16 +2474,18 @@ namespace Management_Coffee_Shop
             // uC_product4
             // 
             this.uC_product4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product4.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
+            this.uC_product4.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
+    "";
             this.uC_product4.BTNReviews_Drinks = " Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
-    "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews";
+    "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
+    "Reviews Reviews Reviews Reviews";
             this.uC_product4.Categories = null;
             this.uC_product4.ID = null;
             this.uC_product4.LBLDescribe_Drinks = "";
             this.uC_product4.LBLName_Drinks = null;
             this.uC_product4.LBLRate_Drinks = "";
             this.uC_product4.Location = new System.Drawing.Point(0, 0);
-            this.uC_product4.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.uC_product4.Margin = new System.Windows.Forms.Padding(17);
             this.uC_product4.Name = "uC_product4";
             this.uC_product4.PTBImage_Drinks = null;
             this.uC_product4.Size = new System.Drawing.Size(250, 294);
@@ -2481,7 +2495,7 @@ namespace Management_Coffee_Shop
             // 
             this.guna2Panel31.Controls.Add(this.uC_product5);
             this.guna2Panel31.Location = new System.Drawing.Point(17, 345);
-            this.guna2Panel31.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.guna2Panel31.Margin = new System.Windows.Forms.Padding(17);
             this.guna2Panel31.Name = "guna2Panel31";
             this.guna2Panel31.Size = new System.Drawing.Size(250, 290);
             this.guna2Panel31.TabIndex = 0;
@@ -2489,16 +2503,18 @@ namespace Management_Coffee_Shop
             // uC_product5
             // 
             this.uC_product5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product5.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
+            this.uC_product5.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
+    "";
             this.uC_product5.BTNReviews_Drinks = " Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
-    "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews";
+    "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
+    "Reviews Reviews Reviews Reviews";
             this.uC_product5.Categories = null;
             this.uC_product5.ID = null;
             this.uC_product5.LBLDescribe_Drinks = "";
             this.uC_product5.LBLName_Drinks = null;
             this.uC_product5.LBLRate_Drinks = "";
             this.uC_product5.Location = new System.Drawing.Point(1, 0);
-            this.uC_product5.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.uC_product5.Margin = new System.Windows.Forms.Padding(17);
             this.uC_product5.Name = "uC_product5";
             this.uC_product5.PTBImage_Drinks = null;
             this.uC_product5.Size = new System.Drawing.Size(250, 294);
@@ -2508,7 +2524,7 @@ namespace Management_Coffee_Shop
             // 
             this.guna2Panel32.Controls.Add(this.uC_product6);
             this.guna2Panel32.Location = new System.Drawing.Point(301, 345);
-            this.guna2Panel32.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.guna2Panel32.Margin = new System.Windows.Forms.Padding(17);
             this.guna2Panel32.Name = "guna2Panel32";
             this.guna2Panel32.Size = new System.Drawing.Size(250, 290);
             this.guna2Panel32.TabIndex = 0;
@@ -2516,16 +2532,18 @@ namespace Management_Coffee_Shop
             // uC_product6
             // 
             this.uC_product6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product6.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
+            this.uC_product6.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
+    "";
             this.uC_product6.BTNReviews_Drinks = " Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
-    "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews";
+    "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
+    "Reviews Reviews Reviews Reviews";
             this.uC_product6.Categories = null;
             this.uC_product6.ID = null;
             this.uC_product6.LBLDescribe_Drinks = "";
             this.uC_product6.LBLName_Drinks = null;
             this.uC_product6.LBLRate_Drinks = "";
             this.uC_product6.Location = new System.Drawing.Point(-1, 0);
-            this.uC_product6.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.uC_product6.Margin = new System.Windows.Forms.Padding(17);
             this.uC_product6.Name = "uC_product6";
             this.uC_product6.PTBImage_Drinks = null;
             this.uC_product6.Size = new System.Drawing.Size(250, 294);
@@ -2535,7 +2553,7 @@ namespace Management_Coffee_Shop
             // 
             this.guna2Panel33.Controls.Add(this.uC_product7);
             this.guna2Panel33.Location = new System.Drawing.Point(585, 345);
-            this.guna2Panel33.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.guna2Panel33.Margin = new System.Windows.Forms.Padding(17);
             this.guna2Panel33.Name = "guna2Panel33";
             this.guna2Panel33.Size = new System.Drawing.Size(250, 290);
             this.guna2Panel33.TabIndex = 0;
@@ -2543,16 +2561,18 @@ namespace Management_Coffee_Shop
             // uC_product7
             // 
             this.uC_product7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product7.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
+            this.uC_product7.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
+    "";
             this.uC_product7.BTNReviews_Drinks = " Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
-    "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews";
+    "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
+    "Reviews Reviews Reviews Reviews";
             this.uC_product7.Categories = null;
             this.uC_product7.ID = null;
             this.uC_product7.LBLDescribe_Drinks = "";
             this.uC_product7.LBLName_Drinks = null;
             this.uC_product7.LBLRate_Drinks = "";
             this.uC_product7.Location = new System.Drawing.Point(-1, -4);
-            this.uC_product7.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.uC_product7.Margin = new System.Windows.Forms.Padding(17);
             this.uC_product7.Name = "uC_product7";
             this.uC_product7.PTBImage_Drinks = null;
             this.uC_product7.Size = new System.Drawing.Size(250, 294);
@@ -2562,7 +2582,7 @@ namespace Management_Coffee_Shop
             // 
             this.guna2Panel34.Controls.Add(this.uC_product8);
             this.guna2Panel34.Location = new System.Drawing.Point(869, 345);
-            this.guna2Panel34.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.guna2Panel34.Margin = new System.Windows.Forms.Padding(17);
             this.guna2Panel34.Name = "guna2Panel34";
             this.guna2Panel34.Size = new System.Drawing.Size(250, 290);
             this.guna2Panel34.TabIndex = 0;
@@ -2570,16 +2590,18 @@ namespace Management_Coffee_Shop
             // uC_product8
             // 
             this.uC_product8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product8.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
+            this.uC_product8.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
+    "";
             this.uC_product8.BTNReviews_Drinks = " Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
-    "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews";
+    "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
+    "Reviews Reviews Reviews Reviews";
             this.uC_product8.Categories = null;
             this.uC_product8.ID = null;
             this.uC_product8.LBLDescribe_Drinks = "";
             this.uC_product8.LBLName_Drinks = null;
             this.uC_product8.LBLRate_Drinks = "";
             this.uC_product8.Location = new System.Drawing.Point(0, -4);
-            this.uC_product8.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.uC_product8.Margin = new System.Windows.Forms.Padding(17);
             this.uC_product8.Name = "uC_product8";
             this.uC_product8.PTBImage_Drinks = null;
             this.uC_product8.Size = new System.Drawing.Size(250, 294);
@@ -2589,7 +2611,7 @@ namespace Management_Coffee_Shop
             // 
             this.guna2Panel35.Controls.Add(this.uC_product9);
             this.guna2Panel35.Location = new System.Drawing.Point(17, 669);
-            this.guna2Panel35.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.guna2Panel35.Margin = new System.Windows.Forms.Padding(17);
             this.guna2Panel35.Name = "guna2Panel35";
             this.guna2Panel35.Size = new System.Drawing.Size(250, 290);
             this.guna2Panel35.TabIndex = 1;
@@ -2597,16 +2619,18 @@ namespace Management_Coffee_Shop
             // uC_product9
             // 
             this.uC_product9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product9.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
+            this.uC_product9.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
+    "";
             this.uC_product9.BTNReviews_Drinks = " Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
-    "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews";
+    "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
+    "Reviews Reviews Reviews Reviews";
             this.uC_product9.Categories = null;
             this.uC_product9.ID = null;
             this.uC_product9.LBLDescribe_Drinks = "";
             this.uC_product9.LBLName_Drinks = null;
             this.uC_product9.LBLRate_Drinks = "";
             this.uC_product9.Location = new System.Drawing.Point(0, -4);
-            this.uC_product9.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.uC_product9.Margin = new System.Windows.Forms.Padding(17);
             this.uC_product9.Name = "uC_product9";
             this.uC_product9.PTBImage_Drinks = null;
             this.uC_product9.Size = new System.Drawing.Size(250, 294);
@@ -2616,7 +2640,7 @@ namespace Management_Coffee_Shop
             // 
             this.guna2Panel36.Controls.Add(this.uC_product10);
             this.guna2Panel36.Location = new System.Drawing.Point(301, 669);
-            this.guna2Panel36.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.guna2Panel36.Margin = new System.Windows.Forms.Padding(17);
             this.guna2Panel36.Name = "guna2Panel36";
             this.guna2Panel36.Size = new System.Drawing.Size(250, 290);
             this.guna2Panel36.TabIndex = 2;
@@ -2624,16 +2648,18 @@ namespace Management_Coffee_Shop
             // uC_product10
             // 
             this.uC_product10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product10.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
+            this.uC_product10.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
+    "";
             this.uC_product10.BTNReviews_Drinks = " Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
-    "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews";
+    "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
+    "Reviews Reviews Reviews Reviews";
             this.uC_product10.Categories = null;
             this.uC_product10.ID = null;
             this.uC_product10.LBLDescribe_Drinks = "";
             this.uC_product10.LBLName_Drinks = null;
             this.uC_product10.LBLRate_Drinks = "";
             this.uC_product10.Location = new System.Drawing.Point(1, 0);
-            this.uC_product10.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.uC_product10.Margin = new System.Windows.Forms.Padding(17);
             this.uC_product10.Name = "uC_product10";
             this.uC_product10.PTBImage_Drinks = null;
             this.uC_product10.Size = new System.Drawing.Size(250, 294);
@@ -2643,7 +2669,7 @@ namespace Management_Coffee_Shop
             // 
             this.guna2Panel37.Controls.Add(this.uC_product11);
             this.guna2Panel37.Location = new System.Drawing.Point(585, 669);
-            this.guna2Panel37.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.guna2Panel37.Margin = new System.Windows.Forms.Padding(17);
             this.guna2Panel37.Name = "guna2Panel37";
             this.guna2Panel37.Size = new System.Drawing.Size(250, 290);
             this.guna2Panel37.TabIndex = 3;
@@ -2651,16 +2677,18 @@ namespace Management_Coffee_Shop
             // uC_product11
             // 
             this.uC_product11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product11.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
+            this.uC_product11.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
+    "";
             this.uC_product11.BTNReviews_Drinks = " Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
-    "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews";
+    "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
+    "Reviews Reviews Reviews Reviews";
             this.uC_product11.Categories = null;
             this.uC_product11.ID = null;
             this.uC_product11.LBLDescribe_Drinks = "";
             this.uC_product11.LBLName_Drinks = null;
             this.uC_product11.LBLRate_Drinks = "";
             this.uC_product11.Location = new System.Drawing.Point(0, 0);
-            this.uC_product11.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.uC_product11.Margin = new System.Windows.Forms.Padding(17);
             this.uC_product11.Name = "uC_product11";
             this.uC_product11.PTBImage_Drinks = null;
             this.uC_product11.Size = new System.Drawing.Size(250, 294);
@@ -2670,7 +2698,7 @@ namespace Management_Coffee_Shop
             // 
             this.guna2Panel38.Controls.Add(this.uC_product12);
             this.guna2Panel38.Location = new System.Drawing.Point(869, 669);
-            this.guna2Panel38.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.guna2Panel38.Margin = new System.Windows.Forms.Padding(17);
             this.guna2Panel38.Name = "guna2Panel38";
             this.guna2Panel38.Size = new System.Drawing.Size(250, 290);
             this.guna2Panel38.TabIndex = 4;
@@ -2678,16 +2706,18 @@ namespace Management_Coffee_Shop
             // uC_product12
             // 
             this.uC_product12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product12.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
+            this.uC_product12.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
+    "";
             this.uC_product12.BTNReviews_Drinks = " Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
-    "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews";
+    "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
+    "Reviews Reviews Reviews Reviews";
             this.uC_product12.Categories = null;
             this.uC_product12.ID = null;
             this.uC_product12.LBLDescribe_Drinks = "";
             this.uC_product12.LBLName_Drinks = null;
             this.uC_product12.LBLRate_Drinks = "";
             this.uC_product12.Location = new System.Drawing.Point(0, 0);
-            this.uC_product12.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.uC_product12.Margin = new System.Windows.Forms.Padding(17);
             this.uC_product12.Name = "uC_product12";
             this.uC_product12.PTBImage_Drinks = null;
             this.uC_product12.Size = new System.Drawing.Size(250, 294);
@@ -2697,7 +2727,7 @@ namespace Management_Coffee_Shop
             // 
             this.guna2Panel39.Controls.Add(this.uC_product13);
             this.guna2Panel39.Location = new System.Drawing.Point(17, 993);
-            this.guna2Panel39.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.guna2Panel39.Margin = new System.Windows.Forms.Padding(17);
             this.guna2Panel39.Name = "guna2Panel39";
             this.guna2Panel39.Size = new System.Drawing.Size(250, 290);
             this.guna2Panel39.TabIndex = 5;
@@ -2705,16 +2735,18 @@ namespace Management_Coffee_Shop
             // uC_product13
             // 
             this.uC_product13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product13.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
+            this.uC_product13.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
+    "";
             this.uC_product13.BTNReviews_Drinks = " Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
-    "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews";
+    "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
+    "Reviews Reviews Reviews Reviews";
             this.uC_product13.Categories = null;
             this.uC_product13.ID = null;
             this.uC_product13.LBLDescribe_Drinks = "";
             this.uC_product13.LBLName_Drinks = null;
             this.uC_product13.LBLRate_Drinks = "";
             this.uC_product13.Location = new System.Drawing.Point(0, 0);
-            this.uC_product13.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.uC_product13.Margin = new System.Windows.Forms.Padding(17);
             this.uC_product13.Name = "uC_product13";
             this.uC_product13.PTBImage_Drinks = null;
             this.uC_product13.Size = new System.Drawing.Size(250, 294);
@@ -2724,7 +2756,7 @@ namespace Management_Coffee_Shop
             // 
             this.guna2Panel40.Controls.Add(this.uC_product14);
             this.guna2Panel40.Location = new System.Drawing.Point(301, 993);
-            this.guna2Panel40.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.guna2Panel40.Margin = new System.Windows.Forms.Padding(17);
             this.guna2Panel40.Name = "guna2Panel40";
             this.guna2Panel40.Size = new System.Drawing.Size(250, 290);
             this.guna2Panel40.TabIndex = 6;
@@ -2732,16 +2764,18 @@ namespace Management_Coffee_Shop
             // uC_product14
             // 
             this.uC_product14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product14.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
+            this.uC_product14.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
+    "";
             this.uC_product14.BTNReviews_Drinks = " Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
-    "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews";
+    "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
+    "Reviews Reviews Reviews Reviews";
             this.uC_product14.Categories = null;
             this.uC_product14.ID = null;
             this.uC_product14.LBLDescribe_Drinks = "";
             this.uC_product14.LBLName_Drinks = null;
             this.uC_product14.LBLRate_Drinks = "";
             this.uC_product14.Location = new System.Drawing.Point(0, 0);
-            this.uC_product14.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.uC_product14.Margin = new System.Windows.Forms.Padding(17);
             this.uC_product14.Name = "uC_product14";
             this.uC_product14.PTBImage_Drinks = null;
             this.uC_product14.Size = new System.Drawing.Size(250, 294);
@@ -2751,7 +2785,7 @@ namespace Management_Coffee_Shop
             // 
             this.guna2Panel41.Controls.Add(this.uC_product15);
             this.guna2Panel41.Location = new System.Drawing.Point(585, 993);
-            this.guna2Panel41.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.guna2Panel41.Margin = new System.Windows.Forms.Padding(17);
             this.guna2Panel41.Name = "guna2Panel41";
             this.guna2Panel41.Size = new System.Drawing.Size(250, 290);
             this.guna2Panel41.TabIndex = 7;
@@ -2759,16 +2793,18 @@ namespace Management_Coffee_Shop
             // uC_product15
             // 
             this.uC_product15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product15.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
+            this.uC_product15.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
+    "";
             this.uC_product15.BTNReviews_Drinks = " Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
-    "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews";
+    "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
+    "Reviews Reviews Reviews Reviews";
             this.uC_product15.Categories = null;
             this.uC_product15.ID = null;
             this.uC_product15.LBLDescribe_Drinks = "";
             this.uC_product15.LBLName_Drinks = null;
             this.uC_product15.LBLRate_Drinks = "";
             this.uC_product15.Location = new System.Drawing.Point(-1, 0);
-            this.uC_product15.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.uC_product15.Margin = new System.Windows.Forms.Padding(17);
             this.uC_product15.Name = "uC_product15";
             this.uC_product15.PTBImage_Drinks = null;
             this.uC_product15.Size = new System.Drawing.Size(250, 294);
@@ -2778,7 +2814,7 @@ namespace Management_Coffee_Shop
             // 
             this.guna2Panel42.Controls.Add(this.uC_product16);
             this.guna2Panel42.Location = new System.Drawing.Point(869, 993);
-            this.guna2Panel42.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.guna2Panel42.Margin = new System.Windows.Forms.Padding(17);
             this.guna2Panel42.Name = "guna2Panel42";
             this.guna2Panel42.Size = new System.Drawing.Size(250, 290);
             this.guna2Panel42.TabIndex = 8;
@@ -2786,16 +2822,18 @@ namespace Management_Coffee_Shop
             // uC_product16
             // 
             this.uC_product16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.uC_product16.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ";
+            this.uC_product16.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
+    "";
             this.uC_product16.BTNReviews_Drinks = " Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
-    "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews";
+    "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
+    "Reviews Reviews Reviews Reviews";
             this.uC_product16.Categories = null;
             this.uC_product16.ID = null;
             this.uC_product16.LBLDescribe_Drinks = "";
             this.uC_product16.LBLName_Drinks = null;
             this.uC_product16.LBLRate_Drinks = "";
             this.uC_product16.Location = new System.Drawing.Point(0, 0);
-            this.uC_product16.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.uC_product16.Margin = new System.Windows.Forms.Padding(17);
             this.uC_product16.Name = "uC_product16";
             this.uC_product16.PTBImage_Drinks = null;
             this.uC_product16.Size = new System.Drawing.Size(250, 294);
@@ -2833,7 +2871,7 @@ namespace Management_Coffee_Shop
             this.btnPage_Back.Image = ((System.Drawing.Image)(resources.GetObject("btnPage_Back.Image")));
             this.btnPage_Back.ImageSize = new System.Drawing.Size(40, 40);
             this.btnPage_Back.Location = new System.Drawing.Point(8, 8);
-            this.btnPage_Back.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.btnPage_Back.Margin = new System.Windows.Forms.Padding(8);
             this.btnPage_Back.Name = "btnPage_Back";
             this.btnPage_Back.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnPage_Back.Size = new System.Drawing.Size(44, 44);
@@ -2908,9 +2946,9 @@ namespace Management_Coffee_Shop
             this.btnPage_Next.Image = ((System.Drawing.Image)(resources.GetObject("btnPage_Next.Image")));
             this.btnPage_Next.ImageSize = new System.Drawing.Size(40, 40);
             this.btnPage_Next.Location = new System.Drawing.Point(326, 8);
-            this.btnPage_Next.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.btnPage_Next.Margin = new System.Windows.Forms.Padding(8);
             this.btnPage_Next.Name = "btnPage_Next";
-            this.btnPage_Next.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnPage_Next.Padding = new System.Windows.Forms.Padding(5);
             this.btnPage_Next.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnPage_Next.Size = new System.Drawing.Size(44, 44);
             this.btnPage_Next.TabIndex = 5;
@@ -3000,7 +3038,7 @@ namespace Management_Coffee_Shop
             this.tabPage3.Controls.Add(this.guna2Panel49);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(1163, 721);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
@@ -3151,7 +3189,7 @@ namespace Management_Coffee_Shop
             this.tabPage4.Controls.Add(this.ptbImage_Profile);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(1163, 721);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
@@ -3451,7 +3489,7 @@ namespace Management_Coffee_Shop
             this.tabPage5.Controls.Add(this.flpPayment);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage5.Size = new System.Drawing.Size(1163, 721);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "tabPage5";
@@ -3825,7 +3863,7 @@ namespace Management_Coffee_Shop
             this.tabPage6.Controls.Add(this.guna2PictureBox18);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage6.Size = new System.Drawing.Size(1163, 721);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "tabPage6";
@@ -4357,7 +4395,7 @@ namespace Management_Coffee_Shop
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox11;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox10;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel18;
-        private Guna.UI2.WinForms.Guna2Button guna2Button9;
+        private Guna.UI2.WinForms.Guna2Button btnOur_Location_HomePage;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel19;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel22;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel21;
@@ -4377,14 +4415,14 @@ namespace Management_Coffee_Shop
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel28;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel23;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel29;
-        private Guna.UI2.WinForms.Guna2Button guna2Button11;
+        private Guna.UI2.WinForms.Guna2Button btnFeed_Back_HomePage;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel20;
-        private Guna.UI2.WinForms.Guna2Button guna2Button10;
+        private Guna.UI2.WinForms.Guna2Button btnAbout_Us_HomePage;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel21;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel32;
-        private Guna.UI2.WinForms.Guna2Button guna2Button13;
-        private Guna.UI2.WinForms.Guna2Button guna2Button12;
-        private Guna.UI2.WinForms.Guna2Button guna2Button14;
+        private Guna.UI2.WinForms.Guna2Button btnAttendant_HomePage;
+        private Guna.UI2.WinForms.Guna2Button btnLocation_HomePage;
+        private Guna.UI2.WinForms.Guna2Button btnBestSeller_HomePage;
         private Guna.UI2.WinForms.Guna2Button guna2Button22;
         private Guna.UI2.WinForms.Guna2Button guna2Button18;
         private Guna.UI2.WinForms.Guna2Button guna2Button21;

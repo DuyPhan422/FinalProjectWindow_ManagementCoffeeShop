@@ -167,6 +167,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection.cs" />
+    <Compile Include="Customer.cs" />
     <Compile Include="Drinks.cs" />
     <Compile Include="Employee.cs">
       <SubType>Form</SubType>
@@ -212,6 +213,7 @@
       <DependentUpon>FormRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs" />
+    <Compile Include="People.cs" />
     <Compile Include="ProductDb.cs" />
     <Compile Include="Rate.cs">
       <SubType>Form</SubType>
