@@ -1,11 +1,4 @@
 {
-  "DESKTOP-331CJKC": [
-    {
-      "UserId": "C888280",
-      "Token": "sDEQVql57ZPom37VTq12wPJgXB66GubvsIbHHjnv6ofhhJKTMzcvhMLYkIwG4X",
-      "LastLogin": "25/04/2025 23:15:36"
-    }
-  ],
   "LAPTOP-AH11AR93": [
     {
       "UserId": "C888280",

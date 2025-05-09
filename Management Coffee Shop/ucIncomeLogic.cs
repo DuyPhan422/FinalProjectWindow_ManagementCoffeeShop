@@ -51,7 +51,7 @@ namespace Management_Coffee_Shop
 
         private void GetNumberItems()
         {
-            string path = "history_Shopping.txt";
+            string path = @"..\..\history_Shopping.txt";
             if (File.Exists(path))
             {
                 var lines = File.ReadAllLines(path);
@@ -137,7 +137,7 @@ namespace Management_Coffee_Shop
                     }
                     reader.Close();
 
-                    string path = "history_Shopping.txt";
+                    string path = @"..\..\history_Shopping.txt";
                     if (!File.Exists(path))
                     {
                         Console.WriteLine("history_Shopping.txt does not exist for product analysis.");
@@ -203,7 +203,7 @@ namespace Management_Coffee_Shop
             TotalRevenue = 0;
             TotalProfit = 0;
 
-            string path = "history_Shopping.txt";
+            string path = @"..\..\history_Shopping.txt";
             if (!File.Exists(path))
             {
                 Console.WriteLine("history_Shopping.txt does not exist for order analysis.");

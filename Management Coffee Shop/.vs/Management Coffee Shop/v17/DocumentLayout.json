@@ -3,24 +3,56 @@
   "WorkspaceRootPath": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|g:\\finalprojectwindow_managementcoffeeshop\\management coffee shop\\user_controls\\ucproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\ucproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\user_controls\\ucincome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\ucincome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\formmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:formmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|g:\\finalprojectwindow_managementcoffeeshop\\management coffee shop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\user_controls\\ucincome_dark.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\ucincome_dark.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\user_controls\\ucproduct_dark.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\ucproduct_dark.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\user_controls\\ucstaff_dark.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\ucstaff_dark.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\formcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:formcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\formforgetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:formforgetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\formmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:formmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\user_controls\\ucstaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\ucstaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\ucincomelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:ucincomelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\user_controls\\ucproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\ucproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\user_controls\\ucproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,8 +63,12 @@
       "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\ucincome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\user_controls\\ucincome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\ucincome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\formmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:formmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\user_controls\\ucstaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:user_controls\\ucstaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\user_controls\\ucstaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -43,20 +79,12 @@
       "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\formcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:formcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\staffdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:staffdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{707E5342-B8BE-4288-AAE3-435F0F77126B}|Management Coffee Shop.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,7 +94,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,54 +106,111 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ucProduct.cs",
-              "DocumentMoniker": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\User_Controls\\ucProduct.cs",
-              "RelativeDocumentMoniker": "User_Controls\\ucProduct.cs",
-              "ToolTip": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\User_Controls\\ucProduct.cs",
-              "RelativeToolTip": "User_Controls\\ucProduct.cs",
-              "ViewState": "AgIAAAkBAAAAAAAAAAAawNEAAAAwAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "ucProduct_dark.cs [Design]",
+              "DocumentMoniker": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\User_Controls\\ucProduct_dark.cs",
+              "RelativeDocumentMoniker": "User_Controls\\ucProduct_dark.cs",
+              "ToolTip": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\User_Controls\\ucProduct_dark.cs [Design]",
+              "RelativeToolTip": "User_Controls\\ucProduct_dark.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T17:54:18.815Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ucIncome.cs",
-              "DocumentMoniker": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\User_Controls\\ucIncome.cs",
-              "RelativeDocumentMoniker": "User_Controls\\ucIncome.cs",
-              "ToolTip": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\User_Controls\\ucIncome.cs",
-              "RelativeToolTip": "User_Controls\\ucIncome.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF4AAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T17:06:30.124Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ucIncome.cs [Design]",
-              "DocumentMoniker": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\User_Controls\\ucIncome.cs",
-              "RelativeDocumentMoniker": "User_Controls\\ucIncome.cs",
-              "ToolTip": "E:\\FinalProjectWindow_ManagementCoffeeShop-master\\Management Coffee Shop\\User_Controls\\ucIncome.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T17:06:22.933Z"
+              "WhenOpened": "2025-05-09T02:11:58.455Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "ucStaff_dark.cs [Design]",
+              "DocumentMoniker": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\User_Controls\\ucStaff_dark.cs",
+              "RelativeDocumentMoniker": "User_Controls\\ucStaff_dark.cs",
+              "ToolTip": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\User_Controls\\ucStaff_dark.cs [Design]",
+              "RelativeToolTip": "User_Controls\\ucStaff_dark.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T02:11:55.367Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormForgetPassword.cs [Design]",
+              "DocumentMoniker": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\FormForgetPassword.cs",
+              "RelativeDocumentMoniker": "FormForgetPassword.cs",
+              "ToolTip": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\FormForgetPassword.cs [Design]",
+              "RelativeToolTip": "FormForgetPassword.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T02:11:21.977Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "ucIncomeLogic.cs",
               "DocumentMoniker": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\ucIncomeLogic.cs",
               "RelativeDocumentMoniker": "ucIncomeLogic.cs",
               "ToolTip": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\ucIncomeLogic.cs",
               "RelativeToolTip": "ucIncomeLogic.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAywAkBAABTAAAAAAAAAA==",
+              "ViewState": "AgIAAGQAAAAAAAAAAADgv2wAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-08T16:58:28.445Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T16:18:22.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T02:04:32.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ucIncome.cs [Design]",
+              "DocumentMoniker": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\User_Controls\\ucIncome.cs",
+              "RelativeDocumentMoniker": "User_Controls\\ucIncome.cs",
+              "ToolTip": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\User_Controls\\ucIncome.cs [Design]",
+              "RelativeToolTip": "User_Controls\\ucIncome.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T17:06:22.933Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ucIncome_dark.cs [Design]",
+              "DocumentMoniker": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\User_Controls\\ucIncome_dark.cs",
+              "RelativeDocumentMoniker": "User_Controls\\ucIncome_dark.cs",
+              "ToolTip": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\User_Controls\\ucIncome_dark.cs [Design]",
+              "RelativeToolTip": "User_Controls\\ucIncome_dark.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T02:12:01.544Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAAKoAAAAAAAAAAAAmwLMAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T02:04:44.665Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "ucStaff.cs",
               "DocumentMoniker": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\User_Controls\\ucStaff.cs",
               "RelativeDocumentMoniker": "User_Controls\\ucStaff.cs",
@@ -137,29 +222,77 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 12,
               "Title": "ucProduct.cs [Design]",
               "DocumentMoniker": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\User_Controls\\ucProduct.cs",
               "RelativeDocumentMoniker": "User_Controls\\ucProduct.cs",
               "ToolTip": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\User_Controls\\ucProduct.cs [Design]",
               "RelativeToolTip": "User_Controls\\ucProduct.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T16:19:53.435Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-08T16:19:53.435Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
+              "Title": "FormCustomer.cs [Design]",
+              "DocumentMoniker": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\FormCustomer.cs",
+              "RelativeDocumentMoniker": "FormCustomer.cs",
+              "ToolTip": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\FormCustomer.cs [Design]",
+              "RelativeToolTip": "FormCustomer.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T17:46:30.058Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ucIncome.cs",
+              "DocumentMoniker": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\User_Controls\\ucIncome.cs",
+              "RelativeDocumentMoniker": "User_Controls\\ucIncome.cs",
+              "ToolTip": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\User_Controls\\ucIncome.cs",
+              "RelativeToolTip": "User_Controls\\ucIncome.cs",
+              "ViewState": "AgIAALAAAAAAAAAAAAAAAF4AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T17:06:30.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "FormManager.cs [Design]",
               "DocumentMoniker": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\FormManager.cs",
               "RelativeDocumentMoniker": "FormManager.cs",
-              "ToolTip": "E:\\FinalProjectWindow_ManagementCoffeeShop-master\\Management Coffee Shop\\FormManager.cs [Design]",
+              "ToolTip": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\FormManager.cs [Design]",
+              "RelativeToolTip": "FormManager.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-08T17:37:57.28Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 13,
+              "Title": "ucProduct.cs",
+              "DocumentMoniker": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\User_Controls\\ucProduct.cs",
+              "RelativeDocumentMoniker": "User_Controls\\ucProduct.cs",
+              "ToolTip": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\User_Controls\\ucProduct.cs",
+              "RelativeToolTip": "User_Controls\\ucProduct.cs",
+              "ViewState": "AgIAAP0CAAAAAAAAAAAEwM8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T17:54:18.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Login.cs",
+              "DocumentMoniker": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\Login.cs",
+              "RelativeDocumentMoniker": "Login.cs",
+              "ToolTip": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\Login.cs",
+              "RelativeToolTip": "Login.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T02:03:11.144Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "FormManager.cs",
               "DocumentMoniker": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\FormManager.cs",
               "RelativeDocumentMoniker": "FormManager.cs",
@@ -171,7 +304,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 17,
               "Title": "ucStaff.cs [Design]",
               "DocumentMoniker": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\User_Controls\\ucStaff.cs",
               "RelativeDocumentMoniker": "User_Controls\\ucStaff.cs",
@@ -181,7 +314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 18,
               "Title": "Employee.cs [Design]",
               "DocumentMoniker": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\Employee.cs",
               "RelativeDocumentMoniker": "Employee.cs",
@@ -191,17 +324,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "FormCustomer.cs [Design]",
-              "DocumentMoniker": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\FormCustomer.cs",
-              "RelativeDocumentMoniker": "FormCustomer.cs",
-              "ToolTip": "E:\\FinalProjectWindow_ManagementCoffeeShop-master\\Management Coffee Shop\\FormCustomer.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T17:46:30.058Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 19,
               "Title": "Connection.cs",
               "DocumentMoniker": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\Connection.cs",
               "RelativeDocumentMoniker": "Connection.cs",
@@ -213,7 +336,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 20,
               "Title": "StaffDb.cs",
               "DocumentMoniker": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\StaffDb.cs",
               "RelativeDocumentMoniker": "StaffDb.cs",
@@ -222,18 +345,6 @@
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAB0AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-08T16:29:52.978Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Program.cs",
-              "DocumentMoniker": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "G:\\FinalProjectWindow_ManagementCoffeeShop\\Management Coffee Shop\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T16:18:22.075Z"
             }
           ]
         }
