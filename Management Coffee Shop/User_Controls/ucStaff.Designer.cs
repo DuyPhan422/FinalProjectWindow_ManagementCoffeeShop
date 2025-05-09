@@ -72,11 +72,6 @@
             this.pnlEditProductFill = new Guna.UI2.WinForms.Guna2Panel();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.dgvStaff = new System.Windows.Forms.DataGridView();
-            this.pnlGrid = new Guna.UI2.WinForms.Guna2Panel();
-            this.timer = new System.Windows.Forms.Timer(this.components);
-            this.elipsePnlEditProductTop = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.elipsePnlEditProductFill = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.elipseDgvStaff = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -86,6 +81,11 @@
             this.colPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSalary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pnlGrid = new Guna.UI2.WinForms.Guna2Panel();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.elipsePnlEditProductTop = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.elipsePnlEditProductFill = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.elipseDgvStaff = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.tbpnlTop.SuspendLayout();
             this.pnlEditProduct.SuspendLayout();
             this.pnlEditProductArea.SuspendLayout();
@@ -301,7 +301,8 @@
             this.tblEditProduct.Controls.Add(this.lblAddress, 0, 14);
             this.tblEditProduct.Controls.Add(this.lblSalary, 0, 17);
             this.tblEditProduct.Controls.Add(this.lblDescription, 0, 19);
-            this.tblEditProduct.Location = new System.Drawing.Point(3, 3);
+            this.tblEditProduct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblEditProduct.Location = new System.Drawing.Point(0, 0);
             this.tblEditProduct.Margin = new System.Windows.Forms.Padding(0);
             this.tblEditProduct.Name = "tblEditProduct";
             this.tblEditProduct.RowCount = 23;
@@ -328,7 +329,7 @@
             this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 69F));
             this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblEditProduct.Size = new System.Drawing.Size(460, 926);
+            this.tblEditProduct.Size = new System.Drawing.Size(470, 914);
             this.tblEditProduct.TabIndex = 2;
             this.tblEditProduct.Paint += new System.Windows.Forms.PaintEventHandler(this.tblEditProduct_Paint);
             // 
@@ -891,38 +892,6 @@
             this.dgvStaff.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStaff_CellContentClick);
             this.dgvStaff.SelectionChanged += new System.EventHandler(this.dgvStaff_SelectionChanged);
             // 
-            // pnlGrid
-            // 
-            this.pnlGrid.BorderRadius = 30;
-            this.pnlGrid.Controls.Add(this.dgvStaff);
-            this.pnlGrid.Controls.Add(this.pnlEditProductFill);
-            this.pnlGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlGrid.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlGrid.Location = new System.Drawing.Point(0, 60);
-            this.pnlGrid.Name = "pnlGrid";
-            this.pnlGrid.Size = new System.Drawing.Size(1323, 976);
-            this.pnlGrid.TabIndex = 3;
-            this.pnlGrid.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlGrid_Paint);
-            // 
-            // timer
-            // 
-            this.timer.Tick += new System.EventHandler(this.timer_Tick_1);
-            // 
-            // elipsePnlEditProductTop
-            // 
-            this.elipsePnlEditProductTop.BorderRadius = 20;
-            this.elipsePnlEditProductTop.TargetControl = this.pnlEditProductTop;
-            // 
-            // elipsePnlEditProductFill
-            // 
-            this.elipsePnlEditProductFill.BorderRadius = 20;
-            this.elipsePnlEditProductFill.TargetControl = this.pnlEditProductFill;
-            // 
-            // elipseDgvStaff
-            // 
-            this.elipseDgvStaff.BorderRadius = 20;
-            this.elipseDgvStaff.TargetControl = this.dgvStaff;
-            // 
             // colID
             // 
             this.colID.DataPropertyName = "ID";
@@ -1022,6 +991,38 @@
             this.colSalary.MinimumWidth = 120;
             this.colSalary.Name = "colSalary";
             this.colSalary.ReadOnly = true;
+            // 
+            // pnlGrid
+            // 
+            this.pnlGrid.BorderRadius = 30;
+            this.pnlGrid.Controls.Add(this.dgvStaff);
+            this.pnlGrid.Controls.Add(this.pnlEditProductFill);
+            this.pnlGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlGrid.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlGrid.Location = new System.Drawing.Point(0, 60);
+            this.pnlGrid.Name = "pnlGrid";
+            this.pnlGrid.Size = new System.Drawing.Size(1323, 976);
+            this.pnlGrid.TabIndex = 3;
+            this.pnlGrid.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlGrid_Paint);
+            // 
+            // timer
+            // 
+            this.timer.Tick += new System.EventHandler(this.timer_Tick_1);
+            // 
+            // elipsePnlEditProductTop
+            // 
+            this.elipsePnlEditProductTop.BorderRadius = 20;
+            this.elipsePnlEditProductTop.TargetControl = this.pnlEditProductTop;
+            // 
+            // elipsePnlEditProductFill
+            // 
+            this.elipsePnlEditProductFill.BorderRadius = 20;
+            this.elipsePnlEditProductFill.TargetControl = this.pnlEditProductFill;
+            // 
+            // elipseDgvStaff
+            // 
+            this.elipseDgvStaff.BorderRadius = 20;
+            this.elipseDgvStaff.TargetControl = this.dgvStaff;
             // 
             // ucStaff
             // 

@@ -242,7 +242,7 @@ namespace Management_Coffee_Shop
         }
 
         private void txtPrice_TextChanged(object sender, EventArgs e)
-        {
+      {
             SelectTxt(txtPrice);
         }
 
@@ -614,9 +614,20 @@ namespace Management_Coffee_Shop
             // Lấy dữ liệu từ giao diện
             string name = txtName.Text;
             string category = cbbCategory.SelectedItem.ToString();
-            if (!decimal.TryParse(txtPrice.Text, out decimal price))
+
+            // Chuẩn hóa và kiểm tra giá trị của txtPrice
+            string priceText = txtPrice.Text.Replace(",", ".").Trim(); // Thay dấu phẩy bằng dấu chấm và loại bỏ khoảng trắng
+            if (!decimal.TryParse(priceText, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out decimal price))
             {
-                MessageBox.Show("Giá phải là một số hợp lệ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Giá phải là một số hợp lệ (ví dụ: 1234.567)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Kiểm tra giới hạn của DECIMAL(7,3): tối đa 4 chữ số nguyên và 3 chữ số thập phân
+            string[] priceParts = price.ToString(System.Globalization.CultureInfo.InvariantCulture).Split('.');
+            if (priceParts[0].Length > 4 || (priceParts.Length > 1 && priceParts[1].Length > 3) || price < 0)
+            {
+                MessageBox.Show("Giá phải nằm trong phạm vi 0 đến 9999.999 (tối đa 4 chữ số nguyên và 3 chữ số thập phân)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
