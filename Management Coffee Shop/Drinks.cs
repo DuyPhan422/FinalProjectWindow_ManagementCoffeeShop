@@ -87,25 +87,6 @@ namespace Management_Coffee_Shop
                 }
             }
         }
-        public static DataTable get_Image_User(string id)
-        {
-            DataTable dt;
-            using (SqlConnection conn = Connection.GetSqlConnection())
-            {
-                string query = $"SELECT Image,Name FROM customerInformation WHERE ID=@ID";
-                conn.Open();
-                using (SqlCommand commnad = new SqlCommand(query, conn))
-                {
-                    commnad.Parameters.AddWithValue("@ID", id);
-                    using (SqlDataAdapter commnadAdapter = new SqlDataAdapter(commnad))
-                    {
-                        dt = new DataTable();
-                        commnadAdapter.Fill(dt);
-                    }
-                }
-            }
-            return dt;
-        }
         public static void update_User(string id,string name,string date,string address,string Email,string image)
         {
             using (SqlConnection conn = Connection.GetSqlConnection())
@@ -166,6 +147,22 @@ namespace Management_Coffee_Shop
                     command.ExecuteNonQuery();
                 }
             }
+        }
+        public static string Get_Name(string id)
+        {
+            string name = "";
+            using (SqlConnection connection = Connection.GetSqlConnection())
+            {
+                string query = $"SELECT Name FROM customerInformation WHERE ID=@ID ";
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@ID", id);
+                    object result=command.ExecuteScalar();
+                    if (result != null && result!=DBNull.Value) name = result.ToString();
+                }
+            }
+            return name;
         }
         public static DataTable loading_Categories()
         {

@@ -1,8 +1,14 @@
-﻿using System;
+﻿using Management_Coffee_Shop.User_Controls;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using static Management_Coffee_Shop.FormCustomer;
+using static Management_Coffee_Shop.FormCustomer.History_Shopping;
 
 namespace Management_Coffee_Shop
 {
@@ -12,6 +18,42 @@ namespace Management_Coffee_Shop
         public Customer(string id, string name, string address, string email, string date,string image) :base (id, name, address, email, date,image) 
         {
             
+        }
+        public string [] Get_History()
+        {
+            string path = @"..\..\history_Shopping.txt";
+            string[] lines = File.ReadAllLines(path);
+            return lines;
+        }
+        public void Set_History(Dictionary<string, ShoppingItem> list_shopping,string OrderId,string Sum)
+        {
+            string path = @"..\..\history_Shopping.txt";
+            History_Shopping history_Shopping = new History_Shopping()
+            {
+                OrderId = Regex.Replace(OrderId, @"[^\d]", ""),
+                UserId = base.ID,
+                list_shopping = list_shopping,
+                Status = "Online",
+                Sum = int.Parse(Regex.Replace(Sum, @"\D", "")),
+                OrderDate = DateTime.Now
+            };
+            string jsonLine = System.Text.Json.JsonSerializer.Serialize(history_Shopping);
+            File.AppendAllText(path, jsonLine + Environment.NewLine);
+        }
+        public void Order(int current_ID, Dictionary<string, ShoppingItem> list_shopping,string Sum)
+        {
+            string path = @"..\..\CustomerToEmployee.txt";
+            History_Shopping history_Shop = new History_Shopping()
+            {
+                OrderId = current_ID.ToString("D7"),
+                UserId = base.ID,
+                list_shopping = list_shopping,
+                Status = "Online",
+                Sum = int.Parse(Regex.Replace(Sum, @"\D", "")),
+                OrderDate = DateTime.Now
+            };
+            string jsonLine = System.Text.Json.JsonSerializer.Serialize(history_Shop);
+            File.AppendAllText(path, jsonLine + Environment.NewLine);
         }
         public Dictionary<string, (int, int, Boolean)> List_Products
         {

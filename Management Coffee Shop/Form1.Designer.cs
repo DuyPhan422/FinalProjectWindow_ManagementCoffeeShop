@@ -222,6 +222,7 @@
             this.txtPassWord.SelectedText = "";
             this.txtPassWord.Size = new System.Drawing.Size(258, 25);
             this.txtPassWord.TabIndex = 2;
+            this.txtPassWord.TextChanged += new System.EventHandler(this.txtPassWord_TextChanged);
             this.txtPassWord.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassWord_KeyPress);
             // 
             // txtUserName

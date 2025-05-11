@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -105,9 +106,9 @@ namespace Management_Coffee_Shop
             flag = false;
         }
 
-
         private void btnSender_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(indexStar.ToString());
             string path = @"..\..\history_Rate.txt";
             History newRating = new History
             {

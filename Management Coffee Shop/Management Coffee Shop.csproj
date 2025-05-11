@@ -213,6 +213,7 @@
       <DependentUpon>FormRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs" />
+    <Compile Include="LoginDB.cs" />
     <Compile Include="People.cs" />
     <Compile Include="ProductDb.cs" />
     <Compile Include="Rate.cs">

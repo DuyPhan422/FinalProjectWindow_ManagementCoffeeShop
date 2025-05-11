@@ -569,7 +569,9 @@ namespace Management_Coffee_Shop
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedTab = tabPage2;
+            if (tabControl1.SelectedTab == tabPage2) tabControl1.SelectedTab = tabPage1;
+            else tabControl1.SelectedTab = tabPage2;
+
         }
 
         // nút mũi tên bên trái của xử lý trang

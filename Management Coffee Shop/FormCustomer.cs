@@ -47,10 +47,9 @@ namespace Management_Coffee_Shop
         private int minute, hour, currentPage = 1, count = 0;
         private byte indexPage = 1, lengthPage = 2,homePage=1;
         private double distance, duration;
-        private string tt,categories,target_FilePath;
+        private string tt,categories;
         private static int current_ID = 0;
         private FormLogin FormLogin;
-        private List<Guna2Button> List_buttonPage;
         private List<Product> list_uCProdcuts;
         private System.Windows.Forms.Timer timer_pnlAddShoppingCart = new System.Windows.Forms.Timer();
         private System.Windows.Forms.Timer timer_homePage  = new System.Windows.Forms.Timer();
@@ -73,18 +72,9 @@ namespace Management_Coffee_Shop
             txtAddress_profile.Text = WrapTextEvery66Chars(customer.ID);
             txtEmail_profile.Text =customer.Email;
             txtDate_profile.Text = customer.Date;
-            DataTable dt=Drinks.get_Image_User(customer.ID);
-            if (dt.Rows[0]["Image"].ToString().Trim() == "")
-            {
-                ptbImage_Profile.Image = Image.FromFile(@"..\..\Management coffee shop_image\edited_image-removebg-preview.png");
-                btnAccount.Image = Image.FromFile(@"..\..\Management coffee shop_image\edited_image-removebg-preview.png");
-            }else
-            {
-                ptbImage_Profile.Image = Image.FromFile(dt.Rows[0]["Image"].ToString());
-                btnAccount.Image = Image.FromFile(dt.Rows[0]["Image"].ToString());
-            }
+            ptbImage_Profile.Image = Image.FromFile(customer.Image);
+            btnAccount.Image = Image.FromFile(customer.Image);
             list_uCProdcuts = new List<Product> { uC_product1, uC_product2, uC_product3, uC_product4, uC_product5, uC_product6, uC_product7, uC_product8, uC_product9, uC_product10, uC_product11, uC_product12, uC_product13, uC_product14, uC_product15, uC_product16 };
-            List_buttonPage = new List<Guna2Button> { btnFirst_page, btnSecond_page, btnThird_page };
             (distance, duration) = (Drinks.distance_time(customer.Address));
             pnlBill.Hide();
             pnlPayment.Hide();
@@ -97,8 +87,16 @@ namespace Management_Coffee_Shop
             create_Page_Navigation();
             start_timer();
             load_Account();
+            get_CurrentID();
             check_order();
             load_bestseller();
+        }
+        private void get_CurrentID()
+        {
+            string path = @"..\..\history_Shopping.txt";
+            string lastline = File.ReadLines(path).Last();
+            History_Shopping history_Shopping = System.Text.Json.JsonSerializer.Deserialize<History_Shopping>(lastline);
+            current_ID = int.Parse(history_Shopping.OrderId) + 1;
         }
         private void check_order()
         {
@@ -111,7 +109,7 @@ namespace Management_Coffee_Shop
                 if (history.UserId == customer.ID)
                 {
                     count=history.list_shopping.Count;
-                    int index = 0;
+                    List<(string, int)> number_shopping = new List<(string, int)>();
                     foreach (var kvp in history.list_shopping)
                     {
                         DataTable dt=Drinks.get_history(kvp.Key);
@@ -121,10 +119,10 @@ namespace Management_Coffee_Shop
                         transport.LBLPrice = string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", (kvp.Value.Price/kvp.Value.Quantity));
                         transport.LBLQTV = kvp.Value.Quantity.ToString();
                         transport.LBLAmount = string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", (kvp.Value.Price));
-                        transport.PTBImage = dt.Rows[index]["Source_Image"].ToString();
+                        transport.PTBImage = dt.Rows[0]["Source_Image"].ToString();
                         flpShoppingCart.Controls.Add(transport);
                         count--;
-                        index++;
+                        number_shopping.Add((transport.ID, Convert.ToInt16(transport.LBLQTV)));
                     }
                     if (count == 0)
                     {
@@ -143,8 +141,10 @@ namespace Management_Coffee_Shop
                         lblMoney_SubTotal.Text = "0đ";
                         lblMoney_Sum.Text = "0đ";
                     }
+                    current_ID = int.Parse(history.OrderId);
+                    Drinks.update_Drinks(number_shopping);
                     tabControl1.SelectedTab = tabPage6;
-                    lblOrderCode.Text = "Order #" + (++current_ID).ToString().PadLeft(7, '0');
+                    lblOrderCode.Text = "Order #" + current_ID.ToString().PadLeft(7, '0');
                     lblStatus.Text = "Status: Shipping";
                     btnOrderNow.Click -= btnOrderNow_Click;
                     btnOrderNow.Click += announcement;
@@ -157,6 +157,7 @@ namespace Management_Coffee_Shop
                     tabControl1.SelectedTab = tabPage6;
                     timer2.Start();
                     pnlhomePage.Hide();
+                    current_ID++;
                     break;
                 }
             }
@@ -406,10 +407,9 @@ namespace Management_Coffee_Shop
                     if (history.ProductId == clickedButton.ID)
                     {
                         ucComment ucComment = new ucComment();
-                        DataTable dt=Drinks.get_Image_User(customer.ID);
-                        ucComment.PTBImage = dt.Rows[0]["Image"].ToString();
-                        //if (ID != this.ID) ucComment.LBLName = dt.Rows[0]["Name"].ToString();
-                        ucComment.LBLName = "Bạn";
+                        ucComment.PTBImage = customer.Image;
+                        if (customer.ID != history.UserId) ucComment.LBLName = Drinks.Get_Name(history.UserId);
+                        else ucComment.LBLName = "Bạn";
                         ucComment.set_Rate(history.Rank);
                         ucComment.TXTComment=history.Comment;
                         ucComment.LBLTime = $"{history.Time:dd/MM/yyyy HH:mm}";
@@ -459,12 +459,27 @@ namespace Management_Coffee_Shop
                         count--;
                     }
                 }
+                string path= @"..\..\CustomerToEmployee.txt";
+                Dictionary<string, ShoppingItem> list_shopping = new Dictionary<string, ShoppingItem>();
+                foreach (Transport transport in flpShoppingCart.Controls)
+                {
+                    int number = int.Parse(Regex.Replace(transport.LBLAmount, @"\D", ""));
+                    list_shopping[transport.ID] = new ShoppingItem
+                    {
+                        Quantity = Convert.ToByte(transport.LBLQTV),
+                        Price = number
+                    };
+                }
+                customer.Order(current_ID, list_shopping, lblMoney_Sum.Text);
                 if (count == 0)
                 {
                     pnlBill.Hide();
                     pnlPayment.Hide();
                     pnlInformation.Hide();
                     pnlEmpty.Show();
+                    lblMoney_payment.Text = "0đ";
+                    lblMoney_SubTotal.Text = "0đ";
+                    lblMoney_Sum.Text = "0đ";
                 }
                 else
                 {
@@ -476,37 +491,7 @@ namespace Management_Coffee_Shop
                     lblMoney_SubTotal.Text = "0đ";
                     lblMoney_Sum.Text = "0đ";
                 }
-                string path = @"..\..\history_Shopping.txt";
-                string lastline=File.ReadLines(path).Last();
-                History_Shopping history_Shopping = System.Text.Json.JsonSerializer.Deserialize<History_Shopping>(lastline);
-                current_ID=int.Parse(history_Shopping.OrderId)+1;
-                
-
-                path= @"..\..\CustomerToEmployee.txt";
-                Dictionary<string, ShoppingItem> list_shopping = new Dictionary<string, ShoppingItem>();
-                List<(string, int)> number_shopping = new List<(string, int)>();
-                foreach (Transport transport in flpShoppingCart.Controls)
-                {
-                    int number = int.Parse(Regex.Replace(transport.LBLAmount, @"\D", ""));
-                    list_shopping[transport.ID] = new ShoppingItem
-                    {
-                        Quantity = Convert.ToByte(transport.LBLQTV),
-                        Price = number
-                    };
-                    number_shopping.Add((transport.ID, Convert.ToInt16(transport.LBLQTV)));
-                }
-                Drinks.update_Drinks(number_shopping);
-                History_Shopping history_Shop = new History_Shopping()
-                {
-                    OrderId = current_ID.ToString(),
-                    UserId = customer.ID,
-                    list_shopping = list_shopping,
-                    Status = "Online",
-                    Sum = int.Parse(Regex.Replace(lblMoney_Sum.Text, @"\D", "")),
-                    OrderDate = DateTime.Now
-                };
-                string jsonLine = System.Text.Json.JsonSerializer.Serialize(history_Shop);
-                File.AppendAllText(path, jsonLine + Environment.NewLine);
+                MessageBox.Show("đơn hàng của bạn đang được xử lý");
             } else
             {
                 MessageBox.Show("Bạn chưa chọn món nào để thực hiện thanh toán", "Thông báo");
@@ -702,7 +687,7 @@ namespace Management_Coffee_Shop
             {
                 if (payment.BTNChoose == null) 
                 {
-                    payment.BTNChoose = @"images\check.png";
+                    payment.BTNChoose = @"..\..\Management coffee shop_image\check.png";
                     list_products[payment.ID] = (list_products[payment.ID].Item1 , list_products[payment.ID].Item2, true);
                     update_Payment();
 
@@ -743,8 +728,7 @@ namespace Management_Coffee_Shop
         private void load_history()
         {
             bool show_pnlEmpty_History = true;
-            string path = @"..\..\history_Shopping.txt";
-            string[] lines= File.ReadAllLines(path);
+            string[] lines= customer.Get_History();
             foreach (var line in lines)
             {
                 if (!string.IsNullOrWhiteSpace(line))
@@ -834,9 +818,11 @@ namespace Management_Coffee_Shop
         }
         private void load_Account()
         {
-            for (int i = 0; i < FormLogin.userId_List.Count; i++)
+            List<string> userName_List = FormLogin.UserName_List;
+            List<string> userId_List= FormLogin.UserId_List;
+            for (int i = 0; i < userId_List.Count; i++)
             {
-                if (FormLogin.userId_List[i] != customer.ID)
+                if (userId_List[i] != customer.ID)
                 {
                     Guna2Button button = new Guna2Button();
                     button.Size = new Size(197, 34);
@@ -844,12 +830,12 @@ namespace Management_Coffee_Shop
                     button.BackColor= Color.Transparent;
                     button.ForeColor = Color.Black;
                     button.Font= new Font("Segoe UI", 12f);
-                    button.Text = FormLogin.userName_List[i];
+                    button.Text = userName_List[i];
                     button.Image = Image.FromFile(@"..\..\Management coffee shop_image\black-and-white-stockportable-network-account-icon-11553436383dwuayhjyvo-removebg-preview.png");
                     button.ImageSize = new Size(25, 25); 
                     button.ImageAlign = HorizontalAlignment.Left; 
                     button.TextAlign = HorizontalAlignment.Left;
-                    button.Tag = FormLogin.userId_List[i];
+                    button.Tag =userId_List[i];
                     button.Click += btnChooseAccount_click;
                     flpAnotherAccount.Controls.Add(button);
                 }
@@ -926,8 +912,7 @@ namespace Management_Coffee_Shop
             DialogResult result=MessageBox.Show("bạn có chắc muốn lưu không","Lưu",MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-                if (target_FilePath == "") target_FilePath = @"..\..\Management coffee shop_image\edited_image-removebg-preview.png";
-                Drinks.update_User(customer.ID,txtName_profile.Text,txtDate_profile.Text,txtAddress_profile.Text,txtEmail_profile.Text,target_FilePath);
+                Drinks.update_User(customer.ID,txtName_profile.Text,txtDate_profile.Text,txtAddress_profile.Text,txtEmail_profile.Text,customer.Image);
                 customer.Name = txtName_profile.Text;
                 customer.Date = txtDate_profile.Text;
                 customer.Address = txtAddress_profile.Text;
@@ -973,9 +958,9 @@ namespace Management_Coffee_Shop
                 string selectedFilePath = openFileDialog.FileName;
                 string file=Path.GetFileName(selectedFilePath);
                 string target_Folder = @"..\..\Management coffee shop_image\Image_User";
-                target_FilePath = Path.Combine(target_Folder, file);
-                File.Copy(selectedFilePath, target_FilePath, true);
-                ptbImage_Profile.Image=Image.FromFile(target_FilePath);
+                customer.Image = Path.Combine(target_Folder, file);
+                File.Copy(selectedFilePath, customer.Image, true);
+                ptbImage_Profile.Image=Image.FromFile(customer.Image);
             }
         }
 
@@ -1009,20 +994,8 @@ namespace Management_Coffee_Shop
                         number_shopping.Add((transport.ID, Convert.ToInt16(transport.LBLQTV)));
                     }
                     Drinks.update_Drinks(number_shopping);
-                    string path = @"..\..\history_Shopping.txt";
-                    History_Shopping history_Shopping = new History_Shopping()
-                    {
-                        OrderId = Regex.Replace(lblOrderCode.Text, @"[^\d]", ""),
-                        UserId = this.customer.ID,
-                        list_shopping = list_shopping,
-                        Status = "Online",
-                        Sum = int.Parse(Regex.Replace(lblSum_Transport.Text, @"\D", "")),
-                        OrderDate = DateTime.Now
-                    };
-
+                    customer.Set_History(list_shopping, lblOrderCode.Text, lblSum_Transport.Text);
                     MessageBox.Show("Cảm ơn bạn đã mua hàng");
-                    string jsonLine = System.Text.Json.JsonSerializer.Serialize(history_Shopping);
-                    File.AppendAllText(path, jsonLine + Environment.NewLine);
                 }
                 catch (Exception ex)
                 {
@@ -1046,6 +1019,12 @@ namespace Management_Coffee_Shop
         // xử lý các sự kiện của các nút điều hướng trang
         private void change_Color_page(int turn)
         {
+            btnFirst_page.FillColor=Color.Transparent;
+            btnFirst_page.ForeColor = Color.FromArgb(211, 155, 81);
+            btnSecond_page.FillColor=Color.Transparent;
+            btnSecond_page.ForeColor = Color.FromArgb(211, 155, 81);
+            btnThird_page.FillColor=Color.Transparent;
+            btnThird_page.ForeColor= Color.FromArgb(211, 155, 81);
             if (turn == 1)
             {
                 btnFirst_page.FillColor = Color.FromArgb(211, 155, 81);
@@ -1060,11 +1039,6 @@ namespace Management_Coffee_Shop
             {
                 btnThird_page.FillColor = Color.FromArgb(211, 155, 81);
                 btnThird_page.ForeColor = Color.White;
-            }
-            if (turn != currentPage)
-            {
-                List_buttonPage[currentPage - 1].FillColor = Color.Transparent;
-                List_buttonPage[currentPage - 1].ForeColor = Color.FromArgb(211, 155, 81);
             }
         }
         private void update_page(int indexPage)

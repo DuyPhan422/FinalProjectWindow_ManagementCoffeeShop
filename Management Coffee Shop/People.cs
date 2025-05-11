@@ -16,7 +16,8 @@ namespace Management_Coffee_Shop
             this.address = address;
             this.email = email;
             this.date = Date;
-            this.image = Image;
+            if (string.IsNullOrEmpty(image))this.image = @"..\..\Management coffee shop_image\edited_image-removebg-preview.png";
+            else this.image = image;
         }
         public string ID
         {

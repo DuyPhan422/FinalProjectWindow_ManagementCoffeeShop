@@ -5,19 +5,27 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Management_Coffee_Shop.Rate;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace Management_Coffee_Shop
 {
     public partial class FormLogin : Form
-    {
-        public List<string> userName_List=new List<string>();
-        public List<string> userId_List=new List<string>();
-        private string otp,id;
+    { 
+        private List<string> userName_List=new List<string>();
+        private List<string> userId_List=new List<string>();
+        private System.Windows.Forms.Timer Lock_Tick = new Timer();
+        private byte second,level;
+        private string otp,ID;
+        private bool flag;
+        private TimeSpan timeLeft;
         public FormLogin()
         {
             InitializeComponent();
@@ -42,7 +50,7 @@ namespace Management_Coffee_Shop
             this.userId_List = userId_List;
             if (success)
             {
-                userName_List=get_UserName(userId_List);
+                userName_List=LoginDB.get_UserName(userId_List);
                 for (int i = 0; i < userId_List.Count; i++)
                 {
                     Guna2Button button = new Guna2Button();
@@ -72,50 +80,88 @@ namespace Management_Coffee_Shop
                 bool success=Login.check_Token(clicked_Button.Tag.ToString());
                 if (success)
                 {
-                    get_inforID(clicked_Button.Tag.ToString(), true);
+                    login_Customer(clicked_Button.Tag.ToString(), true);
                 }
             }
         }
-        private List<string> get_UserName(List<string> userId_List)
+        
+        private void login_Customer(string Id, bool check)
         {
-            List<string> userName_List = new List<string>();
-            using (SqlConnection connection = Connection.GetSqlConnection())
-            {
-                connection.Open();
-                string query = "SELECT UserName FROM account WHERE ID=@ID";
-                foreach (string Id in userId_List)
-                {
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@ID", Id);
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            if (reader.Read()) userName_List.Add(reader.GetString(0));
-                        }
-                    }
-                }
-            }
-            return userName_List;
+            DataTable dt=LoginDB.get_InforCustomer(Id);
+            FormCustomer formCustomer = new FormCustomer(Id, dt.Rows[0]["Name"].ToString(), dt.Rows[0]["Address"].ToString(), dt.Rows[0]["Email"].ToString(), dt.Rows[0]["Date"].ToString(), dt.Rows[0]["Image"].ToString(), this, check);
+            formCustomer.Show();
+            this.Hide();
         }
-        private void get_inforID(string Id,bool check)
+        private void Check_Lock(byte passwordFail,string username)
         {
-            using (SqlConnection connection = Connection.GetSqlConnection())
+            if (passwordFail%4 == 3)
             {
-                connection.Open();
-                string query = "SELECT Name,Address,Email,Date,Image FROM customerInformation JOIN account ON account.ID=customerInformation.ID WHERE customerInformation.ID=@ID";
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@ID", Id);
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            FormCustomer formCustomer = new FormCustomer(Id, reader["Name"].ToString(), reader["Address"].ToString(), reader["Email"].ToString(), reader["Date"].ToString(), reader["Image"].ToString(), this ,check);
-                            formCustomer.Show();
-                            this.Hide();
-                        }
-                    }
-                }
+                //DateTime parsedTime = DateTime.ParseExact(Lock, "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+                //DateTime now = DateTime.Now;
+                //TimeSpan diff = now - parsedTime;
+                Level_Lock(passwordFail,username);
+                
+            }
+            
+        }
+        private void Level_Lock(byte passwordFail,string username)
+        {
+            level = (byte)(passwordFail / 4);
+            int lockTimeSeconds=0;
+            if (level == 0)
+            {
+                // khóa 1 phút
+                DateTime unLockTime = DateTime.Now.AddMinutes(1);
+                string formatted_unLockTime = unLockTime.ToString("dd/MM/yyyy HH:mm:ss");
+                LoginDB.Locking(username, formatted_unLockTime);
+                lockTimeSeconds = 60;
+            }
+            else if (level == 1)
+            {
+                DateTime unLockTime = DateTime.Now.AddMinutes(5);
+                string formatted_unLockTime = unLockTime.ToString("dd/MM/yyyy HH:mm:ss");
+                LoginDB.Locking(username, formatted_unLockTime);
+                lockTimeSeconds = 300;
+            }
+            else if (level == 2)
+            {
+                DateTime unLockTime = DateTime.Now.AddMinutes(30);
+                string formatted_unLockTime = unLockTime.ToString("dd/MM/yyyy HH:mm:ss");
+                LoginDB.Locking(username, formatted_unLockTime);
+                lockTimeSeconds = 1800;
+            }
+            else if (level == 3)
+            {
+                DateTime unLockTime = DateTime.Now.AddHours(1);
+                string formatted_unLockTime = unLockTime.ToString("dd/MM/yyyy HH:mm:ss");
+                LoginDB.Locking(username, formatted_unLockTime);
+                lockTimeSeconds = 60*60;
+            }
+            else
+            {
+                DateTime unLockTime = DateTime.Now.AddHours(8);
+                string formatted_unLockTime = unLockTime.ToString("dd/MM/yyyy HH:mm:ss");
+                LoginDB.Locking(username, formatted_unLockTime);
+                lockTimeSeconds = 60 * 60*8;
+            }
+            timeLeft = TimeSpan.FromSeconds(lockTimeSeconds);
+            Lock_Tick.Tick -= Lock_Ticked;
+            Lock_Tick.Tick += Lock_Ticked;
+            Lock_Tick.Interval = 1000;
+            Lock_Tick.Start();
+        }
+        private void Lock_Ticked(object sender, EventArgs e)
+        {
+            //DateTime parsedTime = DateTime.ParseExact(timeLeft, "dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture);
+
+            if (timeLeft.TotalSeconds > 0)
+            {
+                timeLeft = timeLeft.Subtract(TimeSpan.FromSeconds(1));
+                lblOutput.Text = $"Thời gian còn lại {timeLeft.ToString(@"hh\:mm\:ss")}";
+            }
+            else
+            {
+                Lock_Tick.Stop();
             }
         }
         private void label1_Click(object sender, EventArgs e)
@@ -150,61 +196,80 @@ namespace Management_Coffee_Shop
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = txtUserName.Text;
-            string password = txtPassWord.Text;
-            using (SqlConnection connection = Connection.GetSqlConnection())
+            (string ID,string Email,string Password,string Lock,byte PasswordFail,string LastLogin,bool success)=LoginDB.get_Infor(txtUserName.Text);
+            this.ID = ID;
+            if (success)
             {
-                string email = "";
-                connection.Open();
-                string query = "SELECT ID,Email FROM account WHERE UserName=@UserName AND PassWord=@PassWord";
-                using (SqlCommand cmd = new SqlCommand(query, connection))
+                bool flag_lock = false;
+                if (!string.IsNullOrEmpty(Lock))
                 {
-                    cmd.Parameters.AddWithValue("@UserName", username);
-                    cmd.Parameters.AddWithValue("@PassWord", password);
-                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    DateTime lockingTime = DateTime.ParseExact(Lock, "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+                    if (DateTime.Now <= lockingTime)
                     {
-                        if (reader.Read())
-                        {
-                            id = reader["ID"].ToString();
-                            email = reader["Email"].ToString();
-                        }
+                        lblOutput.Text = "Tài khoản đang bị khóa";
+                        timeLeft = lockingTime - DateTime.Now;
+                        Lock_Tick.Tick -= Lock_Ticked;
+                        Lock_Tick.Tick += Lock_Ticked;
+                        Lock_Tick.Interval = 1000;
+                        flag_lock = true;
+                        Lock_Tick.Start();
                     }
                 }
-                if (id[0] == 'C')
+                if (!flag_lock)
                 {
-                    bool check = false;
-                    if (userName_List.Count > 0)
+                    if (txtPassWord.Text.Trim() != Password.Trim())
                     {
-                        foreach (string us in userName_List)
+                        lblOutput.Text = "Sai thông tin đăng nhập hoặc mật khẩu";
+                        txtPassWord.Clear();
+                        flag = true;
+                        PasswordFail += 1;
+                        LoginDB.update_PassWordFail(txtUserName.Text);
+                        Check_Lock(PasswordFail, txtUserName.Text);
+                    }
+                    else if (ID[0] == 'C')
+                    {
+                        bool check = false;
+                        if (userName_List.Count > 0)
                         {
-                            if (us.Trim() == username.Trim())
+                            foreach (string us in userName_List)
                             {
-                                check = true;
-                                break;
+                                if (us.Trim() == txtUserName.Text.Trim())
+                                {
+                                    check = true;
+                                    break;
+                                }
                             }
                         }
+                        if (check) login_Customer(ID, true);
+                        else login_Customer(ID, false);
                     }
-                    if (check) get_inforID(id, true);
-                    else get_inforID(id, false);
-                } else if (id[0] == 'E')
-                {
-                    guna2TabControl1.SelectedTab = tabPage3;
-                    Login login=new Login(); 
-                    otp=login.send_OTP(email, "Mã OTP của bạn là: ","Đăng Nhập");
-                }else
-                {
-                    guna2TabControl1.SelectedTab = tabPage3;
-                    Login login = new Login();
-                    otp = login.send_OTP(email, "Mã OTP của bạn là: ", "Đăng Nhập");
-                   
-                }
+                    else if (ID[0] == 'E')
+                    {
+                        guna2TabControl1.SelectedTab = tabPage3;
+                        Login login = new Login();
+                        otp = login.send_OTP(Email, "Mã OTP của bạn là: ", "Đăng Nhập");
+                    }
+                    else
+                    {
+                        guna2TabControl1.SelectedTab = tabPage3;
+                        Login login = new Login();
+                        otp = login.send_OTP(Email, "Mã OTP của bạn là: ", "Đăng Nhập");
+
+                    }
+                } 
+            }else
+            {
+                lblOutput.Text = "Sai thông tin đăng nhập hoặc mật khẩu";
+                txtPassWord.Clear();
+                flag = true;
             }
+        
         }
         private void btnLogin_OTP_Click(object sender, EventArgs e)
         {
             if (otp == txtOtp.Text)
             {
-                if (id[0] == 'E')
+                if (this.ID[0] == 'E')
                 {
                     Employee employee = new Employee();
                     employee.Show();
@@ -217,8 +282,23 @@ namespace Management_Coffee_Shop
             {
                 guna2TabControl1.SelectedTab = tabPage1;
                 otp = "";
-                id = "";
+                ID = "";
+                txtUserName.Clear();
+                txtPassWord.Clear();
             }
+        }
+        private void txtPassWord_TextChanged(object sender, EventArgs e)
+        {
+            if (flag)
+            {
+                flag = false;
+                lblOutput.Text = "";
+            }
+        }
+
+        private void btnLoginWithAnotherAccount_Click(object sender, EventArgs e)
+        {
+            guna2TabControl1.SelectedTab = tabPage1;
         }
         public string UserName
         {
@@ -237,10 +317,15 @@ namespace Management_Coffee_Shop
                 btnLogin_Click(sender,e);
             }
         }
-
-        private void btnLoginWithAnotherAccount_Click(object sender, EventArgs e)
+        public List<string> UserName_List
         {
-            guna2TabControl1.SelectedTab = tabPage1;
+            get { return userName_List; }
+            set { userName_List = value; }
+        }
+        public List<string> UserId_List
+        {
+            get { return userId_List; }
+            set { userId_List = value; }
         }
     }
 }
