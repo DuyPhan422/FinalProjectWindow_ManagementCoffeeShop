@@ -3,6 +3,7 @@ using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using Twilio.TwiML.Voice;
 
 namespace Management_Coffee_Shop
 {
@@ -55,8 +56,8 @@ namespace Management_Coffee_Shop
                         command.Parameters.Add("@Name", SqlDbType.NVarChar).Value = name;
                         command.Parameters.Add("@Ingredient", SqlDbType.NVarChar).Value = (object)ingredient ?? DBNull.Value;
                         command.Parameters.Add("@Category", SqlDbType.NVarChar).Value = category;
-                        command.Parameters.Add("@Price", SqlDbType.Decimal).Value = price;
-                        command.Parameters.Add("@Stock", SqlDbType.Int).Value = stock;
+                        command.Parameters.Add("@Price", SqlDbType.Decimal).Value = Convert.ToDecimal(price); // Đảm bảo giá trị là decimal
+                        command.Parameters.Add("@Stock", SqlDbType.Int).Value = Convert.ToInt16(stock);
                         command.Parameters.Add("@CustomerRating", SqlDbType.NVarChar).Value = (object)customerRating ?? DBNull.Value;
                         command.Parameters.Add("@ImagePath", SqlDbType.NVarChar).Value = (object)imagePath ?? DBNull.Value;
                         command.ExecuteNonQuery();
@@ -76,27 +77,31 @@ namespace Management_Coffee_Shop
                 using (var connection = GetConnection())
                 {
                     connection.Open();
+                    //SELECT COUNT(*) FROM[Management Coffee Shop].[dbo].[sourceDrinks] " +
+                    //               "WHERE Name = @Name AND Categories = @Category AND Price = @Price AND Sales = @Stock " +
+                    //               "AND ISNULL(Describe, '') = ISNULL(@Ingredient, '') AND ISNULL(Rate, '') = ISNULL(@CustomerRating, '') " +
+                    //               "AND ISNULL(Source_Image, '') = ISNULL(@ImagePath, '')
                     string query = "SELECT COUNT(*) FROM [Management Coffee Shop].[dbo].[sourceDrinks] " +
-                                   "WHERE Name = @Name AND Categories = @Category AND Price = @Price AND Sales = @Stock " +
+                                   "WHERE Name = @Name AND Categories = @Category" +
                                    "AND ISNULL(Describe, '') = ISNULL(@Ingredient, '') AND ISNULL(Rate, '') = ISNULL(@CustomerRating, '') " +
                                    "AND ISNULL(Source_Image, '') = ISNULL(@ImagePath, '')";
                     using (var command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@Name", name);
                         command.Parameters.AddWithValue("@Category", category);
-                        command.Parameters.AddWithValue("@Price", price);
-                        command.Parameters.AddWithValue("@Stock", stock);
+                        //command.Parameters.AddWithValue("@Price", Convert.ToDecimal(price));
+                        //command.Parameters.AddWithValue("@Stock", Convert.ToInt32(stock));
                         command.Parameters.AddWithValue("@Ingredient", (object)ingredient ?? DBNull.Value);
                         command.Parameters.AddWithValue("@CustomerRating", (object)customerRating ?? DBNull.Value);
                         command.Parameters.AddWithValue("@ImagePath", (object)imagePath ?? DBNull.Value);
-                        int count = (int)command.ExecuteScalar();
+                        int count  = (int)command.ExecuteScalar();
                         return count > 0;
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Lỗi khi kiểm tra sản phẩm: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Lỗi khi kiểm tra sản phẩm: {ex.Message}, ", "Lỗi" , MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }
