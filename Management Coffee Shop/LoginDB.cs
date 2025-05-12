@@ -110,5 +110,23 @@ namespace Management_Coffee_Shop
             }
             return userName_List;
         }
+        public static DataTable get_InforEmployee(string Id)
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection connection = Connection.GetSqlConnection())
+            {
+                connection.Open();
+                string query = "SELECT LastName,Address,Email,BirthDate,Source_Image FROM StaffManager WHERE ID = @ID";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@ID", Id);
+                    using (SqlDataAdapter dataAdapter = new SqlDataAdapter(command))
+                    {
+                        dataAdapter.Fill(dt);
+                    }
+                }
+            }
+            return dt;
+        }
     }
 }

@@ -917,6 +917,7 @@ namespace Management_Coffee_Shop
                 customer.Date = txtDate_profile.Text;
                 customer.Address = txtAddress_profile.Text;
                 customer.Email = txtEmail_profile.Text;
+
                 btnCancel.PerformClick();
             }
         }

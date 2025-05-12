@@ -105,7 +105,7 @@ namespace Management_Coffee_Shop
             this.btnChangePassword = new Guna.UI2.WinForms.Guna2Button();
             this.btnOrder_Account = new Guna.UI2.WinForms.Guna2Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 =new Management_Coffee_Shop.CustomTabPage();
+            this.tabPage1 = new Management_Coffee_Shop.CustomTabPage();
             this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnShopNow = new Guna.UI2.WinForms.Guna2Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -576,9 +576,9 @@ namespace Management_Coffee_Shop
             this.btnHistory.ForeColor = System.Drawing.Color.Black;
             this.btnHistory.Image = ((System.Drawing.Image)(resources.GetObject("btnHistory.Image")));
             this.btnHistory.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnHistory.Location = new System.Drawing.Point(3, 172);
+            this.btnHistory.Location = new System.Drawing.Point(3, 162);
             this.btnHistory.Name = "btnHistory";
-            this.btnHistory.Size = new System.Drawing.Size(207, 45);
+            this.btnHistory.Size = new System.Drawing.Size(207, 55);
             this.btnHistory.TabIndex = 0;
             this.btnHistory.Text = "HISTORY";
             this.btnHistory.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -2388,10 +2388,10 @@ namespace Management_Coffee_Shop
             // 
             this.uC_product1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product1.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "";
+    "đ";
             this.uC_product1.BTNReviews_Drinks = " Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
     "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
-    "Reviews Reviews Reviews Reviews";
+    "Reviews Reviews Reviews Reviews Reviews";
             this.uC_product1.Categories = null;
             this.uC_product1.ID = null;
             this.uC_product1.LBLDescribe_Drinks = "";
@@ -2417,10 +2417,10 @@ namespace Management_Coffee_Shop
             // 
             this.uC_product2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product2.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "";
+    "đ";
             this.uC_product2.BTNReviews_Drinks = " Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
     "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
-    "Reviews Reviews Reviews Reviews";
+    "Reviews Reviews Reviews Reviews Reviews";
             this.uC_product2.Categories = null;
             this.uC_product2.ID = null;
             this.uC_product2.LBLDescribe_Drinks = "";
@@ -2446,10 +2446,10 @@ namespace Management_Coffee_Shop
             // 
             this.uC_product3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product3.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "";
+    "đ";
             this.uC_product3.BTNReviews_Drinks = " Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
     "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
-    "Reviews Reviews Reviews Reviews";
+    "Reviews Reviews Reviews Reviews Reviews";
             this.uC_product3.Categories = null;
             this.uC_product3.ID = null;
             this.uC_product3.LBLDescribe_Drinks = "";
@@ -2475,10 +2475,10 @@ namespace Management_Coffee_Shop
             // 
             this.uC_product4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product4.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "";
+    "đ";
             this.uC_product4.BTNReviews_Drinks = " Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
     "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
-    "Reviews Reviews Reviews Reviews";
+    "Reviews Reviews Reviews Reviews Reviews";
             this.uC_product4.Categories = null;
             this.uC_product4.ID = null;
             this.uC_product4.LBLDescribe_Drinks = "";
@@ -2504,10 +2504,10 @@ namespace Management_Coffee_Shop
             // 
             this.uC_product5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product5.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "";
+    "đ";
             this.uC_product5.BTNReviews_Drinks = " Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
     "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
-    "Reviews Reviews Reviews Reviews";
+    "Reviews Reviews Reviews Reviews Reviews";
             this.uC_product5.Categories = null;
             this.uC_product5.ID = null;
             this.uC_product5.LBLDescribe_Drinks = "";
@@ -2533,10 +2533,10 @@ namespace Management_Coffee_Shop
             // 
             this.uC_product6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product6.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "";
+    "đ";
             this.uC_product6.BTNReviews_Drinks = " Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
     "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
-    "Reviews Reviews Reviews Reviews";
+    "Reviews Reviews Reviews Reviews Reviews";
             this.uC_product6.Categories = null;
             this.uC_product6.ID = null;
             this.uC_product6.LBLDescribe_Drinks = "";
@@ -2562,10 +2562,10 @@ namespace Management_Coffee_Shop
             // 
             this.uC_product7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product7.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "";
+    "đ";
             this.uC_product7.BTNReviews_Drinks = " Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
     "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
-    "Reviews Reviews Reviews Reviews";
+    "Reviews Reviews Reviews Reviews Reviews";
             this.uC_product7.Categories = null;
             this.uC_product7.ID = null;
             this.uC_product7.LBLDescribe_Drinks = "";
@@ -2591,10 +2591,10 @@ namespace Management_Coffee_Shop
             // 
             this.uC_product8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product8.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "";
+    "đ";
             this.uC_product8.BTNReviews_Drinks = " Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
     "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
-    "Reviews Reviews Reviews Reviews";
+    "Reviews Reviews Reviews Reviews Reviews";
             this.uC_product8.Categories = null;
             this.uC_product8.ID = null;
             this.uC_product8.LBLDescribe_Drinks = "";
@@ -2620,10 +2620,10 @@ namespace Management_Coffee_Shop
             // 
             this.uC_product9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product9.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "";
+    "đ";
             this.uC_product9.BTNReviews_Drinks = " Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
     "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
-    "Reviews Reviews Reviews Reviews";
+    "Reviews Reviews Reviews Reviews Reviews";
             this.uC_product9.Categories = null;
             this.uC_product9.ID = null;
             this.uC_product9.LBLDescribe_Drinks = "";
@@ -2649,10 +2649,10 @@ namespace Management_Coffee_Shop
             // 
             this.uC_product10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product10.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "";
+    "đ";
             this.uC_product10.BTNReviews_Drinks = " Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
     "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
-    "Reviews Reviews Reviews Reviews";
+    "Reviews Reviews Reviews Reviews Reviews";
             this.uC_product10.Categories = null;
             this.uC_product10.ID = null;
             this.uC_product10.LBLDescribe_Drinks = "";
@@ -2678,10 +2678,10 @@ namespace Management_Coffee_Shop
             // 
             this.uC_product11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product11.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "";
+    "đ";
             this.uC_product11.BTNReviews_Drinks = " Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
     "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
-    "Reviews Reviews Reviews Reviews";
+    "Reviews Reviews Reviews Reviews Reviews";
             this.uC_product11.Categories = null;
             this.uC_product11.ID = null;
             this.uC_product11.LBLDescribe_Drinks = "";
@@ -2707,10 +2707,10 @@ namespace Management_Coffee_Shop
             // 
             this.uC_product12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product12.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "";
+    "đ";
             this.uC_product12.BTNReviews_Drinks = " Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
     "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
-    "Reviews Reviews Reviews Reviews";
+    "Reviews Reviews Reviews Reviews Reviews";
             this.uC_product12.Categories = null;
             this.uC_product12.ID = null;
             this.uC_product12.LBLDescribe_Drinks = "";
@@ -2736,10 +2736,10 @@ namespace Management_Coffee_Shop
             // 
             this.uC_product13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product13.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "";
+    "đ";
             this.uC_product13.BTNReviews_Drinks = " Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
     "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
-    "Reviews Reviews Reviews Reviews";
+    "Reviews Reviews Reviews Reviews Reviews";
             this.uC_product13.Categories = null;
             this.uC_product13.ID = null;
             this.uC_product13.LBLDescribe_Drinks = "";
@@ -2765,10 +2765,10 @@ namespace Management_Coffee_Shop
             // 
             this.uC_product14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product14.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "";
+    "đ";
             this.uC_product14.BTNReviews_Drinks = " Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
     "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
-    "Reviews Reviews Reviews Reviews";
+    "Reviews Reviews Reviews Reviews Reviews";
             this.uC_product14.Categories = null;
             this.uC_product14.ID = null;
             this.uC_product14.LBLDescribe_Drinks = "";
@@ -2794,10 +2794,10 @@ namespace Management_Coffee_Shop
             // 
             this.uC_product15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product15.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "";
+    "đ";
             this.uC_product15.BTNReviews_Drinks = " Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
     "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
-    "Reviews Reviews Reviews Reviews";
+    "Reviews Reviews Reviews Reviews Reviews";
             this.uC_product15.Categories = null;
             this.uC_product15.ID = null;
             this.uC_product15.LBLDescribe_Drinks = "";
@@ -2823,10 +2823,10 @@ namespace Management_Coffee_Shop
             // 
             this.uC_product16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product16.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "";
+    "đ";
             this.uC_product16.BTNReviews_Drinks = " Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
     "Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews Reviews " +
-    "Reviews Reviews Reviews Reviews";
+    "Reviews Reviews Reviews Reviews Reviews";
             this.uC_product16.Categories = null;
             this.uC_product16.ID = null;
             this.uC_product16.LBLDescribe_Drinks = "";

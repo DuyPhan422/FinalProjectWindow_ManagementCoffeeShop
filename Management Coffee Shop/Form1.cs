@@ -271,7 +271,8 @@ namespace Management_Coffee_Shop
             {
                 if (this.ID[0] == 'E')
                 {
-                    Employee employee = new Employee();
+                    DataTable dt = LoginDB.get_InforEmployee(this.ID);
+                    FormEmployee employee = new FormEmployee(dt.Rows[0]["LastName"].ToString(), dt.Rows[0]["Address"].ToString(), dt.Rows[0]["Email"].ToString(), dt.Rows[0]["BirthDate"].ToString(), dt.Rows[0]["Source_Image"].ToString());
                     employee.Show();
                 }else
                 {
