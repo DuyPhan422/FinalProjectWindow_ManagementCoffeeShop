@@ -24,9 +24,9 @@ namespace Management_Coffee_Shop
         {
             return Regex.IsMatch(input, @"[^a-zA-Z0-9]");
         }
-        public override string send_OTP(string toEmail, string context="Bạn đang đăng ký tài khoản", string subject="Register")
+        public override async Task<string> send_OTP(string toEmail, string context="Bạn đang đăng ký tài khoản", string subject="Register")
         {
-            return base.send_OTP(toEmail, context, subject);
+            return await base.send_OTP(toEmail, context, subject);
         }
     }
 }

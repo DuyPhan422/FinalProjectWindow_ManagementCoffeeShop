@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Management_Coffee_Shop
 {
@@ -16,8 +17,9 @@ namespace Management_Coffee_Shop
             this.address = address;
             this.email = email;
             this.date = Date;
-            if (string.IsNullOrEmpty(image))this.image = @"..\..\Management coffee shop_image\edited_image-removebg-preview.png";
+            if (string.IsNullOrEmpty(image)) this.image = @"..\..\Management coffee shop_image\edited_image-removebg-preview.png";
             else this.image = image;
+            MessageBox.Show("hình ảnh là" + this.image);
         }
         public string ID
         {

@@ -25,7 +25,7 @@ namespace Management_Coffee_Shop
         private byte second,level;
         private string otp,ID;
         private bool flag;
-        private TimeSpan timeLeft;
+        private TimeSpan timeLeft,OTP_time;
         public FormLogin()
         {
             InitializeComponent();
@@ -194,7 +194,7 @@ namespace Management_Coffee_Shop
             formforget.ShowDialog();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private async void btnLogin_Click(object sender, EventArgs e)
         {
             (string ID,string Email,string Password,string Lock,byte PasswordFail,string LastLogin,bool success)=LoginDB.get_Infor(txtUserName.Text);
             this.ID = ID;
@@ -212,6 +212,7 @@ namespace Management_Coffee_Shop
                         Lock_Tick.Tick += Lock_Ticked;
                         Lock_Tick.Interval = 1000;
                         flag_lock = true;
+                        flag = true;
                         Lock_Tick.Start();
                     }
                 }
@@ -247,14 +248,17 @@ namespace Management_Coffee_Shop
                     {
                         guna2TabControl1.SelectedTab = tabPage3;
                         Login login = new Login();
-                        otp = login.send_OTP(Email, "Mã OTP của bạn là: ", "Đăng Nhập");
+                        OTP_time = TimeSpan.FromSeconds(180);
+                        timer1.Start();
+                        otp = await login.send_OTP(Email, "Mã OTP của bạn là: ", "Đăng Nhập");
                     }
                     else
                     {
                         guna2TabControl1.SelectedTab = tabPage3;
                         Login login = new Login();
-                        otp = login.send_OTP(Email, "Mã OTP của bạn là: ", "Đăng Nhập");
-
+                        OTP_time = TimeSpan.FromSeconds(180);
+                        timer1.Start();
+                        otp = await login.send_OTP(Email, "Mã OTP của bạn là: ", "Đăng Nhập");
                     }
                 } 
             }else
@@ -267,14 +271,20 @@ namespace Management_Coffee_Shop
         }
         private void btnLogin_OTP_Click(object sender, EventArgs e)
         {
-            if (otp == txtOtp.Text)
+            if (otp == txtOtp.Text.Trim())
             {
                 if (this.ID[0] == 'E')
                 {
                     DataTable dt = LoginDB.get_InforEmployee(this.ID);
-                    FormEmployee employee = new FormEmployee(dt.Rows[0]["LastName"].ToString(), dt.Rows[0]["Address"].ToString(), dt.Rows[0]["Email"].ToString(), dt.Rows[0]["BirthDate"].ToString(), dt.Rows[0]["Source_Image"].ToString());
+                    FormEmployee employee = new FormEmployee(this.ID,dt.Rows[0]["LastName"].ToString(), dt.Rows[0]["Address"].ToString(), dt.Rows[0]["Email"].ToString(), dt.Rows[0]["BirthDate"].ToString(), dt.Rows[0]["Source_Image"].ToString());
                     employee.Show();
-                }else
+                    timer1.Stop();
+                    Lock_Tick.Stop();
+                    txtUserName.Clear();
+                    txtPassWord.Clear();
+                    txtOtp.Clear();
+                }
+                else
                 {
                     formManager formManager=new formManager();
                     formManager.Show();
@@ -286,17 +296,42 @@ namespace Management_Coffee_Shop
                 ID = "";
                 txtUserName.Clear();
                 txtPassWord.Clear();
+                txtOtp.Clear();
+                timer1.Stop();
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (OTP_time.TotalSeconds > 0)
+            {
+                OTP_time = OTP_time.Subtract(TimeSpan.FromSeconds(1));
+                lblAnnoucement_OTP.Text = $"Thời gian còn lại {OTP_time.ToString(@"mm\:ss")}";
+            }else
+            {
+                lblAnnoucement_OTP.Text = "Mã OTP của bạn đã hết hạn";
+                timer1.Stop();
+                otp = null;
             }
         }
         private void txtPassWord_TextChanged(object sender, EventArgs e)
         {
             if (flag)
             {
+                Lock_Tick.Stop();
                 flag = false;
                 lblOutput.Text = "";
             }
         }
-
+        private void txtUserName_TextChanged(object sender, EventArgs e)
+        {
+            if (flag)
+            {
+                Lock_Tick.Stop();
+                flag = false;
+                lblOutput.Text = "";
+            }
+        }
         private void btnLoginWithAnotherAccount_Click(object sender, EventArgs e)
         {
             guna2TabControl1.SelectedTab = tabPage1;

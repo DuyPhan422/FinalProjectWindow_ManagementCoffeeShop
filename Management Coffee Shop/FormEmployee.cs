@@ -32,12 +32,14 @@ namespace Management_Coffee_Shop
         private string categories;
         private List<Product> list_uCProdcuts;
         private List<Guna2Button> List_buttonPage;
-        public FormEmployee(string LastName,string Address,string Email,string BirthDate,string Source_Image)
+        private Employee employee;
+        public FormEmployee(string id,string LastName,string Address,string Email,string BirthDate,string Source_Image)
         {
-
+            employee = new Employee(id, LastName, Address, Email, BirthDate, Source_Image);
             InitializeComponent();
             List_buttonPage = new List<Guna2Button> { btnFirst_page, btnSecond_page, btnThird_page };
             list_uCProdcuts = new List<Product> { uC_product1, uC_product2, uC_product3, uC_product4, uC_product5, uC_product6, uC_product7, uC_product8, uC_product9, uC_product10, uC_product11, uC_product12, uC_product13, uC_product14, uC_product15, uC_product16 };
+            ptbImage_User.Image = Image.FromFile(employee.Image);
             loading_Shopping();
             load_history();
             pnlBill.Hide();

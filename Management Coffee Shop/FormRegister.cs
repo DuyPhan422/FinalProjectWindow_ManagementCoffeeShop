@@ -44,7 +44,7 @@ namespace Management_Coffee_Shop
             formlogin.ShowDialog();
         }
 
-        private void btnRegister_Click(object sender, EventArgs e)
+        private async void btnRegister_Click(object sender, EventArgs e)
         {
             lblError.Text = "";
             if (txtPassWord.Text == "")
@@ -80,7 +80,7 @@ namespace Management_Coffee_Shop
                             if (result == 0)
                             {
                                 guna2TabControl1.SelectedTab = tabPage2;
-                                otp=register.send_OTP(txtEmail.Text);
+                                otp=await register.send_OTP(txtEmail.Text);
                                 seconds = 0;
                                 minute = 3;
                                 timer1.Start();

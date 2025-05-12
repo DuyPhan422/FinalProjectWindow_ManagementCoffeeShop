@@ -66,6 +66,9 @@
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.lblAnnoucement_OTP = new System.Windows.Forms.Label();
+            this.btnSendAnother = new Guna.UI2.WinForms.Guna2Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.guna2TabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -246,6 +249,7 @@
             this.txtUserName.SelectedText = "";
             this.txtUserName.Size = new System.Drawing.Size(258, 25);
             this.txtUserName.TabIndex = 1;
+            this.txtUserName.TextChanged += new System.EventHandler(this.txtUserName_TextChanged);
             // 
             // guna2HtmlLabel1
             // 
@@ -460,6 +464,8 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(243)))), ((int)(((byte)(239)))));
+            this.tabPage3.Controls.Add(this.btnSendAnother);
+            this.tabPage3.Controls.Add(this.lblAnnoucement_OTP);
             this.tabPage3.Controls.Add(this.guna2HtmlLabel5);
             this.tabPage3.Controls.Add(this.guna2Panel5);
             this.tabPage3.Controls.Add(this.txtOtp);
@@ -525,11 +531,11 @@
             this.btnLogin_Otp.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
             this.btnLogin_Otp.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin_Otp.ForeColor = System.Drawing.Color.White;
-            this.btnLogin_Otp.Location = new System.Drawing.Point(82, 170);
+            this.btnLogin_Otp.Location = new System.Drawing.Point(82, 188);
             this.btnLogin_Otp.Name = "btnLogin_Otp";
             this.btnLogin_Otp.Size = new System.Drawing.Size(180, 36);
             this.btnLogin_Otp.TabIndex = 5;
-            this.btnLogin_Otp.Text = "LOGIN";
+            this.btnLogin_Otp.Text = "CONFIRM";
             this.btnLogin_Otp.Click += new System.EventHandler(this.btnLogin_OTP_Click);
             // 
             // guna2Panel7
@@ -579,6 +585,36 @@
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
+            // 
+            // lblAnnoucement_OTP
+            // 
+            this.lblAnnoucement_OTP.AutoSize = true;
+            this.lblAnnoucement_OTP.ForeColor = System.Drawing.Color.Red;
+            this.lblAnnoucement_OTP.Location = new System.Drawing.Point(110, 156);
+            this.lblAnnoucement_OTP.Name = "lblAnnoucement_OTP";
+            this.lblAnnoucement_OTP.Size = new System.Drawing.Size(0, 13);
+            this.lblAnnoucement_OTP.TabIndex = 6;
+            // 
+            // btnSendAnother
+            // 
+            this.btnSendAnother.BackColor = System.Drawing.Color.Transparent;
+            this.btnSendAnother.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSendAnother.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSendAnother.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSendAnother.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSendAnother.FillColor = System.Drawing.Color.Transparent;
+            this.btnSendAnother.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSendAnother.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
+            this.btnSendAnother.Location = new System.Drawing.Point(82, 230);
+            this.btnSendAnother.Name = "btnSendAnother";
+            this.btnSendAnother.Size = new System.Drawing.Size(180, 33);
+            this.btnSendAnother.TabIndex = 7;
+            this.btnSendAnother.Text = "Send Another?";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FormLogin
             // 
@@ -648,6 +684,9 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private Guna.UI2.WinForms.Guna2TextBox txtOtp;
         private Guna.UI2.WinForms.Guna2Button btnLogin_Otp;
+        private System.Windows.Forms.Label lblAnnoucement_OTP;
+        private Guna.UI2.WinForms.Guna2Button btnSendAnother;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

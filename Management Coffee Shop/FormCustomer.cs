@@ -47,7 +47,7 @@ namespace Management_Coffee_Shop
         private int minute, hour, currentPage = 1, count = 0;
         private byte indexPage = 1, lengthPage = 2,homePage=1;
         private double distance, duration;
-        private string tt,categories;
+        private string tt,categories,new_image;
         private static int current_ID = 0;
         private FormLogin FormLogin;
         private List<Product> list_uCProdcuts;
@@ -877,6 +877,7 @@ namespace Management_Coffee_Shop
             txtEmail_profile.Text = lblEmail_profile.Text.Trim();
             btnSave.Show();
             btnCancel.Show();
+            btnUpload_Profile.Show();
             txtAddress_profile.Show();
             txtEmail_profile.Show();
             txtName_profile.Show();
@@ -894,8 +895,13 @@ namespace Management_Coffee_Shop
             lblDate_profile.Text = txtDate_profile.Text.Trim();
             lblAddress_profile.Text = txtAddress_profile.Text.Trim();
             lblEmail_profile.Text = txtEmail_profile.Text.Trim();
+            ptbImage_Profile.Image.Dispose();
+            ptbImage_Profile.Image = Image.FromFile(customer.Image);
+            if (!string.IsNullOrEmpty(new_image))File.Delete(new_image);
+            new_image = null;
             btnSave.Hide();
             btnCancel.Hide();
+            btnUpload_Profile.Hide();
             txtAddress_profile.Hide();
             txtEmail_profile.Hide();
             txtName_profile.Hide();
@@ -912,12 +918,16 @@ namespace Management_Coffee_Shop
             DialogResult result=MessageBox.Show("bạn có chắc muốn lưu không","Lưu",MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
+                string temp_Image=customer.Image;
+                customer.Image=new_image;
                 Drinks.update_User(customer.ID,txtName_profile.Text,txtDate_profile.Text,txtAddress_profile.Text,txtEmail_profile.Text,customer.Image);
                 customer.Name = txtName_profile.Text;
                 customer.Date = txtDate_profile.Text;
                 customer.Address = txtAddress_profile.Text;
                 customer.Email = txtEmail_profile.Text;
-
+                btnAccount.Image.Dispose();
+                btnAccount.Image=Image.FromFile(customer.Image);
+                new_image = null;
                 btnCancel.PerformClick();
             }
         }
@@ -959,9 +969,9 @@ namespace Management_Coffee_Shop
                 string selectedFilePath = openFileDialog.FileName;
                 string file=Path.GetFileName(selectedFilePath);
                 string target_Folder = @"..\..\Management coffee shop_image\Image_User";
-                customer.Image = Path.Combine(target_Folder, file);
-                File.Copy(selectedFilePath, customer.Image, true);
-                ptbImage_Profile.Image=Image.FromFile(customer.Image);
+                new_image= Path.Combine(target_Folder, file);
+                File.Copy(selectedFilePath, new_image, true);
+                ptbImage_Profile.Image=Image.FromFile(new_image);
             }
         }
 

@@ -19,9 +19,9 @@ namespace Management_Coffee_Shop
             this.Email = Email;
             this.Phone = Phone;
         }
-        public override string send_OTP(string toEmail, string context = "Bạn đang đăng lấy lại mật khẩu", string subject = "Take Password")
+        public override async Task<string> send_OTP(string toEmail, string context = "Bạn đang đăng lấy lại mật khẩu", string subject = "Take Password")
         {
-            return base.send_OTP(toEmail, context, subject);
+            return await base.send_OTP(toEmail, context, subject);
         }
         public string Create_PassWord()
         {

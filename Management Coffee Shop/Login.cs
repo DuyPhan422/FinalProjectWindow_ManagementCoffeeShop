@@ -17,6 +17,7 @@ using System.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 using Guna.UI2.AnimatorNS;
 using static System.Windows.Forms.LinkLabel;
+using System.Threading.Tasks;
 
 
 
@@ -228,7 +229,7 @@ namespace Management_Coffee_Shop
             const string chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
             return chars[value % chars.Length].ToString();
         }
-        public virtual string send_OTP(string toEmail, string context, string subject)
+        public virtual async Task<string> send_OTP(string toEmail, string context, string subject)
         {
             Random random = new Random();
             string otp = random.Next(1000000, 9999999).ToString();
@@ -252,7 +253,7 @@ namespace Management_Coffee_Shop
                 Body = context,
             })
             {
-                smtp.Send(message);
+                await smtp.SendMailAsync(message);
             }
             return otp;
         }

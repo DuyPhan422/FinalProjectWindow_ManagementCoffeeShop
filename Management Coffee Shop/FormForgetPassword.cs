@@ -70,9 +70,9 @@ namespace Management_Coffee_Shop
 
         }
 
-        private void btnSendanother_Click(object sender, EventArgs e)
+        private async void  btnSendanother_Click(object sender, EventArgs e)
         {
-            otp=infor.send_OTP(infor.Get_Email);
+            otp= await infor.send_OTP(infor.Get_Email);
             MessageBox.Show("OTP đã được gửi thành công \nVui lòng vào email của bạn để kiểm tra");
         }
         private void btnRegister_Click(object sender, EventArgs e)
@@ -118,18 +118,18 @@ namespace Management_Coffee_Shop
         {
             infor.sms();
         }
-        private void btnSendanother_Click_1(object sender, EventArgs e)
+        private async void btnSendanother_Click_1(object sender, EventArgs e)
         {
-            otp = infor.send_OTP(infor.Get_Email);
+            otp = await infor.send_OTP(infor.Get_Email);
             TabControl.SelectedTab = tabPage4;
             seconds = 0;
             minute = 3;
             timer1.Start();
         }
 
-        private void btnSendOTP_Click(object sender, EventArgs e)
+        private async void btnSendOTP_Click(object sender, EventArgs e)
         {
-            otp = infor.send_OTP(infor.Get_Email);
+            otp = await infor.send_OTP(infor.Get_Email);
             TabControl.SelectedTab = tabPage4;
             seconds = 0;
             minute = 3;
