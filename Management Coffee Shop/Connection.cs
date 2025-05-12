@@ -8,11 +8,12 @@ namespace Management_Coffee_Shop
     {
         private static readonly string ConnectionString1 =
             @"Data Source=DESKTOP-7S1UU42\SQLEXPRESS;Initial Catalog=""Management Coffee Shop"";User ID=sa;Password=1234;TrustServerCertificate=True";
+
         private static readonly string ConnectionString2 =
-            @"Data Source=LAPTOP-AH11AR93;Initial Catalog=""Management Coffee Shop"";User ID=sa;Password=123456;TrustServerCertificate=True";
+
+            "Data Source=.\\DUYSQL;Initial Catalog=Management Coffee Shop; Integrated Security = True; TrustServerCertificate=True";
         private static readonly string ConnectionString3 =
             @"Data Source=DESKTOP-331CJKC;Initial Catalog =""Management Coffee Shop"";User ID = sa; Password=123;TrustServerCertificate=True";
-
 
         private static readonly string connectionString = GetActiveConnectionString();
 
@@ -23,7 +24,7 @@ namespace Management_Coffee_Shop
             {
                 return ConnectionString1;
             }
-            else if (machineName.Contains("LAPTOP-AH11AR93"))
+            else if (machineName.Contains(".\\DUYSQL"))
             {
                 return ConnectionString2;
             }
@@ -31,7 +32,7 @@ namespace Management_Coffee_Shop
             {
                 return ConnectionString3;
             }
-                return ConnectionString1;
+            return ConnectionString2;
         }
 
         public static SqlConnection GetSqlConnection()
