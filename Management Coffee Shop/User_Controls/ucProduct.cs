@@ -24,15 +24,16 @@ namespace Management_Coffee_Shop
     {
         private ProductDb productDb;
         private int selectedProductId = -1;
+        private string selectedImagePath;
 
-       
+
         public ucProduct()
         {
             InitializeComponent();
             productDb = new ProductDb();
             this.Load += new System.EventHandler(this.ucProduct_Load);
             dgvProduct.DoubleClick += new EventHandler(dgvProduct_DoubleClick);
-
+            txtPrice.KeyPress += new KeyPressEventHandler(txtPrice_KeyPress); // Thêm sự kiện KeyPress
         }
         private void dgvProduct_DoubleClick(object sender, EventArgs e)
         {
@@ -121,9 +122,14 @@ namespace Management_Coffee_Shop
                 int selectedIndex = dgvProduct.SelectedRows[0].Index;
                 DataRow selectedRow = dt.Rows[selectedIndex];
 
-                txtName.Text = selectedRow["Name"]?.ToString();
-                txtPrice.Text = selectedRow["Price"]?.ToString();
-                cbbCategory.SelectedItem = selectedRow["Category"]?.ToString();
+                // Lấy ID sản phẩm
+                string idStr = selectedRow["ID"].ToString().Trim();
+                selectedProductId = int.Parse(idStr.Substring(3));
+
+                // Tải dữ liệu vào các control
+                txtName.Text = selectedRow["Name"]?.ToString().Trim() ?? "";
+                txtPrice.Text = selectedRow["Price"]?.ToString() ?? "0";
+                cbbCategory.SelectedItem = selectedRow["Category"]?.ToString().Trim() ?? cbbCategory.Items[0]?.ToString() ?? "";
 
                 // Hiển thị Ingredient và Stock trong dgvRecipe
                 DataTable dtRecipe = new DataTable();
@@ -142,22 +148,33 @@ namespace Management_Coffee_Shop
                 dtDescription.Columns.Add("CustomerRating", typeof(string));
 
                 DataRow descriptionRow = dtDescription.NewRow();
-                descriptionRow["CustomerRating"] = selectedRow["CustomerRating"]?.ToString() ?? "Chưa có đánh giá";
+                string customerRating = selectedRow["CustomerRating"]?.ToString() ?? "Chưa có đánh giá";
+                descriptionRow["CustomerRating"] = customerRating;
                 dtDescription.Rows.Add(descriptionRow);
 
                 dgvDescription.DataSource = dtDescription;
 
                 // Hiển thị ảnh nếu có
-                if (!string.IsNullOrEmpty(selectedRow["ImagePath"]?.ToString()))
+                string imageRelativePath = selectedRow["ImagePath"]?.ToString();
+                if (!string.IsNullOrEmpty(imageRelativePath))
                 {
-                    selectedImagePath = selectedRow["ImagePath"].ToString();
+                    selectedImagePath = imageRelativePath;
                     try
                     {
-                        pbAvatar.Image = System.Drawing.Image.FromFile(selectedImagePath);
+                        string currentPath = Application.StartupPath;
+                        string fullImagePath = Path.GetFullPath(Path.Combine(currentPath, imageRelativePath));
+                        if (!File.Exists(fullImagePath))
+                        {
+                            pbAvatar.Image = null;
+                            selectedImagePath = null;
+                        }
+                        else
+                        {
+                            pbAvatar.Image = System.Drawing.Image.FromFile(fullImagePath);
+                        }
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
-                        MessageBox.Show($"Lỗi khi tải ảnh: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         pbAvatar.Image = null;
                         selectedImagePath = null;
                     }
@@ -167,9 +184,19 @@ namespace Management_Coffee_Shop
                     pbAvatar.Image = null;
                     selectedImagePath = null;
                 }
+
+                // Làm mới giao diện
+                if (tblEditProduct != null)
+                {
+                    tblEditProduct.Refresh();
+                }
             }
             else
             {
+                // Xóa dữ liệu nếu không có sản phẩm được chọn
+                txtName.Text = "";
+                txtPrice.Text = "";
+                cbbCategory.SelectedIndex = -1;
                 dgvRecipe.DataSource = null;
                 dgvDescription.DataSource = null;
                 pbAvatar.Image = null;
@@ -442,27 +469,52 @@ namespace Management_Coffee_Shop
             }
 
             DataGridViewRow row = dgvProduct.SelectedRows[0];
-            int productId = Convert.ToInt32(row.Cells["colID"].Value);
-            DialogResult result = MessageBox.Show($"Bạn có chắc chắn muốn xóa sản phẩm {row.Cells["colName"].Value}?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            string productIdStr = row.Cells["colID"].Value?.ToString().Trim();
+            if (string.IsNullOrEmpty(productIdStr) || !productIdStr.StartsWith("000") || productIdStr.Length != 7)
+            {
+                MessageBox.Show("ID sản phẩm không hợp lệ! ID phải có định dạng 000xxxx (7 ký tự).", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Lấy tên sản phẩm và loại bỏ khoảng trắng thừa
+            string productName = row.Cells["colName"].Value?.ToString().Trim() ?? "Sản phẩm không xác định";
+            if (string.IsNullOrEmpty(productName))
+            {
+                productName = "Sản phẩm không xác định";
+            }
+
+            // Hiển thị thông báo xác nhận với tên đã được xử lý
+            DialogResult result = MessageBox.Show($"Bạn có chắc chắn muốn xóa sản phẩm {productName} ?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {
                 try
                 {
+                    int productId;
+                    try
+                    {
+                        productId = int.Parse(productIdStr.Substring(3)); // Lấy 4 chữ số cuối
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Lỗi khi phân tích ID sản phẩm: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
                     productDb.DeleteProduct(productId);
                     MessageBox.Show("Xóa sản phẩm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadProducts(); // Tải lại dữ liệu
                     if (dgvProduct.Rows.Count > 0)
                     {
-                        dgvProduct.Rows[0].Selected = true; // Chọn lại hàng đầu tiên
-                        ShowProductDetails(); // Hiển thị chi tiết của hàng đầu tiên
+                        dgvProduct.Rows[0].Selected = true;
+                        ShowProductDetails();
                     }
                     else
                     {
                         dgvRecipe.DataSource = null;
                         dgvDescription.DataSource = null;
-                        pbAvatar.Image = null; // Đặt lại ảnh
-                        selectedImagePath = null; // Đặt lại đường dẫn ảnh
+                        pbAvatar.Image = null;
+                        selectedImagePath = null;
                     }
                 }
                 catch (Exception ex)
@@ -550,28 +602,7 @@ namespace Management_Coffee_Shop
 
         private void btnAddRecipe_Click(object sender, EventArgs e)
         {
-            if (dgvProduct.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Vui lòng chọn một sản phẩm trước!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            DataTable dtRecipe = (DataTable)dgvRecipe.DataSource;
-            if (dtRecipe == null)
-            {
-                dtRecipe = new DataTable();
-                dtRecipe.Columns.Add("Ingredient", typeof(string));
-                dtRecipe.Columns.Add("Supplier", typeof(string));
-                dtRecipe.Columns.Add("Stock", typeof(int));
-            }
-
-            DataRow newRow = dtRecipe.NewRow();
-            newRow["Ingredient"] = "Chưa có";
-            newRow["Supplier"] = "Chưa có";
-            newRow["Stock"] = 0;
-            dtRecipe.Rows.Add(newRow);
-
-            dgvRecipe.DataSource = dtRecipe;
+           
 
         }
 
@@ -612,18 +643,28 @@ namespace Management_Coffee_Shop
             }
 
             // Lấy dữ liệu từ giao diện
-            string name = txtName.Text;
-            string category = cbbCategory.SelectedItem.ToString();
+            string name = txtName.Text.Trim();
+            if (name.Length > 25)
+            {
+                MessageBox.Show("Tên sản phẩm không được dài quá 25 ký tự!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-            // Chuẩn hóa và kiểm tra giá trị của txtPrice
-            string priceText = txtPrice.Text.Replace(",", ".").Trim(); // Thay dấu phẩy bằng dấu chấm và loại bỏ khoảng trắng
+            string category = cbbCategory.SelectedItem.ToString();
+            if (category.Length > 30)
+            {
+                MessageBox.Show("Danh mục không được dài quá 30 ký tự!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Kiểm tra và chuyển đổi giá
+            string priceText = txtPrice.Text.Replace(",", ".").Trim();
             if (!decimal.TryParse(priceText, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out decimal price))
             {
                 MessageBox.Show("Giá phải là một số hợp lệ (ví dụ: 1234.567)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Kiểm tra giới hạn của DECIMAL(7,3): tối đa 4 chữ số nguyên và 3 chữ số thập phân
             string[] priceParts = price.ToString(System.Globalization.CultureInfo.InvariantCulture).Split('.');
             if (priceParts[0].Length > 4 || (priceParts.Length > 1 && priceParts[1].Length > 3) || price < 0)
             {
@@ -632,48 +673,54 @@ namespace Management_Coffee_Shop
             }
 
             // Lấy dữ liệu từ dgvRecipe (Ingredient, Stock)
-            string ingredient = "Chưa có";
+            string ingredient = "Chưa có";  
             int stock = 0;
-
             if (dgvRecipe.Rows.Count > 0 && dgvRecipe.DataSource != null)
             {
                 DataGridViewRow recipeRow = dgvRecipe.Rows[0];
                 if (dgvRecipe.Columns.Contains("colIngredient"))
                 {
                     ingredient = recipeRow.Cells["colIngredient"].Value?.ToString() ?? "Chưa có";
+                    if (ingredient.Length > 25)
+                    {
+                        MessageBox.Show("Mô tả (Ingredient) không được dài quá 25 ký tự!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
                 }
                 if (dgvRecipe.Columns.Contains("colStock"))
                 {
-                    if (!int.TryParse(recipeRow.Cells["colStock"].Value?.ToString(), out stock) || stock < 0)
+                    string stockText = recipeRow.Cells["colStock"].Value?.ToString();
+                    if (!int.TryParse(stockText, out stock) || stock < 0)
                     {
                         MessageBox.Show("Số lượng tồn kho phải là một số nguyên không âm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Cột colStock không tồn tại trong dgvRecipe!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-            }
-            else
-            {
-                MessageBox.Show("Không có dữ liệu trong dgvRecipe để lưu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
             }
 
-            // Lấy dữ liệu từ dgvDescription (CustomerRating)
+            // Lấy dữ liệu từ dgvDescription (CustomerRating) mà không kiểm tra phạm vi
             string customerRating = "Chưa có đánh giá";
-            if (dgvDescription.Rows.Count > 0)
+            if (dgvDescription.Rows.Count > 0 && dgvDescription.DataSource != null)
             {
                 DataGridViewRow descriptionRow = dgvDescription.Rows[0];
-                customerRating = descriptionRow.Cells["colCustomerRating"].Value?.ToString() ?? "Chưa có đánh giá";
+                if (dgvDescription.Columns.Contains("colCustomerRating"))
+                {
+                    customerRating = descriptionRow.Cells["colCustomerRating"].Value?.ToString() ?? "Chưa có đánh giá";
+                }
             }
 
-            // Kiểm tra sản phẩm trùng (chỉ khi thêm mới, không áp dụng khi chỉnh sửa)
+            // Kiểm tra và xử lý selectedImagePath
+            string imagePath = selectedImagePath ?? string.Empty;
+            if (imagePath.Length > 60)
+            {
+                MessageBox.Show("Đường dẫn ảnh vượt quá 60 ký tự! Đường dẫn sẽ bị cắt ngắn.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                imagePath = imagePath.Substring(0, 60);
+            }
+
+            // Kiểm tra sản phẩm trùng
             if (selectedProductId == -1) // Thêm mới
             {
-                if (productDb.CheckProductExists(name, category, price, stock, ingredient, customerRating, selectedImagePath))
+                if (productDb.CheckProductExists(name, category, price, stock, ingredient, customerRating, imagePath))
                 {
                     MessageBox.Show("Sản phẩm với thông tin này đã tồn tại! Vui lòng thay đổi ít nhất một thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -684,18 +731,18 @@ namespace Management_Coffee_Shop
                 DataTable dt = productDb.GetAllProducts();
                 foreach (DataRow row in dt.Rows)
                 {
-                    int rowId = Convert.ToInt32(row["ID"]);
-                    if (rowId == selectedProductId) continue; // Bỏ qua chính sản phẩm đang chỉnh sửa
-                    string rowName = row["Name"].ToString();
-                    string rowCategory = row["Category"].ToString();
+                    string rowId = row["ID"].ToString().Trim();
+                    if (rowId == $"000{selectedProductId:D4}") continue;
+                    string rowName = row["Name"].ToString().Trim();
+                    string rowCategory = row["Category"].ToString().Trim();
                     decimal rowPrice = Convert.ToDecimal(row["Price"]);
                     int rowStock = Convert.ToInt32(row["Stock"]);
                     string rowIngredient = row["Ingredient"]?.ToString() ?? "Chưa có";
-                    string rowCustomerRating = row["CustomerRating"].ToString();
+                    string rowCustomerRating = row["CustomerRating"]?.ToString() ?? "Chưa có đánh giá";
                     string rowImagePath = row["ImagePath"]?.ToString() ?? string.Empty;
 
                     if (name == rowName && category == rowCategory && price == rowPrice && stock == rowStock &&
-                        ingredient == rowIngredient && customerRating == rowCustomerRating && selectedImagePath == rowImagePath)
+                        ingredient == rowIngredient && customerRating == rowCustomerRating && imagePath == rowImagePath)
                     {
                         MessageBox.Show("Sản phẩm với thông tin này đã tồn tại! Vui lòng thay đổi ít nhất một thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
@@ -707,30 +754,51 @@ namespace Management_Coffee_Shop
             {
                 if (selectedProductId == -1) // Thêm sản phẩm mới
                 {
-                    productDb.AddProduct(name, category, price, stock, ingredient, customerRating, selectedImagePath);
+                    productDb.AddProduct(name, category, price, stock, ingredient, customerRating, imagePath);
                     MessageBox.Show("Thêm sản phẩm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else // Cập nhật sản phẩm
                 {
-                    productDb.UpdateProduct(selectedProductId, name, category, price, stock, ingredient, customerRating, selectedImagePath);
+                    productDb.UpdateProduct(selectedProductId, name, category, price, stock, ingredient, customerRating, imagePath);
                     MessageBox.Show("Cập nhật sản phẩm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
-                LoadProducts(); // Tải lại dữ liệu
-                if (dgvProduct.Rows.Count > 0)
-                {
-                    dgvProduct.Rows[0].Selected = true;
-                    ShowProductDetails();
-                }
+                // Tải lại danh sách sản phẩm
+                LoadProducts();
+
+                // Đặt lại giao diện
                 timer.Start();
                 tbpnlTop.Enabled = true;
+                tblEditProduct.Visible = false; // Ẩn panel sau khi lưu
+
+                // Xóa dữ liệu trong các control
+                txtName.Text = "";
+                txtPrice.Text = "";
+                cbbCategory.SelectedIndex = -1;
+                dgvRecipe.DataSource = null;
+                dgvDescription.DataSource = null;
+                pbAvatar.Image = null;
+                selectedImagePath = null;
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Lỗi khi lưu dữ liệu sản phẩm: {ex.Message}\nStackTrace: {ex.StackTrace}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Chỉ cho phép nhập số, dấu chấm và phím Backspace
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
 
+            // Chỉ cho phép một dấu chấm duy nhất
+            if (e.KeyChar == '.' && (sender as Guna2TextBox).Text.IndexOf('.') > -1)
+            {
+                e.Handled = true;
+            }
+        }
         private void dgvProduct_SelectionChanged(object sender, EventArgs e)
         {
             ShowProductDetails();
@@ -741,7 +809,57 @@ namespace Management_Coffee_Shop
         {
 
         }
-        private string selectedImagePath;
+        private string GetProjectRootPath()
+        {
+            string currentPath = Application.StartupPath;
+            DirectoryInfo directory = new DirectoryInfo(currentPath);
+
+            // Đi ngược lên cho đến khi tìm thấy thư mục gốc của dự án
+            while (directory != null)
+            {
+                // Kiểm tra xem thư mục hiện tại có phải là thư mục gốc không
+                if (directory.GetFiles("*.sln").Length > 0 || directory.Name == "Management Coffee Shop")
+                {
+                    return directory.FullName;
+                }
+                directory = directory.Parent;
+            }
+
+            throw new Exception("Không thể xác định thư mục gốc của dự án!");
+        }
+
+        private string GetImagesFolderPath()
+        {
+            string projectRoot = GetProjectRootPath();
+            string imagesFolder = Path.Combine(projectRoot, "drinks_images");
+            if (!Directory.Exists(imagesFolder))
+            {
+                Directory.CreateDirectory(imagesFolder);
+            }
+            return imagesFolder;
+        }
+
+        private string GenerateShortFileName(string originalFileName)
+        {
+            string extension = Path.GetExtension(originalFileName);
+            string fileNameWithoutExtension = Path.GetFileNameWithoutExtension(originalFileName);
+
+            // Nếu tên file quá dài, cắt ngắn và thêm mã ngẫu nhiên
+            if (fileNameWithoutExtension.Length > 50)
+            {
+                fileNameWithoutExtension = fileNameWithoutExtension.Substring(0, 45);
+                fileNameWithoutExtension += Guid.NewGuid().ToString("N").Substring(0, 5);
+            }
+
+            string newFileName = fileNameWithoutExtension + extension;
+            if (newFileName.Length > 60)
+            {
+                throw new Exception("Tên file ảnh sau khi xử lý vẫn vượt quá 60 ký tự!");
+            }
+
+            return newFileName;
+        }
+
         private void btnImageChange_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -755,32 +873,38 @@ namespace Management_Coffee_Shop
                     // Đường dẫn ảnh gốc
                     string sourceImagePath = openFileDialog.FileName;
 
-                    // Tạo thư mục Images trong thư mục dự án nếu chưa tồn tại
-                    string imagesFolder = Path.Combine(Application.StartupPath, "Images");
-                    if (!Directory.Exists(imagesFolder))
-                    {
-                        Directory.CreateDirectory(imagesFolder);
-                    }
+                    // Tạo thư mục drinks_images trong thư mục gốc của dự án
+                    string imagesFolder = GetImagesFolderPath();
 
-                    // Tạo tên file mới (dùng timestamp để tránh trùng lặp)
-                    string fileName = Path.GetFileNameWithoutExtension(sourceImagePath) + "_" + DateTime.Now.Ticks + Path.GetExtension(sourceImagePath);
+                    // Tạo tên file ngắn hơn nếu cần
+                    string fileName = GenerateShortFileName(Path.GetFileName(sourceImagePath));
                     string destinationImagePath = Path.Combine(imagesFolder, fileName);
 
-                    // Sao chép ảnh đến thư mục Images
+                    // Sao chép ảnh đến thư mục drinks_images
                     File.Copy(sourceImagePath, destinationImagePath, true);
 
-                    // Lưu đường dẫn của ảnh đã sao chép
-                    selectedImagePath = destinationImagePath;
+                    // Kiểm tra xem tệp đã được sao chép thành công chưa
+                    if (!File.Exists(destinationImagePath))
+                    {
+                        throw new Exception("Không thể sao chép tệp ảnh vào thư mục drinks_images!");
+                    }
+
+                    // Lưu đường dẫn tương đối với dấu \: ..\..\drinks_images\fileName
+                    selectedImagePath = $@"..\..\drinks_images\{fileName}"; // Sử dụng dấu \ thay vì /
 
                     // Hiển thị ảnh trong PictureBox
-                    pbAvatar.Image = System.Drawing.Image.FromFile(selectedImagePath);
+                    pbAvatar.Image = System.Drawing.Image.FromFile(destinationImagePath);
+
+                    // Debug: Hiển thị đường dẫn để kiểm tra
+                    MessageBox.Show($"Đã lưu ảnh tại: {destinationImagePath}\nĐường dẫn tương đối: {selectedImagePath}", "Debug");
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Lỗi khi tải ảnh: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    selectedImagePath = null;
+                    pbAvatar.Image = null;
                 }
             }
-
         }
 
         private void pbAvatar_Click(object sender, EventArgs e)
