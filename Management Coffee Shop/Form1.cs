@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Net;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -276,7 +277,7 @@ namespace Management_Coffee_Shop
                 if (this.ID[0] == 'E')
                 {
                     DataTable dt = LoginDB.get_InforEmployee(this.ID);
-                    FormEmployee employee = new FormEmployee(this.ID,dt.Rows[0]["LastName"].ToString(), dt.Rows[0]["Address"].ToString(), dt.Rows[0]["Email"].ToString(), dt.Rows[0]["BirthDate"].ToString(), dt.Rows[0]["Source_Image"].ToString());
+                    FormEmployee employee = new FormEmployee(this.ID,dt.Rows[0]["LastName"].ToString(), dt.Rows[0]["Address"].ToString(), dt.Rows[0]["Email"].ToString(), dt.Rows[0]["BirthDate"].ToString(), dt.Rows[0]["Source_Image"].ToString(),this);
                     employee.Show();
                     timer1.Stop();
                     Lock_Tick.Stop();

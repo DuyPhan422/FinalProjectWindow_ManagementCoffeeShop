@@ -26,6 +26,14 @@ namespace Management_Coffee_Shop.User_Controls
         {
             btnPice_clicked?.Invoke(this, EventArgs.Empty);
         }
+        public void TurnOn_BestSeller()
+        {
+            lblStatus.Show();
+        }
+        public void TurnOff_BestSeller()
+        {
+            lblStatus.Hide();
+        }
         public string ID
         {
             get { return id; }

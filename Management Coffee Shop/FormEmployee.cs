@@ -33,14 +33,22 @@ namespace Management_Coffee_Shop
         private List<Product> list_uCProdcuts;
         private List<Guna2Button> List_buttonPage;
         private Employee employee;
-        public FormEmployee(string id,string LastName,string Address,string Email,string BirthDate,string Source_Image)
+        private FormLogin formLogin;
+        public FormEmployee(string id,string LastName,string Address,string Email,string BirthDate,string Source_Image,FormLogin formLogin)
         {
             employee = new Employee(id, LastName, Address, Email, BirthDate, Source_Image);
+            this.formLogin = formLogin;
             InitializeComponent();
             List_buttonPage = new List<Guna2Button> { btnFirst_page, btnSecond_page, btnThird_page };
             list_uCProdcuts = new List<Product> { uC_product1, uC_product2, uC_product3, uC_product4, uC_product5, uC_product6, uC_product7, uC_product8, uC_product9, uC_product10, uC_product11, uC_product12, uC_product13, uC_product14, uC_product15, uC_product16 };
             ptbImage_User.Image = Image.FromFile(employee.Image);
+            ptbImage_Account.Image= Image.FromFile(employee.Image);
+            lblName_homePage.Text = employee.Name;
+            lblName_homePage.Location = new Point(1331 - lblName_homePage.Width, lblName_homePage.Location.Y);
+            lblName_Account.Text ="Hello"+ employee.Name;
+            lblName_Account.Location = new Point((199 - lblName_Account.Width) / 2, lblName_Account.Location.Y);
             loading_Shopping();
+            pnlAccount.Hide();
             load_history();
             pnlBill.Hide();
             pnlBill_Online.Hide();
@@ -216,7 +224,7 @@ namespace Management_Coffee_Shop
                         items.SubItems[2].Text= amount.ToString();
                         int price = int.Parse(Regex.Replace(clicked.BTNPrice, @"[^\d]", ""));
                         items.SubItems[3].Text= string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", amount * price);
-                        sum += (amount * price);
+                        sum += (price);
                         check = true;
                         lblTotal.Text = string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", sum);
                         LBLName_Product.Text = clicked.LBLName_Drinks;
@@ -471,6 +479,7 @@ namespace Management_Coffee_Shop
                     number -= 1;
                     lblTotal.Text= string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", sum);
                     pnlProduct.Hide();
+                    for(int j=0;j< listView2.Items.Count; j++)listView2.Items[j].SubItems[0].Text=(j+1).ToString();
                     break;
                 }
             }
@@ -528,6 +537,10 @@ namespace Management_Coffee_Shop
         private void btnClearAll_Click(object sender, EventArgs e)
         {
             listView2.Items.Clear();
+            sum = 0;
+            lblTotal.Text = string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", sum);
+            pnlProduct.Hide();
+            number = 1;
         }
 
         private void btnDone_Online_Click(object sender, EventArgs e)
@@ -568,6 +581,38 @@ namespace Management_Coffee_Shop
             }
             File.WriteAllLines(path, lines);
             pnlBill_Online.Hide();
+        }
+
+        private void listView2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView2.SelectedItems.Count > 0)
+            {
+                ListViewItem listViewItem = listView2.SelectedItems[0];
+                LBLName_Product.Text = listViewItem.SubItems[1].Text;
+                lblQTV.Text=listViewItem.SubItems[2].Text;
+                pnlProduct.Show();
+            }
+        }
+
+        private void ptbImage_User_Click(object sender, EventArgs e)
+        {
+            if (pnlAccount.Visible==false) pnlAccount.Show();
+            else pnlAccount.Hide();
+        }
+
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            FormForgetPassword formForgetPassword = new FormForgetPassword();
+            formForgetPassword.change_TabPage();
+            formForgetPassword.Show();
+            this.Hide();
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            formLogin.change_tabPage();
+            formLogin.Show();
+            this.Close();
         }
 
         private void btnMenu_Click(object sender, EventArgs e)

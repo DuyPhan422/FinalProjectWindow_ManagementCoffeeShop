@@ -39,8 +39,6 @@ namespace Management_Coffee_Shop
                 public int Price { get; set; }
             }
         }
-        const int SB_HORZ = 0;
-        const int SB_VERT = 1;
         private Customer customer;
         private bool check,flag_order;
         private static Dictionary<string, (int, int, Boolean)> list_products = new Dictionary<string, (int, int, Boolean)>();
@@ -51,6 +49,7 @@ namespace Management_Coffee_Shop
         private static int current_ID = 0;
         private FormLogin FormLogin;
         private List<Product> list_uCProdcuts;
+        private List<string> list_bestSeller=new List<string>();
         private System.Windows.Forms.Timer timer_pnlAddShoppingCart = new System.Windows.Forms.Timer();
         private System.Windows.Forms.Timer timer_homePage  = new System.Windows.Forms.Timer();
 
@@ -74,6 +73,9 @@ namespace Management_Coffee_Shop
             txtDate_profile.Text = customer.Date;
             ptbImage_Profile.Image = Image.FromFile(customer.Image);
             btnAccount.Image = Image.FromFile(customer.Image);
+            ptbImage_Account.Image = Image.FromFile(customer.Image);
+            lblName_Account.Text = "Hello "+customer.Name;
+            lblName_Account.Location = new Point((199 - lblName_Account.Width) / 2, lblName_Account.Location.Y);
             list_uCProdcuts = new List<Product> { uC_product1, uC_product2, uC_product3, uC_product4, uC_product5, uC_product6, uC_product7, uC_product8, uC_product9, uC_product10, uC_product11, uC_product12, uC_product13, uC_product14, uC_product15, uC_product16 };
             (distance, duration) = (Drinks.distance_time(customer.Address));
             pnlBill.Hide();
@@ -176,6 +178,7 @@ namespace Management_Coffee_Shop
         private void load_bestseller()
         {
             DataTable dt= Drinks.get_Top3_BestSeller();
+            for (int i = 0; i < dt.Rows.Count; i++)list_bestSeller.Add(dt.Rows[i]["ID"].ToString());
             ptbImage_BestSeller_Top1.Image = Image.FromFile(dt.Rows[0]["Source_Image"].ToString());
             lblName_BestSeller_Top1.Text=dt.Rows[0]["Name"].ToString();
             lblDescribe_BestSeller_Top1.Text= dt.Rows[0]["Describe"].ToString();
@@ -374,7 +377,16 @@ namespace Management_Coffee_Shop
             for (int i = 0; i < len; i++)
             {
                 list_uCProdcuts[i].Show();
+                list_uCProdcuts[i].TurnOff_BestSeller();
                 list_uCProdcuts[i].ID = showUp_Drinks.Rows[i]["ID"].ToString();
+                for(int j = 0; j < list_bestSeller.Count; j++)
+                {
+                    if (list_uCProdcuts[i].ID == list_bestSeller[j])
+                    {
+                        list_uCProdcuts[i].TurnOn_BestSeller();
+                        break;
+                    }
+                }
                 list_uCProdcuts[i].Categories = showUp_Drinks.Rows[i]["Categories"].ToString();
                 list_uCProdcuts[i].PTBImage_Drinks = showUp_Drinks.Rows[i]["Source_Image"].ToString();
                 list_uCProdcuts[i].LBLName_Drinks = showUp_Drinks.Rows[i]["Name"].ToString();
@@ -927,6 +939,9 @@ namespace Management_Coffee_Shop
                 customer.Email = txtEmail_profile.Text;
                 btnAccount.Image.Dispose();
                 btnAccount.Image=Image.FromFile(customer.Image);
+                ptbImage_Account.Image = Image.FromFile(customer.Image);
+                lblName_Account.Text = customer.Name;
+                lblName_Account.Location = new Point((199 - lblName_Account.Location.X) / 2, lblName_Account.Location.Y);
                 new_image = null;
                 btnCancel.PerformClick();
             }
@@ -977,12 +992,14 @@ namespace Management_Coffee_Shop
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
+            pnlAccount.Hide();
             btnCancel.PerformClick();
             tabControl1.SelectedTab = tabPage4;
         }
 
         private void btnOrder_Account_Click(object sender, EventArgs e)
         {
+            pnlAccount.Hide();
             tabControl1.SelectedTab = tabPage6;
         }
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
