@@ -13,6 +13,7 @@ using System.Threading;
 using System.Windows.Forms.DataVisualization.Charting;
 using static Management_Coffee_Shop.FormCustomer.History_Shopping;
 using System.Data.Common;
+using Management_Coffee_Shop.User_Controls;
 
 
 namespace Management_Coffee_Shop
@@ -228,6 +229,68 @@ namespace Management_Coffee_Shop
                 }
             }
             return count;
+        }
+        public static void Delete_ShoppingCart(string Cartid,string ProductID)
+        {
+            using (SqlConnection connection = Connection.GetSqlConnection())
+            {
+                string query = "DELETE FROM ShoppingCart WHERE CartID=@CartID AND ProductID=@ProductID";
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@CartID", Cartid);
+                    command.Parameters.AddWithValue("@ProductID", ProductID);
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+        public static void Add_ShoppingCart(string Cartid, string ProductID)
+        {
+            using (SqlConnection connection = Connection.GetSqlConnection())
+            {
+                string query = "INSERT INTO ShoppingCart (CartID,ProductID,Quantity) VALUES (@CartID,@ProductID,@Quantity)";
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@CartID", Cartid);
+                    command.Parameters.AddWithValue("@ProductID", ProductID);
+                    command.Parameters.AddWithValue("@Quantity", 1);
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+        public static void Update_ShoppingCart(string Cartid, string ProductID,byte quantity)
+        {
+            using (SqlConnection connection = Connection.GetSqlConnection())
+            {
+                string query = "UPDATE ShoppingCart SET Quantity=@Quantity WHERE CartID=@CartID AND ProductID=@ProductID";
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@CartID", Cartid);
+                    command.Parameters.AddWithValue("@ProductID", ProductID);
+                    command.Parameters.AddWithValue("@Quantity", quantity);
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+        public static DataTable Get_ShoppingCart(string Cartid)
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection connection = Connection.GetSqlConnection())
+            {
+                string query = "SELECT ID,Name,Categories,Price,Quantity,Source_Image FROM ShoppingCart JOIN sourceDrinks ON sourceDrinks.ID=ShoppingCart.ProductID WHERE CartID=@CartID";
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@CartID", Cartid);
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        adapter.Fill(dt);
+                    }
+                }
+            }
+            return dt;
         }
         public static string change_Coordinates(string address)
         {

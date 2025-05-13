@@ -20,6 +20,7 @@ using static Management_Coffee_Shop.FormCustomer.History_Shopping;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 using static TheArtOfDevHtmlRenderer.Adapters.RGraphicsPath;
+using System.IO.Pipelines;
 
 namespace Management_Coffee_Shop
 {
@@ -62,7 +63,7 @@ namespace Management_Coffee_Shop
             customer=new Customer(id,name,address,email,date,image);
             this.FormLogin = formLogin;
             this.FormBorderStyle = FormBorderStyle.None;
-            this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 80,80));
+            this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 65,65));
             customer_load(check);
         }
         private void customer_load(bool check)
@@ -92,6 +93,7 @@ namespace Management_Coffee_Shop
             get_CurrentID();
             check_order();
             load_bestseller();
+            load_ShoppingCart();
         }
         private void get_CurrentID()
         {
@@ -99,6 +101,18 @@ namespace Management_Coffee_Shop
             string lastline = File.ReadLines(path).Last();
             History_Shopping history_Shopping = System.Text.Json.JsonSerializer.Deserialize<History_Shopping>(lastline);
             current_ID = int.Parse(history_Shopping.OrderId) + 1;
+        }
+        private void load_ShoppingCart()
+        {
+            DataTable dt = Drinks.Get_ShoppingCart(customer.ID);
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                byte quantity = byte.Parse(dt.Rows[i]["Quantity"].ToString());
+                int sum = int.Parse(new string(dt.Rows[i]["Price"].ToString().Where(char.IsDigit).ToArray()))*quantity;
+                create_Payment(dt.Rows[i]["ID"].ToString(), dt.Rows[i]["Source_Image"].ToString(), dt.Rows[i]["Categories"].ToString(), dt.Rows[i]["Name"].ToString(), string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", sum), quantity,false);
+                list_products[dt.Rows[i]["ID"].ToString()] = (quantity, sum, false);
+            }
+            update_Payment();
         }
         private void check_order()
         {
@@ -467,6 +481,7 @@ namespace Management_Coffee_Shop
                         transport.PTBImage = p.PTBImage_Drinks;
                         flpShoppingCart.Controls.Add(transport);
                         list_products.Remove(p.ID);
+                        Drinks.Delete_ShoppingCart(customer.ID, p.ID);
                         flpPayment.Controls.Remove(p);
                         count--;
                     }
@@ -601,8 +616,8 @@ namespace Management_Coffee_Shop
                             if (p.ID==clickedButton.ID)
                             {
                                 p.LBLQTV= list_products[Id].Item1;
-                                string sum = (list_products[Id].Item1 * list_products[p.ID].Item2).ToString();
-                                p.LBLSUM= string.Format("{0:N0}đ", sum);
+                                int sum = (list_products[Id].Item1 * list_products[p.ID].Item2);
+                                p.LBLSUM= string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", sum);
                                 break;
                             }    
                         }
@@ -610,35 +625,41 @@ namespace Management_Coffee_Shop
                 }
                 if (check)
                 {
-                    count++;
-                    if (count > 0)
-                    {
-                        pnlBill.Show();
-                        pnlPayment.Show();
-                        pnlInformation.Show();
-                        pnlEmpty.Hide();
-                    }
-                    Payment payment = new Payment();
-                    payment.ID = clickedButton.ID;
-                    payment.PTBImage_Drinks = clickedButton.PTBImage_Drinks;
-                    payment.BTNCategories = clickedButton.Categories;
-                    payment.BTNName = clickedButton.LBLName_Drinks;
-                    payment.LBLPrice = clickedButton.BTNPrice;
-                    payment.LBLSUM = clickedButton.BTNPrice;
-                    payment.value = 1;
-                    payment.btnDown_clicked += BTNUpDown;
-                    payment.btnUp_clicked += BTNUpDown;
-                    payment.btnChoose_clicked += BTNChoose_clicked;
-                    payment.btnRemove_clicked += Remove_product;
-                    list_products[clickedButton.ID] = (1, int.Parse(new string(clickedButton.BTNPrice.Where(char.IsDigit).ToArray())),true);
-                    flpPayment.Controls.Add(payment);
-                    flpPayment.Controls.SetChildIndex(payment, 0);
+                    Drinks.Add_ShoppingCart(customer.ID, clickedButton.ID);
+                    create_Payment(clickedButton.ID, clickedButton.PTBImage_Drinks, clickedButton.Categories, clickedButton.LBLName_Drinks, clickedButton.BTNPrice,1);
                 }
                 update_Payment();
             }
             timer_pnlAddShoppingCart.Interval = 500;
             timer_pnlAddShoppingCart.Tick += Timer_pnlAddShoppingCart;
             timer_pnlAddShoppingCart.Start();
+        }
+        private void create_Payment(string ID,string Image,string Categories,string Name,string Price,byte Amount,bool flag_BTNChoose=true)
+        {
+            count++;
+            if (count > 0)
+            {
+                pnlBill.Show();
+                pnlPayment.Show();
+                pnlInformation.Show();
+                pnlEmpty.Hide();
+            }
+            Payment payment = new Payment();
+            payment.ID = ID;
+            payment.PTBImage_Drinks = Image;
+            payment.BTNCategories = Categories;
+            payment.BTNName = Name;
+            payment.LBLPrice = Price;
+            payment.LBLSUM = Price;
+            payment.LBLQTV = Amount;
+            payment.btnDown_clicked += BTNUpDown;
+            payment.btnUp_clicked += BTNUpDown;
+            payment.btnChoose_clicked += BTNChoose_clicked;
+            payment.btnRemove_clicked += Remove_product;
+            list_products[ID] = (Amount, int.Parse(new string(Price.Where(char.IsDigit).ToArray())), true);
+            if (!flag_BTNChoose) payment.BTNChoose = null;
+            flpPayment.Controls.Add(payment);
+            flpPayment.Controls.SetChildIndex(payment, 0);
         }
         private void Timer_pnlAddShoppingCart(object sender, EventArgs e)
         {
@@ -663,6 +684,7 @@ namespace Management_Coffee_Shop
                             pnlInformation.Hide();
                             pnlEmpty.Show();
                         }
+                        Drinks.Delete_ShoppingCart(customer.ID, payment.ID);
                         update_Payment();
                     }
                 }
@@ -810,6 +832,7 @@ namespace Management_Coffee_Shop
         }
         private void btnLogOut_Click(object sender, EventArgs e)
         {
+            foreach (string Id in list_products.Keys.ToList()) Drinks.Update_ShoppingCart(customer.ID, Id, (byte)list_products[Id].Item1);
             Login.delete_Token(customer.ID);
             FormLogin.change_tabPage();
             FormLogin.Show();
@@ -1042,6 +1065,12 @@ namespace Management_Coffee_Shop
             else if (homePage == 3) homePage3.FillColor = Color.Gainsboro;
             else if (homePage == 4) homePage4.FillColor = Color.Gainsboro;
             else homePage5.FillColor = Color.Gainsboro;
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            foreach (string Id in list_products.Keys.ToList()) Drinks.Update_ShoppingCart(customer.ID, Id, (byte)list_products[Id].Item1);
+            FormLogin.Close();
         }
 
         // xử lý các sự kiện của các nút điều hướng trang

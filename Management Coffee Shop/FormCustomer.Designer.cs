@@ -66,6 +66,7 @@ namespace Management_Coffee_Shop
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCustomer));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnExit = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnAccount = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnShoppingCart = new Guna.UI2.WinForms.Guna2Button();
@@ -97,6 +98,9 @@ namespace Management_Coffee_Shop
             this.homePage5 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.pnlhomePage = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlAccount = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel55 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblName_Account = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.ptbImage_Account = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel50 = new Guna.UI2.WinForms.Guna2Panel();
             this.flpAnotherAccount = new System.Windows.Forms.FlowLayoutPanel();
             this.label26 = new System.Windows.Forms.Label();
@@ -105,9 +109,6 @@ namespace Management_Coffee_Shop
             this.btnEditAccount_Account = new Guna.UI2.WinForms.Guna2Button();
             this.btnChangePassword = new Guna.UI2.WinForms.Guna2Button();
             this.btnOrder_Account = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel55 = new Guna.UI2.WinForms.Guna2Panel();
-            this.ptbImage_Account = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.lblName_Account = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new Management_Coffee_Shop.CustomTabPage();
             this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -364,9 +365,9 @@ namespace Management_Coffee_Shop
             this.pnlSaveLogin.SuspendLayout();
             this.pnlhomePage.SuspendLayout();
             this.pnlAccount.SuspendLayout();
-            this.guna2Panel50.SuspendLayout();
             this.guna2Panel55.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbImage_Account)).BeginInit();
+            this.guna2Panel50.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
@@ -444,6 +445,7 @@ namespace Management_Coffee_Shop
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.guna2Panel1.Controls.Add(this.btnExit);
             this.guna2Panel1.Controls.Add(this.btnAccount);
             this.guna2Panel1.Controls.Add(this.lblDate);
             this.guna2Panel1.Controls.Add(this.btnShoppingCart);
@@ -455,6 +457,23 @@ namespace Management_Coffee_Shop
             this.guna2Panel1.Size = new System.Drawing.Size(1387, 49);
             this.guna2Panel1.TabIndex = 0;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(243)))), ((int)(((byte)(239)))));
+            this.btnExit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnExit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnExit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnExit.FillColor = System.Drawing.Color.Red;
+            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(1352, 19);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnExit.Size = new System.Drawing.Size(17, 17);
+            this.btnExit.TabIndex = 9;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnAccount
             // 
@@ -902,6 +921,39 @@ namespace Management_Coffee_Shop
             this.pnlAccount.Size = new System.Drawing.Size(209, 456);
             this.pnlAccount.TabIndex = 6;
             // 
+            // guna2Panel55
+            // 
+            this.guna2Panel55.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel55.BorderRadius = 15;
+            this.guna2Panel55.Controls.Add(this.lblName_Account);
+            this.guna2Panel55.Controls.Add(this.ptbImage_Account);
+            this.guna2Panel55.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(243)))), ((int)(((byte)(239)))));
+            this.guna2Panel55.Location = new System.Drawing.Point(4, 12);
+            this.guna2Panel55.Name = "guna2Panel55";
+            this.guna2Panel55.Size = new System.Drawing.Size(199, 96);
+            this.guna2Panel55.TabIndex = 2;
+            // 
+            // lblName_Account
+            // 
+            this.lblName_Account.BackColor = System.Drawing.Color.Transparent;
+            this.lblName_Account.Font = new System.Drawing.Font("Viner Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName_Account.Location = new System.Drawing.Point(63, 68);
+            this.lblName_Account.Name = "lblName_Account";
+            this.lblName_Account.Size = new System.Drawing.Size(72, 28);
+            this.lblName_Account.TabIndex = 1;
+            this.lblName_Account.Text = "Hello Lê";
+            // 
+            // ptbImage_Account
+            // 
+            this.ptbImage_Account.BorderRadius = 31;
+            this.ptbImage_Account.ImageRotate = 0F;
+            this.ptbImage_Account.Location = new System.Drawing.Point(68, 1);
+            this.ptbImage_Account.Name = "ptbImage_Account";
+            this.ptbImage_Account.Size = new System.Drawing.Size(62, 62);
+            this.ptbImage_Account.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbImage_Account.TabIndex = 0;
+            this.ptbImage_Account.TabStop = false;
+            // 
             // guna2Panel50
             // 
             this.guna2Panel50.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -1034,39 +1086,6 @@ namespace Management_Coffee_Shop
             this.btnOrder_Account.Text = "Order";
             this.btnOrder_Account.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnOrder_Account.Click += new System.EventHandler(this.btnOrder_Account_Click);
-            // 
-            // guna2Panel55
-            // 
-            this.guna2Panel55.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel55.BorderRadius = 15;
-            this.guna2Panel55.Controls.Add(this.lblName_Account);
-            this.guna2Panel55.Controls.Add(this.ptbImage_Account);
-            this.guna2Panel55.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(243)))), ((int)(((byte)(239)))));
-            this.guna2Panel55.Location = new System.Drawing.Point(4, 12);
-            this.guna2Panel55.Name = "guna2Panel55";
-            this.guna2Panel55.Size = new System.Drawing.Size(199, 96);
-            this.guna2Panel55.TabIndex = 2;
-            // 
-            // ptbImage_Account
-            // 
-            this.ptbImage_Account.BorderRadius = 31;
-            this.ptbImage_Account.ImageRotate = 0F;
-            this.ptbImage_Account.Location = new System.Drawing.Point(68, 1);
-            this.ptbImage_Account.Name = "ptbImage_Account";
-            this.ptbImage_Account.Size = new System.Drawing.Size(62, 62);
-            this.ptbImage_Account.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptbImage_Account.TabIndex = 0;
-            this.ptbImage_Account.TabStop = false;
-            // 
-            // lblName_Account
-            // 
-            this.lblName_Account.BackColor = System.Drawing.Color.Transparent;
-            this.lblName_Account.Font = new System.Drawing.Font("Viner Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName_Account.Location = new System.Drawing.Point(63, 68);
-            this.lblName_Account.Name = "lblName_Account";
-            this.lblName_Account.Size = new System.Drawing.Size(72, 28);
-            this.lblName_Account.TabIndex = 1;
-            this.lblName_Account.Text = "Hello Lê";
             // 
             // tabControl1
             // 
@@ -2453,7 +2472,7 @@ namespace Management_Coffee_Shop
             // 
             this.uC_product1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product1.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđ";
+    "đđđđđđđđđđđ";
             this.uC_product1.BTNReviews_Drinks = resources.GetString("uC_product1.BTNReviews_Drinks");
             this.uC_product1.Categories = null;
             this.uC_product1.ID = null;
@@ -2480,7 +2499,7 @@ namespace Management_Coffee_Shop
             // 
             this.uC_product2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product2.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđ";
+    "đđđđđđđđđđđ";
             this.uC_product2.BTNReviews_Drinks = resources.GetString("uC_product2.BTNReviews_Drinks");
             this.uC_product2.Categories = null;
             this.uC_product2.ID = null;
@@ -2507,7 +2526,7 @@ namespace Management_Coffee_Shop
             // 
             this.uC_product3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product3.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđ";
+    "đđđđđđđđđđđ";
             this.uC_product3.BTNReviews_Drinks = resources.GetString("uC_product3.BTNReviews_Drinks");
             this.uC_product3.Categories = null;
             this.uC_product3.ID = null;
@@ -2534,7 +2553,7 @@ namespace Management_Coffee_Shop
             // 
             this.uC_product4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product4.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđ";
+    "đđđđđđđđđđđ";
             this.uC_product4.BTNReviews_Drinks = resources.GetString("uC_product4.BTNReviews_Drinks");
             this.uC_product4.Categories = null;
             this.uC_product4.ID = null;
@@ -2561,7 +2580,7 @@ namespace Management_Coffee_Shop
             // 
             this.uC_product5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product5.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđ";
+    "đđđđđđđđđđđ";
             this.uC_product5.BTNReviews_Drinks = resources.GetString("uC_product5.BTNReviews_Drinks");
             this.uC_product5.Categories = null;
             this.uC_product5.ID = null;
@@ -2588,7 +2607,7 @@ namespace Management_Coffee_Shop
             // 
             this.uC_product6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product6.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđ";
+    "đđđđđđđđđđđ";
             this.uC_product6.BTNReviews_Drinks = resources.GetString("uC_product6.BTNReviews_Drinks");
             this.uC_product6.Categories = null;
             this.uC_product6.ID = null;
@@ -2615,7 +2634,7 @@ namespace Management_Coffee_Shop
             // 
             this.uC_product7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product7.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđ";
+    "đđđđđđđđđđđ";
             this.uC_product7.BTNReviews_Drinks = resources.GetString("uC_product7.BTNReviews_Drinks");
             this.uC_product7.Categories = null;
             this.uC_product7.ID = null;
@@ -2642,7 +2661,7 @@ namespace Management_Coffee_Shop
             // 
             this.uC_product8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product8.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđ";
+    "đđđđđđđđđđđ";
             this.uC_product8.BTNReviews_Drinks = resources.GetString("uC_product8.BTNReviews_Drinks");
             this.uC_product8.Categories = null;
             this.uC_product8.ID = null;
@@ -2669,7 +2688,7 @@ namespace Management_Coffee_Shop
             // 
             this.uC_product9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product9.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđ";
+    "đđđđđđđđđđđ";
             this.uC_product9.BTNReviews_Drinks = resources.GetString("uC_product9.BTNReviews_Drinks");
             this.uC_product9.Categories = null;
             this.uC_product9.ID = null;
@@ -2696,7 +2715,7 @@ namespace Management_Coffee_Shop
             // 
             this.uC_product10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product10.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđ";
+    "đđđđđđđđđđđ";
             this.uC_product10.BTNReviews_Drinks = resources.GetString("uC_product10.BTNReviews_Drinks");
             this.uC_product10.Categories = null;
             this.uC_product10.ID = null;
@@ -2723,7 +2742,7 @@ namespace Management_Coffee_Shop
             // 
             this.uC_product11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product11.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđ";
+    "đđđđđđđđđđđ";
             this.uC_product11.BTNReviews_Drinks = resources.GetString("uC_product11.BTNReviews_Drinks");
             this.uC_product11.Categories = null;
             this.uC_product11.ID = null;
@@ -2750,7 +2769,7 @@ namespace Management_Coffee_Shop
             // 
             this.uC_product12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product12.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđ";
+    "đđđđđđđđđđđ";
             this.uC_product12.BTNReviews_Drinks = resources.GetString("uC_product12.BTNReviews_Drinks");
             this.uC_product12.Categories = null;
             this.uC_product12.ID = null;
@@ -2777,7 +2796,7 @@ namespace Management_Coffee_Shop
             // 
             this.uC_product13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product13.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđ";
+    "đđđđđđđđđđđ";
             this.uC_product13.BTNReviews_Drinks = resources.GetString("uC_product13.BTNReviews_Drinks");
             this.uC_product13.Categories = null;
             this.uC_product13.ID = null;
@@ -2804,7 +2823,7 @@ namespace Management_Coffee_Shop
             // 
             this.uC_product14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product14.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđ";
+    "đđđđđđđđđđđ";
             this.uC_product14.BTNReviews_Drinks = resources.GetString("uC_product14.BTNReviews_Drinks");
             this.uC_product14.Categories = null;
             this.uC_product14.ID = null;
@@ -2831,7 +2850,7 @@ namespace Management_Coffee_Shop
             // 
             this.uC_product15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product15.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđ";
+    "đđđđđđđđđđđ";
             this.uC_product15.BTNReviews_Drinks = resources.GetString("uC_product15.BTNReviews_Drinks");
             this.uC_product15.Categories = null;
             this.uC_product15.ID = null;
@@ -2858,7 +2877,7 @@ namespace Management_Coffee_Shop
             // 
             this.uC_product16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.uC_product16.BTNPrice = "đđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđđ" +
-    "đđđđ";
+    "đđđđđđđđđđđ";
             this.uC_product16.BTNReviews_Drinks = resources.GetString("uC_product16.BTNReviews_Drinks");
             this.uC_product16.Categories = null;
             this.uC_product16.ID = null;
@@ -4271,11 +4290,11 @@ namespace Management_Coffee_Shop
             this.pnlSaveLogin.PerformLayout();
             this.pnlhomePage.ResumeLayout(false);
             this.pnlAccount.ResumeLayout(false);
-            this.guna2Panel50.ResumeLayout(false);
-            this.guna2Panel50.PerformLayout();
             this.guna2Panel55.ResumeLayout(false);
             this.guna2Panel55.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbImage_Account)).EndInit();
+            this.guna2Panel50.ResumeLayout(false);
+            this.guna2Panel50.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -4667,5 +4686,6 @@ namespace Management_Coffee_Shop
         private Guna.UI2.WinForms.Guna2Panel guna2Panel55;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblName_Account;
         private Guna.UI2.WinForms.Guna2PictureBox ptbImage_Account;
+        private Guna.UI2.WinForms.Guna2CircleButton btnExit;
     }
 }
