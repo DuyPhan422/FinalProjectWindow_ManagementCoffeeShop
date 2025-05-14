@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
@@ -19,9 +20,11 @@ namespace Management_Coffee_Shop
         private int seconds, minute;
         private ForgetPassWord infor= new ForgetPassWord();
         private string otp;
-        public FormForgetPassword()
+        private FormLogin formLogin;
+        public FormForgetPassword(FormLogin formLogin)
         {
             InitializeComponent();
+            this.formLogin = formLogin;
             this.FormBorderStyle = FormBorderStyle.None; // Xóa viền
             this.BackColor = Color.Magenta; // Chọn màu nền đặc biệt
             this.TransparencyKey = Color.Magenta;
@@ -35,24 +38,15 @@ namespace Management_Coffee_Shop
             if (txtUserName.Text == "") errorProvider1.SetError(txtUserName, "Phần này không được để trống");
             else
             {
-                using (SqlConnection connection = Connection.GetSqlConnection())
+                infor = ForgetPasswordDB.send_Request(infor, txtUserName.Text);
+                if (infor != null)
                 {
-                    connection.Open();
-                    string query = "SELECT UserName,PassWord,Email,Phone FROM account WHERE UserName=@UserName ";
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@UserName", txtUserName.Text);
-
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            if (reader.Read())// nếu có tài khoản
-                            {
-                                infor= new ForgetPassWord(reader["UserName"].ToString(),reader["PassWord"].ToString(),reader["Email"].ToString(),reader["Phone"].ToString());
-                                lblshowAccount.Text = $"Your Account: {txtUserName.Text}";
-                                TabControl.SelectedTab = tabPage5;
-                            }
-                        }
-                    }
+                    lblshowAccount.Text = $"Your Account: {txtUserName.Text}";
+                    TabControl.SelectedTab = tabPage5;
+                }
+                else
+                {
+                    MessageBox.Show("Username không tồn tại");
                 }
             }
         }
@@ -85,21 +79,10 @@ namespace Management_Coffee_Shop
             {
                 string new_password = infor.Create_PassWord();
                 MessageBox.Show($"Vui lòng không tiết lộ mật khẩu cho bất kì ai \nMật khẩu mới của bạn là {new_password}");
-                using (SqlConnection connection = Connection.GetSqlConnection())
-                {
-                    connection.Open();
-                    string query = "UPDATE account SET PassWord=@PassWord where UserName=@UserName";
-                    using (SqlCommand command = new SqlCommand(query,connection))
-                    {
-                        command.Parameters.AddWithValue("@UserName", infor.Get_UserName);
-                        command.Parameters.AddWithValue("@PassWord", new_password);
-                        command.ExecuteNonQuery();
-                    }
-                }
-                FormLogin formLogin = new FormLogin();
+                ForgetPasswordDB.update_password(infor, new_password);
                 formLogin.UserName = infor.Get_UserName ;
                 formLogin.PassWord = new_password;
-                this.Hide();
+                this.Close();
                 formLogin.ShowDialog();
             }
             else
@@ -165,6 +148,11 @@ namespace Management_Coffee_Shop
 
                 }
             }
+        }
+
+        private void btnExit_Click_1(object sender, EventArgs e)
+        {
+            formLogin.Close();
         }
 
         // bộ đếm thời gian

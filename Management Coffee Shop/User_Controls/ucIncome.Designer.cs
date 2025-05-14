@@ -29,18 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tlpTop = new System.Windows.Forms.TableLayoutPanel();
-            this.btnModifyDays = new Guna.UI2.WinForms.Guna2Button();
             this.pnlTotalProfit = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lblTotalProfit = new System.Windows.Forms.Label();
@@ -60,17 +59,20 @@
             this.lblNumberOfOrdersTop = new System.Windows.Forms.Label();
             this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
             this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
+            this.btnModifyDays = new Guna.UI2.WinForms.Guna2Button();
             this.chartGrossRevenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartTopProducts = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pnlProductUnderstock = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dgvUnderStock = new System.Windows.Forms.DataGridView();
             this.tlbFill = new System.Windows.Forms.TableLayoutPanel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlTotalCounter = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblNumberOfProducts = new System.Windows.Forms.Label();
-            this.lblNumberOfProductsTop = new System.Windows.Forms.Label();
+            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.lblNumberOfCustomersTop = new System.Windows.Forms.Label();
+            this.lblNumberOfProducts = new System.Windows.Forms.Label();
             this.lblNumberOfCustomers = new System.Windows.Forms.Label();
+            this.lblNumberOfProductsTop = new System.Windows.Forms.Label();
             this.elipseNumberOfOrders = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.elipseTotalRevenue = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.elipseTotalProfit = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -81,8 +83,6 @@
             this.elipseDtpStart = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.elipseDtpEnd = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.elipseUcIncome = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.tlpTop.SuspendLayout();
             this.pnlTotalProfit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
@@ -93,12 +93,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartGrossRevenue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartTopProducts)).BeginInit();
             this.pnlProductUnderstock.SuspendLayout();
+            this.guna2GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUnderStock)).BeginInit();
             this.tlbFill.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.pnlTotalCounter.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
-            this.guna2GroupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tlpTop
@@ -135,26 +135,6 @@
             this.tlpTop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpTop.Size = new System.Drawing.Size(1610, 118);
             this.tlpTop.TabIndex = 0;
-            // 
-            // btnModifyDays
-            // 
-            this.btnModifyDays.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(175)))), ((int)(((byte)(238)))));
-            this.btnModifyDays.BorderRadius = 12;
-            this.btnModifyDays.BorderThickness = 2;
-            this.btnModifyDays.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnModifyDays.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnModifyDays.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnModifyDays.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnModifyDays.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(161)))), ((int)(((byte)(246)))));
-            this.btnModifyDays.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModifyDays.ForeColor = System.Drawing.Color.Black;
-            this.btnModifyDays.Location = new System.Drawing.Point(557, 2);
-            this.btnModifyDays.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnModifyDays.Name = "btnModifyDays";
-            this.btnModifyDays.Size = new System.Drawing.Size(143, 52);
-            this.btnModifyDays.TabIndex = 9;
-            this.btnModifyDays.Text = "Modify";
-            this.btnModifyDays.Click += new System.EventHandler(this.btnModifyDays_Click_1);
             // 
             // pnlTotalProfit
             // 
@@ -418,91 +398,111 @@
             this.dtpEndDate.Size = new System.Drawing.Size(229, 31);
             this.dtpEndDate.TabIndex = 2;
             // 
+            // btnModifyDays
+            // 
+            this.btnModifyDays.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(175)))), ((int)(((byte)(238)))));
+            this.btnModifyDays.BorderRadius = 12;
+            this.btnModifyDays.BorderThickness = 2;
+            this.btnModifyDays.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnModifyDays.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnModifyDays.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnModifyDays.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnModifyDays.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(161)))), ((int)(((byte)(246)))));
+            this.btnModifyDays.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModifyDays.ForeColor = System.Drawing.Color.Black;
+            this.btnModifyDays.Location = new System.Drawing.Point(557, 2);
+            this.btnModifyDays.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnModifyDays.Name = "btnModifyDays";
+            this.btnModifyDays.Size = new System.Drawing.Size(143, 52);
+            this.btnModifyDays.TabIndex = 9;
+            this.btnModifyDays.Text = "Modify";
+            this.btnModifyDays.Click += new System.EventHandler(this.btnModifyDays_Click_1);
+            // 
             // chartGrossRevenue
             // 
             this.chartGrossRevenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            chartArea3.AxisX.IsMarginVisible = false;
-            chartArea3.AxisX.LineColor = System.Drawing.Color.White;
-            chartArea3.AxisX.LineWidth = 0;
-            chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea3.AxisX.MajorGrid.LineWidth = 0;
-            chartArea3.AxisX.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
-            chartArea3.AxisX.MajorTickMark.Size = 3F;
-            chartArea3.AxisY.LabelStyle.Format = "${0}";
-            chartArea3.AxisY.LineColor = System.Drawing.Color.White;
-            chartArea3.AxisY.LineWidth = 0;
-            chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
-            chartArea3.AxisY.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
-            chartArea3.BorderColor = System.Drawing.Color.SeaShell;
-            chartArea3.Name = "ChartArea1";
-            this.chartGrossRevenue.ChartAreas.Add(chartArea3);
+            chartArea1.AxisX.IsMarginVisible = false;
+            chartArea1.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.LineWidth = 0;
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.MajorGrid.LineWidth = 0;
+            chartArea1.AxisX.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
+            chartArea1.AxisX.MajorTickMark.Size = 3F;
+            chartArea1.AxisY.LabelStyle.Format = "${0}";
+            chartArea1.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisY.LineWidth = 0;
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
+            chartArea1.AxisY.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
+            chartArea1.BorderColor = System.Drawing.Color.SeaShell;
+            chartArea1.Name = "ChartArea1";
+            this.chartGrossRevenue.ChartAreas.Add(chartArea1);
             this.chartGrossRevenue.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            legend3.IsTextAutoFit = false;
-            legend3.Name = "Legend1";
-            this.chartGrossRevenue.Legends.Add(legend3);
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            this.chartGrossRevenue.Legends.Add(legend1);
             this.chartGrossRevenue.Location = new System.Drawing.Point(4, 5);
             this.chartGrossRevenue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 0);
             this.chartGrossRevenue.Name = "chartGrossRevenue";
-            series3.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
-            series3.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(235)))));
-            series3.BorderColor = System.Drawing.Color.Lime;
-            series3.BorderWidth = 4;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
-            series3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(228)))), ((int)(((byte)(161)))));
-            series3.LabelForeColor = System.Drawing.Color.WhiteSmoke;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chartGrossRevenue.Series.Add(series3);
+            series1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
+            series1.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(235)))));
+            series1.BorderColor = System.Drawing.Color.Lime;
+            series1.BorderWidth = 4;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
+            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(228)))), ((int)(((byte)(161)))));
+            series1.LabelForeColor = System.Drawing.Color.WhiteSmoke;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartGrossRevenue.Series.Add(series1);
             this.chartGrossRevenue.Size = new System.Drawing.Size(877, 441);
             this.chartGrossRevenue.TabIndex = 1;
             this.chartGrossRevenue.Text = "chart1";
-            title3.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title3.Name = "Title1";
-            title3.Text = "Gross Revenue";
-            this.chartGrossRevenue.Titles.Add(title3);
+            title1.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.Name = "Title1";
+            title1.Text = "Gross Revenue";
+            this.chartGrossRevenue.Titles.Add(title1);
             // 
             // chartTopProducts
             // 
             this.chartTopProducts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            chartArea4.BackColor = System.Drawing.Color.White;
-            chartArea4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            chartArea4.BorderWidth = 5;
-            chartArea4.Name = "ChartArea1";
-            this.chartTopProducts.ChartAreas.Add(chartArea4);
+            chartArea2.BackColor = System.Drawing.Color.White;
+            chartArea2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            chartArea2.BorderWidth = 5;
+            chartArea2.Name = "ChartArea1";
+            this.chartTopProducts.ChartAreas.Add(chartArea2);
             this.chartTopProducts.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend4.ForeColor = System.Drawing.Color.White;
-            legend4.Name = "Legend1";
-            this.chartTopProducts.Legends.Add(legend4);
+            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend2.ForeColor = System.Drawing.Color.White;
+            legend2.Name = "Legend1";
+            this.chartTopProducts.Legends.Add(legend2);
             this.chartTopProducts.Location = new System.Drawing.Point(889, 5);
             this.chartTopProducts.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chartTopProducts.Name = "chartTopProducts";
             this.tlbFill.SetRowSpan(this.chartTopProducts, 2);
-            series4.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalLeft;
-            series4.BackImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            series4.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            series4.BorderColor = System.Drawing.Color.WhiteSmoke;
-            series4.BorderWidth = 6;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series4.Color = System.Drawing.Color.White;
-            series4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            series4.IsValueShownAsLabel = true;
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chartTopProducts.Series.Add(series4);
+            series2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalLeft;
+            series2.BackImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            series2.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            series2.BorderColor = System.Drawing.Color.WhiteSmoke;
+            series2.BorderWidth = 6;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series2.Color = System.Drawing.Color.White;
+            series2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            series2.IsValueShownAsLabel = true;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartTopProducts.Series.Add(series2);
             this.chartTopProducts.Size = new System.Drawing.Size(717, 883);
             this.chartTopProducts.TabIndex = 2;
             this.chartTopProducts.Text = "chart2";
-            title4.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title4.Name = "Top 5 Products";
-            title4.Text = "Top 5 Products";
-            this.chartTopProducts.Titles.Add(title4);
+            title2.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title2.Name = "Top 5 Products";
+            title2.Text = "Top 5 Products";
+            this.chartTopProducts.Titles.Add(title2);
             // 
             // pnlProductUnderstock
             // 
@@ -515,6 +515,18 @@
             this.pnlProductUnderstock.Size = new System.Drawing.Size(626, 439);
             this.pnlProductUnderstock.TabIndex = 4;
             // 
+            // guna2GroupBox2
+            // 
+            this.guna2GroupBox2.Controls.Add(this.dgvUnderStock);
+            this.guna2GroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2GroupBox2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.guna2GroupBox2.ForeColor = System.Drawing.Color.Black;
+            this.guna2GroupBox2.Location = new System.Drawing.Point(0, 0);
+            this.guna2GroupBox2.Name = "guna2GroupBox2";
+            this.guna2GroupBox2.Size = new System.Drawing.Size(626, 439);
+            this.guna2GroupBox2.TabIndex = 3;
+            this.guna2GroupBox2.Text = "Products Understock";
+            // 
             // dgvUnderStock
             // 
             this.dgvUnderStock.AllowUserToAddRows = false;
@@ -525,23 +537,23 @@
             this.dgvUnderStock.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvUnderStock.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvUnderStock.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.MediumTurquoise;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumTurquoise;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUnderStock.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumTurquoise;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MediumTurquoise;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUnderStock.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvUnderStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvUnderStock.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvUnderStock.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvUnderStock.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvUnderStock.EnableHeadersVisualStyles = false;
             this.dgvUnderStock.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
@@ -601,47 +613,62 @@
             this.pnlTotalCounter.Size = new System.Drawing.Size(247, 439);
             this.pnlTotalCounter.TabIndex = 5;
             // 
+            // guna2GroupBox1
+            // 
+            this.guna2GroupBox1.Controls.Add(this.lblNumberOfCustomersTop);
+            this.guna2GroupBox1.Controls.Add(this.lblNumberOfProducts);
+            this.guna2GroupBox1.Controls.Add(this.lblNumberOfCustomers);
+            this.guna2GroupBox1.Controls.Add(this.lblNumberOfProductsTop);
+            this.guna2GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
+            this.guna2GroupBox1.Location = new System.Drawing.Point(0, 0);
+            this.guna2GroupBox1.Name = "guna2GroupBox1";
+            this.guna2GroupBox1.Size = new System.Drawing.Size(244, 439);
+            this.guna2GroupBox1.TabIndex = 13;
+            this.guna2GroupBox1.Text = "Total Counter";
+            // 
+            // lblNumberOfCustomersTop
+            // 
+            this.lblNumberOfCustomersTop.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumberOfCustomersTop.ForeColor = System.Drawing.Color.Black;
+            this.lblNumberOfCustomersTop.Location = new System.Drawing.Point(-1, 40);
+            this.lblNumberOfCustomersTop.Name = "lblNumberOfCustomersTop";
+            this.lblNumberOfCustomersTop.Size = new System.Drawing.Size(242, 34);
+            this.lblNumberOfCustomersTop.TabIndex = 8;
+            this.lblNumberOfCustomersTop.Text = "Number of Customers";
+            // 
             // lblNumberOfProducts
             // 
             this.lblNumberOfProducts.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.lblNumberOfProducts.ForeColor = System.Drawing.Color.Black;
-            this.lblNumberOfProducts.Location = new System.Drawing.Point(-3, 174);
+            this.lblNumberOfProducts.Location = new System.Drawing.Point(3, 160);
             this.lblNumberOfProducts.Name = "lblNumberOfProducts";
             this.lblNumberOfProducts.Size = new System.Drawing.Size(117, 35);
             this.lblNumberOfProducts.TabIndex = 12;
             this.lblNumberOfProducts.Text = "100.000";
             this.lblNumberOfProducts.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblNumberOfProductsTop
-            // 
-            this.lblNumberOfProductsTop.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumberOfProductsTop.ForeColor = System.Drawing.Color.Black;
-            this.lblNumberOfProductsTop.Location = new System.Drawing.Point(-3, 135);
-            this.lblNumberOfProductsTop.Name = "lblNumberOfProductsTop";
-            this.lblNumberOfProductsTop.Size = new System.Drawing.Size(212, 39);
-            this.lblNumberOfProductsTop.TabIndex = 10;
-            this.lblNumberOfProductsTop.Text = "Number of Products";
-            // 
-            // lblNumberOfCustomersTop
-            // 
-            this.lblNumberOfCustomersTop.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumberOfCustomersTop.ForeColor = System.Drawing.Color.Black;
-            this.lblNumberOfCustomersTop.Location = new System.Drawing.Point(-3, 56);
-            this.lblNumberOfCustomersTop.Name = "lblNumberOfCustomersTop";
-            this.lblNumberOfCustomersTop.Size = new System.Drawing.Size(242, 34);
-            this.lblNumberOfCustomersTop.TabIndex = 8;
-            this.lblNumberOfCustomersTop.Text = "Number of Customers";
-            // 
             // lblNumberOfCustomers
             // 
             this.lblNumberOfCustomers.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.lblNumberOfCustomers.ForeColor = System.Drawing.Color.Black;
-            this.lblNumberOfCustomers.Location = new System.Drawing.Point(-2, 90);
+            this.lblNumberOfCustomers.Location = new System.Drawing.Point(1, 74);
             this.lblNumberOfCustomers.Name = "lblNumberOfCustomers";
             this.lblNumberOfCustomers.Size = new System.Drawing.Size(117, 35);
             this.lblNumberOfCustomers.TabIndex = 7;
             this.lblNumberOfCustomers.Text = "100.000";
             this.lblNumberOfCustomers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblNumberOfProductsTop
+            // 
+            this.lblNumberOfProductsTop.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumberOfProductsTop.ForeColor = System.Drawing.Color.Black;
+            this.lblNumberOfProductsTop.Location = new System.Drawing.Point(3, 121);
+            this.lblNumberOfProductsTop.Name = "lblNumberOfProductsTop";
+            this.lblNumberOfProductsTop.Size = new System.Drawing.Size(212, 39);
+            this.lblNumberOfProductsTop.TabIndex = 10;
+            this.lblNumberOfProductsTop.Text = "Number of Products";
             // 
             // elipseNumberOfOrders
             // 
@@ -693,33 +720,6 @@
             this.elipseUcIncome.BorderRadius = 13;
             this.elipseUcIncome.TargetControl = this;
             // 
-            // guna2GroupBox1
-            // 
-            this.guna2GroupBox1.Controls.Add(this.lblNumberOfCustomersTop);
-            this.guna2GroupBox1.Controls.Add(this.lblNumberOfProducts);
-            this.guna2GroupBox1.Controls.Add(this.lblNumberOfCustomers);
-            this.guna2GroupBox1.Controls.Add(this.lblNumberOfProductsTop);
-            this.guna2GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2GroupBox1.Location = new System.Drawing.Point(0, 0);
-            this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(244, 439);
-            this.guna2GroupBox1.TabIndex = 13;
-            this.guna2GroupBox1.Text = "Total Counter";
-            // 
-            // guna2GroupBox2
-            // 
-            this.guna2GroupBox2.Controls.Add(this.dgvUnderStock);
-            this.guna2GroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2GroupBox2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.guna2GroupBox2.ForeColor = System.Drawing.Color.Black;
-            this.guna2GroupBox2.Location = new System.Drawing.Point(0, 0);
-            this.guna2GroupBox2.Name = "guna2GroupBox2";
-            this.guna2GroupBox2.Size = new System.Drawing.Size(626, 439);
-            this.guna2GroupBox2.TabIndex = 3;
-            this.guna2GroupBox2.Text = "Products Understock";
-            // 
             // ucIncome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -741,12 +741,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartGrossRevenue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartTopProducts)).EndInit();
             this.pnlProductUnderstock.ResumeLayout(false);
+            this.guna2GroupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUnderStock)).EndInit();
             this.tlbFill.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
             this.pnlTotalCounter.ResumeLayout(false);
             this.guna2GroupBox1.ResumeLayout(false);
-            this.guna2GroupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

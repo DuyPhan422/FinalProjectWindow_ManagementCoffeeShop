@@ -43,6 +43,7 @@
             this.elipseFrmManager = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.elipsePnlSearch = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.elipsePnlPage = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.pnlPage2 = new Guna.UI2.WinForms.Guna2Panel();
             this.elipseBtnProduct = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btnProduct = new System.Windows.Forms.Button();
             this.elipseBtnIncome = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -59,7 +60,6 @@
             this.pnl_test = new Guna.UI2.WinForms.Guna2Panel();
             this.pbSlide2 = new System.Windows.Forms.PictureBox();
             this.pbSlide3 = new System.Windows.Forms.PictureBox();
-            this.pnlPage2 = new Guna.UI2.WinForms.Guna2Panel();
             this.TLP_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -86,7 +86,7 @@
             // 
             // TLP_top
             // 
-            this.TLP_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(240)))), ((int)(((byte)(197)))));
+            this.TLP_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(209)))));
             this.TLP_top.ColumnCount = 6;
             this.TLP_top.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.TLP_top.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
@@ -180,6 +180,7 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(209)))));
             this.guna2Panel1.Controls.Add(this.lblDate);
             this.guna2Panel1.Controls.Add(this.lblTimer);
             this.guna2Panel1.Location = new System.Drawing.Point(3, 3);
@@ -225,6 +226,16 @@
             // 
             this.elipsePnlPage.BorderRadius = 12;
             this.elipsePnlPage.TargetControl = this.pnlPage2;
+            // 
+            // pnlPage2
+            // 
+            this.pnlPage2.BackColor = System.Drawing.Color.White;
+            this.pnlPage2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlPage2.Location = new System.Drawing.Point(217, 0);
+            this.pnlPage2.Name = "pnlPage2";
+            this.pnlPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.pnlPage2.Size = new System.Drawing.Size(1709, 1011);
+            this.pnlPage2.TabIndex = 3;
             // 
             // elipseBtnProduct
             // 
@@ -375,7 +386,7 @@
             // 
             // pnl_test
             // 
-            this.pnl_test.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(240)))), ((int)(((byte)(197)))));
+            this.pnl_test.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(209)))));
             this.pnl_test.Controls.Add(this.btnStaff);
             this.pnl_test.Controls.Add(this.btnIncome);
             this.pnl_test.Controls.Add(this.btnProduct);
@@ -410,16 +421,6 @@
             this.pbSlide3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbSlide3.TabIndex = 4;
             this.pbSlide3.TabStop = false;
-            // 
-            // pnlPage2
-            // 
-            this.pnlPage2.BackColor = System.Drawing.Color.White;
-            this.pnlPage2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPage2.Location = new System.Drawing.Point(217, 0);
-            this.pnlPage2.Name = "pnlPage2";
-            this.pnlPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.pnlPage2.Size = new System.Drawing.Size(1709, 1011);
-            this.pnlPage2.TabIndex = 3;
             // 
             // formManager
             // 

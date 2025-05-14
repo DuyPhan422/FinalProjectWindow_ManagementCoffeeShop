@@ -191,7 +191,7 @@ namespace Management_Coffee_Shop
         private void btnForgetpassword_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormForgetPassword formforget = new FormForgetPassword();
+            FormForgetPassword formforget = new FormForgetPassword(this);
             formforget.ShowDialog();
         }
 

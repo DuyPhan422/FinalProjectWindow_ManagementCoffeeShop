@@ -170,6 +170,7 @@
     <Compile Include="Customer.cs" />
     <Compile Include="Drinks.cs" />
     <Compile Include="Employee.cs" />
+    <Compile Include="ForgetPasswordDB.cs" />
     <Compile Include="FormEmployee.cs">
       <SubType>Form</SubType>
     </Compile>

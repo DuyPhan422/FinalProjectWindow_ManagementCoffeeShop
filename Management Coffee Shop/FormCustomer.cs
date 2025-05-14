@@ -862,7 +862,7 @@ namespace Management_Coffee_Shop
         }
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
-            FormForgetPassword formForgetPassword = new FormForgetPassword();
+            FormForgetPassword formForgetPassword = new FormForgetPassword(FormLogin);
             formForgetPassword.change_TabPage();
             formForgetPassword.Show();
             this.Hide();
