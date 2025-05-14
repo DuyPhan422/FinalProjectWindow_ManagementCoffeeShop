@@ -233,9 +233,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(228)))), ((int)(((byte)(161)))));
-            this.label1.Location = new System.Drawing.Point(952, 0);
+            this.label1.Location = new System.Drawing.Point(967, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(216, 60);
+            this.label1.Size = new System.Drawing.Size(186, 60);
             this.label1.TabIndex = 6;
             this.label1.Text = "Staff Together";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -531,7 +531,7 @@
             this.lblFirstName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.lblFirstName.Location = new System.Drawing.Point(3, 119);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(115, 28);
+            this.lblFirstName.Size = new System.Drawing.Size(97, 23);
             this.lblFirstName.TabIndex = 4;
             this.lblFirstName.Text = "First Name";
             this.lblFirstName.Click += new System.EventHandler(this.lblFirstName_Click);
@@ -568,7 +568,7 @@
             this.lblLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.lblLastName.Location = new System.Drawing.Point(3, 210);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(112, 28);
+            this.lblLastName.Size = new System.Drawing.Size(94, 23);
             this.lblLastName.TabIndex = 6;
             this.lblLastName.Text = "Last Name";
             this.lblLastName.Click += new System.EventHandler(this.lblLastName_Click);
@@ -604,7 +604,7 @@
             this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.lblEmail.Location = new System.Drawing.Point(3, 300);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(64, 28);
+            this.lblEmail.Size = new System.Drawing.Size(54, 23);
             this.lblEmail.TabIndex = 9;
             this.lblEmail.Text = "Email";
             this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
@@ -674,7 +674,7 @@
             this.lblBirthday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.lblBirthday.Location = new System.Drawing.Point(3, 450);
             this.lblBirthday.Name = "lblBirthday";
-            this.lblBirthday.Size = new System.Drawing.Size(94, 28);
+            this.lblBirthday.Size = new System.Drawing.Size(79, 23);
             this.lblBirthday.TabIndex = 13;
             this.lblBirthday.Text = "Birthday";
             this.lblBirthday.Click += new System.EventHandler(this.lblBirthday_Click);
@@ -703,7 +703,7 @@
             this.lblPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.lblPhone.Location = new System.Drawing.Point(3, 510);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(71, 28);
+            this.lblPhone.Size = new System.Drawing.Size(59, 23);
             this.lblPhone.TabIndex = 15;
             this.lblPhone.Text = "Phone";
             this.lblPhone.Click += new System.EventHandler(this.lblPhone_Click);
@@ -715,7 +715,7 @@
             this.lblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.lblAddress.Location = new System.Drawing.Point(3, 600);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(87, 28);
+            this.lblAddress.Size = new System.Drawing.Size(74, 23);
             this.lblAddress.TabIndex = 18;
             this.lblAddress.Text = "Address";
             this.lblAddress.Click += new System.EventHandler(this.lblAddress_Click);
@@ -727,7 +727,7 @@
             this.lblSalary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.lblSalary.Location = new System.Drawing.Point(3, 750);
             this.lblSalary.Name = "lblSalary";
-            this.lblSalary.Size = new System.Drawing.Size(71, 28);
+            this.lblSalary.Size = new System.Drawing.Size(60, 23);
             this.lblSalary.TabIndex = 17;
             this.lblSalary.Text = "Salary";
             this.lblSalary.Click += new System.EventHandler(this.lblSalary_Click);
@@ -739,7 +739,7 @@
             this.lblDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.lblDescription.Location = new System.Drawing.Point(3, 870);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(121, 28);
+            this.lblDescription.Size = new System.Drawing.Size(102, 23);
             this.lblDescription.TabIndex = 19;
             this.lblDescription.Text = "Description";
             this.lblDescription.Click += new System.EventHandler(this.lblDescription_Click);
@@ -767,7 +767,7 @@
             this.lblID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.lblID.Location = new System.Drawing.Point(79, 20);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(33, 28);
+            this.lblID.Size = new System.Drawing.Size(28, 23);
             this.lblID.TabIndex = 5;
             this.lblID.Text = "ID";
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -929,10 +929,10 @@
             this.colID.DataPropertyName = "ID";
             this.colID.Frozen = true;
             this.colID.HeaderText = "ID";
-            this.colID.MinimumWidth = 50;
+            this.colID.MinimumWidth = 80;
             this.colID.Name = "colID";
             this.colID.ReadOnly = true;
-            this.colID.Width = 50;
+            this.colID.Width = 80;
             // 
             // colFirstName
             // 
@@ -944,7 +944,7 @@
             this.colFirstName.MinimumWidth = 120;
             this.colFirstName.Name = "colFirstName";
             this.colFirstName.ReadOnly = true;
-            this.colFirstName.Width = 121;
+            this.colFirstName.Width = 120;
             // 
             // colLastName
             // 
@@ -967,6 +967,7 @@
             this.colGender.MinimumWidth = 6;
             this.colGender.Name = "colGender";
             this.colGender.ReadOnly = true;
+            this.colGender.Width = 84;
             // 
             // colBirthDate
             // 
@@ -977,7 +978,7 @@
             this.colBirthDate.MinimumWidth = 6;
             this.colBirthDate.Name = "colBirthDate";
             this.colBirthDate.ReadOnly = true;
-            this.colBirthDate.Width = 116;
+            this.colBirthDate.Width = 99;
             // 
             // colEmail
             // 
@@ -1000,6 +1001,7 @@
             this.colPhone.MinimumWidth = 100;
             this.colPhone.Name = "colPhone";
             this.colPhone.ReadOnly = true;
+            this.colPhone.Width = 140;
             // 
             // colAddress
             // 
@@ -1007,9 +1009,10 @@
             this.colAddress.FillWeight = 200F;
             this.colAddress.Frozen = true;
             this.colAddress.HeaderText = "Address";
-            this.colAddress.MinimumWidth = 100;
+            this.colAddress.MinimumWidth = 300;
             this.colAddress.Name = "colAddress";
             this.colAddress.ReadOnly = true;
+            this.colAddress.Width = 300;
             // 
             // colSalary
             // 

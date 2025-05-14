@@ -122,9 +122,11 @@ namespace Management_Coffee_Shop
                 int selectedIndex = dgvProduct.SelectedRows[0].Index;
                 DataRow selectedRow = dt.Rows[selectedIndex];
 
-                // Lấy ID sản phẩm
-                string idStr = selectedRow["ID"].ToString().Trim();
-                selectedProductId = int.Parse(idStr.Substring(3));
+                string fullId = selectedRow["ID"]?.ToString()?.Trim() ?? "";
+                selectedProductId = int.Parse(fullId.Substring(3)); // Lấy 4 chữ số cuối
+
+                // Hiển thị ID lên lblID với định dạng "ID:000xxxx"
+                lblID.Text = $"ID:{fullId}";
 
                 // Tải dữ liệu vào các control
                 txtName.Text = selectedRow["Name"]?.ToString().Trim() ?? "";
@@ -194,6 +196,7 @@ namespace Management_Coffee_Shop
             else
             {
                 // Xóa dữ liệu nếu không có sản phẩm được chọn
+                lblID.Text = "ID:"; // Đặt lại lblID
                 txtName.Text = "";
                 txtPrice.Text = "";
                 cbbCategory.SelectedIndex = -1;
@@ -916,6 +919,16 @@ namespace Management_Coffee_Shop
         {
             pbAvatar.Image = null;
             selectedImagePath = null;
+
+        }
+
+        private void lblStatus_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblID_Click(object sender, EventArgs e)
+        {
 
         }
     }
