@@ -21,6 +21,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 using static TheArtOfDevHtmlRenderer.Adapters.RGraphicsPath;
 using System.IO.Pipelines;
+using Twilio.TwiML.Voice;
 
 namespace Management_Coffee_Shop
 {
@@ -482,6 +483,29 @@ namespace Management_Coffee_Shop
         {
             if (int.Parse(new string(lblMoney_Sum.Text.Where(char.IsDigit).ToArray())) != 0)
             {
+                string path = @"..\..\EmployeeToCustomer.txt";
+                string[] lines = File.ReadAllLines(path);
+                foreach (var line in lines)
+                {
+                    History_Shopping history = System.Text.Json.JsonSerializer.Deserialize<History_Shopping>(line);
+                    if (history.UserId == customer.ID)
+                    {
+                        MessageBox.Show("Bạn hiện đã có đơn hàng đang tới rồi nè");
+                        return;
+                    }
+                }
+                path = @"..\..\CustomerToEmployee.txt";
+                lines = new string[0];
+                lines =File.ReadAllLines(path);
+                foreach (var line in lines)
+                {
+                    History_Shopping history = System.Text.Json.JsonSerializer.Deserialize<History_Shopping>(line);
+                    if (history.UserId == customer.ID)
+                    {
+                        MessageBox.Show("Bạn hiện đã đặt đơn hàng rồi nè");
+                        return;
+                    }
+                }
                 List<Payment> paymentsToRemove = flpPayment.Controls.OfType<Payment>().ToList();
                 foreach (Payment p in paymentsToRemove)
                 {
@@ -501,7 +525,6 @@ namespace Management_Coffee_Shop
                         count--;
                     }
                 }
-                string path= @"..\..\CustomerToEmployee.txt";
                 Dictionary<string, ShoppingItem> list_shopping = new Dictionary<string, ShoppingItem>();
                 foreach (Transport transport in flpShoppingCart.Controls)
                 {
@@ -513,6 +536,7 @@ namespace Management_Coffee_Shop
                     };
                 }
                 customer.Order(current_ID, list_shopping, lblMoney_Sum.Text);
+                current_ID += 1;
                 if (count == 0)
                 {
                     pnlBill.Hide();
@@ -665,7 +689,7 @@ namespace Management_Coffee_Shop
             payment.BTNCategories = Categories;
             payment.BTNName = Name;
             payment.LBLPrice = Price;
-            payment.LBLSUM = Price;
+            payment.LBLSUM = Price; 
             payment.LBLQTV = Amount;
             payment.btnDown_clicked += BTNUpDown;
             payment.btnUp_clicked += BTNUpDown;
@@ -881,7 +905,7 @@ namespace Management_Coffee_Shop
                     button.BackColor= Color.Transparent;
                     button.ForeColor = Color.Black;
                     button.Font= new Font("Segoe UI", 12f);
-                    button.Text = userName_List[i];
+                    //button.Text = userName_List[i];
                     button.Image = Image.FromFile(@"..\..\Management coffee shop_image\black-and-white-stockportable-network-account-icon-11553436383dwuayhjyvo-removebg-preview.png");
                     button.ImageSize = new Size(25, 25); 
                     button.ImageAlign = HorizontalAlignment.Left; 
@@ -966,11 +990,23 @@ namespace Management_Coffee_Shop
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtName_profile.Text) || string.IsNullOrEmpty(txtAddress_profile.Text) || string.IsNullOrEmpty(txtDate_profile.Text) || string.IsNullOrEmpty(txtEmail_profile.Text))
+            {
+                MessageBox.Show("không được để trống");
+                return;
+            }else if (txtName_profile.Text.Length > 20)
+            {
+                MessageBox.Show("Lỗi độ dài tên quá dài");
+                return;
+            } else if (txtDate_profile.Text.Length > 10)
+            {
+                MessageBox.Show("Lỗi độ dài");
+                return;
+            } 
             DialogResult result=MessageBox.Show("bạn có chắc muốn lưu không","Lưu",MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-                string temp_Image=customer.Image;
-                customer.Image=new_image;
+                if(new_image!=null) customer.Image=new_image;
                 Drinks.update_User(customer.ID,txtName_profile.Text,txtDate_profile.Text,txtAddress_profile.Text,txtEmail_profile.Text,customer.Image);
                 customer.Name = txtName_profile.Text;
                 customer.Date = txtDate_profile.Text;
@@ -983,7 +1019,7 @@ namespace Management_Coffee_Shop
                 lblName_Account.Location = new Point((199 - lblName_Account.Location.X) / 2, lblName_Account.Location.Y);
                 new_image = null;
                 btnCancel.PerformClick();
-            }
+            }else btnCancel.PerformClick();
         }
 
         private void btnOur_Location_HomePage_Click(object sender, EventArgs e)
@@ -1024,6 +1060,12 @@ namespace Management_Coffee_Shop
                 string file=Path.GetFileName(selectedFilePath);
                 string target_Folder = @"..\..\Management coffee shop_image\Image_User";
                 new_image= Path.Combine(target_Folder, file);
+                if (new_image.Length>100)
+                {
+                    MessageBox.Show("Hình ảnh không hợp lệ");
+                    new_image = null;
+                    return;
+                }
                 File.Copy(selectedFilePath, new_image, true);
                 ptbImage_Profile.Image=Image.FromFile(new_image);
             }

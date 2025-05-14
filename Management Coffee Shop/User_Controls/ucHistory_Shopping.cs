@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,7 @@ namespace Management_Coffee_Shop.User_Controls
         {
             lblCode.Text = $"# {order.OrderId}";
             lblDate.Text = $"{order.OrderDate:dd/MM/yyyy HH:mm}";
+            lblSum.Text= string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", order.Sum); 
             foreach (var kvp in order.list_shopping)
             {
                 FormCustomer.History_Shopping.ShoppingItem value = kvp.Value;

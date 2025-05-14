@@ -184,7 +184,7 @@ namespace Management_Coffee_Shop
         private void btnRegister_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormRegister formregister = new FormRegister();
+            FormRegister formregister = new FormRegister(this);
             formregister.ShowDialog();
         }
 

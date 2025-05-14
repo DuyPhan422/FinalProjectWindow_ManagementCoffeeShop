@@ -19,10 +19,12 @@ namespace Management_Coffee_Shop
         private string otp;
         private Register register=new Register();
         private bool flag = true;
-        public FormRegister()
+        private FormLogin formLogin;
+        public FormRegister(FormLogin login)
         {
             InitializeComponent();
             timer1.Interval = 1000;
+            this.formLogin = login;
         }
         private void FormRegister_Load(object sender, EventArgs e)
         {
@@ -69,26 +71,16 @@ namespace Management_Coffee_Shop
             {
                 if (txtPassWord.Text.Length > 7 && register.checkNumber(txtPassWord.Text) && register.checkUpperChar(txtPassWord.Text) && register.checkSpecialChar(txtPassWord.Text)) // pass phải có độ dài là 8 kí tự
                 {
-                    using (SqlConnection connection = Connection.GetSqlConnection())
+                    bool check=RegisterDB.Check(txtUserName.Text.Trim(),txtEmail.Text.Trim());
+                    if (check)
                     {
-                        connection.Open();
-                        string query = "SELECT Count(*) FROM account WHERE UserName=@UserName ";
-                        using (SqlCommand command = new SqlCommand(query, connection))
-                        {
-                            command.Parameters.AddWithValue("@UserName", txtUserName.Text);
-                            int result = Convert.ToInt32(command.ExecuteScalar());
-                            if (result == 0)
-                            {
-                                guna2TabControl1.SelectedTab = tabPage2;
-                                otp=await register.send_OTP(txtEmail.Text);
-                                seconds = 0;
-                                minute = 3;
-                                timer1.Start();
-                            }
-                            else lblError.Text= "Tài khoản này đã tồn tại";
-                        }
-                        connection.Close();
+                        guna2TabControl1.SelectedTab = tabPage2;
+                        seconds = 0;
+                        minute = 3;
+                        timer1.Start();
+                        otp = await register.send_OTP(txtEmail.Text);
                     }
+                    else lblError.Text = "Tài khoản hoặc Email đã tồn tại";
                 }
                 else
                 {
@@ -114,49 +106,13 @@ namespace Management_Coffee_Shop
             {
                 if (int.Parse(txtOtp.Text) == int.Parse(otp))
                 {
-                    using (SqlConnection connection = Connection.GetSqlConnection())
-                    {
-                        string new_Id = "C";
-                        Random random = new Random();
-                        flag = true;
-                        int result = 1;
-                        connection.Open();
-                        string query = "SELECT Count(*) FROM account WHERE Id=@Id ";
-                        using (SqlCommand command = new SqlCommand(query, connection))
-                        {
-                            while (result!=0) {
-                                new_Id += random.Next(100000, 1000000).ToString();
-                                command.Parameters.AddWithValue("@Id", new_Id);
-                                result = Convert.ToInt32(command.ExecuteScalar());
-                                if (result != 0) new_Id = "C";
-                            }
-                        }
-                        query = "INSERT INTO account (Id,UserName,PassWord,Email,Phone) VALUES (@Id,@UserName,@PassWord,@Email,@Phone)";
-                        using (SqlCommand command = new SqlCommand(query, connection))
-                        {
-                            command.Parameters.AddWithValue("@Id",new_Id);
-                            command.Parameters.AddWithValue("@UserName",txtUserName.Text);
-                            command.Parameters.AddWithValue("@PassWord",txtPassWord.Text);
-                            command.Parameters.AddWithValue("@Email",txtEmail.Text);
-                            command.Parameters.AddWithValue("@Phone",txtPhone.Text);
-                            int rowsAffected = command.ExecuteNonQuery();
-                        }
-                        query = "INSERT INTO customerInformation (Id,Name,Address) VALUES (@Id,@Name,@Address)";
-                        using (SqlCommand command = new SqlCommand(query, connection))
-                        {
-                            command.Parameters.AddWithValue("@Id", new_Id);
-                            command.Parameters.AddWithValue("@Name", txtName.Text);
-                            command.Parameters.AddWithValue("@Address", txtAddress.Text);
-                            int rowsAffected = command.ExecuteNonQuery();
-                        }
-                        connection.Close();
-                    }
-                    this.Hide();
-                    FormLogin formLogin = new FormLogin();
+                    RegisterDB.Create_Account(txtUserName.Text,txtPassWord.Text,txtEmail.Text,txtPhone.Text,txtName.Text,txtAddress.Text);
                     formLogin.UserName = txtUserName.Text;
                     formLogin.PassWord = txtPassWord.Text;
-                    formLogin.ShowDialog();
-                }else
+                    formLogin.Show();
+                    this.Close();
+                }
+                else
                 {
                     lblThongBao.Text = "OTP bạn nhập không đúng";
                 }

@@ -4,10 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Twilio.TwiML.Voice;
 
 namespace Management_Coffee_Shop.User_Controls
 {
@@ -20,7 +22,7 @@ namespace Management_Coffee_Shop.User_Controls
         public void load(string id, int quantity, int price)
         {
             lblQTV.Text = quantity.ToString();
-            lblPrice.Text = price.ToString();
+            lblPrice.Text = string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", price);
             DataTable dt = Drinks.get_history(id);
             lblDescribe.Text = dt.Rows[0]["Describe"].ToString();
             lblName_Product.Text = dt.Rows[0]["Name"].ToString();

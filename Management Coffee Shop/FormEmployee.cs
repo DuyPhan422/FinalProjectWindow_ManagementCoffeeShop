@@ -504,6 +504,7 @@ namespace Management_Coffee_Shop
         }
         private void btnPay_Click(object sender, EventArgs e)
         {
+            if (listView2.Items.Count == 0) return;
             string current_Code= take_code();
             Dictionary<string, ShoppingItem> list_shopping = new Dictionary<string, ShoppingItem>();
             List<(string, int)> number_shopping = new List<(string, int)>();
@@ -532,6 +533,7 @@ namespace Management_Coffee_Shop
             File.AppendAllText(path, jsonLine + Environment.NewLine);
             listView2.Items.Clear();
             pnlProduct.Hide();
+            MessageBox.Show("Bạn có muốn in bill không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
         }
 
         private void btnClearAll_Click(object sender, EventArgs e)

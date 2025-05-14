@@ -224,6 +224,7 @@
     <Compile Include="Rate.Designer.cs">
       <DependentUpon>Rate.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegisterDB.cs" />
     <Compile Include="StaffDb.cs" />
     <Compile Include="ucIncomeLogic.cs" />
     <Compile Include="User_Controls\Bill.cs">
