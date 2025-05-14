@@ -929,7 +929,7 @@
             this.guna2Panel5.Controls.Add(this.guna2PictureBox2);
             this.guna2Panel5.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(230)))), ((int)(((byte)(218)))));
-            this.guna2Panel5.Location = new System.Drawing.Point(148, 63);
+            this.guna2Panel5.Location = new System.Drawing.Point(148, 424);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(300, 355);
             this.guna2Panel5.TabIndex = 1;
