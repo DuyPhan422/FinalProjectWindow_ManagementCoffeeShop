@@ -812,6 +812,7 @@ namespace Management_Coffee_Shop
                     {
                         ucHistory_Shopping ucHistory_Shopping = new ucHistory_Shopping();
                         ucHistory_Shopping.load_history(history_Shopping);
+                        ucHistory_Shopping.btnRepurchase_clicked += btnRepurchase_clicked;
                         flpHistory.Controls.Add(ucHistory_Shopping);
                         show_pnlEmpty_History=false;
                     }
@@ -1070,7 +1071,36 @@ namespace Management_Coffee_Shop
                 ptbImage_Profile.Image=Image.FromFile(new_image);
             }
         }
-
+        private void btnRepurchase_clicked(object sender, EventArgs e)
+        {
+            if (sender is ucHistory_Shopping clicked)
+            {
+                History_Shopping history_Shopping = customer.Repurchase(clicked.Code);
+                foreach (var kvp in history_Shopping.list_shopping)
+                {
+                    bool check = false;
+                    // xử lý khi đã có sản phẩm
+                    foreach (Payment p in flpPayment.Controls.OfType<Payment>())
+                    {
+                        if (p.ID == kvp.Key)
+                        {
+                            p.LBLQTV=p.LBLQTV+(int)kvp.Value.Quantity;
+                            p.LBLSUM = string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", (int.Parse(new string(p.LBLPrice.Where(char.IsDigit).ToArray())) * p.LBLQTV)); 
+                            list_products[p.ID]= ((int)p.LBLQTV, list_products[p.ID].Item2, list_products[p.ID].Item3);
+                            check = true;
+                            break;
+                        }
+                    }
+                    if (!check)
+                    {
+                        DataTable dt = Drinks.get_history(kvp.Key);
+                        create_Payment(kvp.Key, dt.Rows[0]["Source_Image"].ToString(), dt.Rows[0]["Categories"].ToString(), dt.Rows[0]["Name"].ToString(), string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", (int)(kvp.Value.Price / kvp.Value.Quantity)), kvp.Value.Quantity);
+                        Drinks.Add_ShoppingCart(customer.ID, kvp.Key);
+                    }
+                    update_Payment();
+                }
+            }
+        }
         private void btnProfile_Click(object sender, EventArgs e)
         {
             set_Color_button(4);

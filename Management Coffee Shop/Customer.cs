@@ -55,6 +55,20 @@ namespace Management_Coffee_Shop
             string jsonLine = System.Text.Json.JsonSerializer.Serialize(history_Shop);
             File.AppendAllText(path, jsonLine + Environment.NewLine);
         }
+        public History_Shopping Repurchase(string orderId)
+        {
+            string path = @"..\..\history_Shopping.txt";
+            string[] lines=File.ReadAllLines(path);
+            foreach (string line in lines)
+            {
+                History_Shopping history_Shopping = System.Text.Json.JsonSerializer.Deserialize<History_Shopping>(line);
+                if (history_Shopping.OrderId.Trim() == orderId)
+                {
+                    return history_Shopping;
+                }
+            }
+            return new History_Shopping();
+        }
         public Dictionary<string, (int, int, Boolean)> List_Products
         {
             get { return list_products; }

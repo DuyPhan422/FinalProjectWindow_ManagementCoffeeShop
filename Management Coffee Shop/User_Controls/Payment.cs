@@ -88,6 +88,7 @@ namespace Management_Coffee_Shop
         }
         public string LBLPrice
         {
+            get { return lblPrice.Text; }
             set { lblPrice.Text = value; }
         }
         public string LBLSUM

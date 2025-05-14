@@ -87,6 +87,7 @@ namespace Management_Coffee_Shop
             }
             else
             {
+                txtOTP.Clear();
                 MessageBox.Show($"Mã OTP của bạn không chính xác");
             }
         }

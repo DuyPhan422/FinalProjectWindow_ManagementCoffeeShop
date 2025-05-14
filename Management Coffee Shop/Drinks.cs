@@ -40,7 +40,7 @@ namespace Management_Coffee_Shop
             DataTable dt;
             using (SqlConnection connection = Connection.GetSqlConnection())
             {
-                string query = $"SELECT Name,Describe,Source_Image FROM sourceDrinks WHERE ID=@ID";
+                string query = $"SELECT Name,Describe,Categories,Source_Image FROM sourceDrinks WHERE ID=@ID";
                 connection.Open();
                 {
                     using (SqlCommand command = new SqlCommand(query, connection))

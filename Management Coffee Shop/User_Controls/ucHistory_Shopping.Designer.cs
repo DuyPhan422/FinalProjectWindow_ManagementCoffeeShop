@@ -32,17 +32,17 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.flpProduct = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnRepurchase = new Guna.UI2.WinForms.Guna2Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblSum = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblStatus = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1.SuspendLayout();
             this.flpProduct.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
+            this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblCode
@@ -89,23 +89,32 @@
             this.flpProduct.Size = new System.Drawing.Size(971, 135);
             this.flpProduct.TabIndex = 5;
             // 
-            // guna2Button1
+            // guna2Panel3
             // 
-            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Button1.BorderRadius = 8;
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
-            this.guna2Button1.Location = new System.Drawing.Point(844, 3);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(108, 27);
-            this.guna2Button1.TabIndex = 4;
-            this.guna2Button1.Text = "Repurchase";
+            this.guna2Panel3.Controls.Add(this.btnRepurchase);
+            this.guna2Panel3.Location = new System.Drawing.Point(3, 3);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(965, 32);
+            this.guna2Panel3.TabIndex = 7;
+            // 
+            // btnRepurchase
+            // 
+            this.btnRepurchase.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
+            this.btnRepurchase.BorderRadius = 8;
+            this.btnRepurchase.BorderThickness = 1;
+            this.btnRepurchase.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRepurchase.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRepurchase.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRepurchase.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRepurchase.FillColor = System.Drawing.Color.Transparent;
+            this.btnRepurchase.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnRepurchase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(155)))), ((int)(((byte)(81)))));
+            this.btnRepurchase.Location = new System.Drawing.Point(844, 3);
+            this.btnRepurchase.Name = "btnRepurchase";
+            this.btnRepurchase.Size = new System.Drawing.Size(108, 27);
+            this.btnRepurchase.TabIndex = 4;
+            this.btnRepurchase.Text = "Repurchase";
+            this.btnRepurchase.Click += new System.EventHandler(this.btnRepurchase_Click);
             // 
             // lblDate
             // 
@@ -165,14 +174,6 @@
             this.lblStatus.TabIndex = 0;
             this.lblStatus.Text = "Status: Success";
             // 
-            // guna2Panel3
-            // 
-            this.guna2Panel3.Controls.Add(this.guna2Button1);
-            this.guna2Panel3.Location = new System.Drawing.Point(3, 3);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(965, 32);
-            this.guna2Panel3.TabIndex = 7;
-            // 
             // ucHistory_Shopping
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,9 +187,9 @@
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.flpProduct.ResumeLayout(false);
+            this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
-            this.guna2Panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,7 +204,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblStatus;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblSum;
         private System.Windows.Forms.FlowLayoutPanel flpProduct;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnRepurchase;
         private System.Windows.Forms.Label lblDate;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
