@@ -20,19 +20,24 @@ namespace Management_Coffee_Shop
         {
             switch (btn.Name)
             {
-                case "btnProduct": btn.ImageIndex = 1; break;
-                case "btnIncome": btn.ImageIndex = 3; break;
-                case "btnStaff": btn.ImageIndex = 7; break;
-                case "btnFacility": btn.ImageIndex = 5; break;
+                case "btnProduct": btn.ImageIndex = 1; pbSlide.Visible = true; pbSlide.SendToBack(); break;
+                case "btnIncome": btn.ImageIndex = 3; pbSlide2.Visible = true; pbSlide2.SendToBack(); break;
+                case "btnStaff": btn.ImageIndex = 7; pbSlide3.Visible = true; pbSlide3.SendToBack(); break;
                 default: break;
             }
-            btn.BackColor = Color.FromArgb(203,159,211);
+            btn.BackColor = Color.White;
         }
         void Reset_btn()
         {
-            foreach (var btn in TLB_menu.Controls.OfType<Button>())
+            foreach (var ctl in pnl_test.Controls.OfType<Button>())
             {
-                btn.BackColor = Color.FromArgb(255,240,245);
+                ctl.BackColor = Color.FromArgb(249, 240, 197);
+                //ctl.Refresh();
+                foreach (var pb in pnl_test.Controls.OfType<PictureBox>())
+                {
+                    pb.Visible = false;
+                }
+
             }
             btnProduct.ImageIndex = 0;
             btnIncome.ImageIndex = 2;
@@ -45,8 +50,8 @@ namespace Management_Coffee_Shop
             Select_btn(btnProduct);
             ucProduct uc_pro = new ucProduct();
             uc_pro.Dock = DockStyle.Fill;
-            pnlPage.Controls.Clear();
-            pnlPage.Controls.Add(uc_pro);
+            pnlPage2.Controls.Clear();
+            pnlPage2.Controls.Add(uc_pro);
         }
 
         private void btnIncome_Click(object sender, EventArgs e)
@@ -55,8 +60,8 @@ namespace Management_Coffee_Shop
             Select_btn(btnIncome);
             ucIncome uc_ic = new ucIncome();
             uc_ic.Dock = DockStyle.Fill;
-            pnlPage.Controls.Clear();
-            pnlPage.Controls.Add(uc_ic);
+            pnlPage2.Controls.Clear();
+            pnlPage2.Controls.Add(uc_ic);
         }
 
         private void btnStaff_Click(object sender, EventArgs e)
@@ -65,8 +70,8 @@ namespace Management_Coffee_Shop
             Select_btn(btnStaff);
             ucStaff uc_s = new ucStaff();
             uc_s.Dock = DockStyle.Fill;
-            pnlPage.Controls.Clear();
-            pnlPage.Controls.Add(uc_s);
+            pnlPage2.Controls.Clear();
+            pnlPage2.Controls.Add(uc_s);
         }
 
         private void btnFacility_Click(object sender, EventArgs e)
@@ -105,16 +110,12 @@ namespace Management_Coffee_Shop
 
         private void txtSearch_Leave(object sender, EventArgs e)
         {
-            lblLineSearch.Visible = false;
-            txtSearch.BackColor = Color.FromArgb(99, 180, 255);
-            pnlSearch.BackColor = Color.FromArgb(99, 180, 255);
+       
         }
 
         private void txtSearch_MouseClick(object sender, MouseEventArgs e)
         {
-            lblLineSearch.Visible = true;
-            txtSearch.BackColor = Color.FromArgb(139, 99, 255);
-            pnlSearch.BackColor = Color.FromArgb(139, 99, 255);
+           
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -124,12 +125,21 @@ namespace Management_Coffee_Shop
 
         private void formManager_Load(object sender, EventArgs e)
         {
+            foreach (Control ctl in pnl_test.Controls)
+            {
+                if (ctl is Button b)
+                {
+                    b.FlatStyle = FlatStyle.Flat;
+                    b.UseVisualStyleBackColor = false;
+                    b.BackColor = Color.FromArgb(249, 240, 197);
+                }
+            }
             Reset_btn();
             Select_btn(btnProduct);
             ucProduct uc_pro = new ucProduct();
             uc_pro.Dock = DockStyle.Fill;
-            pnlPage.Controls.Clear();
-            pnlPage.Controls.Add(uc_pro);
+            pnlPage2.Controls.Clear();
+            pnlPage2.Controls.Add(uc_pro);
         }
     }
 }

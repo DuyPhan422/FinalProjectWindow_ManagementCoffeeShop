@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using Guna.UI2.WinForms;
 
 namespace Management_Coffee_Shop
@@ -40,7 +41,6 @@ namespace Management_Coffee_Shop
                 lblTotalRevenue.Text = (model.TotalRevenue).ToString("#,##0") + "₫";
                 lblTotalProfit.Text = (model.TotalProfit).ToString("#,##0") + "₫";
                 lblNumberOfCustomers.Text = model.NumCustomers.ToString("N0");
-                lblNumberOfSuppliers.Text = model.NumSuppliers.ToString("N0");
                 lblNumberOfProducts.Text = model.NumProducts.ToString("N0");
 
                 // Biểu đồ Gross Revenue
@@ -78,6 +78,31 @@ namespace Management_Coffee_Shop
                 chartTopProducts.Series[0].Label = "#VALX (#VAL)";
                 chartTopProducts.Series[0].IsValueShownAsLabel = true;
                 chartTopProducts.Series[0]["PieLabelStyle"] = "Outside";
+
+                //var series = chartTopProducts.Series[0];
+                //series.Points.Clear();
+
+                //if (model.TopProductsList.Any())
+                //{
+                //    foreach (var product in model.TopProductsList)
+                //    {
+                //        int idx = series.Points.AddXY(product.Key, product.Value);
+                //        var pt = series.Points[idx];
+                //        pt.Label = "";
+                //        pt.LegendText = $"{product.Key}";
+                //        pt.IsVisibleInLegend = true;
+                //    }
+                //}
+                //else
+                //{
+                //    int idx = series.Points.AddXY("No Data", 1);
+                //    var pt = series.Points[idx];
+                //    pt.Label = "";
+                //    pt.LegendText = "No Data (0)";
+                //    pt.IsVisibleInLegend = true;
+                //}
+                //chartTopProducts.Legends[0].Enabled = true;
+                //series.Legend = chartTopProducts.Legends[0].Name;
 
                 dgvUnderStock.Columns.Clear();
                 dgvUnderStock.DefaultCellStyle.Font = new Font("Segoe UI", 12, FontStyle.Regular);
@@ -171,6 +196,10 @@ namespace Management_Coffee_Shop
         private void tlbFill_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void ucIncome_Load(object sender, EventArgs e)
+        {
         }
     }
 }

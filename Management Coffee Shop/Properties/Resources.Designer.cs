@@ -253,6 +253,26 @@ namespace Management_Coffee_Shop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ghepchuyentiep_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("ghepchuyentiep-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ghepchuyentiep_removebg_preview_reverse {
+            get {
+                object obj = ResourceManager.GetObject("ghepchuyentiep-removebg-preview-reverse", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_inverted {
             get {
                 object obj = ResourceManager.GetObject("icon_inverted", resourceCulture);

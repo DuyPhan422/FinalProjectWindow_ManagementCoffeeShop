@@ -485,6 +485,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <None Include="Resources\ghepchuyentiep-removebg-preview-reverse.png" />
+    <None Include="Resources\ghepchuyentiep-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
