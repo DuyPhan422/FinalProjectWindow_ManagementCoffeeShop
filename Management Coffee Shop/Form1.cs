@@ -197,7 +197,7 @@ namespace Management_Coffee_Shop
 
         private async void btnLogin_Click(object sender, EventArgs e)
         {
-            (string ID,string Email,string Password,string Lock,byte PasswordFail,string LastLogin,bool success)=LoginDB.get_Infor(txtUserName.Text);
+            (string ID,string Email,string Password,string Lock,byte PasswordFail,bool success)=LoginDB.get_Infor(txtUserName.Text);
             this.ID = ID;
             if (success)
             {

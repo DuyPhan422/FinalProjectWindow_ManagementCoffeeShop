@@ -336,9 +336,7 @@ namespace Management_Coffee_Shop
             timer1.Interval = (60000);
         }
 
-        private void FormCustomer_Load(object sender, EventArgs e)
-        {
-        }
+        
 
         private void guna2PictureBox3_Click(object sender, EventArgs e)
         {
@@ -351,14 +349,31 @@ namespace Management_Coffee_Shop
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
+            set_Color_button(1);
             tabControl1.SelectedTab = tabPage1;
         }
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
+        private void set_Color_button(int number)
+        {
+            btnShopping.CustomBorderThickness = new Padding(0,0,0,0);
+            btnShopping.CustomBorderColor = Color.FromArgb(211, 155, 81);
+            btnHome.CustomBorderThickness = new Padding(0, 0, 0, 0);
+            btnHome.CustomBorderColor= Color.FromArgb(211, 155, 81);
+            btnHistory.CustomBorderColor=Color.FromArgb(211, 155, 81);
+            btnHistory.CustomBorderThickness = new Padding(0,0,0, 0);
+            btnProfile.CustomBorderThickness = new Padding(0, 0, 0, 0); 
+            btnProfile.CustomBorderColor= Color.FromArgb(211, 155, 81);
+            if (number==1) btnHome.CustomBorderThickness = new Padding(2, 0, 0, 0);
+            else if(number==2) btnShopping.CustomBorderThickness = new Padding(2, 0, 0, 0);
+            else if(number==3) btnHistory.CustomBorderThickness = new Padding(2,0, 0, 0);
+            else btnProfile.CustomBorderThickness = new Padding(2,0,0,0);
+        }
         private void btnShopping_Click(object sender, EventArgs e)
         {
+            set_Color_button(2);
             if (flpCategories.Controls.Count==1)loading_Shopping();
             tabControl1.SelectedTab = tabPage2;
         }
@@ -756,6 +771,7 @@ namespace Management_Coffee_Shop
         }
         private void btnHistory_Click(object sender, EventArgs e)
         {
+            set_Color_button(3);
             if (flpHistory.Controls.Count==0) load_history();
             tabControl1.SelectedTab = tabPage3;
         }
@@ -1015,6 +1031,7 @@ namespace Management_Coffee_Shop
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
+            set_Color_button(4);
             pnlAccount.Hide();
             btnCancel.PerformClick();
             tabControl1.SelectedTab = tabPage4;

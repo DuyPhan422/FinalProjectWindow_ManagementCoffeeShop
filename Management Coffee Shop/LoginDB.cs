@@ -12,18 +12,17 @@ namespace Management_Coffee_Shop
 {
     internal class LoginDB
     {
-        public static (string ,string,string,string,byte,string,bool ) get_Infor(string username)
+        public static (string ,string,string,string,byte,bool ) get_Infor(string username)
         {
             string ID = "";
             string Email = "";
             string Password = "";
             string Lock = "";
             byte PassWordFail=0;
-            string LastLogin = "";
             using (SqlConnection connection = Connection.GetSqlConnection())
             {
                 connection.Open();
-                string query = "SELECT ID,Email,PassWord,Lock,PassWordFail,LastLogin FROM account WHERE UserName=@UserName ";
+                string query = "SELECT ID,Email,PassWord,Lock,PassWordFail FROM account WHERE UserName=@UserName ";
                 using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
                     cmd.Parameters.AddWithValue("@UserName", username);
@@ -36,13 +35,12 @@ namespace Management_Coffee_Shop
                             Password = reader["Password"].ToString();
                             Lock = reader["Lock"].ToString();
                             PassWordFail =byte.Parse( reader["PassWordFail"].ToString());
-                            LastLogin = reader["LastLogin"].ToString();
-                            return (ID, Email,Password,Lock,PassWordFail,LastLogin,true);
+                            return (ID, Email,Password,Lock,PassWordFail,true);
                         }
                     }
                 }
             }
-            return (ID, Email, Password, Lock, PassWordFail,LastLogin, false);
+            return (ID, Email, Password, Lock, PassWordFail, false);
         }
         public static void update_PassWordFail(string username)
         {
