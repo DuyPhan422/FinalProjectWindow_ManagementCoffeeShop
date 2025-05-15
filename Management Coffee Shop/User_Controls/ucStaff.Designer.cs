@@ -232,13 +232,10 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(195)))), ((int)(((byte)(116)))));
             this.label1.Location = new System.Drawing.Point(952, 0);
-=======
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(228)))), ((int)(((byte)(161)))));
             this.label1.Location = new System.Drawing.Point(967, 0);
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(186, 60);
             this.label1.TabIndex = 6;
@@ -974,11 +971,8 @@
             this.colPhone.MinimumWidth = 100;
             this.colPhone.Name = "colPhone";
             this.colPhone.ReadOnly = true;
-<<<<<<< HEAD
             this.colPhone.Width = 150;
-=======
             this.colPhone.Width = 140;
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             // 
             // colAddress
             // 
@@ -989,11 +983,8 @@
             this.colAddress.MinimumWidth = 300;
             this.colAddress.Name = "colAddress";
             this.colAddress.ReadOnly = true;
-<<<<<<< HEAD
             this.colAddress.Width = 150;
-=======
             this.colAddress.Width = 300;
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             // 
             // colSalary
             // 

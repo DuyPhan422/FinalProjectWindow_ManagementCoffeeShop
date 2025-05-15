@@ -276,6 +276,7 @@ namespace Management_Coffee_Shop
             {
                 if (this.ID[0] == 'E')
                 {
+                    this.Hide();
                     DataTable dt = LoginDB.get_InforEmployee(this.ID);
                     FormEmployee employee = new FormEmployee(this.ID,dt.Rows[0]["LastName"].ToString(), dt.Rows[0]["Address"].ToString(), dt.Rows[0]["Email"].ToString(), dt.Rows[0]["BirthDate"].ToString(), dt.Rows[0]["Source_Image"].ToString(),this);
                     employee.Show();
@@ -287,8 +288,14 @@ namespace Management_Coffee_Shop
                 }
                 else
                 {
-                    formManager formManager=new formManager();
+                    this.Hide();
+                    formManager formManager=new formManager(this);
                     formManager.Show();
+                    timer1.Stop();
+                    Lock_Tick.Stop();
+                    txtUserName.Clear();
+                    txtPassWord.Clear();
+                    txtOtp.Clear();
                 }
             }else
             {

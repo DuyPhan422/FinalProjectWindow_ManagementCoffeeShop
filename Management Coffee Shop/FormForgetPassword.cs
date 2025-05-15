@@ -82,8 +82,8 @@ namespace Management_Coffee_Shop
                 ForgetPasswordDB.update_password(infor, new_password);
                 formLogin.UserName = infor.Get_UserName ;
                 formLogin.PassWord = new_password;
+                formLogin.Show();
                 this.Close();
-                formLogin.ShowDialog();
             }
             else
             {

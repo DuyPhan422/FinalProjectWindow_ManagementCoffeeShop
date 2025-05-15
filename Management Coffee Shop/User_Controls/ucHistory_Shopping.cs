@@ -24,7 +24,8 @@ namespace Management_Coffee_Shop.User_Controls
             lblCode.Text = $"# {order.OrderId}";
             this.code = order.OrderId;
             lblDate.Text = $"{order.OrderDate:dd/MM/yyyy HH:mm}";
-            lblSum.Text= string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", order.Sum); 
+            lblSum.Text= string.Format(new CultureInfo("vi-VN"), "{0:N0}đ", order.Sum);
+            if (order.Status.Trim() == "Cancel") lblStatus.Text = "Status: Cancel";
             foreach (var kvp in order.list_shopping)
             {
                 FormCustomer.History_Shopping.ShoppingItem value = kvp.Value;
@@ -32,7 +33,6 @@ namespace Management_Coffee_Shop.User_Controls
                 ucProduct_Shopping.load(kvp.Key, value.Quantity, value.Price);
                 flpProduct.Controls.Add(ucProduct_Shopping);
                 flpProduct.Controls.SetChildIndex(ucProduct_Shopping,0);
-                
             }
         }
 

@@ -330,7 +330,7 @@ namespace Management_Coffee_Shop
         {
             string apiKey = "WxT7Wuy87UD0l388s99ils0VIinvE9R07DaRZE694b4"; // Thay bằng API Key của bạn
             string origin = change_Coordinates("01 Đ. Võ Văn Ngân, Linh Chiểu, Thủ Đức, Hồ Chí Minh, Việt Nam");  // Tọa độ điểm xuất phát (TPHCM)
-            string destination = change_Coordinates(address); // Tọa độ điểm đến (Hà Nội)
+            string destination = change_Coordinates(address.Trim()); // Tọa độ điểm đến (Hà Nội)
 
             string url = $"https://router.hereapi.com/v8/routes?transportMode=car&origin={origin}&destination={destination}&return=summary&apikey={apiKey}";
 

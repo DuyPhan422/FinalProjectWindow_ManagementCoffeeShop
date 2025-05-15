@@ -133,13 +133,10 @@
             this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(195)))), ((int)(((byte)(116)))));
             this.lblTitle.Location = new System.Drawing.Point(956, 0);
-=======
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(228)))), ((int)(((byte)(161)))));
             this.lblTitle.Location = new System.Drawing.Point(854, 0);
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(159, 48);
             this.lblTitle.TabIndex = 7;
@@ -272,13 +269,10 @@
             this.pnlGrid.ForeColor = System.Drawing.Color.Black;
             this.pnlGrid.Location = new System.Drawing.Point(0, 0);
             this.pnlGrid.Name = "pnlGrid";
-<<<<<<< HEAD
             this.pnlGrid.Padding = new System.Windows.Forms.Padding(10);
             this.pnlGrid.Size = new System.Drawing.Size(1150, 951);
-=======
             this.pnlGrid.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
             this.pnlGrid.Size = new System.Drawing.Size(1022, 761);
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             this.pnlGrid.TabIndex = 7;
             // 
             // dgvProduct
@@ -327,11 +321,8 @@
             this.dgvProduct.RowHeadersWidth = 35;
             this.dgvProduct.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-<<<<<<< HEAD
             this.dgvProduct.Size = new System.Drawing.Size(1130, 931);
-=======
             this.dgvProduct.Size = new System.Drawing.Size(1018, 761);
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             this.dgvProduct.TabIndex = 2;
             this.dgvProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellContentClick);
             this.dgvProduct.SelectionChanged += new System.EventHandler(this.dgvProduct_SelectionChanged);
@@ -341,17 +332,14 @@
             this.colID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.colID.DataPropertyName = "ID";
             this.colID.HeaderText = "ID";
-<<<<<<< HEAD
             this.colID.MinimumWidth = 15;
             this.colID.Name = "colID";
             this.colID.ReadOnly = true;
             this.colID.Width = 66;
-=======
             this.colID.MinimumWidth = 80;
             this.colID.Name = "colID";
             this.colID.ReadOnly = true;
             this.colID.Width = 80;
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             // 
             // colName
             // 
@@ -413,17 +401,14 @@
             this.pnlEditProduct.Controls.Add(this.pnlEditProductTop);
             this.pnlEditProduct.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlEditProduct.FillColor = System.Drawing.Color.White;
-<<<<<<< HEAD
             this.pnlEditProduct.Location = new System.Drawing.Point(1150, 0);
             this.pnlEditProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlEditProduct.Name = "pnlEditProduct";
             this.pnlEditProduct.Size = new System.Drawing.Size(460, 951);
-=======
             this.pnlEditProduct.Location = new System.Drawing.Point(1022, 0);
             this.pnlEditProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlEditProduct.Name = "pnlEditProduct";
             this.pnlEditProduct.Size = new System.Drawing.Size(409, 761);
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             this.pnlEditProduct.TabIndex = 6;
             // 
             // pnlEditProductFill
@@ -434,19 +419,16 @@
             this.pnlEditProductFill.BorderThickness = 2;
             this.pnlEditProductFill.Controls.Add(this.tblEditProduct);
             this.pnlEditProductFill.Dock = System.Windows.Forms.DockStyle.Fill;
-<<<<<<< HEAD
             this.pnlEditProductFill.Location = new System.Drawing.Point(0, 62);
             this.pnlEditProductFill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlEditProductFill.Name = "pnlEditProductFill";
             this.pnlEditProductFill.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlEditProductFill.Size = new System.Drawing.Size(460, 889);
-=======
             this.pnlEditProductFill.Location = new System.Drawing.Point(0, 50);
             this.pnlEditProductFill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlEditProductFill.Name = "pnlEditProductFill";
             this.pnlEditProductFill.Padding = new System.Windows.Forms.Padding(4);
             this.pnlEditProductFill.Size = new System.Drawing.Size(409, 711);
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             this.pnlEditProductFill.TabIndex = 4;
             // 
             // tblEditProduct
@@ -470,7 +452,6 @@
             this.tblEditProduct.Controls.Add(this.lblRecipe, 0, 9);
             this.tblEditProduct.Controls.Add(this.dgvRecipe, 0, 10);
             this.tblEditProduct.Dock = System.Windows.Forms.DockStyle.Fill;
-<<<<<<< HEAD
             this.tblEditProduct.Location = new System.Drawing.Point(4, 5);
             this.tblEditProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tblEditProduct.Name = "tblEditProduct";
@@ -493,7 +474,6 @@
             this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tblEditProduct.Size = new System.Drawing.Size(452, 879);
-=======
             this.tblEditProduct.Location = new System.Drawing.Point(4, 4);
             this.tblEditProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tblEditProduct.Name = "tblEditProduct";
@@ -516,7 +496,6 @@
             this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
             this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
             this.tblEditProduct.Size = new System.Drawing.Size(401, 703);
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             this.tblEditProduct.TabIndex = 3;
             // 
             // dgvDescription
@@ -528,17 +507,14 @@
             this.dgvDescription.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvDescription.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-<<<<<<< HEAD
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(195)))), ((int)(((byte)(116)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Desktop;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(195)))), ((int)(((byte)(116)))));
-=======
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(228)))), ((int)(((byte)(161)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Desktop;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(228)))), ((int)(((byte)(161)))));
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Desktop;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvDescription.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
@@ -555,11 +531,8 @@
             this.dgvDescription.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDescription.EnableHeadersVisualStyles = false;
             this.dgvDescription.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(228)))), ((int)(((byte)(161)))));
-<<<<<<< HEAD
             this.dgvDescription.Location = new System.Drawing.Point(3, 948);
-=======
             this.dgvDescription.Location = new System.Drawing.Point(3, 760);
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             this.dgvDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDescription.Name = "dgvDescription";
             this.dgvDescription.RowHeadersVisible = false;
@@ -567,11 +540,8 @@
             this.tblEditProduct.SetRowSpan(this.dgvDescription, 2);
             this.dgvDescription.RowTemplate.Height = 28;
             this.dgvDescription.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-<<<<<<< HEAD
             this.dgvDescription.Size = new System.Drawing.Size(420, 416);
-=======
             this.dgvDescription.Size = new System.Drawing.Size(374, 332);
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             this.dgvDescription.TabIndex = 32;
             // 
             // pbAvatar
@@ -579,20 +549,14 @@
             this.pbAvatar.BorderRadius = 20;
             this.pbAvatar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbAvatar.ImageRotate = 0F;
-<<<<<<< HEAD
             this.pbAvatar.Location = new System.Drawing.Point(144, 2);
-=======
             this.pbAvatar.Location = new System.Drawing.Point(129, 2);
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             this.pbAvatar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbAvatar.Name = "pbAvatar";
             this.pbAvatar.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tblEditProduct.SetRowSpan(this.pbAvatar, 2);
-<<<<<<< HEAD
             this.pbAvatar.Size = new System.Drawing.Size(136, 87);
-=======
             this.pbAvatar.Size = new System.Drawing.Size(120, 69);
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbAvatar.TabIndex = 0;
             this.pbAvatar.TabStop = false;
@@ -603,17 +567,14 @@
             this.guna2Panel4.Controls.Add(this.btnImageCancel);
             this.guna2Panel4.Controls.Add(this.btnImageChange);
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-<<<<<<< HEAD
             this.guna2Panel4.Location = new System.Drawing.Point(141, 91);
             this.guna2Panel4.Margin = new System.Windows.Forms.Padding(0);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Size = new System.Drawing.Size(142, 29);
-=======
             this.guna2Panel4.Location = new System.Drawing.Point(126, 73);
             this.guna2Panel4.Margin = new System.Windows.Forms.Padding(0);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Size = new System.Drawing.Size(126, 23);
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             this.guna2Panel4.TabIndex = 3;
             // 
             // btnImageCancel
@@ -629,17 +590,14 @@
             this.btnImageCancel.ForeColor = System.Drawing.Color.White;
             this.btnImageCancel.Image = global::Management_Coffee_Shop.Properties.Resources.image_13406883;
             this.btnImageCancel.ImageSize = new System.Drawing.Size(30, 30);
-<<<<<<< HEAD
             this.btnImageCancel.Location = new System.Drawing.Point(76, 0);
             this.btnImageCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnImageCancel.Name = "btnImageCancel";
             this.btnImageCancel.Size = new System.Drawing.Size(66, 29);
-=======
             this.btnImageCancel.Location = new System.Drawing.Point(67, 0);
             this.btnImageCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnImageCancel.Name = "btnImageCancel";
             this.btnImageCancel.Size = new System.Drawing.Size(59, 23);
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             this.btnImageCancel.TabIndex = 3;
             this.btnImageCancel.Click += new System.EventHandler(this.btnImageCancel_Click);
             // 
@@ -659,11 +617,8 @@
             this.btnImageChange.Location = new System.Drawing.Point(0, 0);
             this.btnImageChange.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnImageChange.Name = "btnImageChange";
-<<<<<<< HEAD
             this.btnImageChange.Size = new System.Drawing.Size(66, 29);
-=======
             this.btnImageChange.Size = new System.Drawing.Size(59, 23);
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             this.btnImageChange.TabIndex = 1;
             this.btnImageChange.Click += new System.EventHandler(this.btnImageChange_Click);
             // 
@@ -672,15 +627,12 @@
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.Black;
-<<<<<<< HEAD
             this.lblName.Location = new System.Drawing.Point(3, 120);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(81, 31);
-=======
             this.lblName.Location = new System.Drawing.Point(3, 96);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(68, 25);
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             this.lblName.TabIndex = 4;
             this.lblName.Text = "Name";
             // 
@@ -689,15 +641,12 @@
             this.lblCategory.AutoSize = true;
             this.lblCategory.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategory.ForeColor = System.Drawing.Color.Black;
-<<<<<<< HEAD
             this.lblCategory.Location = new System.Drawing.Point(3, 211);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Size = new System.Drawing.Size(118, 31);
-=======
             this.lblCategory.Location = new System.Drawing.Point(3, 169);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Size = new System.Drawing.Size(98, 25);
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             this.lblCategory.TabIndex = 6;
             this.lblCategory.Text = "Category";
             // 
@@ -714,21 +663,18 @@
             this.txtPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPrice.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-<<<<<<< HEAD
             this.txtPrice.Location = new System.Drawing.Point(6, 341);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.PlaceholderText = "";
             this.txtPrice.SelectedText = "";
             this.txtPrice.Size = new System.Drawing.Size(414, 44);
-=======
             this.txtPrice.Location = new System.Drawing.Point(5, 273);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.PlaceholderText = "";
             this.txtPrice.SelectedText = "";
             this.txtPrice.Size = new System.Drawing.Size(368, 35);
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             this.txtPrice.TabIndex = 8;
             this.txtPrice.TextChanged += new System.EventHandler(this.txtPrice_TextChanged);
             this.txtPrice.Leave += new System.EventHandler(this.txtPrice_Leave);
@@ -738,15 +684,13 @@
             this.lblPrice.AutoSize = true;
             this.lblPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrice.ForeColor = System.Drawing.Color.Black;
-<<<<<<< HEAD
             this.lblPrice.Location = new System.Drawing.Point(3, 302);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(71, 31);
-=======
+
             this.lblPrice.Location = new System.Drawing.Point(3, 242);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(59, 25);
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             this.lblPrice.TabIndex = 9;
             this.lblPrice.Text = "Price";
             // 
@@ -763,17 +707,14 @@
             this.cbbCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.cbbCategory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.cbbCategory.ItemHeight = 30;
-<<<<<<< HEAD
             this.cbbCategory.Location = new System.Drawing.Point(3, 244);
             this.cbbCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbCategory.Name = "cbbCategory";
             this.cbbCategory.Size = new System.Drawing.Size(418, 36);
-=======
             this.cbbCategory.Location = new System.Drawing.Point(3, 196);
             this.cbbCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbCategory.Name = "cbbCategory";
             this.cbbCategory.Size = new System.Drawing.Size(372, 36);
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             this.cbbCategory.TabIndex = 23;
             this.cbbCategory.SelectedIndexChanged += new System.EventHandler(this.cbbCategory_SelectedIndexChanged);
             this.cbbCategory.Leave += new System.EventHandler(this.cbbCategory_Leave);
@@ -793,21 +734,18 @@
             this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-<<<<<<< HEAD
             this.txtName.Location = new System.Drawing.Point(6, 159);
             this.txtName.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtName.Name = "txtName";
             this.txtName.PlaceholderText = "";
             this.txtName.SelectedText = "";
             this.txtName.Size = new System.Drawing.Size(414, 44);
-=======
             this.txtName.Location = new System.Drawing.Point(6, 127);
             this.txtName.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtName.Name = "txtName";
             this.txtName.PlaceholderText = "";
             this.txtName.SelectedText = "";
             this.txtName.Size = new System.Drawing.Size(368, 35);
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             this.txtName.TabIndex = 5;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             this.txtName.Leave += new System.EventHandler(this.txtName_Leave);
@@ -817,15 +755,12 @@
             this.tblEditProduct.SetColumnSpan(this.lblDescription, 2);
             this.lblDescription.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.ForeColor = System.Drawing.Color.Black;
-<<<<<<< HEAD
             this.lblDescription.Location = new System.Drawing.Point(3, 886);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(235, 44);
-=======
             this.lblDescription.Location = new System.Drawing.Point(3, 710);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(209, 35);
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             this.lblDescription.TabIndex = 19;
             this.lblDescription.Text = "Customer Rating";
             // 
@@ -834,15 +769,12 @@
             this.lblRecipe.AutoSize = true;
             this.lblRecipe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRecipe.ForeColor = System.Drawing.Color.Black;
-<<<<<<< HEAD
             this.lblRecipe.Location = new System.Drawing.Point(3, 393);
             this.lblRecipe.Name = "lblRecipe";
             this.lblRecipe.Size = new System.Drawing.Size(89, 31);
-=======
             this.lblRecipe.Location = new System.Drawing.Point(3, 315);
             this.lblRecipe.Name = "lblRecipe";
             this.lblRecipe.Size = new System.Drawing.Size(75, 25);
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             this.lblRecipe.TabIndex = 13;
             this.lblRecipe.Text = "Recipe";
             // 
@@ -856,17 +788,14 @@
             this.dgvRecipe.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvRecipe.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-<<<<<<< HEAD
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(195)))), ((int)(((byte)(116)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Desktop;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(195)))), ((int)(((byte)(116)))));
-=======
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(228)))), ((int)(((byte)(161)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Desktop;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(228)))), ((int)(((byte)(161)))));
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.Desktop;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvRecipe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
@@ -885,13 +814,10 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvRecipe.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvRecipe.EnableHeadersVisualStyles = false;
-<<<<<<< HEAD
             this.dgvRecipe.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(195)))), ((int)(((byte)(116)))));
             this.dgvRecipe.Location = new System.Drawing.Point(3, 426);
-=======
             this.dgvRecipe.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(228)))), ((int)(((byte)(161)))));
             this.dgvRecipe.Location = new System.Drawing.Point(3, 342);
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             this.dgvRecipe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvRecipe.Name = "dgvRecipe";
             this.dgvRecipe.RowHeadersVisible = false;
@@ -899,11 +825,8 @@
             this.tblEditProduct.SetRowSpan(this.dgvRecipe, 3);
             this.dgvRecipe.RowTemplate.Height = 28;
             this.dgvRecipe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-<<<<<<< HEAD
             this.dgvRecipe.Size = new System.Drawing.Size(420, 458);
-=======
             this.dgvRecipe.Size = new System.Drawing.Size(374, 366);
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             this.dgvRecipe.TabIndex = 28;
             // 
             // colIngredient
@@ -940,22 +863,15 @@
             this.pnlEditProductTop.BorderRadius = 13;
             this.pnlEditProductTop.BorderThickness = 3;
             this.pnlEditProductTop.Controls.Add(this.lblStatus);
-<<<<<<< HEAD
-            this.pnlEditProductTop.Controls.Add(this.label1);
-=======
             this.pnlEditProductTop.Controls.Add(this.lblID);
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             this.pnlEditProductTop.Controls.Add(this.btnConfirm);
             this.pnlEditProductTop.Controls.Add(this.btnCancel);
             this.pnlEditProductTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlEditProductTop.Location = new System.Drawing.Point(0, 0);
             this.pnlEditProductTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlEditProductTop.Name = "pnlEditProductTop";
-<<<<<<< HEAD
             this.pnlEditProductTop.Size = new System.Drawing.Size(460, 62);
-=======
             this.pnlEditProductTop.Size = new System.Drawing.Size(409, 50);
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             this.pnlEditProductTop.TabIndex = 2;
             // 
             // lblStatus
@@ -963,7 +879,6 @@
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblStatus.ForeColor = System.Drawing.Color.Black;
-<<<<<<< HEAD
             this.lblStatus.Location = new System.Drawing.Point(120, 12);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(71, 28);
@@ -973,16 +888,7 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(15, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 28);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "ID";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-=======
+           
             this.lblStatus.Location = new System.Drawing.Point(107, 10);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(60, 23);
@@ -1003,7 +909,6 @@
             this.lblID.Text = "ID";
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblID.Click += new System.EventHandler(this.lblID_Click);
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             // 
             // btnConfirm
             // 
@@ -1021,17 +926,14 @@
             this.btnConfirm.ForeColor = System.Drawing.Color.White;
             this.btnConfirm.Image = global::Management_Coffee_Shop.Properties.Resources.check_11601271;
             this.btnConfirm.ImageSize = new System.Drawing.Size(30, 30);
-<<<<<<< HEAD
             this.btnConfirm.Location = new System.Drawing.Point(286, 0);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(87, 62);
-=======
             this.btnConfirm.Location = new System.Drawing.Point(255, 0);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(77, 50);
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             this.btnConfirm.TabIndex = 4;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
@@ -1051,17 +953,14 @@
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Image = global::Management_Coffee_Shop.Properties.Resources.cross_mark_11601293;
             this.btnCancel.ImageSize = new System.Drawing.Size(30, 30);
-<<<<<<< HEAD
             this.btnCancel.Location = new System.Drawing.Point(373, 0);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(87, 62);
-=======
             this.btnCancel.Location = new System.Drawing.Point(332, 0);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(77, 50);
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -1086,19 +985,13 @@
             // 
             // elipseDgvProduct
             // 
-<<<<<<< HEAD
             this.elipseDgvProduct.BorderRadius = 23;
-=======
             this.elipseDgvProduct.BorderRadius = 13;
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             this.elipseDgvProduct.TargetControl = this.dgvProduct;
             // 
             // elipseDgvRecipe
             // 
-<<<<<<< HEAD
             this.elipseDgvRecipe.BorderRadius = 15;
-=======
->>>>>>> b67a6f51af82bbcf6cabaa353eef66ea775063f9
             this.elipseDgvRecipe.TargetControl = this.dgvRecipe;
             // 
             // elipseDescription

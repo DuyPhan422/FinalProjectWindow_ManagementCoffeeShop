@@ -12,8 +12,10 @@ namespace Management_Coffee_Shop
 {
     public partial class formManager : Form
     {
-        public formManager()
+        private FormLogin FormLogin;
+        public formManager(FormLogin formLogin)
         {
+            this.FormLogin = formLogin;
             InitializeComponent();
         }
         void Select_btn(Button btn)
@@ -105,7 +107,9 @@ namespace Management_Coffee_Shop
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            FormLogin.change_tabPage();
+            FormLogin.Show();
+            this.Close();
         }
 
         private void txtSearch_Leave(object sender, EventArgs e)

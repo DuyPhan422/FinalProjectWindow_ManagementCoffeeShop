@@ -65,11 +65,10 @@ namespace Management_Coffee_Shop
         }
         private void Timer_Order_Tick(object sender, EventArgs e)
         {
-            string path= @"..\..\CustomerToEmployee.txt";
-            int current_Length= File.ReadLines(path).Count();
+            int current_Length= employee.Online_Order();
             if (current_Length != 0 && length_Order==0)
             {
-                var lines = File.ReadAllLines(path);
+                var lines = File.ReadAllLines(@"..\..\CustomerToEmployee.txt");
                 length_Order = current_Length;
                 foreach (var line in lines)
                 {
@@ -154,8 +153,8 @@ namespace Management_Coffee_Shop
         }
         private void load_history()
         {
-            string path = @"..\..\history_Shopping.txt";
-            string[] lines = File.ReadAllLines(path);
+            
+            string []lines = employee.Check_History();
             foreach (var line in lines)
             {
                 if (!string.IsNullOrWhiteSpace(line))
@@ -486,7 +485,9 @@ namespace Management_Coffee_Shop
         }
         private string take_code()
         {
-            string path = @"..\..\history_Shopping.txt";
+            string path;
+            if (employee.Online_Order() == 0)  path = @"..\..\history_Shopping.txt";
+            else path = @"..\..\CustomerToEmployee.txt";
             string lastline = null;
             if (File.Exists(path))
             {
@@ -498,9 +499,7 @@ namespace Management_Coffee_Shop
                 History_Shopping history_Shopping = System.Text.Json.JsonSerializer.Deserialize<History_Shopping>(lastline);
                 current_ID = int.Parse(history_Shopping.OrderId);
             }
-
             return "Order #" + (++current_ID).ToString().PadLeft(7, '0');
-
         }
         private void btnPay_Click(object sender, EventArgs e)
         {
@@ -572,17 +571,26 @@ namespace Management_Coffee_Shop
             string path = @"..\..\CustomerToEmployee.txt";
             var lines = File.ReadAllLines(path).ToList();
             string orderId = Regex.Replace(lblCode_Online.Text, @"[^\d]", "");
+            History_Shopping history_Shop = new History_Shopping();
             for (int i = lines.Count - 1; i >= 0; i--)
             {
                 History_Shopping history_Shopping = System.Text.Json.JsonSerializer.Deserialize<History_Shopping>(lines[i]);
                 if (history_Shopping.OrderId == orderId)
                 {
                     lines.RemoveAt(i);
+                    string new_path = @"..\..\history_Shopping.txt";
+                    history_Shopping.Status = "Cancel";
+                    string json= System.Text.Json.JsonSerializer.Serialize(history_Shopping);
+                    File.AppendAllText(new_path, json + Environment.NewLine);
+                    history_Shop = history_Shopping;
                     break;
                 }
             }
             File.WriteAllLines(path, lines);
             pnlBill_Online.Hide();
+            path = @"..\..\EmployeeToCustomer.txt";
+            string jsonLine = System.Text.Json.JsonSerializer.Serialize(history_Shop);
+            File.AppendAllText(path, jsonLine + Environment.NewLine);
         }
 
         private void listView2_SelectedIndexChanged(object sender, EventArgs e)

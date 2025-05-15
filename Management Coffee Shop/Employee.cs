@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,22 @@ namespace Management_Coffee_Shop
         public Employee(string id, string name, string address, string email, string date, string image) : base(id, name, address, email, date, image)
         {
 
+        }
+        public void Order()
+        {
+
+        }
+        public string[] Check_History()
+        {
+            string path = @"..\..\history_Shopping.txt";
+            string[] lines = File.ReadAllLines(path);
+            return lines;
+        }
+        public int Online_Order()
+        {
+            string path = @"..\..\CustomerToEmployee.txt";
+            int current_Length = File.ReadLines(path).Count();
+            return current_Length;
         }
         public new string ID
         {

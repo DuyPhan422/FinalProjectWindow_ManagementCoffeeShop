@@ -69,6 +69,12 @@ namespace Management_Coffee_Shop
             }
             return new History_Shopping();
         }
+        public int Online_Order()
+        {
+            string path = @"..\..\CustomerToEmployee.txt";
+            int current_Length = File.ReadLines(path).Count();
+            return current_Length;
+        }
         public Dictionary<string, (int, int, Boolean)> List_Products
         {
             get { return list_products; }

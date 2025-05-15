@@ -1,21 +1,14 @@
 {
-  "LAPTOP-AH11AR93": [
-    {
-      "UserId": "C888280",
-      "Token": "sf4SzHwCiPyJp7V1PBh9ZkEdXxImJWuPaHLLIG3AsenRc4bxJuxznbJO60Hzx",
-      "LastLogin": "27-04-2025 20:01:12"
-    }
-  ],
   "DESKTOP-7S1UU42": [
     {
-      "UserId": "C000001",
-      "Token": "sJs8YfDIvNO32giFMoVX04imzwwSaAAooKyyYgCXqt4z5brYMqXT9qwBK0yURzAqsfYvYh36uKMt0i",
-      "LastLogin": "13/05/2025 21:58:30"
+      "UserId": "C888280",
+      "Token": "sTk0Mn3dtXbDPyBlwN1DM39ipOaEI00imQc8Ku2To9bU6lA2sE1U61BtwKwRFgJaq7fYLxIqbBfU8x",
+      "LastLogin": "15/05/2025 15:25:55"
     },
     {
-      "UserId": "C888280",
-      "Token": "segZI1ziM11kaRN4cV57uxgVLpiTMB4xG92vkdW6iYUxRo6SBuZqcixCY2923gwSt6XXE5eoZs1vwT",
-      "LastLogin": "14/05/2025 22:17:49"
+      "UserId": "C000001",
+      "Token": "sPcw2DfhuNM15DaetRlwAAe3mMQ048imqMQ048RmJ5ACLBRisdgi1wniwIV1JRfVjVd519WfnEYD3",
+      "LastLogin": "15/05/2025 13:50:14"
     }
   ]
 }

@@ -123,7 +123,8 @@ namespace Management_Coffee_Shop
             foreach (var line in lines)
             {
                 History_Shopping history = System.Text.Json.JsonSerializer.Deserialize<History_Shopping>(line);
-                if (history.UserId == customer.ID)
+                if (history.Status.Trim() == "Cancel") MessageBox.Show("Đơn hàng của bạn đã bị hủy", "Thông báo");
+                else if (history.UserId == customer.ID)
                 {
                     count=history.list_shopping.Count;
                     List<(string, int)> number_shopping = new List<(string, int)>();
@@ -170,7 +171,7 @@ namespace Management_Coffee_Shop
                     lblDistance.Text = $"Distance: {string.Format("{0:0.00}", distance)}KM";
                     lblTime.Text = $"Time: {TimeSpan.FromMinutes(duration).Minutes} Minutes";
                     lblExpected.Text = $"Expected: {(DateTime.Now + TimeSpan.FromMinutes(duration)).ToString("hh:mm tt")}";
-                    lblSum_Transport.Text = $"Sum: {lblMoney_Sum.Text}";
+                    lblSum_Transport.Text = $"Sum: {history.Sum}";
                     tabControl1.SelectedTab = tabPage6;
                     timer2.Start();
                     pnlhomePage.Hide();
@@ -796,7 +797,7 @@ namespace Management_Coffee_Shop
         private void btnHistory_Click(object sender, EventArgs e)
         {
             set_Color_button(3);
-            if (flpHistory.Controls.Count==0) load_history();
+            if (flpHistory.Controls.Count==0 || flpHistory.Controls.Count!=customer.Online_Order()) load_history();
             tabControl1.SelectedTab = tabPage3;
         }
         private void load_history()
@@ -906,7 +907,7 @@ namespace Management_Coffee_Shop
                     button.BackColor= Color.Transparent;
                     button.ForeColor = Color.Black;
                     button.Font= new Font("Segoe UI", 12f);
-                    //button.Text = userName_List[i];
+                    button.Text = userName_List[i];
                     button.Image = Image.FromFile(@"..\..\Management coffee shop_image\black-and-white-stockportable-network-account-icon-11553436383dwuayhjyvo-removebg-preview.png");
                     button.ImageSize = new Size(25, 25); 
                     button.ImageAlign = HorizontalAlignment.Left; 
@@ -1075,6 +1076,8 @@ namespace Management_Coffee_Shop
         {
             if (sender is ucHistory_Shopping clicked)
             {
+                pnlAddShoppingCart.Show();
+                pnlAddShoppingCart.Location = new System.Drawing.Point(590, 365);
                 History_Shopping history_Shopping = customer.Repurchase(clicked.Code);
                 foreach (var kvp in history_Shopping.list_shopping)
                 {
@@ -1099,6 +1102,9 @@ namespace Management_Coffee_Shop
                     }
                     update_Payment();
                 }
+                timer_pnlAddShoppingCart.Interval = 500;
+                timer_pnlAddShoppingCart.Tick += Timer_pnlAddShoppingCart;
+                timer_pnlAddShoppingCart.Start();
             }
         }
         private void btnProfile_Click(object sender, EventArgs e)

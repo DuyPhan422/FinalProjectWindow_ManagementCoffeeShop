@@ -100,6 +100,12 @@ namespace Management_Coffee_Shop
             indexStar = 2;
             flag = false;
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void btnOneStar_Click(object sender, EventArgs e)
         {
             indexStar = 1;
